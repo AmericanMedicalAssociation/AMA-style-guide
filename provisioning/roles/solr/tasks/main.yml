@@ -1,0 +1,10 @@
+---
+
+- name: Solr | Disable Jetty Service
+  become: yes
+  service:
+    name: jetty
+    state: started
+    enabled: yes
+  when: solr_enabled == True
+  tags: solr

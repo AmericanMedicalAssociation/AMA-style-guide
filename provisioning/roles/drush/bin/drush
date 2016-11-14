@@ -1,0 +1,26 @@
+#!/bin/bash
+#
+# This script wraps drush. It allows you to transparently use a project-local
+# drush and drushrc.php, if they are available, but falls back to the system
+# drush.
+#
+# To use it, add a line like this to your ~/.profile:
+# alias drush=/var/www/PROJECT_NAME.local/bin/drush
+#
+# Then, try `drush status` from your home directory, and again from the project
+# root.
+
+THE_DRUSH="/usr/bin/drush"
+DRUSH_FLAGS=""
+
+REPO=$(git rev-parse --show-toplevel 2> /dev/null)
+
+if [ $REPO ] && [ -e $REPO/vendor/bin/drush ]; then
+  THE_DRUSH="$REPO/vendor/bin/drush"
+fi
+
+if [ $REPO ] && [ -e $REPO/conf/drushrc.php ]; then
+  DRUSH_FLAGS="-c $REPO/conf/drushrc.php"
+fi
+
+$THE_DRUSH $DRUSH_FLAGS $@

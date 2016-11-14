@@ -1,0 +1,21 @@
+---
+- name: Install Apache vhost
+  sudo: yes
+  template: src=drupal8-skeleton.conf dest=/etc/apache2/sites-available/{{ hostname }}.conf
+  tags: vhost
+
+- name: Stat {{ hostname }} vhost conf
+  stat: path=/etc/apache2/sites-enabled/{{ hostname }}.conf
+  register: drupal8_vhost_exists
+  tags: vhost
+
+- name: Enable {{ hostname }} vhost
+  sudo: yes
+  shell: /usr/sbin/a2ensite {{ hostname }}
+  when: drupal8_vhost_exists.stat.exists == False
+  tags: vhost
+
+- name: Restart Apache
+  sudo: yes
+  service: name=apache2 state=restarted
+  tags: vhost

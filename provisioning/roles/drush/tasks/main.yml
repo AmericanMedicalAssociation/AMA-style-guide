@@ -1,0 +1,8 @@
+---
+- name: Drush wrapper | Copy drush wrapper
+  copy: src=../bin dest=/home/vagrant mode=u+rwx
+  tags: drush
+
+- name: Drush wrapper | Configure drush wrapper
+  lineinfile: dest=/home/vagrant/.profile state=present line='export PATH="$PATH:$HOME/bin"'
+  tags: drush

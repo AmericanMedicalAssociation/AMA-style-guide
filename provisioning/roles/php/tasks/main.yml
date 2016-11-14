@@ -1,0 +1,22 @@
+---
+- name: PHP | Adjust php.ini memory_limit
+  sudo: yes
+  lineinfile: dest={{ item }}
+              regexp='memory_limit'
+              line='memory_limit = {{ php_ini_memory_limit }}'
+  with_items:
+    - /etc/php5/apache2/php.ini
+    - /etc/php5/cli/php.ini
+  tags: PHP
+
+- name: PHP | Enable PHP error display
+  sudo: yes
+  lineinfile: dest={{ item.file }}
+              regexp='^{{ item.key }}'
+              line='{{ item.key }} = {{ item.value }}'
+  with_items:
+    - { file: '/etc/php5/apache2/php.ini', key: 'error_reporting', value: "{{ php_ini_error_reporting }}" }
+    - { file: '/etc/php5/apache2/php.ini', key: 'display_errors', value: "{{ php_ini_display_errors }}" }
+    - { file: '/etc/php5/cli/php.ini', key: 'error_reporting', value: "{{ php_ini_error_reporting }}" }
+    - { file: '/etc/php5/cli/php.ini', key: 'display_errors', value: "{{ php_ini_display_errors }}" }
+  tags: PHP
