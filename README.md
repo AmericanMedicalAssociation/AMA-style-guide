@@ -21,16 +21,16 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 
   ```
     vagrant ssh
-    cd /var/www/drupal-skeleton.local
+    cd /var/www/ama-style-guide.local
     vendor/bin/phing build install migrate
   ```
 
-1. Visit [drupal-skeleton.local](http://drupal-skeleton.local) in your browser of choice.
+1. Visit [ama-style-guide.local](http://ama-style-guide.local) in your browser of choice.
 
 ## How do I work on this?
 
 1. From inside the project root, type `vagrant ssh`
-1. Navigate to `/var/www/drupal-skeleton.local`
+1. Navigate to `/var/www/ama-style-guide.local`
 1. Build, install, migrate, and test: `vendor/bin/phing build install migrate test`
 
 This is your project directory; run `composer` and `drush` commands from here, and run build tasks with `vendor/bin/phing`. Avoid using git from here, but if you must, make sure you configure your name and email for proper attribution, and [configure your global .gitignore](https://github.com/palantirnet/development_documentation/blob/master/guidelines/git/gitignore.md):
@@ -110,7 +110,7 @@ Run `vendor/bin/phing test` or `vendor/bin/behat features/installation.feature`.
 
 ## Troubleshooting
 
-If, on browsing to `http://drupal-skeleton.local`, you get the following error:
-> drupal-skeleton.local’s server DNS address could not be found.
+If, on browsing to `http://ama-style-guide.local`, you get the following error:
+> ama-style-guide.local’s server DNS address could not be found.
 
 Then `vagrant up` may have failed half way through. When this happens, the `vagrant-hostmanager` plugin does not add the hostname to `/etc/hosts`. Try halting and re-upping the machine: `vagrant halt && vagrant up`. Reload is not sufficient to trigger updating the hosts file.
