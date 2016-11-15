@@ -8,6 +8,8 @@
 * [ansible](https://github.com/ansible/ansible) `brew install ansible`
 * [vagrant-hostmanager](https://github.com/smdahlen/vagrant-hostmanager) `vagrant plugin install vagrant-hostmanager`
 * [vagrant-auto_network](https://github.com/oscar-stack/vagrant-auto_network) `vagrant plugin install vagrant-auto_network`
+* [vagrant-serverspec](https://github.com/jvoorhis/vagrant-serverspec) `vagrant plugin install vagrant-serverspec`
+`
 
 If you have been running a previous version of Vagrant you may need to do: `vagrant plugin update` to ensure that you can install the plugins.
 
@@ -16,6 +18,7 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 1. From inside the project root, run:
  * `composer install`
  * `vagrant up`
+ * If you are running Vagrant 1.8.7 and macOS Sierra, you might run into an error when running `vagrant up`. Follow [these instructions](http://stackoverflow.com/a/40474205/2566038) to fix the issue.
 1. You will be prompted for the administration password on your host machine. Obey.
 1. SSH in and install the site:
 
@@ -31,7 +34,7 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 
 1. From inside the project root, type `vagrant ssh`
 1. Navigate to `/var/www/ama-style-guide.local`
-1. Build, install, migrate, and test: `vendor/bin/phing build install migrate test`
+1. Follow instructions for Butler below.
 
 This is your project directory; run `composer` and `drush` commands from here, and run build tasks with `vendor/bin/phing`. Avoid using git from here, but if you must, make sure you configure your name and email for proper attribution, and [configure your global .gitignore](https://github.com/palantirnet/development_documentation/blob/master/guidelines/git/gitignore.md):
 
@@ -42,45 +45,19 @@ git config --global user.name 'My Name'
 
 ## How do I Drupal?
 
-### The Drupal root
+We're not doing Drupal in this repo.
 
-This project uses [Composer Installers](https://github.com/composer/installers), [DrupalScaffold](https://github.com/drupal-composer/drupal-scaffold), and [the-build](https://github.com/palantirnet/the-build) to assemble our Drupal root in `web`. Dig into `web` to find the both contrib Drupal code (installed by composer) and custom Drupal code (included in the git repository).
+## How do I prototype?
 
-### Using drush
+### Butler!
 
-You can run `drush` commands from anywhere within the repository, as long as you are ssh'ed into the vagrant.
+This project uses Butler. If you haven't installed the `npm` dependencies yet, do that now:
 
-### Installing and reinstalling Drupal
-
-Run `composer install && vendor/bin/phing build install migrate`
-
-### Adding modules
-
-* Download modules with composer: `composer require drupal/bad_judgement:^8.1`
-* Enable the module: `drush en bad_judgement`
-* Export the config with the module enabled: `drush config-export`
-* Commit the changes to `composer.json`, `composer.lock`, and `conf/drupal/config/core.extension.yml`. The module code itself will be excluded by the project's `.gitignore`.
-
-### Patching modules
-
-Sometimes we need to apply patches from the Drupal.org issue queues. These patches should be applied using composer using the [Composer Patches](https://github.com/cweagans/composer-patches) composer plugin.
-
-### Configuring Drupal
-
-Sometimes it is appropriate to configure specific Drupal variables in Drupal's `settings.php` file. Our `settings.php` file is built from a template found at `conf/drupal/settings.php` during the phing build.
-
-* Add your appropriately named values to `conf/build.default.properties` (like `drupal.my_setting=example`)
-* Update `conf/drupal/settings.php` to use your new variable (like `$conf['my_setting'] = '${drupal.my_setting}';`)
-* Run `vendor/bin/phing build`
-* Test
-* If the variable requires different values in different environments, add those to the appropriate properties files (`conf/build.vagrant.properties`, `conf/build.circle.properties`, `conf/build.acquia.properties`). Note that you may reference environment variables with `drupal.my_setting=${env.DRUPAL_MY_SETTING}`.
-* Finally, commit your changes.
-
-## How do I run tests?
-
-### Behat
-
-Run `vendor/bin/phing test` or `vendor/bin/behat features/installation.feature`.
+```
+vagrant ssh
+cd /var/www/mcor.local
+npm install
+```
 
 ## What does this Butler do?
 
