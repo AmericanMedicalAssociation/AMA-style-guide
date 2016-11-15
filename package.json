@@ -1,0 +1,26 @@
+{
+  "name": "ama-style-guide.local",
+  "version": "1.0.0",
+  "description": "## Requirements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "butler": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js",
+    "develop": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js develop",
+    "tests": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js test",
+    "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmericanMedicalAssociation/AMA-style-guide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmericanMedicalAssociation/AMA-style-guide/issues"
+  },
+  "homepage": "https://github.com/AmericanMedicalAssociation/AMA-style-guide#readme",
+  "dependencies": {
+    "butler": "palantirnet/butler"
+  }
+}
