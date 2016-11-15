@@ -82,6 +82,32 @@ Sometimes it is appropriate to configure specific Drupal variables in Drupal's `
 
 Run `vendor/bin/phing test` or `vendor/bin/behat features/installation.feature`.
 
+## What does this Butler do?
+
+* `npm run butler`
+
+  This is the default task. This will watch your sass/sculpin files for changes and compile/build accordingly. It will also flag any sass linting errors before compiling. It will output CSS that has been been minified and optimized.
+
+* `npm run butler -- sass`
+
+  Just compile the sass. You can also use this syntax to run any task from the Gulpfile.
+
+* `npm run tests`
+
+  This is the testing task it will run linters as their own tasks. To learn more about configuring and customizing the linters for Butler check the [linters documentation](/docs/LINTERS.md).
+
+  This task also checks for WCAG 2.0AA compliance using the [gulp-accessibility](https://github.com/yargalot/gulp-accessibility) plugin.
+
+* `npm run deploy`
+
+  This is a task to deploy the static styleguide to GitHub pages.
+
+  Butler will build a Sculpin production artifact to `styleguide/output_prod` and deploy the production artifact to `gh-pages` branch of the repo defined in the `conf/butler.defaults.js`. Each commit for this process will default to the message: "Updated with Butler - [timestamp]".
+
+  You may want to create a `sculpin_site_prod.yml` to define the site URL once deployed. You can find out more information about environment aware configuration for Sculpin [here](https://sculpin.io/documentation/configuration/).
+
+  *Note: When you are deploying, Butler will ask you for your GitHub credentials at least once, possibly multiple times. Enter your own GitHub credentials as prompted.*
+
 ## Troubleshooting
 
 If, on browsing to `http://drupal-skeleton.local`, you get the following error:
