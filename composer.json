@@ -32,8 +32,7 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.0",
-        "palantirnet/the-build": "dev-master"
+        "composer/installers": "^1.0"
     },
     "require-dev": {
         "behat/behat": "^3.1",
