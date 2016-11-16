@@ -13,7 +13,9 @@
     "prefer-stable": true,
     "preferred-install": "dist",
     "config": {
-        "sort-packages": "true"
+        "sort-packages": "true",
+        "github-protocols": ["https"]
+
     },
     "repositories": [
         {
@@ -31,9 +33,6 @@
     ],
     "require": {
         "composer/installers": "^1.0",
-        "drupal-composer/drupal-scaffold": "^1.0",
-        "drupal/config_installer": "^8.1",
-        "drupal/core": "^8.0",
         "palantirnet/the-build": "dev-master"
     },
     "require-dev": {
@@ -44,9 +43,6 @@
         "composer/composer": "@dev",
         "dflydev/embedded-composer-console": "@dev",
         "dflydev/embedded-composer-core": "@dev",
-        "drupal/console": "^0.11.3",
-        "drupal/drupal-extension": "^3.1",
-        "drush/drush": "^8.0",
         "palantirnet/the-vagrant": "dev-master",
         "sculpin/sculpin": "~2.0",
         "sculpin/sculpin-theme-composer-plugin": "dev-master as 1.0.0"
@@ -58,16 +54,9 @@
         "drupal/drupal": "*"
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     },
     "extra": {
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
         }
-    }    
+    }
 }
