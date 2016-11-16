@@ -55,7 +55,7 @@ This project uses Butler. If you haven't installed the `npm` dependencies yet, d
 
 ```
 vagrant ssh
-cd /var/www/mcor.local
+cd /var/www/ama-style-guide.local
 npm install
 ```
 
