@@ -3,27 +3,6 @@
 # in your development environment:
 # https://github.com/palantirnet/development_documentation/blob/master/guidelines/git/gitignore.md
 
-# Ignore Drupal settings and files
-settings.php
-services.yml
-!conf/drupal/settings.php
-!conf/drupal/services.yml
-web/sites/*/files
-
-# Ignore virtual environment and artifacts
-.vagrant/
-/artifacts/
-
-# Ignore Drupal contrib downloaded by Composer
-drush/contrib
-web/core
-web/modules/contrib
-web/themes/contrib/
-web/profiles/contrib/
-
-# Ignore regular Composer dependencies
-/vendor/
-
 # Ignore npm dependencies
 node_modules/
 npm-debug.log
@@ -33,6 +12,9 @@ npm-debug.log
 styleguide/*.sass-cache/
 styleguide/source/code/css/*.css
 
-# Ignore sculpin output
-styleguide/output_dev/
-styleguide/output_prod/
+# Ignore PatternLab things
+styleguide/export/*
+styleguide/public/*
+styleguide/source/styleguide/*
+styleguide/vendor/*
+styleguide/node_modules/*
