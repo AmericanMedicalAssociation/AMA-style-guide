@@ -18,10 +18,39 @@ $valid : #089e00;
 $warning : #fff664;
 $information : #000db5;
 
+//AMA Brand Colors
+
+$black-3: ('black' lighten 97%); // #f7f7f7
+$black-7: ('black' lighten 93%); // #ededed
+$black-15: ('black' lighten 85%); // #d9d9d9 - **this one was not in the style guide but was in the primary header component for the mobile second level background**
+$black-20: ('black' lighten 80%); // #ccc
+$black-55: ('black' lighten 45%); // #737373
+$gray-8: #a1a1a4;
+
+$purple: #46166b;
+$purple-darker: #320e52;
+$purple-lighter: #e3dce9;
+
+$red: #c8102e;
+$red-darker: #b70a1f;
+
+$orange: #ed8b00;
+$orange-darker: #e67200;
+
+$blue: #02aaec;
+$blue-lighter: #d9f2fc;
+
+$green: #64a70b;
+
 
 //Typography
-$font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary : Georgia, Times, "Times New Roman", serif;
+
+// AMA Fonts
+$myriad-pro: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$kepler-std: "kepler-std", Georgia, Times, "Times New Roman", serif;
+
+$font: $myriad-pro;
+$font-secondary: $kepler-std;
 
 $font-size-small : 0.75em;
 $font-size-small-2 : 0.875em;
