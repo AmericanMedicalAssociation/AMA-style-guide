@@ -2,7 +2,7 @@
   "root": "./public",
   "deployment": {
     "local": {
-      "path": "public"
+      "path": "./public/**/*"
     },
     "remote": {
       "host": "YOUR HOST"

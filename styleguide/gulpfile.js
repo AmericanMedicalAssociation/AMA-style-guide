@@ -14,6 +14,8 @@ var gulp        = require('gulp'),
     tagversion  = require('gulp-tag-version'),
     uglify      = require('gulp-uglify'),
     config      = require('./build.config.json');
+    ghPages     = require('gulp-gh-pages');
+
 
 // Trigger
 var production;
@@ -171,10 +173,8 @@ gulp.task('serve', function () {
 // Task: Deploy static content
 // Description: Deploy static content using rsync shell command
 gulp.task('deploy', function () {
-  return gulp.src(config.deployment.local.path, {read: false})
-    .pipe(shell([
-      'rsync '+ config.deployment.rsync.options +' '+ config.deployment.local.path +'/ '+ config.deployment.remote.host
-    ]))
+  return gulp.src(config.deployment.local.path)
+    .pipe(ghPages());
 });
 
 // Function: Releasing (Bump & Tagging)
