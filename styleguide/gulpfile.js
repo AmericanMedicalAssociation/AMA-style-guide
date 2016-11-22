@@ -105,7 +105,7 @@ gulp.task('browser-sync', function() {
         baseDir: config.root
     },
     ghostMode: true,
-    open: "external"
+    open: "local"
   });
 });
 
