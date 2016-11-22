@@ -1,4 +1,4 @@
-/*
+/*                                                                                                                                         
                                                 ,,            ,,                          ,,
  .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO
 ,MI    "Y MM                                                  MM        MM         MM     MM                                    88 88 88
@@ -57,7 +57,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 /* CSS Transition
 	Usage: @include transition(width,0.3s,ease-out);
  */
-/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback
+/* Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
 	Usage: @include font-size(1, large);
 */
 /*------------------------------------*    $RESET
@@ -156,11 +156,11 @@ header, footer, nav, section, article, hgroup, figure {
   color: #000db5; }
 
 .font-secondary {
-  font-family: Georgia, Times, "Times New Roman", serif; }
+  font-family: "kepler-std", Georgia, Times, "Times New Roman", serif; }
 
 body {
   background: #fff;
-  font: 100%/1.5 "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font: 100%/1.5 "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #333; }
 
@@ -185,7 +185,7 @@ h3, .gamma {
 
 /* Subheadings */
 .subheading {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "kepler-std", Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
 
 /* Text-Related Elements */
@@ -650,7 +650,7 @@ td {
   font-weight: bold; }
 
 .pullquote {
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "kepler-std", Georgia, Times, "Times New Roman", serif;
   font-size: 1.4375em; }
 
 .caption {
@@ -992,7 +992,7 @@ td {
 .acc-handle {
   background: #131313;
   color: #fff;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "kepler-std", Georgia, Times, "Times New Roman", serif;
   font-weight: bold;
   display: block;
   position: relative;
