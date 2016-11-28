@@ -100,3 +100,9 @@
 .font-secondary {
     font-family: $font-secondary;
 }
+
+// Sets all caps and font spacing.
+.caps {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
