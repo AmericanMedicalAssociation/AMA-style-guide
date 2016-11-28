@@ -14,7 +14,8 @@ var gulp        = require('gulp'),
     tagversion  = require('gulp-tag-version'),
     uglify      = require('gulp-uglify'),
     config      = require('./build.config.json');
-    ghPages     = require('gulp-gh-pages');
+    ghPages     = require('gulp-gh-pages'),
+    runSequence = require('run-sequence');
 
 
 // Trigger
@@ -148,13 +149,12 @@ gulp.task('watch', function () {
 gulp.task('default', ['clean:before'], function () {
   production = false;
 
-  gulp.start(
+  // We need to re-run sass last to make sure the latest styles.css gets loaded
+  runSequence(
+    ['scripts', 'fonts', 'images', 'sass'],
     'patternlab',
     'styleguide',
-    'fonts',
-    'sass',
-    'images',
-    'scripts'
+    'sass'
   );
 });
 
