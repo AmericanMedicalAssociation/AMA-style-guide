@@ -20,11 +20,11 @@ $information : #000db5;
 
 //AMA Brand Colors
 
-$black-3: ('black' lighten 97%); // #f7f7f7
-$black-7: ('black' lighten 93%); // #ededed
-$black-15: ('black' lighten 85%); // #d9d9d9 - **this one was not in the style guide but was in the primary header component for the mobile second level background**
-$black-20: ('black' lighten 80%); // #ccc
-$black-55: ('black' lighten 45%); // #737373
+$black-3: l#f7f7f7;
+$black-7: #ededed;
+$black-15: #d9d9d9; // this one was not in the style guide but was in the primary header component for the mobile second level background
+$black-20: #cccccc;
+$black-55: #737373;
 $gray-8: #a1a1a4;
 
 $purple: #46166b;
