@@ -19,11 +19,17 @@ h4, .h4, .delta {
 }
 
 h5, .h5, .epsilon {
-
+  font-family: $font;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 h6,  .h6, .zeta {
-
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 
