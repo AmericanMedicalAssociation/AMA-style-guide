@@ -1,8 +1,20 @@
 // Block CTA with Hero on Homepage
 .block-cta_hero_homepage {
+  @extend %clearfix;
   background-color: $black-7;
+  max-width: 1200px;
+  .image-wrapper,
   .text-wrapper {
+    display: inline-block;
+    float: left;
+  }
+  .image-wrapper {
+    max-height: 380px;
+  }
+  .text-wrapper {
+    max-width: 600px;
     padding: 30px 50px;
+    vertical-align: top;
   }
   .highlight {
     margin-bottom:  65px;
@@ -13,6 +25,7 @@
   .summary {
     font-size: 24px;
     line-height: 1.2;
+    margin-bottom: 0;
     text-align: center;
   }
 }
