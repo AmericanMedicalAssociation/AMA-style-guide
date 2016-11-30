@@ -5,7 +5,9 @@
   max-width: 1200px;
   &:hover {
     background-color: #e6e6e6;
+    color: $black;
     .link {
+        color: $blue;
         text-decoration: underline;
       }
   }
@@ -37,6 +39,7 @@
     text-align: center;
   }
   .link {
+    display: block;
     font-family: $font;
     font-size: 18px;
     font-weight: 600;
