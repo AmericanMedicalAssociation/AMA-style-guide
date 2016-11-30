@@ -4,7 +4,7 @@ h1, .h1, .alpha {
   line-height: 1.2;
 }
 
-h2, .h2, .beta {
+h2, .h2, %h2, .beta {
   font-family: $font-secondary;
   font-size: 46px;
   line-height: 1.1;
@@ -18,21 +18,19 @@ h4, .h4, .delta {
 
 }
 
-h5, .h5, .epsilon {
+h5, .h5, %h5, .epsilon {
   font-family: $font;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
 }
 
-h6,  .h6, .zeta {
+h6,  .h6, %h6, .zeta {
   font-family: $font;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
 }
-
-
 
 /* Subheadings */
 .subheading {
