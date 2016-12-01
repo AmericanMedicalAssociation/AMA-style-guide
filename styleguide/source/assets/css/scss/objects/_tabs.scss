@@ -12,14 +12,17 @@
     }
   }
   a {
-    color: $gray-8;
+    color: $black-20;
     display: block;
     padding: 20px;
     &:hover, &:focus {
-      color: $blue;
+      color: $black-55;
     }
     &.active {
       color: $black;
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }
