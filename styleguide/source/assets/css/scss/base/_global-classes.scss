@@ -43,18 +43,18 @@
 
 /* Floats */
 .right {
-	float: right;
-	padding: 0 0 $pad $pad;
+  float: right;
+  padding: 0 0 $pad $pad;
 }
 
 .right-search {
-	float: right;
-	padding: 0 0 $pad 0;
+  float: right;
+  padding: 0 0 $pad 0;
 }
 
 .left {
-	float: left;
-	padding: 0 $pad $pad 0;
+  float: left;
+  padding: 0 $pad $pad 0;
 }
 
 /* Display Classes */
@@ -78,11 +78,11 @@
 
 //States
 .valid {
-	color: $valid;
+  color: $valid;
 }
 
 .error {
-	color: $error;
+  color: $error;
 }
 
 .warning {
@@ -106,4 +106,23 @@
 .link,
 %link {
     color: $blue;
+}
+
+// Generic block class for common block elements
+.block {
+  .primary-cta {
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .summary {
+    font-size: 1.33em;
+    line-height: 1.2;
+    margin-bottom:  65px;
+    text-align: center;
+  }
 }
