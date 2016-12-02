@@ -1,0 +1,9 @@
+.tabs-audience_selector {
+  .label {
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+  li {
+    @extend %h2;
+  }
+}
