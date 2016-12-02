@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /* Layout Container */
-.lc {
+.layout-container {
 	max-width: $max-width;	
 	margin: 0 auto;
 	padding: $pad-half;
@@ -14,10 +14,10 @@
 \*------------------------------------*/
 
 /* Two Column Layout */
-.l-two-col {
-	@extend .cf;
+.layout-two-col {
+	@extend %clearfix;
 
-	.l-main {
+	.layout-main {
 		@media all and (min-width: $bp-large) {
 			float: left;
 			width: 70%;
@@ -25,7 +25,7 @@
 		}
 	}
 	
-	.l-sidebar {
+	.layout-sidebar {
 		@media all and (max-width: $bp-large) {
 			clear: both;
 		}
@@ -44,13 +44,13 @@
 \*------------------------------------*/
 
 /* Grid Container */
-.g {
+.grid-container {
 	overflow: hidden;
 	margin: 0 (-$pad-half);
 }
 
 /* Grid Item */
-.gi {
+.grid-item {
 	padding: $pad-half;
 	
 	img {
@@ -63,16 +63,16 @@
 }
 
 /* Grid 1up */
-.g-1up {
-	.gi {
+.grid-1up {
+	.grid-item {
 		width: 100%;
 	}
 }
 
 /* Grid 2up */
-.g-2up {
+.grid-2up {
 	@media all and (min-width: $bp-med) {
-		> .gi {
+		> .grid-item {
 			float: left;
 			width: 50%;
 			
@@ -84,8 +84,8 @@
 }
 
 /* Grid Half (Always displayed side by side) */
-.g-half {
-	> .gi {
+.grid-half {
+	> .grid-item {
 		float: left;
 		width: 50%;
 		
@@ -96,9 +96,9 @@
 }
 
 /* Grid 3up */
-.g-3up {
+.grid-3up {
 	@media all and (min-width: $bp-med) {
-		> .gi {
+		> .grid-item {
 			float: left;
 			width: 50%;
 			
@@ -109,7 +109,7 @@
 	}
 	
 	@media all and (min-width: $bp-large) {
-		> .gi {
+		> .grid-item {
 			width: 33.3333333%;
 			
 			&:nth-of-type(2n+1) {
@@ -124,9 +124,9 @@
 }
 
 /* Grid 4up */
-.g-4up {
+.grid-4up {
 	@media all and (min-width: $bp-med) {
-		>.gi {
+		>.grid-item {
 			float: left;
 			width: 50%;
 			
@@ -137,7 +137,7 @@
 	}
 	
 	@media all and (min-width: $bp-large) {
-		>.gi {
+		>.grid-item {
 			width: 25%;
 			
 			&:nth-of-type(2n+1) {
@@ -152,8 +152,8 @@
 }
 
 /* Grid Quarter (Always displayed side by side) */
-.g-quarter {
-	> .gi {
+.grid-quarter {
+	> .grid-item {
 		float: left;
 		width: 24%;
 		
@@ -163,10 +163,10 @@
 	}
 }
 
-.g-max4 {
+.grid-max4 {
 
 	@media all and (min-width: $bp-small-2) {
-		>.gi {
+		>.grid-item {
 			float: left;
 			width: 50%;
 			
@@ -177,7 +177,7 @@
 	}
 
 	@media all and (min-width: $bp-small-3) {
-		>.gi {
+		>.grid-item{
 			width: 33.3333333%;
 			
 			&:nth-of-type(2n+1) {
@@ -191,7 +191,7 @@
 	}
 	
 	@media all and (min-width: $bp-large) {
-		>.gi {
+		>.grid-item {
 			width: 25%;
 			
 			&:nth-of-type(3n+1) {
@@ -206,9 +206,9 @@
 }
 
 /* Grid 5up */
-.g-max5 {
+.grid-max5 {
 
-	>.gi {
+	>.grid-item {
 		float: left;
 		width: 50%;
 		
@@ -218,7 +218,7 @@
 	}
 
 	@media all and (min-width: $bp-small-3) {
-		>.gi {
+		>.grid-item {
 			width: 33.3333333%;
 			
 			&:nth-of-type(2n+1) {
@@ -232,7 +232,7 @@
 	}
 	
 	@media all and (min-width: $bp-med) {
-		>.gi {
+		>.grid-item {
 			width: 25%;
 			
 			&:nth-of-type(3n+1) {
@@ -246,7 +246,7 @@
 	}
 
 	@media all and (min-width: $bp-med-2) {
-		>.gi {
+		>.grid-item {
 			width: 20%;
 			
 			&:nth-of-type(4n+1) {
@@ -261,14 +261,14 @@
 }
 
 /* Grid 2/3 */
-.gi-2-3 {
+.grid-item-2-3 {
 	@media all and (min-width: $bp-med) {
 		float: left;
 		width: 66.666666%;
 	}
 }
 
-.gi-1-3 {
+.grid-item-1-3 {
 	@media all and (min-width: $bp-med) {
 		float: left;
 		width: 33.333333%;
@@ -276,8 +276,8 @@
 }
 
 /* Grid 4up block */
-.g-opposites {
-	.gi {
+.grid-opposites {
+	.grid-item{
 		float: left;
 		
 		&:last-child {

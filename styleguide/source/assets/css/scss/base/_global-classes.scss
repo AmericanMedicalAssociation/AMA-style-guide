@@ -3,17 +3,26 @@
 \*------------------------------------*/
 
 /* Clearfix */
-.cf {
+.clearfix {
     *zoom: 1;
 }
-.cf:before, .cf:after {
+.clearfix:before, .clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.cf:after {
+.clearfix:after {
     clear: both;
 }
+
+%clearfix {
+    *zoom: 1;
+     &:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+    }
 
 /* Completely remove from the flow and screen readers. */
 .is-hidden {
@@ -105,4 +114,9 @@
 .caps {
     letter-spacing: 0.04em;
     text-transform: uppercase;
+}
+
+.link,
+%link {
+    color: $blue;
 }
