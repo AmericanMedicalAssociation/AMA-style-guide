@@ -1,14 +1,16 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
 h1, .h1, .alpha {
-  line-height: 1.2;
+  font-family: $font-secondary;
+  font-size: 54px;
+  line-height: 1.08;
 }
 
 h2, .h2, %h2, .beta {
   font-family: $font-secondary;
   font-size: 46px;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.08;
 }
 
 h3,  .h3, .gamma {
