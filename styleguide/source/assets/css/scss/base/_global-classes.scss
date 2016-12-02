@@ -115,3 +115,8 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
+
+.link,
+%link {
+    color: $blue;
+}
