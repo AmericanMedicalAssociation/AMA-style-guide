@@ -15,7 +15,10 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     config      = require('./build.config.json');
     ghPages     = require('gulp-gh-pages'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    glob        = require('glob'),
+    gulpicon    = require('gulpicon/tasks/gulpicon');
+
 
 
 // Trigger
