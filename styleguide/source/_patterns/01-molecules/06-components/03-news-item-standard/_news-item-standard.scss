@@ -1,0 +1,14 @@
+.news-item_standard {
+  @extend %clearfix;
+  .text-wrapper {
+    float: left;
+    margin-right: 50px;
+    max-width: 550px;
+  }
+  .image-wrapper {
+
+  }
+  .title {
+    margin-bottom: 30px;
+  }
+}
