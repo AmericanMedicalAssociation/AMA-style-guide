@@ -85,6 +85,24 @@ gulp.task('sass', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
+// Task: Handle icons
+// We have to do this in a few steps until
+// https://github.com/filamentgroup/gulpicon/issues/1 is resolved
+gulp.task('minifyIcons', function() {
+  return gulp.src(config.icons.files)
+      .pipe(svgmin())
+      .pipe(gulp.dest(config.icons.min));
+});
+
+// Based on https://github.com/filamentgroup/gulpicon#usage
+var iconFiles = glob.sync("public/assets/icons/svg/*.svg");
+config.dest = "public/assets/icons/";
+gulp.task('makeIcons', gulpicon(iconFiles, config));
+
+gulp.task('icons', function () {
+  runSequence(['minifyIcons', 'makeIcons']);
+});
+
 // Task: patternlab
 // Description: Build static Pattern Lab files via PHP script
 gulp.task('patternlab', function () {
@@ -141,6 +159,12 @@ gulp.task('watch', function () {
     ['sass']
   );
 
+  // Watch Sass
+  gulp.watch(
+    config.icons.files,
+    ['icons']
+  );
+
   // Watch fonts
   gulp.watch(
     config.fonts.files,
@@ -155,7 +179,7 @@ gulp.task('default', ['clean:before'], function () {
 
   // We need to re-run sass last to make sure the latest styles.css gets loaded
   runSequence(
-    ['scripts', 'fonts', 'images', 'sass'],
+    ['scripts', 'fonts', 'images', 'sass', 'icons'],
     'patternlab',
     'styleguide',
     'sass'
