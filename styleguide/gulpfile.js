@@ -17,6 +17,7 @@ var gulp        = require('gulp'),
     ghPages     = require('gulp-gh-pages'),
     runSequence = require('run-sequence'),
     glob        = require('glob'),
+    svgmin      = require('gulp-svgmin'),
     gulpicon    = require('gulpicon/tasks/gulpicon');
 
 
