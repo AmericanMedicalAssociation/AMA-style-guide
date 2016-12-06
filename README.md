@@ -40,3 +40,9 @@ sudo npm install -g npm
 ```
 npm rebuild
 ```
+
+## What's going on here?
+### Icons
+Icons are being generated using [Grunticon](https://github.com/filamentgroup/grunticon) with the [Gulpicon](https://github.com/filamentgroup/gulpicon) wrapper. This generates a three-tier system of fallbacks, which are controlled by a JS-based loader [full desc](https://github.com/filamentgroup/grunticon#a-mystical-css-icon-solution).
+
+New icons can be places in `source/assets/icons/svg`. When `gulp icons` is run, the process will [minify the SVGs](https://www.npmjs.com/package/gulp-svgmin) then run `gulpicon` using the config and template in the icons directory, finally outputting everything in `public/assets/icons/`. The loader and initialization code are in [`_00-head.twig`](./styleguide/source/_meta/_00-head.twig).
