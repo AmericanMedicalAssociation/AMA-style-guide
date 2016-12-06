@@ -7,7 +7,6 @@
 - `npm install`
 
 **For ongoing development**
-- `gulp icons` to generate the icons, since that process [isn't stream-able yet](https://github.com/filamentgroup/gulpicon/issues/1).
 - `gulp serve` to watch files and display the resulting page in your local browser.
 - Occasionally things might stop refreshing well. If that happens, just kill (`Control-C`) gulp and re-run.
 
