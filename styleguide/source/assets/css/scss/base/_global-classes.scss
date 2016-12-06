@@ -57,19 +57,6 @@
 	padding: 0 $pad $pad 0;
 }
 
-/* Text-Align */
-.align-right {
-	text-align: right;
-}
-
-.align-center {
-	text-align: center;
-}
-
-.align-left {
-	text-align: left;
-}
-
 /* Display Classes */
 .hide-small {
     @media all and (max-width: $bp-med) {
