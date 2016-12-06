@@ -9,7 +9,7 @@
 **For ongoing development**
 - `gulp icons` to generate the icons, since that process [isn't stream-able yet](https://github.com/filamentgroup/gulpicon/issues/1).
 - `gulp serve` to watch files and display the resulting page in your local browser.
-- Occasionally things might stop refreshing well. If that happens, just kill (`Control-C`) gulp and re-run. 
+- Occasionally things might stop refreshing well. If that happens, just kill (`Control-C`) gulp and re-run.
 
 **To deploy changes to GitHub Pages**
 - `gulp` to generate things if you haven't recently.
@@ -20,6 +20,10 @@ Occasionally, you might have to make a change to CSS and let the new stylesheet 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
 
 ## Troubleshooting:
+### Make sure your npm dependencies are up to date
+If you run unto an unexpected error, you might just be missing a dependency
+- Run `npm install` from the `styleguide` directory to grab any missing dependencies.
+
 ### Make sure node and npm are up to date(-ish)
 You might have to do any or all of these
 - Update node
