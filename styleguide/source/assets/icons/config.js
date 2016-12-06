@@ -49,5 +49,5 @@ module.exports = {
   template: path.join( __dirname, "default-css.hbs" ),
   //previewTemplate: path.join( __dirname, "preview-custom.hbs" ),
 
-  compressPNG: true
+  //compressPNG: true
 };
