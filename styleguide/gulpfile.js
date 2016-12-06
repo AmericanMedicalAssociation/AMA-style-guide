@@ -95,13 +95,18 @@ gulp.task('minifyIcons', function() {
 });
 
 // Based on https://github.com/filamentgroup/gulpicon#usage
-var iconFiles = glob.sync("public/assets/icons/svg/*.svg");
+var iconFiles = glob.sync("source/assets/icons/svg/*.svg");
 var iconConfig = require("./source/assets/icons/config.js");
 iconConfig.dest = "public/assets/icons/";
 gulp.task('makeIcons', gulpicon(iconFiles, iconConfig));
+gulp.task('reloadIcons', function() {
+  return gulp.src('', {read: false})
+    .pipe(browserSync.reload({stream:true}));
+});
 
-gulp.task('icons', function () {
-  runSequence('minifyIcons', 'makeIcons');
+gulp.task('icons', function (callback) {
+  runSequence('minifyIcons', 'makeIcons', 'reloadIcons');
+  callback();
 });
 
 // Task: patternlab
@@ -175,7 +180,7 @@ gulp.task('watch', function () {
 
 // Task: Default
 // Description: Build all stuff of the project once
-gulp.task('default', ['clean:before'], function () {
+gulp.task('default', ['clean:before'], function (callback) {
   production = false;
 
   // We need to re-run sass last to make sure the latest styles.css gets loaded
@@ -184,7 +189,8 @@ gulp.task('default', ['clean:before'], function () {
     ['scripts', 'fonts', 'images', 'sass'],
     'patternlab',
     'styleguide',
-    'sass'
+    'sass',
+    callback
   );
 });
 
