@@ -108,6 +108,12 @@
     color: $blue;
 }
 
+.eyebrow {
+    background-color: $purple;
+    height: 16px;
+    margin-bottom: 24px;
+    width: 100%
+}
 // Generic block class for common block elements
 .block {
   .primary-cta {
