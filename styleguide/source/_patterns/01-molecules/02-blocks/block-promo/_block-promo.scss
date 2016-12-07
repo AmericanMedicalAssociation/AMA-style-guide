@@ -1,0 +1,17 @@
+.block-promo {
+  color: $white;
+  margin-bottom: 2em;
+  padding: 30px;
+  &.block-promo-red {
+    background: $red;
+  }
+  &.block-promo-orange {
+    background: $orange;
+  }
+  &.block-promo-purple {
+    background: $purple;
+  }
+  .title {
+    text-align: center;
+  }
+}
