@@ -45,6 +45,14 @@
     ],
     "dest" : "public/assets/fonts/"
   },
+  "icons": {
+    "base" : "source/assets/icons/",
+    "files": [
+      "source/assets/icons/svg/*.svg"
+    ],
+    "min"  : "public/assets/icons/svg/", 
+    "dest" : "public/assets/icons/"
+  },
   "images": {
     "base" : "source/assets/images/",
     "files": [

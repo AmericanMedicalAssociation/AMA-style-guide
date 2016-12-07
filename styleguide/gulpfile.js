@@ -15,7 +15,11 @@ var gulp        = require('gulp'),
     uglify      = require('gulp-uglify'),
     config      = require('./build.config.json');
     ghPages     = require('gulp-gh-pages'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    glob        = require('glob'),
+    svgmin      = require('gulp-svgmin'),
+    gulpicon    = require('gulpicon/tasks/gulpicon');
+
 
 
 // Trigger
@@ -81,6 +85,30 @@ gulp.task('sass', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
+// Task: Handle icons
+// We have to do this in a few steps until
+// https://github.com/filamentgroup/gulpicon/issues/1 is resolved
+gulp.task('minifyIcons', function() {
+  return gulp.src(config.icons.files)
+      .pipe(svgmin())
+      .pipe(gulp.dest(config.icons.min));
+});
+
+// Based on https://github.com/filamentgroup/gulpicon#usage
+var iconFiles = glob.sync("source/assets/icons/svg/*.svg");
+var iconConfig = require("./source/assets/icons/config.js");
+iconConfig.dest = "public/assets/icons/";
+gulp.task('makeIcons', gulpicon(iconFiles, iconConfig));
+gulp.task('reloadIcons', function() {
+  return gulp.src('', {read: false})
+    .pipe(browserSync.reload({stream:true}));
+});
+
+gulp.task('icons', function (callback) {
+  runSequence('minifyIcons', 'makeIcons', 'reloadIcons');
+  callback();
+});
+
 // Task: patternlab
 // Description: Build static Pattern Lab files via PHP script
 gulp.task('patternlab', function () {
@@ -137,6 +165,12 @@ gulp.task('watch', function () {
     ['sass']
   );
 
+  // Watch icons
+  gulp.watch(
+    config.icons.files,
+    ['icons']
+  );
+
   // Watch fonts
   gulp.watch(
     config.fonts.files,
@@ -146,15 +180,17 @@ gulp.task('watch', function () {
 
 // Task: Default
 // Description: Build all stuff of the project once
-gulp.task('default', ['clean:before'], function () {
+gulp.task('default', ['clean:before'], function (callback) {
   production = false;
 
   // We need to re-run sass last to make sure the latest styles.css gets loaded
   runSequence(
+    'icons',
     ['scripts', 'fonts', 'images', 'sass'],
     'patternlab',
     'styleguide',
-    'sass'
+    'sass',
+    callback
   );
 });
 
