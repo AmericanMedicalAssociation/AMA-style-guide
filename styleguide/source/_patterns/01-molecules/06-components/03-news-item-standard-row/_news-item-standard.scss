@@ -1,11 +1,11 @@
 .news-item_standard {
   @extend %clearfix;
-  .text-wrapper {
+  .news-item_standard-text {
     float: left;
-    margin-right: 50px;
-    max-width: 550px;
+    margin-right: 2.77em;
+    max-width: 30.55em;
   }
-  .title {
-    margin-bottom: 30px;
+  .news-item_standard-title {
+    margin-bottom: 1em;
   }
 }
