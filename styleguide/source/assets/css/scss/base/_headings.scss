@@ -1,5 +1,6 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
+
 h1, .h1 {
   font-family: $font-secondary;
   font-size: 3em;
@@ -14,12 +15,15 @@ h2, .h2, %h2 {
 }
 
 h3,  .h3 {
+  font-family: $font-secondary;
   font-size: 1.88em;
   line-height: 1.2;
 }
 
 h4, .h4 {
-   font-size: 1.66em;
+  font-family: $font-secondary;
+  font-size: 1.66em;
+  line-height: 1.12;  
 }
 
 h5, .h5 {
