@@ -1,10 +1,10 @@
 .tabs {
   overflow: hidden;
-  ul {
+  .tab_list {
     display: table;
     width: 100%;
   }
-  li {
+  .tab_list-item {
     display: table-cell;
     text-align: center;
     &:last-child {
@@ -12,14 +12,17 @@
     }
   }
   a {
-    color: $gray-8;
+    color: $black-20;
     display: block;
-    padding: 20px;
+    padding: 1em;
     &:hover, &:focus {
-      color: $blue;
+      color: $black-55;
     }
-    &.active {
+    &.tab_list_link-active {
       color: $black;
+      &:hover {
+        color: $blue;
+      }
     }
   }
 }

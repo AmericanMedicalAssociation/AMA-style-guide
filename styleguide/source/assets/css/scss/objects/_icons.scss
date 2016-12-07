@@ -1,125 +1,20 @@
-
-/* Icon Font */
-@font-face {
-	font-family: 'icons';
-	src:url('../fonts/icons.eot');
-	src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icons.woff') format('woff'),
-		url('../fonts/icons.ttf') format('truetype'),
-		url('../fonts/icons.svg#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
+// Local tweaks to grunticon-generated code
+.icon {
+  display: inline-block;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'icons';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
+// Arrow down used on Audience Selector
+.icon-selected {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2218px%22%20height%3D%2210px%22%20viewBox%3D%220%200%2018%2010%22%20enable-background%3D%22new%200%200%2018%2010%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cdefs%3E%0D%0A%09%09%3Crect%20id%3D%22SVGID_1_%22%20width%3D%2218%22%20height%3D%2210%22/%3E%0D%0A%09%3C/defs%3E%0D%0A%09%3CclipPath%20id%3D%22SVGID_2_%22%3E%0D%0A%09%09%3Cuse%20xlink%3Ahref%3D%22%23SVGID_1_%22%20%20overflow%3D%22visible%22/%3E%0D%0A%09%3C/clipPath%3E%0D%0A%09%3Cpath%20clip-path%3D%22url%28%23SVGID_2_%29%22%20fill%3D%22%2302AAEC%22%20d%3D%22M9%2C10L0.293%2C1.639c-0.391-0.375-0.391-0.983%2C0-1.358s1.023-0.375%2C1.414%2C0%0D%0A%09%09L9%2C7.284l7.293-7.003c0.391-0.375%2C1.023-0.375%2C1.414%2C0s0.391%2C0.983%2C0%2C1.358L9%2C10z%22/%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A');
+  display: block;
+  height: 10px;
+  width: 18px;
 }
 
-.icon-twitter:before, .icon-stumbleupon:before, .icon-pinterest:before, .icon-linkedin:before, .icon-google-plus:before, .icon-search:before, .icon-play:before, .icon-menu:before, .icon-arrow-left:before, .icon-arrow-right:before, .icon-bubble:before, .icon-facebook:before, .icon-feed:before, .icon-youtube:before, .icon-tag:before, .icon-tumblr:before, .icon-instagram, .icon-podcast, .icon-apple,.icon-android, .icon-arrow:after, .icon-envelope:before {
-	font-family: 'icons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-twitter:before {
-    content: "\74";
-}
-.icon-stumbleupon:before {
-    content: "\75";
-}
-.icon-pinterest:before {
-    content: "\70";
-}
-.icon-linkedin:before {
-    content: "\69";
-}
-.icon-google-plus:before {
-    content: "\67";
-}
-.icon-search:before {
-    content: "\73";
-}
-.icon-play:before {
-    content: "\61";
-}
-.icon-menu:before {
-    content: "\21";
-}
-.icon-arrow-left:before {
-    content: "\23";
-}
-.icon-arrow-right:before {
-    content: "\24";
-}
-.icon-bubble:before {
-    content: "\25";
-}
-.icon-facebook:before {
-    content: "\66";
-}
-.icon-feed:before {
-    content: "\27";
-}
-.icon-youtube:before {
-    content: "\79";
-}
-.icon-tag:before {
-    content: "\28";
-}
-.icon-tumblr:before {
-    content: "\6d";
-}
-.icon-instagram:before {
-    content: "\22";
-}
-.icon-podcast:before {
-    content: "\26";
-}
-.icon-android:before {
-    content: "\29";
-}
-.icon-apple:before {
-    content: "\2a";
-}
-.icon-envelope:before {
-    content: "\2b";
-}
-
-
-.icon-arrow:after {
-	content: "\61";
-	display: inline-block;
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
-	transform: rotate(90deg);
-}
-
-.icon-play:before {
-	font-size: 0.7rem;
-	padding-left: 0.2em;
-}
-
-.icon-play-box {
-	display: block;
-	margin-left: $pad-double;
-}
-
-.icon-play-box:before {
-	padding: $pad-quarter;
-	background: $gray;
-	color: $white;
-	margin-left: -1.7rem;
-	margin-right: $pad-half;
+// Arrow next used between breadcrumbs
+.icon-next {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%2213px%22%20height%3D%228px%22%20viewBox%3D%220%200%2013%208%22%20enable-background%3D%22new%200%200%2013%208%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cdefs%3E%0D%0A%09%09%3Crect%20id%3D%22SVGID_1_%22%20width%3D%2213%22%20height%3D%228%22/%3E%0D%0A%09%3C/defs%3E%0D%0A%09%3CclipPath%20id%3D%22SVGID_2_%22%3E%0D%0A%09%09%3Cuse%20xlink%3Ahref%3D%22%23SVGID_1_%22%20%20overflow%3D%22visible%22/%3E%0D%0A%09%3C/clipPath%3E%0D%0A%09%3Cpath%20clip-path%3D%22url%28%23SVGID_2_%29%22%20d%3D%22M9.206%2C0.207c-0.275-0.276-0.723-0.276-0.998%2C0c-0.275%2C0.276-0.275%2C0.722%2C0%2C0.998l2.089%2C2.089%0D%0A%09%09h-9.59C0.316%2C3.294%2C0%2C3.61%2C0%2C4c0%2C0.39%2C0.316%2C0.706%2C0.706%2C0.706h9.59L8.208%2C6.795c-0.275%2C0.275-0.275%2C0.723%2C0%2C0.998%0D%0A%09%09C8.347%2C7.931%2C8.526%2C8%2C8.707%2C8s0.361-0.069%2C0.499-0.207L13%2C4L9.206%2C0.207z%22/%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A');
+  display: inline-block;
+  height: 8px;
+  width: 13px;
 }

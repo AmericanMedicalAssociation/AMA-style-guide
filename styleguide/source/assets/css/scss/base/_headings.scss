@@ -1,37 +1,35 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
-// Base font size is 18px.
-
-h1, .h1, .alpha {
+h1, .h1 {
   font-family: $font-secondary;
   font-size: 3em;
   line-height: 1.08;
 }
 
-h2, .h2, %h2, .beta {
+h2, .h2, %h2 {
   font-family: $font-secondary;
   font-size: 2.55em;
   font-weight: 400;
   line-height: 1.08;
 }
 
-h3,  .h3, .gamma {
+h3,  .h3 {
   font-size: 1.88em;
   line-height: 1.2;
 }
 
-h4, .h4, .delta {
+h4, .h4 {
    font-size: 1.66em;
 }
 
-h5, .h5, %h5, .epsilon {
+h5, .h5 {
   font-family: $font;
   font-size: 1.33em;
   font-weight: 600;
   line-height: 1.2;
 }
 
-h6,  .h6, %h6, .zeta {
+h6,  .h6 {
   font-family: $font;
   font-size: 1em;
   font-weight: 600;
