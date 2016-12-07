@@ -2,13 +2,16 @@
   color: $white;
   margin-bottom: 2em;
   padding: 30px;
-  &.block-promo_red {
+  &.block-promo-red {
     background: $red;
   }
-  &.block-promo_orange {
+  &.block-promo-orange {
     background: $orange;
   }
-  &.block-promo_purple {
+  &.block-promo-purple {
     background: $purple;
+  }
+  .title {
+    text-align: center;
   }
 }

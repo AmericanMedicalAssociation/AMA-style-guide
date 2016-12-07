@@ -2,8 +2,14 @@
   .label {
     font-weight: 400;
     margin-bottom: 25px;
+    text-align: center;
   }
   li {
     @extend %h2;
+  }
+  .icon {
+    position: relative;
+    left: 148px;
+    top: 5px;
   }
 }
