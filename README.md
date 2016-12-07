@@ -16,3 +16,21 @@
 Occasionally, you might have to make a change to CSS and let the new stylesheet get pushed into the browser to see recent changes, but otherwise this should take care of everything: moving assets, compiling SASS, getting BrowserSync running, and more.
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
+
+## Troubleshooting:
+### Make sure node and npm are up to date(-ish)
+You might have to do any or all of these
+- Update node
+```
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+- Update npm
+```
+sudo npm install -g npm
+```
+- Rebuild npm to recompile any outdated packages.
+```
+npm rebuild
+```
