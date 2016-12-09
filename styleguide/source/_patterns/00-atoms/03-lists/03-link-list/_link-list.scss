@@ -1,0 +1,12 @@
+.link-list_item {
+  @extend %b1;
+  margin-bottom: 9px;
+}
+
+.link-list_item-link {
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
