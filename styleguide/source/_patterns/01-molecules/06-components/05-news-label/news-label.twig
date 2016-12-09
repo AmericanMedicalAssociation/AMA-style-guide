@@ -1,3 +1,7 @@
 <div class="news news_label">
-  <a href="{{ url }}" target="_blank">{% include "05-h5.twig" %}</a>
+  {% include '05-rule-horizontal.twig' %}
+  <div class="news_label-inner">
+    {% include '04-eyebrow.twig' %}
+    <h5><a href="{{ url }}" target="_blank" class="news_label_link">Latest <br />News from <br />AMA Wire{% include '03-arrow-external.twig' %}</a></h5>
+  </div>
 </div>
