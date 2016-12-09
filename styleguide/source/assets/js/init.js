@@ -9,7 +9,6 @@
 		//updateAds();
 	});
 
-
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
 		e.preventDefault();
@@ -22,5 +21,5 @@
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.header .search-form').toggleClass('active');
-	});
+	}); 
 })(this);
