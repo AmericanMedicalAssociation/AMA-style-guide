@@ -1,0 +1,13 @@
+.social_links_list_item {
+  display:  inline-block;
+  margin-right: 0.83em;
+  &:last-of-type {
+    margin-right:  0;
+  }
+  a {
+    display:  inline-block;
+    &:hover {
+      fill: $blue;
+    }
+  }
+}
