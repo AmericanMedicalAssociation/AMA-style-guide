@@ -1,6 +1,9 @@
 .news-item_featured {
   .news-item_featured-title {
     margin-bottom: 0.4em;
+    a:hover {
+      text-decoration: underline;
+    }
   }
   .byline {
     margin-bottom: 0.5em;
