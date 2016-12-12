@@ -1,0 +1,19 @@
+.search-modal {
+  position: relative;
+  background-color: $black-7;
+}
+
+.search-modal_close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: transparent;
+  z-index: 1;
+  cursor: pointer;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: transparent;
+  }
+}
