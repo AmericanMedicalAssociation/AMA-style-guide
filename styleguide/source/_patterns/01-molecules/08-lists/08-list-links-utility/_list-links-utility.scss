@@ -1,0 +1,21 @@
+.list_link_item-utility {
+  display: inline-block;
+  font-size: 0.77em;
+  line-height: 1;
+  &:after {
+    color: $black-55;
+    content: "|";
+  }
+  &:last-of-type:after {
+    content: "";
+  }
+  a {
+    color: $black-55;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 0.5em
+  }
+  a:hover {
+    color: $blue;
+  }
+}
