@@ -1,17 +1,71 @@
 .block-promo {
-  color: $white;
+  display: block;
   margin-bottom: 2em;
   padding: 30px;
+  color: $white;
+  background: $gray;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
   &.block-promo-red {
     background: $red;
+    &:hover {
+      background: $red-darker;
+    }
   }
   &.block-promo-orange {
     background: $orange;
+    &:hover {
+      background: $orange-darker;
+    }
   }
   &.block-promo-purple {
     background: $purple;
+    &:hover {
+      background: $purple-darker;
+    }
   }
-  .title {
-    text-align: center;
+}
+
+.block-promo:hover {
+  color: $white;
+  .block-promo_cta {
+    text-decoration: underline;
   }
+}
+
+.block-promo a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.block-promo_title {
+  font-family: $myriad-pro;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.block-promo_summary {
+  font-family: $myriad-pro;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+.block-promo_cta-primary {
+  font-family: $kepler-std;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 38px;
+  margin-bottom: 30px;
+}
+
+.block-promo_cta-secondary {
+  font-family: $myriad-pro;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
 }
