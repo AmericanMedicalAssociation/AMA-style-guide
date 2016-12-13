@@ -1,6 +1,5 @@
 .breadcrumbs .breadcrumb_list-item {
   display: inline-block;
-  padding: 0 3px;
   a {
     font-size: 14px;
     font-weight: 600;
@@ -8,5 +7,8 @@
     &:hover {
       color: $blue; 
     }
-  } 
+  }
+  .icon-next {
+    margin: 0 0.2em;
+  }
 }
