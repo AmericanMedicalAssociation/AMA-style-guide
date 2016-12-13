@@ -1,0 +1,18 @@
+.news_item-featured {
+  .news_item-featured_title {
+    margin-bottom: 0.4em;
+  }
+  &:hover {
+    .news_item-featured_title {
+      text-decoration: underline;
+    }
+  }
+  .byline {
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  .news_item-featured-summary {
+    font-size: 1.33em;
+    line-height:  1.3;
+  }
+}
