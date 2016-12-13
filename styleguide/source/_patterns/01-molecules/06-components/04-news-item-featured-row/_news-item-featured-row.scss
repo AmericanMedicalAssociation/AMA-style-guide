@@ -1,7 +1,9 @@
-.news-item_featured {
-  .news-item_featured-title {
+.news_item-featured {
+  .news_item-featured_title {
     margin-bottom: 0.4em;
-    a:hover {
+  }
+  &:hover {
+    .news_item-featured_title {
       text-decoration: underline;
     }
   }
@@ -9,7 +11,7 @@
     margin-bottom: 0.5em;
     text-transform: uppercase;
   }
-  .news-item_featured-summary {
+  .news_item-featured-summary {
     font-size: 1.33em;
     line-height:  1.3;
   }
