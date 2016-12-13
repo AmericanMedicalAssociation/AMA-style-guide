@@ -41,31 +41,31 @@
 .block-promo_title {
   font-family: $myriad-pro;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: .88em; // 16px
+  line-height: 1.437em; // 23px
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 1.56em; // 25px
 }
 
 .block-promo_summary {
   font-family: $myriad-pro;
   font-weight: 400;
-  font-size: 21px;
-  line-height: 28px;
-  margin-bottom: 30px;
+  font-size: 1.16em; // 21px
+  line-height: 1.3em; // 28px
+  margin-bottom: 1.42em; // 30px
 }
 
 .block-promo_cta-primary {
   font-family: $kepler-std;
   font-weight: 400;
-  font-size: 34px;
-  line-height: 38px;
-  margin-bottom: 30px;
+  font-size: 1.8em; // 34px
+  line-height: 1.117em; // 38px
+  margin-bottom: .88em; // 30px
 }
 
 .block-promo_cta-secondary {
   font-family: $myriad-pro;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: .88em; // 16px
+  line-height: 1.875em; // 30px
 }
