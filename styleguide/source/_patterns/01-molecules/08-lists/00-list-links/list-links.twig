@@ -1,14 +1,14 @@
-<ul>
-  <li class="link-list_item">
-    <a class="link-list_item-link" href="{{url}}">{{ item_1|default('List item 1') }}</a>
+<ul class="list-links">
+  <li class="list-links_item">
+    {% include '00-link-black.twig' with { 'content': 'Lorem ipsum dolor'} %}
   </li>
-  <li class="link-list_item">
-    <a class="link-list_item-link" href="{{url}}">{{ item_2|default('List item 2') }}</a>
+  <li class="list-links_item">
+    {% include '00-link-black.twig' with { 'content': 'Donec non lectus leo'} %}
   </li>
-  <li class="link-list_item">
-    <a class="link-list_item-link" href="{{url}}">{{ item_3|default('List item 3') }}</a>
+  <li class="list-links_item">
+    {% include '00-link-black.twig' with { 'content': 'Lorem ipsum dolor'} %}
   </li>
-  <li class="link-list_item">
-    <a class="link-list_item-link" href="{{url}}">{{ item_4|default('List item 4') }}</a>
+  <li class="list-links_item">
+    {% include '00-link-black.twig' with { 'content': ' Donec non lectus leo'} %}
   </li>
 </ul>
