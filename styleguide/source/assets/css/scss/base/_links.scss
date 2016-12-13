@@ -8,3 +8,12 @@ a {
 		color: $black;
 	}
 }
+
+.link-black {
+  // if the default link style changes this will need to include color: black; text-decoration: none;
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
