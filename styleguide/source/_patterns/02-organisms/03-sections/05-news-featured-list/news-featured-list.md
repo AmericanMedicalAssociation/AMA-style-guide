@@ -1,5 +1,5 @@
 ---
 el: ".news-featured"
-title: "News Featured List"
+title: "News Featured"
 ---
-The News Featured List includes a label on the left, with one news featured item.
+The News Featured organism includes a label on the left, with one news featured item.
