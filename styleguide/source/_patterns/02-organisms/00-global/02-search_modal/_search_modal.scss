@@ -1,0 +1,21 @@
+.search_modal {
+  max-width: 1400px;
+  position: relative;
+  background-color: $black-7;
+  padding-bottom: 50px;
+}
+
+.search_modal_close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: transparent;
+  z-index: 1;
+  cursor: pointer;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: transparent;
+  }
+}

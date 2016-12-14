@@ -34,7 +34,8 @@
   "scss": {
     "base" : "source/assets/css/",
     "files": [
-      "source/assets/css/**/*.scss"
+      "source/assets/css/**/*.scss",
+      "source/_patterns/**/**/**/*.scss"
     ],
     "dest" : "public/assets/css/"
   },
