@@ -1,11 +1,16 @@
 .news-item_standard {
   @extend %clearfix;
+  &:hover {
+    .news-item_standard-title {
+      text-decoration: underline;
+    }
+  }
   .news-item_standard-text {
     float: left;
     margin-right: 2.77em;
     max-width: 30.55em;
   }
   .news-item_standard-title {
-    margin-bottom: 1em;
+    margin-bottom: 0.6em;
   }
 }

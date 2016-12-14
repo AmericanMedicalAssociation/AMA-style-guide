@@ -1,0 +1,19 @@
+.news_list-standard {
+  // @todo remove this when grid is implemented.
+  max-width: 66.66em;
+  .news_label {
+    float: left;
+    width: 9.44em;
+  }
+  .news_list {
+    float: right;
+    width: 49.72em;
+  }
+  .news_list-standard-row {
+    @include rule-horizontal(1px, $gray-8, solid);
+    padding: 40px 0;
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+}
