@@ -1,0 +1,18 @@
+.news_label-inner {
+  max-width: 9.44em;
+}
+.news_label_link {
+  color: $purple;
+  &:hover {
+    color: $blue;
+    .external {
+      fill: $blue;
+   }
+  }
+  .icon-external {
+    margin-left: 0.4em;
+  }
+  .external {
+    fill: $purple;
+  }
+}

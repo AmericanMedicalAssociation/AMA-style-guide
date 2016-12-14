@@ -1,9 +1,12 @@
 .news-featured {
-
-}
-.news_list {
-
-}
-.news_list-featured {
-
+  // @todo remove this when grid is implemented.
+  max-width: 66.66em;
+  .news_label-featured {
+    float: left;
+    width: 9.44em;
+  }
+  .news_list {
+    float: right;
+    width: 49.72em;
+  }
 }
