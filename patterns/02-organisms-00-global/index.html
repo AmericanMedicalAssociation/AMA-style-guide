@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css?1479852027" media="all" />
-    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1479852027" media="all" />
+    <link rel="stylesheet" href="../../assets/css/style.css?1481749319" media="all" />
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1481749319" media="all" />
+
+        <script src="../../assets/js/jquery-2.0.0b2.js" defer></script>
+
+    <!-- Grunticon loader -->
+    <script src="../../assets/icons/grunticon.loader.js"></script>
+    <script>grunticon(["../../assets/icons/icons.data.svg.css", "../../assets/icons/icons.data.png.css", "../../assets/icons/icons.fallback.css"], grunticon.svgLoadedCallback );</script>
+    <noscript><link href="icons.fallback.css" rel="stylesheet"></noscript>
 
     <!-- Typekit Font Script: Replace with Client's details -->
     <script src="https://use.typekit.net/eie0akm.js"></script>
@@ -20,8 +27,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1479852027" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1479852027" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1481749319" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1481749319" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -74,22 +81,12 @@
 		<li><a href="#">Contact</a></li>
 	</ul>
 </nav><!--end .nav-->
-	<form action="#" method="post" class="inline-form search-form">           
-    <fieldset>
-	    <legend class="is-vishidden">Search</legend>
-	    <label for="search-field" class="is-vishidden">Search</label>
-	    <input type="search" placeholder="Search" id="search-field" class="search-field" />
-	    <button class="search-submit">
-	    	<span class="icon-search" aria-hidden="true"></span>
-	    	<span class="is-vishidden">Search</span>
-	    </button>
-    </fieldset>
-</form></header>
+</header>
 <!-- End .header -->
   </div>
   
   <script type="text/json" id="sg-pattern-data-organisms-header" class="sg-pattern-data">
-    {"lineage":[{"lineagePattern":"atoms-logo","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header\/02-organisms-00-global-00-header.html"},{"lineagePattern":"molecules-primary-nav","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header\/02-organisms-00-global-00-header.html"},{"lineagePattern":"molecules-search","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header\/02-organisms-00-global-00-header.html"}],"lineageR":[{"lineagePattern":"templates-site","lineagePath":"..\/..\/patterns\/03-templates-00-layouts-00-site\/03-templates-00-layouts-00-site.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"header","patternPartial":"organisms-header","patternState":""}
+    {"lineage":[{"lineagePattern":"atoms-logo","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header\/02-organisms-00-global-00-header.html"},{"lineagePattern":"molecules-primary-nav","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header\/02-organisms-00-global-00-header.html"}],"lineageR":[{"lineagePattern":"templates-site","lineagePath":"..\/..\/patterns\/03-templates-00-layouts-00-site\/03-templates-00-layouts-00-site.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"header","patternPartial":"organisms-header","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="organisms-footer" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -123,6 +120,62 @@
   
   <script type="text/json" id="sg-pattern-data-organisms-footer" class="sg-pattern-data">
     {"lineage":[],"lineageR":[{"lineagePattern":"templates-site","lineagePath":"..\/..\/patterns\/03-templates-00-layouts-00-site\/03-templates-00-layouts-00-site.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"footer","patternPartial":"organisms-footer","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="organisms-search_modal" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-organisms-00-global-02-search_modal-search_modal/02-organisms-00-global-02-search_modal-search_modal.html" class="patternLink" data-patternpartial="organisms-search_modal" title="Link to Pattern">
+        search_modal
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="organisms-search_modal" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-search_modal" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-search_modal"></div>
+    
+  <div class="sg-pattern-example">
+    <section class="search_modal">
+  <div class="layout-container">
+    <span class="search_modal_close">
+      <span class="icon icon-close"></span>      Close
+    </span>
+        <div class="layout-1up">
+      <form action="#" method="post" class="search-field">   
+	<label for="search-field" class="search-field_label">Search</label>
+	<input type="search" placeholder="Search AMA" id="search-field" class="search-field_input" />
+    <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
+  <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
+</form>    </div>
+
+        <div class="layout-75-25--1">
+      <h3 class="list_title-small">Best Match</h3><ul>
+  <li>
+    <h4 class="list-item_title-small"><a class="link-black" href="#">FREIDA ONLINE, the AMA residency and fellowship database.</a></h4>    <p class="b1">Search the nearly 10,000 accredited graduate medical education training programs. Learn about programs and institutions nationwide to simplify the selection process.</p>  </li>
+</ul>      <h3 class="list_title-small">Popular Searches</h3>
+<ul class="list_links">
+  <li class="list_links_item">
+    <a class="link-black" href="#">Lorem ipsum dolor</a>  </li>
+  <li class="list_links_item">
+    <a class="link-black" href="#">Donec non lectus leo</a>  </li>
+  <li class="list_links_item">
+    <a class="link-black" href="#">Lorem ipsum dolor</a>  </li>
+  <li class="list_links_item">
+    <a class="link-black" href="#"> Donec non lectus leo</a>  </li>
+</ul>    </div>
+  </div>
+</section>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-organisms-search_modal" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"atoms-close","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"},{"lineagePattern":"molecules-search-field","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"},{"lineagePattern":"molecules-list-best-match","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"},{"lineagePattern":"molecules-list-popular-search","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"search_modal","patternPartial":"organisms-search_modal","patternState":""}
   </script>
 </div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
 </div><!--end .sg-main-->  
@@ -162,10 +215,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1479852027">
+<script id="pl-js-polyfill-insert-1481749319">
   (function() {
     if (self != top) {
-      var cb = '1479852027';
+      var cb = '1481749319';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -175,15 +228,18 @@
   })();
 </script>
 
-<script id="pl-js-insert-1479852027">
+<script id="pl-js-insert-1481749319">
   (function() {
     if (self != top) {
-      var cb = '1479852027';
+      var cb = '1481749319';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
   })();
 </script>
   
+      <script src="../../assets/js/init.js" async></script>
+  <script src="../../assets/js/search.js" async></script>
   </body>
+
 </html>
