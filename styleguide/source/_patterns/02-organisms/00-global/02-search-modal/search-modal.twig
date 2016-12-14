@@ -1,16 +1,16 @@
 <section class="search-modal">
-  <div class="l-container">
+  <div class="layout-container">
     <span class="search-modal_close">
       {% include "atoms-close" %}
       Close
     </span>
     {# @todo add 1up grid class around search-field molecule #}
-    <div class="l-1up">
+    <div class="layout-1up">
       {% include "molecules-search-field" %}
     </div>
 
     {# @todo update layout class once system is determined #}
-    <div class="l-75-25--1">
+    <div class="layout-75-25--1">
       {% include "molecules-list-best-match" %}
       {% include "molecules-list-popular-search" %}
     </div>
