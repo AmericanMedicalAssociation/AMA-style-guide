@@ -10,7 +10,7 @@
     width: 49.72em;
   }
   .news_list-standard-row {
-    border-top: 1px $gray-8 solid;
+    @include rule-horizontal(1px, $gray-8, solid);
     padding: 40px 0;
     &:first-of-type {
       border-top: 0;

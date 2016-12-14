@@ -1,5 +1,5 @@
 .rule_horizontal {
-  border-top: 1px $gray-8 solid;
+  @include rule-horizontal(1px, $gray-8, solid);
 }
 .news_label-inner {
   max-width: 9.44em;
