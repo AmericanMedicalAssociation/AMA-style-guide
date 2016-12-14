@@ -21,5 +21,5 @@
 		e.preventDefault();
 		$(this).toggleClass('active');
 		$('.header .search-form').toggleClass('active');
-	}); 
+	});
 })(this);
