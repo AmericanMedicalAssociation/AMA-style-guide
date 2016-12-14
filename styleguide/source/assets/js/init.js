@@ -9,7 +9,6 @@
 		//updateAds();
 	});
 
-
 	//Navigation toggle
 	$('.nav-toggle-menu').click(function(e) {
 		e.preventDefault();

@@ -3,6 +3,12 @@ p {
   margin-bottom: $space;
 }
 
+// update with semantic class
+.b1, %b1 {
+  font-size: 1.5em;
+  line-height: 1.3;
+}
+
 /* Blockquote */
 blockquote {
   font-style:italic;
