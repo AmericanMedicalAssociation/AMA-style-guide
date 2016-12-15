@@ -1,4 +1,5 @@
 .ribbon_dropdown {
+  position: relative;
   display: inline-block;
   border-left: 1px solid $gray-8;
   border-right: 1px solid $gray-8;
@@ -32,6 +33,8 @@
 }
 
 .ribbon_dropdown_nav {
+  position: absolute;
+  width: 100%;
   display: none;
 
   &.is-active {
@@ -47,13 +50,5 @@
   a:visited {
     display: block;
     padding: 8px 15px;
-    color: $white;
-  }
-
-  a:active,
-  a:hover,
-  a:focus {
-    color: $white;
-    text-decoration: underline;
   }
 }
