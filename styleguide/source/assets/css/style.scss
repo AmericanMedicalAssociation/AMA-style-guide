@@ -129,9 +129,11 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/05-navigation/05-breadcrumbs/breadcrumbs.scss";
 @import "../../_patterns/01-molecules/05-navigation/06-tabs-audience-selector/tabs-audience-selector.scss";
 @import "../../_patterns/01-molecules/05-navigation/07-ribbon-dropdown/ribbon-dropdown.scss";
+@import "../../_patterns/01-molecules/05-navigation/08-ribbon-user-menu/ribbon-user-menu.scss";
 @import "../../_patterns/01-molecules/06-components/03-news-item-standard-row/news-item-standard.scss";
 @import "../../_patterns/01-molecules/06-components/04-news-item-featured-row/news-item-featured-row.scss";
 @import "../../_patterns/01-molecules/06-components/05-news-label/news-label.scss";
 @import "../../_patterns/01-molecules/08-lists/00-list_links/list_links.scss";
 @import "../../_patterns/02-organisms/00-global/02-search_modal/search_modal.scss";
+@import "../../_patterns/02-organisms/00-global/03-ribbon/ribbon.scss";
 @import "../../_patterns/02-organisms/03-sections/04-news-standard-list/news-standard-list.scss";
