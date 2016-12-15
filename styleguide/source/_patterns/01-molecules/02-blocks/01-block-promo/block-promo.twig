@@ -1,3 +1,8 @@
-{% include 'block-promo-red.twig' %}
-{% include 'block-promo-orange.twig' %}
-{% include 'block-promo-purple.twig' %}
+<a href='{{ url }}' class='block-promo {{ block_class_color }}'>
+    {% include '01-h1.twig' with { 'content': 'Featured Event', 'class': 'block-promo_title'} %}
+    {% include '02-h2.twig' with { 'content': 'Register Now', 'class': 'block-promo_cta block-promo_cta-primary'} %}
+    {% include '21-summary.twig' with { 'content': 'International Conference on Physicians\' Health
+    Boston, Massachusetts
+    September 18–20, 2016', 'class': 'block-promo_summary'} %}
+    {% include '20-paragraph.twig' with { 'content': 'Learn More', 'class': 'block-promo_cta block-promo_cta-secondary'} %}
+</a>
