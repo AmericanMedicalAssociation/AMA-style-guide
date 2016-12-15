@@ -139,3 +139,11 @@
   font-weight: 600;
   line-height: 1.22;
 }
+
+.divider {
+  position: relative;
+  display: inline-block;
+  width: 1px;
+  height: 1.5em;
+  background-color: $gray-8;
+}
