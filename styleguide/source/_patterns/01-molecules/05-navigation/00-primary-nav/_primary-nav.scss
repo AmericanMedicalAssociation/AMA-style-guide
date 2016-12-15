@@ -1,0 +1,10 @@
+.nav-primary_list-item {
+  display: inline-block;
+  margin-right: 25px;
+  a {
+    padding-bottom: 40px;
+    &:hover {
+      border-bottom: 20px $purple solid;
+    }
+  }
+}
