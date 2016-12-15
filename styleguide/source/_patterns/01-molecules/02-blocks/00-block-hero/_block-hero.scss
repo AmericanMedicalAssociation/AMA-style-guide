@@ -1,0 +1,45 @@
+// Hero CTA block on Homepage
+
+.block-hero {
+  @extend %clearfix;
+  background-color: $black-7;
+  color: $black;
+  display: block;
+  max-width: 1200px;
+  &:hover {
+    background-color: #e6e6e6;
+    color: $black;
+    .block-hero_cta-secondary {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+  .block-hero-primary {
+    display: block;
+    float: left;
+    max-height: 21.111em;
+  }
+  .block-hero-secondary {
+    float: left;
+    max-height: 21.111em;
+    max-width: 33.333em;
+    padding: 1.666em 2.777em;
+    text-align: center;
+    vertical-align: top;
+  }
+  .block-hero_cta-primary {
+    margin-bottom: 3em;
+    text-transform: uppercase;
+  }
+  .block-hero_title {
+    margin-bottom: 0.6em;
+  }
+  .block-hero_summary {
+    @extend %b2;
+    margin-bottom: 2em;
+  }
+  .block-hero_cta-secondary {
+    @extend %b4;
+    font-weight: 600;
+  }
+}
