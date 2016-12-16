@@ -1,8 +1,11 @@
 .nav-primary_list-item {
   display: inline-block;
   margin-right: 25px;
+  &:last-of-type {
+    margin-right: 0;
+  }
   a {
-    padding-bottom: 40px;
+    padding-bottom: 32px;
     &:hover {
       border-bottom: 20px $purple solid;
     }
