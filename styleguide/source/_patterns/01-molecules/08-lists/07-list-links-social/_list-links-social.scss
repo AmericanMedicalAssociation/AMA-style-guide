@@ -4,6 +4,15 @@
   &:last-of-type {
     margin-right:  0;
   }
+  .title {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
   a {
     display:  inline-block;
     &:hover {
