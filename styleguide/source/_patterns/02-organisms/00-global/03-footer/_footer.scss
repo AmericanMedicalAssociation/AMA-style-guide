@@ -5,9 +5,7 @@
 }
 .footer-inner {
   @extend %clearfix;
-  margin: 0 auto;
   position: relative;
-  width: 1200px;
 }
 .footer-primary {
   float: left;
