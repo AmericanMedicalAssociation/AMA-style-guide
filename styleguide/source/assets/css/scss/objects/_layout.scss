@@ -2,300 +2,97 @@
     $LAYOUT
 \*------------------------------------*/
 
+.grid-placeholder {
+	display: block;
+	background-color:$black-3;
+	padding: .5em;
+}
+
 /* Layout Container */
 .layout-container {
+	@include grid();
+  @include grid--halign-justify-center()
 	max-width: $max-width;	
-	margin: 0 auto;
-	padding: $pad-half;
+	margin: 0 1.1em; //20px
+
+	@include breakpoint($bp-small) {
+		margin: 0 1.667em; //30px
+	}
+	@include breakpoint($bp-med) {
+		margin: 0 5.5em; // 100px
+	}
+	@include breakpoint($bp-large) {
+		margin: 0 auto;
+	}
+}
+
+// Layout Classes
+// Change once a grid system is determined
+
+.layout-1up {
+	@include grid__unit();
+	padding: 0 20px;
+
+	@include breakpoint($bp-small) {
+		padding: 0 25px;
+	}
+}
+
+.layout-2up {
+	@include grid__unit();
+	padding: 0 20px; 
+
+	@include breakpoint($bp-small) {
+		@include grid__unit--cols(6);
+		padding: 0 25px;
+	}
+}
+
+.layout-3up {
+	@include grid__unit();
+	padding: 0 20px; 
+
+	@include breakpoint($bp-small) {
+		@include grid__unit--cols(4);
+		padding: 0 25px;
+	}
+}
+
+.layout-4up {
+	@include grid__unit();
+	padding: 0 20px; 
+
+	@include breakpoint($bp-small) {
+		@include grid__unit--cols(3);
+		padding: 0 25px;
+	}
+}
+
+.layout-main-col {
+	@include grid__unit();
+	padding: 0 20px; 
+
+	@include breakpoint($bp-small) {
+		@include grid__unit--cols(7.5);
+		padding: 0 25px;
+	}
+}
+
+.layout-side-col {
+	@include grid__unit();
+	padding: 0 20px; 
+
+	@include breakpoint($bp-small) {
+		@include grid__unit--cols(4.5);
+		padding: 0 25px;
+	}
 }
 
 /*------------------------------------*\
     $TEMPLATES
 \*------------------------------------*/
 
-/* Two Column Layout */
-.layout-two-col {
-	@extend %clearfix;
 
-	.layout-main {
-		@media all and (min-width: $bp-large) {
-			float: left;
-			width: 70%;
-			padding-right: $pad;
-		}
-	}
-	
-	.layout-sidebar {
-		@media all and (max-width: $bp-large) {
-			clear: both;
-		}
-
-		@media all and (min-width: $bp-large) {
-			float: left;
-			width: 30%;
-			padding: 0 0 0 $pad;
-		}
-	}
-}
-
-
-/*------------------------------------*\
-    $GRIDS
-\*------------------------------------*/
-
-/* Grid Container */
-.grid-container {
-	overflow: hidden;
-	margin: 0 (-$pad-half);
-}
-
-/* Grid Item */
-.grid-item {
-	padding: $pad-half;
-	
-	img {
-		display: block;
-	}
-
-	@media all and (min-width: $bp-med) {
-		float: left;
-	}
-}
-
-/* Grid 1up */
-.grid-1up {
-	.grid-item {
-		width: 100%;
-	}
-}
-
-/* Grid 2up */
-.grid-2up {
-	@media all and (min-width: $bp-med) {
-		> .grid-item {
-			float: left;
-			width: 50%;
-			
-			&:nth-of-type(odd) {
-				clear: left;
-			}
-		}
-	}
-}
-
-/* Grid Half (Always displayed side by side) */
-.grid-half {
-	> .grid-item {
-		float: left;
-		width: 50%;
-		
-		&:nth-of-type(odd) {
-			clear: left;
-		}
-	}
-}
-
-/* Grid 3up */
-.grid-3up {
-	@media all and (min-width: $bp-med) {
-		> .grid-item {
-			float: left;
-			width: 50%;
-			
-			&:nth-of-type(2n+1) {
-				clear: left;
-			}
-		}
-	}
-	
-	@media all and (min-width: $bp-large) {
-		> .grid-item {
-			width: 33.3333333%;
-			
-			&:nth-of-type(2n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
-		}
-	}
-}
-
-/* Grid 4up */
-.grid-4up {
-	@media all and (min-width: $bp-med) {
-		>.grid-item {
-			float: left;
-			width: 50%;
-			
-			&:nth-of-type(2n+1) {
-				clear: both;
-			}
-		}
-	}
-	
-	@media all and (min-width: $bp-large) {
-		>.grid-item {
-			width: 25%;
-			
-			&:nth-of-type(2n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(4n+1) {
-				clear: left;
-			}
-		}
-	}
-}
-
-/* Grid Quarter (Always displayed side by side) */
-.grid-quarter {
-	> .grid-item {
-		float: left;
-		width: 24%;
-		
-		&:nth-of-type(4n+1) {
-			clear: left;
-		}
-	}
-}
-
-.grid-max4 {
-
-	@media all and (min-width: $bp-small-2) {
-		>.grid-item {
-			float: left;
-			width: 50%;
-			
-			&:nth-of-type(2n+1) {
-				clear: both;
-			}
-		}
-	}
-
-	@media all and (min-width: $bp-small-3) {
-		>.grid-item{
-			width: 33.3333333%;
-			
-			&:nth-of-type(2n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
-		}
-	}
-	
-	@media all and (min-width: $bp-large) {
-		>.grid-item {
-			width: 25%;
-			
-			&:nth-of-type(3n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(4n+1) {
-				clear: left;
-			}
-		}
-	}
-}
-
-/* Grid 5up */
-.grid-max5 {
-
-	>.grid-item {
-		float: left;
-		width: 50%;
-		
-		&:nth-of-type(2n+1) {
-			clear: both;
-		}
-	}
-
-	@media all and (min-width: $bp-small-3) {
-		>.grid-item {
-			width: 33.3333333%;
-			
-			&:nth-of-type(2n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(3n+1) {
-				clear: left;
-			}
-		}
-	}
-	
-	@media all and (min-width: $bp-med) {
-		>.grid-item {
-			width: 25%;
-			
-			&:nth-of-type(3n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(4n+1) {
-				clear: left;
-			}
-		}
-	}
-
-	@media all and (min-width: $bp-med-2) {
-		>.grid-item {
-			width: 20%;
-			
-			&:nth-of-type(4n+1) {
-				clear: none;
-			}
-			
-			&:nth-of-type(5n+1) {
-				clear: left;
-			}
-		}
-	}
-}
-
-/* Grid 2/3 */
-.grid-item-2-3 {
-	@media all and (min-width: $bp-med) {
-		float: left;
-		width: 66.666666%;
-	}
-}
-
-.grid-item-1-3 {
-	@media all and (min-width: $bp-med) {
-		float: left;
-		width: 33.333333%;
-	}
-}
-
-/* Grid 4up block */
-.grid-opposites {
-	.grid-item{
-		float: left;
-		
-		&:last-child {
-			float: right;
-			text-align: right;
-		}
-	}
-}
-
-// Layout Classes
-// Change once a grid system is determined
-.layout-container {
-	margin: 0 1.66em;
-}
-
-.layout-1up {
-	width: 100%;
-}
 
 .layout-75-25--1 {
 	width: 75%;

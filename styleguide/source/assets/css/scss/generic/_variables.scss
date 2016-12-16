@@ -20,7 +20,7 @@ $information : #000db5;
 
 //AMA Brand Colors
 
-$black-3: l#f7f7f7;
+$black-3: #f7f7f7;
 $black-7: #ededed;
 $black-15: #d9d9d9; // this one was not in the style guide but was in the primary header component for the mobile second level background
 $black-20: #cccccc;
@@ -80,13 +80,8 @@ $border-thick: 7px;
 
 
 //Breakpoints
-$bp-small : 24em;
-$bp-small-2 : 29.75em;
-$bp-small-3 : 39.8em;
-$bp-med : 46.8em;
-$bp-med-2 : 48em;
-$bp-large : 50em;
-$bp-large-2 : 66em;
-$bp-xl : 73em;
-$bp-xxl : 89em;
-$bp-xxxl : 93em;
+$bp-xs: 25em; // 400px
+$bp-small : 37.5em; // 600px
+$bp-med : 56.25em; // 900px
+$bp-large : 75em; // 1200px
+$bp-xl : 87.5em; // 1400px

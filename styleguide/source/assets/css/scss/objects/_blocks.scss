@@ -58,7 +58,7 @@
   }
 
   .b-thumb {
-    @media all and (min-width: $bp-small-2) {
+    @media all and (min-width: $bp-small) {
       display: table-cell;
       vertical-align: top;  
         width: 30%;
@@ -73,7 +73,7 @@
   }
 
   .b-text {
-    @media all and (min-width: $bp-small-2) {
+    @media all and (min-width: $bp-small) {
       display: table-cell;
       width: 70%;
       padding: 0 $pad;
