@@ -140,6 +140,14 @@
   line-height: 1.22;
 }
 
+.divider {
+  position: relative;
+  display: inline-block;
+  width: 1px;
+  height: 1.5em;
+  background-color: $gray-8;
+}
+
 .rule_horizontal {
   border-top: 1px $gray-8 solid;
 }
