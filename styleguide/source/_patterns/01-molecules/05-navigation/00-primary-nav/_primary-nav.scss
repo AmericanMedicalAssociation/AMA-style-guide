@@ -1,0 +1,7 @@
+.nav-primary_list-item {
+  display: inline-block;
+  margin-right: 25px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
