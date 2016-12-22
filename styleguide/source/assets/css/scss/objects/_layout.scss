@@ -9,7 +9,7 @@
 }
 
 /* Layout Container */
-.layout-container {
+.layout_container {
 	@include grid();
   @include grid--halign-justify-center()
 	max-width: $max-width;	
@@ -29,7 +29,7 @@
 // Layout Classes
 // Change once a grid system is determined
 
-.layout-1up {
+.layout_1up {
 	@include grid__unit();
 	padding: 0 20px;
 
@@ -38,7 +38,7 @@
 	}
 }
 
-.layout-2up {
+.layout_2up {
 	@include grid__unit();
 	padding: 0 20px; 
 
@@ -48,7 +48,7 @@
 	}
 }
 
-.layout-3up {
+.layout_3up {
 	@include grid__unit();
 	padding: 0 20px; 
 
@@ -58,7 +58,7 @@
 	}
 }
 
-.layout-4up {
+.layout_4up {
 	@include grid__unit();
 	padding: 0 20px; 
 
@@ -68,7 +68,7 @@
 	}
 }
 
-.layout-main-col {
+.layout_main-col {
 	@include grid__unit();
 	padding: 0 20px; 
 
@@ -78,7 +78,7 @@
 	}
 }
 
-.layout-side-col {
+.layout_side-col {
 	@include grid__unit();
 	padding: 0 20px; 
 
@@ -92,7 +92,7 @@
     $TEMPLATES
 \*------------------------------------*/
 
-
+// Remove once replaced
 
 .layout-75-25--1 {
 	width: 75%;
