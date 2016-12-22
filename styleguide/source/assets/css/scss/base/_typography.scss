@@ -1,0 +1,80 @@
+// Typography
+
+// Font family variables
+$font-sans: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-serif: "kepler-std", Georgia, Times, "Times New Roman", serif;
+
+// Font weight variables
+$font-medium: 400;
+$font-bold: 600;
+
+// Base font style variables
+$base-font-size: 18px;
+$base-line-height: 25px;
+$base-font-family: $font-sans;
+$base-font-weight: $font-medium;
+
+// @todo - Verify proposed breakpoints
+// Tablet - Middle display
+$breakpoint-middle: 900px min-width;
+// Desktop - Wide display
+$breakpoint-wide: 1200px min-width;
+
+// Scalling variables?
+// $upcale-narrow:
+// $upscale-medium:
+// $upscale-wide:
+
+// Typography mixins
+@mixin font-style( $font-family, $font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+// Usage: @include font-size(1, large);
+@mixin font-size( $decimal-size, $keyword: null ) {
+  @if $keyword{ font-size: $keyword; }
+  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
+  font-size: $decimal-size * 1rem;
+}
+
+// Sets up the base font styles for body, h1 - h3, mobile first scaling up
+body {
+  -webkit-text-size-adjust: 100%;
+  color: $black;
+  @include font-style( $base-font-family, $base-font-size, $base-font-weight, $base-line-height);
+  h1, .h1, %h1 {
+    @include font-style($font-serif, 1.888em, $font-medium, 1.1176470588);
+  }
+  h2, .h2, %h2 {
+    @include font-style($font-serif, 1.222em, $font-medium, 1.1818181818);
+  }
+  h3, .h3, %h3 {
+    @include font-style($font-serif, 1.111em, $font-medium, 1.2);
+  }
+
+  // Body size is increased to 20px, the new value needs to be set in px
+  // so that the header ems are calculated properly
+  @include breakpoint($breakpoint-middle) {
+    @include font-style($font-sans, 20px, $font-medium, 1.35);
+    h1, .h1, %h1 {
+      @include font-style($font-serif, 2.4em, $font-medium, 1.0833333333);
+    }
+    h2, .h2, %h2 {
+      @include font-style($font-serif, 1.7em, $font-medium, 1.1176470588);
+    }
+    h3, .h3, %h3 {
+      @include font-style($font-serif, 1.5em, $font-medium, 1.1333333333);
+    }
+  }
+
+  // Scale up to wide
+  @include breakpoint($breakpoint-wide) {
+    h1, .h1, %h1 {
+      @include font-style($font-serif, 2.7em, $font-medium, 1.0740740741);
+    }
+  }
+}
