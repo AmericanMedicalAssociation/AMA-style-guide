@@ -49,4 +49,4 @@ New icons can be places in `source/assets/icons/svg`. When `gulp icons` is run, 
 ### Responsive implementation
 We are using [Breakpoint](http://breakpoint-sass.com/) to handle media queries for responsive implementation. 
 
-The first time you run `npm install` the dependency will be installed, but if you run into an error, running `npm install` again should fix the issued.
+The first time you run `npm install` the dependency will be installed, but if you run into an error, running `npm install` again should fix the issue.
