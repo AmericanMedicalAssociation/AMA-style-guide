@@ -10,5 +10,6 @@
 }
 
 .list_link_item-secondary-user {
+  @extend %h6;
   margin-bottom: 0.666em;
 }
