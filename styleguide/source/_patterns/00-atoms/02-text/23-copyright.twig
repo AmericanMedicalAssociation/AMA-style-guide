@@ -1,3 +1,4 @@
+{# Conditionally checks the current year to automatically update the copyright range. #}
 {% set startYear = 1995 %}
 {% set currentYear = "now"|date("Y") %}
 
@@ -7,4 +8,4 @@
     {% set copyrightYears = startYear ~ ' - ' ~ currentYear %}
 {% endif %}
 
-<div class="footer_copyright">Copyright {{ copyrightYears }} American Medical Association. All rights reserved.</div>
+<div class="footer_text-copyright">Copyright {{ copyrightYears }} American Medical Association. All rights reserved.</div>
