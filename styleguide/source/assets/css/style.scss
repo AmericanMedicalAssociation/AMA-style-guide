@@ -69,7 +69,6 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/base/global-classes";
 @import "scss/base/main";
 @import "scss/base/links";
-@import "scss/base/headings";
 @import "scss/base/text";
 @import "scss/base/lists";
 @import "scss/base/media";
@@ -85,20 +84,12 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/objects/layout";
 
 
-
-/*------------------------------------*\
-    $TEXT Styles
-\*------------------------------------*/
-@import "scss/objects/text";
-
-
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
 @import "scss/objects/icons";
 @import "scss/objects/buttons";
 @import "scss/objects/blocks";
-@import "scss/objects/lists";
 @import "scss/objects/tooltip";
 @import "scss/objects/accordion";
 @import "scss/objects/tabs";
