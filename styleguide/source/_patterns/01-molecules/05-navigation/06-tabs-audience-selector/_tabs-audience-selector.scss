@@ -10,8 +10,8 @@
     text-align: center;
   }
   .tabs-audience_selector_list_item {
-    display: inline-block;
     @extend %type-hero;
+    display: inline-block;
   }
   .icon-select {
     display: block;
