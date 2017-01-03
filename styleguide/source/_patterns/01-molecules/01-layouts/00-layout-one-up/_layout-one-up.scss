@@ -1,0 +1,26 @@
+/**
+ * @file layout-one-up.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Placeholder blocks in layout molecules.
+.layout_container {
+  display: block;
+  background-color: $black-7;
+  margin-bottom: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+// Layout default setup.
+.layout {
+  @include grid();
+}
+
+.flexbox .layout.layout_one_up {
+  @include grid__unit--cols(10);
+  flex-basis: 100%;
+  flex-direction: column;
+  max-width: $max-width;
+}
