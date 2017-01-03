@@ -1,0 +1,17 @@
+{
+  "icon": {
+    "facebook": "icon-facebook",
+    "googleplus": "icon-googleplus",
+    "linkedin": "icon-linkedin",
+    "twitter": "icon-twitter",
+    "youtube": "icon-youtube"
+  },
+  "socialurl": {
+    "facebook": "www.facebook.com\/AmericanMedicalAssociation",
+    "googleplus": "plus.google.com\/+americanmedicalassociation",
+    "linkedin": "www.linkedin.com\/company\/american-medical-association",
+    "twitter": "twitter.com\/AmerMedicalAssn",
+    "youtube": "www.youtube.com\/user/AmerMedicalAssn"
+
+  }
+}

@@ -1,0 +1,20 @@
+.ribbon_user-menu {
+  position: relative;
+  float: right;
+}
+
+.ribbon_user-menu_trigger {
+  display: none;
+  color: transparent;
+  fill: $white;
+}
+
+.ribbon_user-menu_nav {
+  list-style: none;
+}
+
+.ribbon_user-menu_nav_item {
+  float: left;
+  padding: 15px;
+  font-size: .75rem;
+}

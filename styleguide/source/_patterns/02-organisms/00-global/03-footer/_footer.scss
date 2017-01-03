@@ -1,0 +1,29 @@
+// @todo remove these width values and replace with grid
+.footer {
+  background-color: $black-7;
+  padding: 50px;
+}
+.footer-inner {
+  @extend %clearfix;
+  position: relative;
+}
+.footer-primary {
+  float: left;
+  max-width: 680px;
+}
+.footer-secondary {
+  float: right;
+  max-width: 380px;
+  .rule_horizontal {
+    margin: 40px 0;
+  }
+}
+.footer-primary-bottom {
+  position: absolute;
+  bottom: 0;
+}
+.footer_text-copyright  {
+  color: $black-55;
+  font-size: 0.77em;
+  line-height: 1;
+}

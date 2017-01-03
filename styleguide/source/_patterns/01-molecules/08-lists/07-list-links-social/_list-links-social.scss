@@ -1,0 +1,22 @@
+.list_link_item-social {
+  display:  inline-block;
+  margin-right: 0.83em;
+  &:last-of-type {
+    margin-right:  0;
+  }
+  .list_link_item-social_title {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  a {
+    display:  inline-block;
+    &:hover {
+      fill: $blue;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// @todo use grid to put lists into two columns.
+.list_links-secondary-user {
+  @extend %clearfix;
+  display: block;
+  min-width: 10em;
+}
+
+.list_links-secondary-user-primary {
+  float: left;
+}
+
+.list_link_item-secondary-user {
+  @extend %h6;
+  margin-bottom: 0.666em;
+}

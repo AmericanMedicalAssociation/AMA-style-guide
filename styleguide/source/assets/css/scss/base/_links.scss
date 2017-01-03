@@ -1,19 +1,45 @@
 /* Links */ 
 a {
-	color: $black;
-	text-decoration: none;
-	outline: 0;
-	
-	&:hover, &:focus {
-		color: $black;
-	}
+  color: $black;
+  text-decoration: none;
+  outline: 0;
+  &:hover, &:focus {
+    color: $black;
+  }
 }
 
 .link-black {
+  &:link,
+  &:visited {
+    color: $black;
+  }
   // if the default link style changes this will need to include color: black; text-decoration: none;
   &:active,
   &:hover,
   &:focus {
     color: $blue;
+  }
+}
+
+.link-white {
+  &:link,
+  &:visited {
+    color: $white;
+  }
+  // if the default link style changes this will need to include color: black; text-decoration: none;
+  &:active,
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+// Primary nav link
+.link-primary-nav a {
+  display: inline-block;
+  padding-bottom: 1.8em;
+  &:hover {
+    border-bottom: 20px $purple solid;
   }
 }
