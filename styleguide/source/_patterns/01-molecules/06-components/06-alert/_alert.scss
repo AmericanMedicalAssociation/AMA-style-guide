@@ -1,0 +1,36 @@
+.alert {
+  padding: 15px 0 10px;
+  color: $white;
+
+  .icon-alert,
+  .icon-success,
+  .icon-information {
+    height: 30px;
+    width: 30px;
+    fill: $white;
+  }
+}
+
+.alert-error {
+  background-color: $red;
+}
+
+.alert-success {
+  background-color: $green;
+}
+
+.alert-information {
+  background-color: $black-55;
+}
+
+.alert_message {
+  display: inline-block;
+  margin: 0 0 0 15px;
+  position: relative;
+  top: -9px;
+}
+
+.alert_close {
+  float: right;
+  padding: 5px 0 0;
+}
