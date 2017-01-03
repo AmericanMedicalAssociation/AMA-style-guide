@@ -1,0 +1,19 @@
+.search-field-home {
+  border: solid 2px $blue;
+  // @todo - implement responsive type when typography's merged in
+  height: 78px;
+
+  @include breakpoint($bp-med) {
+    height: 95px;
+  }
+}
+
+.search-field_input[type="search"] {
+  font-size: 28px;
+  @include breakpoint($bp-med) {
+    font-size: 36px;
+  }
+  @include breakpoint($bp-large) {
+    font-size: 42px;
+  }
+}
