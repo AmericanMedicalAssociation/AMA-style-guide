@@ -1,3 +1,10 @@
 .ribbon {
+  // the ribbon is hidden on mobile.
+  display: none;
   background-color: $purple;
+
+  @include breakpoint($bp-small) {
+    display: block;
+  }
+
 }
