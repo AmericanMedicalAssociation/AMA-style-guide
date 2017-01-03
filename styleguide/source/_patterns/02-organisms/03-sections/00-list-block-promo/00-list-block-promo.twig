@@ -1,5 +1,13 @@
 <section class="list-block-promo">
-    {% include 'block-promo.twig' with { 'content': 'Promo Block Purple', 'block_class_color': 'block-promo-purple'} %}
-    {% include 'block-promo.twig' with { 'content': 'Promo Block Orange', 'block_class_color': 'block-promo-orange'} %}
-    {% include 'block-promo.twig' with { 'content': 'Promo Block Red', 'block_class_color': 'block-promo-red'} %}
+    <div class="layout layout_three_up">
+        <div class="layout_three_up-primary">
+            {% include 'block-promo.twig' with { 'content': 'Promo Block Purple', 'block_class_color': 'block-promo-purple'} %}
+        </div>
+        <div class="layout_three_up-secondary">
+            {% include 'block-promo.twig' with { 'content': 'Promo Block Orange', 'block_class_color': 'block-promo-orange'} %}
+        </div>
+        <div class="layout_three_up-tertiary">
+            {% include 'block-promo.twig' with { 'content': 'Promo Block Red', 'block_class_color': 'block-promo-red'} %}
+        </div>
+    </div>
 </section>
