@@ -31,5 +31,7 @@
 .layout_three_up-primary,
 .layout_three_up-secondary,
 .layout_three_up-tertiary {
-  @include grid__unit--cols(3.7959996);
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(3.7959996);
+  }
 }
