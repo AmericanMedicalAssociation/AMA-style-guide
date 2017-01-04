@@ -1,13 +1,31 @@
 .alert {
-  padding: 15px 0 10px;
+  padding: 15px 0;
   color: $white;
 
+  @include breakpoint($bp-small) {
+    padding: 15px 0 10px;
+  }
+
   .icon-alert,
-  .icon-success,
+  .icon-valid,
   .icon-information {
-    height: 30px;
-    width: 30px;
-    fill: $white;
+    display: none;
+
+    @include breakpoint($bp-small) {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+
+      svg {
+        height: 30px;
+        width: 30px;
+        fill: $white;
+      }
+    }
+  }
+
+  .layout_1up {
+    position: relative;
   }
 }
 
@@ -25,12 +43,27 @@
 
 .alert_message {
   display: inline-block;
-  margin: 0 0 0 15px;
-  position: relative;
-  top: -9px;
+  margin: 0;
+  padding-right: 40px;
+
+  @include breakpoint($bp-small) {
+    position: relative;
+    top: -9px;
+    margin: 0 0 0 15px;
+  }
 }
 
 .alert_close {
-  float: right;
-  padding: 5px 0 0;
+  position: absolute;
+  top: 4px;
+  right: 20px;
+
+  svg {
+    fill: $white;
+  }
+
+  @include breakpoint($bp-small) {
+    top: 6px;
+    right: 25px;
+  }
 }
