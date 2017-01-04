@@ -19,7 +19,7 @@ $base-font-size: 18px;
 $base-line-height: 25px;
 $base-font-family: $font-sans-serif;
 $base-font-weight: $font-weight-medium;
-$base-font-multiplier: 1.11;
+$base-font-multiplier: 1;
 
 // Mobile-first approach, breakpoints increase from 0.
 // Tablet - Middle display
@@ -52,7 +52,7 @@ body {
   -webkit-text-size-adjust: 100%;
   color: $black;
   @include type($base-font-family, $base-font-size, $base-font-weight, $base-line-height);
-
+  @include font-size(1.11, large);
   @include breakpoint($breakpoint-middle) {
     @include type($font-sans-serif, 20px, $font-weight-medium, 1.35);
   }
