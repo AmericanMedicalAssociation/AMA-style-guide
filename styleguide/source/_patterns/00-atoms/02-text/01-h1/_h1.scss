@@ -1,0 +1,27 @@
+/**
+ * @file h1.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Sets up the base font styles for body, h1, mobile first scaling up
+body {
+  h1, .h1, %h1 {
+    @include font-style($font-serif, 1.888em, $font-weight-medium, 1.1176470588);
+  }
+
+  // Body size is increased to 20px, the new value needs to be set in px
+  // so that the header ems are calculated properly
+  @include breakpoint($breakpoint-middle) {
+    h1, .h1, %h1 {
+      @include font-style($font-serif, 2.4em, $font-weight-medium, 1.0833333333);
+    }
+  }
+
+  // Scale up to wide
+  @include breakpoint($breakpoint-wide) {
+    h1, .h1, %h1 {
+      @include font-style($font-serif, 2.7em, $font-weight-medium, 1.0740740741);
+    }
+  }
+}

@@ -7,18 +7,19 @@
 // Typography
 
 // Font family variables
-$font-sans: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-sans-serif: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 $font-serif: "kepler-std", Georgia, Times, "Times New Roman", serif;
 
 // Font weight variables
-$font-medium: 400;
-$font-bold: 600;
+$font-weight-medium: 400;
+$font-weight-bold: 600;
 
 // Base font style variables
 $base-font-size: 18px;
 $base-line-height: 25px;
-$base-font-family: $font-sans;
-$base-font-weight: $font-medium;
+$base-font-family: $font-sans-serif;
+$base-font-weight: $font-weight-medium;
+$base-font-multiplier: 1.11;
 
 // @todo - Verify breakpoints
 // Mobile-first approach, breakpoints increase from 0.
@@ -44,118 +45,68 @@ $breakpoint-wide: 1200px min-width;
 // Usage: @include font-size(1, large);
 @mixin font-size( $decimal-size, $keyword: null ) {
   @if $keyword{ font-size: $keyword; }
-  @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
+  @else { font-size: $decimal-size * $base-font-multiplier * 18px;}
   font-size: $decimal-size * 1rem;
 }
 
-// Sets up the base font styles for body, h1 - h3, mobile first scaling up
 body {
   -webkit-text-size-adjust: 100%;
   color: $black;
-  @include font-style( $base-font-family, $base-font-size, $base-font-weight, $base-line-height);
-  h1, .h1, %h1 {
-    @include font-style($font-serif, 1.888em, $font-medium, 1.1176470588);
-  }
-  h2, .h2, %h2 {
-    @include font-style($font-serif, 1.222em, $font-medium, 1.1818181818);
-  }
-  h3, .h3, %h3 {
-    @include font-style($font-serif, 1.111em, $font-medium, 1.2);
-  }
+  @include font-style($base-font-family, $base-font-size, $base-font-weight, $base-line-height);
 
-  // Body size is increased to 20px, the new value needs to be set in px
-  // so that the header ems are calculated properly
   @include breakpoint($breakpoint-middle) {
-    @include font-style($font-sans, 20px, $font-medium, 1.35);
-    h1, .h1, %h1 {
-      @include font-style($font-serif, 2.4em, $font-medium, 1.0833333333);
-    }
-    h2, .h2, %h2 {
-      @include font-style($font-serif, 1.7em, $font-medium, 1.1176470588);
-    }
-    h3, .h3, %h3 {
-      @include font-style($font-serif, 1.5em, $font-medium, 1.1333333333);
-    }
-  }
-
-  // Scale up to wide
-  @include breakpoint($breakpoint-wide) {
-    h1, .h1, %h1 {
-      @include font-style($font-serif, 2.7em, $font-medium, 1.0740740741);
-    }
-  }
-}
-
-// Outlying Headers
-h4, .h4, %h4 {
-  @include font-style( $font-sans, 18px, $font-bold, 1.2222222222);
-  @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-sans, 24px, $font-bold, 1.1666666667);
-  }
-}
-
-h5, .h5, %h5 {
-  @include font-style( $font-sans, 16px, $font-bold, 1.4375);
-  @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-sans, 18px, $font-bold, 1.3888888889);
-  }
-}
-
-h6, .h6, %h6 {
-  @include font-style( $font-sans, 14px, $font-bold, 1.5);
-  @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-sans, 15px, $font-bold, 1.4666666667);
+    @include font-style($font-sans-serif, 20px, $font-weight-medium, 1.35);
   }
 }
 
 // Specific Typography classes
 // (Formerly H2)
 .type-hero, %type-hero {
-  @include font-style( $font-serif, 28px, $font-medium, 1.1428571429);
+  @include font-style( $font-serif, 28px, $font-weight-medium, 1.1428571429);
   @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-serif, 38px, $font-medium, 1.1052631579);
+    @include font-style( $font-serif, 38px, $font-weight-medium, 1.1052631579);
   }
   @include breakpoint($breakpoint-wide) {
-    @include font-style( $font-serif, 46px, $font-medium, 1.0869565217);
+    @include font-style( $font-serif, 46px, $font-weight-medium, 1.0869565217);
   }
 }
 
 // (Formerly B6)
 .type-larger, %type-larger {
-  @include font-style( $font-sans, 23px, $font-medium, 1.3043478261);
+  @include font-style( $font-sans-serif, 23px, $font-weight-medium, 1.3043478261);
   @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-sans, 28px, $font-medium, 1.25);
+    @include font-style( $font-sans-serif, 28px, $font-weight-medium, 1.25);
   }
 }
 
 // (Formerly B2)
 .type-large, %type-large {
-  @include font-style( $font-sans, 21px, $font-medium, 1.3333333333);
+  @include font-style( $font-sans-serif, 21px, $font-weight-medium, 1.3333333333);
   @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-sans, 24px, $font-medium, 1.2916666667);
+    @include font-style( $font-sans-serif, 24px, $font-weight-medium, 1.2916666667);
   }
 }
 
 // (Formerly B4)
 .type-small, %type-small {
-  @include font-style( $font-sans, 16px, $font-medium, 1.4375);
+  @include font-style( $font-sans-serif, 16px, $font-weight-medium, 1.4375);
   @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-sans, 18px, $font-medium, 1.3888888889);
+    @include font-style( $font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
   }
 }
 
 // (Formerly B5)
 .type-smaller, %type-smaller {
-  @include font-style( $font-sans, 14px, $font-medium, 1.5);
+  @include font-style( $font-sans-serif, 14px, $font-weight-medium, 1.5);
 }
 
 // (Formerly B1)
 .type-search, %type-search {
-  @include font-style( $font-serif, 28px, $font-medium, 1.25);
+  @include font-style( $font-serif, 28px, $font-weight-medium, 1.25);
   @include breakpoint($breakpoint-middle) {
-    @include font-style( $font-serif, 36px, $font-medium, 1.1944444444);
+    @include font-style( $font-serif, 36px, $font-weight-medium, 1.1944444444);
   }
   @include breakpoint($breakpoint-wide) {
-    @include font-style( $font-serif, 42px, $font-medium, 1.1666666667);
+    @include font-style( $font-serif, 42px, $font-weight-medium, 1.1666666667);
   }
 }

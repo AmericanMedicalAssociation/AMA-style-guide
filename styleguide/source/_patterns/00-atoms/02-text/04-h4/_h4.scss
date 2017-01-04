@@ -1,0 +1,12 @@
+/**
+ * @file h4.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+h4, .h4, %h4 {
+  @include font-style( $font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
+  @include breakpoint($breakpoint-middle) {
+    @include font-style( $font-sans-serif, 24px, $font-weight-bold, 1.1666666667);
+  }
+}

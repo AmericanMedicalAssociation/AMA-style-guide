@@ -1,0 +1,20 @@
+/**
+ * @file h3.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Sets up the base font styles for body, h3, mobile first scaling up
+body {
+  h3, .h3, %h3 {
+    @include font-style($font-serif, 1.111em, $font-weight-medium, 1.2);
+  }
+
+  // Body size is increased to 20px, the new value needs to be set in px
+  // so that the header ems are calculated properly
+  @include breakpoint($breakpoint-middle) {
+    h3, .h3, %h3 {
+      @include font-style($font-serif, 1.5em, $font-weight-medium, 1.1333333333);
+    }
+  }
+}
