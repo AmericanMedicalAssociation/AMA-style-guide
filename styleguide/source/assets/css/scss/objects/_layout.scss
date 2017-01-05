@@ -2,98 +2,11 @@
     $LAYOUT
 \*------------------------------------*/
 
-.grid-placeholder {
-	display: block;
-	background-color: $black-3;
-	padding: .5em;
-}
 
-/* Layout Container */
-.layout_container {
+
+// Layout default setup.
+.layout {
 	@include grid();
-  @include grid--halign-justify-center()
-	max-width: $max-width;	
-	margin: 0 1.1em; //20px
-
-	@include breakpoint($bp-small) {
-		margin: 0 1.667em; //30px
-	}
-	@include breakpoint($bp-med) {
-		margin: 0 5.5em; // 100px
-	}
-	@include breakpoint($bp-large) {
-		margin: 0 auto;
-	}
-}
-
-// Layout Classes
-// Change once a grid system is determined
-
-.layout_1up {
-	@include grid__unit();
-	padding: 0 20px;
-
-	@include breakpoint($bp-small) {
-		padding: 0 25px;
-	}
-}
-
-.layout_2up {
-	@include grid__unit();
-	padding: 0 20px;
-
-	@include breakpoint($bp-small) {
-		@include grid__unit--cols(6);
-		padding: 0 25px;
-	}
-}
-
-.layout_3up {
-	@include grid__unit();
-	padding: 0 20px;
-
-	@include breakpoint($bp-small) {
-		@include grid__unit--cols(4);
-		padding: 0 25px;
-	}
-}
-
-.layout_4up {
-	@include grid__unit();
-	padding: 0 20px;
-
-	@include breakpoint($bp-small) {
-		@include grid__unit--cols(3);
-		padding: 0 25px;
-	}
-}
-
-.layout_main-col {
-	@include grid__unit();
-	padding: 0 20px;
-
-	@include breakpoint($bp-small) {
-		@include grid__unit--cols(7.5);
-		padding: 0 25px;
-	}
-}
-
-.layout_side-col {
-	@include grid__unit();
-	padding: 0 20px;
-
-	@include breakpoint($bp-small) {
-		@include grid__unit--cols(4.5);
-		padding: 0 25px;
-	}
-}
-
-/*------------------------------------*\
-    $TEMPLATES
-\*------------------------------------*/
-
-// Remove once replaced
-
-.layout-75-25--1 {
-	width: 75%;
+	@include grid--halign-justify-center()
+	max-width: $max-width;
 }
