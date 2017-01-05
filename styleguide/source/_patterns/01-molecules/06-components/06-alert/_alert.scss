@@ -2,31 +2,13 @@
   padding: 15px 0;
   color: $white;
 
-  @include breakpoint($bp-small) {
+/*  @include breakpoint($bp-small) {
     padding: 15px 0 10px;
-  }
+  }*/
 
-  .icon-alert,
-  .icon-valid,
-  .icon-information {
-    display: none;
-
-    @include breakpoint($bp-small) {
-      display: inline-block;
-      height: 30px;
-      width: 30px;
-
-      svg {
-        height: 30px;
-        width: 30px;
-        fill: $white;
-      }
-    }
-  }
-
-  .layout_1up {
+/*  .layout {
     position: relative;
-  }
+  }*/
 }
 
 .alert-error {
@@ -39,6 +21,28 @@
 
 .alert-information {
   background-color: $black-55;
+}
+
+.alert_container {
+  display: table;
+
+  .icon-alert,
+  .icon-valid,
+  .icon-information {
+    display: none;
+
+    @include breakpoint($bp-small) {
+      display: table-cell;
+      vertical-align: middle;
+      width: 30px;
+
+      svg {
+        height: 30px;
+        width: 30px;
+        fill: $white;
+      }
+    }
+  }
 }
 
 .alert_message {
@@ -54,16 +58,18 @@
 }
 
 .alert_close {
-  position: absolute;
+/*  position: absolute;
   top: 4px;
-  right: 20px;
+  right: 20px;*/
+  height: 20px;
+  width: 20px;
 
   svg {
     fill: $white;
   }
 
-  @include breakpoint($bp-small) {
+/*  @include breakpoint($bp-small) {
     top: 6px;
     right: 25px;
-  }
+  }*/
 }
