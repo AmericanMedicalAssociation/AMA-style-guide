@@ -50,3 +50,9 @@ New icons can be places in `source/assets/icons/svg`. When `gulp icons` is run, 
 We are using [Breakpoint](http://breakpoint-sass.com/) to handle media queries for responsive implementation. 
 
 The first time you run `npm install` the dependency will be installed, but if you run into an error, running `npm install` again should fix the issue.
+
+### Layouts
+
+This style guide provides commonly used layouts, including one column, two column, two column heavy left (a wider left column and narrow right column), and three column layouts. The layouts are located in Molecules under Layouts and utilize flexbox.
+
+To apply a layout, first make sure that the <code>.layout</code> class is applied to the template or page container. This class provides the 12 column structure the grid and subsequent layout relies on. In order to then apply a layouts, include the <code>layout_number_up</code> class to the pattern parent. For example, to use the side-by-side Two Up Layout, add the <code>layout layout_two_up</code> class to the highest wrapper of the pattern, add the <code>layout_two_up-primary</code> class to the wrapper of the item you would like to appear in the first column, and add the <code>layout_two_up-secondary</code> class to the item you would like to appear in the second column.
