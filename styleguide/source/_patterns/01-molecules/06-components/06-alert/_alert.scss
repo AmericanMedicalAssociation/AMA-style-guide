@@ -24,7 +24,8 @@
 }
 
 .alert_container {
-  display: table;
+  display: flex;
+  align-items: center;
 
   .icon-alert,
   .icon-valid,
@@ -32,9 +33,7 @@
     display: none;
 
     @include breakpoint($bp-small) {
-      display: table-cell;
-      vertical-align: middle;
-      width: 30px;
+      display: block;
 
       svg {
         height: 30px;
@@ -46,30 +45,20 @@
 }
 
 .alert_message {
-  display: inline-block;
   margin: 0;
   padding-right: 40px;
 
   @include breakpoint($bp-small) {
-    position: relative;
-    top: -9px;
     margin: 0 0 0 15px;
   }
 }
 
 .alert_close {
-/*  position: absolute;
-  top: 4px;
-  right: 20px;*/
+  margin-left: auto;
   height: 20px;
   width: 20px;
 
   svg {
     fill: $white;
   }
-
-/*  @include breakpoint($bp-small) {
-    top: 6px;
-    right: 25px;
-  }*/
 }
