@@ -14,19 +14,26 @@
 }
 
 // Layout default setup.
-.layout {
-  @include grid();
-}
 
 .flexbox .layout.layout_three_up {
   @include grid__unit--cols(12);
-  flex-basis: 100%;
-  justify-content: space-between;
-  max-width: $max-width;
+  justify-content: flex-start;
 }
 
 .layout_three_up-primary,
 .layout_three_up-secondary,
 .layout_three_up-tertiary {
-  @include grid__unit--cols(3.7959996);
+  @include grid__unit--cols(4);
+}
+
+.layout_three_up-primary {
+  padding-right: 15px;
+}
+
+.layout_three_up-secondary {
+  padding: 0 15px;
+}
+
+.layout_three_up-tertiary {
+  padding-left: 15px;
 }

@@ -14,13 +14,9 @@
 }
 
 // Layout default setup.
-.layout {
-  @include grid();
-}
 
 .flexbox .layout.layout_one_up {
-  @include grid__unit--cols(10);
+  @include grid__unit--cols(12);
   flex-basis: 100%;
   flex-direction: column;
-  max-width: $max-width;
 }

@@ -7,6 +7,19 @@
 // Layout default setup.
 .layout {
 	@include grid();
-	@include grid--halign-justify-center()
 	max-width: $max-width;
+	margin: 0 auto; /*fallback*/
+	padding: 0 20px;
+
+	@include breakpoint($bp-med) {
+		padding: 0 30px;
+	}
+
+	@include breakpoint($bp-large) {
+		padding: 0 100px;
+	}
+}
+
+.layout-nested {
+	@include grid();
 }
