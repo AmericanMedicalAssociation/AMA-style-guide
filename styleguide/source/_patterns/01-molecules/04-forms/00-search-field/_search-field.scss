@@ -9,9 +9,6 @@
   border-bottom: 2px solid $blue;
 }
 .search-field_label {
-  // This is potentially a good place to make an include
-  // called "element-invisible" or "visibly hidden" and implement
-  // here.
   position: absolute !important;
   height: 1px;
   width: 1px;
@@ -42,6 +39,7 @@
   position: absolute;
   right: 0;
   bottom: 20px;
+  top: auto;
   color: transparent;
 
   &[type="submit"] {

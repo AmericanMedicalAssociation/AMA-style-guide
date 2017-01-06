@@ -1,0 +1,64 @@
+.alert {
+  padding: 15px 0;
+  color: $white;
+
+/*  @include breakpoint($bp-small) {
+    padding: 15px 0 10px;
+  }*/
+
+/*  .layout {
+    position: relative;
+  }*/
+}
+
+.alert-error {
+  background-color: $red;
+}
+
+.alert-success {
+  background-color: $green;
+}
+
+.alert-information {
+  background-color: $black-55;
+}
+
+.alert_container {
+  display: flex;
+  align-items: center;
+
+  .icon-alert,
+  .icon-valid,
+  .icon-information {
+    display: none;
+
+    @include breakpoint($bp-small) {
+      display: block;
+
+      svg {
+        height: 30px;
+        width: 30px;
+        fill: $white;
+      }
+    }
+  }
+}
+
+.alert_message {
+  margin: 0;
+  padding-right: 40px;
+
+  @include breakpoint($bp-small) {
+    margin: 0 0 0 15px;
+  }
+}
+
+.alert_close {
+  margin-left: auto;
+  height: 20px;
+  width: 20px;
+
+  svg {
+    fill: $white;
+  }
+}

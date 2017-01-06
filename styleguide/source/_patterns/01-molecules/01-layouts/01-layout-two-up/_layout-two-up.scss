@@ -17,17 +17,21 @@
 }
 
 // Layout default setup.
-.layout {
-  @include grid();
-}
 
 .flexbox .layout.layout_two_up {
   @include grid__unit--cols(12);
-  justify-content: space-between;
-  max-width: $max-width;
+  justify-content: flex-start;
 }
 
 .layout_two_up-primary,
 .layout_two_up-secondary {
-  @include grid__unit--cols(5.844);
+  @include grid__unit--cols(6);
+}
+
+.layout_two_up-primary {
+  padding-right: 15px;
+}
+
+.layout_two_up-secondary {
+  padding-left: 15px;
 }
