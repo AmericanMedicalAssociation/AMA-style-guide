@@ -13,10 +13,6 @@
 	@include breakpoint($bp-med) {
 		padding: 0 30px;
 	}
-
-	@include breakpoint($bp-large) {
-		padding: 0 100px;
-	}
 }
 
 .layout-nested {
