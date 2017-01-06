@@ -1,12 +1,10 @@
 {% include 'ribbon.twig' %}
-<div class="layout_container">
-    {% include 'header-primary.twig' %}
-    {% include 'tabs-audience-selector.twig' %}
-    <div>Audience hero.</div>
-    {% include 'search-field.twig' with { 'text': 'Search the AMA', 'class': 'search-field-home'} %}
-    {% include 'block-hero.twig' %}
-    {% include 'news-featured-list.twig' %}
-    {% include 'news-standard-list.twig' %}
-    {% include '00-list-block-promo.twig' %}
-    {% include 'footer.twig' %}
-</div>
+{% include 'header-primary.twig' %}
+{% include 'tabs-audience-selector.twig' %}
+<div>Audience hero.</div>
+{% include 'search-field.twig' with { 'text': 'Search the AMA', 'class': 'search-field-home'} %}
+{% include 'block-hero.twig' %}
+{% include 'news-featured-list.twig' %}
+{% include 'news-standard-list.twig' %}
+{% include '00-list-block-promo.twig' %}
+{% include 'footer.twig' %}
