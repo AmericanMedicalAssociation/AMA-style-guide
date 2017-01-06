@@ -1,0 +1,5 @@
+---
+el: ".divider"
+title: "Divider"
+---
+A simple vertical divider that can be used for visual separation. 
