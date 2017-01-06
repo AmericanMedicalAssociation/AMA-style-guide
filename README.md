@@ -55,4 +55,10 @@ The first time you run `npm install` the dependency will be installed, but if yo
 
 This style guide provides commonly used layouts, including one column, two column, two column heavy left (a wider left column and narrow right column), and three column layouts. The layouts are located in Molecules under Layouts and utilize flexbox.
 
-To apply a layout, first add the <code>layout</code> class to the template or page container. This class provides the 12 column structure the grid and subsequent layouts rely on. To then apply a specific layout, add that layout's <code>layout_number_up</code> class to the top level element of the pattern. For example, to use the side-by-side Two Up Layout, add the <code>layout_two_up</code> class to the top level element, then add the <code>layout_two_up-primary</code> class to the element you would like to appear in the first column, and add the <code>layout_two_up-secondary</code> class to the element you would like to appear in the second column.
+To apply a layout, first add the <code>layout</code> class to the template or page container. This class provides the 12 column structure the grid and subsequent layouts rely on. To then apply a specific layout, add that layout's <code>layout_number_up</code> class to the top level element of the pattern. 
+
+For example, to use the side-by-side Two Up Layout, add the <code>layout_two_up</code> class to the top level element, then add the <code>layout_two_up-primary</code> class to the element you would like to appear in the first column, and add the <code>layout_two_up-secondary</code> class to the element you would like to appear in the second column.
+
+Note: you should not need to nest elements with class <code>.layout</code>. 
+ 
+The <code>.layout</code> and <code>.layout_number_up</code> classes can be added to container elements both in individual patterns (i.e. organisms) and in the Twig templates that include them (e.g. templates). In general, if a specific pattern can be assumed to always use the same layout, it's fine to include the layout within that pattern. 
