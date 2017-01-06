@@ -12,7 +12,7 @@ body {
 
   // Body size is increased to 20px, the new value needs to be set in px
   // so that the header ems are calculated properly
-  @include breakpoint($breakpoint-middle) {
+  @include breakpoint($bp-med min-width) {
     h3, .h3, %h3 {
       @include type($font-serif, 1.5em, $font-weight-medium, 1.1333333333);
     }

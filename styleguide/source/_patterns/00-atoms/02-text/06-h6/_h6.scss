@@ -6,7 +6,7 @@
 
 h6, .h6, %h6 {
   @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
-  @include breakpoint($breakpoint-middle) {
+  @include breakpoint($bp-med min-width) {
     @include type($font-sans-serif, 15px, $font-weight-bold, 1.4666666667);
   }
 }
