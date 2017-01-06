@@ -1,20 +1,86 @@
-@import '../../../../assets/css/scss/base/_typography.scss';
+/**
+ * @file tabs-audience-selector.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
-.tabs-audience_selector {
-  .tabs-audience_selector_label {
-    @extend %type-large;
-    margin-bottom: 25px;
-    text-align: center;
+.tabs-audience_selector_label {
+  @extend %type-large;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+// Audience selector list.
+.tabs-audience_selector_list {
+  border: 1px $gray-8 solid;
+  padding: 1.1111111111em 0.8333333333em;
+  position: relative;
+  text-align: center;
+  &.open {
+    border: 2px $purple solid;
+    .tabs-audience_selector_list_item {
+      display: block !important;
+      margin-bottom: 12px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      a:active {
+        color: $blue;
+      }
+    }
+
+    .icon-select svg {
+      -moz-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      filter: FlipV;
+      -ms-filter: "FlipV";
+    }
+
   }
-  .tabs-audience_selector_list {
-    text-align: center;
-  }
-  .tabs-audience_selector_list_item {
-    @extend %type-hero;
+}
+
+// Audience selector list item.
+.tabs-audience_selector_list_item {
+  @extend %type-hero;
+  @include breakpoint($bp-med min-width) {
     display: inline-block;
   }
-  .icon-select {
+  display: none;
+  text-align: left;
+  
+  &:first-of-type {
     display: block;
-    margin: 0 auto;
+  }
+
+  a {
+    color: $black;
+    padding: 0;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+
+
+
+}
+
+// Audience selector arrow icon.
+.tabs-audience_selector {
+  .icon-select {
+    position: absolute;
+    right: 11px;
+    svg {
+      height: 9px;
+      width: 14px;
+    }
+    @include breakpoint(900px min-width) {
+      display: block;
+      fill: $blue;
+      margin: 0 auto;
+    }
   }
 }
