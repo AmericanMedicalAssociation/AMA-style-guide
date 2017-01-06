@@ -1,0 +1,105 @@
+/**
+ * @file _typography.scss
+ *
+ * Copyright 2016, 2017 Palantir.net, Inc.
+ */
+
+// Typography
+
+// Font family variables
+$font-sans-serif: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-serif: "kepler-std", Georgia, Times, "Times New Roman", serif;
+
+// Font weight variables
+$font-weight-medium: 400;
+$font-weight-bold: 600;
+
+// Base font style variables
+$base-font-size: 18px;
+$base-line-height: 25px;
+$base-font-family: $font-sans-serif;
+$base-font-weight: $font-weight-medium;
+$base-font-multiplier: 1;
+
+// @todo - Set scaling variables
+// $upcale-narrow:
+// $upscale-medium:
+// $upscale-wide:
+
+// Typography mixins
+@mixin type($font-family, $font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+// Usage: @include font-size(1, large);
+@mixin font-size($decimal-size, $keyword: null) {
+  @if $keyword{ font-size: $keyword; }
+  @else { font-size: $decimal-size * $base-font-multiplier * 18px;}
+  font-size: $decimal-size * 1rem;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  color: $black;
+  @include type($base-font-family, $base-font-size, $base-font-weight, $base-line-height);
+  @include font-size(1.11, large);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-sans-serif, 20px, $font-weight-medium, 1.35);
+  }
+}
+
+// Specific Typography classes
+// (Formerly H2)
+.type-hero, %type-hero {
+  @include type($font-serif, 28px, $font-weight-medium, 1.1428571429);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-serif, 38px, $font-weight-medium, 1.1052631579);
+  }
+  @include breakpoint($bp-large min-width) {
+    @include type($font-serif, 46px, $font-weight-medium, 1.0869565217);
+  }
+}
+
+// (Formerly B6)
+.type-larger, %type-larger {
+  @include type($font-sans-serif, 23px, $font-weight-medium, 1.3043478261);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-sans-serif, 28px, $font-weight-medium, 1.25);
+  }
+}
+
+// (Formerly B2)
+.type-large, %type-large {
+  @include type($font-sans-serif, 21px, $font-weight-medium, 1.3333333333);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-sans-serif, 24px, $font-weight-medium, 1.2916666667);
+  }
+}
+
+// (Formerly B4)
+.type-small, %type-small {
+  @include type($font-sans-serif, 16px, $font-weight-medium, 1.4375);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
+  }
+}
+
+// (Formerly B5)
+.type-smaller, %type-smaller {
+  @include type($font-sans-serif, 14px, $font-weight-medium, 1.5);
+}
+
+// (Formerly B1)
+.type-search, %type-search {
+  @include type($font-serif, 28px, $font-weight-medium, 1.25);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-serif, 36px, $font-weight-medium, 1.1944444444);
+  }
+  @include breakpoint($bp-large min-width) {
+    @include type($font-serif, 42px, $font-weight-medium, 1.1666666667);
+  }
+}

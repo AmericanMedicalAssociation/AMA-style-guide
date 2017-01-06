@@ -1,6 +1,8 @@
+@import '../../../../assets/css/scss/base/_typography.scss';
+
 .tabs-audience_selector {
   .tabs-audience_selector_label {
-    font-weight: 400;
+    @extend %type-large;
     margin-bottom: 25px;
     text-align: center;
   }
@@ -8,11 +10,8 @@
     text-align: center;
   }
   .tabs-audience_selector_list_item {
+    @extend %type-hero;
     display: inline-block;
-    font-family: $font-secondary;
-    font-size: 2.55em;
-    font-weight: 400;
-    line-height: 1.08;
   }
   .icon-select {
     display: block;
