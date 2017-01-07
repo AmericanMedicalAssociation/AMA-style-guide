@@ -1,7 +1,29 @@
+/**
+ * @file primary-nav.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
 .nav-primary_list-item {
-  display: inline-block;
-  margin-right: 25px;
-  &:last-of-type {
-    margin-right: 0;
+  display: none;
+  @include breakpoint($bp-med min-width) {
+    display: inline-block;
+    margin-right: 25px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.nav-primary_button-menu {
+  @extend %h6;
+  border: 2px $purple solid;
+  height: 44px;
+  padding: 10px;
+  text-align: center;
+  width: 63px;
+  @include breakpoint($bp-med min-width) {
+    display: none;
   }
 }

@@ -1,8 +1,10 @@
-/*------------------------------------*\
-    $VARIABLES
-\*------------------------------------*/
+/**
+ * @file variables.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
-//Colors
+// Colors
 $gray : #808080;
 $gray-light : #f9f9f9;
 $gray-light-2 : #eee;
@@ -18,7 +20,7 @@ $valid : #089e00;
 $warning : #fff664;
 $information : #000db5;
 
-//AMA Brand Colors
+// AMA Brand Colors
 
 $black-3: #f7f7f7;
 $black-7: #ededed;
@@ -43,19 +45,13 @@ $blue-lighter: #d9f2fc;
 $green: #64a70b;
 
 
-//Typography
+// Typography
+// See base/typography.scss
 
-// AMA Fonts
-$myriad-pro: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$kepler-std: "kepler-std", Georgia, Times, "Times New Roman", serif;
-
-$font: $myriad-pro;
-$font-secondary: $kepler-std;
-
-//Layout
+// Layout
 $max-width: 1260px;
 
-//Defaults
+// Defaults
 $space : 1em;
 $space-and-half : $space*1.5;
 $space-double : $space*2;
@@ -67,12 +63,11 @@ $pad-double : $pad*2;
 $pad-half : $pad/2;
 $pad-quarter :$pad/4;
 
-//Borders
+// Borders
 $border-med: 3px;
 $border-thick: 7px;
 
-
-//Breakpoints
+// Breakpoints
 $bp-xs: 25em; // 400px
 $bp-small: 37.5em; // 600px
 $bp-med: 56.25em; // 900px
