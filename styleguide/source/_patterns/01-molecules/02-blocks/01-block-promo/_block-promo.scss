@@ -51,6 +51,7 @@
 }
 
 .block-promo_summary {
+  // Couldn't use the %type-large include here because the breakpoint is different.
   @include type($font-sans-serif, 21px, $font-weight-medium, 1.333333333);
   @include breakpoint(46.25em min-width) {
     @include type($font-sans-serif, 24px, $font-weight-medium, 1.2916666667); // 31
@@ -59,6 +60,7 @@
 }
 
 .block-promo_cta-primary {
+  // Couldn't use the %h1 include here because the breakpoint is different.
   @include type($font-serif, 34px, $font-weight-bold, 1.11764705882);
   margin-bottom: 25px;
   @include breakpoint(46.25em min-width) {

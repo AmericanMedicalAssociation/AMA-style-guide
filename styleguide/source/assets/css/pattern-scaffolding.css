@@ -61,6 +61,18 @@
   margin: 1em 0 0;
 }
 
+.sg-pattern[id*='templates'] .sg-pattern-head,
+.sg-pattern[id*='pages'] .sg-pattern-head,
+.sg-pattern[id*='templates'] .sg-pattern-extra,
+.sg-pattern[id*='pages'] .sg-pattern-extra {
+  margin: 0 2.5rem;
+}
+
+.sg-pattern[id*='templates'] .sg-pattern-head,
+.sg-pattern[id*='pages'] .sg-pattern-head {
+  padding: .5rem 0 0;
+}
+
 .sg-subtype {
   padding: 5em 2em 0;
 }
