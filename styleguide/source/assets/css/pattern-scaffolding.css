@@ -61,8 +61,6 @@
   margin: 1em 0 0;
 }
 
-.sg-subtype[id*='atoms'],
-.sg-subtype[id*='molecules'],
-.sg-subtype[id*='organisms'] {
+.sg-subtype {
   padding: 5em 2em 0;
 }
