@@ -1,20 +1,127 @@
-@import '../../../../assets/css/scss/base/_typography.scss';
+/**
+ * @file tabs-audience-selector.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
-.tabs-audience_selector {
-  .tabs-audience_selector_label {
-    @extend %type-large;
-    margin-bottom: 25px;
-    text-align: center;
-  }
-  .tabs-audience_selector_list {
-    text-align: center;
-  }
+.tabs-audience_selector_label {
+  @extend %type-large;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+// Audience selector list.
+.tabs-audience_selector_list {
+  border: 1px $gray-8 solid;
+  height: 60px;
+  overflow: hidden;
+  padding: 1.1111111111em 0.8333333333em;
+  position: relative;
+  text-align: center;
+
   .tabs-audience_selector_list_item {
-    @extend %type-hero;
-    display: inline-block;
+    line-height: 1.3;
+    margin-bottom: 12px;
   }
+
+
+  &.open {
+    border: 2px $purple solid;
+    height: auto;
+    overflow: visible;
+
+    .tabs-audience_selector_list_item:last-of-type {
+      margin-bottom: 0;
+    }
+
+    a:active {
+      color: $blue;
+    }
+
+    .icon-select svg {
+      -moz-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      filter: FlipV;
+      -ms-filter: "FlipV";
+    }
+  }
+
+  @include breakpoint($bp-med min-width) {
+    border: 0;
+    height: auto;
+    padding: 0;
+
+    &.open {
+      border: 0;
+      .icon-select svg {
+        -moz-transform: initial;
+        -o-transform: initial;
+        -webkit-transform: initial;
+        transform: initial;
+        filter: initial;
+        -ms-filter: "initial";
+      }
+    }
+  }
+}
+
+// Audience selector list item.
+.tabs-audience_selector_list_item {
+  text-align: left;
+
+  @include breakpoint($bp-med min-width) {
+    @include type-hero;
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: top;
+  }
+
+  a {
+    color: $black;
+    padding: 0;
+
+    &:hover {
+      color: $black;
+    }
+    @include breakpoint($bp-med min-width) {
+      color: $gray-8;
+      &.active {
+        color: $black;
+      }
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+}
+
+// Audience selector arrow icon.
+.tabs-audience_selector {
   .icon-select {
-    display: block;
-    margin: 0 auto;
+    position: absolute;
+    right: 11px;
+
+    svg {
+      height: 9px;
+      width: 14px;
+    }
+
+    @include breakpoint($bp-med min-width) {
+      fill: $blue;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      right: initial;
+
+      svg {
+        height: 11px;
+        width: 18px;
+        position: absolute;
+        top: 0;
+      }
+    }
   }
 }
