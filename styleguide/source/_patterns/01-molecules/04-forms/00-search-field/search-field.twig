@@ -1,6 +1,6 @@
-<form action="{{ url }}" method="post" class="search-field {{ class }}">
+<form action="{{ url }}" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
-	<input type="search" placeholder="{{ text|default('Search AMA') }}" id="search-field" class="search-field_input" />
+	<input type="search" placeholder="Search AMA" id="search-field" class="search-field_input" />
   {# Solr inputs can go here #}
   <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
