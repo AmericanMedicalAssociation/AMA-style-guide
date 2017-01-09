@@ -4,65 +4,71 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
+// Primary header section.
 .header-primary {
   @extend %clearfix;
   border-bottom: 1px $black-20 solid;
-  padding-bottom: 20px;
+  padding: 20px 20px 10px;
   position: relative;
-  @include breakpoint($bp-small min-width) {
-    min-height: 221px;
+
+  @include breakpoint(740px min-width) {
+    padding: 20px 20px 0;
   }
 
-  @include breakpoint($bp-large min-width) {
-    min-height: initial;
-    padding-bottom: 57px;
+  @include breakpoint(1251px min-width) {
+
   }
 
+  // AMA logo.
   .logo {
     width: 110px;
-    @include breakpoint($bp-small min-width) {
+
+    @include breakpoint(740px min-width) {
       bottom: -19px;
       float: left;
+      margin-bottom: 37px;
       position: relative;
       width: 217px;
     }
 
   }
+
+  // Primary navigation.
   .nav-primary {
+    background: $white;
     display: inline-block;
     position: absolute;
-    right: 54px;
+    right: 74px;
     vertical-align: top;
-    @include breakpoint($bp-small min-width) {
+
+    @include breakpoint(740px min-width) {
       bottom: -57px;
-      clear: left;
-      display: inline-block;
-      float: left;
-      left: 0;
-      position: relative;
+      clear: both;
+      display: block;
+      float: none;
+      position: initial;
+      right: initial;
+      text-align: center;
     }
 
-    @include breakpoint($bp-large min-width) {
+    @include breakpoint(1251px min-width) {
       bottom: -65px;
       clear: none;
       float: right;
       left: initial;
       margin-right: 35px;
       right: 135px;
-
     }
   }
 
+  // Search button.
   .button-search {
-    position: absolute;
-    right: 0;
-    top: 0;
 
-    @include breakpoint($bp-small min-width) {
-      top: 30px;
+    @include breakpoint(740px min-width) {
+      top: 40px;
     }
 
-    @include breakpoint($bp-large min-width) {
+    @include breakpoint(1251px min-width) {
       top: 19px;
     }
   }

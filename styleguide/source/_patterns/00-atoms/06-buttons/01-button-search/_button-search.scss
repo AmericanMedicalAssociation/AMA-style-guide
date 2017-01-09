@@ -8,34 +8,43 @@
   border: 2px $blue solid;
   color: $blue;
   display: block;
+  float: right;
   height: 44px;
+  position: relative;
   width: 44px;
-  @include breakpoint($bp-small min-width) {
+
+  @include breakpoint(740px min-width) {
     bottom: 0;
-    height: 87px;
+    height: 84px;
     margin-bottom: 40px;
-    padding: 15px;
-    position: relative;
+    position: absolute;
+    right: 21px;
     width: 135px;
   }
+
   &:hover {
     background: $blue-lighter;
     color: $blue;
   }
 }
+
 .button-search_title {
   display: none;
-  @include breakpoint($bp-small min-width) {
-    bottom: -34px;
+
+  @include breakpoint(740px min-width) {
+    bottom: -41px;
     display: block;
-    font-weight: 400;
+    font-size: 18px;
+    padding: 7px 15px;
     position: relative;
   }
 }
+
 .icon-search {
   position: absolute;
   right: 5px;
   top: 10px;
+
   svg {
     height: 20px;
     width: 20px;
