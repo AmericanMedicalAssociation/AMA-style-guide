@@ -5,15 +5,10 @@
  */
 
 /*Add spacing around elements */
- .pl {
-  margin: 1em;
- }
-
 #sg-patterns {
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
   max-width: 100%;
-  padding: 0 0.5em;
 }
 
 .demo-animate {
@@ -57,4 +52,27 @@
 .sg-label {
   font-size: 90%;
   line-height: 1;
+}
+
+.sg-pattern[id*='atoms'],
+.sg-pattern[id*='molecules'],
+.sg-pattern[id*='organisms'] {
+  padding: 0 2em;
+  margin: 1em 0 0;
+}
+
+.sg-pattern[id*='templates'] .sg-pattern-head,
+.sg-pattern[id*='pages'] .sg-pattern-head,
+.sg-pattern[id*='templates'] .sg-pattern-extra,
+.sg-pattern[id*='pages'] .sg-pattern-extra {
+  margin: 0 2.5rem;
+}
+
+.sg-pattern[id*='templates'] .sg-pattern-head,
+.sg-pattern[id*='pages'] .sg-pattern-head {
+  padding: .5rem 0 0;
+}
+
+.sg-subtype {
+  padding: 5em 2em 0;
 }
