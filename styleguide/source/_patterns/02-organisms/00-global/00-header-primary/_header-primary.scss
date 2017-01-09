@@ -9,31 +9,47 @@
   border-bottom: 1px $black-20 solid;
   padding-bottom: 20px;
   position: relative;
+  @include breakpoint($bp-small min-width) {
+    min-height: 221px;
+  }
 
-  @include breakpoint($bp-med min-width) {
+  @include breakpoint($bp-large min-width) {
+    min-height: initial;
     padding-bottom: 57px;
   }
 
   .logo {
-    width: 6.1111111111em;
-    @include breakpoint($bp-large min-width) {
+    width: 110px;
+    @include breakpoint($bp-small min-width) {
       bottom: -19px;
       float: left;
       position: relative;
-      width: 12em;
+      width: 217px;
     }
 
   }
   .nav-primary {
     display: inline-block;
+    position: absolute;
+    right: 54px;
     vertical-align: top;
-    @include breakpoint($bp-med min-width) {
-      bottom: -69px;
+    @include breakpoint($bp-small min-width) {
+      bottom: -57px;
+      clear: left;
       display: inline-block;
-      float: right;
-      margin-right: 35px;
+      float: left;
+      left: 0;
       position: relative;
+    }
+
+    @include breakpoint($bp-large min-width) {
+      bottom: -65px;
+      clear: none;
+      float: right;
+      left: initial;
+      margin-right: 35px;
       right: 135px;
+
     }
   }
 
@@ -41,7 +57,12 @@
     position: absolute;
     right: 0;
     top: 0;
-    @include breakpoint($bp-med min-width) {
+
+    @include breakpoint($bp-small min-width) {
+      top: 30px;
+    }
+
+    @include breakpoint($bp-large min-width) {
       top: 19px;
     }
   }

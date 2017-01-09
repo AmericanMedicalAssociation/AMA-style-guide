@@ -4,15 +4,27 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-.nav-primary_list-item {
+.nav-primary_list {
   display: none;
-  @include breakpoint($bp-med min-width) {
+
+  @include breakpoint($bp-small min-width) {
     display: inline-block;
-    margin-right: 25px;
+  }
+}
+
+.nav-primary_list-item {
+
+  @include breakpoint($bp-small min-width) {
+    display: inherit;
+    margin-right: 28px;
 
     &:last-of-type {
       margin-right: 0;
     }
+  }
+
+  @include breakpoint($bp-large min-width) {
+    margin-right: 25px;
   }
 }
 
@@ -23,7 +35,14 @@
   padding: 10px;
   text-align: center;
   width: 63px;
-  @include breakpoint($bp-med min-width) {
+
+  @include breakpoint($bp-small min-width) {
     display: none;
+  }
+
+  &:active,
+  &:hover,
+  &.open {
+    background-color: $purple-lighter;
   }
 }

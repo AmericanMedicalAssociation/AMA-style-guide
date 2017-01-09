@@ -38,7 +38,19 @@ a {
 // Primary nav link
 .link-primary-nav a {
   display: inline-block;
-  padding-bottom: 1.8em;
+
+  @include breakpoint($bp-small min-width) {
+    padding-bottom: 30px;
+  }
+
+  @include breakpoint($bp-med min-width) {
+    padding-bottom: 27px;
+  }
+
+  @include breakpoint($bp-large min-width) {
+    padding-bottom: 35px;
+  }
+
   &:hover {
     border-bottom: 20px $purple solid;
   }
