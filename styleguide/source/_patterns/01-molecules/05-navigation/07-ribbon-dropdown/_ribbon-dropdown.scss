@@ -3,10 +3,12 @@
   display: inline-block;
   border-left: 1px solid $gray-8;
   border-right: 1px solid $gray-8;
+  width: 238px;
 }
 
 .ribbon_dropdown_trigger {
   display: inline-block;
+  width: 100%;
   background-color: $purple;
   padding: 15px;
   font-size: .75rem;
