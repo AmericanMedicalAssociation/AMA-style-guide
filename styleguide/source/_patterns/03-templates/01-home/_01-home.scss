@@ -6,22 +6,44 @@
   padding: 0;
 }
 
-.search-field-home {
-  border: solid 2px $blue;
-  // @todo - implement responsive type when typography's merged in
-  height: 78px;
+.page-level-search {
+  position: relative;
+}
 
+.page-level-search.layout_one_up {
+  padding: 0;
+}
+
+.page-level-search_link {
+  display: block;
+  position: relative;
+  border: solid 2px $blue;
+  height: 35px;
+  padding: 10px;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  @include type($font-sans-serif, 28px, $font-weight-medium, 1.25);
   @include breakpoint($bp-med) {
-    height: 95px;
+    height: 43px;
+    padding: 20px 30px;
+    @include type($font-sans-serif, 36px, $font-weight-medium, 1.25);
+  }
+  &:hover {
+    background: $blue-lighter;
+    color: $blue;
   }
 }
 
-.search-field_input[type="search"] {
-  font-size: 28px;
+.icon-search.page-level-search_icon {
+  width: 20px;
+  height: 20px;
+  background-size: 100%;
+  right: 10px;
+  top: 20px;
   @include breakpoint($bp-med) {
-    font-size: 36px;
-  }
-  @include breakpoint($bp-large) {
-    font-size: 42px;
+    width: 24px;
+    height: 27px;
+    right: 35px;
+    top: 30px;
   }
 }
