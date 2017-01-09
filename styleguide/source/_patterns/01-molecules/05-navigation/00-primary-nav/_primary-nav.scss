@@ -5,6 +5,7 @@
  */
 
 .nav-primary_list {
+  // @todo remove this when the dropdown is implemented.
   display: none;
 
   @include breakpoint($bp-small min-width) {
