@@ -6,9 +6,16 @@
 
 // Typography
 
+// AMA Fonts
+$myriad-pro: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$kepler-std: "kepler-std", Georgia, Times, "Times New Roman", serif;
+
+$font: $myriad-pro;
+$font-secondary: $kepler-std;
+
 // Font family variables
-$font-sans-serif: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-serif: "kepler-std", Georgia, Times, "Times New Roman", serif;
+$font-sans-serif: $myriad-pro;
+$font-serif: $kepler-std;
 
 // Font weight variables
 $font-weight-medium: 400;

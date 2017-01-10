@@ -1,7 +1,80 @@
+/**
+ * @file primary-nav.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Primary navigation list.
+.nav-primary_list {
+  // @todo remove this when the dropdown is implemented.
+  display: none;
+
+  @include breakpoint(740px min-width) {
+    display: inline-block;
+  }
+}
+
+// A list item in the primary navigation.
 .nav-primary_list-item {
+
+  @include breakpoint(740px min-width) {
+    display: inherit;
+    margin-right: 28px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint(1251px min-width) {
+    margin-right: 25px;
+  }
+}
+
+// Mobile menu button to trigger dropdown.
+.nav-primary_button-menu {
+  border: 2px $purple solid;
+  color: $purple;
+  font-weight: $font-weight-medium;
+  height: 44px;
+  padding: 8px;
+  text-align: center;
+  width: 63px;
+
+  @include breakpoint(740px min-width) {
+    display: none;
+  }
+
+  &:active,
+  &:hover,
+  &.open {
+    background-color: $purple-lighter;
+  }
+}
+
+// Primary nav link
+.link-primary-nav a {
   display: inline-block;
-  margin-right: 25px;
-  &:last-of-type {
-    margin-right: 0;
+
+  @include breakpoint(740px min-width) {
+    font-size: 18px;
+    font-weight: $font-weight-bold;
+    padding-bottom: 50px;
+
+    &:hover {
+      padding-bottom: 30px;
+    }
+  }
+
+  @include breakpoint(1251px min-width) {
+    padding: 50px 0;
+
+    &:hover {
+      padding-bottom: 32px;
+    }
+  }
+
+  &:hover {
+    border-bottom: 20px $purple solid;
   }
 }

@@ -34,12 +34,3 @@ a {
     text-decoration: underline;
   }
 }
-
-// Primary nav link
-.link-primary-nav a {
-  display: inline-block;
-  padding-bottom: 1.8em;
-  &:hover {
-    border-bottom: 20px $purple solid;
-  }
-}

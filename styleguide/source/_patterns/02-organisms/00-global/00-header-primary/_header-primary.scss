@@ -1,28 +1,76 @@
+/**
+ * @file header-primary.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Primary header section.
 .header-primary {
   @extend %clearfix;
-  border-bottom: 1px $black-20 solid;
-  padding-bottom: 57px;
+  padding: 20px 20px 10px;
   position: relative;
-}
 
-.header-primary .logo {
-  bottom: -19px;
-  float: left;
-  position: relative;
-  width: 12em;
-}
+  @include breakpoint(740px min-width) {
+    border-bottom: 1px $black-20 solid;
+    padding: 20px 20px 0;
+  }
 
-.header-primary .nav-primary {
-  bottom: -69px;
-  display: inline-block;
-  float: right;
-  margin-right: 35px;
-  position: relative;
-  right: 135px;
-}
+  // AMA logo.
+  .logo {
+    width: 110px;
 
-.header-primary .button-search {
-  position: absolute;
-  right: 0;
-  top: 19px;
+    @include breakpoint(740px min-width) {
+      bottom: -19px;
+      float: left;
+      margin-bottom: 37px;
+      position: relative;
+      width: 217px;
+    }
+
+    @include breakpoint(1251px min-width) {
+      bottom: initial;
+      position: inherit;
+    }
+  }
+
+  // Primary navigation.
+  .nav-primary {
+    background: $white;
+    display: inline-block;
+    position: absolute;
+    right: 74px;
+    vertical-align: top;
+
+    @include breakpoint(740px min-width) {
+      bottom: -57px;
+      clear: both;
+      display: block;
+      float: none;
+      position: initial;
+      right: initial;
+      text-align: center;
+    }
+
+    @include breakpoint(1251px min-width) {
+      bottom: initial;
+      clear: none;
+      float: right;
+      left: initial;
+      margin-right: 35px;
+      right: 136px;
+      position: relative;
+    }
+  }
+
+  // Search button.
+  .button-search {
+
+    @include breakpoint(740px min-width) {
+      top: 40px;
+    }
+
+    @include breakpoint(1251px min-width) {
+      top: 19px;
+    }
+  }
 }
