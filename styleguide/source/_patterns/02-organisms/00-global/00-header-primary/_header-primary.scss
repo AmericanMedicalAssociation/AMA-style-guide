@@ -7,16 +7,12 @@
 // Primary header section.
 .header-primary {
   @extend %clearfix;
-  border-bottom: 1px $black-20 solid;
   padding: 20px 20px 10px;
   position: relative;
 
   @include breakpoint(740px min-width) {
+    border-bottom: 1px $black-20 solid;
     padding: 20px 20px 0;
-  }
-
-  @include breakpoint(1251px min-width) {
-
   }
 
   // AMA logo.
@@ -31,6 +27,10 @@
       width: 217px;
     }
 
+    @include breakpoint(1251px min-width) {
+      bottom: initial;
+      position: inherit;
+    }
   }
 
   // Primary navigation.
@@ -52,12 +52,13 @@
     }
 
     @include breakpoint(1251px min-width) {
-      bottom: -65px;
+      bottom: initial;
       clear: none;
       float: right;
       left: initial;
       margin-right: 35px;
-      right: 135px;
+      right: 136px;
+      position: relative;
     }
   }
 

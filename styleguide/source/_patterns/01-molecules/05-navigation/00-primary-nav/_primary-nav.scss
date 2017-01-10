@@ -57,10 +57,20 @@
   display: inline-block;
 
   @include breakpoint(740px min-width) {
+    font-size: 18px;
     font-weight: $font-weight-bold;
     padding-bottom: 50px;
+
     &:hover {
       padding-bottom: 30px;
+    }
+  }
+
+  @include breakpoint(1251px min-width) {
+    padding: 50px 0;
+
+    &:hover {
+      padding-bottom: 32px;
     }
   }
 
