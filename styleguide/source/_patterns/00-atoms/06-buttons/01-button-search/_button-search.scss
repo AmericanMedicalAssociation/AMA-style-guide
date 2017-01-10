@@ -1,26 +1,50 @@
+/**
+ * @file button-search.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
 .button-search {
   border: 2px $blue solid;
-  bottom: 0;
   color: $blue;
   display: block;
-  height: 87px;
-  padding: 15px;
+  float: right;
+  height: 44px;
   position: relative;
-  width: 135px;
+  width: 44px;
+
+  @include breakpoint(740px min-width) {
+    bottom: 0;
+    height: 84px;
+    margin-bottom: 40px;
+    position: absolute;
+    right: 21px;
+    width: 135px;
+  }
+
   &:hover {
     background: $blue-lighter;
     color: $blue;
   }
 }
+
 .button-search_title {
-  bottom: -34px;
-  font-weight: 400;
-  position: relative;
+  display: none;
+
+  @include breakpoint(740px min-width) {
+    bottom: -41px;
+    display: block;
+    font-size: 18px;
+    padding: 7px 15px;
+    position: relative;
+  }
 }
+
 .icon-search {
   position: absolute;
   right: 5px;
   top: 10px;
+
   svg {
     height: 20px;
     width: 20px;
