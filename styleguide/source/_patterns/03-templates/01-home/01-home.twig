@@ -1,12 +1,17 @@
-{% include 'ribbon.twig' %}
+{#
+ # @file home.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+{% include 'organisms-ribbon' %}
 <div class="layout layout-home">
-    {% include 'header-primary.twig' %}
-    {% include 'tabs-audience-selector.twig' %}
+    {% include 'organisms-header-primary' %}
+    {% include 'molecules-tabs-audience-selector' %}
     <div>Audience hero.</div>
-    {% include 'page-level-search.twig' %}
-    {% include 'block-hero.twig' %}
-    {% include 'news-featured-list.twig' %}
-    {% include 'news-standard-list.twig' %}
-    {% include '00-list-block-promo.twig' %}
+    {% include 'molecules-page-level-search' %}
+    {% include 'molecules-block-hero' %}
+    {% include 'organisms-news-standard-list' %}
+    {% include 'organisms-news-featured-list' %}
+    {% include 'organisms-list-block-promo' %}
 </div>
-{% include 'footer.twig' %}
+{% include 'organisms-footer' %}
