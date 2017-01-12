@@ -5,20 +5,20 @@
  */
 
 // Colors
-$gray : #808080;
-$gray-light : #f9f9f9;
-$gray-light-2 : #eee;
-$gray-light-3 : #ddd;
-$gray-med : #666;
-$gray-dark : #333;
-$gray-dark-2 : #131313;
-$white : #fff;
-$black : #000;
-$dim : rgba(0,0,0,0.5);
-$error : #f00;
-$valid : #089e00;
-$warning : #fff664;
-$information : #000db5;
+$gray: #808080;
+$gray-light: #f9f9f9;
+$gray-light-2: #eeeeee;
+$gray-light-3: #dddddd;
+$gray-med: #666666;
+$gray-dark: #333333;
+$gray-dark-2: #131313;
+$white: #ffffff;
+$black: #000000;
+$dim: rgba(0, 0, 0, 0.5);
+$error: #f00000;
+$valid: #089e00;
+$warning: #fff664;
+$information: #000db5;
 
 // AMA Brand Colors
 
@@ -52,16 +52,16 @@ $green: #64a70b;
 $max-width: 1260px;
 
 // Defaults
-$space : 1em;
-$space-and-half : $space*1.5;
-$space-double : $space*2;
-$space-quad : $space*4;
-$space-half : $space/2;
-$pad : 1em;
-$pad-and-half : $pad*1.5;
-$pad-double : $pad*2;
-$pad-half : $pad/2;
-$pad-quarter :$pad/4;
+$space: 1em;
+$space-and-half: $space * 1.5;
+$space-double: $space * 2;
+$space-quad: $space * 4;
+$space-half: $space / 2;
+$pad: 1em;
+$pad-and-half: $pad * 1.5;
+$pad-double: $pad * 2;
+$pad-half: $pad / 2;
+$pad-quarter: $pad / 4;
 
 // Borders
 $border-med: 3px;
@@ -73,3 +73,7 @@ $bp-small: 37.5em; // 600px
 $bp-med: 56.25em; // 900px
 $bp-large: 75em; // 1200px
 $bp-xl: 87.5em; // 1400px
+
+// Breakpoints used by home page.
+$bp-med-home: 740px min-width;
+$bp-large-home: 1251px min-width;

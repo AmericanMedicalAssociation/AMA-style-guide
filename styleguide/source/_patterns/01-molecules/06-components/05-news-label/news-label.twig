@@ -1,6 +1,11 @@
+{#
+ # @file news-label.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
 <div class="news news_label">
   <div class="news_label-inner">
-    {% include '04-eyebrow.twig' %}
-    <h5><a href="{{ url }}" target="_blank" class="news_label_link">Latest <br />News from <br />AMA Wire{% include '03-arrow-external.twig' %}</a></h5>
+    {% include 'atoms-eyebrow' %}
+    <a href="{{ url }}" target="_blank" class="news_label_link">Latest <br />News from <br />AMA Wire{% include 'atoms-arrow-external' %}</a>
   </div>
 </div>

@@ -4,9 +4,6 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-// @todo remove this variable once the typography is merged in.
-$bp-med: 900px min-width;
-
 // Placeholder blocks in layout molecules.
 .layout_container {
   display: block;
@@ -27,11 +24,17 @@ $bp-med: 900px min-width;
 }
 
 .layout_two_up-heavy-left-primary {
-  @include grid__unit--cols(7.5);
-  padding-right: 15px;
+
+  @include breakpoint($bp-med-home) {
+    @include grid__unit--cols(7.5);
+    padding-right: 15px;
+  }
 }
 
 .layout_two_up-heavy-left-secondary {
-  @include grid__unit--cols(4.5);
-  padding-left: 15px;
+
+  @include breakpoint($bp-med-home) {
+    @include grid__unit--cols(4.5);
+    padding-left: 15px;
+  }
 }
