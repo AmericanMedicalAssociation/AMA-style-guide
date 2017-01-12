@@ -25,7 +25,7 @@
 
 .layout_two_up-heavy-left-primary {
 
-  @include breakpoint($bp-med-home) {
+  @include breakpoint($bp-med-home min-width) {
     @include grid__unit--cols(7.5);
     padding-right: 15px;
   }
@@ -33,7 +33,7 @@
 
 .layout_two_up-heavy-left-secondary {
 
-  @include breakpoint($bp-med-home) {
+  @include breakpoint($bp-med-home min-width) {
     @include grid__unit--cols(4.5);
     padding-left: 15px;
   }

@@ -1,14 +1,25 @@
-.news-featured {
-  @extend %clearfix;
+/**
+ * @file news-featured-list.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
-  // @todo remove max-width when grid is implemented.
-  max-width: 66.66em;
-  .news_label-featured {
-    float: left;
-    width: 9.44em;
+.news-featured {
+  @include rule-horizontal(1px, $gray-8, solid);
+  padding: 0;
+  width: 100%;
+}
+
+.news_label-featured {
+
+  @include breakpoint(1250px min-width) {
+    @include grid__unit--cols(3);
   }
-  .news_list {
-    float: right;
-    width: 49.72em;
+}
+
+.news_list-featured {
+
+  @include breakpoint(1250px min-width) {
+    @include grid__unit--cols(9);
   }
 }

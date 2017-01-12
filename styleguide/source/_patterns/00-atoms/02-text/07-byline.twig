@@ -1,1 +1,6 @@
-<p class="byline">{{ author.last_name }}, {{ author.first_name }} {{ author.middle_name }}</p>
+{#
+ # @file byline.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<p class="byline {{ class }}">{{ author.last_name }}, {{ author.first_name }} {{ author.middle_name }}</p>

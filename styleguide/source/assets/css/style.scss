@@ -58,7 +58,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/generic/variables";
 @import "scss/generic/mixins";
 @import "scss/generic/reset";
-@import "scss/generic/typography";
+@import 'scss/generic/typography';
 
 
 
@@ -119,8 +119,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/05-navigation/00-primary-nav/primary-nav.scss";
 @import "../../_patterns/01-molecules/05-navigation/07-ribbon-dropdown/ribbon-dropdown.scss";
 @import "../../_patterns/01-molecules/05-navigation/08-ribbon-user-menu/ribbon-user-menu.scss";
-@import "../../_patterns/01-molecules/06-components/03-news-item-standard-row/news-item-standard.scss";
-@import "../../_patterns/01-molecules/06-components/04-news-item-featured-row/news-item-featured-row.scss";
+@import '../../_patterns/01-molecules/06-components/03-news-item-standard-row/news-item-standard-row';
+@import '../../_patterns/01-molecules/06-components/04-news-item-featured-row/news-item-featured-row';
 @import "../../_patterns/01-molecules/06-components/05-news-label/news-label.scss";
 @import "../../_patterns/01-molecules/06-components/06-alert/alert.scss";
 @import "../../_patterns/01-molecules/08-lists/00-list_links/list_links.scss";
