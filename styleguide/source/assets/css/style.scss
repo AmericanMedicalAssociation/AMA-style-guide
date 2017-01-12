@@ -53,89 +53,90 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * TOC To Be Continued
  */
 
-
-@import "scss/generic/init";
-@import "scss/generic/variables";
-@import "scss/generic/mixins";
-@import "scss/generic/reset";
-@import "scss/generic/typography";
-
-
-
+@import 'scss/generic/init';
+@import 'scss/generic/variables';
+@import 'scss/generic/mixins';
+@import 'scss/generic/reset';
+@import 'scss/generic/typography';
 
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
-@import "scss/base/global-classes";
-@import "scss/base/main";
-@import "scss/base/links";
-@import "scss/base/text";
-@import "scss/base/lists";
-@import "scss/base/media";
-@import "scss/base/forms";
-@import "scss/base/tables";
-@import "scss/base/animation";
 
+@import 'scss/base/global-classes';
+@import 'scss/base/main';
+@import 'scss/base/links';
+@import 'scss/base/text';
+@import 'scss/base/lists';
+@import 'scss/base/media';
+@import 'scss/base/forms';
+@import 'scss/base/tables';
+@import 'scss/base/animation';
 
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
-@import "scss/objects/main";
-@import "scss/objects/layout";
+@import 'scss/objects/main';
+@import 'scss/objects/layout';
 
 
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-@import "scss/objects/icons";
-@import "scss/objects/buttons";
-@import "scss/objects/blocks";
-@import "scss/objects/tooltip";
-@import "scss/objects/accordion";
-@import "scss/objects/tabs";
-@import "scss/objects/sections";
-@import "scss/objects/article";
-@import "scss/objects/comments";
+@import 'scss/objects/icons';
+@import 'scss/objects/buttons';
+@import 'scss/objects/blocks';
+@import 'scss/objects/tooltip';
+@import 'scss/objects/accordion';
+@import 'scss/objects/tabs';
+@import 'scss/objects/sections';
+@import 'scss/objects/article';
+@import 'scss/objects/comments';
 
 /*------------------------------------*\
     $AMA PATTERNS
 \*------------------------------------*/
 
-@import "../../_patterns/00-atoms/01-global/06-divider/divider.scss";
-@import "../../_patterns/00-atoms/02-text/01-h1/h1.scss";
-@import "../../_patterns/00-atoms/02-text/02-h2/h2.scss";
-@import "../../_patterns/00-atoms/02-text/03-h3/h3.scss";
-@import "../../_patterns/00-atoms/02-text/04-h4/h4.scss";
-@import "../../_patterns/00-atoms/02-text/05-h5/h5.scss";
-@import "../../_patterns/00-atoms/02-text/06-h6/h6.scss";
-@import "../../_patterns/00-atoms/02-text/07-list_title-small/list_title-small.scss";
-@import "../../_patterns/00-atoms/02-text/08-list-item_title-small/list-item_title-small.scss";
-@import "../../_patterns/00-atoms/06-buttons/01-button-search/button-search.scss";
-@import "../../_patterns/01-molecules/02-blocks/00-block-hero/block-hero.scss";
-@import "../../_patterns/01-molecules/02-blocks/01-block-promo/block-promo.scss";
-@import "../../_patterns/01-molecules/04-forms/00-search-field/search-field.scss";
-@import "../../_patterns/01-molecules/05-navigation/05-breadcrumbs/breadcrumbs.scss";
-@import "../../_patterns/01-molecules/05-navigation/06-tabs-audience-selector/tabs-audience-selector.scss";
-@import "../../_patterns/01-molecules/05-navigation/00-primary-nav/primary-nav.scss";
-@import "../../_patterns/01-molecules/05-navigation/07-ribbon-dropdown/ribbon-dropdown.scss";
-@import "../../_patterns/01-molecules/05-navigation/08-ribbon-user-menu/ribbon-user-menu.scss";
-@import "../../_patterns/01-molecules/06-components/03-news-item-standard-row/news-item-standard.scss";
-@import "../../_patterns/01-molecules/06-components/04-news-item-featured-row/news-item-featured-row.scss";
-@import "../../_patterns/01-molecules/06-components/05-news-label/news-label.scss";
-@import "../../_patterns/01-molecules/06-components/06-alert/alert.scss";
-@import "../../_patterns/01-molecules/08-lists/00-list_links/list_links.scss";
-@import "../../_patterns/02-organisms/00-global/00-header-primary/header-primary.scss";
-@import "../../_patterns/01-molecules/08-lists/07-list-links-social/list-links-social.scss";
-@import "../../_patterns/01-molecules/08-lists/08-list-links-utility/list-links-utility.scss";
-@import "../../_patterns/01-molecules/08-lists/09-list-links-secondary-user/list-links-secondary-user.scss";
-@import "../../_patterns/02-organisms/00-global/02-search_modal/search_modal.scss";
-@import "../../_patterns/02-organisms/00-global/03-ribbon/ribbon.scss";
-@import "../../_patterns/02-organisms/00-global/03-footer/footer.scss";
-@import "../../_patterns/02-organisms/03-sections/04-news-standard-list/news-standard-list.scss";
-@import "../../_patterns/02-organisms/03-sections/05-news-featured-list/news-featured-list.scss";
-@import "../../_patterns/01-molecules/01-layouts/00-layout-one-up/layout-one-up";
-@import "../../_patterns/01-molecules/01-layouts/01-layout-two-up/layout-two-up";
-@import "../../_patterns/01-molecules/01-layouts/02-layout-two-up-heavy-left/layout-two-up-heavy-left";
-@import "../../_patterns/01-molecules/01-layouts/03-layout-three-up/layout-three-up";
-@import "../../_patterns/03-templates/01-home/01-home";
-@import "../../_patterns/01-molecules/06-components/05-page-level-search/page-level-search";
+@import '../../_patterns/00-atoms/01-global/06-divider/divider';
+@import '../../_patterns/00-atoms/02-text/01-h1/h1';
+@import '../../_patterns/00-atoms/02-text/02-h2/h2';
+@import '../../_patterns/00-atoms/02-text/03-h3/h3';
+@import '../../_patterns/00-atoms/02-text/04-h4/h4';
+@import '../../_patterns/00-atoms/02-text/05-h5/h5';
+@import '../../_patterns/00-atoms/02-text/06-h6/h6';
+@import '../../_patterns/00-atoms/02-text/07-list_title-small/list_title-small';
+@import '../../_patterns/00-atoms/02-text/08-list-item_title-small/list-item_title-small';
+@import '../../_patterns/00-atoms/06-buttons/01-button-search/button-search';
+@import '../../_patterns/01-molecules/02-blocks/00-block-hero/block-hero';
+@import '../../_patterns/01-molecules/02-blocks/01-block-promo/block-promo';
+@import '../../_patterns/01-molecules/04-forms/00-search-field/search-field';
+@import '../../_patterns/01-molecules/05-navigation/05-breadcrumbs/breadcrumbs';
+@import '../../_patterns/01-molecules/05-navigation/06-tabs-audience-selector/tabs-audience-selector';
+@import '../../_patterns/01-molecules/05-navigation/00-primary-nav/primary-nav';
+@import '../../_patterns/01-molecules/05-navigation/07-ribbon-dropdown/ribbon-dropdown';
+@import '../../_patterns/01-molecules/05-navigation/08-ribbon-user-menu/ribbon-user-menu';
+@import '../../_patterns/01-molecules/06-components/03-news-item-standard-row/news-item-standard';
+@import '../../_patterns/01-molecules/06-components/04-news-item-featured-row/news-item-featured-row';
+@import '../../_patterns/01-molecules/06-components/05-news-label/news-label';
+@import '../../_patterns/01-molecules/06-components/06-alert/alert';
+@import '../../_patterns/01-molecules/08-lists/00-list_links/list_links';
+@import '../../_patterns/02-organisms/00-global/00-header-primary/header-primary';
+@import '../../_patterns/01-molecules/08-lists/07-list-links-social/list-links-social';
+@import '../../_patterns/01-molecules/08-lists/08-list-links-utility/list-links-utility';
+@import '../../_patterns/01-molecules/08-lists/09-list-links-secondary-user/list-links-secondary-user';
+@import '../../_patterns/02-organisms/00-global/02-search_modal/search_modal';
+@import '../../_patterns/02-organisms/00-global/03-ribbon/ribbon';
+@import '../../_patterns/02-organisms/00-global/03-footer/footer';
+@import '../../_patterns/02-organisms/03-sections/04-news-standard-list/news-standard-list';
+@import '../../_patterns/02-organisms/03-sections/05-news-featured-list/news-featured-list';
+@import '../../_patterns/01-molecules/01-layouts/00-layout-one-up/layout-one-up';
+@import '../../_patterns/01-molecules/01-layouts/01-layout-two-up/layout-two-up';
+@import '../../_patterns/01-molecules/01-layouts/02-layout-two-up-heavy-left/layout-two-up-heavy-left';
+@import '../../_patterns/01-molecules/01-layouts/03-layout-three-up/layout-three-up';
+@import '../../_patterns/03-templates/01-home/01-home';
+@import '../../_patterns/01-molecules/06-components/05-page-level-search/page-level-search';
+@import '../../_patterns/00-atoms/01-global/07-rule-vertical/rule-vertical';
+@import '../../_patterns/01-molecules/06-components/07-featured-content-hero-row/featured-content-hero-row';
+@import '../../_patterns/01-molecules/06-components/08-link-more-less/link-more-less';
+@import '../../_patterns/01-molecules/08-lists/06-list-featured-content-hero/list-featured-content-hero';
+@import '../../_patterns/02-organisms/03-sections/06-audience-featured-hero/audience-featured-hero';

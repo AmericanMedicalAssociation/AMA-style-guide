@@ -6,7 +6,7 @@
 
 .tabs-audience_selector_label {
   @extend %type-large;
-  margin-bottom: 25px;
+  margin: 25px 0;
   text-align: center;
 }
 
@@ -14,6 +14,7 @@
 .tabs-audience_selector_list {
   border: 1px $gray-8 solid;
   height: 60px;
+  margin-bottom: 25px;
   overflow: hidden;
   padding: 1.1111111111em 0.8333333333em;
   position: relative;
@@ -55,6 +56,7 @@
 
     &.open {
       border: 0;
+
       .icon-select svg {
         -moz-transform: initial;
         -o-transform: initial;
@@ -85,17 +87,28 @@
     &:hover {
       color: $black;
     }
+
     @include breakpoint($bp-med min-width) {
-      color: $gray-8;
+      color: $black-20;
+      padding: 15px;
+
       &.active {
         color: $black;
+
+        &:hover {
+          color: $blue;
+
+          svg {
+            fill: $blue-lighter;
+          }
+        }
       }
+
       &:hover {
-        color: $blue;
+        color: $black-55;
       }
     }
   }
-
 }
 
 // Audience selector arrow icon.
