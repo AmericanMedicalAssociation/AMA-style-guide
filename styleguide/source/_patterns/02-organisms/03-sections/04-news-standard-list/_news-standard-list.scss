@@ -1,21 +1,52 @@
-.news_list-standard {
-  @extend %clearfix;
+/**
+ * @file news-standard-list.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
-  // @todo remove max-width when grid is implemented.
-  max-width: 66.66em;
+.news-standard {
+  @include rule-horizontal(1px, $gray-8, solid);
+  padding: 0;
+  width: 100%;
+
   .news_label {
-    float: left;
-    width: 9.44em;
+
+    @include breakpoint(1250px min-width) {
+      @include grid__unit--cols(3);
+    }
   }
-  .news_list {
-    float: right;
-    width: 49.72em;
+
+  .news_list-standard {
+    @include breakpoint(1250px min-width) {
+      @include grid__unit--cols(9);
+    }
   }
+
   .news_list-standard-row {
     @include rule-horizontal(1px, $gray-8, solid);
-    padding: 40px 0;
+    padding: 30px 0;
+
+    @include breakpoint($bp-med-home) {
+      padding: 40px 0;
+    }
+
     &:first-of-type {
       border-top: 0;
+
+      .news-item_standard-image {
+        display: block;
+      }
+    }
+
+    .news-item_standard-image {
+      display: none;
+    }
+
+    @include breakpoint($bp-med-home) {
+
+      .news-item_standard-image {
+        display: inline;
+      }
     }
   }
 }

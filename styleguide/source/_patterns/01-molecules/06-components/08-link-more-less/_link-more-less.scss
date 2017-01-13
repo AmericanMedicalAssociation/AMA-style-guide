@@ -1,0 +1,15 @@
+/**
+ * @file link-more-less.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.link_load_more_less {
+  .link {
+    @include type($font-sans-serif, 18px, $font-weight-bold, 25px);
+  }
+
+  .icon {
+    vertical-align: middle;
+  }
+}
