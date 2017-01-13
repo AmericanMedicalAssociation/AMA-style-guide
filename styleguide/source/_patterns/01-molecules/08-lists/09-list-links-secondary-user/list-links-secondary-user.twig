@@ -1,12 +1,19 @@
-<ul class="list_links-secondary-user list_links-secondary-user-primary">
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'Press Center'} %}</li>
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'Events'} %}</li>
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'Careers'} %}</li>
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'Contact Us'} %}</li>
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'FAQ'} %}</li>
-</ul>
-<ul class="list_links-secondary-user list_links-secondary-user-secondary">
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'AMA Alliance'} %}</li>
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'AMPAC'} %}</li>
-  <li class="list_link_item-secondary-user">{% include '00-link-black.twig' with { 'content': 'AMA Insurance'} %}</li>
-</ul>
+{#
+ # @file list-links-secondary-user.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<div class="layout layout_two_up list-secondary-user">
+  <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'AMA Careers'} %}</li>
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'Contact Us'} %}</li>
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'Events'} %}</li>
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'Press Center'} %}</li>
+  </ul>
+  <ul class="list_links-secondary-user list_links-secondary-user-secondary layout_two_up-secondary">
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'AMA Alliance'} %}</li>
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'AMPAC'} %}</li>
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'AMA Foundation'} %}</li>
+    <li class="list_link_item-secondary-user">{% include 'atoms-link-black' with { 'content': 'AMA Insurance'} %}</li>
+  </ul>
+</div>

@@ -1,32 +1,53 @@
-// @todo remove these width values and replace with grid
+/**
+ * @file footer.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
 .footer {
   background-color: $black-7;
-  padding: 50px;
-  @include breakpoint($bp-large) {
-    margin-top: 50px;
+  margin-top: 50px;
+  padding: 40px 0 10px;
+
+  @include breakpoint($bp-large-home min-width) {
+    padding: 50px 0 10px;
   }
 }
+
 .footer-inner {
-  @extend %clearfix;
   position: relative;
+
+  @include breakpoint($bp-large-home min-width) {
+    flex-direction: row !important;
+  }
 }
+
 .footer-primary {
-  float: left;
-  max-width: 680px;
+  margin-bottom: 40px;
+
+  @include breakpoint($bp-large-home min-width) {
+    @include grid__unit--cols(7);
+    margin-right: 100px;
+  }
 }
+
 .footer-secondary {
-  float: right;
-  max-width: 380px;
+
+  @include breakpoint($bp-large-home min-width) {
+    @include grid__unit--cols(4);
+  }
+
   .rule_horizontal {
     margin: 40px 0;
   }
 }
+
 .footer-primary-bottom {
   position: absolute;
   bottom: 0;
 }
+
 .footer_text-copyright  {
+  @extend %type-smaller;
   color: $black-55;
-  font-size: 0.77em;
-  line-height: 1;
 }

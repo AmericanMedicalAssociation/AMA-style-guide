@@ -1,15 +1,29 @@
-// @todo use grid to put lists into two columns.
-.list_links-secondary-user {
-  @extend %clearfix;
-  display: block;
-  min-width: 10em;
-}
+/**
+ * @file list-links-secondary-user.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
-.list_links-secondary-user-primary {
-  float: left;
+.list-secondary-user {
+  margin: 0 0 9em 0;
+  max-width: 578px;
+  padding: 0;
+
+  @breakpoint ($bp-med-home) {
+    margin: 0 0 60px 0;
+  }
+
+  @breakpoint ($bp-large-home) {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+.list_links-secondary-user {
+  display: block;
 }
 
 .list_link_item-secondary-user {
-  @extend %h6;
+  @extend %type-small;
+  font-weight: $font-weight-bold;
   margin-bottom: 0.666em;
 }

@@ -1,9 +1,21 @@
+/**
+ * @file list-links-social.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
 .list_link_item-social {
-  display:  inline-block;
-  margin-right: 0.83em;
-  &:last-of-type {
-    margin-right:  0;
+  display: inline-block;
+  margin-right: 15px;
+
+  @include breakpoint(1251px min-width) {
+    margin-right: 0.83em;
   }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
   .list_link_item-social_title {
     position: absolute !important;
     overflow: hidden;
@@ -13,8 +25,10 @@
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
   }
+
   a {
-    display:  inline-block;
+    display: inline-block;
+
     &:hover {
       fill: $blue;
     }
