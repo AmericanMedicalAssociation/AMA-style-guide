@@ -4,30 +4,30 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-.news-item_standard {
+.news_item-standard_row {
   padding: 0;
 
   &:hover {
-    .news-item_standard-title {
+    .news_item-standard_row_title {
       text-decoration: underline;
     }
   }
 
-  .news-item_standard-title {
-    @include breakpoint($bp-med-home) {
+  .news_item-standard_row_title {
+    @include breakpoint($bp-med-home min-width) {
       margin-bottom: 20px;
     }
   }
 
-  .news-item_standard-description {
+  .news_item-standard_row_description {
     display: none;
 
-    @include breakpoint($bp-med-home) {
+    @include breakpoint($bp-med-home min-width) {
       display: block;
     }
   }
 
-  .news-item_standard-image {
+  .news_item-standard_row_image {
     margin-top: 20px;
     width: 100%;
 
@@ -37,7 +37,7 @@
       width: 100%;
     }
 
-    @include breakpoint($bp-med-home) {
+    @include breakpoint($bp-med-home min-width) {
       margin-top: 0;
       text-align: right;
 

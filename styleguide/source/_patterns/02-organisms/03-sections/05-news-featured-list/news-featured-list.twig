@@ -1,7 +1,11 @@
-<div class= "news-featured">
-  {% include '05-rule-horizontal.twig' %}
-  {% include "news-label-featured.twig"%}
+{#
+ # @file news-featured-list.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<div class= "layout news-featured">
+  {% include 'molecules-news-label-featured' %}
   <div class="news_list news_list-featured">
-    {% include 'news-item-featured-row.twig' %}
+    {% include 'molecules-news-item-featured-row' %}
   </div>
 </div>
