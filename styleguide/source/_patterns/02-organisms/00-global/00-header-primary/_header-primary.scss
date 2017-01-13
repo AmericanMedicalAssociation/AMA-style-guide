@@ -13,6 +13,7 @@
   @include breakpoint(740px min-width) {
     border-bottom: 1px $black-20 solid;
     padding: 20px 20px 0;
+    width: 100%;
   }
 
   // AMA logo.

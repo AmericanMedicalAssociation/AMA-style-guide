@@ -92,6 +92,13 @@ body {
   }
 }
 
+@mixin type-larger() {
+  @include type($font-sans-serif, 23px, $font-weight-medium, 1.3043478261);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-sans-serif, 28px, $font-weight-medium, 1.25);
+  }
+}
+
 // (Formerly B2)
 .type-large, %type-large {
   @include type($font-sans-serif, 21px, $font-weight-medium, 1.3333333333);
