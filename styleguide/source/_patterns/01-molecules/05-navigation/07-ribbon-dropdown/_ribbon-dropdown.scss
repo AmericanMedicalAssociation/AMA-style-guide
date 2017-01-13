@@ -11,7 +11,8 @@
   width: 100%;
   background-color: $purple;
   padding: 15px;
-  font-size: .75rem;
+  @extend %type-smaller;
+  -webkit-font-smoothing: antialiased;
   color: $white;
   cursor: pointer;
 
@@ -38,6 +39,7 @@
   position: absolute;
   width: 100%;
   display: none;
+  z-index: 100;
 
   &.is-active {
     display: block;
@@ -46,7 +48,8 @@
 
 .ribbon_dropdown_nav_item {
   background-color: $purple-darker;
-  font-size: .75rem;
+  @extend %type-smaller;
+  -webkit-font-smoothing: antialiased;
 
   a:link,
   a:visited {
