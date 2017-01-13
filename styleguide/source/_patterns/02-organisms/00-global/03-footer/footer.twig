@@ -1,17 +1,21 @@
-<section class="footer">
-  <div class="footer-inner">
-    <div class="footer-primary">
-      {% include "22-mission-statement.twig" %}
-      <div class="footer-primary-bottom">
-        {% include "23-copyright.twig" %}
-        {% include "list-links-utility.twig" %}
-    </div>
-    </div>
+{#
+ # @file footer.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
 
-    <div class="footer-secondary">
-       {% include "list-links-social.twig" %}
-       {% include "05-rule-horizontal.twig" %}
-       {% include "list-links-secondary-user.twig" %}
+<section class="footer">
+  <div class="layout layout_one_up footer-inner">
+    <div class="footer-primary">
+      {% include 'atoms-mission-statement' %}
+      <div class="footer-primary-bottom">
+        {% include 'atoms-copyright' %}
+        {% include 'molecules-list-links-utility' %}
+      </div>
     </div>
-</div>
+    <div class="footer-secondary">
+       {% include 'molecules-list-links-social' %}
+       {% include 'atoms-rule-horizontal' %}
+       {% include 'molecules-list-links-secondary-user' %}
+    </div>
+  </div>
 </section>
