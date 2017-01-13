@@ -1,4 +1,9 @@
-{% include 'ribbon.twig' %}
+{#
+ # @file home.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+{% include 'organisms-ribbon' %}
 <div class="layout layout-home">
     {% include 'header-primary.twig' %}
     {% include 'organisms-audience-featured-hero' %}
@@ -8,4 +13,4 @@
     {% include 'news-standard-list.twig' %}
     {% include '00-list-block-promo.twig' %}
 </div>
-{% include 'footer.twig' %}
+{% include 'organisms-footer' %}

@@ -24,16 +24,14 @@
 }
 
 .layout_two_up-heavy-left-primary {
-
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home) {
     @include grid__unit--cols(7.5);
     padding-right: 15px;
   }
 }
 
 .layout_two_up-heavy-left-secondary {
-
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home) {
     @include grid__unit--cols(4.5);
     padding-left: 15px;
   }
