@@ -16,7 +16,7 @@
   @include type($font-sans-serif, 18px, $font-weight-bold, 22px);
   color: $purple;
 
-  @include breakpoint($bp-med-home) {
+  @include breakpoint($bp-med-home min-width) {
     @include type($font-sans-serif, 24px, $font-weight-bold, 28px);
   }
 
