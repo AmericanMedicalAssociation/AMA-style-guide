@@ -7,13 +7,14 @@
 // Primary header section.
 .header-primary {
   @extend %clearfix;
-  padding: 20px 20px 10px;
+  padding: 20px 0 10px;
   position: relative;
+  width: 100%;
+  margin: 0 -10px;
 
   @include breakpoint(740px min-width) {
     border-bottom: 1px $black-20 solid;
-    padding: 20px 20px 0;
-    width: 100%;
+    padding: 20px 0 0;
   }
 
   // AMA logo.

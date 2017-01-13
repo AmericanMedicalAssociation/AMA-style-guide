@@ -3,13 +3,15 @@
   display: inline-block;
   border-left: 1px solid $gray-8;
   border-right: 1px solid $gray-8;
+  width: 238px;
 }
 
 .ribbon_dropdown_trigger {
   display: inline-block;
+  width: 100%;
   background-color: $purple;
   padding: 15px;
-  font-size: .75rem;
+  @extend %type-smaller;
   color: $white;
   cursor: pointer;
 
@@ -36,6 +38,7 @@
   position: absolute;
   width: 100%;
   display: none;
+  z-index: 100;
 
   &.is-active {
     display: block;
@@ -44,7 +47,7 @@
 
 .ribbon_dropdown_nav_item {
   background-color: $purple-darker;
-  font-size: .75rem;
+  @extend %type-smaller;
 
   a:link,
   a:visited {

@@ -1,7 +1,12 @@
 .ribbon_user-menu {
-  position: relative;
-  float: right;
   margin-left: auto;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  width: 35px;
+  @include breakpoint(740px) {
+    width: 367px;
+  }
 }
 
 .ribbon_user-menu_trigger {
@@ -11,11 +16,29 @@
 }
 
 .ribbon_user-menu_nav {
-  list-style: none;
+  display: none;
+  @include breakpoint(740px) {
+    display: block;
+  }
 }
 
 .ribbon_user-menu_nav_item {
   float: left;
-  padding: 15px;
-  font-size: .75rem;
+  @extend %type-smaller;
+  padding: 8px;
+
+  .link {
+    padding: 8px;
+  }
+}
+
+.ribbon_user-menu .icon {
+  width: 20px;
+  @include breakpoint(740px) {
+    display: none;
+  }
+}
+
+.ribbon_user-menu .icon .cls-1 {
+  fill: $white;
 }

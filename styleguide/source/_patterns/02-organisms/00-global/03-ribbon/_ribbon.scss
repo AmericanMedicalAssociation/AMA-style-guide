@@ -1,3 +1,10 @@
 .ribbon {
   background-color: $purple;
 }
+
+.flexbox .ribbon .layout.layout_one_up {
+  @include breakpoint($bp-large max-width) {
+    padding: 0;
+  }
+  flex-direction: row;
+}

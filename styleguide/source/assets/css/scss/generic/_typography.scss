@@ -55,6 +55,7 @@ $bp-large: 75em; // 1200px
 body {
   -webkit-text-size-adjust: 100%;
   color: #000;
+  -webkit-font-smoothing: antialiased;
   @include type($base-font-family, $base-font-size, $base-font-weight, $base-line-height);
   @include font-size(1.11, large);
   @include breakpoint($bp-med min-width) {
