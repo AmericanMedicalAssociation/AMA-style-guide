@@ -11,13 +11,13 @@
 
   .news_label {
 
-    @include breakpoint(1250px min-width) {
+    @include breakpoint($bp-large-home min-width) {
       @include grid__unit--cols(3);
     }
   }
 
   .news_list-standard {
-    @include breakpoint(1250px min-width) {
+    @include breakpoint($bp-large-home min-width) {
       @include grid__unit--cols(9);
     }
 
