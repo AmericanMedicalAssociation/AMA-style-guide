@@ -6,6 +6,7 @@
 
 .footer {
   background-color: $black-7;
+  margin-top: 50px;
   padding: 40px 0 10px;
 
   @include breakpoint($bp-large-home min-width) {
