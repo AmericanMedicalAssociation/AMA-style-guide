@@ -25,7 +25,6 @@
 .ribbon_user-menu_nav_item {
   float: left;
   @extend %type-smaller;
-  -webkit-font-smoothing: antialiased;
   padding: 8px;
 
   .link {

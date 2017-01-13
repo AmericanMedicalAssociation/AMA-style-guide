@@ -12,7 +12,6 @@
   background-color: $purple;
   padding: 15px;
   @extend %type-smaller;
-  -webkit-font-smoothing: antialiased;
   color: $white;
   cursor: pointer;
 
@@ -49,7 +48,6 @@
 .ribbon_dropdown_nav_item {
   background-color: $purple-darker;
   @extend %type-smaller;
-  -webkit-font-smoothing: antialiased;
 
   a:link,
   a:visited {

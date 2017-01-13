@@ -3,6 +3,8 @@
 }
 
 .flexbox .ribbon .layout.layout_one_up {
-  padding: 0;
+  @include breakpoint($bp-large max-width) {
+    padding: 0;
+  }
   flex-direction: row;
 }

@@ -8,6 +8,7 @@
   -webkit-font-smoothing: antialiased;
   @include breakpoint($bp-med) {
     padding: 30px;
+    margin-bottom: 0;
   }
   &.block-promo-red {
     background: $red;
