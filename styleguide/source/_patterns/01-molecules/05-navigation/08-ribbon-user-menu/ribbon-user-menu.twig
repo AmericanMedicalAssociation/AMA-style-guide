@@ -1,9 +1,8 @@
 <nav class="ribbon_user-menu">
-  <span class="icon icon-usermenu" data-grunticon-embed></span>
-  <span class="ribbon_user-menu_trigger" tabindex="0" href="#">User Menu {% include '08-usermenu.twig' %}</span>
+  <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Become a Member'} %}</li>
-    <li class="ribbon_user-menu_nav_item">{% include 'divider.twig' %}</li>
+    <li class="ribbon_user-menu_nav_item divider_item">{% include 'divider.twig' %}</li>
     <li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Sign In'} %}</li>
     <li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Create Account'} %}</li>
   </ul>
