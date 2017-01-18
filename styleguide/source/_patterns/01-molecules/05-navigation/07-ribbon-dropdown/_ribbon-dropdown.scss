@@ -7,17 +7,23 @@
 }
 
 .ribbon_dropdown_trigger {
+  @extend %type-smaller;
   display: inline-block;
   width: 100%;
   background-color: $purple;
   padding: 15px;
-  @extend %type-smaller;
   color: $white;
   cursor: pointer;
 
   span {
     display: inline-block;
-    margin-left: .5em;
+    margin-left: .75em;
+  }
+
+  .icon {
+    fill: $white;
+    height: 18px;
+    width: 10px;
   }
 
   &:hover,
