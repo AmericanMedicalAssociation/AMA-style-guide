@@ -28,6 +28,49 @@
   }
 }
 
+.ribbon_user-menu_trigger-auth {
+  @extend %type-smaller;
+  display: block;
+  width: 200px;
+  font-weight: 600;
+  padding: 8px 15px;
+
+  .icon {
+    display: none;
+  }
+
+  @include breakpoint(740px) {
+    display: inline-block;
+    width: 100%;
+    background-color: $purple;
+    padding: 15px;
+    color: $white;
+    cursor: pointer;
+
+    .icon {
+      display: inline-block;
+      fill: $white;
+      height: 18px;
+      width: 10px;
+      float: right;
+      margin-left: .75em;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $purple-darker;
+    }
+
+    &.is-active {
+      background-color: $purple-darker;
+
+      span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
 .ribbon_user-menu_nav {
   display: none;
   position: absolute;
@@ -96,55 +139,83 @@
       text-decoration: underline;
     }
   }
+}
 
-  &.auth-user {
+.ribbon_user-menu_nav_item.auth-user {
+  
+  @include breakpoint(740px) {
     padding: 0;
+    width: 200px;
+    border-left: 1px solid $black-55;
+    border-right: 1px solid $black-55;
+  }
+}
+
+/*hides first link at desktop on mobile*/
+.ribbon_user-menu_nav-auth > .ribbon_user-menu_nav_item:first-child {
+  display: none;
+
+  @include breakpoint(740px) {
+    display: inline-block;
+    padding: 15px 8px;
   }
 }
 
 .ribbon_user-menu_nav-child {
-  display: none;
   position: absolute;
-  width: 100%;
+  width: 200px;
   z-index: 100;
+  background-color: $black-20;
+  box-shadow: 3px 3px 2px $black-55;
 
-  &.is-active {
+  @include breakpoint(740px) {
+    display: none;
+    background-color: $purple-darker;
+    box-shadow: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.ribbon_user-menu_nav-child_item {
+
+  a:link,
+  a:visited {
     display: block;
+    padding: 8px 15px;
+    color: $black;
+    font-weight: 600;
   }
 
-  .ribbon_user-menu_nav_item {
-    background-color: $black-20;
-    box-shadow: 3px 3px 2px $black-55;
+  a:active,
+  a:hover,
+  a:focus {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  &.sign-out {
+    border-top: 1px solid $black-55;
+  }
+
+  @include breakpoint(740px) {
 
     a:link,
     a:visited {
-      display: block;
-      padding: 8px 15px;
-      color: $black;
-      font-weight: 600;
+      color: $white;
     }
 
     a:active,
     a:hover,
     a:focus {
-      color: $blue;
-      text-decoration: none;
+      color: $white;
+      text-decoration: underline;
     }
 
-    @include breakpoint(740px) {
-      background-color: $purple-darker;
-
-      a:link,
-      a:visited {
-        color: $white;
-      }
-
-      a:active,
-      a:hover,
-      a:focus {
-        color: $white;
-        text-decoration: underline;
-      }
+    &.sign-out {
+      border-top: none;
     }
   }
 }
