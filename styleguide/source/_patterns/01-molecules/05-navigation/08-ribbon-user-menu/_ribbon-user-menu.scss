@@ -28,48 +28,6 @@
   }
 }
 
-.ribbon_user-menu_trigger-auth {
-  @extend %type-smaller;
-  display: block;
-  width: 200px;
-  font-weight: 600;
-  padding: 8px 15px;
-
-  .icon {
-    display: none;
-  }
-
-  @include breakpoint(740px) {
-    display: inline-block;
-    width: 100%;
-    background-color: $purple;
-    padding: 15px;
-    color: $white;
-    cursor: pointer;
-
-    .icon {
-      display: inline-block;
-      fill: $white;
-      height: 18px;
-      width: 10px;
-      float: right;
-      margin-left: .75em;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $purple-darker;
-    }
-
-    &.is-active {
-      background-color: $purple-darker;
-
-      span {
-        transform: rotate(180deg);
-      }
-    }
-  }
-}
 
 .ribbon_user-menu_nav {
   display: none;
@@ -141,6 +99,52 @@
   }
 }
 
+/* Authenticated user ribbon classes */
+
+.ribbon_user-menu_trigger-auth {
+  @extend %type-smaller;
+  display: block;
+  width: 200px;
+  font-weight: 600;
+  padding: 8px 15px;
+
+  .icon {
+    display: none;
+  }
+
+  @include breakpoint(740px) {
+    display: inline-block;
+    width: 100%;
+    background-color: $purple;
+    padding: 15px;
+    color: $white;
+    cursor: pointer;
+
+    .icon {
+      display: inline-block;
+      fill: $white;
+      height: 18px;
+      width: 10px;
+      float: right;
+      margin-left: .75em;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $purple-darker;
+    }
+
+    &.is-active {
+      background-color: $purple-darker;
+
+      span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+/*style auth user's nav item specially*/
 .ribbon_user-menu_nav_item.auth-user {
   
   @include breakpoint(740px) {
