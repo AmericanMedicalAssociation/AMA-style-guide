@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // Search
 
-  // When a user clicks on the ribbon trigger
+  // When a user clicks on the ribbon trigger (main)
   $('.ribbon_dropdown_trigger').click(function() {
     // Unfocus on the dropdown
     $(this).blur();
@@ -14,7 +14,7 @@ $(document).ready(function() {
     $('.ribbon_user-menu_nav-child').removeClass('is-active');
   });
 
-  // When a user clicks on the ribbon trigger
+  // When a user clicks on the ribbon trigger for user dropdown
   $('.ribbon_user-menu_trigger').click(function() {
     // Unfocus on the dropdown
     $(this).blur();
@@ -25,7 +25,7 @@ $(document).ready(function() {
     $('.ribbon_dropdown_nav').removeClass('is-active');
   });
 
-  // When a user clicks on the ribbon trigger
+  // When a user clicks on the ribbon trigger for authenticated user dropdown
   $('.ribbon_user-menu_trigger-auth').click(function() {
     // Unfocus on the dropdown
     $(this).blur();
