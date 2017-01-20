@@ -4,20 +4,42 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-// Primary navigation list.
-.nav-primary_list {
-  // @todo remove this when the dropdown is implemented.
+// Mobile menu interaction
+
+.nav-primary_list-closed {
   display: none;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     display: inline-block;
   }
+}
+
+.nav-primary_list-open {
+  display: block;
+  position: absolute;
+}
+
+.nav-primary-menu_overlay-mobile {
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  background: #384047;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 0;
+  z-index: 10;
+}
+
+.nav-primary-menu_overlay-mobile-on {
+  opacity: 0.85;
+  width: 100%;
 }
 
 // A list item in the primary navigation.
 .nav-primary_list-item {
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     display: inherit;
     margin-right: 28px;
 
@@ -26,7 +48,7 @@
     }
   }
 
-  @include breakpoint(1251px min-width) {
+  @include breakpoint($bp-large-home min-width) {
     margin-right: 25px;
   }
 }
@@ -41,7 +63,7 @@
   text-align: center;
   width: 63px;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     display: none;
   }
 
@@ -56,7 +78,7 @@
 .link-primary-nav a {
   display: inline-block;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     font-size: 18px;
     font-weight: $font-weight-bold;
     padding-bottom: 50px;
@@ -66,7 +88,7 @@
     }
   }
 
-  @include breakpoint(1251px min-width) {
+  @include breakpoint($bp-large-home min-width) {
     padding: 50px 0;
 
     &:hover {

@@ -1,5 +1,7 @@
 .ribbon {
   background-color: $purple;
+  position: relative;
+  z-index: 49;
 }
 
 .flexbox .ribbon .layout.layout_one_up {
