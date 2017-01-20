@@ -20,6 +20,7 @@
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px 20px 10px;
+    position: relative;
 
     @include breakpoint($bp-med-home min-width) {
       padding: 20px 30px 0;
@@ -45,11 +46,11 @@
   }
 
   // Primary navigation.
-  .nav-primary-menu {
-    background: $white;
+  .nav-primary_button-menu {
     display: inline-block;
     position: absolute;
     right: 74px;
+    top: 20px;
     vertical-align: top;
 
     @include breakpoint($bp-med-home min-width) {

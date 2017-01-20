@@ -3,13 +3,72 @@
  # Copyright 2017 Palantir.net, Inc.
  #}
 
+<div class="nav-primary_button-menu">Menu</div>
+
 <nav id="nav-primary" class="nav-primary-menu">
-  <div class="nav-primary_button-menu">Menu</div>
+
   <ul class="nav-primary_list nav-primary_list-closed">
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'Education' } %}</li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'Life & Career' } %}</li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'Practice Management' } %}</li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'Delivering Care' } %}</li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'About Us' } %}</li>
+
+    <li class="nav-primary_list-item">
+      <div class="nav-primary_list-item_title">
+        {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
+        {% include "atoms-arrow-select" %}
+      </div>
+
+      <ul class="nav-primary_list_subnav nav-primary_list_subnav-initial">
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.first } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.second } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.third } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.fourth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.fifth } %}{% include "atoms-arrow-select" %}</li>
+      </ul>
+    </li>
+
+    <li class="nav-primary_list-item">
+      {% include '04-link-primary-nav.twig' with { 'content': nav.second } %}{% include "atoms-arrow-select" %}
+      <ul class="nav-primary_list_subnav">
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.first } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.second } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.third } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.fourth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.fifth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.sixth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.seventh } %}{% include "atoms-arrow-select" %}</li>
+      </ul>
+    </li>
+    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': nav.third } %}{% include "atoms-arrow-select" %}
+      <ul class="nav-primary_list_subnav">
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.first } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.second } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.third } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.fourth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.fifth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.sixth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.seventh } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.eighth } %}{% include "atoms-arrow-select" %}</li>
+      </ul>
+    </li>
+    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': nav.fourth } %}{% include "atoms-arrow-select" %}
+      <ul class="nav-primary_list_subnav">
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.first } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.second } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.third } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.fourth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.fifth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.sixth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.seventh } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.eigth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.ninth } %}{% include "atoms-arrow-select" %}</li>
+      </ul>
+    </li>
+    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': nav.fifth } %}{% include "atoms-arrow-select" %}
+      <ul class="nav-primary_list_subnav">
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.first } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.second } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.third } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.fourth } %}{% include "atoms-arrow-select" %}</li>
+        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.fifth } %}{% include "atoms-arrow-select" %}</li>
+      </ul>
+    </li>
   </ul>
 </nav>
