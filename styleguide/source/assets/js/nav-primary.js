@@ -9,7 +9,12 @@ $(document).ready(function() {
   // Mobile Primary navigation functionality.
   $('.nav-primary_list').each(function () {
 
-    $('.nav-primary_list-item').addClass('nav-primary_list-item-hidden');
+    // Hide the sub-navigation menus initially.
+    $('.nav-primary_list_subnav').each(function() {
+      $(this).removeClass('nav-primary_list_subnav-visible');
+    });
+
+    // $('.nav-primary_list-item').addClass('nav-primary_list-item-hidden');
 
     // Toggle the primary navigation open and closed when the Menu button is clicked.
     $('.nav-primary_button-menu').click(function () {
@@ -21,14 +26,18 @@ $(document).ready(function() {
 
     // Primary nav list item click to open sub-navigation.
     $('.nav-primary_list-item_title a').click(function () {
-      var parent = $(this).parent();
-
-      // Hide the sub-navigation menus initially.
-      $('.nav-primary_list_subnav').removeClass('nav-primary_list_subnav-initial');
+      var parent = $(this).parents('.nav-primary_list-open > .nav-primary_list-item');
 
       // Show the sub-navigation of the item that is clicked.
-      parent.addClass('nav-primary_list-item-active').removeClass('nav-primary_list-item-hidden');
-      parent.children('.nav-primary_list-item_title').addClass('nav-primary_list-item_title-active');
+      if(parent.hasClass('nav-primary_list-item-active')) {
+        parent.removeClass('nav-primary_list-item-active');
+        parent.children('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
+        parent.children('.nav-primary_list_subnav').removeClass('nav-primary_list_subnav-visible');
+      } else {
+        parent.addClass('nav-primary_list-item-active');
+        parent.children('.nav-primary_list-item_title').addClass('nav-primary_list-item_title-active');
+        parent.children('.nav-primary_list_subnav').addClass('nav-primary_list_subnav-visible');
+      }
     });
 
   });

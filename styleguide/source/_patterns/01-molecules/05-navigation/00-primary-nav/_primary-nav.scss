@@ -90,7 +90,17 @@
   }
 }
 
-//The Sub nav
+// The Sub nav.
+.nav-primary_list_subnav li {
+  display: none;
+  height: 0;
+}
+
+.nav-primary_list_subnav-visible li {
+  display: block;
+  height: auto;
+}
+
 .nav-primary_list_subnav_list-item {
   background-color: $black-15;
   border-top: 1px $gray-8 solid;
@@ -104,6 +114,10 @@
       text-decoration: underline;
     }
   }
+}
+
+.nav-primary_list-item_title-active .icon {
+  display: none;
 }
 
 

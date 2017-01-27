@@ -15,7 +15,7 @@
         {% include "atoms-arrow-select" %}
       </div>
 
-      <ul class="nav-primary_list_subnav nav-primary_list_subnav-initial">
+      <ul class="nav-primary_list_subnav nav-primary_list_subnav-visible">
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.first } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.second } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.third } %}{% include "atoms-arrow-select" %}</li>
@@ -25,8 +25,12 @@
     </li>
 
     <li class="nav-primary_list-item">
-      {% include '04-link-primary-nav.twig' with { 'content': nav.second } %}{% include "atoms-arrow-select" %}
-      <ul class="nav-primary_list_subnav">
+      <div class="nav-primary_list-item_title">
+        {% include '04-link-primary-nav.twig' with { 'content': nav.second } %}
+        {% include "atoms-arrow-select" %}
+      </div>
+
+      <ul class="nav-primary_list_subnav nav-primary_list_subnav-visible">
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.first } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.second } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.third } %}{% include "atoms-arrow-select" %}</li>
@@ -36,8 +40,14 @@
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.seventh } %}{% include "atoms-arrow-select" %}</li>
       </ul>
     </li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': nav.third } %}{% include "atoms-arrow-select" %}
-      <ul class="nav-primary_list_subnav">
+
+    <li class="nav-primary_list-item">
+      <div class="nav-primary_list-item_title">
+        {% include '04-link-primary-nav.twig' with { 'content': nav.third } %}
+        {% include "atoms-arrow-select" %}
+      </div>
+
+      <ul class="nav-primary_list_subnav nav-primary_list_subnav-visible">
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.first } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.second } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.third } %}{% include "atoms-arrow-select" %}</li>
@@ -48,8 +58,13 @@
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.eighth } %}{% include "atoms-arrow-select" %}</li>
       </ul>
     </li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': nav.fourth } %}{% include "atoms-arrow-select" %}
-      <ul class="nav-primary_list_subnav">
+    <li class="nav-primary_list-item">
+      <div class="nav-primary_list-item_title">
+        {% include '04-link-primary-nav.twig' with { 'content': nav.fourth } %}
+        {% include "atoms-arrow-select" %}
+      </div>
+
+      <ul class="nav-primary_list_subnav nav-primary_list_subnav-visible">
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.first } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.second } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.third } %}{% include "atoms-arrow-select" %}</li>
@@ -61,8 +76,13 @@
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.ninth } %}{% include "atoms-arrow-select" %}</li>
       </ul>
     </li>
-    <li class="nav-primary_list-item">{% include '04-link-primary-nav.twig' with { 'content': nav.fifth } %}{% include "atoms-arrow-select" %}
-      <ul class="nav-primary_list_subnav">
+    <li class="nav-primary_list-item">
+      <div class="nav-primary_list-item_title">
+        {% include '04-link-primary-nav.twig' with { 'content': nav.fifth } %}
+        {% include "atoms-arrow-select" %}
+      </div>
+
+      <ul class="nav-primary_list_subnav nav-primary_list_subnav-visible">
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.first } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.second } %}{% include "atoms-arrow-select" %}</li>
         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.third } %}{% include "atoms-arrow-select" %}</li>
