@@ -28,12 +28,14 @@
 
 // The primary navigation list.
 .nav-primary_list {
-  @include transition(all, 0.2s, ease-in-out);
-  background-color: $black-7;
-  left: 0;
-  top: 81px;
-  position: absolute;
-  width: 100%;
+  @include breakpoint($bp-med-home max-width) {
+    @include transition(all, 0.2s, ease-in-out);
+    background-color: $black-7;
+    left: 0;
+    top: 81px;
+    position: absolute;
+    width: 100%;
+  }
 
   @include breakpoint($bp-med-home min-width) {
     background-color: $white;
@@ -56,13 +58,16 @@
 
 // List item in the primary navigation.
 .nav-primary_list-item {
-  border-bottom: 1px $gray-8 solid;
   font-weight: $font-weight-bold;
   position: relative;
 
-  .link-primary-nav a {
-    padding: 15px 30px;
-    width: 100%
+  @include breakpoint($bp-med-home max-width) {
+    border-bottom: 1px $gray-8 solid;
+
+    .link-primary-nav a {
+      padding: 15px 30px;
+      width: 100%
+    }
   }
 
   @include breakpoint($bp-med-home min-width) {
@@ -79,13 +84,17 @@
   }
 
   .icon-select {
-    position: absolute;
-    right: 25px;
-    top: 15px;
+    display: none;
 
-    svg {
-      @include rotate(-90);
-      fill: $blue;
+    @include breakpoint($bp-med-home max-width) {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+
+      svg {
+        @include rotate(-90);
+        fill: $blue;
+      }
     }
   }
 }
