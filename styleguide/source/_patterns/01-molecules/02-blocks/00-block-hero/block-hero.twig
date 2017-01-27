@@ -1,1 +1,18 @@
-<a href="{{ url }}" class="block-hero">  {% include 'landscape-4x2_5.twig' with { 'class': 'block-hero-primary' } %}  <div class="block-hero-secondary">    {% include 'h6.twig' with { 'content': 'Highlight', 'class': 'block-hero_cta block-hero_cta-primary' } %}    {% include 'h2.twig' with { 'content': 'New AMA Digital Experience', 'class': 'block-hero_title' } %}    {% include '21-summary.twig' with { 'content': 'Modern, streamlined, timely and relevant', 'class': 'block-hero_summary' } %}    {% include '20-paragraph.twig' with { 'content': 'Read More', 'class': 'block-hero_cta block-hero_cta-secondary' } %}  </div></a>
+{#
+ # @file block-hero.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<a href="{{ url }}" class="layout layout_two_up block-hero">
+  <div class="block-hero-primary layout_two_up-primary">
+    {% include 'atoms-landscape-4x2_5' with { 'class': 'block-hero_image' } %}
+  </div>
+  <div class="block-hero-secondary layout_two_up-secondary">
+    {% include 'atoms-h5' with { 'content': 'Highlight', 'class': 'block-hero_cta block-hero_cta-primary' } %}
+    <div class="block-hero-inner">
+      {% include 'atoms-h2' with { 'content': 'New AMA Digital Experience', 'class': 'block-hero_title' } %}
+      {% include 'atoms-summary' with { 'content': 'Modern, streamlined, timely and relevant', 'class': 'block-hero_summary' } %}
+    </div>
+    {% include 'atoms-paragraph' with { 'content': 'Read More', 'class': 'block-hero_cta block-hero_cta-secondary' } %}
+  </div>
+</a>

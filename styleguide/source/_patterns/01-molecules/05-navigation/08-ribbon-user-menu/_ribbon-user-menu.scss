@@ -4,41 +4,222 @@
   display: flex;
   align-items: center;
   width: 35px;
+
   @include breakpoint(740px) {
     width: 367px;
   }
 }
 
 .ribbon_user-menu_trigger {
-  display: none;
   color: transparent;
-  fill: $white;
-}
+  cursor: pointer;
+  margin-top: 5px;
 
-.ribbon_user-menu_nav {
-  display: none;
-  @include breakpoint(740px) {
-    display: block;
+  .icon {
+    width: 20px;
   }
-}
 
-.ribbon_user-menu_nav_item {
-  float: left;
-  @extend %type-smaller;
-  padding: 8px;
-
-  .link {
-    padding: 8px;
+  .cls-1  {
+    fill: $white;
   }
-}
 
-.ribbon_user-menu .icon {
-  width: 20px;
   @include breakpoint(740px) {
     display: none;
   }
 }
 
-.ribbon_user-menu .icon .cls-1 {
-  fill: $white;
+
+.ribbon_user-menu_nav {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: 100;
+  background-color: $black-20;
+  box-shadow: 3px 3px 2px $black-55;
+
+  &.is-active {
+    display: block;
+  }
+
+  .ribbon_user-menu_nav_item.divider_item {
+    display: none;
+  }
+
+  @include breakpoint(740px) {
+    display: block;
+    position: static;
+    top: auto;
+    right: auto;
+    box-shadow: none;
+    background-color: transparent;
+
+    .ribbon_user-menu_nav_item.divider_item {
+      display: inline;
+    }
+  }
+}
+
+.ribbon_user-menu_nav_item {
+  @extend %type-smaller;
+
+  a:link,
+  a:visited {
+    display: block;
+    padding: 8px 40px 8px 20px;
+    color: $black;
+    font-weight: 600;
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    color: $blue;
+    text-decoration: none;
+  }
+  
+  @include breakpoint(740px) {
+    float: left;
+    padding: 8px;
+
+    a:link,
+    a:visited {
+      display: inline;
+      padding: 8px;
+      color: $white;
+      font-weight: 400;
+    }
+
+    a:active,
+    a:hover,
+    a:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Authenticated user ribbon classes */
+
+.ribbon_user-menu_trigger-auth {
+  @extend %type-smaller;
+  display: block;
+  width: 200px;
+  font-weight: 600;
+  padding: 8px 15px;
+
+  .icon {
+    display: none;
+  }
+
+  @include breakpoint(740px) {
+    display: inline-block;
+    width: 100%;
+    background-color: $purple;
+    padding: 15px;
+    color: $white;
+    cursor: pointer;
+
+    .icon {
+      display: inline-block;
+      fill: $white;
+      height: 18px;
+      width: 10px;
+      float: right;
+      margin-left: .75em;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $purple-darker;
+    }
+
+    &.is-active {
+      background-color: $purple-darker;
+
+      span {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+/*style auth user's nav item specially*/
+.ribbon_user-menu_nav_item.auth-user {
+  
+  @include breakpoint(740px) {
+    padding: 0;
+    width: 200px;
+    border-left: 1px solid $black-55;
+    border-right: 1px solid $black-55;
+  }
+}
+
+/*hides first link at desktop on mobile*/
+.ribbon_user-menu_nav-auth > .ribbon_user-menu_nav_item:first-child {
+  display: none;
+
+  @include breakpoint(740px) {
+    display: inline-block;
+    padding: 15px 8px;
+  }
+}
+
+.ribbon_user-menu_nav-child {
+  position: absolute;
+  width: 200px;
+  z-index: 100;
+  background-color: $black-20;
+  box-shadow: 3px 3px 2px $black-55;
+
+  @include breakpoint(740px) {
+    display: none;
+    background-color: $purple-darker;
+    box-shadow: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.ribbon_user-menu_nav-child_item {
+
+  a:link,
+  a:visited {
+    display: block;
+    padding: 8px 15px;
+    color: $black;
+    font-weight: 600;
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  &.sign-out {
+    border-top: 1px solid $black-55;
+  }
+
+  @include breakpoint(740px) {
+
+    a:link,
+    a:visited {
+      color: $white;
+    }
+
+    a:active,
+    a:hover,
+    a:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+
+    &.sign-out {
+      border-top: none;
+    }
+  }
 }

@@ -1,0 +1,18 @@
+<nav class="ribbon_user-menu ribbon_user-menu-auth">
+
+  <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
+
+  <ul class="ribbon_user-menu_nav ribbon_user-menu_nav-auth">
+  	<li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Become a Member'} %}</li>
+  	<li class="ribbon_user-menu_nav_item auth-user"><span class="ribbon_user-menu_trigger-auth" tabindex="0" href="#">Jonathan <span>{% include '06-opendropdownsmall.twig' %}</span></span>
+    	
+      <ul class="ribbon_user-menu_nav-child">
+  	    <li class="ribbon_user-menu_nav-child_item">{% include '03-link-white.twig' with {'content' : 'Profile'} %}</li>
+  	    <li class="ribbon_user-menu_nav-child_item">{% include '03-link-white.twig' with {'content' : 'Newsletter Preference'} %}</li>
+  	    <li class="ribbon_user-menu_nav-child_item">{% include '03-link-white.twig' with {'content' : 'AMA Physician Verification Service'} %}</li>
+  	    <li class="ribbon_user-menu_nav-child_item sign-out">{% include '03-link-white.twig' with {'content' : 'Sign Out'} %}</li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
