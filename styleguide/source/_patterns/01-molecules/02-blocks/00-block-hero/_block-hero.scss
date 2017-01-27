@@ -1,45 +1,108 @@
-// Hero CTA block on Homepage
+/**
+ * @file block-hero.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
 
 .block-hero {
-  @extend %clearfix;
   background-color: $black-7;
   color: $black;
-  display: block;
-  max-width: 1200px;
+  display: block !important;
+  padding: 0;
+  width: 100%;
+
+  @include breakpoint($bp-med-home min-width) {
+    display: flex !important;
+    max-height: 220px;
+  }
+
+  @include breakpoint($bp-large-home min-width) {
+    max-height: 380px;
+  }
+
   &:hover {
     background-color: #e6e6e6;
     color: $black;
+
     .block-hero_cta-secondary {
       color: $blue;
       text-decoration: underline;
     }
   }
+
   .block-hero-primary {
-    display: block;
-    float: left;
-    max-height: 21.111em;
+    @include grid__unit--cols(12);
+    padding: 0;
+
+    @include breakpoint($bp-med-home min-width) {
+      @include grid__unit--cols(6);
+    }
   }
+
   .block-hero-secondary {
-    float: left;
-    max-height: 21.111em;
-    max-width: 33.333em;
-    padding: 1.666em 2.777em;
+    @include grid__unit--cols(12);
+    display: table;
+    height: 180px;
+    padding: 20px;
     text-align: center;
-    vertical-align: top;
+    width: 100%;
+
+    @include breakpoint($bp-med-home min-width) {
+      @include grid__unit--cols(6);
+      height: 220px;
+      padding: 35px 35px 25px;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+
+      height: 380px;
+      max-height: 21.111em;
+      padding: 30px 50px;
+    }
   }
+
+  .block-hero_image {
+    height: 100%;
+    width: 100%;
+
+    @include breakpoint($bp-med-home min-width) {
+      width: initial;
+    }
+  }
+
   .block-hero_cta-primary {
-    margin-bottom: 3em;
-    text-transform: uppercase;
+    display: none;
+
+    @include breakpoint($bp-large-home min-width) {
+      display: table-header-group;
+      text-transform: uppercase;
+    }
   }
+
+  .block-hero-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
   .block-hero_title {
-    margin-bottom: 0.6em;
+    @extend %type-hero;
+    margin-bottom: 9px;
   }
+
   .block-hero_summary {
-    @extend %b2;
-    margin-bottom: 2em;
+    @extend %type-large;
+    display: none;
+    margin-bottom: 0;
+
+    @include breakpoint($bp-large-home min-width) {
+      display: block;
+    }
   }
+
   .block-hero_cta-secondary {
-    @extend %b4;
-    font-weight: 600;
+    @extend %type-small;
+    color: $blue;
+    display: table-footer-group;
+    font-weight: $font-weight-bold;
   }
 }
