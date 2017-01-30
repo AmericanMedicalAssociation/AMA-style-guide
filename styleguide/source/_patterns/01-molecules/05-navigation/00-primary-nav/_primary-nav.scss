@@ -66,9 +66,9 @@
 // List item in the primary navigation.
 .nav-primary_list-item {
   font-weight: $font-weight-bold;
-  position: relative;
 
   @include breakpoint($bp-med-home max-width) {
+    position: relative;
     border-bottom: 1px $gray-8 solid;
 
     .link-primary-nav a {
@@ -107,9 +107,27 @@
 }
 
 // The Sub nav.
+.nav-primary_list_subnav {
+  @include breakpoint($bp-med-home min-width) {
+    z-index: 1;
+    width: 100vw;
+    position: absolute;
+    top: 271px;
+    left: 0;
+    background: $black-7;
+    @include grid__unit--cols(12);
+    justify-content: flex-start;
+    display: flex;
+  }
+}
+
 .nav-primary_list_subnav li {
   display: none;
   height: 0;
+  @include breakpoint($bp-med-home max-width) {
+    //display: none;
+    //height: 0;
+  }
 }
 
 .nav-primary_list_subnav-visible li {
@@ -121,6 +139,10 @@
   background-color: $black-15;
   border-top: 1px $gray-8 solid;
   position: relative;
+
+  @include breakpoint($bp-med-home) {
+    background-color: $black-7;
+  }
 
   .link-primary-nav a {
     @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
@@ -136,7 +158,40 @@
   display: none;
 }
 
+.one {
+  @include breakpoint($bp-med-home min-width) {
+    @include grid__unit--cols(3);
+  }
+}
 
+.one .nav-primary_list_subnav_list-item .link-primary-nav a {
+  font-size: 24px;
+  line-height: 28px;
+  display: inline;
+  padding: 0;
+}
+
+.two {
+  @include breakpoint($bp-med-home min-width) {
+    @include grid__unit--cols(4.5);
+  }
+}
+
+.two .nav-primary_list_subnav_list-item .link-primary-nav a {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.nav-primary_list_subnav .nav-primary_list_subnav_list-item a:hover {
+  color: $blue;
+  text-decoration: none;
+}
+
+.one .icon-select {
+  display: inline-block;
+  fill: $blue;
+  transform: rotate(270deg);
+}
 
 // Mobile menu button to trigger drop down.
 .nav-primary_button-menu {
@@ -172,18 +227,27 @@
     font-size: 18px;
     font-weight: $font-weight-bold;
     padding-bottom: 50px;
+  }
 
+  @include breakpoint($bp-large-home min-width) {
+    padding: 50px 0;
+  }
+}
+
+.nav-primary_list-item_title .link-primary-nav a {
+  @include breakpoint($bp-med-home min-width) {
     &:hover {
       border-bottom: 20px $purple solid;
       padding-bottom: 30px;
     }
   }
-
   @include breakpoint($bp-large-home min-width) {
-    padding: 50px 0;
-
     &:hover {
       padding-bottom: 32px;
     }
   }
+}
+
+.one .link-primary-nav {
+  padding: 15px 30px;
 }

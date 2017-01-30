@@ -7,9 +7,11 @@
 // Primary header section.
 .header-primary {
   background: $white;
-  position: relative;
   width: 100%;
   z-index: 50;
+  @include breakpoint($bp-med-home max-width) {
+    position: relative;
+  }
 
   @include breakpoint($bp-med-home min-width) {
     border-bottom: 1px $black-20 solid;
@@ -20,7 +22,9 @@
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px 20px 10px;
-    position: relative;
+    @include breakpoint($bp-med-home max-width) {
+      position: relative;
+    }
 
     @include breakpoint($bp-med-home min-width) {
       padding: 20px 30px 0;
