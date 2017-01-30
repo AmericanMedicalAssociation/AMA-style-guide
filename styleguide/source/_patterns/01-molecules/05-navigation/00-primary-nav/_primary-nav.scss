@@ -6,6 +6,12 @@
 
 .nav-primary-menu {
   float: left;
+  @include breakpoint($bp-med-home) {
+    float: none;
+    width: 700px;
+    clear: both;
+    margin: 0 auto;
+  }
 }
 
 // Mobile overlay
@@ -48,7 +54,8 @@
   left: -100%;
 
   @include breakpoint($bp-med-home min-width) {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
