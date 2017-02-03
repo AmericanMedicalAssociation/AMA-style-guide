@@ -25,6 +25,10 @@
   top: 0;
   width: 0;
   z-index: 10;
+  @include breakpoint($bp-med-home min-width) {
+    z-index: 1;
+    top: 271px;
+  }
 }
 
 .nav-primary-menu_overlay-mobile-on {
@@ -91,8 +95,6 @@
   }
 
   .icon-select {
-    display: none;
-
     @include breakpoint($bp-med-home max-width) {
       position: absolute;
       right: 25px;
@@ -102,6 +104,10 @@
         @include rotate(-90);
         fill: $blue;
       }
+    }
+
+    @include breakpoint($bp-med-home min-width) {
+      display: none;
     }
   }
 }
@@ -155,7 +161,9 @@
 }
 
 .nav-primary_list_subnav_list-item:first-child {
-  border: 0;
+  @include breakpoint($bp-med-home min-width) {
+    border: 0;
+  }
 }
 
 .nav-primary_list-item_title-active .icon {
@@ -169,10 +177,12 @@
 }
 
 .nav-primary_list_subnav_primary .nav-primary_list_subnav_list-item .link-primary-nav a {
-  font-size: 24px;
-  line-height: 28px;
-  display: inline;
-  padding: 0;
+  @include breakpoint($bp-med-home min-width) {
+    font-size: 24px;
+    line-height: 28px;
+    display: inline;
+    padding: 0;
+  }
 }
 
 .nav-primary_list_subnav_secondary,
@@ -184,8 +194,10 @@
 
 .nav-primary_list_subnav_secondary .nav-primary_list_subnav_list-item .link-primary-nav a,
 .nav-primary_list_subnav_tertiary .nav-primary_list_subnav_list-item .link-primary-nav a {
-  font-size: 18px;
-  line-height: 25px;
+  @include breakpoint($bp-med-home min-width) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
 .nav-primary_list_subnav .nav-primary_list_subnav_list-item a:hover {
@@ -196,7 +208,9 @@
 .nav-primary_list_subnav_primary .icon-select {
   display: inline-block;
   fill: $blue;
-  transform: rotate(270deg);
+  @include breakpoint($bp-med-home min-width) {
+    transform: rotate(270deg);
+  }
 }
 
 // Mobile menu button to trigger drop down.
@@ -255,5 +269,7 @@
 }
 
 .nav-primary_list_subnav_primary .link-primary-nav {
-  padding: 15px 30px;
+  @include breakpoint($bp-med-home min-width) {
+    padding: 15px 30px;
+  }
 }
