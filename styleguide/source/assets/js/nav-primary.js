@@ -26,6 +26,7 @@ $(document).ready(function() {
 
     // Primary nav list item click to open sub-navigation.
     $('.nav-primary_list-item_title a').click(function () {
+      $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
       $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
       var parent = $(this).parents('.nav-primary_list > .nav-primary_list-item');
 

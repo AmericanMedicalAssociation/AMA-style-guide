@@ -50,21 +50,24 @@
   @include breakpoint($bp-med-home min-width) {
     background-color: $white;
     top: 0;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 // Mobile menu interaction
 .nav-primary_list-closed {
   left: -100%;
-
-  @include breakpoint($bp-med-home min-width) {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .nav-primary_list-open {
   left: 0;
+}
+
+.nav-primary_list-open .nav-primary_list-item_title a {
+  @include breakpoint($bp-med-home min-width) {
+    color: $gray-8;
+  }
 }
 
 // List item in the primary navigation.
