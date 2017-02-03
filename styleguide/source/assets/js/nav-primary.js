@@ -26,7 +26,7 @@ $(document).ready(function() {
 
     // Primary nav list item click to open sub-navigation.
     $('.nav-primary_list-item_title a').click(function () {
-      var parent = $(this).parents('.nav-primary_list-open > .nav-primary_list-item');
+      var parent = $(this).parents('.nav-primary_list > .nav-primary_list-item');
 
       // Show the sub-navigation of the item that is clicked.
       if(parent.hasClass('nav-primary_list-item-active')) {
