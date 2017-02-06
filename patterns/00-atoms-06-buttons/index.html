@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="pl">
+<html class="pl flexbox">
   <head>
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css?1482167174" media="all" />
-    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1482167174" media="all" />
+    <link rel="stylesheet" href="../../assets/css/style.css?1486403947" media="all" />
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1486403947" media="all" />
 
         <script src="../../assets/js/jquery-2.0.0b2.js" defer></script>
 
@@ -27,8 +27,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1482167174" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1482167174" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1486403947" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1486403947" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -47,11 +47,11 @@
   <div class="sg-pattern-body">
     
   </div>
-</div>                        <div id="atoms-buttons" class="sg-pattern">
+</div>                        <div id="atoms-button-search" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
-      <a href="../../patterns/00-atoms-06-buttons-00-buttons/00-atoms-06-buttons-00-buttons.html" class="patternLink" data-patternpartial="atoms-buttons" title="Link to Pattern">
-        buttons
+      <a href="../../patterns/00-atoms-06-buttons-01-button-search-button-search/00-atoms-06-buttons-01-button-search-button-search.html" class="patternLink" data-patternpartial="atoms-button-search" title="Link to Pattern">
+        Search button
         
               </a>
     </h3>
@@ -60,22 +60,19 @@
       
     </div>
     
-    <a href="#" data-patternpartial="atoms-buttons" title="View Pattern Info" id="sg-pattern-extra-toggle-atoms-buttons" class="sg-pattern-extra-toggle">
+    <a href="#" data-patternpartial="atoms-button-search" title="View Pattern Info" id="sg-pattern-extra-toggle-atoms-button-search" class="sg-pattern-extra-toggle">
       <span>&#9660;</span>
     </a>
   </div>
   
-  <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-buttons"></div>
+  <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-button-search"></div>
     
   <div class="sg-pattern-example">
-    <p><a href="#" class="btn">Button</a></p>
-<p><a href="#" class="btn alt">Alternate Button</a></p>
-<p><a href="#" class="btn disabled">Disabled Button</a></p>
-<p><a href="#" class="text-btn">Text Button</a></p>
+    <a  href="#" class="button-search"><div class="button-search_title">Search</div><span class="icon icon-search" data-grunticon-embed></span></a>
   </div>
   
-  <script type="text/json" id="sg-pattern-data-atoms-buttons" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"buttons"},"patternDesc":"","patternExtension":"twig","patternName":"buttons","patternPartial":"atoms-buttons","patternState":""}
+  <script type="text/json" id="sg-pattern-data-atoms-button-search" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[{"lineagePattern":"organisms-header-primary","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header-primary-header-primary\/02-organisms-00-global-00-header-primary-header-primary.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"buttons"},"patternDesc":"<p>The search button allows a user to open the seach modal in order to search.<\/p>","patternExtension":"twig","patternName":"Search button","patternPartial":"atoms-button-search","patternState":""}
   </script>
 </div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
 </div><!--end .sg-main-->  
@@ -115,10 +112,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1482167174">
+<script id="pl-js-polyfill-insert-1486403947">
   (function() {
     if (self != top) {
-      var cb = '1482167174';
+      var cb = '1486403947';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -128,10 +125,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1482167174">
+<script id="pl-js-insert-1486403947">
   (function() {
     if (self != top) {
-      var cb = '1482167174';
+      var cb = '1486403947';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
@@ -139,7 +136,10 @@
 </script>
   
       <script src="../../assets/js/init.js" async></script>
+  <script src="../../assets/js/nav.js" async></script>
   <script src="../../assets/js/search.js" async></script>
+  <script src="../../assets/js/tabs-audience-selector.js" async></script>
+  <script src="../../assets/js/nav-primary.js" async></script>
   </body>
 
 </html>

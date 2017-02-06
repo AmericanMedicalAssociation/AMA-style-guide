@@ -2,8 +2,8 @@
 .icon-alert {
 	background-image: url('png/alert.png');
 	background-repeat: no-repeat;
-  width: 35px;
-  height: 31px;
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -29,8 +29,8 @@
 .icon-close {
 	background-image: url('png/close.png');
 	background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -80,8 +80,8 @@
 
 
 
-.icon-google+ {
-	background-image: url('png/google+.png');
+.icon-googleplus {
+	background-image: url('png/googleplus.png');
 	background-repeat: no-repeat;
   width: 300px;
   height: 200px;
@@ -110,8 +110,8 @@
 .icon-information {
 	background-image: url('png/information.png');
 	background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -155,8 +155,8 @@
 .icon-opendropdownsmall {
 	background-image: url('png/opendropdownsmall.png');
 	background-repeat: no-repeat;
-  width: 8px;
-  height: 5px;
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -227,8 +227,8 @@
 .icon-valid {
 	background-image: url('png/valid.png');
 	background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 300px;
+  height: 200px;
 }
 
 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="pl">
+<html class="pl flexbox">
   <head>
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css?1482167304" media="all" />
-    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1482167304" media="all" />
+    <link rel="stylesheet" href="../../assets/css/style.css?1486403947" media="all" />
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1486403947" media="all" />
 
         <script src="../../assets/js/jquery-2.0.0b2.js" defer></script>
 
@@ -27,8 +27,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1482167304" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1482167304" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1486403947" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1486403947" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -47,7 +47,47 @@
   <div class="sg-pattern-body">
     
   </div>
-</div>                        <div id="organisms-search_modal" class="sg-pattern">
+</div>                        <div id="organisms-header-primary" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-organisms-00-global-00-header-primary-header-primary/02-organisms-00-global-00-header-primary-header-primary.html" class="patternLink" data-patternpartial="organisms-header-primary" title="Link to Pattern">
+        Primary Header
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="organisms-header-primary" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-header-primary" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-header-primary"></div>
+    
+  <div class="sg-pattern-example">
+    
+<header class="header-primary" role="banner">
+  <a href="0"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>
+  
+<nav id="nav-primary" class="nav-primary">
+  <div class="nav-primary_button-menu">Menu</div>
+  <ul class="nav-primary_list">
+    <li class="nav-primary_list-item"><div class="link-primary-nav"><a class="" href="#">Education</a></div></li>
+    <li class="nav-primary_list-item"><div class="link-primary-nav"><a class="" href="#">Life &amp; Career</a></div></li>
+    <li class="nav-primary_list-item"><div class="link-primary-nav"><a class="" href="#">Practice Management</a></div></li>
+    <li class="nav-primary_list-item"><div class="link-primary-nav"><a class="" href="#">Delivering Care</a></div></li>
+    <li class="nav-primary_list-item"><div class="link-primary-nav"><a class="" href="#">About Us</a></div></li>
+  </ul>
+</nav>  <a  href="#" class="button-search"><div class="button-search_title">Search</div><span class="icon icon-search" data-grunticon-embed></span></a></header>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-organisms-header-primary" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"atoms-logo","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header-primary-header-primary\/02-organisms-00-global-00-header-primary-header-primary.html"},{"lineagePattern":"molecules-primary-nav","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header-primary-header-primary\/02-organisms-00-global-00-header-primary-header-primary.html"},{"lineagePattern":"atoms-button-search","lineagePath":"..\/..\/patterns\/02-organisms-00-global-00-header-primary-header-primary\/02-organisms-00-global-00-header-primary-header-primary.html"}],"lineageR":[{"lineagePattern":"templates-home","lineagePath":"..\/..\/patterns\/03-templates-01-home-01-home\/03-templates-01-home-01-home.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"<p>The Primary Header is present on every page, and contains the main logo, primary navigation and search button.<\/p>","patternExtension":"twig","patternName":"Primary Header","patternPartial":"organisms-header-primary","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="organisms-search_modal" class="sg-pattern">
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
       <a href="../../patterns/02-organisms-00-global-02-search_modal-search_modal/02-organisms-00-global-02-search_modal-search_modal.html" class="patternLink" data-patternpartial="organisms-search_modal" title="Link to Pattern">
@@ -69,32 +109,32 @@
     
   <div class="sg-pattern-example">
     <section class="search_modal">
-  <div class="layout-container">
-    <span class="search_modal_close">
-      <span class="icon icon-close"></span>      Close
-    </span>
-        <div class="layout-1up">
-      <form action="#" method="post" class="search-field">   
+  <span class="search_modal_close">
+    <span class="icon icon-close" data-grunticon-embed></span>    Close
+  </span>
+  <div class="layout layout_one_up">
+    <form action="#" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
 	<input type="search" placeholder="Search AMA" id="search-field" class="search-field_input" />
     <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
-</form>    </div>
+</form>  </div>
 
-        <div class="layout-75-25--1">
+  <div class="layout layout_two_up-heavy-left">
+    <div class="layout_two_up-heavy-left-primary">
       <h3 class="list_title-small">Best Match</h3><ul>
   <li>
     <h4 class="list-item_title-small"><a class="link-black" href="#">FREIDA ONLINE, the AMA residency and fellowship database.</a></h4>    <p class="b1">Search the nearly 10,000 accredited graduate medical education training programs. Learn about programs and institutions nationwide to simplify the selection process.</p>  </li>
 </ul>      <h3 class="list_title-small">Popular Searches</h3>
 <ul class="list_links">
   <li class="list_links_item">
-    <a class="link-black" href="#">Lorem ipsum dolor</a>  </li>
+    <a href="#" class="link link-black">Lorem ipsum dolor</a>  </li>
   <li class="list_links_item">
-    <a class="link-black" href="#">Donec non lectus leo</a>  </li>
+    <a href="#" class="link link-black">Donec non lectus leo</a>  </li>
   <li class="list_links_item">
-    <a class="link-black" href="#">Lorem ipsum dolor</a>  </li>
+    <a href="#" class="link link-black">Lorem ipsum dolor</a>  </li>
   <li class="list_links_item">
-    <a class="link-black" href="#"> Donec non lectus leo</a>  </li>
+    <a href="#" class="link link-black"> Donec non lectus leo</a>  </li>
 </ul>    </div>
   </div>
 </section>
@@ -102,6 +142,180 @@
   
   <script type="text/json" id="sg-pattern-data-organisms-search_modal" class="sg-pattern-data">
     {"lineage":[{"lineagePattern":"atoms-close","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"},{"lineagePattern":"molecules-search-field","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"},{"lineagePattern":"molecules-list-best-match","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"},{"lineagePattern":"molecules-list-popular-search","lineagePath":"..\/..\/patterns\/02-organisms-00-global-02-search_modal-search_modal\/02-organisms-00-global-02-search_modal-search_modal.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"search_modal","patternPartial":"organisms-search_modal","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="organisms-footer" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-organisms-00-global-03-footer-footer/02-organisms-00-global-03-footer-footer.html" class="patternLink" data-patternpartial="organisms-footer" title="Link to Pattern">
+        Footer
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="organisms-footer" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-footer" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-footer"></div>
+    
+  <div class="sg-pattern-example">
+    
+<section class="footer">
+  <div class="layout layout_one_up footer-inner">
+    <div class="footer-primary">
+      
+<h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>      <div class="footer-primary-bottom">
+        
+    
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        
+<ul class="list_links-utility">
+  <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
+  <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
+  <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
+  <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
+</ul>
+      </div>
+    </div>
+    <div class="footer-secondary">
+       
+<ul class="list_links-social">
+  <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
+
+  <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
+
+  <li class="list_link_item-social"><a class="icon-googleplus" href="https://plus.google.com/+americanmedicalassociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Google Plus</span></a></li>
+
+  <li class="list_link_item-social"><a class="icon-linkedin" href="https://www.linkedin.com/company/american-medical-association" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">LinkedIn</span></a></li>
+
+  <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
+</ul>
+       <div class="rule_horizontal"></div>       
+<div class="layout layout_two_up list-secondary-user">
+  <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">AMA Careers</a></li>
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">Contact Us</a></li>
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">Events</a></li>
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">Press Center</a></li>
+  </ul>
+  <ul class="list_links-secondary-user list_links-secondary-user-secondary layout_two_up-secondary">
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">AMA Alliance</a></li>
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">AMPAC</a></li>
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">AMA Foundation</a></li>
+    <li class="list_link_item-secondary-user"><a href="#" class="link link-black">AMA Insurance</a></li>
+  </ul>
+</div>    </div>
+  </div>
+</section>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-organisms-footer" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"atoms-mission-statement","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-footer-footer\/02-organisms-00-global-03-footer-footer.html"},{"lineagePattern":"atoms-copyright","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-footer-footer\/02-organisms-00-global-03-footer-footer.html"},{"lineagePattern":"molecules-list-links-utility","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-footer-footer\/02-organisms-00-global-03-footer-footer.html"},{"lineagePattern":"molecules-list-links-social","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-footer-footer\/02-organisms-00-global-03-footer-footer.html"},{"lineagePattern":"atoms-rule-horizontal","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-footer-footer\/02-organisms-00-global-03-footer-footer.html"},{"lineagePattern":"molecules-list-links-secondary-user","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-footer-footer\/02-organisms-00-global-03-footer-footer.html"}],"lineageR":[{"lineagePattern":"templates-home","lineagePath":"..\/..\/patterns\/03-templates-01-home-01-home\/03-templates-01-home-01-home.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"<p>The footer is present on every page, and contains the mission statement, copyright statement, utility links, social links, and secondary user links.<\/p>","patternExtension":"twig","patternName":"Footer","patternPartial":"organisms-footer","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="organisms-ribbon-auth" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-organisms-00-global-03-ribbon-ribbon-auth/02-organisms-00-global-03-ribbon-ribbon-auth.html" class="patternLink" data-patternpartial="organisms-ribbon-auth" title="Link to Pattern">
+        ribbon auth
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="organisms-ribbon-auth" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-ribbon-auth" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-ribbon-auth"></div>
+    
+  <div class="sg-pattern-example">
+    <section class="ribbon">
+  <div class="layout layout_one_up">
+      <nav class="ribbon_dropdown">
+  <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
+  <ul class="ribbon_dropdown_nav">
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">AMA Wire</a></li>
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">AMA Store</a></li>
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">The JAMA Network</a></li>
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">Journal of Ethics</a></li>
+  </ul>
+</nav>      <nav class="ribbon_user-menu ribbon_user-menu-auth">
+
+  <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
+
+  <ul class="ribbon_user-menu_nav ribbon_user-menu_nav-auth">
+  	<li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white">Become a Member</a></li>
+  	<li class="ribbon_user-menu_nav_item auth-user"><span class="ribbon_user-menu_trigger-auth" tabindex="0" href="#">Jonathan <span><span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span></span>
+    	
+      <ul class="ribbon_user-menu_nav-child">
+  	    <li class="ribbon_user-menu_nav-child_item"><a href="#" class="link link-white">Profile</a></li>
+  	    <li class="ribbon_user-menu_nav-child_item"><a href="#" class="link link-white">Newsletter Preference</a></li>
+  	    <li class="ribbon_user-menu_nav-child_item"><a href="#" class="link link-white">AMA Physician Verification Service</a></li>
+  	    <li class="ribbon_user-menu_nav-child_item sign-out"><a href="#" class="link link-white">Sign Out</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>  </div>
+</section>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-organisms-ribbon-auth" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"molecules-ribbon-dropdown","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-ribbon-ribbon-auth\/02-organisms-00-global-03-ribbon-ribbon-auth.html"},{"lineagePattern":"molecules-ribbon-user-menu-auth","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-ribbon-ribbon-auth\/02-organisms-00-global-03-ribbon-ribbon-auth.html"}],"lineageR":[],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"","patternExtension":"twig","patternName":"ribbon auth","patternPartial":"organisms-ribbon-auth","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="organisms-ribbon" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/02-organisms-00-global-03-ribbon-ribbon/02-organisms-00-global-03-ribbon-ribbon.html" class="patternLink" data-patternpartial="organisms-ribbon" title="Link to Pattern">
+        Ribbon
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="organisms-ribbon" title="View Pattern Info" id="sg-pattern-extra-toggle-organisms-ribbon" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-organisms-ribbon"></div>
+    
+  <div class="sg-pattern-example">
+    <section class="ribbon">
+  <div class="layout layout_one_up">
+      <nav class="ribbon_dropdown">
+  <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
+  <ul class="ribbon_dropdown_nav">
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">AMA Wire</a></li>
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">AMA Store</a></li>
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">The JAMA Network</a></li>
+    <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white">Journal of Ethics</a></li>
+  </ul>
+</nav>      <nav class="ribbon_user-menu">
+  <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
+  <ul class="ribbon_user-menu_nav">
+    <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white">Become a Member</a></li>
+    <li class="ribbon_user-menu_nav_item divider_item"><div class="divider"></div></li>
+    <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white">Sign In</a></li>
+    <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white">Create Account</a></li>
+  </ul>
+</nav>  </div>
+</section>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-organisms-ribbon" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"molecules-ribbon-dropdown","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-ribbon-ribbon\/02-organisms-00-global-03-ribbon-ribbon.html"},{"lineagePattern":"molecules-ribbon-user-menu","lineagePath":"..\/..\/patterns\/02-organisms-00-global-03-ribbon-ribbon\/02-organisms-00-global-03-ribbon-ribbon.html"}],"lineageR":[{"lineagePattern":"templates-home","lineagePath":"..\/..\/patterns\/03-templates-01-home-01-home\/03-templates-01-home-01-home.html"}],"patternBreadcrumb":{"patternType":"organisms","patternSubtype":"global"},"patternDesc":"<p>The ecosystem ribbon is a nav dom element with class .ribbon that exists at the top of the body on all AMA corporate and wire AMA pages. This element is not sticky.<\/p>","patternExtension":"twig","patternName":"Ribbon","patternPartial":"organisms-ribbon","patternState":""}
   </script>
 </div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
 </div><!--end .sg-main-->  
@@ -141,10 +355,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1482167304">
+<script id="pl-js-polyfill-insert-1486403947">
   (function() {
     if (self != top) {
-      var cb = '1482167304';
+      var cb = '1486403947';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -154,10 +368,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1482167304">
+<script id="pl-js-insert-1486403947">
   (function() {
     if (self != top) {
-      var cb = '1482167304';
+      var cb = '1486403947';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
@@ -165,7 +379,10 @@
 </script>
   
       <script src="../../assets/js/init.js" async></script>
+  <script src="../../assets/js/nav.js" async></script>
   <script src="../../assets/js/search.js" async></script>
+  <script src="../../assets/js/tabs-audience-selector.js" async></script>
+  <script src="../../assets/js/nav-primary.js" async></script>
   </body>
 
 </html>

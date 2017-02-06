@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html class="pl">
+<html class="pl flexbox">
   <head>
     <title>Pattern Lab</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css?1482167304" media="all" />
-    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1482167304" media="all" />
+    <link rel="stylesheet" href="../../assets/css/style.css?1486403947" media="all" />
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1486403947" media="all" />
 
         <script src="../../assets/js/jquery-2.0.0b2.js" defer></script>
 
@@ -27,8 +27,8 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1482167304" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1482167304" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1486403947" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1486403947" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
@@ -51,7 +51,7 @@
   <div class="sg-pattern-head">
     <h3 class="sg-pattern-title">
       <a href="../../patterns/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row.html" class="patternLink" data-patternpartial="molecules-news-item-standard-row" title="Link to Pattern">
-        news item standard row
+        News Item Standard Row
         
               </a>
     </h3>
@@ -68,16 +68,18 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-news-item-standard-row"></div>
     
   <div class="sg-pattern-example">
-    <a href="#" class="news news-item_standard">
-  <div class="news-item_standard-text">
-    <h3 class="">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>    <p class="">190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p>  </div>
-  <div class="news-item_standard-image">
+    
+<a href="#" class="layout layout_two_up-heavy-left news_item-standard_row">
+  <div class="layout_two_up-heavy-left-primary news_item-standard_row_text">
+    
+<h2 class="news_item-standard_row_title">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>    <p class="news_item-standard_row_description">190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p>  </div>
+  <div class="layout_two_up-heavy-left-secondary news_item-standard_row_image">
     <img src="../../assets/images/fpo_3x2.png" alt="This is an image.">  </div>
 </a>
   </div>
   
   <script type="text/json" id="sg-pattern-data-molecules-news-item-standard-row" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"news item standard row","patternPartial":"molecules-news-item-standard-row","patternState":""}
+    {"lineage":[{"lineagePattern":"atoms-h2","lineagePath":"..\/..\/patterns\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row.html"},{"lineagePattern":"atoms-paragraph","lineagePath":"..\/..\/patterns\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row.html"},{"lineagePattern":"atoms-landscape-3x2","lineagePath":"..\/..\/patterns\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row.html"}],"lineageR":[{"lineagePattern":"organisms-news-standard-list","lineagePath":"..\/..\/patterns\/02-organisms-03-sections-04-news-standard-list-news-standard-list\/02-organisms-03-sections-04-news-standard-list-news-standard-list.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>A standard news item row that includes a title, description, and image.<\/p>","patternExtension":"twig","patternName":"News Item Standard Row","patternPartial":"molecules-news-item-standard-row","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="molecules-news-item-featured-row" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -100,13 +102,19 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-news-item-featured-row"></div>
     
   <div class="sg-pattern-example">
-    <a href="#" class="news news_item-featured">
-  <h2 class="news_item-featured_title">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>
-  <p class="byline">Last Name, Author First Name M.</p>  <p class="">235 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p></a>
+    
+<div class="news_item-featured_row">
+  <a href="#">
+    
+<h2 class="news_item-featured_row_title">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>    
+<p class="byline news_item-featured_row_byline">Last Name, Author First Name M.</p>
+    <p class="news_item-featured_row_description">235 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p>  </a>
+</div>
+
   </div>
   
   <script type="text/json" id="sg-pattern-data-molecules-news-item-featured-row" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>A featured news item row that includes a title, a byline, and a paragraph.<\/p>","patternExtension":"twig","patternName":"News Item Featured Row","patternPartial":"molecules-news-item-featured-row","patternState":""}
+    {"lineage":[{"lineagePattern":"atoms-h2","lineagePath":"..\/..\/patterns\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row.html"},{"lineagePattern":"atoms-byline","lineagePath":"..\/..\/patterns\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row.html"},{"lineagePattern":"atoms-paragraph","lineagePath":"..\/..\/patterns\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row.html"}],"lineageR":[{"lineagePattern":"organisms-news-featured-list","lineagePath":"..\/..\/patterns\/02-organisms-03-sections-05-news-featured-list-news-featured-list\/02-organisms-03-sections-05-news-featured-list-news-featured-list.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>A featured news item row that includes a title, a byline, and a description.<\/p>","patternExtension":"twig","patternName":"News Item Featured Row","patternPartial":"molecules-news-item-featured-row","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="molecules-news-label-featured" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -129,15 +137,16 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-news-label-featured"></div>
     
   <div class="sg-pattern-example">
-    <div class="news news_label-featured">
+    
+<div class="news_label news_label-featured">
   <div class="news_label-inner">
-    <div class="eyebrow"></div>    <h5><a href="#" target="_blank" class="news_label_link">Latest <br />Insights from <br />JAMA<span class="icon icon-external" data-grunticon-embed></span></a></h5>
+    <div class="eyebrow"></div>    <a href="#" target="_blank" class="news_label_link">Latest <br />Insights from <br />JAMA<span class="icon icon-external" data-grunticon-embed></span></a>
   </div>
 </div>
   </div>
   
   <script type="text/json" id="sg-pattern-data-molecules-news-label-featured" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"news label featured","patternPartial":"molecules-news-label-featured","patternState":""}
+    {"lineage":[{"lineagePattern":"atoms-eyebrow","lineagePath":"..\/..\/patterns\/01-molecules-06-components-05-news-label-news-label-featured\/01-molecules-06-components-05-news-label-news-label-featured.html"},{"lineagePattern":"atoms-arrow-external","lineagePath":"..\/..\/patterns\/01-molecules-06-components-05-news-label-news-label-featured\/01-molecules-06-components-05-news-label-news-label-featured.html"}],"lineageR":[{"lineagePattern":"organisms-news-featured-list","lineagePath":"..\/..\/patterns\/02-organisms-03-sections-05-news-featured-list-news-featured-list\/02-organisms-03-sections-05-news-featured-list-news-featured-list.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"news label featured","patternPartial":"molecules-news-label-featured","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="molecules-news-label" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -160,15 +169,248 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-news-label"></div>
     
   <div class="sg-pattern-example">
-    <div class="news news_label">
+    
+<div class="news_label">
   <div class="news_label-inner">
-    <div class="eyebrow"></div>    <h5><a href="#" target="_blank" class="news_label_link">Latest <br />News from <br />AMA Wire<span class="icon icon-external" data-grunticon-embed></span></a></h5>
+    <div class="eyebrow"></div>    <a href="#" target="_blank" class="news_label_link">Latest <br />News from <br />AMA Wire<span class="icon icon-external" data-grunticon-embed></span></a>
   </div>
 </div>
+
   </div>
   
   <script type="text/json" id="sg-pattern-data-molecules-news-label" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>The News Label includes a purple border, an external link, and a gray border.<\/p>","patternExtension":"twig","patternName":"News Label","patternPartial":"molecules-news-label","patternState":""}
+    {"lineage":[{"lineagePattern":"atoms-eyebrow","lineagePath":"..\/..\/patterns\/01-molecules-06-components-05-news-label-news-label\/01-molecules-06-components-05-news-label-news-label.html"},{"lineagePattern":"atoms-arrow-external","lineagePath":"..\/..\/patterns\/01-molecules-06-components-05-news-label-news-label\/01-molecules-06-components-05-news-label-news-label.html"}],"lineageR":[{"lineagePattern":"organisms-news-standard-list","lineagePath":"..\/..\/patterns\/02-organisms-03-sections-04-news-standard-list-news-standard-list\/02-organisms-03-sections-04-news-standard-list-news-standard-list.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>The News Label includes a purple border, an external link, and a gray border.<\/p>","patternExtension":"twig","patternName":"News Label","patternPartial":"molecules-news-label","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-page-level-search" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-05-page-level-search-page-level-search/01-molecules-06-components-05-page-level-search-page-level-search.html" class="patternLink" data-patternpartial="molecules-page-level-search" title="Link to Pattern">
+        Page Level Search
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-page-level-search" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-page-level-search" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-page-level-search"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="page-level-search layout layout_one_up">
+    <a href="#" class="link page-level-search_link">Search the AMA</a>    <span class="icon icon-search page-level-search_icon"></span>
+</div>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-page-level-search" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[{"lineagePattern":"templates-home","lineagePath":"..\/..\/patterns\/03-templates-01-home-01-home\/03-templates-01-home-01-home.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>The Page Level Search prompts the user to search the site. It is an <code>&lt;a&gt;<\/code> element styled to look like a button.<\/p>","patternExtension":"twig","patternName":"Page Level Search","patternPartial":"molecules-page-level-search","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-alert-error" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-06-alert-alert-error/01-molecules-06-components-06-alert-alert-error.html" class="patternLink" data-patternpartial="molecules-alert-error" title="Link to Pattern">
+        alert error
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-alert-error" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-alert-error" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-alert-error"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="alert alert-error">
+	<div class="layout layout_one_up">
+		<div class="alert_container">
+			<span class="icon icon-alert" data-grunticon-embed></span>			<p class="alert_message">Error Lorem ipsum dolor set amet. Please try again. </p>
+			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
+		</div>
+	</div>
+</div>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-alert-error" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"alert error","patternPartial":"molecules-alert-error","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-alert-info" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-06-alert-alert-info/01-molecules-06-components-06-alert-alert-info.html" class="patternLink" data-patternpartial="molecules-alert-info" title="Link to Pattern">
+        alert info
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-alert-info" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-alert-info" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-alert-info"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="alert alert-information">
+	<div class="layout layout_one_up">
+		<div class="alert_container">
+			<span class="icon icon-information" data-grunticon-embed></span>			<p class="alert_message">info Lorem ipsum dolor set amet.</p>
+			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
+		</div>
+	</div>
+</div>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-alert-info" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"alert info","patternPartial":"molecules-alert-info","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-alert-success" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-06-alert-alert-success/01-molecules-06-components-06-alert-alert-success.html" class="patternLink" data-patternpartial="molecules-alert-success" title="Link to Pattern">
+        alert success
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-alert-success" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-alert-success" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-alert-success"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="alert alert-success">
+	<div class="layout layout_one_up">
+		<div class="alert_container">
+			<span class="icon icon-valid" data-grunticon-embed></span>			<p class="alert_message">Success Lorem ipsum dolor set amet. Please try again.</p>
+			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
+		</div>
+	</div>
+</div>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-alert-success" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"alert success","patternPartial":"molecules-alert-success","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-alert-warning" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-06-alert-alert-warning/01-molecules-06-components-06-alert-alert-warning.html" class="patternLink" data-patternpartial="molecules-alert-warning" title="Link to Pattern">
+        alert warning
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-alert-warning" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-alert-warning" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-alert-warning"></div>
+    
+  <div class="sg-pattern-example">
+    <div class="alert alert-error">
+	<div class="layout layout_one_up">
+		<div class="alert_container">
+			<span class="icon icon-alert" data-grunticon-embed></span>			<p class="alert_message">Warning Lorem ipsum dolor set amet. Please try again.</p>
+			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
+		</div>
+	</div>
+</div>
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-alert-warning" class="sg-pattern-data">
+    {"lineage":[],"lineageR":[],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"","patternExtension":"twig","patternName":"alert warning","patternPartial":"molecules-alert-warning","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-featured-content-hero-row" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-07-featured-content-hero-row-featured-content-hero-row/01-molecules-06-components-07-featured-content-hero-row-featured-content-hero-row.html" class="patternLink" data-patternpartial="molecules-featured-content-hero-row" title="Link to Pattern">
+        Featured Content Hero row
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-featured-content-hero-row" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-featured-content-hero-row" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-featured-content-hero-row"></div>
+    
+  <div class="sg-pattern-example">
+    
+<a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
+  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    
+<p class="">Read about AMAs Vision on Health Reform</p>  </div>
+  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+    <img src="../../assets/images/fpo_3x2.png" alt="This is an image.">  </div>
+</a>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-featured-content-hero-row" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"atoms-summary","lineagePath":"..\/..\/patterns\/01-molecules-06-components-07-featured-content-hero-row-featured-content-hero-row\/01-molecules-06-components-07-featured-content-hero-row-featured-content-hero-row.html"},{"lineagePattern":"atoms-landscape-3x2","lineagePath":"..\/..\/patterns\/01-molecules-06-components-07-featured-content-hero-row-featured-content-hero-row\/01-molecules-06-components-07-featured-content-hero-row-featured-content-hero-row.html"}],"lineageR":[{"lineagePattern":"molecules-list-featured-content-hero","lineagePath":"..\/..\/patterns\/01-molecules-08-lists-06-list-featured-content-hero-list-featured-content-hero\/01-molecules-08-lists-06-list-featured-content-hero-list-featured-content-hero.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>The Featured Content Hero row consists of a vertical rule on the left, a title\nand an image on the right.<\/p>","patternExtension":"twig","patternName":"Featured Content Hero row","patternPartial":"molecules-featured-content-hero-row","patternState":""}
+  </script>
+</div><!--end .sg-pattern-->                        <div id="molecules-link-more-less" class="sg-pattern">
+  <div class="sg-pattern-head">
+    <h3 class="sg-pattern-title">
+      <a href="../../patterns/01-molecules-06-components-08-link-more-less-link-more-less/01-molecules-06-components-08-link-more-less-link-more-less.html" class="patternLink" data-patternpartial="molecules-link-more-less" title="Link to Pattern">
+        Load More / Show Less Link
+        
+              </a>
+    </h3>
+    
+    <div class="sg-pattern-breadcrumb">
+      
+    </div>
+    
+    <a href="#" data-patternpartial="molecules-link-more-less" title="View Pattern Info" id="sg-pattern-extra-toggle-molecules-link-more-less" class="sg-pattern-extra-toggle">
+      <span>&#9660;</span>
+    </a>
+  </div>
+  
+  <div class="sg-pattern-extra" id="sg-pattern-extra-molecules-link-more-less"></div>
+    
+  <div class="sg-pattern-example">
+    
+<div class="link_load_more_less">
+  <a href="#" class="link link-black">Load more</a>  
+<span class="icon icon-viewmore"></span></div>
+
+  </div>
+  
+  <script type="text/json" id="sg-pattern-data-molecules-link-more-less" class="sg-pattern-data">
+    {"lineage":[{"lineagePattern":"atoms-link-black","lineagePath":"..\/..\/patterns\/01-molecules-06-components-08-link-more-less-link-more-less\/01-molecules-06-components-08-link-more-less-link-more-less.html"},{"lineagePattern":"atoms-viewmore","lineagePath":"..\/..\/patterns\/01-molecules-06-components-08-link-more-less-link-more-less\/01-molecules-06-components-08-link-more-less-link-more-less.html"}],"lineageR":[{"lineagePattern":"organisms-audience-featured-hero","lineagePath":"..\/..\/patterns\/02-organisms-03-sections-06-audience-featured-hero-audience-featured-hero\/02-organisms-03-sections-06-audience-featured-hero-audience-featured-hero.html"}],"patternBreadcrumb":{"patternType":"molecules","patternSubtype":"components"},"patternDesc":"<p>THe Load More Show Less link enables the user to show and hide content.<\/p>","patternExtension":"twig","patternName":"Load More \/ Show Less Link","patternPartial":"molecules-link-more-less","patternState":""}
   </script>
 </div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
 </div><!--end .sg-main-->  
@@ -208,10 +450,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1482167304">
+<script id="pl-js-polyfill-insert-1486403947">
   (function() {
     if (self != top) {
-      var cb = '1482167304';
+      var cb = '1486403947';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -221,10 +463,10 @@
   })();
 </script>
 
-<script id="pl-js-insert-1482167304">
+<script id="pl-js-insert-1486403947">
   (function() {
     if (self != top) {
-      var cb = '1482167304';
+      var cb = '1486403947';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
@@ -232,7 +474,10 @@
 </script>
   
       <script src="../../assets/js/init.js" async></script>
+  <script src="../../assets/js/nav.js" async></script>
   <script src="../../assets/js/search.js" async></script>
+  <script src="../../assets/js/tabs-audience-selector.js" async></script>
+  <script src="../../assets/js/nav-primary.js" async></script>
   </body>
 
 </html>

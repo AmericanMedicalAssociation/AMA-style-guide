@@ -1,9 +1,14 @@
-<a href="{{ url }}" class="news news-item_standard">
-  <div class="news-item_standard-text">
-    {% include '03-h3.twig' with { 'content': '70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.' , 'title_class_news_item_standard_title': ' class=news-item_standard-title'} %}
-    {% include '20-paragraph.twig' with { 'content': '190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.' } %}
+{#
+ # @file news-item-standard-row.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<a href="{{ url }}" class="layout layout_two_up-heavy-left news_item-standard_row">
+  <div class="layout_two_up-heavy-left-primary news_item-standard_row_text">
+    {% include 'atoms-h2' with { 'content': '70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'class': 'news_item-standard_row_title' } %}
+    {% include 'atoms-paragraph' with { 'content': '190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.', 'class': 'news_item-standard_row_description' } %}
   </div>
-  <div class="news-item_standard-image">
-    {% include '01-landscape-3x2.twig' %}
+  <div class="layout_two_up-heavy-left-secondary news_item-standard_row_image">
+    {% include 'atoms-landscape-3x2' %}
   </div>
 </a>
