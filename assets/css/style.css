@@ -292,6 +292,9 @@ body {
 .rule_horizontal {
   border-top: 1px #a1a1a4 solid; }
 
+.sg-subtype > h2 {
+  text-transform: capitalize; }
+
 /* Links */
 a {
   color: #000000;
@@ -2322,3 +2325,39 @@ h6, .h6, .list_title-small {
   .audience_featured-hero .link_load_more_less {
     margin: 20px 0;
     text-align: center; }
+
+.rule-vertical-thin {
+  border-left: 2px #46166b solid;
+  min-height: 3em; }
+
+.header-primary_ec {
+  padding: 0; }
+
+.header-primary_ec .logo {
+  display: none; }
+  @media (min-width: 740px) {
+    .header-primary_ec .logo {
+      display: block;
+      bottom: -19px;
+      position: relative; } }
+
+.header-primary_ec .rule-vertical {
+  display: none; }
+  @media (min-width: 740px) {
+    .header-primary_ec .rule-vertical {
+      display: block;
+      margin: 20px 44px 18px; } }
+
+.link-application-title {
+  font-family: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.11765;
+  padding: 20px 0;
+  color: #46166b; }
+  @media (min-width: 740px) {
+    .link-application-title {
+      padding: 40px 0;
+      font-size: 2.5rem; } }
+  .link-application-title:hover {
+    color: #46166b; }
