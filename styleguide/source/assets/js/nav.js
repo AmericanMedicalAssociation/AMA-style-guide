@@ -1,4 +1,5 @@
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Search
 
   // When a user clicks on the ribbon trigger (main)
@@ -35,5 +36,4 @@ $(document).ready(function() {
     $('.ribbon_dropdown_trigger').removeClass('is-active');
     $('.ribbon_dropdown_nav').removeClass('is-active').slideUp(300);
   });
-
-});
+})(jQuery);

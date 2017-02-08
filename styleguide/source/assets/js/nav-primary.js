@@ -4,7 +4,8 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Mobile Primary navigation functionality.
   $('.nav-primary_button-menu').click(function () {
 
@@ -12,4 +13,4 @@ $(document).ready(function() {
     $('.nav-primary').toggleClass('open');
   });
 
-});
+})(jQuery);
