@@ -39,16 +39,15 @@
   background-color: $black-20;
   box-shadow: -3px 3px 2px $black-55;
 
-  &.is-active {
-    display: block;
-  }
+  &.is-active {}
 
   .ribbon_user-menu_nav_item.divider_item {
     display: none;
   }
 
   @include breakpoint(740px) {
-    display: block;
+    display: block !important;
+    height: auto !important;
     position: static;
     top: auto;
     right: auto;
@@ -182,6 +181,11 @@
   z-index: 100;
   background-color: $black-20;
 
+  // Create a max width only for the display block
+  @include breakpoint(max-width 739px) {
+    display: block !important;
+  }
+
   @include breakpoint(740px) {
     display: none;
     width: 200px;
@@ -189,9 +193,7 @@
     background-color: $purple-darker;
     box-shadow: none;
 
-    &.is-active {
-      display: block;
-    }
+    &.is-active {}
   }
 }
 
