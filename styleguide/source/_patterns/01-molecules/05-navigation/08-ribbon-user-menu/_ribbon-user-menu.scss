@@ -37,7 +37,7 @@
   right: 0;
   z-index: 100;
   background-color: $black-20;
-  box-shadow: 3px 3px 2px $black-55;
+  box-shadow: -3px 3px 2px $black-55;
 
   &.is-active {
     display: block;
@@ -63,6 +63,11 @@
 
 .ribbon_user-menu_nav_item {
   @extend %type-smaller;
+  border-bottom: 1px solid $gray-8;
+
+  &:last-child {
+    border-bottom: 0;
+  }
 
   a:link,
   a:visited {
@@ -81,6 +86,7 @@
 
   @include breakpoint(740px) {
     float: left;
+    border-bottom: 0;
     padding: 8px;
 
     a:link,
@@ -107,7 +113,7 @@
   display: block;
   width: 200px;
   font-weight: 600;
-  padding: 8px 15px;
+  padding: 8px 40px 8px 20px;
 
   .icon {
     display: none;
@@ -171,14 +177,14 @@
 }
 
 .ribbon_user-menu_nav-child {
-  position: absolute;
-  width: 200px;
+  width: 270px;
   z-index: 100;
   background-color: $black-20;
-  box-shadow: 3px 3px 2px $black-55;
 
   @include breakpoint(740px) {
     display: none;
+    width: 200px;
+    position: absolute;
     background-color: $purple-darker;
     box-shadow: none;
 
@@ -193,9 +199,13 @@
   a:link,
   a:visited {
     display: block;
-    padding: 8px 15px;
+    padding: 8px 40px 8px 20px;
     color: $black;
     font-weight: 600;
+
+    @include breakpoint(740px) {
+      padding: 8px 15px;
+    }
   }
 
   a:active,
