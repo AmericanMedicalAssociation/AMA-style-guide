@@ -39,8 +39,6 @@
   background-color: $black-20;
   box-shadow: -3px 3px 2px $black-55;
 
-  &.is-active {}
-
   .ribbon_user-menu_nav_item.divider_item {
     display: none;
   }
@@ -192,8 +190,6 @@
     position: absolute;
     background-color: $purple-darker;
     box-shadow: none;
-
-    &.is-active {}
   }
 }
 
