@@ -22,8 +22,10 @@
 
   .icon {
     fill: $white;
-    height: 18px;
+    height: 11px;
     width: 10px;
+    line-height: 9px;
+    vertical-align: middle;
   }
 
   &:hover,
