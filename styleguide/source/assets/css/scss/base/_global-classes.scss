@@ -105,7 +105,13 @@
 
 .link,
 %link {
+  color: $blue;
+
+  &:hover,
+  &:focus {
     color: $blue;
+    text-decoration: underline;
+  }
 }
 
 .eyebrow {
