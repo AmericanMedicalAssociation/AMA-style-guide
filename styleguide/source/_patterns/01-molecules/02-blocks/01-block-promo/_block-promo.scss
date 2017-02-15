@@ -1,4 +1,8 @@
 .block-promo {
+  -moz-transform: background-color 0.28s ease;
+  -o-transform: background-color 0.28s ease;
+  -webkit-transform: background-color 0.28s ease;
+  transition: background-color 0.28s ease;
   display: block;
   margin-bottom: 2em;
   padding: 25px;
