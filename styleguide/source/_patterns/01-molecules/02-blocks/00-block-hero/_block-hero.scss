@@ -5,9 +5,9 @@
  */
 
 .block-hero {
-  -moz-transform: background-color 0.28s ease;
-  -o-transform: background-color 0.28s ease;
-  -webkit-transform: background-color 0.28s ease;
+  -moz-transition: background-color 0.28s ease;
+  -o-transition: background-color 0.28s ease;
+  -webkit-transition: background-color 0.28s ease;
   transition: background-color 0.28s ease;
   background-color: $black-7;
   color: $black;

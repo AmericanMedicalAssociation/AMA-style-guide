@@ -81,9 +81,9 @@
   }
 
   a {
-    -moz-transform: color 0.3s ease;
-    -o-transform: color 0.3s ease;
-    -webkit-transform: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
     color: $black;
     padding: 0;
@@ -122,9 +122,9 @@
     right: 11px;
 
     svg {
-      -moz-transform: fill 0.3s ease;
-      -o-transform: fill 0.3s ease;
-      -webkit-transform: fill 0.3s ease;
+      -moz-transition: fill 0.3s ease;
+      -o-transition: fill 0.3s ease;
+      -webkit-transition: fill 0.3s ease;
       transition: fill 0.3s ease;
       height: 9px;
       width: 14px;
