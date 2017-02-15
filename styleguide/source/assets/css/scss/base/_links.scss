@@ -1,5 +1,9 @@
-/* Links */ 
+/* Links */
 a {
+  -moz-transform: color 0.3s ease;
+  -o-transform: color 0.3s ease;
+  -webkit-transform: color 0.3s ease;
+  transition: color 0.3s ease;
   color: $black;
   text-decoration: none;
   outline: 0;
