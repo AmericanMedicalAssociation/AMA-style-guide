@@ -114,6 +114,30 @@
   }
 }
 
+// Global text color transition on hover
+%text-transition {
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+// Global icon color transition on hover
+%icon-transition {
+  -moz-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+// Global background color transition on hover
+%background-transition {
+  -moz-transition: background-color 0.28s ease;
+  -o-transition: background-color 0.28s ease;
+  -webkit-transition: background-color 0.28s ease;
+  transition: background-color 0.28s ease;
+}
+
 .eyebrow {
     background-color: $purple;
     height: 16px;
