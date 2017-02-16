@@ -8,6 +8,7 @@
 
 .ribbon_dropdown_trigger {
   @extend %type-smaller;
+  @extend %background-transition;
   display: inline-block;
   width: 100%;
   background-color: $purple;

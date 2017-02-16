@@ -27,11 +27,7 @@
   }
 
   a {
-    -moz-transition: fill 0.3s ease;
-    -o-transition: fill 0.3s ease;
-    -webkit-transition: fill 0.3s ease;
-    transition: fill 0.3s ease;
-    display: inline-block;
+    @extend %icon-transition;
 
     &:hover {
       fill: $blue;

@@ -7,6 +7,7 @@
 }
 
 .page-level-search_link {
+  @extend %background-transition;
   display: block;
   position: relative;
   border: solid 2px $blue;

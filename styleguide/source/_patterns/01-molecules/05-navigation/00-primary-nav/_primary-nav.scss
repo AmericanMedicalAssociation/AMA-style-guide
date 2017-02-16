@@ -33,6 +33,7 @@
 
 // Mobile menu button to trigger dropdown.
 .nav-primary_button-menu {
+  @extend %background-transition;
   border: 2px $purple solid;
   color: $purple;
   font-weight: $font-weight-medium;
