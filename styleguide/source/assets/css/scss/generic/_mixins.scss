@@ -23,3 +23,20 @@
 @mixin rule-vertical($width, $color, $style) {
   border-left: $width $color $style;
 }
+
+
+/**
+ * Clearfix Mixin
+ * Applies a clearfix ruleset using a placeholder selector. Placeholder selectors
+ * do not get compiled uless they are called - removing the nesting issues that
+ * can otherwise occur with extends.
+ */
+
+.clearfix,
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

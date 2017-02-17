@@ -1,0 +1,9 @@
+<aside class="inline-bio">
+  <img class="inline-bio_image" src="{{ src|default('https://www.ama-assn.org/sites/default/files/styles/medium/public/media-browser/public/people/steven-stack.jpg?itok=r6UW84zq') }}" alt="{{ alt|default('Steven J Stack') }}"/>
+  <div class="inline-bio_block">
+    {% include 'atoms-h4' with { 'content': 'Steven J. Stack, MD', 'class': 'b4' } %}
+    {% include 'atoms-paragraph' with { 'content': 'President', 'class': ' inline-bio_meta' } %}
+    {% include 'atoms-paragraph' with { 'content': 'Emergency Medicine', 'class': 'inline-bio_meta' } %}
+    {% include 'atoms-link' with { 'content': 'Full Bio', 'class': 'link-blue inline-bio_cta' } %}
+  </div>  
+</aside>
