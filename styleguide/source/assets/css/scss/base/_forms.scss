@@ -58,6 +58,7 @@ textarea {
 
 // Overriding textarea styles
 textarea {
+  height: 250px;
   padding: 15px;
 
   &:focus,
