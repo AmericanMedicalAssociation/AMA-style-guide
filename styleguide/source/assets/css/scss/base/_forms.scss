@@ -22,14 +22,66 @@ button, input, select, textarea {
     margin: 0 1px 0;
 }
 
-input, textarea {
-	width: 100%;
-	border: 1px solid $gray;
-	padding: $pad-half 0.65rem;
+// Global input styles
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+  -webkit-appearance: none;
+  height: 60px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $gray-8;
+  border-radius: 0;
+  outline: none;
+  padding: 0 15px;
+
+  &:focus,
+  &:active {
+    border: 2px solid $purple;
+    outline: none;
+    padding: 0 14px;
+  }
 }
 
-input[type=text], input[type=search], input[type=url], input[type=number], textarea {
-	-webkit-appearance: none;
+// Overriding textarea styles
+textarea {
+  padding: 15px;
+
+  &:focus,
+  &:active {
+    border: 2px solid $purple;
+    outline: none;
+    padding: 14px;
+  }
+}
+
+// Placeholder text styles
+::-webkit-input-placeholder { /* Chrome */
+  color: $gray-8;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $gray-8;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $gray-8;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: $gray-8;
+  opacity: 1;
 }
 
 button, input[type="submit"] {
@@ -64,7 +116,7 @@ input[type="search"]::-webkit-search-decoration {
 	fieldset, .inline-container {
 		position: relative;
 	}
-	
+
 	input[type=submit], button, .btn {
 		padding: 0.65rem 1.3rem;
 		background: $gray-dark;
@@ -95,4 +147,3 @@ input[type="search"]::-webkit-search-decoration {
 /*------------------------------------*\
     $SPECIFIC FORMS
 \*------------------------------------*/
-
