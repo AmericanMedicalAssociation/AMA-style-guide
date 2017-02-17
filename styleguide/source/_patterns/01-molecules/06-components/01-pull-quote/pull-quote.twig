@@ -1,0 +1,14 @@
+<blockquote class="pull-quote">
+  
+  <div class="pull-quote_quote">
+  {{ quote|default('“Lorem ipsum dolor sit at, consectetur adipisicing tempor elit, sed do eiusmod tempor incididunt ut labor magna aliqua.”') }}
+  </div>
+
+  {# The Quote CTA is Optional #}
+  <a class="link-blue link-pull-quote" href="{{ link_dest|default('#') }}"> {{ link_text|default('Learn More') }}</a>
+
+  <footer class="pull-quote_attribution">
+    <span>{{ speaker|default('Dr. Elena Johnson') }}</span>
+    <span>{{ speaker_title|default('Otolaryngology ') }}</span>
+  </footer>
+</blockquote>
