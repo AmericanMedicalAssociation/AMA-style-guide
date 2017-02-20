@@ -1,3 +1,4 @@
+jQuery.noConflict();
 (function(w){
 	var sw = document.body.clientWidth,
 		sh = document.body.clientHeight;
@@ -22,4 +23,4 @@
 		$(this).toggleClass('active');
 		$('.header .search-form').toggleClass('active');
 	});
-})(this);
+})(this);(jQuery);

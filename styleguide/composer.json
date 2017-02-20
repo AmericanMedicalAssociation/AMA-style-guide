@@ -13,6 +13,8 @@
 			"role":         "Lead Developer"
 		}
 	],
+	"minimum-stability": "dev",
+	"prefer-stable": false,
 	"support": {
 		"issues":         "https://github.com/pattern-lab/patternlab-php/issues",
 		"wiki":           "http://patternlab.io/docs/",
@@ -28,6 +30,10 @@
 		"pattern-lab/core": "^2.0.0",
 		"pattern-lab/patternengine-twig": "^2.0.0",
 		"pattern-lab/styleguidekit-twig-default": "^3.0.0"
+	},
+	"repository": {
+		"type": "path",
+		"url": "https://github.com/pattern-lab/patternlab-php-core/commit/c976fa4cbffac7a67c41df43f47899d09a965a49"
 	},
 	"scripts": {
 		"post-install-cmd": [
