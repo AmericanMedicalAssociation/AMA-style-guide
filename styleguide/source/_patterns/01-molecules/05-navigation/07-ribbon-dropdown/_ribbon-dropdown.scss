@@ -48,12 +48,7 @@
   position: absolute;
   width: 100%;
   background-color: $black-20;
-  box-shadow: 3px 3px 2px $black-55;
   z-index: 100;
-
-  @include breakpoint(740px) {
-    box-shadow: none;
-  }
 }
 
 .ribbon_dropdown_nav_item {
