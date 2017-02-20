@@ -37,7 +37,6 @@
   right: 0;
   z-index: 100;
   background-color: $black-20;
-  box-shadow: -3px 3px 2px $black-55;
 
   .ribbon_user-menu_nav_item.divider_item {
     display: none;
@@ -49,7 +48,6 @@
     position: static;
     top: auto;
     right: auto;
-    box-shadow: none;
     background-color: transparent;
 
     .ribbon_user-menu_nav_item.divider_item {
