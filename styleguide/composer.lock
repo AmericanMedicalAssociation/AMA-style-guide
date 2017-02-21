@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f7af771bd392fc63560b2b41e85391a1",
-    "content-hash": "cbc26c753e34f7b77209509d33c888e2",
+    "content-hash": "13c6bb01cca22ad46a2367a4f7b06b56",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -67,7 +66,7 @@
                 "tar",
                 "zip"
             ],
-            "time": "2016-02-15 22:46:40"
+            "time": "2016-02-15T22:46:40+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -134,7 +133,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-01-03 10:49:41"
+            "time": "2017-01-03T10:49:41+00:00"
         },
         {
             "name": "kevinlebrun/colors.php",
@@ -185,7 +184,7 @@
                 "console",
                 "shell"
             ],
-            "time": "2016-04-12 20:58:34"
+            "time": "2016-04-12T20:58:34+00:00"
         },
         {
             "name": "michelf/php-markdown",
@@ -236,20 +235,20 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2016-10-29 18:58:20"
+            "time": "2016-10-29T18:58:20+00:00"
         },
         {
             "name": "pattern-lab/core",
-            "version": "v2.7.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pattern-lab/patternlab-php-core.git",
-                "reference": "e1c0509f06bf959b242c5807c2c624833693c7ee"
+                "reference": "c976fa4cbffac7a67c41df43f47899d09a965a49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pattern-lab/patternlab-php-core/zipball/e1c0509f06bf959b242c5807c2c624833693c7ee",
-                "reference": "e1c0509f06bf959b242c5807c2c624833693c7ee",
+                "url": "https://api.github.com/repos/pattern-lab/patternlab-php-core/zipball/c976fa4cbffac7a67c41df43f47899d09a965a49",
+                "reference": "c976fa4cbffac7a67c41df43f47899d09a965a49",
                 "shasum": ""
             },
             "require": {
@@ -297,24 +296,24 @@
                 "style guide",
                 "styleguide"
             ],
-            "time": "2016-07-22 03:00:05"
+            "time": "2016-07-28 21:12:01"
         },
         {
             "name": "pattern-lab/patternengine-twig",
-            "version": "v2.1.2",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pattern-lab/patternengine-php-twig.git",
-                "reference": "65324c72d2fb3a10cb25bbd65ce08a89fefc5896"
+                "reference": "4490358bc354a4201f00982fedda641aa507e94a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pattern-lab/patternengine-php-twig/zipball/65324c72d2fb3a10cb25bbd65ce08a89fefc5896",
-                "reference": "65324c72d2fb3a10cb25bbd65ce08a89fefc5896",
+                "url": "https://api.github.com/repos/pattern-lab/patternengine-php-twig/zipball/4490358bc354a4201f00982fedda641aa507e94a",
+                "reference": "4490358bc354a4201f00982fedda641aa507e94a",
                 "shasum": ""
             },
             "require": {
-                "pattern-lab/core": "^2.0.0",
+                "pattern-lab/core": "dev-dev",
                 "twig/twig": "~1.0"
             },
             "type": "patternlab-patternengine",
@@ -360,20 +359,20 @@
                 "pattern lab",
                 "twig"
             ],
-            "time": "2016-10-12 21:51:54"
+            "time": "2016-05-19 03:09:58"
         },
         {
             "name": "pattern-lab/styleguidekit-assets-default",
-            "version": "v3.4.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pattern-lab/styleguidekit-assets-default.git",
-                "reference": "e6017ed4b958fd01094cb2f74259299fb1f713df"
+                "reference": "f49ad46ded4d01976b4784dfef83fbc47ebfcbe8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pattern-lab/styleguidekit-assets-default/zipball/e6017ed4b958fd01094cb2f74259299fb1f713df",
-                "reference": "e6017ed4b958fd01094cb2f74259299fb1f713df",
+                "url": "https://api.github.com/repos/pattern-lab/styleguidekit-assets-default/zipball/f49ad46ded4d01976b4784dfef83fbc47ebfcbe8",
+                "reference": "f49ad46ded4d01976b4784dfef83fbc47ebfcbe8",
                 "shasum": ""
             },
             "type": "patternlab-styleguidekit",
@@ -419,24 +418,24 @@
                 "pattern lab",
                 "styleguide"
             ],
-            "time": "2016-12-22 15:55:50"
+            "time": "2016-12-22 15:56:00"
         },
         {
             "name": "pattern-lab/styleguidekit-twig-default",
-            "version": "v3.0.0",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pattern-lab/styleguidekit-twig-default.git",
-                "reference": "7b38bfe2fb60cde3850cfe8f4f948cdc206d7188"
+                "reference": "b7b56ef93aaf5b2b746a3cba4fbf4b5b86ea6309"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pattern-lab/styleguidekit-twig-default/zipball/7b38bfe2fb60cde3850cfe8f4f948cdc206d7188",
-                "reference": "7b38bfe2fb60cde3850cfe8f4f948cdc206d7188",
+                "url": "https://api.github.com/repos/pattern-lab/styleguidekit-twig-default/zipball/b7b56ef93aaf5b2b746a3cba4fbf4b5b86ea6309",
+                "reference": "b7b56ef93aaf5b2b746a3cba4fbf4b5b86ea6309",
                 "shasum": ""
             },
             "require": {
-                "pattern-lab/styleguidekit-assets-default": "^3.0.0"
+                "pattern-lab/styleguidekit-assets-default": "dev-dev"
             },
             "type": "patternlab-styleguidekit",
             "notification-url": "https://packagist.org/downloads/",
@@ -463,7 +462,7 @@
                 "styleguide",
                 "twig"
             ],
-            "time": "2016-07-04 01:24:27"
+            "time": "2016-07-04 00:47:12"
         },
         {
             "name": "seld/jsonlint",
@@ -509,7 +508,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2016-11-14 17:59:58"
+            "time": "2016-11-14T17:59:58+00:00"
         },
         {
             "name": "shudrum/array-finder",
@@ -549,7 +548,7 @@
             ],
             "description": "ArrayFinder component",
             "homepage": "https://github.com/Shudrum/ArrayFinder",
-            "time": "2016-02-01 12:23:32"
+            "time": "2016-02-01T12:23:32+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -557,12 +556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "33f852c649ddb902a73d49fadda90e37bb76cd47"
+                "reference": "a96f2ef967287e19d294c27c4aea7b2dc8d55371"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/33f852c649ddb902a73d49fadda90e37bb76cd47",
-                "reference": "33f852c649ddb902a73d49fadda90e37bb76cd47",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a96f2ef967287e19d294c27c4aea7b2dc8d55371",
+                "reference": "a96f2ef967287e19d294c27c4aea7b2dc8d55371",
                 "shasum": ""
             },
             "require": {
@@ -612,7 +611,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-18 17:35:19"
+            "time": "2017-02-21 10:07:34"
         },
         {
             "name": "symfony/filesystem",
@@ -669,12 +668,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "a6afaf6e1f37fbe87e5629d909b0f08e341c1605"
+                "reference": "1558dea3daea8ddca57ef2c95745f863ce4b2a1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/a6afaf6e1f37fbe87e5629d909b0f08e341c1605",
-                "reference": "a6afaf6e1f37fbe87e5629d909b0f08e341c1605",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/1558dea3daea8ddca57ef2c95745f863ce4b2a1e",
+                "reference": "1558dea3daea8ddca57ef2c95745f863ce4b2a1e",
                 "shasum": ""
             },
             "require": {
@@ -710,7 +709,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-18 17:35:19"
+            "time": "2017-02-21 10:07:34"
         },
         {
             "name": "symfony/process",
@@ -718,12 +717,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "c47877b449701de868c2e9237453e069ea293de1"
+                "reference": "3108b29c21e91d11a0d3f0231ac546f052d25a84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/c47877b449701de868c2e9237453e069ea293de1",
-                "reference": "c47877b449701de868c2e9237453e069ea293de1",
+                "url": "https://api.github.com/repos/symfony/process/zipball/3108b29c21e91d11a0d3f0231ac546f052d25a84",
+                "reference": "3108b29c21e91d11a0d3f0231ac546f052d25a84",
                 "shasum": ""
             },
             "require": {
@@ -759,7 +758,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-18 17:35:19"
+            "time": "2017-02-21 10:07:34"
         },
         {
             "name": "symfony/yaml",
@@ -767,12 +766,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "685ed13f7f3f6c758d0e3212ef76663ede60a468"
+                "reference": "372979f85d2831630f12e794413902f07bce7031"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/685ed13f7f3f6c758d0e3212ef76663ede60a468",
-                "reference": "685ed13f7f3f6c758d0e3212ef76663ede60a468",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/372979f85d2831630f12e794413902f07bce7031",
+                "reference": "372979f85d2831630f12e794413902f07bce7031",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +813,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-20 16:58:22"
+            "time": "2017-02-21 14:51:50"
         },
         {
             "name": "twig/twig",
@@ -822,12 +821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b6a16a21f93dc80a48cb140c32d3beb44458d9c3"
+                "reference": "bb3f4d61830c3b0bb5aeaefb9a74b56b2f8da74b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b6a16a21f93dc80a48cb140c32d3beb44458d9c3",
-                "reference": "b6a16a21f93dc80a48cb140c32d3beb44458d9c3",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/bb3f4d61830c3b0bb5aeaefb9a74b56b2f8da74b",
+                "reference": "bb3f4d61830c3b0bb5aeaefb9a74b56b2f8da74b",
                 "shasum": ""
             },
             "require": {
@@ -876,13 +875,17 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-02-17 19:29:51"
+            "time": "2017-02-21 15:46:47"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "pattern-lab/core": 20,
+        "pattern-lab/patternengine-twig": 20,
+        "pattern-lab/styleguidekit-twig-default": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
