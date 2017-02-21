@@ -1,7 +1,6 @@
-<select id="select">
-    <optgroup label="Select">
-        <option>{{ content|default('Option One') }}</option>
-        <option>{{ content|default('Option Two') }}</option>
-        <option>{{ content|default('Option Three') }}</option>
-    </optgroup>
+<select name="{{ for|default('select') }}">
+  <option value="" selected="selected">{{ content|default('Select an option') }}</option>
+  <option>{{ content|default('Option one') }}</option>
+  <option>{{ content|default('Option two') }}</option>
+  <option>{{ content|default('Option three') }}</option>
 </select>

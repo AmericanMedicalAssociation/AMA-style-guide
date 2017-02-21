@@ -1,0 +1,114 @@
+/*------------------------------------*\
+    $INPUT WRAP
+\*------------------------------------*/
+.form-item {
+  position: relative;
+  width: 100%;
+  padding-right: 40px;
+  margin: 40px 0 0;
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="week"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  input[type="radio"],
+  input[type="checkbox"],
+  select,
+  textarea {
+    position: relative;
+    z-index: 10;
+
+    // Display error icon
+    &.error ~ .form-item_icon {
+      display: block;
+      background-image: url('../../assets/icons/svg/alert.svg');
+    }
+
+    // Display valid icon
+    &.valid ~ .form-item_icon {
+      display: block;
+      background-image: url('../../assets/icons/svg/valid.svg');
+    }
+  }
+
+  // Specific styles for year field
+  &-year {
+
+    input[type="number"] {
+      padding-right: 70px;
+    }
+
+    // Year field help text
+    .description {
+      @extend %b4;
+      position: absolute;
+      top: 1em;
+      right: 55px;
+      color: $gray-8;
+      z-index: 10;
+
+      @include breakpoint($bp-med) {
+        top: 0.8em;
+      }
+    }
+  }
+
+  &-radio,
+  &-checkbox {
+
+    label.error {
+      display: none;
+    }
+  }
+}
+
+.form-item_label {
+  @extend %b5;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 3px;
+  font-weight: 700;
+  color: $gray-8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  z-index: 1;
+
+  &.show {
+    top: -24px;
+    opacity: 1;
+  }
+}
+
+// General styles for validating icon
+.form-item_icon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+
+  .form-item-radio &,
+  .form-item-checkbox & {
+    top: 0;
+  }
+}
+
+// Select watermark
+.watermark {
+  color: $gray-8;
+}
