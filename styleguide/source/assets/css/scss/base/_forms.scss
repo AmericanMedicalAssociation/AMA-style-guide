@@ -12,6 +12,10 @@ fieldset {
 	margin: 0;
 }
 
+legend {
+  margin-bottom: 0.5em;
+}
+
 label {
 	display: block;
 }
@@ -40,6 +44,7 @@ input[type="color"],
 select,
 textarea {
   -webkit-appearance: none;
+  position: relative;
   height: 60px;
   width: 100%;
   background-color: $white;
@@ -54,6 +59,27 @@ textarea {
     outline: none;
     padding: 0 14px;
   }
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+
+  }
+
+  &.error {
+    border: 2px solid $red-darker;
+    padding: 0 14px;
+  }
+
+  &.valid {
+    color: $black;
+  }
 }
 
 // Overriding textarea styles
@@ -67,6 +93,16 @@ textarea {
     outline: none;
     padding: 14px;
   }
+
+  &.error {
+    padding: 14px;
+  }
+}
+
+select {
+  background-image: url('../../assets/icons/svg/opendropdown.svg');
+  background-position: 97.5% 52%;
+  background-repeat: no-repeat;
 }
 
 // Placeholder text styles
@@ -85,6 +121,16 @@ textarea {
   opacity: 1;
 }
 
+// Requried label error styles
+label {
+  &.error {
+    @extend %b4;
+    display: block;
+    color: $red-darker;
+    margin-top: 4px;
+  }
+}
+
 button, input[type="submit"] {
 	padding: $pad-half;
 	background-color: $gray-dark;
@@ -92,10 +138,56 @@ button, input[type="submit"] {
 	cursor: pointer;
 }
 
+
+// Checkbox and radio button styles
 input[type="checkbox"],
 input[type="radio"] {
-    width: auto;
-    margin-right: 0.3em;
+  @extend %element-invisible;
+
+  // Label styles
+  + label {
+    margin: 0 0 0.3em;
+
+    // Custom checkboxes and radio buttons
+    &:before {
+      position: relative;
+      top: .15em;
+      display: inline-block;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url('../../assets/icons/svg/radio.svg');
+      background-position: 0px 0px;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+  }
+
+  // Active styles
+  &:checked + label {
+    font-weight: 700;
+
+    &:before {
+      background-position: 0px -25px;
+    }
+  }
+
+  // Tab focus styles
+  &:focus + label {
+    font-weight: 700;
+  }
+}
+
+// Add radius curves to radio buttons
+input[type="checkbox"] {
+  + label:before {
+    background-image: url('../../assets/icons/svg/checkbox.svg');
+  }
+
+  &:checked + label:before {
+    background-position: 0px -25px;
+  }
 }
 
 input[type="search"] {
