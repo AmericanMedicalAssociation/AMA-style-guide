@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   padding-right: 40px;
-  margin: 40px 0 0;
+  margin-top: 40px;
 
   input[type="text"],
   input[type="password"],
@@ -111,4 +111,9 @@
 // Select watermark
 .watermark {
   color: $gray-8;
+}
+
+// Form submit wrapper
+.form-submit {
+  margin-top: 40px;
 }

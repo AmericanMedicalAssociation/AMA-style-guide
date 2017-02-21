@@ -2,4 +2,4 @@
 el: ".button"
 title: "Button"
 ---
-The search button allows a user to open the search modal in order to search.
+The button allows a user to interact with the content on the page by triggering a change or navigating through the site.
