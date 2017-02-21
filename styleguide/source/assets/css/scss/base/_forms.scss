@@ -131,14 +131,6 @@ label {
   }
 }
 
-button, input[type="submit"] {
-	padding: $pad-half;
-	background-color: $gray-dark;
-	border: 1px solid $gray;
-	cursor: pointer;
-}
-
-
 // Checkbox and radio button styles
 input[type="checkbox"],
 input[type="radio"] {
