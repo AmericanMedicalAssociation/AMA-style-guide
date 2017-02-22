@@ -37,6 +37,9 @@
   z-index: 100;
   background-color: $black-20;
   box-shadow: 3px 3px 2px $black-55;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   &.is-active {
     display: block;
@@ -62,6 +65,7 @@
 
 .ribbon_user-menu_nav_item {
   @extend %type-smaller;
+  margin-bottom: 0;
 
   a:link,
   a:visited {
@@ -96,6 +100,10 @@
       color: $white;
       text-decoration: underline;
     }
+  }
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 0;
   }
 }
 
@@ -171,6 +179,9 @@
   z-index: 100;
   background-color: $black-20;
   box-shadow: 3px 3px 2px $black-55;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   @include breakpoint(740px) {
     display: none;
@@ -184,6 +195,7 @@
 }
 
 .ribbon_user-menu_nav-child_item {
+  margin-bottom: 0;
 
   a:link,
   a:visited {
@@ -221,5 +233,9 @@
     &.sign-out {
       border-top: none;
     }
+  }
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 0;
   }
 }
