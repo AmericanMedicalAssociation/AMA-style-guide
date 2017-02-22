@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $SIMPLE STEP FORM
+\*------------------------------------*/
+.multi-step-form {
+  @include grid__unit--cols(12);
+  background-color: $black-7;
+  width: 100%;
+  padding: 30px 20px 40px;
+  margin: 0 auto;
+
+  @include breakpoint($bp-small) {}
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(8);
+    padding: 35px 75px 60px;
+  }
+
+  @include breakpoint($bp-large) {
+    @include grid__unit--cols(6);
+    padding: 35px 70px 60px;
+  }
+}

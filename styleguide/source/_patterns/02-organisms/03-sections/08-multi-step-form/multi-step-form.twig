@@ -1,0 +1,29 @@
+{#
+ # @file multi-step-form.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<form class="multi-step-form" method="get" action="" novalidate="novalidate">
+  <h3>Basics</h3>
+  <fieldset>
+    {% include 'molecules-input-text' %}
+    {% include 'molecules-input-email' %}
+    {% include 'molecules-input-month' %}
+    {% include 'molecules-input-number' %}
+    {% include 'molecules-input-textarea' %}
+    <div class="form-item">
+      <p>The AMA does not provide individual medical advice and cannot respond to emails regarding personal medical conditions. For medical concerns, contact your physician or health care provider.</p>
+      <p>* required fields</p>
+    </div>
+    <div class="form-item">
+      <p><strong>To reach us by mail:</strong></p>
+      <p>American Medical Association<br>
+      AMA Plaza<br>
+      330 N. Wabash Ave., Suite 39300<br>
+      Chicago, IL 60611-5885</p>
+    </div>
+  </fieldset>
+  <div class="form-submit">
+    <input class="button-full" type="submit" name="op" value="Submit">
+  </div>
+</form>
