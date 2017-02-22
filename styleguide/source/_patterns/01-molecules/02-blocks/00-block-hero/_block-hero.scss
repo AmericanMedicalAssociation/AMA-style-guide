@@ -72,6 +72,7 @@
 
   .block-hero_cta-primary {
     display: none;
+    margin-bottom: 0;
 
     @include breakpoint($bp-large-home min-width) {
       display: table-header-group;
