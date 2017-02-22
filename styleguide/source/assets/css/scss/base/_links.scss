@@ -36,6 +36,8 @@ a {
 }
 
 .link-blue {
+  font-weight: $font-weight-bold;
+
   &:link,
   &:visited {
     color: $blue;
