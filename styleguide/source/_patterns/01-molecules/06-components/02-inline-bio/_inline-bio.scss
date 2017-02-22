@@ -32,6 +32,14 @@
   }
 }
 
+.inline-bio_title {
+  margin-bottom: 0;
+
+  @include breakpoint($bp-med) {
+    margin-bottom: 0;
+  }
+}
+
 .inline-bio_meta {
   @extend %b4;
   color: $black-55;
