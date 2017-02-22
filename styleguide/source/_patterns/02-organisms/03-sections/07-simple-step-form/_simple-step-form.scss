@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $SIMPLE STEP FORM
 \*------------------------------------*/
-.simple-step-form {
+.simple-step-form fieldset {
   @include grid__unit--cols(12);
   background-color: $black-7;
   width: 100%;
