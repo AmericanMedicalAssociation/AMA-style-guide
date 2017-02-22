@@ -1,0 +1,33 @@
+{#
+ # @file application-branding-header-ec.twig
+ #}
+
+<section class="ribbon">
+    <div class="layout layout_one_up">
+        <nav class="ribbon_dropdown">
+            <span class="ribbon_dropdown_trigger" tabindex="0" href="#">Education Center Search {% include '06-opendropdownsmall.twig' %}</span>
+            <ul class="ribbon_dropdown_nav">
+                <li class="ribbon_dropdown_nav_item">{% include '03-link-white.twig' with {'content' : 'AMA Wire' , 'url' : 'http://wire.ama-assn.org/'} %}</li>
+                <li class="ribbon_dropdown_nav_item">{% include '03-link-white.twig' with {'content' : 'AMA Store' , 'url' : 'https://commerce.ama-assn.org/store/'} %}</li>
+                <li class="ribbon_dropdown_nav_item">{% include '03-link-white.twig' with {'content' : 'The JAMA Network' , 'url' : 'http://jamanetwork.com/'} %}</li>
+                <li class="ribbon_dropdown_nav_item">{% include '03-link-white.twig' with {'content' : 'Journal of Ethics' , 'url' : 'http://journalofethics.ama-assn.org/'} %}</li>
+            </ul>
+        </nav>
+        <nav class="ribbon_user-menu">
+            <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
+            <ul class="ribbon_user-menu_nav">
+                <li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Become a Member' , 'url' : 'https://www.ama-assn.org/membership'} %}</li>
+                <li class="ribbon_user-menu_nav_item divider_item">{% include 'divider.twig' %}</li>
+                <li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Sign In'} %}</li>
+                <li class="ribbon_user-menu_nav_item">{% include '03-link-white.twig' with {'content' : 'Create Account'} %}</li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<header class="header-primary header-primary_ec" role="banner">
+    <div class="layout">
+        <a href="https://www.ama-assn.org"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>
+        <div class="rule-vertical rule-vertical-thin"></div>
+        <a href="/" class="link-application-title">Education Center Search</a>
+    </div>
+</header>
