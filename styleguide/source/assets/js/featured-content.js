@@ -9,15 +9,15 @@ $(document).ready(function() {
 
     // Odd click
     if (clicks) {
-      $(this).text('Load more');
-      $(this).siblings('.icon').removeClass('icon-viewless').addClass('icon-viewmore');
+      $(this).contents().first()[0].textContent='Load more ';
+      $(this).children('.icon').removeClass('icon-viewless').addClass('icon-viewmore');
       $('.list_featured_content-item:gt(2)').slideUp(300);
     }
 
-    // Event click
+    // Even click
     else {
-      $(this).text('Load less');
-      $(this).siblings('.icon').removeClass('icon-viewmore').addClass('icon-viewless');
+      $(this).contents().first()[0].textContent='Load less ';
+      $(this).children('.icon').removeClass('icon-viewmore').addClass('icon-viewless');
       $('.list_featured_content-item').not(':visible').each( function() {
         $(this).slideDown(300);
       });
