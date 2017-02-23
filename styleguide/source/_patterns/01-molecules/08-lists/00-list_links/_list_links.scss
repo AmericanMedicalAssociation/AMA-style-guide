@@ -13,7 +13,7 @@
   font-weight: $font-weight-bold;
   margin: 20px 0;
 
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     margin: 25px 0;
   }
 
@@ -43,7 +43,7 @@
     svg {
       height: 11px;
 
-      @include breakpooint($bp-small) {
+      @include breakpoint($bp-small) {
         height: 14px;
       }
     }
