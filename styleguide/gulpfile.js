@@ -20,7 +20,9 @@ var gulp        = require('gulp'),
     svgmin      = require('gulp-svgmin'),
     gulpicon    = require('gulpicon/tasks/gulpicon'),
     sourcemaps  = require('gulp-sourcemaps'),
-    prefix      = require('gulp-autoprefixer');
+    prefix      = require('gulp-autoprefixer'),
+    // spaces      = require('gulp-lintspaces');
+    indent      = require('gulp-indent');
 
 
 
@@ -44,6 +46,7 @@ gulp.task('scripts', function () {
     .pipe(concat(
       'application.js'
     ))
+    .pipe(indent())
     .pipe(gulpif(production, uglify()))
     .pipe(gulpif(production, rename({
       suffix: '.min'
@@ -76,6 +79,7 @@ gulp.task('images', function () {
 // Task: Handle Sass and CSS
 gulp.task('sass', function () {
   return gulp.src(config.scss.files)
+    .pipe(indent())
     .pipe(sass())
     .pipe(prefix('last 2 version'))
     .pipe(gulpif(production, cssmin()))
@@ -141,6 +145,17 @@ gulp.task('browser-sync', function() {
     open: "local"
   });
 });
+
+// Task: Linting
+// Description: lint files for spaces
+// gulp.task('lint', function() {
+//   return gulp.src(config.scss.files, config.scripts.files, config.patternlab.files)
+//     .pipe(spaces({
+//       indentation: 'spaces',
+//       spaces: 2
+//     }))
+//     .pipe(spaces.reporter());
+// });
 
 // Task: Watch files
 gulp.task('watch', function () {
