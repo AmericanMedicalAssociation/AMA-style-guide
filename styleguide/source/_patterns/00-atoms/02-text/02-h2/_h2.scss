@@ -8,6 +8,7 @@
 body {
   h2, .h2, %h2 {
     @include type($font-serif, 1.222em, $font-weight-medium, 1.1818181818);
+    margin-bottom: 6px;
   }
 
   // Body size is increased to 20px, the new value needs to be set in px
@@ -15,6 +16,7 @@ body {
   @include breakpoint($bp-med min-width) {
     h2, .h2, %h2 {
       @include type($font-serif, 1.7em, $font-weight-medium, 1.1176470588);
+      margin-bottom: 9px;
     }
   }
 }
