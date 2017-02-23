@@ -6,14 +6,23 @@
 
 .jump-nav {
   align-items: center;
-  padding: 15px;
+  padding-bottom: 11px;
   border: 1px solid $purple;
 
   // when the jump nav is closed do this
   &.is-closed {
     height: 60px;
-    cursor: pointer;
-    padding: 5px 15px;
+    padding-bottom: 15px;
+  }
+
+  @include breakpoint($bp-med) {
+    padding: 0;
+    border: 0;
+
+    &.is-closed {
+      height: auto;
+      padding: 0;
+    }
   }
 }
 
@@ -21,20 +30,25 @@
   @extend %b4;
   display: block;
   width: 100%;
+  padding: 5px 15px 0 15px;
   font-weight: $font-weight-medium;
   color: $gray-8;
+  cursor: pointer;
 
   // when the jump nav is closed do this to the title
   .jump-nav.is-closed & {
     margin-bottom: 0;
+
+    @include breakpoint($bp-med) { 
+      margin-bottom: 9px;
+    }
   }
 
   .icon {
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-top:18px;
+    margin: 18px 0 0 15px;
     float: right;
+    -ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
 
     svg {
@@ -45,8 +59,20 @@
 
     // when the jump nav is closed do this to the icon
     .jump-nav.is-closed & {
+      -ms-transform: rotate(0deg); /* IE 9 */
+      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
       transform: rotate(0deg);
-      margin-top: 0;
+      margin-top: 6px;
+    }
+  }
+
+  @include breakpoint($bp-med) {
+    font-weight: $font-weight-bold;
+    color: $black;
+    cursor: auto;
+
+    .icon {
+      display: none;
     }
   }
 }
@@ -55,10 +81,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding: 0 15px;
 }
 
 .jump-nav_list-item {
 
+  a {
+    display: block;
+  }
   // when the jump nav is closed do this to the list items
   .jump-nav.is-closed & {
     display: none;
@@ -66,6 +96,18 @@
     &.is-active {
       display: block;
       @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
+    }
+
+    @include breakpoint($bp-med) {
+      display: block;
+      @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
+
+      &.is-active {
+        a:link,
+        a:visited {
+          color: $blue;
+        }
+      }
     }
   }
 }
