@@ -18,7 +18,9 @@ var gulp        = require('gulp'),
     runSequence = require('run-sequence'),
     glob        = require('glob'),
     svgmin      = require('gulp-svgmin'),
-    gulpicon    = require('gulpicon/tasks/gulpicon');
+    gulpicon    = require('gulpicon/tasks/gulpicon'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    prefix      = require('gulp-autoprefixer');
 
 
 
@@ -75,10 +77,12 @@ gulp.task('images', function () {
 gulp.task('sass', function () {
   return gulp.src(config.scss.files)
     .pipe(sass())
+    .pipe(prefix('last 2 version'))
     .pipe(gulpif(production, cssmin()))
     .pipe(gulpif(production, rename({
       suffix: '.min'
     })))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(
       config.scss.dest
     ))
