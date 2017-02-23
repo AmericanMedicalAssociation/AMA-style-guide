@@ -5,11 +5,11 @@
  */
 
 h6, .h6, %h6 {
-  @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
+  @include type($font-sans-serif, 0.88em, $font-weight-bold, 1.437);
   margin-bottom: 6px;
 
   @include breakpoint($bp-med min-width) {
-    @include type($font-sans-serif, 15px, $font-weight-bold, 1.4666666667);
+    @include type($font-sans-serif, 1em, $font-weight-bold, 1.388);
     margin-bottom: 9px;
   }
 }
