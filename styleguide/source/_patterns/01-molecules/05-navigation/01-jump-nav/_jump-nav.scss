@@ -70,6 +70,7 @@
     font-weight: $font-weight-bold;
     color: $black;
     cursor: auto;
+    padding: 0;
 
     .icon {
       display: none;
@@ -82,6 +83,10 @@
   margin: 0;
   padding: 0;
   padding: 0 15px;
+
+  @include breakpoint($bp-med) {
+    padding: 0;
+  }
 }
 
 .jump-nav_list-item {
@@ -89,6 +94,19 @@
   a {
     display: block;
   }
+
+  @include breakpoint($bp-med) { 
+    display: block;
+    @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
+
+    &.is-active {
+      a:link,
+      a:visited {
+        color: $blue;
+      }
+    }
+  }
+
   // when the jump nav is closed do this to the list items
   .jump-nav.is-closed & {
     display: none;
@@ -100,14 +118,6 @@
 
     @include breakpoint($bp-med) {
       display: block;
-      @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
-
-      &.is-active {
-        a:link,
-        a:visited {
-          color: $blue;
-        }
-      }
     }
   }
 }
