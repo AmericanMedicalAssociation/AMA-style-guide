@@ -1,7 +1,7 @@
 .list_title-small {
   // Likely need to chance this extend 
   // once we have semantic classes on headings
-  @extend %h6;
+  @extend %h5;
   margin-top: 40px;
   margin-bottom: 20px;
   text-transform: uppercase;
