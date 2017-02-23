@@ -73,6 +73,7 @@
 // List item in the primary navigation.
 .nav-primary_list-item {
   font-weight: $font-weight-bold;
+  position: static;
 
   @include breakpoint($bp-med-home max-width) {
     position: relative;
@@ -113,6 +114,15 @@
       display: none;
     }
   }
+}
+
+// When list items are active in the main navigation
+.nav-primary_list-item-active {
+  left: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: $black-7;
 }
 
 // The Sub nav.
