@@ -4,8 +4,10 @@
 .form-item {
   position: relative;
   width: 100%;
+  float: left;
   padding-right: 40px;
   margin-top: 40px;
+  clear: both;
 
   input[type="text"],
   input[type="password"],
@@ -64,10 +66,86 @@
   }
 
   &-radio,
+  &-radio-label,
   &-checkbox {
 
     label.error {
       display: none;
+    }
+  }
+
+  // Label only radio list
+  &-radio-label {
+
+    .form-item-radio-label_group {
+
+      @include breakpoint($bp-small) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: flex-start;
+      }
+    }
+
+    // Hide the radio button
+    input[type="radio"] {
+      @extend %element-invisible;
+
+      // Style the label
+      + label {
+        position: relative;
+        display: block;
+        float: left;
+        width: 48%;
+        background-color: $white;
+        border: 1px solid $gray-8;
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        padding: .64em .94em;
+        margin-bottom: 1em;
+
+        &:nth-of-type(2n) {
+          float: right;
+        }
+
+        &:nth-of-type(2n+1) {
+          clear: left;
+        }
+
+        @include breakpoint($bp-small) {
+          float: none;
+          width: auto;
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: none;
+        }
+      }
+
+      // Active styles
+      &:checked + label,
+      &:focus + label {
+        border-color: $purple;
+        color: $purple;
+        font-weight: inherit;
+      }
+    }
+  }
+
+  // Float two fields
+  @include breakpoint($bp-small) {
+    &.layout_two_up-1,
+    &.layout_two_up-2 {
+      width: calc(50% - 10px);
+    }
+
+    &.layout_two_up-2 {
+      float: right;
+      clear: none;
     }
   }
 }
@@ -111,6 +189,10 @@
   .form-item-checkbox & {
     top: 0;
   }
+
+  .form-item-radio-label & {
+    top: 50px;
+  }
 }
 
 // Select watermark
@@ -120,5 +202,26 @@
 
 // Form submit wrapper
 .form-submit {
+  float: left;
+  width: 100%;
   margin-top: 40px;
+  clear: both;
+}
+
+.form-item_password {
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 55px;
+  display: block;
+  background-image: url('../../assets/icons/svg/show.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 20px;
+  z-index: 10;
+
+  &.show {
+    background-image: url('../../assets/icons/svg/hide.svg');
+  }
 }
