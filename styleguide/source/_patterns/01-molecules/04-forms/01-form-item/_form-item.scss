@@ -225,3 +225,17 @@
     background-image: url('../../assets/icons/svg/hide.svg');
   }
 }
+
+.form-item_info {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  display: block;
+  background-image: url('../../assets/icons/svg/information.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  z-index: 10;
+}
