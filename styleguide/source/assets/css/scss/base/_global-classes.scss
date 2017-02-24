@@ -16,13 +16,19 @@
 }
 
 %clearfix {
-    *zoom: 1;
-     &:after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-    }
+  *zoom: 1;
+
+  &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 /**
  * Element-invisible as defined by snook.ca
