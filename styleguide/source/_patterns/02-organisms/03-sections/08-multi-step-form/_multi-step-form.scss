@@ -1,22 +1,65 @@
 /*------------------------------------*\
     $SIMPLE STEP FORM
 \*------------------------------------*/
-.multi-step-form {
+.multi-step-form fieldset {
   @include grid__unit--cols(12);
   background-color: $black-7;
   width: 100%;
-  padding: 30px 20px 40px;
-  margin: 0 auto;
+  padding: 30px 20px;
+  margin: 0 auto 30px;
 
-  @include breakpoint($bp-small) {}
+  &.active {
+    padding-bottom: 40px;
+  }
 
   @include breakpoint($bp-med) {
     @include grid__unit--cols(8);
-    padding: 35px 75px 60px;
+    padding: 35px 75px;
+
+    &.active {
+      padding-bottom: 60px;
+    }
   }
 
   @include breakpoint($bp-large) {
     @include grid__unit--cols(6);
-    padding: 35px 70px 60px;
+    padding: 35px 70px;
+
+    &.active {
+      padding-bottom: 60px;
+    }
   }
+
+  // Hide field group on page load
+  .field-group {
+    @extend %clearfix;
+    clear: both;
+    display: none;
+  }
+
+  // Show field group if fieldset has class
+  &.active .field-group {
+    display: block;
+  }
+}
+
+.step-form-anchor {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .step-form-title {
+    color: $blue;
+    text-decoration: underline;
+  }
+}
+
+.step-form-title {
+  margin-right: 60px;
+}
+
+.step-form-number {
+  @extend %b4;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
