@@ -105,6 +105,7 @@
 
 .ribbon_user-menu_trigger-auth {
   @extend %type-smaller;
+  @extend %background-transition;
   display: block;
   width: 200px;
   font-weight: 600;
