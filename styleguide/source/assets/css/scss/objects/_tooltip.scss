@@ -72,9 +72,9 @@
 
   &:after {
     @extend %b4;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-90%);
+    -moz-transform: translateX(-90%);
+    transform: translateX(-90%);
     background: $white;
     box-shadow: 0 0 8px rgba($black, 0.3);
     color: $black;
@@ -83,6 +83,12 @@
     line-height: 1.4em;
     word-wrap: break-word;
     width: 250px;
+
+    @include breakpoint($bp-med) {
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
   }
 
   &:hover:before,
@@ -101,9 +107,15 @@
   }
 
   &:hover:after {
-    -webkit-transform: translateX(-50%) translateY(8px);
-    -moz-transform: translateX(-50%) translateY(8px);
-    transform: translateX(-50%) translateY(8px);
+    -webkit-transform: translateX(-90%) translateY(8px);
+    -moz-transform: translateX(-90%) translateY(8px);
+    transform: translateX(-90%) translateY(8px);
+
+    @include breakpoint($bp-med) {
+      -webkit-transform: translateX(-50%) translateY(8px);
+      -moz-transform: translateX(-50%) translateY(8px);
+      transform: translateX(-50%) translateY(8px);
+    }
   }
 
   &[aria-label]:after {
