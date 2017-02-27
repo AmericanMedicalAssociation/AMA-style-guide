@@ -7,6 +7,10 @@
 .list_links_item {
   @extend %b1;
   margin-bottom: 9px;
+  
+  a {
+    display: block;
+  }
 }
 
 .list_links-rule {
