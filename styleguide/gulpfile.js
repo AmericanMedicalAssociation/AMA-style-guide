@@ -21,8 +21,10 @@ var gulp        = require('gulp'),
     gulpicon    = require('gulpicon/tasks/gulpicon'),
     sourcemaps  = require('gulp-sourcemaps'),
     prefix      = require('gulp-autoprefixer'),
-    // spaces      = require('gulp-lintspaces');
-    indent      = require('gulp-indent');
+    indent      = require('gulp-indent'),
+    postcss     = require('gulp-postcss'),
+    reporter    = require('postcss-reporter'),
+    stylelint   = require('stylelint');
 
 
 
@@ -146,16 +148,21 @@ gulp.task('browser-sync', function() {
   });
 });
 
-// Task: Linting
-// Description: lint files for spaces
-// gulp.task('lint', function() {
-//   return gulp.src(config.scss.files, config.scripts.files, config.patternlab.files)
-//     .pipe(spaces({
-//       indentation: 'spaces',
-//       spaces: 2
-//     }))
-//     .pipe(spaces.reporter());
-// });
+// Task: Sass Linting
+// Description: lint sass files
+var processors = [
+  stylelint(config.stylelint),
+  // Pretty reporting config
+  reporter({
+    clearMessages: true,
+    throwError: true
+  })
+];
+
+gulp.task('scss-lint', function() {
+  return gulp.src(config.scss.dest)
+  .pipe(postcss(processors));
+});
 
 // Task: Watch files
 gulp.task('watch', function () {
