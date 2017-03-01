@@ -3,11 +3,13 @@
   // once we have semantic classes on headings
   @extend %h5;
   margin-top: 40px;
-  margin-bottom: 20px;
+  //adjust margin bottom so it is visually closer to the comps (20px in comps)
+  margin-bottom: 15px;
   text-transform: uppercase;
 
   @include breakpoint($bp-small) {
     margin-top: 50px;
-    margin-bottom: 25px;
+    //adjust margin bottom so it is visually closer to the comps (25px in comps)
+    margin-bottom: 20px;
   }
 }
