@@ -24,6 +24,10 @@
 }
 
 .layout_one_up_center {
-  @include grid__unit--cols(8);
-  padding: 0 15px;
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-med min-width) {
+    @include grid__unit--cols(8);
+    padding: 0 15px;
+  }
 }
