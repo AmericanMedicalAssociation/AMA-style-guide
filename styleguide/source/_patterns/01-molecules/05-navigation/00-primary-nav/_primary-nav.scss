@@ -8,6 +8,8 @@
 .nav-primary_list {
   // @todo remove this when the dropdown is implemented.
   display: none;
+  margin: 0;
+  padding: 0;
 
   @include breakpoint(740px min-width) {
     display: inline-block;
@@ -16,6 +18,7 @@
 
 // A list item in the primary navigation.
 .nav-primary_list-item {
+  margin-bottom: 0;
 
   @include breakpoint(740px min-width) {
     display: inherit;
