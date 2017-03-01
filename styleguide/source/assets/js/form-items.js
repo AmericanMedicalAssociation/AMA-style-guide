@@ -10,7 +10,13 @@ $(document).ready(function() {
   //////////////////////////////////
   // Validate form
   //////////////////////////////////
-  $("form.simple-step-form").validate();
+  $("form.simple-step-form").validate({
+    rules: {
+      tel: {
+        number: true
+      }
+    }
+  });
 
 
   //////////////////////////////////
