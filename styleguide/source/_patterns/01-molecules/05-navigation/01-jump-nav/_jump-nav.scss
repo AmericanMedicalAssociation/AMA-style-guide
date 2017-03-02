@@ -8,6 +8,7 @@
   align-items: center;
   padding-bottom: 11px;
   border: 1px solid $purple;
+  margin-bottom: 30px;
 
   // when the jump nav is closed do this
   &.is-closed {
@@ -15,13 +16,31 @@
     padding-bottom: 15px;
   }
 
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+  }
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 40px;
+  }
+
   @include breakpoint($bp-med) {
     padding: 0;
     border: 0;
+    margin-bottom: 0;
 
     &.is-closed {
       height: auto;
       padding: 0;
+    }
+
+    &.fixed {
+      left: auto;
+      right: auto;
     }
   }
 }
