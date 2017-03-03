@@ -18,6 +18,14 @@ Occasionally, you might have to make a change to CSS and let the new stylesheet 
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
 
+## To use the Style Guide on a project:
+- Grab the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases)
+- Open the `.zip` into your project
+- Compile the production files:
+  - `cd /styleguide`
+  - `gulp serve`
+- Link to the production files at `styleguide/public/assets/`
+
 ## Troubleshooting:
 ### Make sure your npm dependencies are up to date
 If you run unto an unexpected error, you might just be missing a dependency
