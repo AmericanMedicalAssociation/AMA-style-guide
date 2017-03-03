@@ -1,5 +1,6 @@
 <figure class="figure figure-video">
-  {% include 'atoms-h4' with { 'content': 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra', 'class': 'b4 figure_title' } %}
+  {# h4 atom with added metadata (video time) #}
+  <h4 class="b4 figure_title">Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra {% include 'atoms-metadata' %}</h4>
 
   {% include 'atoms-video' %}
 
