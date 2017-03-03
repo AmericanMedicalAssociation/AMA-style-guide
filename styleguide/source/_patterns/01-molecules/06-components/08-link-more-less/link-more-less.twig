@@ -4,6 +4,5 @@
  #}
 
 <div class="link_load_more_less">
-  {% include 'atoms-link-black' with { 'content' : 'Load more'} %}
-  {% include 'atoms-viewmore' %}
+  <a href="{{ url }}" class="link link-black">{{ content|default('Load more') }} {% include 'atoms-viewmore' %}</a>
 </div>

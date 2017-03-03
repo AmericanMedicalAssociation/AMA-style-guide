@@ -32,6 +32,7 @@
   }
 
   a {
+    @extend %icon-transition;
     display: inline-block;
 
     &:hover {
