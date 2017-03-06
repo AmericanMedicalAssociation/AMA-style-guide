@@ -13,23 +13,34 @@
 // Audience selector list.
 .tabs-audience_selector_list {
   border: 1px $gray-8 solid;
-  height: 60px;
-  margin-bottom: 25px;
+  list-style: none;
+  margin: 0 0 25px;
   overflow: hidden;
-  padding: 1.1111111111em 0.8333333333em;
+  padding: 0;
   position: relative;
   text-align: center;
 
   .tabs-audience_selector_list_item {
     line-height: 1.3;
-    margin-bottom: 12px;
+    padding: 0;
+    margin-bottom: 0;
+
+    @include breakpoint($bp-med) {
+      margin-right: 0;
+    }
+
+    a {
+      padding: 1em 0.7em;
+
+      &:hover {
+        color: $black-55;
+      }
+    }
   }
 
 
   &.open {
     border: 2px $purple solid;
-    height: auto;
-    overflow: visible;
 
     .tabs-audience_selector_list_item:last-of-type {
       margin-bottom: 0;
