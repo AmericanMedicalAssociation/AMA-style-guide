@@ -6,6 +6,19 @@
 
 .related-content_list {
   list-style: none;
+
+  // When nested inside the related content list, the date block's 
+  // date padding needs to change at this specific breakpoint to accomodate
+  // the text within the space
+  .related-content_item_image .date-block_date-day {
+    @include breakpoint(600px 700px) {
+      margin: 5px 0;
+    }
+
+    @include breakpoint(900px 1000px) {
+      margin: 5px 0;
+    }
+  }
 }
 
 .related-content_cta {
@@ -13,3 +26,4 @@
   padding-top: 15px;
   text-align: center;
 }
+
