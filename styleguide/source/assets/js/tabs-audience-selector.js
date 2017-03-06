@@ -1,9 +1,11 @@
 jQuery.noConflict();
 (function($) {
 
+  var bp_med = 900; // 900px = $bp-med css variable
+
   // checkWidth function
   function checkWidth() {
-    if (($(window).width() >= 900)) { // 900px = $bp-med
+    if (($(window).width() >= bp_med)) {
       // Show all li selectors
       $('.tabs-audience_selector_list > li').css('display', 'inline-block');
     }
@@ -23,7 +25,7 @@ jQuery.noConflict();
   // Mobile Audience Selector tabs
   $('.tabs-audience_selector_list').click(function () {
     // If viewport is smaller than 900px
-    if (($(window).width() < 900)) { // 900px = $bp-med
+    if (($(window).width() < bp_med)) {
       // Add the active class to the list when it is clicked
       $(this).toggleClass('open');
       // Toggle hidden items on click
