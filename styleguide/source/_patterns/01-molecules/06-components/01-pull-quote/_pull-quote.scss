@@ -1,0 +1,44 @@
+/**
+ * @file pull-quote.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.pull-quote {
+  border-left: 12px solid $red;
+  padding-left: 10px;
+  margin: 30px 0;
+  font-style: normal;
+
+  @include breakpoint($bp-small) {
+    margin: 40px 0;
+    padding-left: 15px;
+    border-left: 16px solid $red;
+  }
+}
+
+.pull-quote_quote {
+  @extend %b2;
+  margin-bottom: 6px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 9px;
+  }
+}
+
+.link-pull-quote {
+  display: block;
+  margin-bottom: 6px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 9px;
+  }
+}
+
+.pull-quote_attribution {
+  @extend %b4;
+
+  span {
+    display: block;
+  }
+}

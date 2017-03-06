@@ -1,0 +1,52 @@
+/**
+ * @file figure.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.figure {
+  margin: 30px 0;
+  border-top: 1px solid $gray-8;
+  border-bottom: 1px solid $gray-8;
+  padding: 15px 0;
+
+  img {
+    display: block;
+    margin: 0;
+  }
+
+  @include breakpoint($bp-small) {
+    margin: 40px 0;
+    padding: 20px 0;
+  }
+}
+
+.figure_title {
+  margin-bottom: 15px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 20px;
+  }
+}
+
+.figure_description {
+  color: $black-55;
+  margin: 15px 0 0;
+
+  // style links specific to the description
+  a:link,
+  a:visited {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+
+  @include breakpoint($bp-small) {
+    margin: 20px 0 0;
+  }
+}

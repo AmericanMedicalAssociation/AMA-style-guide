@@ -64,6 +64,7 @@
   left: 0;
 }
 
+
 .nav-primary_list-open .nav-primary_list-item_title a {
   @include breakpoint($bp-med-home min-width) {
     color: $gray-8;
@@ -74,6 +75,7 @@
 .nav-primary_list-item {
   font-weight: $font-weight-bold;
   position: static;
+  margin-bottom: 0;
 
   @include breakpoint($bp-med-home max-width) {
     position: relative;
@@ -228,6 +230,7 @@
 
 // Mobile menu button to trigger drop down.
 .nav-primary_button-menu {
+  @extend %background-transition;
   border: 2px $purple solid;
   color: $purple;
   font-weight: $font-weight-medium;

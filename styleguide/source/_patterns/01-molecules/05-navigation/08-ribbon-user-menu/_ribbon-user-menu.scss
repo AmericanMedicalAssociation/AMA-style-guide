@@ -37,6 +37,10 @@
   right: 0;
   z-index: 100;
   background-color: $black-20;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
 
   .ribbon_user-menu_nav_item.divider_item {
     display: none;
@@ -58,6 +62,7 @@
 
 .ribbon_user-menu_nav_item {
   @extend %type-smaller;
+  margin-bottom: 0;
   border-bottom: 1px solid $gray-8;
 
   &:last-child {
@@ -99,12 +104,17 @@
       text-decoration: underline;
     }
   }
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 0;
+  }
 }
 
 /* Authenticated user ribbon classes */
 
 .ribbon_user-menu_trigger-auth {
   @extend %type-smaller;
+  @extend %background-transition;
   display: block;
   width: 200px;
   font-weight: 600;
@@ -176,6 +186,9 @@
   width: 270px;
   z-index: 100;
   background-color: $black-20;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   // Create a max width only for the display block
   @include breakpoint(max-width 739px) {
@@ -192,6 +205,7 @@
 }
 
 .ribbon_user-menu_nav-child_item {
+  margin-bottom: 0;
 
   a:link,
   a:visited {
@@ -233,5 +247,9 @@
     &.sign-out {
       border-top: none;
     }
+  }
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 0;
   }
 }

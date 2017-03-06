@@ -81,6 +81,7 @@
   }
 
   a {
+    @extend %text-transition;
     color: $black;
     padding: 0;
 
@@ -118,6 +119,7 @@
     right: 11px;
 
     svg {
+      @extend %icon-transition;
       height: 9px;
       width: 14px;
     }

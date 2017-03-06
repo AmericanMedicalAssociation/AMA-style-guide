@@ -1,7 +1,15 @@
 ol, ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+	margin: 0 0 0 20px;
+	padding: 0 0 0 10px;
+
+  li {
+    margin-bottom: 9px;
+  }
+
+  @include breakpoint($bp-small) {
+    margin: 0 0 0 40px;
+    padding: 0 0 0 20px;
+  }
 }
 
 /* Definition Lists */

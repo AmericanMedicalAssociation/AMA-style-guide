@@ -1,0 +1,30 @@
+/**
+ * @file image-wrapper-video.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.image-wrapper-video {
+  position: relative;
+  display: block;
+
+  img {
+    width: 100%;
+  }
+
+  .icon {
+    position: absolute;
+    top: calc(50% - 30px); 
+    left: calc(50% - 30px);
+
+    svg {
+      // Calls for boxshadow on icon, but is not applied correctly
+      // Probably need to look into applying and SVG filter if we want 
+      // this effect
+      // box-shadow: 2px 2px 5px rgba($black, .4);
+      height: 60px;
+      width: 60px;
+      fill: $white;
+    }
+  }
+}

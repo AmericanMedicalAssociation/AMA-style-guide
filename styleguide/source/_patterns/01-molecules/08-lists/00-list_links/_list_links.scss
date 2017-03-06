@@ -1,4 +1,50 @@
+.list_links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .list_links_item {
   @extend %b1;
   margin-bottom: 9px;
+  
+  a {
+    display: block;
+  }
+}
+
+.list_links-rule {
+  font-weight: $font-weight-bold;
+
+  .list_links_item {
+    @extend %b4;
+    margin-bottom: 0;
+    // the comp says 15px padding, but due to the line height
+    // I had to adjust so there was 15px between baseline and rule.
+    padding: 8px 0;
+    border-bottom: 1px solid $gray-8;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.list_links_item-meta {
+  font-weight: $font-weight-medium;
+  color: $black-55;
+  margin-left: 10px;
+  display: inline-block;
+
+  .icon {
+    margin-left: 7px;
+
+    svg {
+      height: 11px;
+
+      @include breakpoint($bp-small) {
+        height: 14px;
+      }
+    }
+  }
 }

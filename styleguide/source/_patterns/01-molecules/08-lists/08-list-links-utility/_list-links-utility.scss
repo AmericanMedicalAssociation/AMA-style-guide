@@ -3,6 +3,11 @@
  *
  * Copyright 2017 Palantir.net, Inc.
  */
+.list_links-utility {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .list_link_item-utility {
   @extend %type-smaller;

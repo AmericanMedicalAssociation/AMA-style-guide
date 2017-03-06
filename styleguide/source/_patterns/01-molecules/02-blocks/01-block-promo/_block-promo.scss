@@ -1,4 +1,5 @@
 .block-promo {
+  @extend %background-transition;
   display: block;
   margin-bottom: 2em;
   padding: 25px;

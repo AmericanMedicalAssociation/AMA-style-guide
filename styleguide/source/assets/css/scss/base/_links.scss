@@ -1,5 +1,6 @@
-/* Links */ 
+/* Links */
 a {
+  @extend %text-transition;
   color: $black;
   text-decoration: none;
   outline: 0;
@@ -18,6 +19,7 @@ a {
   &:hover,
   &:focus {
     color: $blue;
+    text-decoration: none;
   }
 }
 
@@ -31,6 +33,22 @@ a {
   &:hover,
   &:focus {
     color: $white;
+    text-decoration: underline;
+  }
+}
+
+.link-blue {
+  font-weight: $font-weight-bold;
+
+  &:link,
+  &:visited {
+    color: $blue;
+  }
+  // if the default link style changes this will need to include color: black; text-decoration: none;
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
     text-decoration: underline;
   }
 }

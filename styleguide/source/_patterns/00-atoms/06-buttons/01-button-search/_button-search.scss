@@ -5,6 +5,7 @@
  */
 
 .button-search {
+  @extend %background-transition;
   border: 2px $blue solid;
   color: $blue;
   display: block;
@@ -23,7 +24,7 @@
   }
 
   &:hover {
-    background: $blue-lighter;
+    background-color: $blue-lighter;
     color: $blue;
   }
 }
