@@ -5,7 +5,8 @@
  * Reference http://codepen.io/anon/pen/GHKJj
  */
 
-$(document).ready(function() {
+ jQuery.noConflict();
+ (function($) {
 
   //////////////////////////////////
   // Validate form
@@ -76,4 +77,4 @@ $(document).ready(function() {
     })
     .change();
 
-});
+})(jQuery);

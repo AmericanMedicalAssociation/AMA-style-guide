@@ -4,6 +4,12 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
+.news_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .news-standard {
   @include rule-horizontal(1px, $gray-8, solid);
   padding: 0;

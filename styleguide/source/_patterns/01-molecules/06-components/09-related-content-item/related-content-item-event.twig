@@ -1,0 +1,14 @@
+{#
+ # @file news-item-standard-row.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<a href="{{ url }}" class="layout layout_related-content_item related-content_item">
+  <div class="layout_related-content_item_left related-content_item_block">
+    {% include 'atoms-h5' with { 'content': 'Lorem Ipsum', 'class': 'related-content_item_label' } %}
+    {% include 'atoms-h3' with { 'content': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'class': 'related-content_item_title' } %}
+  </div>
+  <div class="layout_related-content_item_right related-content_item_image">
+    {% include 'molecules-date-block' %}
+  </div>
+</a>
