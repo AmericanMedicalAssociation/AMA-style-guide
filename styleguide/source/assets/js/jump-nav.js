@@ -1,4 +1,5 @@
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Search
 
   // When a user clicks on the ribbon trigger (main)
@@ -9,4 +10,4 @@ $(document).ready(function() {
     $(this).parents('#jump-nav').toggleClass('is-closed');
   });
 
-});
+})(jQuery);
