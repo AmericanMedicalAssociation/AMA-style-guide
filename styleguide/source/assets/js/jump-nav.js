@@ -1,4 +1,5 @@
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Search
 
   // When a user clicks on the ribbon trigger (main)
@@ -49,5 +50,4 @@ $(document).ready(function() {
 
 var demo = new StickyElement($('#sticky-jumpnav'));
 
-});
-
+})(jQuery);

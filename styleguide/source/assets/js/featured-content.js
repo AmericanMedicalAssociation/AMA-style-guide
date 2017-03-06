@@ -1,4 +1,5 @@
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
 
   // Hide all items except first 3
   $('.list_featured_content-item:gt(2)').hide();
@@ -25,4 +26,4 @@ $(document).ready(function() {
     $(this).data('clicks', !clicks);
   });
 
-});
+})(jQuery);
