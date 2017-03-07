@@ -1,4 +1,5 @@
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Mobile Audience Selector tabs
   $('.tabs-audience_selector_list').click(function () {
 
@@ -6,4 +7,4 @@ $(document).ready(function() {
     $(this).toggleClass('open');
   });
 
-});
+})(jQuery);

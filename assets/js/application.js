@@ -1,3 +1,32 @@
+$(document).ready(function() {
+
+  // Hide all items except first 3
+  $('.list_featured_content-item:gt(2)').hide();
+
+  // Create a toggle between Load more and less
+  $('.link_load_more_less a').on('click', function(){
+    var clicks = $(this).data('clicks');
+
+    // Odd click
+    if (clicks) {
+      $(this).contents().first()[0].textContent='Load more ';
+      $(this).children('.icon').removeClass('icon-viewless').addClass('icon-viewmore');
+      $('.list_featured_content-item:gt(2)').slideUp(300);
+    }
+
+    // Even click
+    else {
+      $(this).contents().first()[0].textContent='Load less ';
+      $(this).children('.icon').removeClass('icon-viewmore').addClass('icon-viewless');
+      $('.list_featured_content-item').not(':visible').each( function() {
+        $(this).slideDown(300);
+      });
+    }
+    $(this).data('clicks', !clicks);
+  });
+
+});
+
 /*global jQuery */
 /*!
 * FitVids 1.0
@@ -82,7 +111,7 @@
 	$(w).resize(function(){ //Update dimensions on resize
 		sw = document.body.clientWidth;
 		sh = document.body.clientHeight;
-		
+
 		//updateAds();
 	});
 
@@ -92,7 +121,7 @@
 		$(this).toggleClass('active');
 		$('.nav').toggleClass('active');
 	});
-	
+
 	//Navigation toggle
 	$('.nav-toggle-search').click(function(e) {
 		e.preventDefault();
@@ -100,6 +129,7 @@
 		$('.header .search-form').toggleClass('active');
 	});
 })(this);
+
 /*!
  * jQuery JavaScript Library v2.0.0b2
  * http://jquery.com/
@@ -8801,7 +8831,8 @@ if ( typeof module === "object" && typeof module.exports === "object" ) {
  * Copyright 2017 Palantir.net, Inc.
  */
 
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Mobile Primary navigation functionality.
   $('.nav-primary_button-menu').click(function () {
 
@@ -8809,8 +8840,9 @@ $(document).ready(function() {
     $('.nav-primary').toggleClass('open');
   });
 
-});
-$(document).ready(function() {
+})(jQuery);
+jQuery.noConflict();
+(function($) {
   // Search
 
   // When a user clicks on the ribbon trigger (main)
@@ -8819,11 +8851,11 @@ $(document).ready(function() {
     $(this).blur();
     // add a class to the sibling dropdown
     $(this).toggleClass('is-active');
-    $(this).siblings('.ribbon_dropdown_nav').toggleClass('is-active');
+    $(this).siblings('.ribbon_dropdown_nav').toggleClass('is-active').slideToggle(300);
     $('.ribbon_user-menu_trigger').removeClass('is-active');
-    $('.ribbon_user-menu_nav').removeClass('is-active');
+    $('.ribbon_user-menu_nav').removeClass('is-active').slideUp(300);;
     $('.ribbon_user-menu_trigger-auth').removeClass('is-active');
-    $('.ribbon_user-menu_nav-child').removeClass('is-active');
+    $('.ribbon_user-menu_nav-child').removeClass('is-active').slideUp(300);
   });
 
   // When a user clicks on the ribbon trigger for user dropdown
@@ -8832,9 +8864,9 @@ $(document).ready(function() {
     $(this).blur();
     // add a class to the sibling dropdown
     $(this).toggleClass('is-active');
-    $(this).siblings('.ribbon_user-menu_nav').toggleClass('is-active');
+    $(this).siblings('.ribbon_user-menu_nav').toggleClass('is-active').slideToggle(300);
     $('.ribbon_dropdown_trigger').removeClass('is-active');
-    $('.ribbon_dropdown_nav').removeClass('is-active');
+    $('.ribbon_dropdown_nav').removeClass('is-active').slideUp(300);
   });
 
   // When a user clicks on the ribbon trigger for authenticated user dropdown
@@ -8843,13 +8875,14 @@ $(document).ready(function() {
     $(this).blur();
     // add a class to the sibling dropdown
     $(this).toggleClass('is-active');
-    $(this).siblings('.ribbon_user-menu_nav-child').toggleClass('is-active');
+    $(this).siblings('.ribbon_user-menu_nav-child').toggleClass('is-active').slideToggle(300);
     $('.ribbon_dropdown_trigger').removeClass('is-active');
-    $('.ribbon_dropdown_nav').removeClass('is-active');
+    $('.ribbon_dropdown_nav').removeClass('is-active').slideUp(300);
   });
+})(jQuery);
 
-});
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Search
 
   // Check when a user is typing in search
@@ -8866,8 +8899,9 @@ $(document).ready(function() {
     $(this).siblings('#search-field').removeClass('is-active');
     $('#search-field').focus();
   });
-});
-$(document).ready(function() {
+})(jQuery);
+jQuery.noConflict();
+(function($) {
   // Mobile Audience Selector tabs
   $('.tabs-audience_selector_list').click(function () {
 
@@ -8875,4 +8909,4 @@ $(document).ready(function() {
     $(this).toggleClass('open');
   });
 
-});
+})(jQuery);
