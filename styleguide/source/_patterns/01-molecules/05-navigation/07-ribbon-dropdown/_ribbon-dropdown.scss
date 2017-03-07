@@ -8,12 +8,14 @@
 
 .ribbon_dropdown_trigger {
   @extend %type-smaller;
+  @extend %background-transition;
   display: inline-block;
   width: 100%;
   background-color: $purple;
   padding: 15px;
   color: $white;
   cursor: pointer;
+  outline: none;
 
   span {
     display: inline-block;
@@ -22,8 +24,10 @@
 
   .icon {
     fill: $white;
-    height: 18px;
+    height: 11px;
     width: 10px;
+    line-height: 9px;
+    vertical-align: middle;
   }
 
   &:hover,
@@ -44,17 +48,21 @@
   display: none;
   position: absolute;
   width: 100%;
+  background-color: $black-20;
   z-index: 100;
-
-  &.is-active {
-    display: block;
-  }
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .ribbon_dropdown_nav_item {
   @extend %type-smaller;
-  background-color: $black-20;
-  box-shadow: -3px 3px 2px $black-55;
+  margin-bottom: 0;
+  border-bottom: 1px solid $gray-8;
+
+  &:last-child {
+    border-bottom: 0;
+  }
 
   a:link,
   a:visited {
@@ -73,6 +81,7 @@
 
   @include breakpoint(740px) {
     background-color: $purple-darker;
+    border-bottom: 0;
     box-shadow: none;
 
     a:link,

@@ -1,0 +1,15 @@
+/**
+ * @file related-content.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.related-content_list {
+  list-style: none;
+}
+
+.related-content_cta {
+  border-top: 1px solid $gray-8;
+  padding-top: 15px;
+  text-align: center;
+}

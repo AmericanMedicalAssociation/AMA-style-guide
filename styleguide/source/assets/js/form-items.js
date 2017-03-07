@@ -5,7 +5,8 @@
  * Reference http://codepen.io/anon/pen/GHKJj
  */
 
-$(document).ready(function() {
+ jQuery.noConflict();
+ (function($) {
 
   //////////////////////////////////
   // Validate form
@@ -13,6 +14,11 @@ $(document).ready(function() {
 
   // Validate on page load
   $('.simple-step-form, .multi-step-form').validate({
+    rules: {
+      tel: {
+        number: true
+      }
+    },
     ignore: ':hidden'
   });
 
@@ -119,4 +125,4 @@ $(document).ready(function() {
       }
     });
 
-});
+})(jQuery);

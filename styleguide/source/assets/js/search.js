@@ -1,4 +1,5 @@
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
   // Search
 
   // Check when a user is typing in search
@@ -15,4 +16,4 @@ $(document).ready(function() {
     $(this).siblings('#search-field').removeClass('is-active');
     $('#search-field').focus();
   });
-});
+})(jQuery);
