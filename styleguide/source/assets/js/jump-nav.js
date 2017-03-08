@@ -48,6 +48,6 @@ jQuery.noConflict();
     $(window).on('scroll', onScroll);
   };
 
-var demo = new StickyElement($('#sticky-jumpnav'));
+var stickyNav = new StickyElement($('#sticky-jumpnav'));
 
 })(jQuery);
