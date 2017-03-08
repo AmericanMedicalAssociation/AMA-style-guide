@@ -11,8 +11,8 @@
 - Occasionally things might stop refreshing well. If that happens, just kill (`Control-C`) gulp and re-run.
 
 **To deploy changes to GitHub Pages**
-- `gulp` to generate things if you haven't recently.
-- `gulp deploy` to copy /public to the gh-pages branch and push.
+- `gulp` to generate public files for deployment
+- `gulp deploy` to copy `/public` to the `gh-pages` branch and push.
 
 Occasionally, you might have to make a change to CSS and let the new stylesheet get pushed into the browser to see recent changes, but otherwise this should take care of everything: moving assets, compiling SASS, getting BrowserSync running, and more.
 
