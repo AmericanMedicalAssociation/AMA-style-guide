@@ -4,7 +4,27 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-$(document).ready(function() {
+jQuery.noConflict();
+(function($) {
+
+  // Toggle the primary navigation open and closed when the Menu button is clicked.
+  $('.nav-primary_button-menu').click(function() {
+    if ( $(window).width() < 740 ) {
+      // Unfocus on the dropdown
+      $(this).blur();
+      // toggle a clicked state on the trigger
+      $(this).toggleClass('nav-primary_button-menu-clicked');
+      // toggle the open or closed class on the drawer
+      $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
+      // When the menu is open, apply the overlay.
+      $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
+      // remove active classes on children
+      $('.nav-primary_list-item_title').removeClass('is-active');
+      $('.nav-primary_list-item').removeClass('is-active');
+      $('.nav-primary_list_subnav').removeClass('is-open');
+      $('.nav-primary_list-item').removeClass('is-hidden');
+    }
+  });
 
   // Mobile Primary navigation functionality.
   $('.nav-primary_list').each(function () {
@@ -14,33 +34,35 @@ $(document).ready(function() {
       $(this).removeClass('nav-primary_list_subnav-visible');
     });
 
-    // $('.nav-primary_list-item').addClass('nav-primary_list-item-hidden');
+    // click on the primary nav item
+    $('.nav-primary_list-item_title').click(function () {
+      $(this).blur();
+      // toggle a clicked state for this item
+      $(this).toggleClass('is-active');
+      // toggle a clicked state for this item
+      $(this).parents('.nav-primary_list-item').toggleClass('is-active');
+      // add an open state to its sibling subnav
+      $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
+      // Remove active and open states fromm sibling drawer items
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('is-active');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
 
-    // Toggle the primary navigation open and closed when the Menu button is clicked.
-    $('.nav-primary_button-menu').click(function () {
-      $(this).toggleClass('nav-primary_button-menu-clicked');
-      $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
-      // When the menu is open, apply the overlay.
-      $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
-    });
+      if ( $(window).width() < 740 ) { 
+        // hide the other primary items
+        $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').toggleClass('is-hidden');
+        $(this).parents('.nav-primary_list-item').removeClass('is-hidden');
 
-    // Primary nav list item click to open sub-navigation.
-    $('.nav-primary_list-item_title a').click(function () {
-      $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
-      $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
-      var parent = $(this).parents('.nav-primary_list > .nav-primary_list-item');
-
-      // Show the sub-navigation of the item that is clicked.
-      if(parent.hasClass('nav-primary_list-item-active')) {
-        parent.removeClass('nav-primary_list-item-active');
-        parent.children('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
-        parent.children('.nav-primary_list_subnav').removeClass('nav-primary_list_subnav-visible');
-      } else {
-        parent.addClass('nav-primary_list-item-active');
-        parent.children('.nav-primary_list-item_title').addClass('nav-primary_list-item_title-active');
-        parent.children('.nav-primary_list_subnav').addClass('nav-primary_list_subnav-visible');
+        // When you click the back button revert all that stuff above.
+        $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').click(function () {
+          $('.nav-primary_list-item_title').removeClass('is-active');
+          $('.nav-primary_list-item').removeClass('is-active');
+          $('.nav-primary_list_subnav').removeClass('is-open');
+          $('.nav-primary_list-item').removeClass('is-hidden');
+        });
       }
     });
 
   });
-});
+
+})(jQuery);

@@ -6,11 +6,19 @@
 
 .nav-primary-menu {
   float: left;
+  
   @include breakpoint($bp-med-home) {
     float: none;
-    width: 700px;
     clear: both;
     margin: 0 auto;
+    width: 700px;
+  }
+
+  @include breakpoint($bp-large-home) {
+    float: right;
+    margin: 0;
+    clear: none;
+    width: 640px;
   }
 }
 
@@ -38,6 +46,10 @@
 
 // The primary navigation list.
 .nav-primary_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
   @include breakpoint($bp-med-home max-width) {
     @include transition(all, 0.2s, ease-in-out);
     background-color: $black-7;
@@ -50,25 +62,17 @@
   @include breakpoint($bp-med-home min-width) {
     background-color: $white;
     top: 0;
-    display: flex;
     justify-content: space-between;
   }
 }
 
 // Mobile menu interaction
 .nav-primary_list-closed {
-  left: -100%;
+  left: -200%;
 }
 
 .nav-primary_list-open {
   left: 0;
-}
-
-
-.nav-primary_list-open .nav-primary_list-item_title a {
-  @include breakpoint($bp-med-home min-width) {
-    color: $gray-8;
-  }
 }
 
 // List item in the primary navigation.
@@ -77,31 +81,20 @@
   position: static;
   margin-bottom: 0;
 
+  &.is-hidden {
+    display: none;
+  }
+
   @include breakpoint($bp-med-home max-width) {
     position: relative;
     border-bottom: 1px $gray-8 solid;
 
-    .link-primary-nav a {
+    .link-primary-nav {
       padding: 15px 30px;
       width: 100%
     }
-  }
 
-  @include breakpoint($bp-med-home min-width) {
-    display: inherit;
-    margin-right: 28px;
-
-    &:last-of-type {
-      margin-right: 0;
-    }
-  }
-
-  @include breakpoint($bp-large-home min-width) {
-    margin-right: 25px;
-  }
-
-  .icon-select {
-    @include breakpoint($bp-med-home max-width) {
+    .icon-select {
       position: absolute;
       right: 25px;
       top: 15px;
@@ -111,20 +104,25 @@
         fill: $blue;
       }
     }
+  }
 
-    @include breakpoint($bp-med-home min-width) {
-      display: none;
+  @include breakpoint($bp-med-home min-width) {
+    display: inline-block;;
+    margin-right: 28px;
+    float: left;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    .icon-select { 
+      display: none
     }
   }
-}
 
-// When list items are active in the main navigation
-.nav-primary_list-item-active {
-  left: 100%;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  background-color: $black-7;
+  @include breakpoint($bp-large-home min-width) {
+    margin-right: 25px;
+  }
 }
 
 // The Sub nav.
@@ -133,98 +131,158 @@
     z-index: 1;
     width: 100vw;
     position: absolute;
-    top: 271px;
+    top: 224px;
     left: 0;
     background: $black-7;
     @include grid__unit--cols(12);
     justify-content: flex-start;
     display: flex;
   }
-}
 
-.nav-primary_list_subnav li {
-  display: none;
-  height: 0;
-  @include breakpoint($bp-med-home max-width) {
-    //display: none;
-    //height: 0;
+  @include breakpoint($bp-large-home) {
+    top: 147px;
   }
 }
 
-.nav-primary_list_subnav-visible li {
-  display: block;
-  height: auto;
+.nav-primary_list_subnav {
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &.is-open {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+    @include breakpoint($bp-med-home min-width) { 
+      flex-direction: row;
+    }
+  }
+
+  @include breakpoint($bp-med-home min-width) {
+    position: absolute;
+    background-color: $black-7;
+    left: 0;
+    right: 0;
+    padding: 50px 0;
+
+    // clearfix
+     &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
 }
 
 .nav-primary_list_subnav_list-item {
   background-color: $black-15;
   border-top: 1px $gray-8 solid;
   position: relative;
+  margin: 0;
+
+  @include breakpoint($bp-med-home min-width) {
+    font-size: 24px;
+    line-height: 28px;
+    display: block;
+    padding: 0;
+    border: 0;
+
+    &:first-child {
+      @include grid__unit--cols(3);
+      padding-right: 15px;
+    }
+  }
+
+   @include breakpoint($bp-large-home) {
+
+    &:first-child {
+      @include grid__unit--cols(4);
+    }
+  }
 
   @include breakpoint($bp-med-home) {
     background-color: $black-7;
   }
 
-  .link-primary-nav a {
+  .link-primary-nav {
     @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
     padding: 15px 30px;
 
-    &:hover {
-      text-decoration: underline;
+    @include breakpoint($bp-med-home min-width) {
+      font-size: 18px;
+      line-height: 25px;
+      padding: 0;
+    }
+  }
+
+  &:first-child {
+    @include breakpoint($bp-med-home min-width) {
+      border: 0;
     }
   }
 }
 
-.nav-primary_list_subnav_list-item:first-child {
-  @include breakpoint($bp-med-home min-width) {
-    border: 0;
+.nav-primary_list_subnav-container {
+  @include breakpoint($bp-med-home) {
+    @include grid__unit--cols(9);
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-content: flex-start;
+
+    .nav-primary_list_subnav_list-item {
+      width: 33%;
+      padding-right: 20px;
+    }
+  }
+
+  @include breakpoint($bp-large-home) {
+    @include grid__unit--cols(8);
   }
 }
 
-.nav-primary_list-item_title-active .icon {
-  display: none;
+.nav-primary_list_subnav_list-item-back {
+  background-color: $black-7;
+  border-top: 1px $gray-8 solid;
+  position: relative;
+  margin: 0;
+
+  .link-primary-nav {
+    @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
+    padding: 15px 30px 15px 50px;
+  }
+
+  .icon-select {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+
+    svg {
+      @include rotate(90);
+      fill: $blue;
+    }
+  }
+
+  @include breakpoint($bp-med-home) {
+    display: none;
+  }
 }
+
 
 .nav-primary_list_subnav_primary {
   @include breakpoint($bp-med-home min-width) {
     @include grid__unit--cols(3);
   }
-}
 
-.nav-primary_list_subnav_primary .nav-primary_list_subnav_list-item .link-primary-nav a {
-  @include breakpoint($bp-med-home min-width) {
-    font-size: 24px;
-    line-height: 28px;
-    display: inline;
-    padding: 0;
-  }
-}
-
-.nav-primary_list_subnav_secondary,
-.nav-primary_list_subnav_tertiary {
-  @include breakpoint($bp-med-home min-width) {
-    @include grid__unit--cols(4.5);
-  }
-}
-
-.nav-primary_list_subnav_secondary .nav-primary_list_subnav_list-item .link-primary-nav a,
-.nav-primary_list_subnav_tertiary .nav-primary_list_subnav_list-item .link-primary-nav a {
-  @include breakpoint($bp-med-home min-width) {
-    font-size: 18px;
-    line-height: 25px;
-  }
-}
-
-.nav-primary_list_subnav .nav-primary_list_subnav_list-item a:hover {
-  color: $blue;
-  text-decoration: none;
-}
-
-.nav-primary_list_subnav_primary .icon-select {
-  display: inline-block;
-  fill: $blue;
-  @include breakpoint($bp-med-home min-width) {
-    transform: rotate(270deg);
+  &.icon-select {
+    display: inline-block;
+    fill: $blue;
+    @include breakpoint($bp-med-home min-width) {
+      transform: rotate(270deg);
+    }
   }
 }
 
@@ -256,8 +314,15 @@
 }
 
 // Primary nav link
-.link-primary-nav a {
+.link-primary-nav {
   display: inline-block;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+    text-decoration: none;
+  }
 
   @include breakpoint($bp-med-home min-width) {
     font-size: 18px;
@@ -270,22 +335,56 @@
   }
 }
 
-.nav-primary_list-item_title .link-primary-nav a {
-  @include breakpoint($bp-med-home min-width) {
-    &:hover {
-      border-bottom: 20px $purple solid;
-      padding-bottom: 30px;
+.nav-primary_list-item_title {
+
+  &.is-active {
+    .icon {
+      display: none;
+    }
+
+    .link-primary-nav {
+      @include breakpoint($bp-med-home min-width) {
+        color: $black;
+        border-bottom: 20px $purple solid;
+        padding-bottom: 30px;
+      }
+
+      @include breakpoint($bp-large-home min-width) {
+        padding-bottom: 32px;
+      }
     }
   }
-  @include breakpoint($bp-large-home min-width) {
-    &:hover {
-      padding-bottom: 32px;
+
+  .link-primary-nav {
+
+    @include breakpoint($bp-med-home min-width) {
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $black;
+        border-bottom: 20px $purple solid;
+        padding-bottom: 30px;
+      }
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+
+      &:active,
+      &:hover,
+      &:focus {
+        padding-bottom: 32px;
+      }
     }
   }
 }
 
-.nav-primary_list_subnav_primary .link-primary-nav {
-  @include breakpoint($bp-med-home min-width) {
-    padding: 15px 30px;
+.nav-primary_list_subnav_list-item_text {
+  @extend %b4;
+  color: $black-55;
+  display: none;
+
+  @include breakpoint($bp-large-home) {
+    display: block;
   }
 }
