@@ -1,3 +1,4 @@
+// npm requirements
 var gulp        = require('gulp'),
     bump        = require('gulp-bump'),
     clean       = require('gulp-clean'),
@@ -13,13 +14,15 @@ var gulp        = require('gulp'),
     shell       = require('gulp-shell'),
     tagversion  = require('gulp-tag-version'),
     uglify      = require('gulp-uglify'),
-    config      = require('./build.config.json');
     ghPages     = require('gulp-gh-pages'),
     runSequence = require('run-sequence'),
     glob        = require('glob'),
     svgmin      = require('gulp-svgmin'),
-    gulpicon    = require('gulpicon/tasks/gulpicon');
+    gulpicon    = require('gulpicon/tasks/gulpicon'),
+    gutil       = require('gulp-util');
 
+// Config
+var config = require('./build.config.json');
 
 
 // Trigger
@@ -220,10 +223,10 @@ gulp.task('release', function () {
 
   return gulp.src(config.versioning.files)
     .pipe(bump({
-      type: gulp.env.type || 'patch'
+      type: gutil.env.env || 'development'
     }))
     .pipe(gulp.dest('./'))
-    .pipe(git.commit('Release a ' + gulp.env.type + '-update'))
+    .pipe(git.commit('Release a ' + gutil.env.env + '-update'))
 
     // read only one file to get version number
     .pipe(filter('package.json'))
