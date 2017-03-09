@@ -50,7 +50,7 @@
   }
 
   // Primary navigation.
-  .nav-primary_button-menu {
+  .nav-primary-menu_button {
     display: inline-block;
     position: absolute;
     right: 74px;
@@ -68,13 +68,13 @@
     }
 
     @include breakpoint($bp-large-home min-width) {
+      position: relative;
       bottom: initial;
+      left: initial;
+      right: 136px;
       clear: none;
       float: right;
-      left: initial;
       margin-right: 35px;
-      right: 136px;
-      position: relative;
     }
   }
 

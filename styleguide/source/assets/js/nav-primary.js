@@ -8,12 +8,12 @@ jQuery.noConflict();
 (function($) {
 
   // Toggle the primary navigation open and closed when the Menu button is clicked.
-  $('.nav-primary_button-menu').click(function() {
+  $('.nav-primary-menu_button').click(function() {
     if ( $(window).width() < 740 ) {
       // Unfocus on the dropdown
       $(this).blur();
       // toggle a clicked state on the trigger
-      $(this).toggleClass('nav-primary_button-menu-clicked');
+      $(this).toggleClass('nav-primary-menu_button-clicked');
       // toggle the open or closed class on the drawer
       $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
       // When the menu is open, apply the overlay.
