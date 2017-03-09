@@ -24,6 +24,22 @@
         }
     }
 
+/**
+ * Element-invisible as defined by snook.ca
+ * @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+%element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if support-legacy-browser(ie, '7') {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 /* Completely remove from the flow and screen readers. */
 .is-hidden {
     display: none !important;

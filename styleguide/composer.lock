@@ -556,12 +556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "a96f2ef967287e19d294c27c4aea7b2dc8d55371"
+                "reference": "b366aa1e03bcfd4b8494087ca44f0afab3624c8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/a96f2ef967287e19d294c27c4aea7b2dc8d55371",
-                "reference": "a96f2ef967287e19d294c27c4aea7b2dc8d55371",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/b366aa1e03bcfd4b8494087ca44f0afab3624c8d",
+                "reference": "b366aa1e03bcfd4b8494087ca44f0afab3624c8d",
                 "shasum": ""
             },
             "require": {
@@ -611,7 +611,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-21 10:07:34"
+            "time": "2017-02-28 02:18:26"
         },
         {
             "name": "symfony/filesystem",
@@ -717,12 +717,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "3108b29c21e91d11a0d3f0231ac546f052d25a84"
+                "reference": "b9d0d00d5fee4f27e2a0cc2917a683ca03d4b24c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/3108b29c21e91d11a0d3f0231ac546f052d25a84",
-                "reference": "3108b29c21e91d11a0d3f0231ac546f052d25a84",
+                "url": "https://api.github.com/repos/symfony/process/zipball/b9d0d00d5fee4f27e2a0cc2917a683ca03d4b24c",
+                "reference": "b9d0d00d5fee4f27e2a0cc2917a683ca03d4b24c",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +758,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-21 10:07:34"
+            "time": "2017-03-04 12:23:47"
         },
         {
             "name": "symfony/yaml",
@@ -766,12 +766,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "372979f85d2831630f12e794413902f07bce7031"
+                "reference": "902dfb757bbeab73e75258685b3661f92bbe087d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/372979f85d2831630f12e794413902f07bce7031",
-                "reference": "372979f85d2831630f12e794413902f07bce7031",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/902dfb757bbeab73e75258685b3661f92bbe087d",
+                "reference": "902dfb757bbeab73e75258685b3661f92bbe087d",
                 "shasum": ""
             },
             "require": {
@@ -813,7 +813,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-21 14:51:50"
+            "time": "2017-03-01 22:36:19"
         },
         {
             "name": "twig/twig",
@@ -821,12 +821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "bb3f4d61830c3b0bb5aeaefb9a74b56b2f8da74b"
+                "reference": "27d7ea9675aa312d48f382f3c71c10bebce768a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/bb3f4d61830c3b0bb5aeaefb9a74b56b2f8da74b",
-                "reference": "bb3f4d61830c3b0bb5aeaefb9a74b56b2f8da74b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/27d7ea9675aa312d48f382f3c71c10bebce768a9",
+                "reference": "27d7ea9675aa312d48f382f3c71c10bebce768a9",
                 "shasum": ""
             },
             "require": {
@@ -875,7 +875,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-02-21 15:46:47"
+            "time": "2017-02-27 00:07:56"
         }
     ],
     "packages-dev": [],
