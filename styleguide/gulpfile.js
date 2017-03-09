@@ -209,12 +209,21 @@ gulp.task('serve', function () {
   );
 });
 
-// Task: Deploy static content
-// Description: Deploy static content using rsync shell command
-gulp.task('deploy', function () {
+// Task: Publish static content
+// Description: Publish static content using rsync shell command
+gulp.task('publish', function () {
   return gulp.src(config.deployment.local.path)
     .pipe(ghPages());
 });
+
+// Task: Deploy to GitHub pages
+// Description: Build the public code and deploy it to GitHub pages
+gulp.task('deploy'), function () {
+  // make sure to use the gulp from node_modules and not a different version
+  runSequence = require('run-sequence').use(gulp);
+  // run default to build the code and then publish it GitHub pages
+  runSequence('default', 'publish');
+};
 
 // Function: Releasing (Bump, Tagging & Deploying)
 // Description: Bump npm versions, create Git tag and push to origin
@@ -241,9 +250,13 @@ gulp.task('tag', function () {
     ]));
 });
 
-// Release just runs previous tasks
+// Task: Release the code
+// Description: Release runs default to build the files,
+// runs tag to tag the release and pushes that to GitHub
+// runs publish to also make sure GitHub pages site is updated
 gulp.task('release', function () {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
-  runSequence('default', 'tag', 'deploy');
+  // run default to build the code, next tag to cut a tag, then publish to deploy to GitHub pages
+  runSequence('default', 'tag', 'publish');
 });
