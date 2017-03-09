@@ -235,7 +235,7 @@
       padding: 30px 0;
       border-top: 1px solid $gray-8;
 
-      &:nth-of-type(-n+3) {
+      &:nth-of-type(-n+2) {
         border-top: none;
       }
 
@@ -267,6 +267,10 @@
     .nav-primary_list_subnav_list-item {
       @include grid__unit--cols(3.5);
       padding: 30px 0;
+
+      &:nth-of-type(-n+3) {
+        border-top: none;
+      }
 
       &:first-child {
         @include grid__unit--cols(3.5);
