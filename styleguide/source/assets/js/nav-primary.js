@@ -48,9 +48,16 @@ jQuery.noConflict();
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
 
-      if ( $(window).width() > 740 ) {
-        // When the menu is open, apply the overlay.
-        $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
+      if ($(window).width() > 740) {
+        setTimeout(function () {
+          // if the menu is open, apply the overlay
+          if ($('.nav-primary_list_subnav').is(':visible')) {
+            $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+            // if the menu is not open, remove the overlay
+          } else {
+            $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+          }
+        }, 50);
       }
 
       if ( $(window).width() < 740 ) { 
