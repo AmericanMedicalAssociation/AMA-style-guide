@@ -17,8 +17,7 @@
   },
   "versioning": {
     "files": [
-      "./package.json",
-      "./bower.json"
+      "./package.json"
     ]
   },
   "scripts": {
