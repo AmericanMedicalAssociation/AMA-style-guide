@@ -1,7 +1,7 @@
-<div class="form-item">
-  <label class="form-item_label" for="state">State of residence</label>
+<div class="form-item layout_two_up-1">
+  <label class="form-item_label" for="state">State</label>
   <select name="state">
-    <option value="" selected="selected">{{ content|default('State of residence') }}</option>
+    <option value="" selected="selected">{{ content|default('State') }}</option>
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
     <option value="AZ">Arizona</option>
@@ -54,4 +54,8 @@
     <option value="WI">Wisconsin</option>
     <option value="WY">Wyoming</option>
   </select>
+</div>
+<div class="form-item layout_two_up-2">
+  <label class="form-item_label" for="email">Zip</label>
+  <input type="number" minlength="5" maxlength="5" placeholder="Zip" />
 </div>
