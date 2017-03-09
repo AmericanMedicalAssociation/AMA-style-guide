@@ -1,4 +1,8 @@
 # Living Style Guide for AMA
+This is the living style guide for the American Medical Association. It is a tool to help the web and marketing teams maintain consistent design and hierarchy throughout the AMA branding.
+
+This style guide is a compilation of [atomic components](http://bradfrost.com/blog/post/atomic-web-design/) that have been specifically to the needs of AMA. By documenting and assembling this reference of patterns, we are able to build consistently, reuse code, and [see all of our patterns in one place](https://americanmedicalassociation.github.io/AMA-style-guide/).
+
 ## To begin working:
 
 **Just the first time:**
