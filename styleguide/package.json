@@ -1,6 +1,6 @@
 {
   "name": "ama-style-guide",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A living style guide for the American Medical Association",
   "repository": "https://github.com/AmericanMedicalAssociation/AMA-style-guide",
   "main": "gulpfile.js",
