@@ -21,8 +21,7 @@ Occasionally, you might have to make a change to CSS and let the new stylesheet 
 _this should only be run on the `develop` branch_
 - Make sure you are running the most up-to-date code
   - Updates will be rejected if they are non-fast-forward
-- `gulp` to generate public files for release and deployment
-- `gulp release` to update version information, cut a tag, publish files to endpoint and deploy to `gh-pages`
+- `gulp release` to build the files correctly, update version information, cut a tag, publish files to endpoint and deploy to `gh-pages`
 - Navigate to the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases) to see the new release and add notes.
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).

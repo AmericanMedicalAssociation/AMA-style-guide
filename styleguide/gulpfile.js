@@ -198,7 +198,7 @@ gulp.task('default', ['clean:before'], function (callback) {
 });
 
 // Task: Start your production-process
-// Description: Typ 'gulp' in the terminal
+// Description: Type 'gulp' in the terminal
 gulp.task('serve', function () {
   production = false;
 
@@ -216,9 +216,9 @@ gulp.task('deploy', function () {
     .pipe(ghPages());
 });
 
-// Function: Releasing (Bump & Tagging)
+// Function: Releasing (Bump, Tagging & Deploying)
 // Description: Bump npm versions, create Git tag and push to origin
-gulp.task('release', function () {
+gulp.task('tag', function () {
   production = true;
 
   return gulp.src(config.versioning.files)
@@ -239,4 +239,11 @@ gulp.task('release', function () {
       'git push origin develop',
       'git push origin --tags'
     ]));
+});
+
+// Release just runs previous tasks
+gulp.task('release', function () {
+  // make sure to use the gulp from node_modules and not a different version
+  runSequence = require('run-sequence').use(gulp);
+  runSequence('default', 'tag', 'deploy');
 });
