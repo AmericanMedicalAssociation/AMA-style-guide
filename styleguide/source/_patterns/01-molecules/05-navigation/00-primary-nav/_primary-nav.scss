@@ -37,6 +37,11 @@
     z-index: 1;
     top: 271px;
   }
+
+  @include breakpoint($bp-large-home) {
+    z-index: 1;
+    top: 198px;
+  }
 }
 
 .nav-primary-menu_overlay-mobile-on {
@@ -157,6 +162,9 @@
   }
 
   @include breakpoint($bp-large-home) {
+    @include grid__unit--cols(12.5);
+    left: -30px;
+    right: -30px;
     top: 147px;
   }
 }

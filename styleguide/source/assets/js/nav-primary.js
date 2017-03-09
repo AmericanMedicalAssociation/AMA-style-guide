@@ -48,6 +48,11 @@ jQuery.noConflict();
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
 
+      if ( $(window).width() > 740 ) {
+        // When the menu is open, apply the overlay.
+        $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
+      }
+
       if ( $(window).width() < 740 ) { 
         // hide the other primary items
         $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').toggleClass('is-hidden');
