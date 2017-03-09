@@ -14,12 +14,13 @@
 .tabs-audience_selector_list {
   border: 1px $gray-8 solid;
   height: 60px;
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
   overflow: hidden;
   padding: 1.1111111111em 0.8333333333em;
   position: relative;
   text-align: center;
-
+  list-style: none;
+  
   .tabs-audience_selector_list_item {
     line-height: 1.3;
     margin-bottom: 12px;
