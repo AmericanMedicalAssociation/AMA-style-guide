@@ -8,6 +8,15 @@
 
 
 
+.icon-checkbox {
+	background-image: url('png/checkbox.png');
+	background-repeat: no-repeat;
+  width: 20px;
+  height: 45px;
+}
+
+
+
 .icon-checkmark {
 	background-image: url('png/checkmark.png');
 	background-repeat: no-repeat;
@@ -164,8 +173,8 @@
 .icon-play {
 	background-image: url('png/play.png');
 	background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -175,6 +184,15 @@
 	background-repeat: no-repeat;
   width: 13px;
   height: 8px;
+}
+
+
+
+.icon-radio {
+	background-image: url('png/radio.png');
+	background-repeat: no-repeat;
+  width: 20px;
+  height: 45px;
 }
 
 
