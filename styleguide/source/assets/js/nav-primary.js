@@ -36,7 +36,7 @@ jQuery.noConflict();
 
     // click on the primary nav item
     $('.nav-primary_list-item_title').click(function () {
-      $(this).blur();
+      $('.link-primary-nav').blur();
       // toggle a clicked state for this item
       $(this).toggleClass('is-active');
       // toggle a clicked state for this item
