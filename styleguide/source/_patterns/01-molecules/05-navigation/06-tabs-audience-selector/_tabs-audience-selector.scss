@@ -126,7 +126,7 @@
 
     @include breakpoint($bp-med min-width) {
       fill: $blue;
-      display: block;
+      display: none;
       margin: 0 auto;
       position: relative;
       right: initial;
@@ -137,6 +137,13 @@
         position: absolute;
         top: 0;
       }
+    }
+  }
+
+  // Show icon for active selector
+  .active .icon-select {
+    @include breakpoint($bp-med min-width) {
+      display: block;
     }
   }
 }
