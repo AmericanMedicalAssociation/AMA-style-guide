@@ -1,0 +1,48 @@
+{#
+ # @file multi-step-form.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<form class="multi-step-form" method="get" action="" novalidate="novalidate">
+  <fieldset class="active">
+    <div class="step-form-anchor">
+      <h3 class="step-form-title">Step One</h3>
+      <span class="step-form-number">1 of 3</span>
+    </div>
+    <div class="field-group">
+      {% include 'molecules-input-radio-label' %}
+      {% include 'molecules-input-text' %}
+      {% include 'molecules-input-month' %}
+      {% include 'molecules-input-number' %}
+      <div class="form-submit">
+        <a class="button-full step-form-next" href="javascript:void(0);">Save &amp; Continue</a>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="step-form-anchor">
+      <h3 class="step-form-title">Step Two</h3>
+      <span class="step-form-number">2 of 3</span>
+    </div>
+    <div class="field-group">
+      {% include 'molecules-input-two-up' %}
+      {% include 'molecules-input-textarea' %}
+      <div class="form-submit">
+        <a class="button-full step-form-next" href="javascript:void(0);">Save &amp; Continue</a>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset>
+    <div class="step-form-anchor">
+      <h3 class="step-form-title">Step Three</h3>
+      <span class="step-form-number">3 of 3</span>
+    </div>
+    <div class="field-group">
+      {% include 'molecules-input-email' %}
+      {% include 'molecules-input-password' %}
+      <div class="form-submit">
+        <input class="button-full" type="submit" name="op" value="Submit">
+      </div>
+    </div>
+  </fieldset>
+</form>

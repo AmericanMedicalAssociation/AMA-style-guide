@@ -6,73 +6,88 @@
 
 // Primary header section.
 .header-primary {
-  @extend %clearfix;
-  padding: 20px 0 10px;
   position: relative;
+  background: $white;
   width: 100%;
-  margin: 0 -10px;
+  z-index: 50;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     border-bottom: 1px $black-20 solid;
-    padding: 20px 0 0;
+  }
+
+  .header-primary-inner {
+    @extend %clearfix;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 20px 10px;
+    position: relative;
+
+    @include breakpoint($bp-med-home min-width) {
+      padding: 20px 20px 0;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      padding: 20px 175px 0 0;
+    }
   }
 
   // AMA logo.
   .logo {
     width: 110px;
 
-    @include breakpoint(740px min-width) {
-      bottom: -19px;
+    @include breakpoint($bp-med-home min-width) {
+      top: initial;
       float: left;
       margin-bottom: 37px;
       position: relative;
       width: 217px;
     }
 
-    @include breakpoint(1251px min-width) {
+    @include breakpoint($bp-large-home min-width) {
       bottom: initial;
       position: inherit;
     }
   }
 
   // Primary navigation.
-  .nav-primary {
-    background: $white;
+  .nav-primary-menu_button {
     display: inline-block;
     position: absolute;
     right: 74px;
+    top: 20px;
     vertical-align: top;
 
-    @include breakpoint(740px min-width) {
+    @include breakpoint($bp-med-home min-width) {
       bottom: -57px;
       clear: both;
-      display: block;
+      display: none;
       float: none;
       position: initial;
       right: initial;
       text-align: center;
     }
 
-    @include breakpoint(1251px min-width) {
+    @include breakpoint($bp-large-home min-width) {
+      position: relative;
       bottom: initial;
+      left: initial;
+      right: 136px;
       clear: none;
       float: right;
-      left: initial;
       margin-right: 35px;
-      right: 136px;
-      position: relative;
     }
   }
 
   // Search button.
   .button-search {
 
-    @include breakpoint(740px min-width) {
-      top: 40px;
+    @include breakpoint($bp-med-home min-width) {
+      top: 20px;
     }
 
-    @include breakpoint(1251px min-width) {
+    @include breakpoint($bp-large-home min-width) {
       top: 19px;
+      right: 0;
     }
   }
 }

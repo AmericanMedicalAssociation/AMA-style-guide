@@ -6,12 +6,26 @@
   Usage: @include transition(width,0.3s,ease-out);
  */
 
+// Transition
 @mixin transition($transition-property, $transition-time, $method) {
   -webkit-transition: $transition-property $transition-time $method;
   -moz-transition: $transition-property $transition-time $method;
   -ms-transition: $transition-property $transition-time $method;
   -o-transition: $transition-property $transition-time $method;
   transition: $transition-property $transition-time $method;
+}
+
+// Transform
+@mixin transform($val) {
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+  transform: $val;
+}
+
+// Rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
 }
 
 // Horizontal rule

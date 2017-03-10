@@ -1,1 +1,1 @@
-<div class="link-primary-nav"><a class="{{ class }}" href="{{url}}">{{ content|default('Link') }}</a></div>
+<a class="link-primary-nav {{ class }}" href="{{url}}">{{ content|default('Link') }} {% include "atoms-arrow-select" %}</a>
