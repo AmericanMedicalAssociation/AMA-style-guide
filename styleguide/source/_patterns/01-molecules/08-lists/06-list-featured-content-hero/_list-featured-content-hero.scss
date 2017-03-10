@@ -31,8 +31,3 @@
     }
   }
 }
-
-// Hide items after first 3
-.list_featured_content-item:nth-child(n+4) {
-  display: none;
-}
