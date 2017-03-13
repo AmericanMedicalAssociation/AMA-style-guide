@@ -1,29 +1,62 @@
 jQuery.noConflict();
 (function($) {
 
-  // Hide all items except first 3
-  $('.list_featured_content-item:gt(2)').hide();
+  // Hide items except first 3
+  $('.audience_featured-hero_item').each(function() {
+    $(this).find('.list_featured_content-item:gt(2)').addClass('hidden').hide();
+  });
 
   // Create a toggle between Load more and less
-  $('.link_load_more_less a').on('click', function(){
-    var clicks = $(this).data('clicks');
+  $('.link_load_more_less a').on('click', function() {
 
-    // Odd click
-    if (clicks) {
-      $(this).contents().first()[0].textContent='Load more ';
-      $(this).children('.icon').removeClass('icon-viewless').addClass('icon-viewmore');
-      $('.list_featured_content-item:gt(2)').slideUp(300);
-    }
+    // Featured content path variable
+    var featuredContent = '.audience_featured-hero_item.active .list_featured_content-item';
+    var featuredContentShown = $(featuredContent+'.shown');
+    var featuredContentHidden = $(featuredContent+'.hidden');
 
-    // Even click
-    else {
+    // If featured content has show class do this
+    if($(featuredContent).hasClass('hidden')) {
+
+      // Updated link text and icon
       $(this).contents().first()[0].textContent='Load less ';
       $(this).children('.icon').removeClass('icon-viewmore').addClass('icon-viewless');
-      $('.list_featured_content-item').not(':visible').each( function() {
+
+      // Slide open hidden content on click
+      featuredContentHidden.each(function() {
+        $(this).removeClass('hidden').addClass('shown');
         $(this).slideDown(300);
       });
     }
-    $(this).data('clicks', !clicks);
+
+    // If featured content has hide class do this
+    else if($(featuredContent).hasClass('shown')) {
+
+      // Updated link text and icon
+      $(this).contents().first()[0].textContent='Load more ';
+      $(this).children('.icon').removeClass('icon-viewless').addClass('icon-viewmore');
+
+      // Slide close hidden content on click
+      featuredContentShown.each(function() {
+        $(this).removeClass('shown').addClass('hidden');
+        $(this).slideUp(300);
+      });
+    };
+
+  });
+
+  // Audience tab interaction
+  $('.tabs-audience_selector_list_item a').click(function() {
+
+    // Tab data variable
+    var tab_id = $(this).attr('data-tab');
+
+    // Remove classes
+    $('.tabs-audience_selector_list_item a').removeClass('active');
+    $('.audience_featured-hero_item').removeClass('active');
+
+    // Add classes
+    $(this).addClass('active');
+    $('#'+tab_id).addClass('active');
   });
 
 })(jQuery);
@@ -118,71 +151,119 @@ jQuery.noConflict();
   //////////////////////////////////
   // Validate form
   //////////////////////////////////
-  $("form.simple-step-form").validate({
+
+  // Validate on page load
+  $('.simple-step-form, .multi-step-form').validate({
     rules: {
       tel: {
         number: true
       }
+    },
+    ignore: ':hidden'
+  });
+
+  // Multi step form next link
+  $('.step-form-next').click(function() {
+
+    // Fieldset variables
+    var current_fs = $(this).closest('fieldset');
+    var next_fs = $(this).closest('fieldset').next('fieldset');
+    var prev_fs = $(this).closest('fieldset').prevAll('fieldset');
+
+    // If current fieldset is valid go to next fieldset
+    if($('.multi-step-form').valid()) {
+      current_fs.removeClass('active').addClass('complete');
+      next_fs.addClass('active');
+      prev_fs.addClass('complete');
+    }
+  });
+
+  // Step anchor links
+  $('.step-form-anchor').click(function() {
+
+    // Fieldset variable
+    var current_fs = $(this).closest('fieldset');
+
+    // If current fieldset has class do this
+    if(current_fs.hasClass('complete')) {
+      current_fs.removeClass('complete').addClass('active');
+      current_fs.siblings('fieldset').removeClass('active');
     }
   });
 
 
   //////////////////////////////////
-  // Initate form icons
+  // Initiate form icons
   //////////////////////////////////
 
   // Create variable for all selectors needed for icon validator
-  var iconSelector = $('.form-item input[type="text"], .form-item input[type="email"], .form-item input[type="url"], .form-item input[type="date"], .form-item input[type="month"], .form-item input[type="time"], .form-item input[type="datetime"], .form-item input[type="datetime-local"], .form-item input[type="week"], .form-item input[type="number"], .form-item input[type="search"], .form-item input[type="tel"], .form-item input[type="color"], .form-item select, .form-item textarea, .form-item-radio label.error, .form-item-checkbox label.error');
+  var iconSelector = $('.form-item input[type="text"], .form-item input[type="email"], .form-item input[type="url"], .form-item input[type="date"], .form-item input[type="month"], .form-item input[type="time"], .form-item input[type="datetime"], .form-item input[type="datetime-local"], .form-item input[type="week"], .form-item input[type="number"], .form-item input[type="search"], .form-item input[type="tel"], .form-item input[type="color"], .form-item select, .form-item textarea, .form-item-radio label.error, .form-item-radio-label_group label:last-child, .form-item-checkbox label.error');
 
   // Create form item icon
   $(iconSelector).after('<span class="form-item_icon"></span>');
 
 
   //////////////////////////////////
-  // Initate label show/hide
+  // Initiate label show/hide
   //////////////////////////////////
-  var onClass = "on";
-  var showClass = "show";
+  var onClass = 'on';
+  var showClass = 'show';
 
-  $("input, textarea, select")
-    .bind("checkval", function ()
+  $('input, textarea, select')
+    .bind('checkval', function()
     {
-      var label = $(this).prev("label");
+      var label = $(this).prev('label');
 
-      if (this.value !== "")
+      if (this.value !== '')
         label.addClass(showClass);
 
       else
         label.removeClass(showClass);
     })
-    .on("keyup", function ()
+    .on('keyup', function()
     {
-      $(this).trigger("checkval");
+      $(this).trigger('checkval');
     })
-    .on("focus", function ()
+    .on('focus', function()
     {
-      $(this).prev("label").addClass(onClass);
+      $(this).prev('label').addClass(onClass);
     })
-    .on("blur", function ()
+    .on('blur', function()
     {
-        $(this).prev("label").removeClass(onClass);
+        $(this).prev('label').removeClass(onClass);
     })
-    .trigger("checkval");
+    .trigger('checkval');
 
-  $("select")
-    .on("change", function ()
+  $('select')
+    .on('change', function()
     {
       var $this = $(this);
 
-      if ($this.val() == "")
-        $this.addClass("watermark");
+      if ($this.val() == '')
+        $this.addClass('watermark');
 
       else
-        $this.removeClass("watermark");
+        $this.removeClass('watermark');
 
-      $this.trigger("checkval");
+      $this.trigger('checkval');
     })
     .change();
+
+
+    //////////////////////////////////
+    // Show / Hide password text
+    //////////////////////////////////
+
+    $('.form-item_password').click(function() {
+      $(this).toggleClass('show');
+
+      if($(this).hasClass('show')) {
+        $(this).siblings('input').attr('type', 'text');
+      }
+      else {
+        $(this).siblings('input').attr('type', 'password');
+      }
+    });
 
 })(jQuery);
 
@@ -10448,6 +10529,44 @@ jQuery.noConflict();
     $(this).parents('#jump-nav').toggleClass('is-closed');
   });
 
+  // sticky jumpnav
+  var StickyElement = function(node){
+    var doc = $(document),
+        fixed = false,
+        anchor = node.find('.jumpnav-anchor'),
+        body = doc.find('.article-body'),
+        content = node.find('.jumpnav-content');
+
+    var onScroll = function(e){
+      var docTop = doc.scrollTop(),
+          anchorTop = anchor.offset().top,
+          stickyBottom = content.offset().top + content.height(),
+          bodyBottom = body.offset().top + body.height();
+
+      if(docTop > anchorTop){
+        if(!fixed){
+          anchor.height(content.outerHeight());
+          content.addClass('fixed');
+          fixed = true;
+        }
+      }  else   {
+        if(fixed){
+          anchor.height(0);
+          content.removeClass('fixed');
+          fixed = false;
+        }
+      }
+
+      if(stickyBottom > bodyBottom){
+        content.hide();
+      } else {
+        content.fadeIn(250);
+      }
+    };
+
+    $(window).on('scroll', onScroll);
+  };
+
 })(jQuery);
 
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
@@ -10462,14 +10581,79 @@ jQuery.noConflict();
 
 jQuery.noConflict();
 (function($) {
-  // Mobile Primary navigation functionality.
-  $('.nav-primary_button-menu').click(function () {
 
-    // Add the active class to the button when it is clicked.
-    $('.nav-primary').toggleClass('open');
+  // Toggle the primary navigation open and closed when the Menu button is clicked.
+  $('.nav-primary-menu_button').click(function() {
+    if ( $(window).width() < 740 ) {
+      // Unfocus on the dropdown
+      $(this).blur();
+      // toggle a clicked state on the trigger
+      $(this).toggleClass('nav-primary-menu_button-clicked');
+      // toggle the open or closed class on the drawer
+      $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
+      // When the menu is open, apply the overlay.
+      $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
+      // remove active classes on children
+      $('.nav-primary_list-item_title').removeClass('is-active');
+      $('.nav-primary_list-item').removeClass('is-active');
+      $('.nav-primary_list_subnav').removeClass('is-open');
+      $('.nav-primary_list-item').removeClass('is-hidden');
+    }
+  });
+
+  // Mobile Primary navigation functionality.
+  $('.nav-primary_list').each(function () {
+
+    // Hide the sub-navigation menus initially.
+    $('.nav-primary_list_subnav').each(function() {
+      $(this).removeClass('nav-primary_list_subnav-visible');
+    });
+
+    // click on the primary nav item
+    $('.nav-primary_list-item_title').click(function () {
+      $('.link-primary-nav').blur();
+      // toggle a clicked state for this item
+      $(this).toggleClass('is-active');
+      // toggle a clicked state for this item
+      $(this).parents('.nav-primary_list-item').toggleClass('is-active');
+      // add an open state to its sibling subnav
+      $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
+      // Remove active and open states fromm sibling drawer items
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('is-active');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
+
+      if ($(window).width() > 740) {
+        setTimeout(function () {
+          // if the menu is open, apply the overlay
+          if ($('.nav-primary_list_subnav').is(':visible')) {
+            $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+            // if the menu is not open, remove the overlay
+          } else {
+            $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+          }
+        }, 50);
+      }
+
+      if ( $(window).width() < 740 ) { 
+        // hide the other primary items
+        $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').toggleClass('is-hidden');
+        $(this).parents('.nav-primary_list-item').removeClass('is-hidden');
+
+        // When you click the back button revert all that stuff above.
+        $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').click(function () {
+          $('.nav-primary_list-item_title').removeClass('is-active');
+          $('.nav-primary_list-item').removeClass('is-active');
+          $('.nav-primary_list_subnav').removeClass('is-open');
+          $('.nav-primary_list-item').removeClass('is-hidden');
+        });
+      }
+    });
+
   });
 
 })(jQuery);
+
 jQuery.noConflict();
 (function($) {
   // Search
@@ -10531,11 +10715,37 @@ jQuery.noConflict();
 })(jQuery);
 jQuery.noConflict();
 (function($) {
+
+  var bp_med = 900; // 900px = $bp-med css variable
+
+  // checkWidth function
+  function checkWidth() {
+    if (($(window).width() >= bp_med)) {
+      // Show all li selectors
+      $('.tabs-audience_selector_list > li').css('display', 'inline-block');
+    }
+    else {
+      // Display list-item for all li selectors
+      $('.tabs-audience_selector_list > li').css('display', 'list-item');
+      // Hide all li selectors expect first one
+      $('.tabs-audience_selector_list > li:gt(0)').hide();
+    }
+  }
+
+  // Run checkWidth
+  checkWidth();
+  // Re-run checkWidth on window resize
+  $(window).resize(checkWidth);
+
   // Mobile Audience Selector tabs
   $('.tabs-audience_selector_list').click(function () {
-
-    // Add the active class to the list when it is clicked.
-    $(this).toggleClass('open');
+    // If viewport is smaller than 900px
+    if (($(window).width() < bp_med)) {
+      // Add the active class to the list when it is clicked
+      $(this).toggleClass('open');
+      // Toggle hidden items on click
+      $(this).children('li:gt(0)').slideToggle();
+    }
   });
 
 })(jQuery);
