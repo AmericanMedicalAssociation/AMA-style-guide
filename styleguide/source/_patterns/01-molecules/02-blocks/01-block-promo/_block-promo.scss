@@ -11,19 +11,20 @@
     padding: 30px;
     margin-bottom: 0;
   }
-  &.block-promo-red {
+  &:nth-of-type(2) {
     background: $red;
     &:hover {
       background: $red-darker;
     }
   }
-  &.block-promo-orange {
+  &:nth-of-type(3) {
     background: $orange;
     &:hover {
       background: $orange-darker;
     }
   }
-  &.block-promo-purple {
+  &:first-of-type,
+  &:only-of-type {
     background: $purple;
     &:hover {
       background: $purple-darker;
