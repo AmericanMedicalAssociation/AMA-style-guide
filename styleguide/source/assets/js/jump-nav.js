@@ -40,13 +40,13 @@ jQuery.noConflict();
   $('.jump-nav_list a').click(function(e) {
     var jumpobj = $(this);
     var target = jumpobj.attr('href');
-    var thespeed = 1000;
+    var thespeed = 500;
     var offset = $(target).offset().top;
     e.preventDefault();
 
     $('html,body').animate({
       scrollTop: offset
-    }, thespeed, 'swing');
+    }, thespeed);
   });
 
 
