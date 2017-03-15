@@ -5,8 +5,9 @@
   display: block;
   position: relative;
   width: 100%;
-  height: 175px;
+  //height: 175px;
   border-bottom: 2px solid $blue;
+  padding-top: 100px;
 }
 .search-field_label {
   position: absolute !important;
@@ -17,7 +18,7 @@
     clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
   }
   clip: rect(1px, 1px, 1px, 1px);
-} 
+}
 .search-field_input {
   position: absolute;
   bottom: 0;
