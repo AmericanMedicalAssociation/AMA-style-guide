@@ -1,8 +1,26 @@
 .search_modal {
-  max-width: 1400px;
+  display: none;
+  @extend %clearfix;
+  margin: 0 auto;
+  max-width: 1200px;
   position: relative;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.search_modal_inner {
+  @include grid__unit--cols(12);
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  right: 0;
   background-color: $black-7;
   padding-bottom: 50px;
+  z-index: 10;
 }
 
 .search_modal_close {
