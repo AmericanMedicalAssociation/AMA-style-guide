@@ -1,0 +1,41 @@
+// Pager ul styles
+.pager {
+  @extend %b4;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  // General li styles
+  li {
+    display: inline-block;
+  }
+
+  // Show/Hide links at breakpoint
+  .pager_item--full {
+    display: none;
+
+    @include breakpoint($bp-small) {
+      display: inline-block;
+    }
+  }
+
+  // Link styles
+  a {
+    display: block;
+    color: $gray-8;
+    padding: 20px 15px;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+// Current page styles
+.pager_item--current {
+  font-style: italic;
+  color: $blue;
+  box-shadow: inset 0 2px 0 $blue;
+  padding: 20px 15px;
+}
