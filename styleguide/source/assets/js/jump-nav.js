@@ -9,6 +9,12 @@ jQuery.noConflict();
     $(this).parents('#jump-nav').toggleClass('is-closed');
   });
 
+  // When a user clicks on a title link, close dropdown
+  $('.jump-nav_list-item a').click(function() {
+    // add a class to the parent
+    $('#jump-nav').toggleClass('is-closed');
+  });
+
 
   // On page scroll
   $(window).scroll(function() {
