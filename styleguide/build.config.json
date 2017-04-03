@@ -73,7 +73,7 @@
       "source/_patterns/**/*.json",
       "source/_data/*.json"
     ]
-  }
+  },
   "stylelint": {
     "rules": {
       "block-no-empty": true,
