@@ -24,6 +24,7 @@ var gulp        = require('gulp'),
     indent      = require('gulp-indent'),
     postcss     = require('gulp-postcss'),
     reporter    = require('postcss-reporter'),
+    syntax_scss = require('postcss-scss'),
     stylelint   = require('stylelint');
 
 
@@ -150,18 +151,18 @@ gulp.task('browser-sync', function() {
 
 // Task: Sass Linting
 // Description: lint sass files
-var processors = [
-  stylelint(config.stylelint),
-  // Pretty reporting config
-  reporter({
-    clearMessages: true,
-    throwError: true
-  })
-];
-
 gulp.task('scss-lint', function() {
-  return gulp.src(config.scss.dest)
-  .pipe(postcss(processors));
+  var processors = [
+    stylelint(config.stylelint),
+    // Pretty reporting config
+    reporter({
+      clearMessages: true,
+      throwError: true
+    })
+  ];
+
+  return gulp.src(config.scss.files)
+  .pipe(postcss(processors, {syntax: syntax_scss}));
 });
 
 // Task: Watch files
