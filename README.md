@@ -3,6 +3,14 @@ This is the living style guide for the American Medical Association. It is a pla
 
 This style guide is a compilation of [atomic components](http://bradfrost.com/blog/post/atomic-web-design/) that have been specifically tailored to the needs of AMA. By documenting and assembling this collection of patterns, we are able to build consistently, reuse code, and [see all of our patterns in one place](https://americanmedicalassociation.github.io/AMA-style-guide/).
 
+## To use the Style Guide on a project:
+- Grab the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases)
+- Open the `.zip` into your project
+- Compile the production files:
+  - `cd /styleguide`
+  - `gulp serve`
+- Link to the production files at `styleguide/public/assets/`
+
 ## To begin working:
 
 **Just the first time:**
@@ -28,14 +36,6 @@ _this should only be run on the `develop` branch_
 - Navigate to the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases) to see the new release and add notes.
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
-
-## To use the Style Guide on a project:
-- Grab the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases)
-- Open the `.zip` into your project
-- Compile the production files:
-  - `cd /styleguide`
-  - `gulp serve`
-- Link to the production files at `styleguide/public/assets/`
 
 ## Troubleshooting:
 ### Make sure your npm dependencies are up to date
