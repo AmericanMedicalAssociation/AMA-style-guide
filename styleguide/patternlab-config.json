@@ -8,10 +8,11 @@
       "annotations" : "./source/_annotations/",
       "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
-      "js" : "./source/js",
-      "images" : "./source/images",
-      "fonts" : "./source/fonts",
-      "css" : "./source/css/"
+      "js" : "./source/assets/js",
+      "images" : "./source/assets/images",
+      "fonts" : "./source/assets/fonts",
+      "css" : "./source/assets/css/",
+      "icons": "./source/assets/icons"
     },
     "public" : {
       "root" : "./public/",
