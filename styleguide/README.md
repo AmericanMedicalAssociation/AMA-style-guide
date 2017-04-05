@@ -1,93 +1,103 @@
-![license](https://img.shields.io/github/license/pattern-lab/edition-php-twig-standard.svg)
-[![Packagist](https://img.shields.io/packagist/v/pattern-lab/edition-twig-standard.svg)](https://packagist.org/packages/pattern-lab/edition-mustache-webdesignday) [![Gitter](https://img.shields.io/gitter/room/pattern-lab/php.svg)](https://gitter.im/pattern-lab/php)
+# Pattern Lab Node - Gulp Edition
 
-# Pattern Lab Standard Edition for Twig
-
-The Standard Edition for Twig gives developers and designers a clean and stable base from which to develop a Twig-based pattern library.
+The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
 
 ## Packaged Components
 
-The Standard Edition for Twig comes with the following components:
+The Gulp Edition comes with the following components:
 
-* `pattern-lab/core`: [GitHub](https://github.com/pattern-lab/patternlab-php-core), [Packagist](https://packagist.org/packages/pattern-lab/core)
-* `pattern-lab/patternengine-twig`: [documentation](https://github.com/pattern-lab/patternengine-php-twig#twig-patternengine-for-pattern-lab-php), [GitHub](https://github.com/pattern-lab/patternengine-php-twig), [Packagist](https://packagist.org/packages/pattern-lab/patternengine-twig)
-* `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-assets-default)
-* `pattern-lab/styleguidekit-twig-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-twig-default), [Packagist](https://packagist.org/packages/pattern-lab/styleguidekit-twig-default)
+* `patternlab-node`: [GitHub](https://github.com/pattern-lab/patternlab-node), [npm](https://www.npmjs.com/package/patternlab-node)
+* `patternengine-node-mustache`: [GitHub](https://github.com/pattern-lab/patternengine-node-mustache), [npm](https://www.npmjs.com/package/patternengine-node-mustache)
+* `pattern-lab/styleguidekit-assets-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-assets-default)
+* `pattern-lab/styleguidekit-mustache-default`: [GitHub](https://github.com/pattern-lab/styleguidekit-mustache-default)
+
+## Prerequisites
+
+The Pattern Lab Node - Gulp Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [gulp.js](http://gulpjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
+
+It's also highly recommended that you [install gulp](hhttps://github.com/gulpjs/gulp/blob/4.0/docs/getting-started.md) globally.
+
+> Note: The Gulp Edition of Pattern Lab uses Gulp 4, which may require a new global install of the Gulp command line interface. Follow the [gulp upgrade instructions](https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) if you already have gulp installed and need to upgrade. Gulp 4 is in alpha, but brings many benefits to the table and is relatively stable. You can alternatively [run with local gulp instead of global gulp](https://github.com/pattern-lab/patternlab-node/wiki/Running-with-Local-Gulp-Instead-of-Global-Gulp), but commands are a bit more verbose. The rest of this documentation assumes a global install.
 
 ## Installing
 
-There are two methods for downloading and installing the Standard Edition for Twig:
+There are two methods for downloading and installing the Gulp Edition:
 
-* [Download a pre-built project](#download-a-pre-built-package)
-* [Use Composer to create a project](#use-composer-to-create-a-project)
+* [Download a pre-built package](#download-a-pre-built-package)
+* [Use npm](#use-npm)
 
-### Download a pre-built project
+### Download a pre-built package
 
-The fastest way to get started with the Standard Edition for Twig is to [download the pre-built version](https://github.com/pattern-lab/edition-php-twig-standard/releases) from the [releases page](https://github.com/pattern-lab/edition-php-twig-standard/releases). The pre-built project comes with the [Base StarterKit for Twig](https://github.com/pattern-lab/starterkit-twig-base) installed by default.
+The fastest way to get started with the Gulp Edition is to [download the pre-built version](https://github.com/pattern-lab/edition-node-gulp/releases) from the [releases page](https://github.com/pattern-lab/edition-node-gulp/releases). The pre-built project comes with the [Base Starterkit for Mustache](https://github.com/pattern-lab/starterkit-mustache-base) installed by default.
 
-**Please note:** Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies. To upgrade the Standard Edition for Twig or to install plug-ins you'll need to [install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx). We recommend that you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
+**Please note:** Pattern Lab Node uses [npm](https://www.npmjs.com/) to manage project dependencies. To upgrade the Gulp Edition or to install plug-ins you'll need to be familiar with npm.
 
-### Use Composer to create a project
+### Use npm
 
-Pattern Lab uses [Composer](https://getcomposer.org/) to manage project dependencies.
+`npm` is a dependency management and package system which can pull in all of the Gulp Edition's dependencies for you. To accomplish this:
 
-#### 1. Install Composer
+* download or `git clone` this repository to an install location.
 
-Please follow the directions for [installing Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) on the Composer website. We recommend you [install it globally](https://getcomposer.org/doc/00-intro.md#globally).
+* run the following
 
-#### 2. Install the Standard Edition for Twig
+    ```
+    cd install/location
+    npm install
+    ```
 
-Use Composer's [`create-project` command](https://getcomposer.org/doc/03-cli.md#create-project) to install the Standard Edition for Twig into a location of your choosing. In Terminal type:
+Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
+
+#### Install the Gulp Edition of Pattern Lab Node as a Dependency
+
+Most people want to run Pattern Lab Node standalone and not as a dependency. If you wish to install as a dependency you can do the following:
+
+Use npm's [`install` command](https://docs.npmjs.com/cli/install) with an argument to install the Gulp Edition into a location of your choosing. In Terminal type:
 
     cd install/location/
-    composer create-project pattern-lab/edition-twig-standard your-project-name && cd $_
+    npm install edition-node-gulp
 
-This will install the Standard Edition for Twig into a directory called `your-project-name` in `install/location/`. During the set-up process you will be asked to install an appropriate StarterKit. You will be automatically dropped into the project directory after the process is finished.
+This will install the Gulp Edition into a directory called `node_modules` in `install/location/`.
+
+## Getting Started
+
+The Pattern Lab Node - Gulp Edition ships with a [base experience](https://github.com/pattern-lab/starterkit-mustache-base) which serves as clean place to start from scratch with Pattern Lab. But if you want to get rolling with a starterkit of your own, or use the [demo starterkit](https://github.com/pattern-lab/starterkit-mustache-demo) like the one on [demo.patternlab.io](http://demo.patternlab.io), you can do so automatically at time of `npm install` by adding your starterkit to the `package.json` file.
+
+You can also [work with starterkits using the command line](https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits).
 
 ## Updating Pattern Lab
 
-To update Pattern Lab please refer to each component's GitHub repository. The components are listed at the top of the README.
+To update Pattern Lab please refer to each component's GitHub repository, and the [master instructions for core](https://github.com/pattern-lab/patternlab-node/wiki/Upgrading). The components are listed at the top of the README.
 
 ## Helpful Commands
 
 These are some helpful commands you can use on the command line for working with Pattern Lab.
 
+> Reminder: These commands assume a global installation of gulp 4.X, instead of a local installation. Depending on your preference, you may need to [upgrade your global version of gulp](https://github.com/pattern-lab/edition-node-gulp/wiki/Updating-to-Gulp-4) or [run with local gulp](https://github.com/pattern-lab/patternlab-node/wiki/Running-with-Local-Gulp-Instead-of-Global-Gulp).
+
 ### List all of the available commands
 
 To list all available commands type:
 
-    php core/console --help
-
-To list the options for a particular command type:
-
-    php core/console --help --[command]
+    gulp patternlab:help
 
 ### Generate Pattern Lab
 
 To generate the front-end for Pattern Lab type:
 
-    php core/console --generate
+    gulp patternlab:build
 
 ### Watch for changes and re-generate Pattern Lab
 
-To watch for changes and re-generate the front-end for Pattern Lab type:
+To watch for changes, re-generate the front-end, and server it via a BrowserSync server,  type:
 
-    php core/console --watch
+    gulp patternlab:serve
 
-### Start a server to view Pattern Lab
-
-You can use PHP's built-in web server to review your Pattern Lab project in a browser. In a seperate window type:
-
-    php core/console --server
-
-Then open [http://localhost:8080](http://localhost:8080) in your browser.
+BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Install a StarterKit
 
-To install a near-empty StarterKit as a starting point for your project type:
-
-    php core/console --starterkit --init
-
 To install a specific StarterKit from GitHub type:
 
-    php core/console --starterkit --install <starterkit-vendor/starterkit-name>
+    npm install [starterkit-vendor/starterkit-name]
+
+    gulp patternlab:loadstarterkit --kit=[starterkit-name]
