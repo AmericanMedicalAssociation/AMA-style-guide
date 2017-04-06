@@ -24,10 +24,15 @@
   a {
     display: block;
     color: $gray-8;
-    padding: 20px 15px;
+    padding: 20px 10px;
 
     &:hover {
       color: $blue;
+    }
+
+    @include breakpoint($bp-small) {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 }
