@@ -1,0 +1,76 @@
+{
+  "root": "./public",
+  "deployment": {
+    "local": {
+      "path": "./public/**/*"
+    },
+    "remote": {
+      "host": "YOUR HOST"
+    },
+    "rsync": {
+      "options": "-avzh --delete -e ssh"
+    }
+  },
+  "assets": {
+    "base": "source/assets/",
+    "dest": "public/assets/"
+  },
+  "versioning": {
+    "files": [
+      "./package.json"
+    ]
+  },
+  "scripts": {
+    "base"  : "source/assets/js/",
+    "files" : [
+      "source/assets/js/**/*.js"
+    ],
+    "dest"  : "public/assets/js/"
+  },
+  "components": {
+    "base": "source/assets/components/"
+  },
+  "scss": {
+    "base" : "source/assets/css/",
+    "files": [
+      "source/assets/css/**/*.scss",
+      "source/_patterns/**/**/**/*.scss"
+    ],
+    "dest" : "public/assets/css/"
+  },
+  "fonts": {
+    "base" : "source/assets/fonts/",
+    "files": [
+      "source/assets/fonts/**/*"
+    ],
+    "dest" : "public/assets/fonts/"
+  },
+  "icons": {
+    "base" : "source/assets/icons/",
+    "files": [
+      "source/assets/icons/svg/*.svg"
+    ],
+    "min"  : "public/assets/icons/svg/",
+    "dest" : "public/assets/icons/"
+  },
+  "images": {
+    "base" : "source/assets/images/",
+    "files": [
+      "source/assets/images/**/*"
+    ],
+    "dest" : "public/assets/images/"
+  },
+  "patternlab": {
+    "styleguide": {
+      "files": [
+        "core/styleguide/**"
+      ],
+      "dest": "public/styleguide/"
+    },
+    "files": [
+      "source/_patterns/**/*.twig",
+      "source/_patterns/**/*.json",
+      "source/_data/*.json"
+    ]
+  }
+}
