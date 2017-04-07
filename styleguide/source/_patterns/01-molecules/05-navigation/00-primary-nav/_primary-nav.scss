@@ -6,7 +6,7 @@
 
 .nav-primary-menu {
   float: left;
-  
+
   @include breakpoint($bp-med-home) {
     float: none;
     clear: both;
@@ -35,12 +35,12 @@
   z-index: 10;
   @include breakpoint($bp-med-home min-width) {
     z-index: 1;
-    top: 271px;
+    //top: 271px;
   }
 
   @include breakpoint($bp-large-home) {
     z-index: 1;
-    top: 198px;
+    //top: 198px;
   }
 }
 
@@ -120,7 +120,7 @@
       margin-right: 0;
     }
 
-    .icon-select { 
+    .icon-select {
       display: none
     }
   }
@@ -143,7 +143,7 @@
     display: flex;
     height: auto;
 
-    @include breakpoint($bp-med-home min-width) { 
+    @include breakpoint($bp-med-home min-width) {
       flex-direction: row;
     }
   }
