@@ -47,7 +47,7 @@ jQuery.noConflict();
     var jumpobj = $(this);
     var target = jumpobj.attr('href');
     var thespeed = 500;
-    var offset = $(target).offset().top;
+    var offset = $(target).offset().top - 100;
     e.preventDefault();
 
     $('html,body').animate({
@@ -66,7 +66,7 @@ jQuery.noConflict();
 
   // Trigger is-active class when user scrolls into each section
   $(window).scroll(function() {
-    var windowPos = $(window).scrollTop() + 5; // get the offset of the window from the top of page
+    var windowPos = $(window).scrollTop() + 105; // get the offset of the window from the top of page
     var windowHeight = $(window).height(); // get the height of the window
     var docHeight = $(document).height();
 
