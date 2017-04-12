@@ -1,0 +1,37 @@
+/**
+ * @file button.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+%button,
+button,
+.button {
+  @extend %background-transition;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: $purple;
+  border-radius: 0;
+  border: 0px;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  padding: 20px 40px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $purple-darker;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.button-full {
+  @extend %button;
+  width: 100%;
+}

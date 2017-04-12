@@ -1,3 +1,4 @@
+// npm requirements
 var gulp        = require('gulp'),
     bump        = require('gulp-bump'),
     clean       = require('gulp-clean'),
@@ -13,7 +14,6 @@ var gulp        = require('gulp'),
     shell       = require('gulp-shell'),
     tagversion  = require('gulp-tag-version'),
     uglify      = require('gulp-uglify'),
-    config      = require('./build.config.json');
     ghPages     = require('gulp-gh-pages'),
     runSequence = require('run-sequence'),
     glob        = require('glob'),
@@ -24,9 +24,11 @@ var gulp        = require('gulp'),
     indent      = require('gulp-indent'),
     postcss     = require('gulp-postcss'),
     reporter    = require('postcss-reporter'),
-    syntax_scss = require('postcss-scss'),
-    stylelint   = require('gulp-stylelint');
+    stylelint   = require('gulp-stylelint'),
+    gutil       = require('gulp-util');
 
+// Config
+var config = require('./build.config.json');
 
 
 // Trigger
@@ -217,7 +219,7 @@ gulp.task('default', ['clean:before'], function (callback) {
 });
 
 // Task: Start your production-process
-// Description: Typ 'gulp' in the terminal
+// Description: Type 'gulp' in the terminal
 gulp.task('serve', function () {
   production = false;
 
@@ -228,24 +230,33 @@ gulp.task('serve', function () {
   );
 });
 
-// Task: Deploy static content
-// Description: Deploy static content using rsync shell command
-gulp.task('deploy', function () {
+// Task: Publish static content
+// Description: Publish static content using rsync shell command
+gulp.task('publish', function () {
   return gulp.src(config.deployment.local.path)
     .pipe(ghPages());
 });
 
-// Function: Releasing (Bump & Tagging)
+// Task: Deploy to GitHub pages
+// Description: Build the public code and deploy it to GitHub pages
+gulp.task('deploy'), function () {
+  // make sure to use the gulp from node_modules and not a different version
+  runSequence = require('run-sequence').use(gulp);
+  // run default to build the code and then publish it GitHub pages
+  runSequence('default', 'publish');
+};
+
+// Function: Releasing (Bump, Tagging & Deploying)
 // Description: Bump npm versions, create Git tag and push to origin
-gulp.task('release', function () {
+gulp.task('tag', function () {
   production = true;
 
   return gulp.src(config.versioning.files)
     .pipe(bump({
-      type: gulp.env.type || 'patch'
+      type: gutil.env.env || 'development'
     }))
     .pipe(gulp.dest('./'))
-    .pipe(git.commit('Release a ' + gulp.env.type + '-update'))
+    .pipe(git.commit('Release a ' + gutil.env.env + '-update'))
 
     // read only one file to get version number
     .pipe(filter('package.json'))
@@ -258,4 +269,15 @@ gulp.task('release', function () {
       'git push origin develop',
       'git push origin --tags'
     ]));
+});
+
+// Task: Release the code
+// Description: Release runs default to build the files,
+// runs tag to tag the release and pushes that to GitHub
+// runs publish to also make sure GitHub pages site is updated
+gulp.task('release', function () {
+  // make sure to use the gulp from node_modules and not a different version
+  runSequence = require('run-sequence').use(gulp);
+  // run default to build the code, next tag to cut a tag, then publish to deploy to GitHub pages
+  runSequence('default', 'tag', 'publish');
 });

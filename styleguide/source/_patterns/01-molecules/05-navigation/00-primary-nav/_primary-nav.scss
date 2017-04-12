@@ -4,35 +4,326 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-// Primary navigation list.
-.nav-primary_list {
-  // @todo remove this when the dropdown is implemented.
-  display: none;
+.nav-primary-menu {
+  float: left;
+  
+  @include breakpoint($bp-med-home) {
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    width: 700px;
+  }
 
-  @include breakpoint(740px min-width) {
-    display: inline-block;
+  @include breakpoint($bp-large-home) {
+    float: right;
+    margin: 0;
+    clear: none;
+    width: 640px;
   }
 }
 
-// A list item in the primary navigation.
-.nav-primary_list-item {
+// Mobile overlay
+.nav-primary-menu_overlay-mobile {
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  background: #384047;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 0;
+  z-index: 10;
+  @include breakpoint($bp-med-home min-width) {
+    z-index: 1;
+    top: 271px;
+  }
 
-  @include breakpoint(740px min-width) {
-    display: inherit;
+  @include breakpoint($bp-large-home) {
+    z-index: 1;
+    top: 198px;
+  }
+}
+
+.nav-primary-menu_overlay-mobile-on {
+  opacity: 0.85;
+  width: 100%;
+}
+
+// The primary navigation list.
+.nav-primary_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($bp-med-home max-width) {
+    @include transition(all, 0.2s, ease-in-out);
+    background-color: $black-7;
+    left: 0;
+    top: 81px;
+    position: absolute;
+    width: 100%;
+  }
+
+  @include breakpoint($bp-med-home min-width) {
+    background-color: $white;
+    top: 0;
+    justify-content: space-between;
+  }
+}
+
+// Mobile menu interaction
+.nav-primary_list-closed {
+  left: -200%;
+}
+
+.nav-primary_list-open {
+  left: 0;
+}
+
+// List item in the primary navigation.
+.nav-primary_list-item {
+  font-weight: $font-weight-bold;
+  position: static;
+  margin-bottom: 0;
+
+  &.is-hidden {
+    display: none;
+  }
+
+  @include breakpoint($bp-med-home max-width) {
+    position: relative;
+    border-bottom: 1px $gray-8 solid;
+
+    .link-primary-nav {
+      padding: 15px 30px;
+      width: 100%
+    }
+
+    .icon-select {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+
+      svg {
+        @include rotate(-90);
+        fill: $blue;
+      }
+    }
+  }
+
+  @include breakpoint($bp-med-home min-width) {
+    display: inline-block;;
     margin-right: 28px;
+    float: left;
 
     &:last-of-type {
       margin-right: 0;
     }
+
+    .icon-select { 
+      display: none
+    }
   }
 
-  @include breakpoint(1251px min-width) {
+  @include breakpoint($bp-large-home min-width) {
     margin-right: 25px;
   }
 }
 
-// Mobile menu button to trigger dropdown.
-.nav-primary_button-menu {
+// The Sub nav.
+.nav-primary_list_subnav {
+  display: none;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-direction: column;
+
+  &.is-open {
+    display: flex;
+    height: auto;
+
+    @include breakpoint($bp-med-home min-width) { 
+      flex-direction: row;
+    }
+  }
+
+  @include breakpoint($bp-med-home min-width) {
+    @include grid__unit--cols(12);
+    z-index: 1;
+    width: 100vw;
+    position: absolute;
+    top: 224px;
+    left: 0;
+    right: 0;
+    background: $black-7;
+    justify-content: flex-start;
+    padding: 20px 30px;
+  }
+
+  @include breakpoint($bp-large-home) {
+    @include grid__unit--cols(12.5);
+    left: -30px;
+    right: -30px;
+    top: 147px;
+  }
+}
+
+.nav-primary_list_subnav_list-item {
+  @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
+  background-color: $black-15;
+  border-top: 1px $gray-8 solid;
+  position: relative;
+  margin: 0;
+
+  @include breakpoint($bp-med-home min-width) {
+    font-size: 18px;
+    line-height: 25px;
+    background-color: $black-7;
+    font-size: 24px;
+    line-height: 28px;
+    display: block;
+    padding: 30px 0 0 30px;
+    // margin-top: 30px;
+    border: 0;
+
+    &:first-child {
+      @include grid__unit--cols(3);
+      padding-right: 15px;
+      border: 0;
+
+      .link-primary-nav {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: $font-weight-bold;
+
+        .icon-select {
+          display: inline-block;
+
+          svg {
+            @include rotate(-90);
+            fill: $blue;
+            height: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+   @include breakpoint($bp-large-home) {
+
+    &:first-child {
+      @include grid__unit--cols(4);
+    }
+  }
+
+  .link-primary-nav {
+    padding: 15px 30px;
+
+    @include breakpoint($bp-med-home min-width) {
+      font-size: 18px;
+      line-height: 25px;
+      padding: 0;
+    }
+  }
+}
+
+.nav-primary_list_subnav-container {
+  @include breakpoint($bp-med-home min-width) {
+    @include grid__unit--cols(9);
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-content: flex-start;
+
+    .nav-primary_list_subnav_list-item {
+      @include grid__unit--cols(5.5);
+      margin-right: 20px;
+      padding: 30px 0;
+      border-top: 1px solid $gray-8;
+
+      &:nth-of-type(-n+2) {
+        border-top: none;
+      }
+
+      .link-primary-nav {
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        line-height: 25px;
+      }
+
+      &:first-child {
+        @include grid__unit--cols(5.5);
+
+        .link-primary-nav {
+          font-size: 18px;
+          font-weight: $font-weight-bold;
+          line-height: 25px;
+        }
+
+        .icon-select {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($bp-large-home) {
+    @include grid__unit--cols(8);
+
+    .nav-primary_list_subnav_list-item {
+      @include grid__unit--cols(3.5);
+      padding: 30px 0;
+
+      &:nth-of-type(-n+3) {
+        border-top: none;
+      }
+
+      &:first-child {
+        @include grid__unit--cols(3.5);
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        line-height: 25px;
+
+        .icon-select {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.nav-primary_list_subnav_list-item-back {
+  background-color: $black-7;
+  border-top: 1px $gray-8 solid;
+  position: relative;
+  margin: 0;
+
+  .link-primary-nav {
+    @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
+    padding: 15px 30px 15px 50px;
+  }
+
+  .icon-select {
+    position: absolute;
+    left: 25px;
+    top: 15px;
+
+    svg {
+      @include rotate(90);
+      fill: $blue;
+    }
+  }
+
+  @include breakpoint($bp-med-home) {
+    display: none;
+  }
+}
+
+// Mobile menu button to trigger drop down.
+.nav-primary-menu_button {
+  @extend %background-transition;
   border: 2px $purple solid;
   color: $purple;
   font-weight: $font-weight-medium;
@@ -41,40 +332,100 @@
   text-align: center;
   width: 63px;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     display: none;
   }
 
   &:active,
   &:hover,
-  &.open {
+  &.open,
+  &.nav-primary-menu_button-clicked {
     background-color: $purple-lighter;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
 // Primary nav link
-.link-primary-nav a {
+.link-primary-nav {
   display: inline-block;
 
-  @include breakpoint(740px min-width) {
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  @include breakpoint($bp-med-home min-width) {
     font-size: 18px;
     font-weight: $font-weight-bold;
     padding-bottom: 50px;
-
-    &:hover {
-      padding-bottom: 30px;
-    }
   }
 
-  @include breakpoint(1251px min-width) {
+  @include breakpoint($bp-large-home min-width) {
     padding: 50px 0;
+  }
+}
 
-    &:hover {
-      padding-bottom: 32px;
+.nav-primary_list-item_title {
+
+  &.is-active {
+    .icon {
+      display: none;
+    }
+
+    .link-primary-nav {
+      @include breakpoint($bp-med-home min-width) {
+        color: $black;
+        border-bottom: 20px $purple solid;
+        padding-bottom: 30px;
+      }
+
+      @include breakpoint($bp-large-home min-width) {
+        padding-bottom: 32px;
+      }
     }
   }
 
-  &:hover {
-    border-bottom: 20px $purple solid;
+  .link-primary-nav {
+
+    @include breakpoint($bp-med-home min-width) {
+
+      &:active,
+      &:hover,
+      &:focus {
+        color: $black;
+        border-bottom: 20px $purple solid;
+        padding-bottom: 30px;
+      }
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+
+      &:active,
+      &:hover,
+      &:focus {
+        padding-bottom: 32px;
+      }
+    }
+  }
+}
+
+.nav-primary_list_subnav_list-item_text {
+  color: $black-55;
+  display: none;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: $font-weight-medium;
+  margin-bottom: 0;
+
+  @include breakpoint($bp-large-home) {
+    display: block;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: $font-weight-medium;
   }
 }

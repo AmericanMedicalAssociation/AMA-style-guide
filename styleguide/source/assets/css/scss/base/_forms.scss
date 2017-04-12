@@ -12,6 +12,10 @@ fieldset {
 	margin: 0;
 }
 
+legend {
+  margin-bottom: 0.5em;
+}
+
 label {
 	display: block;
 }
@@ -22,27 +26,161 @@ button, input, select, textarea {
     margin: 0 1px 0;
 }
 
-input, textarea {
-	width: 100%;
-	border: 1px solid $gray;
-	padding: $pad-half 0.65rem;
+// Global input styles
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+  -webkit-appearance: none;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background-color: $white;
+  border: 1px solid $gray-8;
+  border-radius: 0;
+  outline: none;
+  padding: 0 15px;
+
+  &:focus,
+  &:active {
+    border: 2px solid $purple;
+    outline: none;
+    padding: 0 14px;
+  }
+
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+
+  }
+
+  &.error {
+    border: 2px solid $red-darker;
+    padding: 0 14px;
+  }
+
+  &.valid {
+    color: $black;
+  }
 }
 
-input[type=text], input[type=search], input[type=url], input[type=number], textarea {
-	-webkit-appearance: none;
+// Overriding textarea styles
+textarea {
+  height: 250px;
+  padding: 15px;
+
+  &:focus,
+  &:active {
+    border: 2px solid $purple;
+    outline: none;
+    padding: 14px;
+  }
+
+  &.error {
+    padding: 14px;
+  }
 }
 
-button, input[type="submit"] {
-	padding: $pad-half;
-	background-color: $gray-dark;
-	border: 1px solid $gray;
-	cursor: pointer;
+select {
+  background-image: url('../../assets/icons/svg/opendropdown.svg');
+  background-position: 97.5% 52%;
+  background-repeat: no-repeat;
 }
 
+// Placeholder text styles
+::-webkit-input-placeholder { /* Chrome */
+  color: $gray-8;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $gray-8;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $gray-8;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: $gray-8;
+  opacity: 1;
+}
+
+// Requried label error styles
+label {
+  &.error {
+    @extend %b4;
+    display: block;
+    color: $red-darker;
+    margin-top: 4px;
+    clear: both;
+  }
+}
+
+// Checkbox and radio button styles
 input[type="checkbox"],
 input[type="radio"] {
-    width: auto;
-    margin-right: 0.3em;
+  @extend %element-invisible;
+
+  // Label styles
+  + label {
+    margin: 0 0 0.3em;
+
+    // Custom checkboxes and radio buttons
+    &:before {
+      position: relative;
+      top: .15em;
+      display: inline-block;
+      content: '';
+      width: 20px;
+      height: 20px;
+      background-image: url('../../assets/icons/svg/radio.svg');
+      background-position: 0px 0px;
+      background-size: 20px;
+      background-repeat: no-repeat;
+      margin-right: 10px;
+    }
+  }
+
+  // Active styles
+  &:checked + label {
+    font-weight: 700;
+
+    &:before {
+      background-position: 0px -25px;
+    }
+  }
+
+  // Tab focus styles
+  &:focus + label {
+    font-weight: 700;
+  }
+}
+
+// Add radius curves to radio buttons
+input[type="checkbox"] {
+  + label:before {
+    background-image: url('../../assets/icons/svg/checkbox.svg');
+  }
+
+  &:checked + label:before {
+    background-position: 0px -25px;
+  }
 }
 
 input[type="search"] {
@@ -64,7 +202,7 @@ input[type="search"]::-webkit-search-decoration {
 	fieldset, .inline-container {
 		position: relative;
 	}
-	
+
 	input[type=submit], button, .btn {
 		padding: 0.65rem 1.3rem;
 		background: $gray-dark;
@@ -95,4 +233,3 @@ input[type="search"]::-webkit-search-decoration {
 /*------------------------------------*\
     $SPECIFIC FORMS
 \*------------------------------------*/
-

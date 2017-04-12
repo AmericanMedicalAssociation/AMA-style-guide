@@ -16,13 +16,35 @@
 }
 
 %clearfix {
-    *zoom: 1;
-     &:after {
-        content: "";
-        display: table;
-        clear: both;
-        }
-    }
+  *zoom: 1;
+
+  &:before {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Element-invisible as defined by snook.ca
+ * @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+%element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if support-legacy-browser(ie, '7') {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
 
 /* Completely remove from the flow and screen readers. */
 .is-hidden {
@@ -105,7 +127,37 @@
 
 .link,
 %link {
+  color: $blue;
+
+  &:hover,
+  &:focus {
     color: $blue;
+    text-decoration: underline;
+  }
+}
+
+// Global text color transition on hover
+%text-transition {
+  -moz-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+// Global icon color transition on hover
+%icon-transition {
+  -moz-transition: fill 0.3s ease;
+  -o-transition: fill 0.3s ease;
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+// Global background color transition on hover
+%background-transition {
+  -moz-transition: background-color 0.28s ease;
+  -o-transition: background-color 0.28s ease;
+  -webkit-transition: background-color 0.28s ease;
+  transition: background-color 0.28s ease;
 }
 
 .eyebrow {

@@ -1,4 +1,4 @@
-/* Text-Related Elements */ 
+/* Text-Related Elements */
 p {
   margin-bottom: $space;
 }
@@ -12,12 +12,18 @@ p {
 // @todo update with semantic class
 .b2, %b2 {
   font-size: 1.333em;
-  line-height: 1.7222;
+  line-height: 1.29;
 }
 
 // @todo update with semantic class
 .b4, %b4 {
   font-size: 1em;
+  line-height: 1.3888;
+}
+
+// @todo update with semantic class
+.b5, %b5 {
+  font-size: 0.875em;
   line-height: 1.3888;
 }
 
@@ -30,7 +36,7 @@ blockquote {
   margin-bottom: $space;
 }
 
-/* Horizontal Rule */ 
+/* Horizontal Rule */
 hr {
   border: 0;
   height: 2px;

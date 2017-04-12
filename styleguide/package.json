@@ -1,6 +1,6 @@
 {
   "name": "ama-style-guide",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "A living style guide for the American Medical Association",
   "repository": "https://github.com/AmericanMedicalAssociation/AMA-style-guide",
   "main": "gulpfile.js",
@@ -30,6 +30,7 @@
     "gulp-uglify": "^2.0.0",
     "postcss-reporter": "^3.0.0",
     "postcss-scss": "^0.4.1",
+    "gulp-util": "^3.0.8",
     "sass-grid": "^3.0.0"
   },
   "devDependencies": {

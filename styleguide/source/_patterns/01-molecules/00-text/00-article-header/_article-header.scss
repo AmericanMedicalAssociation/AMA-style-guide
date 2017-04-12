@@ -1,0 +1,29 @@
+/**
+ * @file article-header.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.article-header {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-bottom: 1px solid $gray-8;
+
+  @include breakpoint($bp-small) {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+  }
+}
+
+.article-header_subtitle {
+  @extend %b2;
+  margin-top: 12px;
+
+  @include breakpoint($bp-small) {
+    margin-top: 18px;
+  }
+}
+

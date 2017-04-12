@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="45px" viewBox="0 0 20 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>checkbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="20"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <use id="Rectangle" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-1"></use>
+        <g id="Group" transform="translate(0.000000, 25.000000)">
+            <rect id="Rectangle-Copy" fill="#46166B" x="0" y="0" width="20" height="20"></rect>
+            <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" points="8.5 14.035 4 9.716 5.3955 8.281 8.4735 11.218 14.5785 5 16 6.4085"></polygon>
+        </g>
+    </g>
+</svg>

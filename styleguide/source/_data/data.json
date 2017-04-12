@@ -72,6 +72,57 @@
     "short": "20"
   },
   "seconds" : "31",
+  "nav": {
+    "first": "Education",
+    "second": "Life & Career",
+    "third": "Practice Management",
+    "fourth": "Delivering Care",
+    "fifth": "About Us"
+  },
+  "subnavfirstchild": {
+    "first": "Education Overview",
+    "second": "Creating the Medical School of the Future",
+    "third": "Continuing Medical Education",
+    "fourth": "Financing Medical School",
+    "fifth": "Becoming a Physician"
+  },
+  "subnavsecondchild": {
+    "first": "Life & Career Overview",
+    "second": "Financial Management",
+    "third": "Residency & Career Planning",
+    "fourth": "International Medical Graduates",
+    "fifth": "Physician Opportunities",
+    "sixth": "Publications & Newsletters",
+    "seventh": "Physican Data Privacy"
+  },
+  "subnavthirdchild": {
+    "first": "Practice Management Overview",
+    "second": "Managing Your Practice",
+    "third": "Coding & Billing",
+    "fourth": "Medicare & Medicaid",
+    "fifth": "Private Payer Reform",
+    "sixth": "Claims Processing & Practice Revenue",
+    "seventh": "HIPAA Compliance",
+    "eighth": "Medical Liability Reform"
+  },
+  "subnavfourthchild": {
+    "first": "Delivering Care Overview",
+    "second": "Preventing Chronic Diseases",
+    "third": "Reducing Opioid Abuse & Misuse",
+    "fourth": "Public Health",
+    "fifth": "Population Care",
+    "sixth": "Advances in Patient Care",
+    "seventh": "Clinical Research and Diagnosis",
+    "eighth": "Physician-led Teams",
+    "ninth": "Improving Digital Health"
+  },
+  "subnavfifthchild": {
+    "first": "About Us Overview",
+    "second": "Our Vision",
+    "third": "Who We Are",
+    "fourth": "What We Do",
+    "fifth": "Becoming a Physician"
+  },
   "icon": {
     "facebook": "icon-facebook",
     "googleplus": "icon-googleplus",

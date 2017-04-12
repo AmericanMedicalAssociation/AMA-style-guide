@@ -5,6 +5,7 @@
  */
 
 .button-search {
+  @extend %background-transition;
   border: 2px $blue solid;
   color: $blue;
   display: block;
@@ -13,17 +14,17 @@
   position: relative;
   width: 44px;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     bottom: 0;
     height: 84px;
     margin-bottom: 40px;
     position: absolute;
-    right: 21px;
+    right: 30px;
     width: 135px;
   }
 
   &:hover {
-    background: $blue-lighter;
+    background-color: $blue-lighter;
     color: $blue;
   }
 }
@@ -31,7 +32,7 @@
 .button-search_title {
   display: none;
 
-  @include breakpoint(740px min-width) {
+  @include breakpoint($bp-med-home min-width) {
     bottom: -41px;
     display: block;
     font-size: 18px;

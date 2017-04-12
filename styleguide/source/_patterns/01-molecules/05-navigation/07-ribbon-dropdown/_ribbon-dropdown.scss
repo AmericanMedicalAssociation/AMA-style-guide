@@ -8,6 +8,7 @@
 
 .ribbon_dropdown_trigger {
   @extend %type-smaller;
+  @extend %background-transition;
   display: inline-block;
   width: 100%;
   background-color: $purple;
@@ -49,10 +50,14 @@
   width: 100%;
   background-color: $black-20;
   z-index: 100;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .ribbon_dropdown_nav_item {
   @extend %type-smaller;
+  margin-bottom: 0;
   border-bottom: 1px solid $gray-8;
 
   &:last-child {

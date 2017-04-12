@@ -1,4 +1,16 @@
 # Living Style Guide for AMA
+This is the living style guide for the American Medical Association. It is a platform-agnostic tool to empower employees and vendors to maintain consistent design and hierarchy throughout the AMA digital ecosystem.
+
+This style guide is a compilation of [atomic components](http://bradfrost.com/blog/post/atomic-web-design/) that have been specifically tailored to the needs of AMA. By documenting and assembling this collection of patterns, we are able to build consistently, reuse code, and [see all of our patterns in one place](https://americanmedicalassociation.github.io/AMA-style-guide/).
+
+## To use the Style Guide on a project:
+- Grab the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases)
+- Open the `.zip` into your project
+- Compile the production files:
+  - `cd /styleguide`
+  - `gulp serve`
+- Link to the production files at `styleguide/public/assets/`
+
 ## To begin working:
 
 **Just the first time:**
@@ -11,10 +23,17 @@
 - Occasionally things might stop refreshing well. If that happens, just kill (`Control-C`) gulp and re-run.
 
 **To deploy changes to GitHub Pages**
-- `gulp` to generate things if you haven't recently.
-- `gulp deploy` to copy /public to the gh-pages branch and push.
+- `gulp deploy` to build the production ready code, and then copy `/public` to the `gh-pages` branch and push.
 
 Occasionally, you might have to make a change to CSS and let the new stylesheet get pushed into the browser to see recent changes, but otherwise this should take care of everything: moving assets, compiling SASS, getting BrowserSync running, and more.
+
+**To mark a new release of the Style Guide**
+
+_this should only be run on the `develop` branch_
+- Make sure you are running the most up-to-date code
+  - Updates will be rejected if they are non-fast-forward
+- `gulp release` to build the files correctly, update version information, cut a tag, and deploy the files to `gh-pages`
+- Navigate to the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases) to see the new release and add notes.
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
 
