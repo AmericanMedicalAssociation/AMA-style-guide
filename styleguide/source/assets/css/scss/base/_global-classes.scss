@@ -6,7 +6,8 @@
 .clearfix {
     *zoom: 1;
 }
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
@@ -40,7 +41,7 @@
   height: 1px;
   width: 1px;
   overflow: hidden;
-  @if support-legacy-browser(ie, '7') {
+  @if support-legacy-browser(ie, "7") {
     clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
   }
   clip: rect(1px, 1px, 1px, 1px);
@@ -138,25 +139,16 @@
 
 // Global text color transition on hover
 %text-transition {
-  -moz-transition: color 0.3s ease;
-  -o-transition: color 0.3s ease;
-  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
 // Global icon color transition on hover
 %icon-transition {
-  -moz-transition: fill 0.3s ease;
-  -o-transition: fill 0.3s ease;
-  -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
 }
 
 // Global background color transition on hover
 %background-transition {
-  -moz-transition: background-color 0.28s ease;
-  -o-transition: background-color 0.28s ease;
-  -webkit-transition: background-color 0.28s ease;
   transition: background-color 0.28s ease;
 }
 
@@ -180,7 +172,7 @@
   .summary {
     font-size: 1.33em;
     line-height: 1.2;
-    margin-bottom:  65px;
+    margin-bottom: 65px;
     text-align: center;
   }
 }

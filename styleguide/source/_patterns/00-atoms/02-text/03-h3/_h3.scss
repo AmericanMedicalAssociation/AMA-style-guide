@@ -6,7 +6,9 @@
 
 // Sets up the base font styles for body, h3, mobile first scaling up
 body {
-  h3, .h3, %h3 {
+  h3,
+  .h3,
+  %h3 {
     @include type($font-serif, 1.111em, $font-weight-medium, 1.2);
     margin-bottom: 6px;
   }
@@ -14,7 +16,9 @@ body {
   // Body size is increased to 20px, the new value needs to be set in px
   // so that the header ems are calculated properly
   @include breakpoint($bp-med min-width) {
-    h3, .h3, %h3 {
+    h3,
+    .h3,
+    %h3 {
       @include type($font-serif, 1.5em, $font-weight-medium, 1.1333333333);
       margin-bottom: 9px;
     }

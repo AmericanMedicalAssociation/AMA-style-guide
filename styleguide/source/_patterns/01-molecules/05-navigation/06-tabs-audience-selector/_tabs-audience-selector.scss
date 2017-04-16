@@ -51,12 +51,11 @@
     }
 
     .icon-select svg {
-      -moz-transform: scaleY(-1);
-      -o-transform: scaleY(-1);
-      -webkit-transform: scaleY(-1);
       transform: scaleY(-1);
       filter: FlipV;
+      /* stylelint-disable property-no-vendor-prefix */
       -ms-filter: "FlipV";
+      /* stylelint-enable */
     }
   }
 
@@ -69,12 +68,11 @@
       border: 0;
 
       .icon-select svg {
-        -moz-transform: initial;
-        -o-transform: initial;
-        -webkit-transform: initial;
         transform: initial;
         filter: initial;
+        /* stylelint-disable property-no-vendor-prefix */
         -ms-filter: "initial";
+        /* stylelint-enable */
       }
     }
   }

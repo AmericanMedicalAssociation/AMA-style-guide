@@ -10,8 +10,9 @@
 	padding: $pad;
 	border: 0;
 	text-align: center;
-	
-	&:hover, &:focus {
+
+	&:hover,
+	&:focus {
 		background: $gray;
 		color: $white;
 	}

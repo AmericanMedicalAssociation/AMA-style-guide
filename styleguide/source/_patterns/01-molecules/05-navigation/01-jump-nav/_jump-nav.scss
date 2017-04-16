@@ -66,8 +66,6 @@
   .icon {
     margin: 18px 0 0 15px;
     float: right;
-    -ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
 
     svg {
@@ -78,8 +76,6 @@
 
     // when the jump nav is closed do this to the icon
     .jump-nav.is-closed & {
-      -ms-transform: rotate(0deg); /* IE 9 */
-      -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
       transform: rotate(0deg);
       margin-top: 6px;
     }
@@ -140,5 +136,3 @@
     }
   }
 }
-
-
