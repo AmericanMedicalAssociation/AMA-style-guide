@@ -1,0 +1,114 @@
+/**
+ * @file hub-header.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.hub-header {
+  padding: 0 25px;
+  background-color: $purple;
+}
+
+.hub-header-inner {
+  @extend %clearfix;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px 0;
+  align-items: center;
+
+  @include breakpoint($bp-med-home) {
+    padding: 20px 0;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 120px;
+    height: 65px;
+    order: 1;
+
+    @include breakpoint($bp-med) {
+      width: 163px;
+      height: 65px;
+    }
+  }
+}
+
+.hub-header_messaging {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  margin-left: 20px;
+
+  @include breakpoint(1000px) {
+    flex-wrap: nowrap;
+  }
+
+  .button-reversed {
+    @extend %type-small;
+    order: 2;
+    padding: 10px 25px;
+    margin-left: auto;
+
+    @include breakpoint($bp-small) {
+      max-width: 200px;
+    }
+
+    @include breakpoint(1000px) {
+      width: auto;
+    }
+  }
+}
+
+.hub-header_title {
+  @include type($font-sans-serif, 23px, $font-weight-thin, 1.3043478261);
+  color: $white;
+  order: 1;
+  display: none;
+
+  @include breakpoint($bp-small) {
+    display: block;
+    width: calc(100% - 200px);
+  }
+
+  @include breakpoint(1000px) {
+    @include type($font-sans-serif, 28px, $font-weight-thin, 1.25);
+    width: auto;
+  }
+}
+
+.hub-header_small {
+  @extend %type-smaller;
+  color: $white;
+  order: 1;
+
+  .link-white {
+    display: none;
+  }
+
+  @include breakpoint($bp-small) {
+    order: 3;
+    min-width: 200px;
+  }
+
+  @include breakpoint(1000px) {
+    margin-left: 20px;
+
+    .link-white {
+      display: inline-block;
+    }
+  }
+}
+
+.hub-header_text {
+  display: inline;
+
+  @include breakpoint(1000px) {
+    .link-white + & {
+      border-left: 1px solid $white;
+      padding: 3px 10px;
+      margin-left: 10px;
+    }
+  }
+}
