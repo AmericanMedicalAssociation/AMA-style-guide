@@ -35,3 +35,15 @@ button,
   @extend %button;
   width: 100%;
 }
+
+.button-reversed {
+  background-color: $white;
+  color: $black;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $purple-darker;
+    color: $white;
+  }
+}
