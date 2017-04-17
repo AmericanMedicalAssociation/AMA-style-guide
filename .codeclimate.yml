@@ -1,6 +1,0 @@
-engines:
-  stylelint:
-    enabled: true
-ratings:
-  paths:
-  - "**.scss"
