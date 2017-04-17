@@ -18,10 +18,14 @@
 
   &.fixed {
     position: fixed;
-    top: 0;
+    top: 82px; // Set to show below the sticky header
     left: 0;
     right: 0;
     background-color: $white;
+
+    @include breakpoint($bp-large) {
+      top: 92px; // Set to show below the sticky header
+    }
   }
 
   @include breakpoint($bp-small) {
@@ -58,7 +62,7 @@
   .jump-nav.is-closed & {
     margin-bottom: 0;
 
-    @include breakpoint($bp-med) { 
+    @include breakpoint($bp-med) {
       margin-bottom: 9px;
     }
   }
@@ -110,7 +114,7 @@
     display: block;
   }
 
-  @include breakpoint($bp-med) { 
+  @include breakpoint($bp-med) {
     display: block;
     @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
 

@@ -4,9 +4,18 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
+.header-primary-span {
+  display: block;
+  width: 100%;
+}
+
 // Primary header section.
 .header-primary {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  //position: relative;
   background: $white;
   width: 100%;
   z-index: 50;
@@ -89,5 +98,100 @@
       top: 19px;
       right: 0;
     }
+  }
+}
+
+// Fixed header overrides
+.header-primary--sticky {
+  position: fixed;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  border-bottom: 1px $black-20 solid;
+
+  .header-primary-inner {
+    padding: 20px 20px 10px;
+
+    @include breakpoint($bp-med-home min-width) {
+      padding-right: 80px;
+      padding-bottom: 0;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      padding-right: 90px;
+    }
+  }
+
+  // Logo
+  .logo {
+    width: 110px;
+    margin-bottom: 0;
+  }
+
+  // Search button
+  .button-search {
+    height: 44px;
+    width: 44px;
+    right: 0;
+    margin-bottom: 0;
+
+    @include breakpoint($bp-med-home min-width) {
+      right: 20px;
+    }
+  }
+
+  // Search button title
+  .button-search_title {
+    display: none;
+  }
+
+  .nav-primary-menu {
+    float: right;
+    margin: 0;
+    clear: none;
+    width: auto;
+  }
+
+  .nav-primary_list-item {
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      margin-right: 25px;
+    }
+  }
+
+  .nav-primary_list-item_title {
+    > .link-primary-nav {
+      @include breakpoint($bp-med-home min-width) {
+        font-size: 14px;
+        padding: 15px 0 25px;
+
+        &:active,
+        &:hover,
+        &:focus {
+          border-bottom: 10px $purple solid;
+          padding-bottom: 15px;
+        }
+      }
+
+      @include breakpoint($bp-large-home min-width) {
+        font-size: 18px;
+      }
+    }
+
+    &.is-active > .link-primary-nav {
+      @include breakpoint($bp-med-home min-width) {
+        border-bottom: 10px $purple solid;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .nav-primary_list_subnav {
+    top: auto;
   }
 }
