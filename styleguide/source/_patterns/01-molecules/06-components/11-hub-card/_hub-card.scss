@@ -42,3 +42,31 @@
   margin: 0 24px;
   order: 2;
 }
+
+.hub-card-portrait {
+  min-height: 300px;
+  justify-content: flex-end;
+
+  .button {
+    margin: 0 24px 12px;
+  }
+
+  // when the portrait is hovered, trigger the 'button' hoverstate
+  &:active,
+  &:hover,
+  &:focus {
+
+    .button-secondary {
+      border-color: $purple-darker;
+      background-color: $black-7;
+      color: $purple-darker;
+    }
+  }
+}
+
+.hub-card-image-123 {
+  background: url(../images/fpo_square.png);
+  background-size: cover;
+  background-position: center;
+}
+
