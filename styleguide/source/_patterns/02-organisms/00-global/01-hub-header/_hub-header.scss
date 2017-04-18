@@ -39,6 +39,7 @@
   align-items: center;
   flex-grow: 2;
   flex-wrap: wrap;
+  justify-content: center;
   margin-left: 20px;
 
   @include breakpoint(1000px) {
@@ -66,6 +67,8 @@
   color: $white;
   order: 1;
   display: none;
+  margin-left: auto;
+  text-align: center;
 
   @include breakpoint($bp-small) {
     display: block;
@@ -94,6 +97,7 @@
 
   @include breakpoint(1000px) {
     margin-left: 20px;
+    max-width: 250px;
 
     .link-white {
       display: inline-block;
@@ -102,13 +106,6 @@
 }
 
 .hub-header_text {
-  display: inline;
-
-  @include breakpoint(1000px) {
-    .link-white + & {
-      border-left: 1px solid $white;
-      padding: 3px 10px;
-      margin-left: 10px;
-    }
-  }
+  display: block;
+  margin-bottom: 0;
 }
