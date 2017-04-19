@@ -1,0 +1,5 @@
+---
+el: ".pager"
+title: "Pagination Controls"
+---
+The User pagination controls for list content.

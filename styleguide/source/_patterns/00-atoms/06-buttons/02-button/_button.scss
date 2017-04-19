@@ -36,14 +36,20 @@ button,
   width: 100%;
 }
 
-.button-reversed {
+.button-small {
+  padding: 10px 20px;
+}
+
+.button-secondary {
   background-color: $white;
-  color: $black;
+  color: $purple;
+  border: 1px solid $purple;
 
   &:active,
   &:hover,
   &:focus {
-    background-color: $purple-darker;
-    color: $white;
+    border-color: $purple-darker;
+    background-color: $black-7;
+    color: $purple-darker;
   }
 }

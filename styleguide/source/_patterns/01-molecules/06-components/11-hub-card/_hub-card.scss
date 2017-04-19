@@ -1,0 +1,68 @@
+/**
+ * @file hub-card.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $black-7;
+  color: $black;
+  padding-bottom: 12px;
+
+  &:hover {
+    background-color: #e6e6e6;
+    color: $black;
+  }
+}
+
+.hub-card_image {
+  width: 100%;
+  order: 1;
+}
+
+.hub-card_title {
+  @extend %type-larger;
+  padding: 24px 0;
+  margin: 0 24px;
+  border-bottom: 1px solid $black;
+  order: 2;
+  text-align: center;
+
+  .hub-card_image + & {
+    border-bottom: 0;
+    order: 3;
+  }
+}
+
+.hub-card_desc {
+  @extend %type-large;
+  padding: 24px 0 12px;
+  margin: 0 24px;
+  order: 2;
+}
+
+.hub-card-portrait {
+  // need to do larger widths depending on the number of children
+  min-height: calc(((100vw -  40px) / 2) * 3);
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+
+  .button {
+    margin: 0 24px 12px;
+  }
+
+  // when the portrait is hovered, trigger the 'button' hoverstate
+  &:active,
+  &:hover,
+  &:focus {
+
+    .button-secondary {
+      border-color: $purple-darker;
+      background-color: $black-7;
+      color: $purple-darker;
+    }
+  }
+}

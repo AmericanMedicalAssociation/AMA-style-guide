@@ -1,0 +1,66 @@
+// Pager ul styles
+.pager {
+  @extend %b5;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include breakpoint($bp-xs) {
+    font-size: 1em;
+    line-height: 1.3888;
+  }
+
+  // General li styles
+  li {
+    display: inline-block;
+  }
+
+  // Show/Hide links at breakpoint
+  .pager_item--full {
+    display: none;
+
+    @include breakpoint($bp-xs) {
+      display: inline-block;
+    }
+  }
+
+  // Link styles
+  a {
+    display: block;
+    color: $gray-8;
+    padding: 20px 5px;
+
+    &:hover {
+      color: $blue;
+    }
+
+    @include breakpoint($bp-xs) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include breakpoint($bp-small) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+// Current page styles
+.pager_item--current {
+  font-style: italic;
+  color: $blue;
+  box-shadow: inset 0 2px 0 $blue;
+  padding: 20px 5px;
+
+  @include breakpoint($bp-xs) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include breakpoint($bp-small) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
