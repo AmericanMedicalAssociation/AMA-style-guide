@@ -42,3 +42,27 @@
   margin: 0 24px;
   order: 2;
 }
+
+.hub-card-portrait {
+  // need to do larger widths depending on the number of children
+  min-height: calc(((100vw -  40px) / 2) * 3);
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+
+  .button {
+    margin: 0 24px 12px;
+  }
+
+  // when the portrait is hovered, trigger the 'button' hoverstate
+  &:active,
+  &:hover,
+  &:focus {
+
+    .button-secondary {
+      border-color: $purple-darker;
+      background-color: $black-7;
+      color: $purple-darker;
+    }
+  }
+}
