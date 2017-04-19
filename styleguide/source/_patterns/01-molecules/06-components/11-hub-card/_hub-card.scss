@@ -44,8 +44,11 @@
 }
 
 .hub-card-portrait {
-  min-height: 300px;
+  // need to do larger widths depending on the number of children
+  min-height: calc(((100vw -  40px) / 2) * 3);
   justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
 
   .button {
     margin: 0 24px 12px;
