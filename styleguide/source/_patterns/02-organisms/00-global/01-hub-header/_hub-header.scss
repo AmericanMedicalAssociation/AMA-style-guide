@@ -14,11 +14,11 @@
   display: flex;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 20px 0;
+  padding: 5px 0;
   align-items: center;
 
   @include breakpoint($bp-med-home) {
-    padding: 20px 0;
+    padding: 8px 0;
   }
 
   .logo {
@@ -51,6 +51,8 @@
     order: 2;
     padding: 10px 25px;
     margin-left: auto;
+    position: relative;
+    top: 10px;
 
     @include breakpoint($bp-small) {
       max-width: 200px;
@@ -58,6 +60,8 @@
 
     @include breakpoint(1000px) {
       width: auto;
+      position: static;
+      top: auto;
     }
   }
 }
@@ -69,6 +73,7 @@
   display: none;
   margin-left: auto;
   text-align: center;
+  margin-bottom: 10px;
 
   @include breakpoint($bp-small) {
     display: block;
@@ -77,6 +82,7 @@
 
   @include breakpoint(1000px) {
     @include type($font-sans-serif, 28px, $font-weight-thin, 1.25);
+    margin-bottom: 0;
     width: auto;
   }
 }
@@ -108,4 +114,11 @@
 .hub-header_text {
   display: block;
   margin-bottom: 0;
+  position: relative;
+  top: -10px;
+
+  @include breakpoint(1000px) {
+    position: static;
+    top: auto;
+  }
 }
