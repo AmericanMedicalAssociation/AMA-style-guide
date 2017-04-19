@@ -51,11 +51,11 @@
     order: 2;
     padding: 10px 25px;
     margin-left: auto;
-    position: relative;
-    top: 10px;
 
     @include breakpoint($bp-small) {
       max-width: 200px;
+      position: relative;
+      top: 10px;
     }
 
     @include breakpoint(1000px) {
@@ -89,6 +89,7 @@
 
 .hub-header_small {
   @extend %type-smaller;
+  margin-left: auto;
   color: $white;
   order: 1;
 
@@ -99,6 +100,7 @@
   @include breakpoint($bp-small) {
     order: 3;
     min-width: 200px;
+    margin-left: 0;
   }
 
   @include breakpoint(1000px) {
@@ -114,8 +116,11 @@
 .hub-header_text {
   display: block;
   margin-bottom: 0;
-  position: relative;
-  top: -10px;
+
+  @include breakpoint($bp-small) {
+    position: relative;
+    top: -10px;
+  }
 
   @include breakpoint(1000px) {
     position: static;
