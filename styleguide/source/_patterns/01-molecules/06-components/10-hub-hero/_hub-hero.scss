@@ -12,19 +12,16 @@
 .hub-hero-inner {
   display: inline-block;
   margin: 0 auto;
-  padding: 20px;
   text-align: center;
-  background-color: rgba($white, .7);
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .hub-hero-split {
   align-items: stretch;
 
   .hub-hero-inner {
-    background-color: transparent;
+    // background-color: transparent;
     align-items: stretch;
     padding: 0 20px;
   }
@@ -32,45 +29,23 @@
   .hub-hero_title {
     order: 1;
     padding: 20px;
-    background-color: rgba($white, .7);
   }
 
   .hub-hero_desc {
     order: 3;
     margin-top: auto;
-    background-color: rgba($white, .7);
     padding: 20px;
     margin-bottom: 0;
   }
 
   .hub-hero_button-container {
     order: 2;
-    background-color: rgba($white, .7);
-    padding: 0 20px 20px;
-  }
-}
-
-.hub-hero-no-overlay {
-  .hub-hero-inner {
-    background-color: transparent;
-  }
-
-  &.hub-hero-split {
-    .hub-hero_title {
-      background-color: transparent;
-    }
-
-    .hub-hero_desc {
-      background-color: transparent;
-    }
-
-    .hub-hero_button-container {
-      background-color: transparent;
-    }
   }
 }
 
 .hub-hero_title {
+  background-color: rgba($white, .7);
+  padding: 20px 20px 0;
   @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
   @include breakpoint($bp-med-home min-width) {
     @include type($font-sans-serif, 38px, $font-weight-thin, 1.1052631579);
@@ -82,4 +57,30 @@
 
 .hub-hero_desc {
   @extend %type-larger;
+  padding: 0 20px 20px;
+  margin-bottom: 0;
+  background-color: rgba($white, .7);
+}
+
+.hub-hero_button-container {
+  margin-top: 20px;
+}
+
+
+.hub-hero-no-overlay {
+  .hub-hero-inner {
+    background-color: transparent;
+  }
+
+  .hub-hero_title {
+    background-color: transparent;
+  }
+
+  .hub-hero_desc {
+    background-color: transparent;
+  }
+
+  .hub-hero_button-container {
+    margin-top: 0;
+  }
 }
