@@ -19,7 +19,9 @@ var gulp        = require('gulp'),
     glob        = require('glob'),
     svgmin      = require('gulp-svgmin'),
     gulpicon    = require('gulpicon/tasks/gulpicon'),
-    gutil       = require('gulp-util');
+    gutil       = require('gulp-util'),
+    pWaitFor    = require('p-wait-for'),
+    pathExists  = require('path-exists');
 
 // Config
 var config = require('./build.config.json');
@@ -102,14 +104,19 @@ var iconFiles = glob.sync("source/assets/icons/svg/*.svg");
 var iconConfig = require("./source/assets/icons/config.js");
 iconConfig.dest = "public/assets/icons/";
 gulp.task('makeIcons', gulpicon(iconFiles, iconConfig));
+gulp.task('waitForIcons', function(callback) {
+  var trigger = iconConfig.dest + 'preview.html';
+  return pWaitFor(() => pathExists(trigger, '1000')).then(() => {
+    console.log('Yay! The icons now exist.');
+  });
+});
 gulp.task('reloadIcons', function() {
   return gulp.src('', {read: false})
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('icons', function (callback) {
-  runSequence('minifyIcons', 'makeIcons', 'reloadIcons');
-  callback();
+  runSequence('minifyIcons', 'makeIcons', 'waitForIcons', 'reloadIcons', callback);
 });
 
 // Task: patternlab
