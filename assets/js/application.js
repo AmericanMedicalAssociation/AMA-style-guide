@@ -10519,7 +10519,6 @@ if ( $.ajaxPrefilter ) {
 
 jQuery.noConflict();
 (function($) {
-  // Search
 
   // When a user clicks on the ribbon trigger (main)
   $('.jump-nav_title').click(function() {
@@ -10529,43 +10528,86 @@ jQuery.noConflict();
     $(this).parents('#jump-nav').toggleClass('is-closed');
   });
 
-  // sticky jumpnav
-  var StickyElement = function(node){
-    var doc = $(document),
-        fixed = false,
-        anchor = node.find('.jumpnav-anchor'),
-        body = doc.find('.article-body'),
-        content = node.find('.jumpnav-content');
+  // When a user clicks on a title link, close dropdown
+  $('.jump-nav_list-item a').click(function() {
+    // add a class to the parent
+    $('#jump-nav').toggleClass('is-closed');
+  });
 
-    var onScroll = function(e){
-      var docTop = doc.scrollTop(),
-          anchorTop = anchor.offset().top,
-          stickyBottom = content.offset().top + content.height(),
-          bodyBottom = body.offset().top + body.height();
 
-      if(docTop > anchorTop){
-        if(!fixed){
-          anchor.height(content.outerHeight());
-          content.addClass('fixed');
-          fixed = true;
-        }
-      }  else   {
-        if(fixed){
-          anchor.height(0);
-          content.removeClass('fixed');
-          fixed = false;
-        }
-      }
+  // On page scroll
+  $(window).scroll(function() {
+    var doc = $(document);
+    var windowTop = $(window).scrollTop();
+    var divTop = $('.jumpnav-anchor').offset().top;
+    var body = doc.find('.article-body');
+    var content = doc.find('.jumpnav-content');
+    var stickyBottom = content.offset().top + content.height();
+    var bodyBottom = body.offset().top + body.height();
 
-      if(stickyBottom > bodyBottom){
-        content.hide();
+    // Trigger fixed class
+    if (windowTop > divTop) {
+      $('#jump-nav').addClass('fixed');
+    } else {
+      $('#jump-nav').removeClass('fixed');
+    }
+
+    // Show / hide jump nav
+    if(stickyBottom > bodyBottom) {
+      content.hide();
+    } else {
+      content.fadeIn(250);
+    }
+  });
+
+
+  // Animate scroll on jump nav click
+  $('.jump-nav_list a').click(function(e) {
+    var jumpobj = $(this);
+    var target = jumpobj.attr('href');
+    var thespeed = 500;
+    var offset = $(target).offset().top - 100;
+    e.preventDefault();
+
+    $('html,body').animate({
+      scrollTop: offset
+    }, thespeed);
+  });
+
+
+  var aChildren = $('.jump-nav_list li').children(); // find the a children of the list items
+  var aArray = []; // create the empty aArray
+  for (var i=0; i < aChildren.length; i++) {
+    var aChild = aChildren[i];
+    var ahref = $(aChild).attr('href');
+    aArray.push(ahref);
+  }
+
+  // Trigger is-active class when user scrolls into each section
+  $(window).scroll(function() {
+    var windowPos = $(window).scrollTop() + 105; // get the offset of the window from the top of page
+    var windowHeight = $(window).height(); // get the height of the window
+    var docHeight = $(document).height();
+
+    for (var i=0; i < aArray.length; i++) {
+      var theID = aArray[i];
+      var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+      var divHeight = $(theID).height(); // get the height of the div in question
+      if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+        $('a[href="' + theID + '"]').parent("li").addClass('is-active');
       } else {
-        content.fadeIn(250);
+        $('a[href="' + theID + '"]').parent("li").removeClass('is-active');
       }
-    };
+    }
 
-    $(window).on('scroll', onScroll);
-  };
+    if(windowPos + windowHeight == docHeight) {
+      if (!$('.jump-nav_list li:last-child').hasClass('is-active')) {
+        var navActiveCurrent = $('.is-active').attr('href');
+        $('a[href="' + navActiveCurrent + '"]').parent("li").removeClass('is-active');
+        $('.jump-nav_list li:last-child').addClass('is-active');
+      }
+    }
+  });
 
 })(jQuery);
 
@@ -10582,6 +10624,34 @@ jQuery.noConflict();
 jQuery.noConflict();
 (function($) {
 
+  // Find height of ribbon and header-primary to create proper spacing
+  function checkHeight() {
+    var headerHeight = $('.header-primary').height();
+    var ribbonHeight = $('.ribbon').height();
+
+    $('.header-primary-span').css({'height':(headerHeight)+'px'});
+    $('.header-primary').css({'top':(ribbonHeight)+'px'});
+  }
+
+  // Set height on page load
+  setTimeout(function(){ checkHeight(); }, 100);
+  // Check height on window resize
+  $(window).resize(checkHeight);
+
+  // Add class to header-primary on scroll
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var os = $('.header-primary-span').offset().top;
+    var ht = $('.header-primary-span').height();
+
+    if(scroll > os + ht){
+      $(".header-primary").addClass("header-primary--sticky");
+    } else {
+      $(".header-primary").removeClass("header-primary--sticky");
+    }
+  });
+
+
   // Toggle the primary navigation open and closed when the Menu button is clicked.
   $('.nav-primary-menu_button').click(function() {
     if ( $(window).width() < 740 ) {
@@ -10591,13 +10661,23 @@ jQuery.noConflict();
       $(this).toggleClass('nav-primary-menu_button-clicked');
       // toggle the open or closed class on the drawer
       $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
-      // When the menu is open, apply the overlay.
-      $('.nav-primary-menu_overlay-mobile').toggleClass('nav-primary-menu_overlay-mobile-on');
       // remove active classes on children
       $('.nav-primary_list-item_title').removeClass('is-active');
       $('.nav-primary_list-item').removeClass('is-active');
       $('.nav-primary_list_subnav').removeClass('is-open');
       $('.nav-primary_list-item').removeClass('is-hidden');
+      // remove is-open class on search modal
+      $('.search_modal').removeClass('is-open');
+
+      // When the menu is open, apply the overlay.
+      if( $('.nav-primary_list').hasClass('nav-primary_list-open') ) {
+        $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+      }
+
+      // Else remove overlay class
+      else {
+        $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+      };
     }
   });
 
@@ -10622,6 +10702,8 @@ jQuery.noConflict();
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('is-active');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
+      // Remove is-open class on search modal
+      $('.search_modal').removeClass('is-open');
 
       if ($(window).width() > 740) {
         setTimeout(function () {
@@ -10635,7 +10717,7 @@ jQuery.noConflict();
         }, 50);
       }
 
-      if ( $(window).width() < 740 ) { 
+      if ( $(window).width() < 740 ) {
         // hide the other primary items
         $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').toggleClass('is-hidden');
         $(this).parents('.nav-primary_list-item').removeClass('is-hidden');
@@ -10692,6 +10774,53 @@ jQuery.noConflict();
     $('.ribbon_dropdown_trigger').removeClass('is-active');
     $('.ribbon_dropdown_nav').removeClass('is-active').slideUp(300);
   });
+})(jQuery);
+
+/**
+ * @file search-modal.js
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+jQuery.noConflict();
+(function($) {
+
+  // Trigger events on search button click
+  $('.button-search').click(function() {
+
+    // Remove classes for nav dropdowns
+    $('.nav-primary_list-item, .nav-primary_list-item_title').removeClass('is-active');
+    $('.nav-primary_list_subnav').removeClass('is-open');
+
+    // If is-open class exists
+    if( $('.search_modal').hasClass('is-open') ) {
+      $('.search_modal').removeClass('is-open');
+      $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+    }
+
+    // If is-open class doesn't exist
+    else {
+      $('.search_modal').addClass('is-open');
+      $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+
+      // Focus search input
+      setTimeout(function(){
+        $('.search_modal .search-field_input').focus();
+      }, 300);
+    };
+
+    // Remove nav primary list open class and add closed class on search button click
+    if ( $(window).width() < 740 ) {
+      $('.nav-primary_list').removeClass('nav-primary_list-open').addClass('nav-primary_list-closed');
+    };
+  });
+
+  // Remove classes when clicking close
+  $('.search_modal_close').click(function() {
+    $('.search_modal').removeClass('is-open');
+    $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+  });
+
 })(jQuery);
 
 jQuery.noConflict();
