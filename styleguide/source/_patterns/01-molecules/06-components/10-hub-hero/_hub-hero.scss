@@ -1,0 +1,85 @@
+.hub-hero {
+  width: 100%;
+  min-height: 400px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+
+.hub-hero-inner {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hub-hero-split {
+  align-items: stretch;
+
+  .hub-hero-inner {
+    align-items: stretch;
+    padding: 0 20px;
+  }
+
+  .hub-hero_title {
+    order: 1;
+    padding: 20px;
+  }
+
+  .hub-hero_desc {
+    order: 3;
+    margin-top: auto;
+    padding: 20px;
+    margin-bottom: 0;
+  }
+
+  .hub-hero_button-container {
+    order: 2;
+  }
+}
+
+.hub-hero_title {
+  background-color: rgba($white, .45);
+  padding: 20px 20px 0;
+  @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-sans-serif, 38px, $font-weight-thin, 1.1052631579);
+  }
+  @include breakpoint($bp-large-home min-width) {
+    @include type($font-sans-serif, 46px, $font-weight-thin, 1.0869565217);
+  }
+}
+
+.hub-hero_desc {
+  @extend %type-larger;
+  padding: 0 20px 20px;
+  margin-bottom: 0;
+  background-color: rgba($white, .45);
+}
+
+.hub-hero_button-container {
+  margin-top: 20px;
+}
+
+
+.hub-hero-no-overlay {
+  .hub-hero-inner {
+    background-color: transparent;
+  }
+
+  .hub-hero_title {
+    background-color: transparent;
+  }
+
+  .hub-hero_desc {
+    background-color: transparent;
+  }
+
+  .hub-hero_button-container {
+    margin-top: 0;
+  }
+}
