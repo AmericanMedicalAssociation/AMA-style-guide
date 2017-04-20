@@ -10,10 +10,138 @@
   background-color: $black-7;
   color: $black;
   padding-bottom: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
 
   &:hover {
     background-color: #e6e6e6;
     color: $black;
+  }
+
+  @include breakpoint($bp-small $bp-med) {
+    // 3-up layout
+    // when there are three items it's 50:50/100
+    // first item is 
+    &:nth-child(1):nth-last-child(3) {
+      margin-right: 12px;
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+    // last of three doesn't have right padding
+    &:nth-child(2):nth-last-child(2) {
+      margin-left: 12px;
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+
+    &:nth-child(3):nth-last-child(1) {
+      width: 100%;
+
+      &.hub-card-portrait {
+        // modified so this isn't giant but it results in it being more landscape shape
+        min-height: calc((((100vw -  32px) / 2)) * 1.5);
+      }
+    }
+
+    // 3-up layout
+    // when there are three items it's 50:50/50:50
+    &:nth-child(1):nth-last-child(4),
+    &:nth-child(2):nth-last-child(3),
+    &:nth-child(3):nth-last-child(2),
+    &:nth-child(4):nth-last-child(1) {
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+    // first of three doesn't have left padding
+    &:nth-child(1):nth-last-child(4),
+    &:nth-child(3):nth-last-child(2) {
+      margin-right: 12px;
+    }
+    // last of three doesn't have right padding
+    &:nth-child(2):nth-last-child(3),
+    &:nth-child(4):nth-last-child(1) {
+      margin-left: 12px;
+    }
+  }
+
+  @include breakpoint($bp-med) {
+    // 3-up layout
+    // when there are three items it's 33:33:33
+    &:nth-child(1):nth-last-child(3),
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):nth-last-child(1) {
+      width: calc(33% - 16px);
+      margin: 0 12px;
+
+      &.hub-card-portrait {
+        min-height: calc((((100vw -  42px) / 3) / 2) * 3);
+      }
+    }
+    // first of three doesn't have left padding
+    &:nth-child(1):nth-last-child(3) {
+      margin-left: 0;
+    }
+    // last of three doesn't have right padding
+    &:nth-child(3):nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    // 4-up layout
+    // when there are three items it's 25:25:25:25
+    &:nth-child(1):nth-last-child(4),
+    &:nth-child(2):nth-last-child(3),
+    &:nth-child(3):nth-last-child(2),
+    &:nth-child(4):nth-last-child(1) {
+      width: calc(25% - 18px);
+      margin: 0 12px;
+
+      &.hub-card-portrait {
+        min-height: calc((((100vw -  42px) / 4) / 2) * 3);
+      }
+    }
+    // first of three doesn't have left padding
+    &:nth-child(1):nth-last-child(4) {
+      margin-left: 0;
+    }
+    // last of three doesn't have right padding
+    &:nth-child(4):nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  // when max width is reached
+  @include breakpoint($bp-large) {
+    // 3-up layout
+    // when there are three items it's 33:33:33
+    &:nth-child(1):nth-last-child(3),
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):nth-last-child(1) {
+
+      &.hub-card-portrait {
+        min-height: 570px;
+      }
+    }
+
+    // 4-up layout
+    // when there are three items it's 25:25:25:25
+    &:nth-child(1):nth-last-child(4),
+    &:nth-child(2):nth-last-child(3),
+    &:nth-child(3):nth-last-child(2),
+    &:nth-child(4):nth-last-child(1) {
+      &.hub-card-portrait {
+        min-height: 423px;
+      }
+    }
   }
 }
 
@@ -28,7 +156,6 @@
   margin: 0 24px;
   border-bottom: 1px solid $black;
   order: 2;
-  text-align: center;
 
   .hub-card_image + & {
     border-bottom: 0;
@@ -37,10 +164,14 @@
 }
 
 .hub-card_desc {
-  @extend %type-large;
+  @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
   padding: 24px 0 12px;
   margin: 0 24px;
   order: 2;
+
+  @include breakpoint($bp-med) {
+    @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+  }
 }
 
 .hub-card-portrait {
@@ -61,7 +192,7 @@
 
     .button-secondary {
       border-color: $purple-darker;
-      background-color: $black-7;
+      background-color: #e3dce9;
       color: $purple-darker;
     }
   }
