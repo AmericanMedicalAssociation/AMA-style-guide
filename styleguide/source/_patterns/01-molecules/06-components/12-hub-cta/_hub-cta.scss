@@ -1,0 +1,41 @@
+.hub-cta-half {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  background-color: $black-7;
+}
+
+.hub-cta-half-text {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+
+  .button {
+    width: 100%;
+    margin-top: auto;
+  }
+}
+
+.hub-cta_title {
+  @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-sans-serif, 38px, $font-weight-thin, 1.1052631579);
+  }
+  @include breakpoint($bp-large-home min-width) {
+    @include type($font-sans-serif, 46px, $font-weight-thin, 1.0869565217);
+  }
+}
+
+.hub-cta_desc {
+  @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
+
+  @include breakpoint($bp-med) {
+    @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+  }
+}
+
+.hub-cta_image {
+  width: 50%;
+}
