@@ -1,262 +1,266 @@
-// npm requirements
-var gulp        = require('gulp'),
-    bump        = require('gulp-bump'),
-    clean       = require('gulp-clean'),
-    concat      = require('gulp-concat'),
-    browserSync = require('browser-sync'),
-    cssmin      = require('gulp-cssmin'),
-    filter      = require('gulp-filter'),
-    git         = require('gulp-git'),
-    gulpif      = require('gulp-if'),
-    imagemin    = require('gulp-imagemin'),
-    rename      = require('gulp-rename'),
-    sass        = require('gulp-sass'),
-    shell       = require('gulp-shell'),
-    tagversion  = require('gulp-tag-version'),
-    uglify      = require('gulp-uglify'),
-    ghPages     = require('gulp-gh-pages'),
-    runSequence = require('run-sequence'),
-    glob        = require('glob'),
-    svgmin      = require('gulp-svgmin'),
-    gulpicon    = require('gulpicon/tasks/gulpicon'),
-    gutil       = require('gulp-util');
+/******************************************************
+ * PATTERN LAB NODE
+ * EDITION-NODE-GULP
+ * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
+******************************************************/
+var gulp = require('gulp'),
+  path = require('path'),
+  browserSync = require('browser-sync').create(),
+  argv = require('minimist')(process.argv.slice(2)),
+  chalk = require('chalk');
 
-// Config
-var config = require('./build.config.json');
+/**
+ * Normalize all paths to be plain, paths with no leading './',
+ * relative to the process root, and with backslashes converted to
+ * forward slashes. Should work regardless of how the path was
+ * written. Accepts any number of parameters, and passes them along to
+ * path.resolve().
+ *
+ * This is intended to avoid all known limitations of gulp.watch().
+ *
+ * @param {...string} pathFragment - A directory, filename, or glob.
+*/
+function normalizePath() {
+  return path
+    .relative(
+      process.cwd(),
+      path.resolve.apply(this, arguments)
+    )
+    .replace(/\\/g, "/");
+}
 
+/******************************************************
+ * COPY TASKS - stream assets from source to destination
+******************************************************/
+// JS copy
+gulp.task('pl-copy:js', function () {
+  return gulp.src('**/*.js', {cwd: normalizePath(paths().source.js)} )
+    .pipe(gulp.dest(normalizePath(paths().public.js)));
+});
 
-// Trigger
-var production;
+// Images copy
+gulp.task('pl-copy:img', function () {
+  return gulp.src('**/*.*',{cwd: normalizePath(paths().source.images)} )
+    .pipe(gulp.dest(normalizePath(paths().public.images)));
+});
 
-// Task: Clean:before
-// Description: Removing assets files before running other tasks
-gulp.task('clean:before', function () {
-  return gulp.src(
-    config.assets.dest
-  )
-    .pipe(clean({
-      force: true
+// Favicon copy
+gulp.task('pl-copy:favicon', function () {
+  return gulp.src('favicon.ico', {cwd: normalizePath(paths().source.root)} )
+    .pipe(gulp.dest(normalizePath(paths().public.root)));
+});
+
+// Fonts copy
+gulp.task('pl-copy:font', function () {
+  return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
+    .pipe(gulp.dest(normalizePath(paths().public.fonts)));
+});
+
+// CSS Copy
+gulp.task('pl-copy:css', function () {
+  return gulp.src(normalizePath(paths().source.css) + '/*.css')
+    .pipe(gulp.dest(normalizePath(paths().public.css)))
+    .pipe(browserSync.stream());
+});
+
+// Styleguide Copy everything but css
+gulp.task('pl-copy:styleguide', function () {
+  return gulp.src(normalizePath(paths().source.styleguide) + '/**/!(*.css)')
+    .pipe(gulp.dest(normalizePath(paths().public.root)))
+    .pipe(browserSync.stream());
+});
+
+// Styleguide Copy and flatten css
+gulp.task('pl-copy:styleguide-css', function () {
+  return gulp.src(normalizePath(paths().source.styleguide) + '/**/*.css')
+    .pipe(gulp.dest(function (file) {
+      //flatten anything inside the styleguide into a single output dir per http://stackoverflow.com/a/34317320/1790362
+      file.path = path.join(file.base, path.basename(file.path));
+      return normalizePath(path.join(paths().public.styleguide, '/css'));
     }))
+    .pipe(browserSync.stream());
 });
 
-// Task: Handle scripts
-gulp.task('scripts', function () {
-  return gulp.src(config.scripts.files)
-    .pipe(concat(
-      'application.js'
-    ))
-    .pipe(gulpif(production, uglify()))
-    .pipe(gulpif(production, rename({
-      suffix: '.min'
-    })))
-    .pipe(gulp.dest(
-      config.scripts.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
+/******************************************************
+ * PATTERN LAB CONFIGURATION - API with core library
+******************************************************/
+//read all paths from our namespaced config file
+var config = require('./patternlab-config.json'),
+  patternlab = require('patternlab-node')(config);
+
+function paths() {
+  return config.paths;
+}
+
+function getConfiguredCleanOption() {
+  return config.cleanPublic;
+}
+
+/**
+ * Performs the actual build step. Accomodates both async and sync
+ * versions of Pattern Lab.
+ * @param {function} done - Gulp done callback
+ */
+function build(done) {
+  const buildResult = patternlab.build(() => {}, getConfiguredCleanOption());
+
+  // handle async version of Pattern Lab
+  if (buildResult instanceof Promise) {
+    return buildResult.then(done);
+  }
+
+  // handle sync version of Pattern Lab
+  done();
+  return null;
+}
+
+gulp.task('pl-assets', gulp.series(
+  'pl-copy:js',
+  'pl-copy:img',
+  'pl-copy:favicon',
+  'pl-copy:font',
+  'pl-copy:css',
+  'pl-copy:styleguide',
+  'pl-copy:styleguide-css'
+));
+
+gulp.task('patternlab:version', function (done) {
+  patternlab.version();
+  done();
 });
 
-// Task: Handle fonts
-gulp.task('fonts', function () {
-  return gulp.src(config.fonts.files)
-    .pipe(gulp.dest(
-      config.fonts.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
+gulp.task('patternlab:help', function (done) {
+  patternlab.help();
+  done();
 });
 
-// Task: Handle images
-gulp.task('images', function () {
-  return gulp.src(config.images.files)
-    .pipe(gulpif(production, imagemin()))
-    .pipe(gulp.dest(
-      config.images.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
+gulp.task('patternlab:patternsonly', function (done) {
+  patternlab.patternsonly(done, getConfiguredCleanOption());
 });
 
-// Task: Handle Sass and CSS
-gulp.task('sass', function () {
-  return gulp.src(config.scss.files)
-    .pipe(sass())
-    .pipe(gulpif(production, cssmin()))
-    .pipe(gulpif(production, rename({
-      suffix: '.min'
-    })))
-    .pipe(gulp.dest(
-      config.scss.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
+gulp.task('patternlab:liststarterkits', function (done) {
+  patternlab.liststarterkits();
+  done();
 });
 
-// Task: Handle icons
-// We have to do this in a few steps until
-// https://github.com/filamentgroup/gulpicon/issues/1 is resolved
-gulp.task('minifyIcons', function() {
-  return gulp.src(config.icons.files)
-      .pipe(svgmin())
-      .pipe(gulp.dest(config.icons.min));
+gulp.task('patternlab:loadstarterkit', function (done) {
+  patternlab.loadstarterkit(argv.kit, argv.clean);
+  done();
 });
 
-// Based on https://github.com/filamentgroup/gulpicon#usage
-var iconFiles = glob.sync("source/assets/icons/svg/*.svg");
-var iconConfig = require("./source/assets/icons/config.js");
-iconConfig.dest = "public/assets/icons/";
-gulp.task('makeIcons', gulpicon(iconFiles, iconConfig));
-gulp.task('reloadIcons', function() {
-  return gulp.src('', {read: false})
-    .pipe(browserSync.reload({stream:true}));
+gulp.task('patternlab:build', gulp.series('pl-assets', build));
+
+gulp.task('patternlab:installplugin', function (done) {
+  patternlab.installplugin(argv.plugin);
+  done();
 });
 
-gulp.task('icons', function (callback) {
-  runSequence('minifyIcons', 'makeIcons', 'reloadIcons');
-  callback();
-});
-
-// Task: patternlab
-// Description: Build static Pattern Lab files via PHP script
-gulp.task('patternlab', function () {
-  return gulp.src('', {read: false})
-    .pipe(shell([
-      'php core/console --generate'
-    ]))
-    .pipe(browserSync.reload({stream:true}));
-});
-
-// Task: styleguide
-// Description: Copy Styleguide-Folder from core/ to public
-gulp.task('styleguide', function() {
-  return gulp.src(config.patternlab.styleguide.files)
-    .pipe(gulp.dest(config.patternlab.styleguide.dest));
-});
-
-// task: BrowserSync
-// Description: Run BrowserSync server with disabled ghost mode
-gulp.task('browser-sync', function() {
-  browserSync({
-    server: {
-        baseDir: config.root
-    },
-    ghostMode: true,
-    open: "local"
+/******************************************************
+ * SERVER AND WATCH TASKS
+******************************************************/
+// watch task utility functions
+function getSupportedTemplateExtensions() {
+  var engines = require('./node_modules/patternlab-node/core/lib/pattern_engines');
+  return engines.getSupportedFileExtensions();
+}
+function getTemplateWatches() {
+  return getSupportedTemplateExtensions().map(function (dotExtension) {
+    return normalizePath(paths().source.patterns, '**', '*' + dotExtension);
   });
-});
+}
 
-// Task: Watch files
-gulp.task('watch', function () {
+/**
+ * Reloads BrowserSync.
+ * Note: Exits more reliably when used with a done callback.
+ */
+function reload(done) {
+  browserSync.reload();
+  done();
+}
 
-  // Watch Pattern Lab files
-  gulp.watch(
-    config.patternlab.files,
-    ['patternlab']
-  );
+/**
+ * Reloads BrowserSync, with CSS injection.
+ * Note: Exits more reliably when used with a done callback.
+ */
+function reloadCSS(done) {
+  browserSync.reload('*.css');
+  done();
+}
 
-  // Watch scripts
-  gulp.watch(
-    config.scripts.files,
-    ['scripts']
-  );
+function watch() {
+  const watchers = [
+    {
+      name: 'CSS',
+      paths: [normalizePath(paths().source.css, '**', '*.css')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-copy:css', reloadCSS)
+    },
+    {
+      name: 'Styleguide Files',
+      paths: [normalizePath(paths().source.styleguide, '**', '*')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-copy:styleguide', 'pl-copy:styleguide-css', reloadCSS)
+    },
+    {
+      name: 'Source Files',
+      paths: [
+        normalizePath(paths().source.patterns, '**', '*.json'),
+        normalizePath(paths().source.patterns, '**', '*.md'),
+        normalizePath(paths().source.data, '**', '*.json'),
+        normalizePath(paths().source.fonts, '**', '*'),
+        normalizePath(paths().source.images, '**', '*'),
+        normalizePath(paths().source.js, '**', '*'),
+        normalizePath(paths().source.meta, '**', '*'),
+        normalizePath(paths().source.annotations, '**', '*')
+      ].concat(getTemplateWatches()),
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series(build, reload)
+    }
+  ];
 
-  // Watch images
-  gulp.watch(
-    config.images.files,
-    ['images']
-  );
+  watchers.forEach(watcher => {
+    console.log('\n' + chalk.bold('Watching ' + watcher.name + ':'));
+    watcher.paths.forEach(p => console.log('  ' + p));
+    gulp.watch(watcher.paths, watcher.config, watcher.tasks);
+  });
+  console.log();
+}
 
-  // Watch Sass
-  gulp.watch(
-    config.scss.files,
-    ['sass']
-  );
+gulp.task('patternlab:connect', gulp.series(function (done) {
+  browserSync.init({
+    server: {
+      baseDir: normalizePath(paths().public.root)
+    },
+    snippetOptions: {
+      // Ignore all HTML files within the templates folder
+      blacklist: ['/index.html', '/', '/?*']
+    },
+    notify: {
+      styles: [
+        'display: none',
+        'padding: 15px',
+        'font-family: sans-serif',
+        'position: fixed',
+        'font-size: 1em',
+        'z-index: 9999',
+        'bottom: 0px',
+        'right: 0px',
+        'border-top-left-radius: 5px',
+        'background-color: #1B2032',
+        'opacity: 0.4',
+        'margin: 0',
+        'color: white',
+        'text-align: center'
+      ]
+    }
+  }, function () {
+    done();
+  });
+}));
 
-  // Watch icons
-  gulp.watch(
-    config.icons.files,
-    ['icons']
-  );
-
-  // Watch fonts
-  gulp.watch(
-    config.fonts.files,
-    ['fonts']
-  );
-});
-
-// Task: Default
-// Description: Build all stuff of the project once
-gulp.task('default', ['clean:before'], function (callback) {
-  production = false;
-
-  // We need to re-run sass last to make sure the latest styles.css gets loaded
-  runSequence(
-    'icons',
-    ['scripts', 'fonts', 'images', 'sass'],
-    'patternlab',
-    'styleguide',
-    'sass',
-    callback
-  );
-});
-
-// Task: Start your production-process
-// Description: Type 'gulp' in the terminal
-gulp.task('serve', function () {
-  production = false;
-
-  gulp.start(
-    'browser-sync',
-    'default',
-    'watch'
-  );
-});
-
-// Task: Publish static content
-// Description: Publish static content using rsync shell command
-gulp.task('publish', function () {
-  return gulp.src(config.deployment.local.path)
-    .pipe(ghPages());
-});
-
-// Task: Deploy to GitHub pages
-// Description: Build the public code and deploy it to GitHub pages
-gulp.task('deploy'), function () {
-  // make sure to use the gulp from node_modules and not a different version
-  runSequence = require('run-sequence').use(gulp);
-  // run default to build the code and then publish it GitHub pages
-  runSequence('default', 'publish');
-};
-
-// Function: Releasing (Bump, Tagging & Deploying)
-// Description: Bump npm versions, create Git tag and push to origin
-gulp.task('tag', function () {
-  production = true;
-
-  return gulp.src(config.versioning.files)
-    .pipe(bump({
-      type: gutil.env.env || 'development'
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(git.commit('Release a ' + gutil.env.env + '-update'))
-
-    // read only one file to get version number
-    .pipe(filter('package.json'))
-
-    // Tag it
-    .pipe(tagversion())
-
-    // Publish files and tags to endpoint
-    .pipe(shell([
-      'git push origin develop',
-      'git push origin --tags'
-    ]));
-});
-
-// Task: Release the code
-// Description: Release runs default to build the files,
-// runs tag to tag the release and pushes that to GitHub
-// runs publish to also make sure GitHub pages site is updated
-gulp.task('release', function () {
-  // make sure to use the gulp from node_modules and not a different version
-  runSequence = require('run-sequence').use(gulp);
-  // run default to build the code, next tag to cut a tag, then publish to deploy to GitHub pages
-  runSequence('default', 'tag', 'publish');
-});
+/******************************************************
+ * COMPOUND TASKS
+******************************************************/
+gulp.task('default', gulp.series('patternlab:build'));
+gulp.task('patternlab:watch', gulp.series('patternlab:build', watch));
+gulp.task('patternlab:serve', gulp.series('patternlab:build', 'patternlab:connect', watch));
