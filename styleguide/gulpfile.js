@@ -218,12 +218,12 @@ gulp.task('publish', function () {
 
 // Task: Deploy to GitHub pages
 // Description: Build the public code and deploy it to GitHub pages
-gulp.task('deploy'), function () {
+gulp.task('deploy', function () {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
   // run default to build the code and then publish it GitHub pages
   runSequence('default', 'publish');
-};
+});
 
 // Function: Releasing (Bump, Tagging & Deploying)
 // Description: Bump npm versions, create Git tag and push to origin
