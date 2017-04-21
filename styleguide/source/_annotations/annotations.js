@@ -21,11 +21,6 @@
       "comment": "<p>Search is an incredibly important priority, especially for mobile. It is a great idea to give users the ability to jump directly to what they are looking for without forcing them to wade through your site's navigation. Check out the <a href=\"http://burton.com\">Burton</a> and <a href=\"http://yelp.com\">Yelp</a> mobile sites for great examples of experiences that prioritize search.</p><p>We're also using the <a href=\"http://dev.w3.org/html5/markup/input.search.html\">HTML5 search input type</a>, which is great for mobile devices that can <a href=\"http://diveintohtml5.info/forms.html\">bring up the appropriate virtual keyboard</a> for many smartphones. And like the main header navigation, we're hiding the search form on small screens to save space. Clicking the search anchor toggles the form. </p>"
     },
     {
-      "el": ".article-header h1",
-      "title" : "Article Header",
-      "comment": "<p>The article header should be no more than 140 characters. </p>"
-    },
-    {
       "el": ".block-hero",
       "title" : "Hero",
       "comment": "<p>The hero area highlights one major story using a large image and a captivating headline.</p>"
