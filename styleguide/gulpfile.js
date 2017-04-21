@@ -26,6 +26,9 @@ var gulp        = require('gulp'),
     reporter    = require('postcss-reporter'),
     stylelint   = require('gulp-stylelint'),
     gutil       = require('gulp-util');
+    gutil       = require('gulp-util'),
+    pWaitFor    = require('p-wait-for'),
+    pathExists  = require('path-exists');
 
 // Config
 var config = require('./build.config.json');
@@ -112,14 +115,19 @@ var iconFiles = glob.sync("source/assets/icons/svg/*.svg");
 var iconConfig = require("./source/assets/icons/config.js");
 iconConfig.dest = "public/assets/icons/";
 gulp.task('makeIcons', gulpicon(iconFiles, iconConfig));
+gulp.task('waitForIcons', function(callback) {
+  var trigger = iconConfig.dest + 'preview.html';
+  return pWaitFor(() => pathExists(trigger, '1000')).then(() => {
+    console.log('Yay! The icons now exist.');
+  });
+});
 gulp.task('reloadIcons', function() {
   return gulp.src('', {read: false})
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('icons', function (callback) {
-  runSequence('minifyIcons', 'makeIcons', 'reloadIcons');
-  callback();
+  runSequence('minifyIcons', 'makeIcons', 'waitForIcons', 'reloadIcons', callback);
 });
 
 // Task: patternlab
@@ -239,12 +247,12 @@ gulp.task('publish', function () {
 
 // Task: Deploy to GitHub pages
 // Description: Build the public code and deploy it to GitHub pages
-gulp.task('deploy'), function () {
+gulp.task('deploy', function () {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
   // run default to build the code and then publish it GitHub pages
   runSequence('default', 'publish');
-};
+});
 
 // Function: Releasing (Bump, Tagging & Deploying)
 // Description: Bump npm versions, create Git tag and push to origin
