@@ -1,10 +1,10 @@
 /**
- * @file article-header.scss
+ * @file section-header.scss
  *
  * Copyright 2017 Palantir.net, Inc.
  */
 
-.article-header {
+.section-header {
   margin-top: 50px;
   margin-bottom: 40px;
   padding-bottom: 30px;
@@ -18,7 +18,7 @@
   }
 }
 
-.article-header_subtitle {
+.section-header_subtitle {
   @extend %b2;
   margin-top: 12px;
 
