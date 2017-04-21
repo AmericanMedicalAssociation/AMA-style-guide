@@ -1,0 +1,58 @@
+/**
+ * @file category-highlight-image.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.category-highlight {
+  margin-bottom: 30px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint($bp-large) {
+    margin-bottom: 0;
+  }
+}
+.category-highlight_image-link {
+  display: block;
+
+  @include breakpoint($bp-small) {
+    float: left;
+    margin-right: 30px;
+  }
+
+  @include breakpoint($bp-large) {
+    float: none;
+    margin-right: 0;
+  }
+}
+
+.category-highlight_image {
+  display: block;
+}
+
+.category-highlight_title-link {
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+.category-highlight_title {
+  margin-top: 20px;
+
+  @include breakpoint($bp-small) {
+    margin-top: 0;
+  }
+
+  @include breakpoint($bp-large) {
+    margin-top: 25px;
+  }
+}
+
+.category-highlight_teaser {
+  color: $black-55;
+  margin-bottom: 0;
+}
