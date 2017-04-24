@@ -1,4 +1,5 @@
-.hub-hero {
+.hub-hero,
+%hub-hero {
   width: 100%;
   min-height: 400px;
   max-width: 1200px;
@@ -139,21 +140,16 @@
 
 .hub-hero-cta-only {
   @extend %hub-hero;
+  min-height: 0;
   text-align: center;
   padding: $space-double;
-  max-height: none;
+  background-color: $black-7;
 
-  @include breakpoint($bp-med-home min-width) {
-    display: hub !important;
+  .hub-hero_title {
+    background-color: transparent;
   }
-}
 
-.hub-hero-cta-only_title {
-  font-weight: $font-weight-thin;
-  margin-bottom: $space-half;
-}
-
-.hub-hero-cta-only_summary {
-  @extend %type-large;
-  display: hub;
+  .hub-hero_desc {
+    background-color: transparent;
+  }
 }
