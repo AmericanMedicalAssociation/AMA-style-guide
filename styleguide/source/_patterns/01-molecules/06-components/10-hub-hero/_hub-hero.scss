@@ -134,3 +134,26 @@
     margin-right: 0;
   }
 }
+
+// cta only variant
+
+.hub-hero-cta-only {
+  @extend %hub-hero;
+  text-align: center;
+  padding: $space-double;
+  max-height: none;
+
+  @include breakpoint($bp-med-home min-width) {
+    display: hub !important;
+  }
+}
+
+.hub-hero-cta-only_title {
+  font-weight: $font-weight-thin;
+  margin-bottom: $space-half;
+}
+
+.hub-hero-cta-only_summary {
+  @extend %type-large;
+  display: hub;
+}
