@@ -17,6 +17,7 @@
   flex-direction: column;
 }
 
+// Split variant
 .hub-hero-split {
   align-items: stretch;
 
@@ -44,7 +45,7 @@
 
 .hub-hero_title {
   background-color: rgba($white, 0.45);
-  padding: 20px 20px 0;
+  padding: 20px 20px 8px;
   @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
   @include breakpoint($bp-med-home min-width) {
     @include type($font-sans-serif, 38px, $font-weight-thin, 1.1052631579);
@@ -65,7 +66,7 @@
   margin-top: 20px;
 }
 
-
+// no overlay variant
 .hub-hero-no-overlay {
   .hub-hero-inner {
     background-color: transparent;
@@ -81,5 +82,55 @@
 
   .hub-hero_button-container {
     margin-top: 0;
+  }
+}
+
+// side variant
+%hub-hero-side,
+.hub-hero-side {
+  align-items: stretch;
+
+  .hub-hero-inner {
+    background-color: rgba($white, 0.45);
+    width: 100%;
+    margin: 0;
+    margin-right: auto;
+    text-align: left;
+    padding: 20px;
+
+    @include breakpoint($bp-small) {
+      width: 70%;
+    }
+
+    @include breakpoint($bp-med) {
+      width: 50%;
+    }
+  }
+
+  .hub-hero_title {
+    background-color: transparent;
+  }
+
+  .hub-hero_desc {
+    background-color: transparent;
+  }
+
+  .hub-hero_button-container {
+    width: 100%;
+    padding: 20px;
+    margin-top: auto;
+
+    .button-small {
+      width: 100%;
+    }
+  }
+}
+
+.hub-hero-side-right {
+  @extend %hub-hero-side;
+
+  .hub-hero-inner {
+    margin-left: auto;
+    margin-right: 0;
   }
 }

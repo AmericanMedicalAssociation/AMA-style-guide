@@ -111,7 +111,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/00-atoms/04-images/02-image-wrapper/image-wrapper";
 @import "../../_patterns/00-atoms/06-buttons/01-button-search/button-search";
 @import "../../_patterns/00-atoms/06-buttons/02-button/button";
-@import "../../_patterns/01-molecules/00-text/00-article-header/article-header";
+@import "../../_patterns/01-molecules/00-text/00-section-header/section-header";
 @import "../../_patterns/01-molecules/00-text/01-date-block/date-block";
 @import "../../_patterns/01-molecules/02-blocks/00-block-hero/block-hero";
 @import "../../_patterns/01-molecules/02-blocks/01-block-promo/block-promo";
@@ -134,6 +134,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/06-components/09-related-content-item/related-content-item";
 @import "../../_patterns/01-molecules/06-components/10-hub-hero/hub-hero";
 @import "../../_patterns/01-molecules/06-components/11-hub-card/hub-card";
+@import "../../_patterns/01-molecules/06-components/12-hub-cta/hub-cta";
 @import "../../_patterns/01-molecules/08-lists/00-list_links/list_links";
 @import "../../_patterns/02-organisms/00-global/00-header-primary/header-primary";
 @import "../../_patterns/01-molecules/08-lists/07-list-links-social/list-links-social";
@@ -165,3 +166,4 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/02-organisms/03-sections/01-hub-card-row/hub-card-row";
 @import "../../_patterns/02-organisms/01-lists/00-related-content/related-content.scss";
 @import "../../_patterns/03-templates/02-article/article";
+
