@@ -1,0 +1,82 @@
+/**
+ * @file subcategory-topics-description.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Subcategory item
+.subcategory-topics-description {
+  @include rule-horizontal(1px, $gray-8, solid);
+  margin-bottom: 40px;
+
+  @include breakpoint($bp-med) {
+    margin-bottom: 60px;
+  }
+}
+
+// Subcategory title and teaser wrap
+.subcategory-topics-description_wrap {
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    padding-right: 15px;
+  }
+
+  @include breakpoint($bp-large) {
+    @include grid__unit--cols(9);
+  }
+}
+
+// Subcategory title styles
+.subcategory-topics-description_title {
+  width: 100%;
+
+  @include breakpoint($bp-large) {
+    float: left;
+    width: 33.333%;
+  }
+}
+
+.subcategory-topics-description_title-inner {
+  max-width: 174px;
+}
+
+// Subcategory teaser styles
+.subcategory-topics-description_teaser {
+  width: 100%;
+  margin-top: 30px;
+
+  @include breakpoint($bp-large) {
+    float: left;
+    width: 66.666%;
+    margin-top: 40px;
+  }
+}
+
+// Subcategory topics
+.subcategory-topics-description_topics {
+  width: 100%;
+  margin-top: 20px;
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    margin-top: 92px;
+  }
+
+  @include breakpoint($bp-large) {
+    @include grid__unit--cols(3);
+    margin-top: 32px;
+  }
+}
+
+.subcategory-topics-description_link {
+  @include type($font-sans-serif, 18px, $font-weight-bold, 22px);
+  color: $purple;
+
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-sans-serif, 24px, $font-weight-bold, 28px);
+  }
+
+  &:hover {
+    color: $blue;
+  }
+}
