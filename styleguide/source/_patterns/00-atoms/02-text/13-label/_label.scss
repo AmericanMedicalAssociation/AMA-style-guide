@@ -1,0 +1,5 @@
+.label {
+  @extend %h6;
+  text-transform: uppercase;
+  color: $purple;
+}
