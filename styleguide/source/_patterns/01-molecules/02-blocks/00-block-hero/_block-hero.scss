@@ -4,8 +4,7 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-.block-hero,
-%block-hero {
+.block-hero {
   @extend %background-transition;
   background-color: $black-7;
   color: $black;
@@ -82,8 +81,7 @@
     }
   }
 
-  .block-hero-inner,
-  %block-hero-inner {
+  .block-hero-inner {
     display: table-cell;
     vertical-align: middle;
   }
