@@ -4,6 +4,7 @@
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
+  transition: width 200ms, background 300ms, height 180ms;
 
   &.is-open {
     display: block;
