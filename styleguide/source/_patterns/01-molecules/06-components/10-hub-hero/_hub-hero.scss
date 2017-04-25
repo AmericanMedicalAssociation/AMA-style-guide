@@ -1,5 +1,4 @@
-.hub-hero,
-%hub-hero {
+.hub-hero {
   width: 100%;
   min-height: 400px;
   max-width: 1200px;
@@ -139,7 +138,6 @@
 // cta only variant
 
 .hub-hero-cta-only {
-  @extend %hub-hero;
   min-height: 0;
   text-align: center;
   padding: $space-double;
