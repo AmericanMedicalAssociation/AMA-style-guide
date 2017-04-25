@@ -134,3 +134,22 @@
     margin-right: 0;
   }
 }
+
+// cta only variant
+
+.hub-hero-cta-only {
+  min-height: 0;
+  text-align: center;
+  padding: $space-double 0;
+  background-color: $black-7;
+
+  .hub-hero_title {
+    background-color: transparent;
+    padding: 0 0 8px;
+  }
+
+  .hub-hero_desc {
+    background-color: transparent;
+    padding: 0 0 20px;
+  }
+}
