@@ -22,7 +22,6 @@
 
   @include breakpoint($bp-small) {
     padding-right: 48px;
-    margin-bottom: 30px;
   }
 
   .icon {
@@ -32,6 +31,26 @@
     height: 11px;
     width: 18px;
     fill: $blue;
+
+    svg {
+      // transform: rotate(-90deg);
+    }
+  }
+
+  &.is-active {
+   .icon svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    .accordion-counter {
+      color: $blue;
+    }
   }
 }
 
@@ -45,6 +64,7 @@
 }
 
 .accordion-content {
+  display: none;
   list-style: none;
   margin: 18px 0 0;
   padding: 0;
