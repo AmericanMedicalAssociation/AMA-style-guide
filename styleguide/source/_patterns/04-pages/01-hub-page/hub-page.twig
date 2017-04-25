@@ -2,7 +2,7 @@
 
 {# Some type of hero #}
 <div class="layout layout-one-up">
-  {% include 'molecules-hub-hero-no-overlay' %}
+  {% include 'molecules-hub-hero-side' %}
 </div>
 
 {# begin the next section #}
@@ -17,16 +17,11 @@
     {% include 'molecules-hub-card-portrait' %}
     {% include 'molecules-hub-card-no-image' %}
   </div>
-</section>
-
-{# begin the next section #}
-<section class="hub-section">
-  <div class="layout">
-    {% include 'molecules-section-header' %}
-  </div>
-  <div class="layout">
-    {% include 'molecules-hub-cta-half-left' %}
-    {% include 'molecules-hub-cta-half' %}
+  {% include 'organisms-hub-card-row' %}
+  <div class="hub-card-row layout">
+    {% include 'molecules-hub-card-no-image' %}
+    {% include 'molecules-hub-card' %}
+    {% include 'molecules-hub-card-portrait' %}
   </div>
 </section>
 
