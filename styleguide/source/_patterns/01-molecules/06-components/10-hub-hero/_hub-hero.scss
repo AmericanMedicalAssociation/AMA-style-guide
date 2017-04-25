@@ -96,7 +96,7 @@
     margin: 0;
     margin-right: auto;
     text-align: left;
-    padding: 20px;
+    padding: 30px;
 
     @include breakpoint($bp-small) {
       width: 70%;
@@ -109,10 +109,12 @@
 
   .hub-hero_title {
     background-color: transparent;
+    padding: 0 0 8px;
   }
 
   .hub-hero_desc {
     background-color: transparent;
+    padding: 0 0 20px;
   }
 
   .hub-hero_button-container {
@@ -140,7 +142,7 @@
 .hub-hero-cta-only {
   min-height: 0;
   text-align: center;
-  padding: $space-double 0;
+  padding: $space-and-half 0;
   background-color: $black-7;
 
   .hub-hero_title {
