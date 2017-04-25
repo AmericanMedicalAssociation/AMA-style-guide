@@ -1,0 +1,52 @@
+{% include 'organisms-hub-header' %}
+
+{# begin the next section #}
+<section class="hub-section">
+  {# Each section should start with a section header #}
+  <div class="layout">
+    {% include 'molecules-section-header' %}
+  </div>
+
+  <div class="hub-card-row layout">
+    {% include 'molecules-hub-card' %}
+    {% include 'molecules-hub-card-portrait' %}
+    {% include 'molecules-hub-card-no-image' %}
+  </div>
+  <div class="hub-card-row layout">
+    {% include 'molecules-hub-card-no-image' %}
+    {% include 'molecules-hub-card' %}
+    {% include 'molecules-hub-card-portrait' %}
+  </div>
+</section>
+
+{# begin the next section #}
+<section class="hub-section">
+  {# Each section should start with a section header #}
+  <div class="layout">
+    {% include 'molecules-section-header' %}
+  </div>
+  <div class="layout">
+    {% include 'molecules-hub-cta-half-left' %}
+    {% include 'molecules-hub-cta-half' %}
+    {% include 'molecules-hub-cta-half-left' %}
+    {% include 'molecules-hub-cta-half' %}
+    {% include 'molecules-hub-cta-half-left' %}
+  </div>
+</section>
+
+{# begin the next section #}
+<section class="hub-section">
+  {# Each section should start with a section header #}
+  <div class="layout">
+    {% include 'molecules-section-header' %}
+  </div>
+  {% include 'organisms-hub-card-row' %}
+  {% include 'organisms-hub-card-row' %}
+</section>
+
+{% include 'organisms-footer' %}
+
+{#
+ # @file hub.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
