@@ -25,6 +25,12 @@ jQuery.noConflict();
       $('.search_modal').addClass('is-open');
       $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
 
+      // animate the way the search modal opens
+      $('.search_modal').delay(500).show("drop", {times: 1, distance: 100}, 10);
+      $('.search_modal_inner').animate({"backgroundColor" : "#fff", "opacity": "1"}, 300);
+      $('.search_modal').animate({"height" : "300px", "width" : "800px"}, 1);
+      $('.search_modal_inner').delay(440).show("fade", {times: 1, distance: 100}, 100);
+
       // Focus search input
       setTimeout(function(){
         $('.search_modal .search-field_input').focus();
