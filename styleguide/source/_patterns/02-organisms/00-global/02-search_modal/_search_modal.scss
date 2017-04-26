@@ -4,8 +4,6 @@
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
-  transition: width 200ms, height 180ms;
-  transition-timing-function: ease-out;
 
   &.is-open {
     display: block;
@@ -23,9 +21,6 @@
   background-color: transparentize($black-7, .5);
   padding-bottom: 50px;
   z-index: 10;
-
-  // .search_modal.is-open & {
-  // }
 }
 
 .search_modal_close {
