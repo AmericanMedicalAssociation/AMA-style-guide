@@ -26,10 +26,8 @@ jQuery.noConflict();
       $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
 
       // animate the way the search modal opens
-      $('.search_modal').delay(500).show("drop", {times: 1, distance: 100}, "slow");
-      $('.search_modal_inner').animate({"backgroundColor" : "#ededed", "opacity": "1"}, "slow");
-      $('.search_modal').animate({"width" : "800px"}, "slow");
-      $('.search_modal_inner').delay(440).show("fade", {times: 1, distance: 100}, "slow");
+      $('.search_modal').delay(500).show("drop", {times: 1, distance: 100}, "slow").animate({"width" : "800px"}, "slow");
+      $('.search_modal_inner').animate({"backgroundColor" : "#ededed", "opacity": "1"}, "slow").show("fade", {times: 1, distance: 100}, "slow");
 
       // Focus search input
       setTimeout(function(){
