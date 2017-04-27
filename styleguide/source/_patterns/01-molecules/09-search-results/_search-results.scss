@@ -16,7 +16,13 @@
 }
 
 .search-result_title {
-  margin-bottom: 12px;
+  @include type($font-serif, 18px, $font-weight-medium, 1.2222222222);
+  margin-bottom: 9px;
+
+  @include breakpoint($bp-med min-width) {
+    @include type($font-serif, 24px, $font-weight-medium, 1.1666666667);
+    margin-bottom: 12px;
+  }
 }
 
 .search-result_left {
