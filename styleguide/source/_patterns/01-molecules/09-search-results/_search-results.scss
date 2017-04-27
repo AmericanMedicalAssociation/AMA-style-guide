@@ -7,8 +7,7 @@
 
   @include breakpoint($bp-small) {
     flex-direction: row;
-  }
-  
+  } 
 }
 
 .search-result_label {
@@ -27,11 +26,19 @@
 
   @include breakpoint($bp-small) {
     width: 50%;
+    display: flex;
+    align-items: center;
+    min-height: 200px;
   }
 
   @include breakpoint($bp-med) {
     width: 66%;
   }
+}
+
+.search-result_left-inner {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .search-result_right {
