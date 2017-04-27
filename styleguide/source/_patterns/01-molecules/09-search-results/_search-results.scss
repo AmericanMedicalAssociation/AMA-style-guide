@@ -44,10 +44,8 @@
 .search-result_right {
   width: 100%;
   height: auto;
-  border: 2px solid red;
-  background-image: url('../../assets/images/placeholder.jpg)');
+  background-image: url('../../assets/images/placeholder.jpg');
   background-size: cover;
-  background-position: center;
   display: none;
 
   @include breakpoint($bp-small) {
