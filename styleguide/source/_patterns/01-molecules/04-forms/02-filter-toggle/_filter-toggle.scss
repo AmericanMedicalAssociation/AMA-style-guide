@@ -1,0 +1,20 @@
+.filter-toggle {
+  background-color: $black-7;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.filter-toggle_text {
+  @extend %h5;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
