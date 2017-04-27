@@ -25,6 +25,10 @@
   }
 }
 
+.search-result_description {
+  @extend %type-medium;
+}
+
 .search-result_left {
   background-color: $black-7;
   padding: 30px;
