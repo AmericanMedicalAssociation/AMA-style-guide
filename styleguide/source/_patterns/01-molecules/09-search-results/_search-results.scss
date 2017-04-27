@@ -75,9 +75,8 @@
 .search-result_right {
   width: 100%;
   height: auto;
-  background-image: url('../../assets/images/placeholder.jpg');
-  background-size: cover;
   display: none;
+  background-color: $purple;
 
   @include breakpoint($bp-small) {
     width: 50%;
@@ -88,3 +87,10 @@
     width: 33%;
   }
 }
+
+.search-result_right-image {
+  background-image: url('../../assets/images/placeholder.jpg');
+  background-size: cover;
+}
+
+
