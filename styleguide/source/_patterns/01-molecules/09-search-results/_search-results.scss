@@ -1,13 +1,19 @@
 .search-result {
   margin-bottom: $space;
-  padding: $space;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  cursor: pointer;
 
-  @include breakpoint($bp-small) {
-    flex-direction: row;
-  } 
+  &:active,
+  &:hover {
+    .search-result_link {
+      text-decoration: underline;
+    }
+
+    .search-result_left {
+      background-color: $black-15;
+    }
+  }
 }
 
 .search-result_label {
