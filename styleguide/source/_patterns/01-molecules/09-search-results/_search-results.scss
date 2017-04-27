@@ -27,6 +27,15 @@
 
 .search-result_description {
   @extend %type-medium;
+  margin-bottom: 30px;
+
+  @include breakpoint($bp-med) {
+    margin-bottom: 60px;
+  }
+}
+
+.search-result__link {
+  @extend %type-small;
 }
 
 .search-result_left {
