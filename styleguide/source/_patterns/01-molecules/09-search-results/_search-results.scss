@@ -49,6 +49,10 @@
 .search-result_left-inner {
   display: table-cell;
   vertical-align: middle;
+
+  @include breakpoint($bp-small) {
+    width: 88%;
+  }
 }
 
 .search-result_right {
