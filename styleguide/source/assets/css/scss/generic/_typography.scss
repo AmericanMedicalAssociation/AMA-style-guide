@@ -80,14 +80,14 @@ body {
 }
 
 @mixin type-hero {
-   @include type($font-serif, 28px, $font-weight-medium, 1.1428571429);
-   @include breakpoint($bp-med-home min-width) {
-     @include type($font-serif, 38px, $font-weight-medium, 1.1052631579);
-   }
-   @include breakpoint($bp-large-home min-width) {
-     @include type($font-serif, 46px, $font-weight-medium, 1.0869565217);
-   }
- }
+  @include type($font-serif, 28px, $font-weight-medium, 1.1428571429);
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-serif, 38px, $font-weight-medium, 1.1052631579);
+  }
+  @include breakpoint($bp-large-home min-width) {
+    @include type($font-serif, 46px, $font-weight-medium, 1.0869565217);
+  }
+}
 
 // (Formerly B6)
 .type-larger,
@@ -108,6 +108,13 @@ body {
 // (Formerly B2)
 .type-large,
 %type-large {
+  @include type($font-sans-serif, 21px, $font-weight-medium, 1.3333333333);
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-sans-serif, 24px, $font-weight-medium, 1.2916666667);
+  }
+}
+
+@mixin type-large() {
   @include type($font-sans-serif, 21px, $font-weight-medium, 1.3333333333);
   @include breakpoint($bp-med-home min-width) {
     @include type($font-sans-serif, 24px, $font-weight-medium, 1.2916666667);
