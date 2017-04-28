@@ -152,17 +152,16 @@
 }
 
 .search-result_columns {
-  padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
+  padding-bottom: 10px;
   width: 100%;
 
   @include breakpoint($bp-small) {
-    height: 240px;
+    height: 210px;
+    position: relative;
   }
 
   @include breakpoint($bp-med) {
-    height: 210px;
+    height: 240px;
   }
 
   .rule_horizontal {
@@ -180,7 +179,11 @@
 
 .search-result_members-only-label-wrapper {
   margin-top: 25px;
-  align-self: baseline;
+
+  @include breakpoint($bp-small) {
+    position: absolute;
+    bottom: 10px;
+  }
 
   .icon-information,
   .search-result_members-only-label {
