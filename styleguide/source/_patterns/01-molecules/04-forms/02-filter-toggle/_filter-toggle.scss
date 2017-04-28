@@ -1,10 +1,12 @@
 .filter-toggle {
   @extend %h5;
   background-color: $black-7;
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-bottom: 0;
 
   &:active,
   &:hover,
