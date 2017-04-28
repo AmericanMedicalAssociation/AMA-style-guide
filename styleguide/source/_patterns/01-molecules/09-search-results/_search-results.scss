@@ -38,15 +38,16 @@
 
 .search-result_description {
   @extend %type-medium;
-  margin-bottom: 30px;
-
-  @include breakpoint($bp-med) {
-    margin-bottom: 60px;
-  }
 }
 
-.search-result__link {
+.search-result_link {
   @extend %type-small;
+  margin-top: 30px;
+  display: block;
+
+  @include breakpoint($bp-med) {
+    margin-top: 60px;
+  }
 }
 
 .search-result_left {
@@ -59,7 +60,6 @@
 }
 
 .search-result_left-inner {
-  display: table-cell;
   vertical-align: middle;
 
   @include breakpoint($bp-small) {
@@ -84,6 +84,7 @@
   height: auto;
   display: none;
   background-color: $purple;
+  justify-content: center;
 
   @include breakpoint($bp-med) {
     width: 33%;
@@ -93,6 +94,15 @@
 .search-result_right-image {
   background-image: url('../../assets/images/placeholder.jpg');
   background-size: cover;
+}
+
+.search-result_left-event-details {
+  @extend %type-medium;
+  margin-bottom: 0;
+
+  @include breakpoint($bp-small) {
+    display: none;
+  }
 }
 
 .search-result_right-event-details {
