@@ -1,0 +1,111 @@
+
+.filter-control {
+
+  @include breakpoint($bp-small) {
+    border-bottom: 1px solid $gray-8;
+    padding-bottom: 15px;
+  }
+}
+
+.filter-control_primary {
+  background-color: $black-3;
+  margin-bottom: 30px;
+
+  .layout {
+    align-items: center;
+    padding: 0;
+
+    @include breakpoint($bp-small) {
+      padding: 0 20px;
+    }
+  }
+
+  .layout_two_up-heavier-left-secondary {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .filter-toggle {
+    justify-content: flex-start;
+
+    @include breakpoint($bp-small) {
+      min-height: 80px;
+      justify-content: center;
+    }
+  }
+
+  .link-blue {
+    float: right;
+    display: none;
+
+    @include breakpoint($bp-small) {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint($bp-small max-width) {
+    .layout_two_up-heavier-left-primary {
+      padding: 20px;
+    }
+  }
+}
+
+.filter-control_secondary {
+  display: none;
+
+  @include breakpoint($bp-small) {
+    display: block;
+  }
+}
+
+.applied-filters-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+
+  @include breakpoint($bp-med) {
+    display: block;
+  }
+}
+
+.applied-filters-list_item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.filter-control_sort {
+  display: flex;
+
+  select {
+    height: 50px;
+  }
+}
+
+.filter-control_sort-icons {
+  border: 1px solid $gray-8;
+  padding: 9px 6px 2px;
+  margin: 0 0 0 10px;
+
+  .icon {
+    height: 30px;
+    width: 30px;
+
+    svg {
+      height: 30px;
+      width: 30px;
+      fill: $gray-8;
+    }
+  }
+
+  &:active,
+  &:hover,
+  &:focus,
+  &.is-active {
+    border: 1px solid $purple;
+
+    .icon svg {
+      fill: $purple;
+    }
+  }
+}

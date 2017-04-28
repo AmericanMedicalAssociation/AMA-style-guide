@@ -1,0 +1,39 @@
+<section class="filter-control">
+  <div class="filter-control_primary">
+    <div class="layout">
+      <div class="layout_two_up-heavier-left-primary">
+        {% include 'atoms-results-count' %}
+        {% include 'atoms-results-count-total' %}
+        {% include 'atoms-link-blue' with { 'content' : 'Reset' } %}
+      </div>
+      <div class="layout_two_up-heavier-left-secondary">
+        {% include 'molecules-filter-toggle' %}
+      </div>
+    </div>
+  </div>
+  <div class="filter-control_secondary">
+    <div class="layout">
+      <div class="layout_two_up-heavier-left-primary">
+        <ul class="applied-filters-list">
+          <li class="applied-filters-list_item">{% include 'molecules-applied-filter' %}</li>
+          <li class="applied-filters-list_item">{% include 'molecules-applied-filter' %}</li>
+          <li class="applied-filters-list_item">{% include 'molecules-applied-filter' %}</li>
+          <li class="applied-filters-list_item">{% include 'molecules-applied-filter' %}</li>
+        </ul>
+      </div>
+      <div class="layout_two_up-heavier-left-secondary">
+        <div class="filter-control_sort">
+          <label class="is-vishidden" for="sortType">Sort By</label>
+          {% include 'atoms-select-menu' with { 'content' : 'Best Match', 'for' : 'sortType' }%}
+          <a class="filter-control_sort-icons" href="#">{% include 'atoms-grid' %}</a>
+          <a class="filter-control_sort-icons" href="#">{% include 'atoms-list' %}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{#
+ # @file filter-control.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
