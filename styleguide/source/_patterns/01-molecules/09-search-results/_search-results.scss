@@ -153,6 +153,9 @@
 
 .search-result_columns {
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
   .rule_horizontal {
     margin-bottom: 30px;
@@ -169,6 +172,7 @@
 
 .search-result_members-only-label-wrapper {
   margin-top: 25px;
+  align-self: baseline;
 
   .icon-information,
   .search-result_members-only-label {
