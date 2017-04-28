@@ -178,3 +178,27 @@
 .search-result_columns-title {
   @extend %type-large;
 }
+
+.search-result_members-only-label-wrapper {
+  margin-top: 25px;
+
+  .icon-information,
+  .search-result_members-only-label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .icon-information {
+    margin-left: 7px;
+  }
+
+  @include breakpoint($bp-med) {
+    margin-top: 30px;
+  }
+}
+
+.search-result_members-only-label {
+  @extend %type-smaller;
+  font-weight: $font-weight-bold;
+  margin-bottom: 0;
+}
