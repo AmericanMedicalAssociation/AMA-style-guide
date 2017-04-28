@@ -1,5 +1,5 @@
 <a href="#" class="filter-toggle">
-  {% include 'atoms-paragraph' with { 'content': 'Filter your Search', 'class': 'filter-toggle_text' } %}
+  {{ filter|default('Filter your Search') }}
   {% include 'atoms-viewmore' %}
 </a>
 
