@@ -19,7 +19,11 @@
 .search-result_label {
   text-transform: uppercase;
   color: $purple;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 25px;
+  }
 }
 
 .search-result_title {
@@ -47,16 +51,7 @@
 
 .search-result_left {
   background-color: $black-7;
-  padding: 25px;
   width: 100%;
-
-  @include breakpoint($bp-small) {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    min-height: 200px;
-    padding: 30px;
-  }
 
   @include breakpoint($bp-med) {
     width: 66%;
@@ -72,16 +67,23 @@
   }
 }
 
+.search-result_left,
 .search-result_right {
-  width: 100%;
-  height: auto;
-  display: none;
-  background-color: $purple;
+  padding: 25px;
 
   @include breakpoint($bp-small) {
     width: 50%;
-    display: block;
+    display: flex !important;
+    align-items: center;
+    min-height: 200px;
+    padding: 30px;
   }
+}
+
+.search-result_right {
+  height: auto;
+  display: none;
+  background-color: $purple;
 
   @include breakpoint($bp-med) {
     width: 33%;
@@ -93,4 +95,9 @@
   background-size: cover;
 }
 
-
+.search-result_right-event-details {
+  @extend %type-large;
+  color: $white;
+  text-align: center;
+  margin-bottom: 0;
+}
