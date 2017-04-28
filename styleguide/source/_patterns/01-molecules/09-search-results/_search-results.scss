@@ -38,6 +38,14 @@
 
 .search-result_description {
   @extend %type-medium;
+
+  @include breakpoint($bp-small) {
+    display: none;
+  }
+
+  @include breakpoint($bp-med) {
+    display: block;
+  }
 }
 
 .search-result_description-event {
