@@ -13,6 +13,11 @@
       </div>
       
       {% include 'atoms-h4' with { 'class' : 'search-result_columns-title', 'content' : 'Visit AMA Wire to view news and more information related to this topic.' } %}
+
+      <div class="search-result_members-only-label-wrapper">
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_members-only-label', 'content' : 'AMA Members Only' } %}
+        {% include 'atoms-information' %}
+      </div>
     </div>
   </div>
 
@@ -24,6 +29,11 @@
       </div>
       
       {% include 'atoms-h4' with { 'class' : 'search-result_columns-title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Elit' } %}
+
+      <div class="search-result_members-only-label-wrapper">
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_members-only-label', 'content' : 'AMA Members Only' } %}
+        {% include 'atoms-information' %}
+      </div>
     </div>
   </div>
 </div>
