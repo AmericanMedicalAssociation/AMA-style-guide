@@ -40,6 +40,15 @@
   @extend %type-medium;
 }
 
+.search-result_description-event {
+  @extend %type-medium;
+  display: none;
+
+  @include breakpoint($bp-med) {
+    display: block;
+  }
+}
+
 .search-result_link {
   @extend %type-small;
   margin-top: 30px;
