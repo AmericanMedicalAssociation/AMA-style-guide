@@ -12,13 +12,18 @@
   margin-bottom: $space;
   padding: 25px;
   width: 100%;
+}
 
+.search-result-best_left,
+.search-result-best_right,
+.search-results_columns-inner {
   &:active,
   &:hover {
     background-color: $black-15;
     .search-result-best_link {
       text-decoration: underline;
     }
+
     @include breakpoint($bp-small min-width) {
       .search-result-best_right {
         background-color: $purple-darker;
@@ -86,6 +91,11 @@
 .search-result-best_left {
   @include breakpoint($bp-med) {
     @include grid__unit--cols(8);
+  }
+
+  &:active,
+  &:hover {
+    background-color: $black-15;
   }
 }
 
@@ -222,4 +232,9 @@
   @extend %type-smaller;
   font-weight: $font-weight-bold;
   margin-bottom: 0;
+
+  &:active,
+  &:hover {
+    color: $blue;
+  }
 }
