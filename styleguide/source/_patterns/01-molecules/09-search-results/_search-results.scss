@@ -3,17 +3,17 @@
   width: 100%;
   display: flex;
   cursor: pointer;
+}
 
+.search-result_left-inner,
+.search-result_right-inner,
+.search-results_columns-inner {
   &:active,
   &:hover {
     color: $blue;
 
     .search-result_link {
       text-decoration: underline;
-    }
-
-    .search-result_left {
-      background-color: $black-15;
     }
 
     .search-result_label {
@@ -95,6 +95,11 @@
 
   @include breakpoint($bp-med) {
     width: 66%;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $black-15;
   }
 }
 
@@ -204,4 +209,9 @@
   @extend %type-smaller;
   font-weight: $font-weight-bold;
   margin-bottom: 0;
+
+  &:active,
+  &:hover {
+    color: $blue;
+  }
 }
