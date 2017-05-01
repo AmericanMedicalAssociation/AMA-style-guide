@@ -173,6 +173,7 @@
     @include grid__unit--cols(3);
     display: flex;
     flex-direction: column;
+    padding-right: 15px;
   }
 }
 
@@ -188,6 +189,7 @@
     flex-direction: row;
     flex-flow: row wrap;
     align-content: flex-start;
+    padding-left: 15px;
 
     .nav-primary_list_subnav_list-item {
       @include grid__unit--cols(5.5);
@@ -239,6 +241,28 @@
         top: 10px;
       }
     }
+  }
+
+  @include breakpoint($bp-med-home) {
+    margin-top: 15px;
+
+    .nav-primary_list_subnav_list-item {
+      font-weight: $font-weight-bold;
+      padding: 5px 0;
+      border-top: 1px solid $gray-8;
+
+      .link-primary-nav {
+        padding: 0;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $gray-8;
+      }
+    }
+  }
+
+  @include breakpoint($bp-large-home) {
+      
   }
 }
 
