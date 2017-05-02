@@ -222,20 +222,18 @@
 
   @include breakpoint($bp-small) {
     height: 170px;
-    height: auto;
   }
 
   @include breakpoint($bp-med) {
     height: 130px;
-    height: auto;
   }
 
   .search-result_members-only-label-wrapper {
     position: relative;
 
     @include breakpoint($bp-med) {
-      margin-top: 0px;
       float: right;
+      margin-top: 0;
     }
   }
 }
