@@ -156,7 +156,8 @@
   margin-bottom: 0;
 }
 
-.search-result_columns {
+.search-result_columns,
+%search-result_columns {
   padding-bottom: 10px;
   width: 100%;
 
@@ -213,5 +214,28 @@
   &:active,
   &:hover {
     color: $blue;
+  }
+}
+
+.search-result_list-external {
+  @extend %search-result_columns;
+
+  @include breakpoint($bp-small) {
+    // height: 170px;
+    height: auto;
+  }
+
+  @include breakpoint($bp-med) {
+    // height: 130px;
+    height: auto;
+  }
+
+  .search-result_members-only-label-wrapper {
+    position: relative;
+
+    @include breakpoint($bp-med) {
+      margin-top: 0px;
+      float: right;
+    }
   }
 }

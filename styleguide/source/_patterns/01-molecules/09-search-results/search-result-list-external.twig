@@ -1,0 +1,27 @@
+{#
+ # @file search-result-list-external.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<div class="search-result_list-external">
+  <div class="layout layout_one_up">
+    {% include 'atoms-rule-horizontal' %}
+  </div>
+  <div class="layout layout_three_up_heavy_center">
+    <div class="layout_three_up_heavy_center-primary">
+      <div class="search-result_label-wrapper">
+        {% include 'atoms-h6' with { 'class' : 'search-result_label', 'content' : 'AMA Wire' } %}
+        {% include 'atoms-arrow-external' %}
+      </div>
+    </div>
+    <div class="layout_three_up_heavy_center-secondary">
+      {% include 'atoms-h4' with { 'class' : 'search-result_columns-title', 'content' : 'Visit AMA Wire to view news and more information related to this topic.' } %}
+    </div>
+    <div class="layout_three_up_heavy_center-tertiary">
+      <div class="search-result_members-only-label-wrapper">
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_members-only-label', 'content' : 'AMA Members Only' } %}
+        {% include 'atoms-information' %}
+      </div>
+    </div>
+  </div>
+</div>
