@@ -221,12 +221,12 @@
   @extend %search-result_columns;
 
   @include breakpoint($bp-small) {
-    // height: 170px;
+    height: 170px;
     height: auto;
   }
 
   @include breakpoint($bp-med) {
-    // height: 130px;
+    height: 130px;
     height: auto;
   }
 
