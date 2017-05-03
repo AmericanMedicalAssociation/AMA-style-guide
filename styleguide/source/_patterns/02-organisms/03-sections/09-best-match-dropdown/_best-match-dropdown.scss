@@ -51,6 +51,7 @@
 
 .layout-best-match-nested {
   @include grid__unit--cols(12);
+  font-style: normal;
 
   &:first-child {
     margin-bottom: 30px;
