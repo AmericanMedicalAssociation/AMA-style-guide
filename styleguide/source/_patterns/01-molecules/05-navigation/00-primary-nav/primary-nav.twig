@@ -1,12 +1,14 @@
+{% if engaged %}<div class="nav-primary-menu_overlay-mobile nav-primary-menu_overlay-mobile-on"></div>{% endif %}
 <div class="nav-primary_button">Menu</div>
 
 <nav class="nav-primary" role="navigation" aria-label="Main Navigation">
-
   <ul class="nav-primary_list nav-primary_list-mobile-closed" role="menubar">
-    <li class="nav-primary_section">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
+    <li class="nav-primary_section {% if engaged %}is-active{% endif %}">
+      <div class="nav-primary_list-item_title {% if engaged %}is-active{% endif %}">
+        {% include '04-link-primary-nav.twig' with { 'content': nav.first, 'url': '/patterns/04-pages-00-primary-landing-page-education/04-pages-00-primary-landing-page-education.html' } %}
+      </div>
 
-      <ul class="nav-primary_section_subnav">
+      <ul class="nav-primary_section_subnav {% if engaged %}is-open{% endif %}">
         <div class="nav-primary_section_subnav_container-primary">
           <li class="nav-primary_section_subnav_item nav-primary_section_subnav_item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.first } %}</li>
         </div>
