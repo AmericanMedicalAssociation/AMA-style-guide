@@ -1,0 +1,6 @@
+
+.title-label {
+  @extend %h5;
+  text-transform: uppercase;
+  color: $purple;
+}

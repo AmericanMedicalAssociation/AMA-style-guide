@@ -5,20 +5,19 @@
 
 <div class="nav-primary-menu_button">Menu</div>
 
-<nav id="nav-primary" class="nav-primary-menu">
+<nav id="nav-primary" class="nav-primary-menu" role="navigation">
 
-  <ul class="nav-primary_list nav-primary_list-closed">
-
+  <ul class="nav-primary_list nav-primary_list-closed" role="menubar">
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
         {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
-        <li class="nav-primary_list_subnav_list-item">
-          {% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.first } %}
-        </li>
-        <span class="nav-primary_list_subnav-container">
+        <div class="nav-primary_list_subnav-primary-container">
+          <li class="nav-primary_list_subnav_list-item nav-primary_list_subnav_list-item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.first } %}</li>
+        </div>
+        <ul class="nav-primary_list_subnav-secondary-container" role="menu">
           <li class="nav-primary_list_subnav_list-item">
             {% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.second } %}
             {% include 'atoms-paragraph' with { 'content': 'Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor. ', 'class': 'nav-primary_list_subnav_list-item_text' } %}
@@ -35,38 +34,40 @@
             {% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.fifth } %}
             {% include 'atoms-paragraph' with { 'content': 'Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor. ', 'class': 'nav-primary_list_subnav_list-item_text' } %}
           </li>
-        </span>
+        </ul>
         <li class="nav-primary_list_subnav_list-item-back"><a class="link-primary-nav" href="{{url}}">{% include "atoms-arrow-select" %} Back</a></li>
       </ul>
     </li>
-
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
         {% include '04-link-primary-nav.twig' with { 'content': nav.second } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
-        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.first } %}</li>
-        <span class="nav-primary_list_subnav-container">
+        <div class="nav-primary_list_subnav-primary-container">
+          <li class="nav-primary_list_subnav_list-item nav-primary_list_subnav_list-item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.first } %}</li>
+        </div>
+        <ul class="nav-primary_list_subnav-secondary-container" role="menu">
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.second } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.third } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.fourth } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.fifth } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.sixth } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavsecondchild.seventh } %}</li>
-          </span>
+        </ul>
         <li class="nav-primary_list_subnav_list-item-back"><a class="link-primary-nav" href="{{url}}">{% include "atoms-arrow-select" %} Back</a></li>
       </ul>
     </li>
-
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
         {% include '04-link-primary-nav.twig' with { 'content': nav.third } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
-        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.first } %}</li>
-        <span class="nav-primary_list_subnav-container">
+        <div class="nav-primary_list_subnav-primary-container">
+          <li class="nav-primary_list_subnav_list-item nav-primary_list_subnav_list-item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.first } %}</li>
+        </div>
+        <ul class="nav-primary_list_subnav-secondary-container" role="menu">
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.second } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.third } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.fourth } %}</li>
@@ -74,7 +75,7 @@
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.sixth } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.seventh } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavthirdchild.eighth } %}</li>
-          </span>
+        </ul>
         <li class="nav-primary_list_subnav_list-item-back"><a class="link-primary-nav" href="{{url}}">{% include "atoms-arrow-select" %} Back</a></li>
       </ul>
     </li>
@@ -84,9 +85,11 @@
       </div>
 
       <ul class="nav-primary_list_subnav">
-        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.first } %}</li>
-        <span class="nav-primary_list_subnav-container">
-          <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.second } %}</li>
+        <div class="nav-primary_list_subnav-primary-container">
+          <li class="nav-primary_list_subnav_list-item nav-primary_list_subnav_list-item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.first } %}</li>
+        </div>
+        <ul class="nav-primary_list_subnav-secondary-container" role="menu">
+         <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.second } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.third } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.fourth } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.fifth } %}</li>
@@ -94,7 +97,7 @@
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.seventh } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.eighth } %}</li>
           <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfourthchild.ninth } %}</li>
-        </span>
+        </ul>
         <li class="nav-primary_list_subnav_list-item-back"><a class="link-primary-nav" href="{{url}}">{% include "atoms-arrow-select" %} Back</a></li>
       </ul>
     </li>
@@ -104,13 +107,32 @@
       </div>
 
       <ul class="nav-primary_list_subnav">
-        <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.first } %}</li>
-        <span class="nav-primary_list_subnav-container">
-          <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.second } %}</li>
-          <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.third } %}</li>
-          <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.fourth } %}</li>
-          <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.fifth } %}</li>
-        </span>
+        <div class="nav-primary_list_subnav-primary-container">
+          <li class="nav-primary_list_subnav_list-item nav-primary_list_subnav_list-item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.first } %}</li>
+          <ul class="nav-primary_list_sub-subnav-container" role="menu">
+            <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'House of Delegates' } %}</li>
+            <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'Member Sections & Groups' } %}</li>
+            <li class="nav-primary_list_subnav_list-item">{% include '04-link-primary-nav.twig' with { 'content': 'Councils' } %}</li>
+          </ul>
+        </div>
+        <ul class="nav-primary_list_subnav-secondary-container" role="menu">
+          <li class="nav-primary_list_subnav_list-item">
+            {% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.second } %}
+            {% include 'atoms-paragraph' with { 'content': 'Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor. ', 'class': 'nav-primary_list_subnav_list-item_text' } %}
+          </li>
+          <li class="nav-primary_list_subnav_list-item">
+            {% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.third } %}
+            {% include 'atoms-paragraph' with { 'content': 'Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor. ', 'class': 'nav-primary_list_subnav_list-item_text' } %}
+          </li>
+          <li class="nav-primary_list_subnav_list-item">
+            {% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.fourth } %}
+            {% include 'atoms-paragraph' with { 'content': 'Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor. ', 'class': 'nav-primary_list_subnav_list-item_text' } %}
+          </li>
+          <li class="nav-primary_list_subnav_list-item">
+            {% include '04-link-primary-nav.twig' with { 'content': subnavfifthchild.fifth } %}
+            {% include 'atoms-paragraph' with { 'content': 'Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor. ', 'class': 'nav-primary_list_subnav_list-item_text' } %}
+          </li>
+        </ul>
         <li class="nav-primary_list_subnav_list-item-back"><a class="link-primary-nav" href="{{url}}">{% include "atoms-arrow-select" %} Back</a></li>
       </ul>
     </li>
