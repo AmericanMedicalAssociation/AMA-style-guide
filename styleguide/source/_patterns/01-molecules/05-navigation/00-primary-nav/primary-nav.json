@@ -49,5 +49,10 @@
     "third": "Who We Are",
     "fourth": "What We Do",
     "fifth": "Becoming a Physician"
+  },
+  "subnavfifthgrandchild": {
+    "first": "House of Delegates",
+    "second": "Member Sections & Groups",
+    "third": "Councils"
   }
 }
