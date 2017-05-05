@@ -21,6 +21,28 @@
   }
 
   @include breakpoint($bp-small $bp-med) {
+    // 2-up layout
+    // when there are three items it's 50:50
+    &:nth-child(1):nth-last-child(2) {
+      margin-right: 12px;
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait,
+      &.card-cta-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+
+    &:nth-child(2):nth-last-child(1) {
+      margin-left: 12px;
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait,
+      &.card-cta-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+
     // 3-up layout
     // when there are three items it's 50:50/100
     // first item is 
@@ -80,6 +102,28 @@
   }
 
   @include breakpoint($bp-med) {
+    // 2-up layout
+    // when there are three items it's 50:50
+    &:nth-child(1):nth-last-child(2) {
+      margin-right: 12px;
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait,
+      &.card-cta-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+
+    &:nth-child(2):nth-last-child(1) {
+      margin-left: 12px;
+      width: calc(50% - 12px);
+
+      &.hub-card-portrait,
+      &.card-cta-portrait {
+        min-height: calc((((100vw -  32px) / 2) / 2) * 3);
+      }
+    }
+    
     // 3-up layout
     // when there are three items it's 33:33:33
     &:nth-child(1):nth-last-child(3),
