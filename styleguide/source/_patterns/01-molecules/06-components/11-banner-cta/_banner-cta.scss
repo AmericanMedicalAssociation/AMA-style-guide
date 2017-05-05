@@ -1,3 +1,4 @@
+.banner-cta-half,
 .hub-cta-half {
   width: 100%;
   max-width: 1200px;
@@ -12,12 +13,14 @@
   }
 }
 
+.banner-cta-half-left,
 .hub-cta-half-left {
   @include breakpoint(600px) {
     flex-direction: row;
   }
 }
 
+.banner-cta-half-text,
 .hub-cta-half-text {
   display: flex;
   flex-direction: column;
@@ -33,6 +36,7 @@
   }
 }
 
+.banner-cta_title,
 .hub-cta_title {
   @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
   margin-bottom: 8px;
@@ -45,6 +49,7 @@
   }
 }
 
+.banner-cta_desc,
 .hub-cta_desc {
   @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
   margin-bottom: 12px;
@@ -55,6 +60,7 @@
   }
 }
 
+.banner-cta_image,
 .hub-cta_image {
   padding: 30px 20px;
   display: block;
