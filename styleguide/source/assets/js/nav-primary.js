@@ -115,6 +115,52 @@ jQuery.noConflict();
       }
     });
 
+    // hover functionality @tablet and greater
+    $('.nav-primary_list-item').hover(
+      // Over
+      function () {
+        if ($(window).width() > 740) {
+          $(this).children('.nav-primary_list-item_title').children('.link-primary-nav').blur();
+          $(this).children('.nav-primary_list-item_title').addClass('is-active');
+          $(this).addClass('is-active');
+          $(this).children('.nav-primary_list_subnav').addClass('is-open');
+          $(this).siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('is-active');
+          $(this).siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
+          $(this).siblings('.nav-primary_list-item').removeClass('is-active');
+          $('.search_modal').removeClass('is-open');
+
+          setTimeout(function () {
+            // if the menu is open, apply the overlay
+            if ($('.nav-primary_list_subnav').is(':visible')) {
+              $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+              // if the menu is not open, remove the overlay
+            } else {
+              $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+            }
+          }, 50);
+        }
+      },
+      // Out
+      function () {
+        if ($(window).width() > 740) {
+          $(this).children('.nav-primary_list-item_title').children('.link-primary-nav').blur();
+          $(this).children('.nav-primary_list-item_title').removeClass('is-active');
+          $(this).removeClass('is-active');
+          $(this).children('.nav-primary_list_subnav').removeClass('is-open');
+
+          setTimeout(function () {
+            // if the menu is open, apply the overlay
+            if ($('.nav-primary_list_subnav').is(':visible')) {
+              $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+              // if the menu is not open, remove the overlay
+            } else {
+              $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+            }
+          }, 50);
+        }
+      }
+    );
+
   });
 
 })(jQuery);
