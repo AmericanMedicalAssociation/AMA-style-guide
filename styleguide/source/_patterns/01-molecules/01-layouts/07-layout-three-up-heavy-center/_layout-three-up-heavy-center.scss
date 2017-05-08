@@ -1,0 +1,65 @@
+/**
+ * @file layout-three-up-heavy-center.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Placeholder blocks in layout molecules.
+.layout_container {
+  display: block;
+  background-color: $black-7;
+  margin-bottom: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+// Layout default setup.
+.layout {
+  @include grid();
+}
+
+.flexbox .layout.layout_three_up_heavy_center {
+  @include grid__unit--cols(12);
+  justify-content: flex-end;
+}
+
+.layout_three_up_heavy_center-primary,
+.layout_three_up_heavy_center-secondary,
+.layout_three_up_heavy_center-tertiary {
+  @include grid__unit--cols(12);
+}
+
+.layout_three_up_heavy_center-primary {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(3);
+    padding-right: 15px;
+  }
+}
+
+.layout_three_up_heavy_center-secondary {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    padding-left: 15px;
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    padding: 0 15px;
+  }
+}
+
+.layout_three_up_heavy_center-tertiary {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    padding-left: 15px;
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(3);
+    padding-left: 15px;
+  }
+}
