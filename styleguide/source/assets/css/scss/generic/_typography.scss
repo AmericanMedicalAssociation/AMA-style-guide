@@ -45,7 +45,7 @@ $bp-large: 75em; // 1200px
   line-height: $line-height;
 }
 
-// Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback  
+// Rem Unit font sizes with relative fallback http:/seesparkbox.com/foundry/scss_rem_mixin_now_with_a_better_fallback
 // Usage: @include font-size(1, large);
 @mixin font-size($decimal-size, $keyword: null) {
   @if $keyword{ font-size: $keyword; }
@@ -54,7 +54,9 @@ $bp-large: 75em; // 1200px
 }
 
 body {
+  /* stylelint-disable property-no-vendor-prefix */
   -webkit-text-size-adjust: 100%;
+  /* stylelint-enable */
   color: #000;
   -webkit-font-smoothing: antialiased;
   @include type($base-font-family, $base-font-size, $base-font-weight, $base-line-height);
@@ -66,7 +68,8 @@ body {
 
 // Specific Typography classes
 // (Formerly H2)
-.type-hero, %type-hero {
+.type-hero,
+%type-hero {
   @include type($font-serif, 28px, $font-weight-medium, 1.1428571429);
   @include breakpoint($bp-med-home min-width) {
     @include type($font-serif, 38px, $font-weight-medium, 1.1052631579);
@@ -87,7 +90,8 @@ body {
  }
 
 // (Formerly B6)
-.type-larger, %type-larger {
+.type-larger,
+%type-larger {
   @include type($font-sans-serif, 23px, $font-weight-medium, 1.3043478261);
   @include breakpoint($bp-med min-width) {
     @include type($font-sans-serif, 28px, $font-weight-medium, 1.25);
@@ -102,7 +106,8 @@ body {
 }
 
 // (Formerly B2)
-.type-large, %type-large {
+.type-large,
+%type-large {
   @include type($font-sans-serif, 21px, $font-weight-medium, 1.3333333333);
   @include breakpoint($bp-med-home min-width) {
     @include type($font-sans-serif, 24px, $font-weight-medium, 1.2916666667);
@@ -110,7 +115,8 @@ body {
 }
 
 // (Formerly B3)
-.type-medium, %type-medium {
+.type-medium,
+%type-medium {
   @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
   @include breakpoint($bp-med-home min-width) {
     @include type($font-sans-serif, 20px, $font-weight-medium, 1.35);
@@ -118,7 +124,8 @@ body {
 }
 
 // (Formerly B4)
-.type-small, %type-small {
+.type-small,
+%type-small {
   @include type($font-sans-serif, 16px, $font-weight-medium, 1.4375);
   @include breakpoint($bp-med min-width) {
     @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
@@ -126,12 +133,14 @@ body {
 }
 
 // (Formerly B5)
-.type-smaller, %type-smaller {
+.type-smaller,
+%type-smaller {
   @include type($font-sans-serif, 14px, $font-weight-medium, 1.5);
 }
 
 // (Formerly B1)
-.type-search, %type-search {
+.type-search,
+%type-search {
   @include type($font-serif, 28px, $font-weight-medium, 1.25);
   @include breakpoint($bp-med min-width) {
     @include type($font-serif, 36px, $font-weight-medium, 1.1944444444);

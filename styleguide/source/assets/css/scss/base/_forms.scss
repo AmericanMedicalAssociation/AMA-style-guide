@@ -1,7 +1,8 @@
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
-form ol, form ul {
+form ol,
+form ul {
 	list-style: none;
 	margin-left: 0;
 }
@@ -20,7 +21,10 @@ label {
 	display: block;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     font-family: inherit;
     font-size: 100%;
     margin: 0 1px 0;
@@ -43,7 +47,9 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
+	/* stylelint-disable property-no-vendor-prefix */
   -webkit-appearance: none;
+	/* stylelint-enable */
   position: relative;
   height: 60px;
   width: 100%;
@@ -100,7 +106,7 @@ textarea {
 }
 
 select {
-  background-image: url('../../assets/icons/svg/opendropdown.svg');
+  background-image: url("../../assets/icons/svg/opendropdown.svg");
   background-position: 97.5% 52%;
   background-repeat: no-repeat;
 }
@@ -144,12 +150,12 @@ input[type="radio"] {
     // Custom checkboxes and radio buttons
     &:before {
       position: relative;
-      top: .15em;
+      top: 0.15em;
       display: inline-block;
-      content: '';
+      content: "";
       width: 20px;
       height: 20px;
-      background-image: url('../../assets/icons/svg/radio.svg');
+      background-image: url("../../assets/icons/svg/radio.svg");
       background-position: 0px 0px;
       background-size: 20px;
       background-repeat: no-repeat;
@@ -175,7 +181,7 @@ input[type="radio"] {
 // Add radius curves to radio buttons
 input[type="checkbox"] {
   + label:before {
-    background-image: url('../../assets/icons/svg/checkbox.svg');
+    background-image: url("../../assets/icons/svg/checkbox.svg");
   }
 
   &:checked + label:before {
@@ -184,13 +190,17 @@ input[type="checkbox"] {
 }
 
 input[type="search"] {
-    -webkit-appearance: none;
-    border-radius: 0;
+	/* stylelint-disable property-no-vendor-prefix */
+  -webkit-appearance: none;
+	/* stylelint-enable */
+	border-radius: 0;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+	/* stylelint-disable property-no-vendor-prefix */
+	-webkit-appearance: none;
+	/* stylelint-enable */
 }
 
 //Form Field Container
@@ -199,11 +209,14 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .inline-form {
-	fieldset, .inline-container {
+	fieldset,
+  .inline-container {
 		position: relative;
 	}
 
-	input[type=submit], button, .btn {
+	input[type=submit],
+	button,
+	.btn {
 		padding: 0.65rem 1.3rem;
 		background: $gray-dark;
 		position: absolute;
@@ -212,7 +225,8 @@ input[type="search"]::-webkit-search-decoration {
 		z-index: 1;
 		width: auto;
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background: $gray;
 			color: $white;
 		}

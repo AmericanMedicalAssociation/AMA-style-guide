@@ -19,6 +19,12 @@ var gulp        = require('gulp'),
     glob        = require('glob'),
     svgmin      = require('gulp-svgmin'),
     gulpicon    = require('gulpicon/tasks/gulpicon'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    prefix      = require('gulp-autoprefixer'),
+    postcss     = require('gulp-postcss'),
+    reporter    = require('postcss-reporter'),
+    stylelint   = require('gulp-stylelint'),
+    gutil       = require('gulp-util');
     gutil       = require('gulp-util'),
     pWaitFor    = require('p-wait-for'),
     pathExists  = require('path-exists');
@@ -80,10 +86,12 @@ gulp.task('images', function () {
 gulp.task('sass', function () {
   return gulp.src(config.scss.files)
     .pipe(sass())
+    .pipe(prefix('last 2 version'))
     .pipe(gulpif(production, cssmin()))
     .pipe(gulpif(production, rename({
       suffix: '.min'
     })))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(
       config.scss.dest
     ))
@@ -148,6 +156,17 @@ gulp.task('browser-sync', function() {
   });
 });
 
+// Task: Sass Linting
+// Description: lint sass files
+gulp.task('scss-lint', function() {
+  return gulp.src(config.scss.files)
+    .pipe(stylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+});
+
 // Task: Watch files
 gulp.task('watch', function () {
 
@@ -209,9 +228,9 @@ gulp.task('default', ['clean:before'], function (callback) {
 gulp.task('serve', function () {
   production = false;
 
-  gulp.start(
-    'browser-sync',
+  runSequence(
     'default',
+    'browser-sync',
     'watch'
   );
 });

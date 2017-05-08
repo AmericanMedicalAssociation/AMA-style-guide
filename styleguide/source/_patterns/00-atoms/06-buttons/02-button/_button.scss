@@ -8,8 +8,10 @@
 button,
 .button {
   @extend %background-transition;
+  /* stylelint-disable property-no-vendor-prefix */
   -moz-appearance: none;
   -webkit-appearance: none;
+  /* stylelint-enable */
   background-color: $purple;
   border-radius: 0;
   border: 1px solid $purple;

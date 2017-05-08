@@ -52,7 +52,7 @@
 
 .hub-hero_title,
 .hero-banner_title {
-  background-color: rgba($white, .45);
+  background-color: rgba($white, 0.45);
   padding: 20px 20px 8px;
   @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
   @include breakpoint($bp-med-home min-width) {
@@ -68,7 +68,7 @@
   @extend %type-larger;
   padding: 0 20px 20px;
   margin-bottom: 0;
-  background-color: rgba($white, .45);
+  background-color: rgba($white, 0.45);
 }
 
 .hub-hero_button-container,
@@ -113,7 +113,7 @@
 
   .hub-hero-inner,
   .hero-banner-inner {
-    background-color: rgba($white, .45);
+    background-color: rgba($white, 0.45);
     width: 100%;
     margin: 0;
     margin-right: auto;

@@ -59,6 +59,7 @@
 .sg-pattern[id*='organisms'] {
   padding: 0 2em;
   margin: 1em 0 0;
+  position: relative;
 }
 
 .sg-pattern[id*='templates'] .sg-pattern-head,

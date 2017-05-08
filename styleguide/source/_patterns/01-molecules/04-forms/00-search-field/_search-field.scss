@@ -49,7 +49,7 @@
   &[type="submit"]:focus {
     outline: 0;
     border: 0;
-    background-color: rgba($blue,.1);
+    background-color: rgba($blue, 0.1);
   }
 }
 .search-field_reset {
@@ -66,7 +66,7 @@
   &[type="reset"]:focus {
     outline: 0;
     border: 0;
-    background-color: rgba($blue,.1);
+    background-color: rgba($blue, 0.1);
   }
   &.is-active {
     display: block;
