@@ -21,7 +21,6 @@ var gulp        = require('gulp'),
     gulpicon    = require('gulpicon/tasks/gulpicon'),
     sourcemaps  = require('gulp-sourcemaps'),
     prefix      = require('gulp-autoprefixer'),
-    indent      = require('gulp-indent'),
     postcss     = require('gulp-postcss'),
     reporter    = require('postcss-reporter'),
     stylelint   = require('gulp-stylelint'),
@@ -54,7 +53,6 @@ gulp.task('scripts', function () {
     .pipe(concat(
       'application.js'
     ))
-    .pipe(indent())
     .pipe(gulpif(production, uglify()))
     .pipe(gulpif(production, rename({
       suffix: '.min'
@@ -87,7 +85,6 @@ gulp.task('images', function () {
 // Task: Handle Sass and CSS
 gulp.task('sass', function () {
   return gulp.src(config.scss.files)
-    .pipe(indent())
     .pipe(sass())
     .pipe(prefix('last 2 version'))
     .pipe(gulpif(production, cssmin()))
