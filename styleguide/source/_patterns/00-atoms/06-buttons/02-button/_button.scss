@@ -12,7 +12,7 @@ button,
   -webkit-appearance: none;
   background-color: $purple;
   border-radius: 0;
-  border: 0px;
+  border: 1px solid $purple;
   color: $white;
   cursor: pointer;
   display: inline-block;
@@ -26,6 +26,7 @@ button,
   &:hover,
   &:focus {
     background-color: $purple-darker;
+    border-color: $purple-darker;
     color: $white;
     text-decoration: none;
   }
