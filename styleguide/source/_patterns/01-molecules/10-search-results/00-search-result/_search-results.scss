@@ -16,16 +16,6 @@
   }
 }
 
-// .search-result_label {
-//   text-transform: uppercase;
-//   color: $purple;
-//   margin-bottom: 20px;
-
-//   @include breakpoint($bp-small) {
-//     margin-bottom: 25px;
-//   }
-// }
-
 .search-result_title {
   @include type($font-serif, 18px, $font-weight-medium, 1.2222222222);
   margin-bottom: 9px;
