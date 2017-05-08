@@ -231,9 +231,9 @@ gulp.task('default', ['clean:before'], function (callback) {
 gulp.task('serve', function () {
   production = false;
 
-  gulp.start(
-    'browser-sync',
+  runSequence(
     'default',
+    'browser-sync',
     'watch'
   );
 });
