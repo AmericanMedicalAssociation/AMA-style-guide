@@ -25,10 +25,12 @@
 }
 
 .layout_three_up-row {
-  margin: 0 -15px;
   @include grid();
-  width: 100%;
+    width: 100%;
 
+  @include breakpoint($bp-large) {
+    margin: 0 -15px;
+  }
 }
 
 .layout_three_up-primary,
