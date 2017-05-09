@@ -31,6 +31,14 @@
 
 .category-highlight_image {
   display: block;
+  width: 100%;
+  height: inherit;
+
+  img {
+    width: 100%;
+    height: inherit;
+
+  }
 }
 
 .category-highlight_title-link {
