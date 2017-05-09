@@ -3,27 +3,21 @@
  # Copyright 2017 Palantir.net, Inc.
  #}
 
-<div class="layout layout_one_up">
+<a href="{{ url }}" class="layout layout_one_up">
   {% include 'atoms-title-label' with { 'content' : 'Best Match' } %}
-  <div class="search-result">
-    <div class="search-result_left">
-      <div class="search-result_left-inner">
-        {% include 'atoms-h4' with { 'class' : 'search-result_title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra' } %}
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_description-event', 'content' : 'Sed massa augue, sollic itudiny vel metus a, posuere erat. In vulputate feugiat neque, sed aliquam juh tasga hugit.' } %}
-
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_left-event-details', 'content' : 'June 11–15, 2016'} %}
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_left-event-details', 'content' : 'Hyatt Regency Chicago'} %}
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_left-event-details', 'content' : 'Chicago, IL'} %}
-
-        {% include 'atoms-link' with { 'class' : 'link-blue search-result_link', 'content' : 'Learn More' } %}
-      </div>
+  <div class="search-result-best-event">
+    <div class="search-result-best_left">
+      {% include 'atoms-h3' with { 'class' : 'search-result-best_title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra' } %}
+      {% include 'atoms-paragraph' with { 'class' : 'search-result-best_description-event', 'content' : 'Sed massa augue, sollic itudiny vel metus a, posuere erat. In vulputate feugiat neque, sed aliquam juh tasga hugit.' } %}
+      {% include 'atoms-paragraph' with { 'class' : 'search-result-best_link', 'content' : 'Learn More' } %}
     </div>
-    <div class="search-result_right">
-      <div class="search-result_right-inner">
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_right-event-details', 'content' : 'June 11–15, 2016'} %}
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_right-event-details', 'content' : 'Hyatt Regency Chicago'} %}
-        {% include 'atoms-paragraph' with { 'class' : 'search-result_right-event-details', 'content' : 'Chicago, IL'} %}
+    <div class="search-result-best_right">
+      <div class="search-result-best_event-details">
+        <div>June 11–15, 2016</div>
+        <div>Hyatt Regency Chicago</div>
+        <div>Chicago, IL</div>
+        {% include 'atoms-paragraph' with { 'class' : 'search-result-best_link', 'content' : 'Learn More' } %}
       </div>
     </div>
   </div>
-</div>
+</a>

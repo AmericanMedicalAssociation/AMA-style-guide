@@ -1,45 +1,48 @@
-.search-result {
-  margin-bottom: $space;
-  width: 100%;
-  display: flex;
+/**
+ * @file search-results.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.search-result-best,
+.search-result-best-event {
+  background-color: $black-7;
   cursor: pointer;
+  margin-bottom: $space;
+  padding: 25px;
+  width: 100%;
 
   &:active,
   &:hover {
-    .search-result_link {
+    background-color: $black-15;
+    .search-result-best_link {
       text-decoration: underline;
     }
+  }
 
-    .search-result_left {
-      background-color: $black-15;
-    }
+  @include breakpoint($bp-small min-width) {
+    display: flex;
+    padding: 0;
   }
 }
 
-.search-result_title {
-  @include type($font-serif, 18px, $font-weight-medium, 1.2222222222);
+// Best match title.
+.search-result-best_title {
   margin-bottom: 9px;
 
   @include breakpoint($bp-med min-width) {
-    @include type($font-serif, 24px, $font-weight-medium, 1.1666666667);
     margin-bottom: 12px;
   }
 }
 
-.search-result_description {
+// Best match description.
+.search-result-best_description,
+.search-result-best_description-event {
   @extend %type-medium;
-
-  @include breakpoint($bp-small) {
-    display: none;
-  }
-
-  @include breakpoint($bp-med) {
-    display: block;
-  }
 }
 
-.search-result_description-event {
-  @extend %type-medium;
+// Best match event description.
+.search-result-best_description-event {
   display: none;
 
   @include breakpoint($bp-med) {
@@ -47,74 +50,87 @@
   }
 }
 
-.search-result_link {
+// Best match link.
+.search-result-best_link {
   @extend %type-small;
+  color: $blue;
+  display: inline-block;
+  font-weight: $font-weight-bold;
+  margin-bottom: 0;
   margin-top: 30px;
-  display: block;
 
   @include breakpoint($bp-med) {
     margin-top: 40px;
   }
 }
 
-.search-result_left {
-  background-color: $black-7;
-  width: 100%;
-
-  @include breakpoint($bp-med) {
-    width: 66%;
-  }
-}
-
-.search-result_left-inner {
-  vertical-align: middle;
+// Best match layout.
+.search-result-best_left,
+.search-result-best_right {
 
   @include breakpoint($bp-small) {
-    width: 88%;
-  }
-}
-
-.search-result_left,
-.search-result_right {
-  padding: 25px;
-
-  @include breakpoint($bp-small) {
-    width: 50%;
-    display: flex !important;
+    @include grid__unit--cols(6);
     align-items: center;
     min-height: 200px;
     padding: 30px;
   }
 }
 
-.search-result_right {
-  height: auto;
-  display: none;
-  background-color: $purple;
-  justify-content: center;
-
+// Best match primary.
+.search-result-best_left {
   @include breakpoint($bp-med) {
-    width: 33%;
+    @include grid__unit--cols(8);
   }
 }
 
-.search-result_right-image {
+// Best match primary.
+.search-result-best-event .search-result-best_left {
+  .search-result-best_link {
+    display: none;
+  }
+
+  @include breakpoint($bp-small) {
+    .search-result-best_link {
+      display: inline-block;
+    }
+  }
+}
+
+// Best match secondary.
+.search-result-best_right {
+
+  @include breakpoint($bp-small) {
+    align-items: center;
+    background-color: $purple;
+    display: flex;
+    height: auto;
+    justify-content: center;
+
+    .search-result-best_link {
+      display: none;
+    }
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(4);
+  }
+}
+
+// Best match image.
+.search-result-best_right-image {
   background-image: url('../../assets/images/placeholder.jpg');
   background-size: cover;
 }
 
-.search-result_left-event-details {
+// Best match event details.
+.search-result-best_event-details {
   @extend %type-medium;
   margin-bottom: 0;
 
   @include breakpoint($bp-small) {
-    display: none;
+    @include type-large;
+    color: $white;
+    text-align: center;
+    margin-bottom: 0;
   }
-}
-
-.search-result_right-event-details {
-  @extend %type-large;
-  color: $white;
-  text-align: center;
-  margin-bottom: 0;
 }
