@@ -18,7 +18,7 @@
 .subcategory-topics-description_wrap {
   @include breakpoint($bp-med) {
     @include grid__unit--cols(6);
-    padding-right: 15px;
+    padding-right: 40px;
   }
 
   @include breakpoint($bp-large) {
