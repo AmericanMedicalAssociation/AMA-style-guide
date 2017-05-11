@@ -19,6 +19,9 @@
     .search-result-best_link {
       text-decoration: underline;
     }
+    .search-result-best_right {
+      background-color: $purple-darker;
+    }
   }
 
   @include breakpoint($bp-small min-width) {
