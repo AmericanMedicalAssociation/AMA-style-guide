@@ -1,0 +1,35 @@
+{#
+ # @file subcategory-topics-description.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
+
+<div class="subcategory-topics-description layout">
+  <div class="subcategory-topics-description_wrap">
+    <div class="subcategory-topics-description_title">
+      <div class="subcategory-topics-description_title-inner">
+        {% include 'atoms-eyebrow' %}
+        <a href="{{ url }}" class="subcategory-topics-description_link">Get Started</a>
+      </div>
+    </div>
+    <div class="subcategory-topics-description_teaser">
+      {% include 'atoms-paragraph' with { 'content': 'Nulla vitae elit libero, a pharetra augue. Donec id elit non mi a porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.', 'class': 'category-highlight_teaser' } %}
+      {% include 'atoms-link' with { 'content': 'Learn More', 'class': 'link-blue inline-bio_cta' } %}
+    </div>
+  </div>
+  <div class="subcategory-topics-description_topics">
+    <ul class="list_links list_links-rule">
+      <li class="list_links_item">
+        {% include '00-link.twig' with { 'content': 'Lorem Ipsum Dolor Sit', 'class': 'link-black' } %}
+      </li>
+      <li class="list_links_item">
+        {% include '00-link.twig' with { 'content': 'Amet Eros Nulla', 'class': 'link-black' } %}
+      </li>
+      <li class="list_links_item">
+        {% include '00-link.twig' with { 'content': 'Tellus Sit Porta Gravida', 'class': 'link-black' } %}
+      </li>
+      <li class="list_links_item">
+        {% include '00-link.twig' with { 'content': 'View All', 'class': 'link-black' } %}
+      </li>
+    </ul>
+  </div>
+</div>
