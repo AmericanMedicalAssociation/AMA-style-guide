@@ -6,6 +6,7 @@
 
 .search-result-best,
 .search-result-best-event {
+  @extend %background-transition;
   background-color: $black-7;
   cursor: pointer;
   margin-bottom: $space;
