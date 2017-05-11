@@ -1,0 +1,12 @@
+
+.category-highlight {
+  margin-bottom: 30px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint($bp-large) {
+    margin-bottom: 0;
+  }
+}
