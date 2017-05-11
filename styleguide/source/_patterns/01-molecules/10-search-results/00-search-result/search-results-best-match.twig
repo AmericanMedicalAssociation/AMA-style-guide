@@ -1,0 +1,16 @@
+<a href="{{ url }}" class="layout layout_one_up">
+  {% include 'atoms-title-label' with { 'content' : 'Best Match' } %}
+  <div class="search-result-best">
+    <div class="search-result-best_left">
+      {% include 'atoms-h3' with { 'class' : 'search-result-best_title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra' } %}
+      {% include 'atoms-paragraph' with { 'class' : 'search-result-best_description', 'content' : 'Sed massa augue, sollic itudiny vel metus a, posuere erat. In vulputate feugiat neque, sed aliquam juh tasga hugit.' } %}
+      {% include 'atoms-paragraph' with { 'class' : 'search-result-best_link', 'content' : 'Learn More' } %}
+    </div>
+    <div class="search-result-best_right search-result-best_right-image"></div>
+  </div>
+</a>
+
+{#
+ # @file search-results-best-match.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
