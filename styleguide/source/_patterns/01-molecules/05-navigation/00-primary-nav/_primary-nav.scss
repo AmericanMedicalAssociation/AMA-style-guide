@@ -23,7 +23,6 @@
 
 // Mobile overlay
 .nav-primary-menu_overlay-mobile {
-  -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
   background: #384047;
   height: 100%;
@@ -264,8 +263,9 @@
     }
   }
 
+  /* stylelint-disable-next-line */
   @include breakpoint($bp-large-home) {
-      
+
   }
 }
 

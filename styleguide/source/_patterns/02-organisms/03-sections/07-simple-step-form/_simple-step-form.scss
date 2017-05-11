@@ -8,7 +8,9 @@
   padding: 70px 20px 60px;
   margin: 0 auto;
 
+  /* stylelint-disable */
   @include breakpoint($bp-small) {}
+  /* stylelint-enable */
 
   @include breakpoint($bp-med) {
     @include grid__unit--cols(8);

@@ -1,5 +1,5 @@
 ---
-el: ".list-item_title-small"
-title: "List Item Title Small"
+el: ".metadata"
+title: "Metadata"
 ---
-This is the title for a small list item. It includes text and a link.
+This is the metadata that is paired with a title or a list item.

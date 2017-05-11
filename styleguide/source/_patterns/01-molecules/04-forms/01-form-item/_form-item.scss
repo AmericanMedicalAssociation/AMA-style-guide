@@ -33,13 +33,13 @@
     // Display error icon
     &.error ~ .form-item_icon {
       display: block;
-      background-image: url('../../assets/icons/svg/alert.svg');
+      background-image: url("../../assets/icons/svg/alert.svg");
     }
 
     // Display valid icon
     &.valid ~ .form-item_icon {
       display: block;
-      background-image: url('../../assets/icons/svg/valid.svg');
+      background-image: url("../../assets/icons/svg/valid.svg");
     }
   }
 
@@ -104,7 +104,7 @@
         vertical-align: middle;
         text-align: center;
         cursor: pointer;
-        padding: .64em .94em;
+        padding: 0.64em 0.94em;
         margin-bottom: 1em;
 
         &:nth-of-type(2n) {
@@ -214,7 +214,7 @@
   top: 1em;
   right: 55px;
   display: block;
-  background-image: url('../../assets/icons/svg/show.svg');
+  background-image: url("../../assets/icons/svg/show.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 30px;
@@ -222,7 +222,7 @@
   z-index: 10;
 
   &.show {
-    background-image: url('../../assets/icons/svg/hide.svg');
+    background-image: url("../../assets/icons/svg/hide.svg");
   }
 }
 
@@ -232,7 +232,7 @@
   top: 15px;
   right: 0;
   display: block;
-  background-image: url('../../assets/icons/svg/information.svg');
+  background-image: url("../../assets/icons/svg/information.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   width: 30px;
