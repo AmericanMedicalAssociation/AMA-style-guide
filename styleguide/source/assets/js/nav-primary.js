@@ -36,7 +36,7 @@ jQuery.noConflict();
 
 
   // Toggle the primary navigation open and closed when the Menu button is clicked.
-  $('.nav-primary-menu_button').click(function() {
+  $('.nav-primary-menu_button').on('click mouseover', function() {
     if ( $(window).width() < 740 ) {
       // Unfocus on the dropdown
       $(this).blur();
@@ -73,7 +73,7 @@ jQuery.noConflict();
     });
 
     // click on the primary nav item
-    $('.nav-primary_list-item_title').click(function () {
+    $('.nav-primary_list-item_title').on('click mouseover', function () {
       $('.link-primary-nav').blur();
       // toggle a clicked state for this item
       $(this).toggleClass('is-active');
