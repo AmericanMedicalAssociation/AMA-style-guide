@@ -33,6 +33,6 @@
 }
 
 .date-block_date-day {
-  @include type($font-serif, 90px, $font-weight-medium, .8);
+  @include type($font-serif, 90px, $font-weight-medium, 0.8);
   margin: 12px 0;
 }
