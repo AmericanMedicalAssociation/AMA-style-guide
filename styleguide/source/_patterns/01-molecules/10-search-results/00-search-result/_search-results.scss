@@ -12,18 +12,13 @@
   margin-bottom: $space;
   padding: 25px;
   width: 100%;
-}
 
-.search-result-best_left,
-.search-result-best_right,
-.search-results_columns-inner {
   &:active,
   &:hover {
     background-color: $black-15;
     .search-result-best_link {
       text-decoration: underline;
     }
-
     @include breakpoint($bp-small min-width) {
       .search-result-best_right {
         background-color: $purple-darker;
@@ -92,11 +87,6 @@
   @include breakpoint($bp-med) {
     @include grid__unit--cols(8);
   }
-
-  &:active,
-  &:hover {
-    background-color: $black-15;
-  }
 }
 
 // Best match primary.
@@ -152,9 +142,12 @@
 }
 
 .search-result_label-wrapper {
+  margin-bottom: 25px;
+
   .search-result_label,
   .icon-external {
     display: inline-block;
+    margin-bottom: 0;
   }
   .external {
     fill: $purple;
@@ -163,33 +156,36 @@
 }
 
 // Styling for external column search result.
-.search-result_columns {
-  padding-bottom: 10px;
-  width: 100%;
+.search-results_columns-inner {
+  display: inline-block;
+  margin-top: 30px;
 
   .external {
     fill: $purple;
   }
 
   &:hover {
+    @extend %text-transition;
     color: $blue;
 
     .title-label {
+      @extend %text-transition;
       color: $blue;
     }
 
     .external {
+      @extend %icon-transition;
       fill: $blue;
     }
   }
 
   @include breakpoint($bp-small) {
-    height: 210px;
+    height: 240px;
     position: relative;
   }
 
   @include breakpoint($bp-med) {
-    height: 240px;
+    height: 210px;
   }
 
   .rule_horizontal {
@@ -203,15 +199,10 @@
 
 .search-result_columns-title {
   @extend %type-large;
+  margin-bottom: 25px;
 }
 
 .search-result_members-only-label-wrapper {
-  margin-top: 25px;
-
-  @include breakpoint($bp-small) {
-    position: absolute;
-    bottom: 10px;
-  }
 
   .icon-information,
   .search-result_members-only-label {
@@ -222,19 +213,10 @@
   .icon-information {
     margin-left: 7px;
   }
-
-  @include breakpoint($bp-med) {
-    margin-top: 30px;
-  }
 }
 
 .search-result_members-only-label {
   @extend %type-smaller;
   font-weight: $font-weight-bold;
   margin-bottom: 0;
-
-  &:active,
-  &:hover {
-    color: $blue;
-  }
 }
