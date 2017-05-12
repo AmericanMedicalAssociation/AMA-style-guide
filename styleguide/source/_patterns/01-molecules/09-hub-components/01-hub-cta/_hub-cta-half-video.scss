@@ -26,7 +26,11 @@
 
 .hub-cta_video iframe.iframe-video {
   width: 100%;
-  min-height: 300px;
+  min-height: 230px;
+
+  @include breakpoint(600px) {
+    min-height: 300px;
+  }
 
   @include breakpoint(1000px) {
     min-height: calc((((100vw - 42px) / 2) / 3) * 2);
