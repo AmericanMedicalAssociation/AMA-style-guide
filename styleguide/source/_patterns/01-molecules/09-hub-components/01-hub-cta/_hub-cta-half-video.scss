@@ -23,15 +23,15 @@ article, article * {
 }
 
 .hub-cta_video {
-  max-width: 500px;
   width: 100%;
-  margin: 0 auto;
   height: 300px;
+  background: black;
   //display: block;
   //width: 100%;
 
   @include breakpoint(800px) {
     width: 50%;
+    height: 365px;
   }
 }
 
@@ -56,4 +56,6 @@ article, article * {
 .test-wrapper {
   height: 100%;
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
