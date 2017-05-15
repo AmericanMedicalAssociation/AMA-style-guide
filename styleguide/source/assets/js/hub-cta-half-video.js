@@ -1,6 +1,6 @@
 jQuery.noConflict();
 (function($) {
   $(document).ready(function(){
-    $('.hub-cta_video').fitVids();
+    $('iframe[src*="youtube"]').parent().fitVids();
   });
 })(jQuery);
