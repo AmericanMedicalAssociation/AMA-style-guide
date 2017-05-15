@@ -1,42 +1,59 @@
-.hub-cta-half-text {
-  width: 100%;
+article, article * {
+  //border: solid 1px red;
+}
 
-  @include breakpoint(1000px) {
+.hub-cta-half-text {
+  //display: none;
+  width: 100%;
+  background: $black-7;
+
+  @include breakpoint(800px) {
     width: 50%;
   }
 }
 
 .hub-cta-half-video {
+  width: 100%;
   flex-direction: column;
+  align-items: center;
 
-  @include breakpoint(1000px) {
+  @include breakpoint(800px) {
     flex-direction: row-reverse;
   }
 }
 
 .hub-cta_video {
-  display: block;
+  max-width: 500px;
   width: 100%;
-  background: black;
+  margin: 0 auto;
+  height: 300px;
+  //display: block;
+  //width: 100%;
 
-  @include breakpoint(1000px) {
+  @include breakpoint(800px) {
     width: 50%;
   }
 }
 
 .hub-cta_video iframe.iframe-video {
   width: 100%;
-  min-height: 230px;
+  height: 100%;
+  //min-height: 230px;
 
   @include breakpoint(600px) {
-    min-height: 300px;
+    //min-height: 300px;
   }
 
   @include breakpoint(1000px) {
-    min-height: calc((((100vw - 42px) / 2) / 3) * 2);
+    //min-height: calc((((100vw - 42px) / 2) / 3) * 2);
   }
 
   @include breakpoint($bp-large) {
-    min-height: 400px;
+    //min-height: 400px;
   }
+}
+
+.test-wrapper {
+  height: 100%;
+  width: 100%;
 }
