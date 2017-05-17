@@ -77,3 +77,7 @@
 .sg-subtype {
   padding: 5em 2em 0;
 }
+
+.sg-pattern-example .nav-primary-menu_overlay-mobile {
+  display: none;
+}
