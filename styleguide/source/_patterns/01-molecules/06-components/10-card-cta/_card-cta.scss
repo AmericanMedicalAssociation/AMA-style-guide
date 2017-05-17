@@ -219,6 +219,10 @@
   }
 }
 
+.hub-card_image + .hub-card_title {
+  margin-top: auto;
+}
+
 .hub-card_desc,
 .card-cta_desc {
   @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
