@@ -22,11 +22,11 @@
   @include grid__unit--cols(12);
 
   @include breakpoint($bp-small) {
-    @include grid__unit--cols(7.5);
-    padding-right: 15px;
+    @include grid__unit--cols(7.25);
+    padding-right: 25px;
   }
 
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-large) {
     @include grid__unit--cols(9);
   }
 }
@@ -35,11 +35,11 @@
   @include grid__unit--cols(12);
 
   @include breakpoint($bp-small) {
-    @include grid__unit--cols(4.5);
+    @include grid__unit--cols(4.75);
     padding-right: 15px;
   }
 
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-large) {
     @include grid__unit--cols(3);
   }
 }
