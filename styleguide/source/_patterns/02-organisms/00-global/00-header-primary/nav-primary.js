@@ -117,7 +117,6 @@ jQuery.noConflict();
 
   // Find height of ribbon and header-primary to create proper spacing
   function checkHeight() {
-    console.log($('.header-primary-span'))
     var headerHeight = $('.header-primary').height();
     var ribbonHeight = $('.ribbon').height();
 
