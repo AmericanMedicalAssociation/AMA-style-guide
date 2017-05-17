@@ -28,18 +28,18 @@
   svg {
     fill: $green;
   }
-  .block-select--message {
+  .block-select__message {
     background-color: $green;
   }
 }
 
-.block-select--message {
+.block-select__message {
   color: $white;
   font-size: .8em;
   transition: background-color 0.28s ease;
   width: 100%;
 }
 
-.block-select--text {
+.block-select__text {
   padding: 1.1em 0;
 }
