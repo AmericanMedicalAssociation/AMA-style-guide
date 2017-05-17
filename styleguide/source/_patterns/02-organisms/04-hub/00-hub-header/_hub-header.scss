@@ -7,6 +7,17 @@
 .hub-header {
   padding: 0 25px;
   background-color: $purple;
+
+    @include breakpoint(1000px) {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 5000000;
+
+      &+.layout {
+        margin-top: 87px;
+    }
+  }
 }
 
 .hub-header-inner {
