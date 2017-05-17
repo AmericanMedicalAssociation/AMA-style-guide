@@ -23,6 +23,8 @@
   "scripts": {
     "base"  : "source/assets/js/",
     "files" : [
+      "source/assets/js/jquery-2.0.0b2.js",
+      "source/assets/js/jquery.validate.js",
       "source/assets/js/**/*.js"
     ],
     "dest"  : "public/assets/js/"
