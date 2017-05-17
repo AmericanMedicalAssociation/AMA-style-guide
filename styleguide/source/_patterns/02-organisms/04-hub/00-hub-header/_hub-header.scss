@@ -49,7 +49,7 @@
   .button-secondary {
     @extend %type-small;
     order: 2;
-    padding: 10px 25px;
+    padding: 7px 20px;
     margin-left: auto;
 
     @include breakpoint($bp-small) {
