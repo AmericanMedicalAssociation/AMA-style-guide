@@ -116,7 +116,7 @@ jQuery.noConflict();
   });
 
   // Close the menu and sub menu when user taps outside of subnav.
-  $(':not(#nav-primary)').on('touchstart', function (event) {
+  $('.body, header:not(ul.nav-primary_list)').on('touchstart click', function (event) {
     if (!$(event.target).closest('#nav-primary, .nav-primary-menu_button').length || $(event.target).hasClass('nav-primary_list-item') || $(event.target).hasClass('nav-primary_list_subnav')) {
       $('.nav-primary_list').removeClass('nav-primary_list-open').addClass('nav-primary_list-closed');
       $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
