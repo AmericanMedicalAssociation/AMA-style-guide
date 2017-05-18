@@ -50,9 +50,6 @@ gulp.task('clean:before', function () {
 // Task: Handle scripts
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.files)
-    .pipe(concat(
-      'application.js'
-    ))
     .pipe(gulpif(production, uglify()))
     .pipe(gulpif(production, rename({
       suffix: '.min'
