@@ -153,11 +153,6 @@
   padding: 0;
   list-style: none;
 
-  &:hover {
-    display: flex;
-    height: auto;
-  }
-
   &.is-open {
     display: flex;
     height: auto;
@@ -174,6 +169,11 @@
     background: $black-7;
     width: 100vw;
     z-index: 1;
+
+    &:hover {
+      display: flex;
+      height: auto;
+    }
   }
 
   @include breakpoint($bp-large-home) {
