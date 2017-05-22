@@ -114,6 +114,20 @@
     margin-right: 28px;
     float: left;
 
+    // &:hover {
+    //   // Active hover state opens drawer at tablet and above (on click works still)
+    //   .nav-primary_list_subnav {
+    //     display: flex;
+    //     height: auto;
+    //   }
+
+    //   .nav-primary_list-item_title > .link-primary-nav {
+    //     color: $black;
+    //     border-bottom: 20px $purple solid;
+    //     padding-bottom: 32px;
+    //   }
+    // }
+
     &:last-of-type {
       margin-right: 0;
     }
@@ -155,6 +169,11 @@
     background: $black-7;
     width: 100vw;
     z-index: 1;
+
+    &:hover {
+      display: flex;
+      height: auto;
+    }
   }
 
   @include breakpoint($bp-large-home) {
@@ -261,11 +280,6 @@
         border-bottom: 1px solid $gray-8;
       }
     }
-  }
-
-  /* stylelint-disable-next-line */
-  @include breakpoint($bp-large-home) {
-
   }
 }
 
@@ -383,7 +397,7 @@
   }
 
   @include breakpoint($bp-large-home min-width) {
-    padding: 50px 0;
+    padding: 51px 0;
   }
 }
 
