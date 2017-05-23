@@ -14,7 +14,8 @@
       top: 0;
       z-index: 100;
 
-      &+.layout {
+      &+ .layout,
+      &+ article {
         margin-top: 87px;
     }
   }
