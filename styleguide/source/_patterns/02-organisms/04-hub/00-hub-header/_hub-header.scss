@@ -8,7 +8,7 @@
   padding: 0 25px;
   background-color: $purple;
 
-    @include breakpoint(1000px) {
+    @include breakpoint($bp-med) {
       position: fixed;
       width: 100%;
       top: 0;
