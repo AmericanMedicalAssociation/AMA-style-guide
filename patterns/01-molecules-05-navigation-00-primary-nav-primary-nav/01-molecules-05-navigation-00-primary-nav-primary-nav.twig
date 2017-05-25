@@ -1,8 +1,3 @@
-{#
- # @file primary-nav.twig
- # Copyright 2017 Palantir.net, Inc.
- #}
-
 <div class="nav-primary-menu_button">Menu</div>
 
 <nav id="nav-primary" class="nav-primary-menu" role="navigation">
@@ -10,7 +5,7 @@
   <ul class="nav-primary_list nav-primary_list-closed" role="menubar">
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
+        {% include '04-link-primary-nav.twig' with { 'content': nav.first, 'url': '/patterns/04-pages-00-primary-landing-page-education/04-pages-00-primary-landing-page-education.html' } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
@@ -40,7 +35,7 @@
     </li>
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.second } %}
+        {% include '04-link-primary-nav.twig' with { 'content': nav.second, 'url': '/patterns/04-pages-00-primary-landing-page-life-career/04-pages-00-primary-landing-page-life-career.html' } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
@@ -60,7 +55,7 @@
     </li>
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.third } %}
+        {% include '04-link-primary-nav.twig' with { 'content': nav.third, 'url': '/patterns/04-pages-00-primary-landing-page-practice-management/04-pages-00-primary-landing-page-practice-management.html' } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
@@ -81,7 +76,7 @@
     </li>
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.fourth } %}
+        {% include '04-link-primary-nav.twig' with { 'content': nav.fourth, 'url': '/patterns/04-pages-00-primary-landing-page-delivering-care/04-pages-00-primary-landing-page-delivering-care.html' } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
@@ -103,7 +98,7 @@
     </li>
     <li class="nav-primary_list-item">
       <div class="nav-primary_list-item_title">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.fifth } %}
+        {% include '04-link-primary-nav.twig' with { 'content': nav.fifth, 'url': '/patterns/04-pages-00-primary-landing-page-about/04-pages-00-primary-landing-page-about.html' } %}
       </div>
 
       <ul class="nav-primary_list_subnav">
@@ -138,3 +133,8 @@
     </li>
   </ul>
 </nav>
+
+{#
+ # @file primary-nav.twig
+ # Copyright 2017 Palantir.net, Inc.
+ #}
