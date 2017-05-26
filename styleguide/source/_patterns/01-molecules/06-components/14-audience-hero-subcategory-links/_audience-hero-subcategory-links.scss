@@ -1,0 +1,48 @@
+/**
+ * @file audience-hero-subcategory-links.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.audience_hero_subcategory {
+ 		margin-top: 25px;
+}
+
+.audience_hero_subcategory__title h2{
+ 	color: $purple;
+}
+
+.audience_hero_subcategory__image {
+ 		width: 100%;
+ 		height: inherit;
+ 		margin-top: 25px;
+ 		margin-bottom: 30px;
+
+ 		img {
+ 			width: 100%;
+ 		}
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    padding-right: 40px;
+    float: left;
+
+ 	}
+
+ 	@include breakpoint($bp-large) {
+    @include grid__unit--cols(12);
+ 	}
+
+}
+
+.audience_hero_subcategory__list_links {
+	@include breakpoint($bp-med) {
+		@include grid__unit--cols(6);
+		float: left;
+	}
+
+	@include breakpoint($bp-large) {
+ 		width: 100%;
+    @include grid__unit--cols(12);
+ 	}
+}
