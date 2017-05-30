@@ -105,7 +105,7 @@ jQuery.noConflict();
         $(this).parents('.nav-primary_list-item').removeClass('is-hidden');
 
         // When you click the back button revert all that stuff above.
-        $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').on('touch click', function () {
+        $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').click(function () {
           $('.nav-primary_list-item_title').removeClass('is-active');
           $('.nav-primary_list-item').removeClass('is-active');
           $('.nav-primary_list_subnav').removeClass('is-open');
