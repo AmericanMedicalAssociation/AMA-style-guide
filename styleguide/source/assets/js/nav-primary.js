@@ -35,7 +35,7 @@ jQuery.noConflict();
   });
 
   // Toggle the primary navigation open and closed when the Menu button is clicked.
-  $('.nav-primary-menu_button').on('click', function() {
+  $('.nav-primary-menu_button').click(function() {
     if ( $(window).width() < 740 ) {
       // Unfocus on the dropdown
       $(this).blur();
