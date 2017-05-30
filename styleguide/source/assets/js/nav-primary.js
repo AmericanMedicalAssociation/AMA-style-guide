@@ -71,8 +71,8 @@ jQuery.noConflict();
       $(this).removeClass('nav-primary_list_subnav-visible');
     });
 
-    // Click or mouse over the primary nav item.
-    $('.nav-primary_list-item_title').on('click mouseenter', function () {
+    // click on the primary nav item.
+    $('.nav-primary_list-item_title').click(function () {
       $('.link-primary-nav').blur();
       // toggle a clicked state for this item
       $(this).toggleClass('is-active');
