@@ -77,11 +77,8 @@ jQuery.noConflict();
       $(this).toggleClass('nav-primary_section-active');
       // add an open state to the nav container
       $(this).parents('.nav-primary_list').addClass('nav-primary_list-open');
-      // add an open state to its sibling subnav
-      $(this).siblings('.nav-primary_section_subnav').toggleClass('nav-primary_section_subnav-open');
       // Remove active and open states from sibling drawer items.
       $(this).siblings('.nav-primary_section').removeClass('nav-primary_section-active');
-      $(this).siblings('.nav-primary_section').children('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
       // Remove is-open class on search modal
       $('.search_modal').removeClass('is-open');
 
