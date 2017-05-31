@@ -34,9 +34,8 @@ jQuery.noConflict();
     }
   });
 
-
   // Toggle the primary navigation open and closed when the Menu button is clicked.
-  $('.nav-primary-menu_button').click(function() {
+  $('.nav-primary-menu_button').on('click', function() {
     if ( $(window).width() < 740 ) {
       // Unfocus on the dropdown
       $(this).blur();
@@ -53,18 +52,18 @@ jQuery.noConflict();
       $('.search_modal').removeClass('is-open');
 
       // When the menu is open, apply the overlay.
-      if( $('.nav-primary_list').hasClass('nav-primary_list-open') ) {
+      if ($('.nav-primary_list').hasClass('nav-primary_list-open')) {
         $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
       }
 
       // Else remove overlay class
       else {
         $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
-      };
+      }
     }
   });
 
-  // Mobile Primary navigation functionality.
+  // Primary navigation functionality.
   $('.nav-primary_list').each(function () {
 
     // Hide the sub-navigation menus initially.
@@ -72,8 +71,8 @@ jQuery.noConflict();
       $(this).removeClass('nav-primary_list_subnav-visible');
     });
 
-    // click on the primary nav item
-    $('.nav-primary_list-item_title').click(function () {
+    // Click or mouse over the primary nav item.
+    $('.nav-primary_list-item_title').on('click mouseenter', function () {
       $('.link-primary-nav').blur();
       // toggle a clicked state for this item
       $(this).toggleClass('is-active');
@@ -81,7 +80,7 @@ jQuery.noConflict();
       $(this).parents('.nav-primary_list-item').toggleClass('is-active');
       // add an open state to its sibling subnav
       $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
-      // Remove active and open states fromm sibling drawer items
+      // Remove active and open states from sibling drawer items.
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('is-active');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
@@ -106,7 +105,7 @@ jQuery.noConflict();
         $(this).parents('.nav-primary_list-item').removeClass('is-hidden');
 
         // When you click the back button revert all that stuff above.
-        $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').click(function () {
+        $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').on('touch click', function () {
           $('.nav-primary_list-item_title').removeClass('is-active');
           $('.nav-primary_list-item').removeClass('is-active');
           $('.nav-primary_list_subnav').removeClass('is-open');
@@ -114,7 +113,20 @@ jQuery.noConflict();
         });
       }
     });
+  });
 
+  // Close the menu and sub menu when user taps outside of subnav.
+  $('.body, header:not(ul.nav-primary_list)').on('touchstart click', function (event) {
+    if($('.nav-primary_list_subnav.is-open').length || $('.nav-primary_list.nav-primary_list-open').length) {
+      if (!$(event.target).closest('#nav-primary, .nav-primary-menu_button').length || $(event.target).hasClass('nav-primary_list-item') || $(event.target).hasClass('nav-primary_list_subnav')) {
+        $('.nav-primary_list').removeClass('nav-primary_list-open').addClass('nav-primary_list-closed');
+        $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+        $('.nav-primary-menu_button').removeClass('nav-primary-menu_button-clicked');
+        $('.nav-primary_list_subnav').removeClass('is-open');
+        $('.nav-primary_list-item_title').removeClass('is-active');
+        $('.nav-primary_list-item').removeClass('is-active');
+      }
+    }
   });
 
 })(jQuery);

@@ -111,6 +111,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/00-atoms/04-images/02-image-wrapper/image-wrapper";
 @import "../../_patterns/00-atoms/06-buttons/01-button-search/button-search";
 @import "../../_patterns/00-atoms/06-buttons/02-button/button";
+@import "../../_patterns/00-atoms/08-media/01-video-youtube/01-video-youtube.scss";
 @import "../../_patterns/01-molecules/00-text/00-section-header/section-header";
 @import "../../_patterns/01-molecules/00-text/01-date-block/date-block";
 @import "../../_patterns/01-molecules/02-blocks/00-block-hero/block-hero";
@@ -137,8 +138,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/06-components/10-card-cta/card-cta";
 @import "../../_patterns/01-molecules/06-components/11-banner-cta/banner-cta";
 @import "../../_patterns/01-molecules/06-components/13-accordion/accordion";
-@import '../../_patterns/01-molecules/06-components/12-category-highlight-image/category-highlight-image';
-@import '../../_patterns/01-molecules/06-components/13-subcategory-topics-description/subcategory-topics-description';
+@import "../../_patterns/01-molecules/06-components/12-category-highlight-image/category-highlight-image";
+@import "../../_patterns/01-molecules/06-components/13-subcategory-topics-description/subcategory-topics-description";
 @import "../../_patterns/01-molecules/08-lists/00-list_links/list_links";
 @import "../../_patterns/02-organisms/00-global/00-header-primary/header-primary";
 @import "../../_patterns/01-molecules/08-lists/07-list-links-social/list-links-social";
@@ -173,5 +174,5 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/02-organisms/01-lists/00-related-content/related-content";
 @import "../../_patterns/03-templates/02-article/article";
 @import "../../_patterns/01-molecules/10-search-results/00-search-result/_search-results";
+@import "../../_patterns/01-molecules/09-hub-components/01-hub-cta/hub-cta-half-video";
 @import "../../_patterns/02-organisms/03-sections/10-category-highlights/category-highlights";
-
