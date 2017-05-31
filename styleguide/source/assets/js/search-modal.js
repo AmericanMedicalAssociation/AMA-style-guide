@@ -17,13 +17,13 @@ jQuery.noConflict();
     // If is-open class exists
     if( $('.search_modal').hasClass('is-open') ) {
       $('.search_modal').removeClass('is-open');
-      $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+      $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
     }
 
     // If is-open class doesn't exist
     else {
       $('.search_modal').addClass('is-open');
-      $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+      $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
 
       // Focus search input
       setTimeout(function(){
@@ -40,7 +40,7 @@ jQuery.noConflict();
   // Remove classes when clicking close
   $('.search_modal_close').click(function() {
     $('.search_modal').removeClass('is-open');
-    $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+    $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
   });
 
 })(jQuery);

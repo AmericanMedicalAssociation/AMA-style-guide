@@ -35,12 +35,12 @@ jQuery.noConflict();
   });
 
   // Toggle the primary navigation open and closed when the Menu button is clicked.
-  $('.nav-primary-menu_button').click(function() {
+  $('.nav-primary_button').click(function() {
     if ( $(window).width() < 740 ) {
       // Unfocus on the dropdown
       $(this).blur();
       // toggle a clicked state on the trigger
-      $(this).toggleClass('nav-primary-menu_button-clicked');
+      $(this).toggleClass('nav-primary_button-clicked');
       // toggle the open or closed class on the drawer
       $('.nav-primary_list').toggleClass('nav-primary_list-mobile_closed nav-primary_list-mobile_open');
       // remove active classes on children
@@ -53,12 +53,12 @@ jQuery.noConflict();
 
       // When the menu is open, apply the overlay.
       if ($('.nav-primary_list').hasClass('nav-primary_list-open')) {
-        $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+        $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
       }
 
       // Else remove overlay class
       else {
-        $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+        $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
       }
     }
   });
@@ -93,10 +93,10 @@ jQuery.noConflict();
         setTimeout(function () {
           // if the menu is open, apply the overlay
           if ($('.nav-primary_list_subnav').is(':visible')) {
-            $('.nav-primary-menu_overlay-mobile').addClass('nav-primary-menu_overlay-mobile-on');
+            $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
             // if the menu is not open, remove the overlay
           } else {
-            $('.nav-primary-menu_overlay-mobile').removeClass('nav-primary-menu_overlay-mobile-on');
+            $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
           }
         }, 50);
       }

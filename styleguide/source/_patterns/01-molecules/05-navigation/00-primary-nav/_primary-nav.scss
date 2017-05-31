@@ -4,7 +4,7 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-.nav-primary-menu {
+.nav-primary {
   float: left;
 
   @include breakpoint($bp-med-home) {
@@ -22,7 +22,7 @@
 }
 
 // Mobile overlay
-.nav-primary-menu_overlay-mobile {
+.nav-primary_overlay-mobile {
   transition: opacity 0.25s ease-in-out;
   background: #384047;
   height: 100%;
@@ -42,7 +42,7 @@
   }
 }
 
-.nav-primary-menu_overlay-mobile-on {
+.nav-primary_overlay-mobile-on {
   opacity: 0.85;
   width: 100%;
 }
@@ -350,7 +350,7 @@
 }
 
 // Mobile menu button to trigger drop down.
-.nav-primary-menu_button {
+.nav-primary_button {
   @extend %background-transition;
   border: 2px $purple solid;
   color: $purple;
@@ -367,7 +367,7 @@
   &:active,
   &:hover,
   &.open,
-  &.nav-primary-menu_button-clicked {
+  &.nav-primary_button-clicked {
     background-color: $purple-lighter;
   }
 
