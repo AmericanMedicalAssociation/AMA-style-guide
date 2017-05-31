@@ -72,16 +72,32 @@
 // Add hover styling to the primary navigation.
 .nav-primary_list.nav-primary_list-open {
   @include breakpoint($bp-med-home min-width) {
-    .nav-primary_section_title > .link-nav-primary {
+    .nav-primary_section > .link-nav-primary {
       color: gray;
     }
 
     .nav-primary_section-active,
     .nav-primary_section:hover {
-      .nav-primary_section_title > .link-nav-primary {
-        color: black
+      > .link-nav-primary {
+        color: $black;
+        border-bottom: 20px $purple solid;
+        padding-bottom: 30px;
       }
     }
+  }
+}
+
+.nav-primary_section-active {
+  > .link-nav-primary {
+
+    @include breakpoint($bp-large-home min-width) {
+      padding-bottom: 32px;
+    }
+  }
+
+  .nav-primary_section_subnav {
+    display: flex;
+    height: auto;
   }
 }
 
@@ -154,11 +170,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
-  &.nav-primary_section_subnav-open {
-    display: flex;
-    height: auto;
-  }
 
   @include breakpoint($bp-med-home min-width) {
     justify-content: flex-start;
@@ -398,48 +409,8 @@
   }
 }
 
-.nav-primary_section_title {
-
-  &.nav-primary_section_title-active {
-    .icon {
-      display: none;
-    }
-
-    .link-nav-primary {
-      @include breakpoint($bp-med-home min-width) {
-        color: $black;
-        border-bottom: 20px $purple solid;
-        padding-bottom: 30px;
-      }
-
-      @include breakpoint($bp-large-home min-width) {
-        padding-bottom: 32px;
-      }
-    }
-  }
-
-  .link-nav-primary {
-
-    @include breakpoint($bp-med-home min-width) {
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $black;
-        border-bottom: 20px $purple solid;
-        padding-bottom: 30px;
-      }
-    }
-
-    @include breakpoint($bp-large-home min-width) {
-
-      &:active,
-      &:hover,
-      &:focus {
-        padding-bottom: 32px;
-      }
-    }
-  }
+.nav-primary_section-active .icon {
+  display: none;
 }
 
 .nav-primary_section_subnav_item_text {

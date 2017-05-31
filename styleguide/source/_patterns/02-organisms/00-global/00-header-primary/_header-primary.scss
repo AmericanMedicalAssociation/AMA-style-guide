@@ -164,7 +164,7 @@
     }
   }
 
-  .nav-primary_section_title {
+  .nav-primary_section {
     > .link-nav-primary {
       @include breakpoint($bp-med-home min-width) {
         font-size: 14px;
@@ -183,7 +183,7 @@
       }
     }
 
-    &.nav-primary_section_title-active > .link-nav-primary {
+    &.nav-primary_section-active > .link-nav-primary {
       @include breakpoint($bp-med-home min-width) {
         border-bottom: 10px $purple solid;
         padding-bottom: 15px;

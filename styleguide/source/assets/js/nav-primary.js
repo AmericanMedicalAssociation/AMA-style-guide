@@ -44,7 +44,6 @@ jQuery.noConflict();
       // toggle the open or closed class on the drawer
       $('.nav-primary_list').toggleClass('nav-primary_list-mobile-closed nav-primary_list-mobile_open');
       // remove active classes on children
-      $('.nav-primary_section_title').removeClass('nav-primary_section_title-active');
       $('.nav-primary_section').removeClass('nav-primary_section-active');
       $('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
       $('.nav-primary_section').removeClass('is-hidden');
@@ -72,20 +71,17 @@ jQuery.noConflict();
     });
 
     // click on the primary nav item.
-    $('.nav-primary_section_title').click(function () {
+    $('.nav-primary_section').click(function () {
       $('.link-nav-primary').blur();
       // toggle a clicked state for this item
-      $(this).toggleClass('nav-primary_section_title-active');
-      // toggle a clicked state for this item
-      $(this).parents('.nav-primary_section').toggleClass('nav-primary_section-active');
+      $(this).toggleClass('nav-primary_section-active');
       // add an open state to the nav container
       $(this).parents('.nav-primary_list').addClass('nav-primary_list-open');
       // add an open state to its sibling subnav
       $(this).siblings('.nav-primary_section_subnav').toggleClass('nav-primary_section_subnav-open');
       // Remove active and open states from sibling drawer items.
-      $(this).parents('.nav-primary_section').siblings('.nav-primary_section').children('.nav-primary_section_title').removeClass('nav-primary_section_title-active');
-      $(this).parents('.nav-primary_section').siblings('.nav-primary_section').children('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
-      $(this).parents('.nav-primary_section').siblings('.nav-primary_section').removeClass('nav-primary_section-active');
+      $(this).siblings('.nav-primary_section').removeClass('nav-primary_section-active');
+      $(this).siblings('.nav-primary_section').children('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
       // Remove is-open class on search modal
       $('.search_modal').removeClass('is-open');
 
@@ -108,7 +104,6 @@ jQuery.noConflict();
 
         // When you click the back button revert all that stuff above.
         $(this).siblings('.nav-primary_section_subnav').children('.nav-primary_section_subnav_back').click(function () {
-          $('.nav-primary_section_title').removeClass('nav-primary_section_title-active');
           $('.nav-primary_section').removeClass('nav-primary_section-active');
           $('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
           $('.nav-primary_section').removeClass('is-hidden');
