@@ -160,6 +160,16 @@
   }
 }
 
+.nav-primary_section:hover {
+  @include breakpoint($bp-med-home) {
+    > .link-nav-primary {
+      color: $black;
+      border-bottom: 20px $purple solid;
+      padding-bottom: 30px;
+    }
+  }
+}
+
 // The Sub nav.
 .nav-primary_section_subnav {
   @include grid__unit--cols(12);
