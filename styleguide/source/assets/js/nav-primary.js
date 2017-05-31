@@ -46,7 +46,7 @@ jQuery.noConflict();
       // remove active classes on children
       $('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
       $('.nav-primary_list-item').removeClass('nav-primary_list-item-active');
-      $('.nav-primary_list_subnav').removeClass('is-open');
+      $('.nav-primary_list_subnav').removeClass('nav-primary_list_subnav-open');
       $('.nav-primary_list-item').removeClass('is-hidden');
       // remove is-open class on search modal
       $('.search_modal').removeClass('is-open');
@@ -79,12 +79,12 @@ jQuery.noConflict();
       // toggle a clicked state for this item
       $(this).parents('.nav-primary_list-item').toggleClass('nav-primary_list-item-active');
       // add an open state to the nav container
-      $(this).parents('.nav-primary_list').addClass('nav-primary_list-is_open');
+      $(this).parents('.nav-primary_list').addClass('nav-primary_list-open');
       // add an open state to its sibling subnav
-      $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
+      $(this).siblings('.nav-primary_list_subnav').toggleClass('nav-primary_list_subnav-open');
       // Remove active and open states from sibling drawer items.
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
-      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('nav-primary_list_subnav-open');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('nav-primary_list-item-active');
       // Remove is-open class on search modal
       $('.search_modal').removeClass('is-open');
@@ -110,7 +110,7 @@ jQuery.noConflict();
         $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').click(function () {
           $('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
           $('.nav-primary_list-item').removeClass('nav-primary_list-item-active');
-          $('.nav-primary_list_subnav').removeClass('is-open');
+          $('.nav-primary_list_subnav').removeClass('nav-primary_list_subnav-open');
           $('.nav-primary_list-item').removeClass('is-hidden');
         });
       }
