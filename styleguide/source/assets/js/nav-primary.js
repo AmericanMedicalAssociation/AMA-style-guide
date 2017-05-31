@@ -42,7 +42,7 @@ jQuery.noConflict();
       // toggle a clicked state on the trigger
       $(this).toggleClass('nav-primary-menu_button-clicked');
       // toggle the open or closed class on the drawer
-      $('.nav-primary_list').toggleClass('nav-primary_list-closed nav-primary_list-open');
+      $('.nav-primary_list').toggleClass('nav-primary_list-mobile_closed nav-primary_list-mobile_open');
       // remove active classes on children
       $('.nav-primary_list-item_title').removeClass('is-active');
       $('.nav-primary_list-item').removeClass('is-active');
@@ -78,6 +78,7 @@ jQuery.noConflict();
       $(this).toggleClass('is-active');
       // toggle a clicked state for this item
       $(this).parents('.nav-primary_list-item').toggleClass('is-active');
+      $(this).parents('')
       // add an open state to its sibling subnav
       $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
       // Remove active and open states from sibling drawer items.

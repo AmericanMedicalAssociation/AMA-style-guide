@@ -70,11 +70,11 @@
 }
 
 // Mobile menu interaction
-.nav-primary_list-closed {
+.nav-primary_list-mobile_closed {
   left: -200%;
 }
 
-.nav-primary_list-open {
+.nav-primary_list-mobile_open {
   left: 0;
 }
 
@@ -110,7 +110,7 @@
   }
 
   @include breakpoint($bp-med-home min-width) {
-    display: inline-block;;
+    display: inline-block;
     margin-right: 28px;
     float: left;
 
