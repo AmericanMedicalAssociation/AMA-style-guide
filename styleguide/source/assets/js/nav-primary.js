@@ -42,7 +42,7 @@ jQuery.noConflict();
       // toggle a clicked state on the trigger
       $(this).toggleClass('nav-primary_button-clicked');
       // toggle the open or closed class on the drawer
-      $('.nav-primary_list').toggleClass('nav-primary_list-mobile_closed nav-primary_list-mobile_open');
+      $('.nav-primary_list').toggleClass('nav-primary_list-mobile-closed nav-primary_list-mobile-open');
       // remove active classes on children
       $('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
       $('.nav-primary_list-item').removeClass('nav-primary_list-item-active');

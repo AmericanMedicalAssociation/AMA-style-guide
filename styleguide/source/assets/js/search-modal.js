@@ -33,7 +33,7 @@ jQuery.noConflict();
 
     // Remove nav primary list open class and add closed class on search button click
     if ( $(window).width() < 740 ) {
-      $('.nav-primary_list').removeClass('nav-primary_list-mobile_open').addClass('nav-primary_list-mobile_closed');
+      $('.nav-primary_list').removeClass('nav-primary_list-mobile-open').addClass('nav-primary_list-mobile-closed');
     };
   });
 
