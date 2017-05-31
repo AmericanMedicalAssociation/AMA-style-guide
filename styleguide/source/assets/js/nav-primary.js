@@ -78,7 +78,8 @@ jQuery.noConflict();
       $(this).toggleClass('is-active');
       // toggle a clicked state for this item
       $(this).parents('.nav-primary_list-item').toggleClass('is-active');
-      $(this).parents('')
+      // add an open state to the nav container
+      $(this).parents('.nav-primary_list').addClass('nav-primary_list-is_open');
       // add an open state to its sibling subnav
       $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
       // Remove active and open states from sibling drawer items.

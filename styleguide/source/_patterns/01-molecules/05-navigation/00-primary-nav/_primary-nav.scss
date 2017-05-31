@@ -66,6 +66,18 @@
     background-color: $white;
     top: 0;
     justify-content: space-between;
+
+    &.nav-primary_list-is_open .nav-primary_list-item_title > .link-primary-nav {
+      color: gray;
+    }
+
+    &.nav-primary_list-is_open .nav-primary_list-item.is-active .nav-primary_list-item_title > .link-primary-nav {
+      color: black;
+    }
+
+    &.nav-primary_list-is_open .nav-primary_list-item:hover .nav-primary_list-item_title > .link-primary-nav {
+      color: black;
+    }
   }
 }
 
