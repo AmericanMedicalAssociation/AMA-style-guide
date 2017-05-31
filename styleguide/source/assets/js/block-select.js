@@ -1,9 +1,7 @@
 jQuery.noConflict();
 (function($) {
-  $('.block-select__message').hide();
 
   $('.block-select').click(function() {
-    $(this).toggleClass('block-select--selected');
-    $('.block-select__message').toggle();
-  });
+    $(this).toggleClass('block-select-selected');
+    $('.block-select_message').toggleClass('block-select_message-hidden');  });
 })(jQuery);

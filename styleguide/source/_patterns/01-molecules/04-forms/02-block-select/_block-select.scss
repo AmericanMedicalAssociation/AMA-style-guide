@@ -16,30 +16,25 @@
   p {
     margin-bottom: 0;
   }
-
-  svg {
-    fill: $black-15;
-  }
 }
 
-.block-select--selected {
+.block-select-selected {
   border-color: $green;
   cursor: pointer;
-  svg {
-    fill: $green;
-  }
-  .block-select__message {
-    background-color: $green;
-  }
 }
 
-.block-select__message {
+.block-select_message {
+  background-color: $green;
   color: $white;
   font-size: .8em;
   transition: background-color 0.28s ease;
   width: 100%;
 }
 
-.block-select__text {
+.block-select_message-hidden {
+  display: none;
+}
+
+.block-select_text {
   padding: 1.1em 0;
 }
