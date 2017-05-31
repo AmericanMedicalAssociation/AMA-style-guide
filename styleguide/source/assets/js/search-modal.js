@@ -11,8 +11,8 @@ jQuery.noConflict();
   $('.button-search').click(function() {
 
     // Remove classes for nav dropdowns
-    $('.nav-primary_list-item, .nav-primary_list-item_title').removeClass('nav-primary_list-item-active, nav-primary_list-item_title-active');
-    $('.nav-primary_list_subnav').removeClass('is-open');
+    $('.nav-primary_section, .nav-primary_section_title').removeClass('nav-primary_section-active, nav-primary_section_title-active');
+    $('.nav-primary_section_subnav').removeClass('is-open');
 
     // If is-open class exists
     if( $('.search_modal').hasClass('is-open') ) {
