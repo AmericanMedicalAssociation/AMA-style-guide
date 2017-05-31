@@ -76,7 +76,7 @@
       color: gray;
     }
 
-    .nav-primary_list-item.is-active,
+    .nav-primary_list-item-active,
     .nav-primary_list-item:hover {
       .nav-primary_list-item_title > .link-primary-nav {
         color: black
@@ -400,7 +400,7 @@
 
 .nav-primary_list-item_title {
 
-  &.is-active {
+  &.nav-primary_list-item_title-active {
     .icon {
       display: none;
     }

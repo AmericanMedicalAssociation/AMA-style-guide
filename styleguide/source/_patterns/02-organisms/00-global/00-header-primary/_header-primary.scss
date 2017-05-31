@@ -183,7 +183,7 @@
       }
     }
 
-    &.is-active > .link-primary-nav {
+    &.nav-primary_list-item_title-active > .link-primary-nav {
       @include breakpoint($bp-med-home min-width) {
         border-bottom: 10px $purple solid;
         padding-bottom: 15px;

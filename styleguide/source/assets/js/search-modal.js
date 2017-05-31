@@ -11,7 +11,7 @@ jQuery.noConflict();
   $('.button-search').click(function() {
 
     // Remove classes for nav dropdowns
-    $('.nav-primary_list-item, .nav-primary_list-item_title').removeClass('is-active');
+    $('.nav-primary_list-item, .nav-primary_list-item_title').removeClass('nav-primary_list-item-active, nav-primary_list-item_title-active');
     $('.nav-primary_list_subnav').removeClass('is-open');
 
     // If is-open class exists

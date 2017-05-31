@@ -44,8 +44,8 @@ jQuery.noConflict();
       // toggle the open or closed class on the drawer
       $('.nav-primary_list').toggleClass('nav-primary_list-mobile_closed nav-primary_list-mobile_open');
       // remove active classes on children
-      $('.nav-primary_list-item_title').removeClass('is-active');
-      $('.nav-primary_list-item').removeClass('is-active');
+      $('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
+      $('.nav-primary_list-item').removeClass('nav-primary_list-item-active');
       $('.nav-primary_list_subnav').removeClass('is-open');
       $('.nav-primary_list-item').removeClass('is-hidden');
       // remove is-open class on search modal
@@ -75,17 +75,17 @@ jQuery.noConflict();
     $('.nav-primary_list-item_title').click(function () {
       $('.link-primary-nav').blur();
       // toggle a clicked state for this item
-      $(this).toggleClass('is-active');
+      $(this).toggleClass('nav-primary_list-item_title-active');
       // toggle a clicked state for this item
-      $(this).parents('.nav-primary_list-item').toggleClass('is-active');
+      $(this).parents('.nav-primary_list-item').toggleClass('nav-primary_list-item-active');
       // add an open state to the nav container
       $(this).parents('.nav-primary_list').addClass('nav-primary_list-is_open');
       // add an open state to its sibling subnav
       $(this).siblings('.nav-primary_list_subnav').toggleClass('is-open');
       // Remove active and open states from sibling drawer items.
-      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('is-active');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
       $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').children('.nav-primary_list_subnav').removeClass('is-open');
-      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('is-active');
+      $(this).parents('.nav-primary_list-item').siblings('.nav-primary_list-item').removeClass('nav-primary_list-item-active');
       // Remove is-open class on search modal
       $('.search_modal').removeClass('is-open');
 
@@ -108,8 +108,8 @@ jQuery.noConflict();
 
         // When you click the back button revert all that stuff above.
         $(this).siblings('.nav-primary_list_subnav').children('.nav-primary_list_subnav_list-item-back').click(function () {
-          $('.nav-primary_list-item_title').removeClass('is-active');
-          $('.nav-primary_list-item').removeClass('is-active');
+          $('.nav-primary_list-item_title').removeClass('nav-primary_list-item_title-active');
+          $('.nav-primary_list-item').removeClass('nav-primary_list-item-active');
           $('.nav-primary_list_subnav').removeClass('is-open');
           $('.nav-primary_list-item').removeClass('is-hidden');
         });
