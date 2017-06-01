@@ -65,10 +65,10 @@ jQuery.noConflict();
   // Primary navigation functionality.
   $('.nav-primary_list').each(function () {
 
-    // Hide the sub-navigation menus initially.
-    $('.nav-primary_section_subnav').each(function() {
-      $(this).removeClass('nav-primary_section_subnav-visible');
-    });
+    // // Hide the sub-navigation menus initially.
+    // $('.nav-primary_section_subnav').each(function() {
+    //   $(this).removeClass('nav-primary_section_subnav-visible');
+    // });
 
     // click on the primary nav item.
     $('.nav-primary_section').click(function () {
