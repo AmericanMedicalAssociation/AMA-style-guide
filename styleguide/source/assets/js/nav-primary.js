@@ -69,32 +69,46 @@ jQuery.noConflict();
     }
   }
 
-  function toggleVisibility(section) {
+  function toggleOverlay() {
+    // show the overlay
+    if ($('.nav-primary_section_subnav')) {
+
+    }
+    if ($(window).width() > 740) {
+      setTimeout(function () {
+        $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
+      }, 50);
+    }
+  }
+
+  function hideMenu() {
+    $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
+  }
+
+  function showMenu(section) {
     var thisLink = section.children('.link-nav-primary');
     var menuPrimary = section.parents('.nav-primary_list');
 
     thisLink.blur();
 
+    if (!section.hasClass('nav-primary_section-active')) {
+      console.log('it was not active');
+    } else {
+      // hide the menu if we clicked the same section.
+      console.log('it was active.');
+      hideMenu();
+    }
+
     // toggle a clicked state for this item
     section.toggleClass('nav-primary_section-active');
     // add an open state to the nav container
     menuPrimary.addClass('nav-primary_list-open');
+
     // Remove active and open states from sibling drawer items.
     section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
     // Remove is-open class on search modal
     toggleSearch();
-
-    if ($(window).width() > 740) {
-      setTimeout(function () {
-        // if the menu is open, apply the overlay
-        if ($('.nav-primary_section_subnav').is(':visible')) {
-          $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
-          // if the menu is not open, remove the overlay
-        } else {
-          $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
-        }
-      }, 50);
-    }
+    toggleOverlay();
 
     if ( $(window).width() < 740 ) {
       // hide the other primary items
@@ -115,7 +129,7 @@ jQuery.noConflict();
 
     // click on the primary nav item.
     $('.nav-primary_section').click(function () {
-      toggleVisibility($(this));
+      showMenu($(this));
 
     });
   });
