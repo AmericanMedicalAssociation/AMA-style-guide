@@ -1,0 +1,58 @@
+/**
+ * @file accordion.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.table {
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(10);
+    padding: 20px 0;
+  }
+  
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+  }
+
+  border-top: 1px solid $rule;
+  border-bottom: 1px solid $rule;
+  padding: 15px;
+  margin: 0 auto;
+
+  table,
+  .table-header_title {
+    margin-bottom: 15px;
+    @include breakpoint($bp-small) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .table-link-enlarge {
+    display: block;
+    margin-bottom: 8px;
+    @include breakpoint($bp-small) {
+      margin-bottom: 13px;  //20 - 1.35 line height offset of caption p
+    }
+  }
+
+  .table-caption {
+    margin-bottom: 0;
+  }
+
+  thead tr {
+    background-color: #e6e6e6;
+  }
+
+  tr.even {
+    background-color: $black-7;
+  }
+
+  th,
+  td {
+    border: 1px solid $black-20;
+    height: 40px;
+    text-align: center;
+  }
+}
