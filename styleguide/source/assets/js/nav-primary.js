@@ -62,50 +62,61 @@ jQuery.noConflict();
     }
   });
 
+  function toggleSearch() {
+    search = $('.search_modal');
+    if (search.hasClass('is-open')) {
+      $('.search_modal').removeClass('is-open');
+    }
+  }
+
+  function toggleVisibility(section) {
+    var thisLink = section.children('.link-nav-primary');
+    var menuPrimary = section.parents('.nav-primary_list');
+
+    thisLink.blur();
+
+    // toggle a clicked state for this item
+    section.toggleClass('nav-primary_section-active');
+    // add an open state to the nav container
+    menuPrimary.addClass('nav-primary_list-open');
+    // Remove active and open states from sibling drawer items.
+    section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
+    // Remove is-open class on search modal
+    toggleSearch();
+
+    if ($(window).width() > 740) {
+      setTimeout(function () {
+        // if the menu is open, apply the overlay
+        if ($('.nav-primary_section_subnav').is(':visible')) {
+          $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
+          // if the menu is not open, remove the overlay
+        } else {
+          $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
+        }
+      }, 50);
+    }
+
+    if ( $(window).width() < 740 ) {
+      // hide the other primary items
+      $(this).parents('.nav-primary_section').siblings('.nav-primary_section').toggleClass('is-hidden');
+      $(this).parents('.nav-primary_section').removeClass('is-hidden');
+
+      // When you click the back button revert all that stuff above.
+      $(this).siblings('.nav-primary_section_subnav').children('.nav-primary_section_subnav_back').click(function () {
+        $('.nav-primary_section').removeClass('nav-primary_section-active');
+        $('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
+        $('.nav-primary_section').removeClass('is-hidden');
+      });
+    }
+  }
+
   // Primary navigation functionality.
   $('.nav-primary_list').each(function () {
 
-    // // Hide the sub-navigation menus initially.
-    // $('.nav-primary_section_subnav').each(function() {
-    //   $(this).removeClass('nav-primary_section_subnav-visible');
-    // });
-
     // click on the primary nav item.
     $('.nav-primary_section').click(function () {
-      $('.link-nav-primary').blur();
-      // toggle a clicked state for this item
-      $(this).toggleClass('nav-primary_section-active');
-      // add an open state to the nav container
-      $(this).parents('.nav-primary_list').addClass('nav-primary_list-open');
-      // Remove active and open states from sibling drawer items.
-      $(this).siblings('.nav-primary_section').removeClass('nav-primary_section-active');
-      // Remove is-open class on search modal
-      $('.search_modal').removeClass('is-open');
+      toggleVisibility($(this));
 
-      if ($(window).width() > 740) {
-        setTimeout(function () {
-          // if the menu is open, apply the overlay
-          if ($('.nav-primary_section_subnav').is(':visible')) {
-            $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
-            // if the menu is not open, remove the overlay
-          } else {
-            $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
-          }
-        }, 50);
-      }
-
-      if ( $(window).width() < 740 ) {
-        // hide the other primary items
-        $(this).parents('.nav-primary_section').siblings('.nav-primary_section').toggleClass('is-hidden');
-        $(this).parents('.nav-primary_section').removeClass('is-hidden');
-
-        // When you click the back button revert all that stuff above.
-        $(this).siblings('.nav-primary_section_subnav').children('.nav-primary_section_subnav_back').click(function () {
-          $('.nav-primary_section').removeClass('nav-primary_section-active');
-          $('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
-          $('.nav-primary_section').removeClass('is-hidden');
-        });
-      }
     });
   });
 
