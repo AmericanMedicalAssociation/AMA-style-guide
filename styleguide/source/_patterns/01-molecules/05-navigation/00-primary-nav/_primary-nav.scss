@@ -116,6 +116,10 @@
   position: static;
   margin-bottom: 0;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &.is-hidden {
     display: none;
   }
@@ -143,11 +147,11 @@
 
   @include breakpoint($bp-med-home min-width) {
     display: inline-block;
-    margin-right: 28px;
+    padding-right: 28px;
     float: left;
 
     &:last-of-type {
-      margin-right: 0;
+      padding-right: 0;
     }
 
     .icon-select {
@@ -156,7 +160,7 @@
   }
 
   @include breakpoint($bp-large-home min-width) {
-    margin-right: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -406,6 +410,7 @@
   &:focus {
     color: $blue;
     text-decoration: none;
+    cursor: pointer;
   }
 
   @include breakpoint($bp-med-home min-width) {
