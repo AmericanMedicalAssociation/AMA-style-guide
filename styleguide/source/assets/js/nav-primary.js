@@ -24,10 +24,6 @@ jQuery.noConflict();
   function showMenu(section) {
     // show the menu
     var menuPrimary = section.parents('.nav-primary_list');
-    // add an open state to the nav container
-    // @todo: does this need to be the direct container, or can this just be the body?
-    menuPrimary.addClass('nav-primary_list-open');
-
     // add a body class saying that the menu is open
     $('body').addClass('body-nav-primary-open');
   }

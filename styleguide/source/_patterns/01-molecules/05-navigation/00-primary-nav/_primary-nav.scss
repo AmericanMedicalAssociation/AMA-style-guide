@@ -70,7 +70,7 @@
 }
 
 // Add hover styling to the primary navigation.
-.nav-primary_list.nav-primary_list-open {
+.body-nav-primary-open {
   @include breakpoint($bp-med-home min-width) {
     .nav-primary_section > .link-nav-primary {
       color: $gray-8;
