@@ -52,45 +52,30 @@ jQuery.noConflict();
   }
 
   function changeActive(section) {
-    // add a clicked state for this item.
     section.addClass('nav-primary_section-active');
-    // Remove active and open states from sibling drawer items.
     section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
   }
 
-// Primary navigation functionality.
-  // click on the primary nav item.
-
   $(document).on('click', '.body-nav-primary-open, .nav-primary_section', function(e) {
     e.stopPropagation();
-    // is this the nav?
     if ($(this).hasClass('nav-primary_section')) {
-      // - yes:
-      // -- is this the active item?
       if ($(this).hasClass('nav-primary_section-active')) {
-        // ---- close the menu
         closeMenu();
-        // ---- close the overlay
         closeOverlay();
-      } else {
-        // ---- is the menu already open?
+      }
+      else {
         if (!$('body').hasClass('body-nav-primary-open')) {
-          // ---- show the menu
           showMenu($(this));
-          // ---- show the overlay
           showOverlay();
         }
 
-        // change the active item
         changeActive($(this));
       }
-    } else {
-    // ---- close the menu
-    closeMenu();
-    // ---- close the overlay
-    closeOverlay();
-  }
-
+    }
+    else {
+      closeMenu();
+      closeOverlay();
+    }
   });
 
 })(jQuery);
