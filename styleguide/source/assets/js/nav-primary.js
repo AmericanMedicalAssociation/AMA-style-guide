@@ -34,6 +34,13 @@ jQuery.noConflict();
     }
   });
 
+  function closeSearch() {
+    search = $('.search_modal');
+    if (search.hasClass('is-open')) {
+      $('.search_modal').removeClass('is-open');
+    }
+  }
+
   function showMenu() {
     // add a body class saying that the menu is open
     $('body').addClass('body-nav-primary-open');
@@ -91,6 +98,7 @@ jQuery.noConflict();
       } else {
         showMenu();
         showOverlay();
+        closeSearch();
       }
     }
     // is this the nav?
@@ -108,6 +116,7 @@ jQuery.noConflict();
         if (!$('body').hasClass('body-nav-primary-open')) {
           showMenu();
           showOverlay();
+          closeSearch();
         }
         changeActive($(this));
       }
