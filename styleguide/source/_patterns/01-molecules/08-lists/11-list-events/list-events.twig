@@ -1,0 +1,46 @@
+<ul class="list-events">
+  <li class="list-events_item">
+    <div class="list-events_item_summary">
+      {% include 'atoms-link-black' with { 'content': 'Lorem Ipsum Dolor Amet Consectetur Elit', 'class' : 'list-events_item_summary_title'} %}
+      {% include 'atoms-paragraph' with { 'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.', 'class' : 'list-events_item_summary_desc'} %}
+    </div>
+    <div class="list-events_item_date">
+       {% include 'atoms-paragraph' with { 'content': 'July 1, 2015', 'class': 'list-events_item_date_day' } %}
+       {% include 'atoms-paragraph' with { 'content': '9 A.M.-5 P.M.', 'class': 'list-events_item_date_time'} %}
+    </div>
+    <div class="list-events_item_location">
+      {% include 'atoms-paragraph' with { 'content': 'Westin Copley Place Hotel', 'class': 'list-events_item_location_place'} %}
+      {% include 'atoms-paragraph' with { 'content': 'Chicago, IL', 'class': 'list-events_item_location_city-state'} %}
+    </div>
+  </li>
+
+  <li class="list-events_item">
+    <div class="list-events_item_summary">
+      <a href="" class="link link-black list-events_item_summary_title list-events_item_summary_title-sold-out">Lorem Ipsum Dolor Amet Consectetur Elit{% include 'atoms-arrow-external' %}</a>
+      {% include 'atoms-paragraph' with { 'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.', 'class' : 'list-events_item_summary_desc'} %}
+    </div>
+    <div class="list-events_item_date">
+       {% include 'atoms-paragraph' with { 'content': 'July 1, 2015', 'class': 'list-events_item_date_day' } %}
+       {% include 'atoms-paragraph' with { 'content': '9 A.M.-12 P.M.', 'class': 'list-events_item_date_time'} %}
+    </div>
+    <div class="list-events_item_location">
+      {% include 'atoms-paragraph' with { 'content': 'Westin Copley Place Hotel', 'class': 'list-events_item_location_place'} %}
+      {% include 'atoms-paragraph' with { 'content': 'Chicago, IL', 'class': 'list-events_item_location_city-state'} %}
+    </div>
+  </li>
+
+  <li class="list-events_item">
+    <div class="list-events_item_summary">
+      <a href="" class="link link-black list-events_item_summary_title">Lorem Ipsum Dolor Amet Consectetur Elit{% include 'atoms-arrow-external' %}</a>
+      {% include 'atoms-paragraph' with { 'content': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.', 'class' : 'list-events_item_summary_desc'} %}
+    </div>
+    <div class="list-events_item_date">
+       {% include 'atoms-paragraph' with { 'content': 'July 1, 2015' } %}
+    </div>
+    <div class="list-events_item_location">
+      {% include 'atoms-paragraph' with { 'content': 'Westin Copley Place Hotel', 'class': 'list-events_item_location_place'} %}
+      {% include 'atoms-paragraph' with { 'content': 'Chicago, IL', 'class': 'list-events_item_location_city-state'} %}
+    </div>
+  </li>
+</ul>
+
