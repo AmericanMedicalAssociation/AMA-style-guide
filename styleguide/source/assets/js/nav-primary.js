@@ -21,59 +21,18 @@ jQuery.noConflict();
   // Check height on window resize
   $(window).resize(checkHeight);
 
-  // Add class to header-primary on scroll
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var os = $('.header-primary-span').offset().top;
-    var ht = $('.header-primary-span').height();
+  function showMenu(section) {
+    // show the menu
+    var menuPrimary = section.parents('.nav-primary_list');
+    // add an open state to the nav container
+    // @todo: does this need to be the direct container, or can this just be the body?
+    menuPrimary.addClass('nav-primary_list-open');
 
-    if(scroll > os + ht){
-      $(".header-primary").addClass("header-primary--sticky");
-    } else {
-      $(".header-primary").removeClass("header-primary--sticky");
-    }
-  });
-
-  // Toggle the primary navigation open and closed when the Menu button is clicked.
-  $('.nav-primary_button').click(function() {
-    if ( $(window).width() < 740 ) {
-      // Unfocus on the dropdown
-      $(this).blur();
-      // toggle a clicked state on the trigger
-      $(this).toggleClass('nav-primary_button-clicked');
-      // toggle the open or closed class on the drawer
-      $('.nav-primary_list').toggleClass('nav-primary_list-mobile-closed nav-primary_list-mobile_open');
-      // remove active classes on children
-      $('.nav-primary_section').removeClass('nav-primary_section-active');
-      $('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
-      $('.nav-primary_section').removeClass('is-hidden');
-      // remove is-open class on search modal
-      $('.search_modal').removeClass('is-open');
-
-      // When the menu is open, apply the overlay.
-      if ($('.nav-primary_list').hasClass('nav-primary_list-open')) {
-        $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
-      }
-
-      // Else remove overlay class
-      else {
-        $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
-      }
-    }
-  });
-
-  function toggleSearch() {
-    search = $('.search_modal');
-    if (search.hasClass('is-open')) {
-      $('.search_modal').removeClass('is-open');
-    }
+    // add a body class saying that the menu is open
+    $('body').addClass('body-nav-primary-open');
   }
 
-  function toggleOverlay() {
-    // show the overlay
-    if ($('.nav-primary_section_subnav')) {
-
-    }
+  function showOverlay() {
     if ($(window).width() > 740) {
       setTimeout(function () {
         $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
@@ -81,57 +40,57 @@ jQuery.noConflict();
     }
   }
 
-  function hideMenu() {
+  function closeMenu() {
+    $('body').removeClass('body-nav-primary-open');
+    setTimeout(function () {
+      $('.nav-primary_section').removeClass('nav-primary_section-active');
+    }, 500);
+  }
+
+  function closeOverlay() {
     $('.nav-primary_overlay-mobile').removeClass('nav-primary_overlay-mobile-on');
   }
 
-  function showMenu(section) {
-    var thisLink = section.children('.link-nav-primary');
-    var menuPrimary = section.parents('.nav-primary_list');
-
-    thisLink.blur();
-
-    if (!section.hasClass('nav-primary_section-active')) {
-      console.log('it was not active');
-    } else {
-      // hide the menu if we clicked the same section.
-      console.log('it was active.');
-      hideMenu();
-    }
-
-    // toggle a clicked state for this item
-    section.toggleClass('nav-primary_section-active');
-    // add an open state to the nav container
-    menuPrimary.addClass('nav-primary_list-open');
-
+  function changeActive(section) {
+    // add a clicked state for this item.
+    section.addClass('nav-primary_section-active');
     // Remove active and open states from sibling drawer items.
     section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
-    // Remove is-open class on search modal
-    toggleSearch();
-    toggleOverlay();
-
-    if ( $(window).width() < 740 ) {
-      // hide the other primary items
-      $(this).parents('.nav-primary_section').siblings('.nav-primary_section').toggleClass('is-hidden');
-      $(this).parents('.nav-primary_section').removeClass('is-hidden');
-
-      // When you click the back button revert all that stuff above.
-      $(this).siblings('.nav-primary_section_subnav').children('.nav-primary_section_subnav_back').click(function () {
-        $('.nav-primary_section').removeClass('nav-primary_section-active');
-        $('.nav-primary_section_subnav').removeClass('nav-primary_section_subnav-open');
-        $('.nav-primary_section').removeClass('is-hidden');
-      });
-    }
   }
 
-  // Primary navigation functionality.
-  $('.nav-primary_list').each(function () {
+// Primary navigation functionality.
+  // click on the primary nav item.
 
-    // click on the primary nav item.
-    $('.nav-primary_section').click(function () {
-      showMenu($(this));
+  $(document).on('click', '.body-nav-primary-open, .nav-primary_section', function(e) {
+    e.stopPropagation();
+    // is this the nav?
+    if ($(this).hasClass('nav-primary_section')) {
+      // - yes:
+      // -- is this the active item?
+      if ($(this).hasClass('nav-primary_section-active')) {
+        // ---- close the menu
+        closeMenu();
+        // ---- close the overlay
+        closeOverlay();
+      } else {
+        // ---- is the menu already open?
+        if (!$('body').hasClass('body-nav-primary-open')) {
+          // ---- show the menu
+          showMenu($(this));
+          // ---- show the overlay
+          showOverlay();
+        }
 
-    });
+        // change the active item
+        changeActive($(this));
+      }
+    } else {
+    // ---- close the menu
+    closeMenu();
+    // ---- close the overlay
+    closeOverlay();
+  }
+
   });
 
 })(jQuery);
