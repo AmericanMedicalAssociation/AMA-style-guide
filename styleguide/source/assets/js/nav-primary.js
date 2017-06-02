@@ -21,19 +21,15 @@ jQuery.noConflict();
   // Check height on window resize
   $(window).resize(checkHeight);
 
-  function showMenu(section) {
-    // show the menu
-    var menuPrimary = section.parents('.nav-primary_list');
+  function showMenu() {
     // add a body class saying that the menu is open
     $('body').addClass('body-nav-primary-open');
   }
 
   function showOverlay() {
-    if ($(window).width() > 740) {
       setTimeout(function () {
         $('.nav-primary_overlay-mobile').addClass('nav-primary_overlay-mobile-on');
       }, 50);
-    }
   }
 
   function closeMenu() {
@@ -48,11 +44,19 @@ jQuery.noConflict();
   }
 
   function changeActive(section) {
-    section.addClass('nav-primary_section-active');
-    section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
+    if (section.hasClass('nav-primary_button')) {
+      // toggle a clicked state on the trigger
+      $(this).toggleClass('nav-primary_button-clicked');
+      // toggle the open or closed class on the drawer
+      $('.nav-primary_list').toggleClass('nav-primary_list-mobile-closed nav-primary_list-mobile_open');
+      showOverlay();
+    } else {
+      section.addClass('nav-primary_section-active');
+      section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
+    }
   }
 
-  $(document).on('click', '.body-nav-primary-open, .nav-primary_section', function(e) {
+  $(document).on('click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
     e.stopPropagation();
     if ($(this).hasClass('nav-primary_section')) {
       if ($(this).hasClass('nav-primary_section-active')) {
@@ -61,7 +65,7 @@ jQuery.noConflict();
       }
       else {
         if (!$('body').hasClass('body-nav-primary-open')) {
-          showMenu($(this));
+          showMenu();
           showOverlay();
         }
 
