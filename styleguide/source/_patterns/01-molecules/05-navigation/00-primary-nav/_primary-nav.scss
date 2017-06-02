@@ -73,7 +73,7 @@
 .nav-primary_list.nav-primary_list-open {
   @include breakpoint($bp-med-home min-width) {
     .nav-primary_section > .link-nav-primary {
-      color: gray;
+      color: $gray-8;
     }
 
     .nav-primary_section-active,
