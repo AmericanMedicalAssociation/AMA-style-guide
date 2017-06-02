@@ -21,7 +21,7 @@ jQuery.noConflict();
   // Check height on window resize
   $(window).resize(checkHeight);
 
-  function showMenu(clicked) {
+  function showMenu() {
     // add a body class saying that the menu is open
     $('body').addClass('body-nav-primary-open');
     $('.nav-primary_list').addClass('nav-primary_list-mobile-open');
@@ -73,7 +73,7 @@ jQuery.noConflict();
         closeMenu();
         closeOverlay();
       } else {
-        showMenu($(this));
+        showMenu();
         showOverlay();
       }
     }
