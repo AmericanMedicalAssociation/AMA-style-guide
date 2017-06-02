@@ -104,14 +104,4 @@ jQuery.noConflict();
     }
   });
 
-  // MOBILE
-  // Toggle the primary navigation open and closed when the Menu button is clicked.
-  // $('.nav-primary_button').click(function() {
-      // toggle a clicked state on the trigger
-      // $(this).toggleClass('nav-primary_button-clicked');
-      // toggle the open or closed class on the drawer
-      // $('.nav-primary_list').toggleClass('nav-primary_list-mobile-closed nav-primary_list-mobile_open');
-      // showOverlay();
-  // });
-
 })(jQuery);
