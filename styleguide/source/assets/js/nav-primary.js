@@ -21,6 +21,19 @@ jQuery.noConflict();
   // Check height on window resize
   $(window).resize(checkHeight);
 
+  // Add class to header-primary on scroll
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    var os = $('.header-primary-span').offset().top;
+    var ht = $('.header-primary-span').height();
+
+    if(scroll > os + ht){
+      $(".header-primary").addClass("header-primary--sticky");
+    } else {
+      $(".header-primary").removeClass("header-primary--sticky");
+    }
+  });
+
   function showMenu() {
     // add a body class saying that the menu is open
     $('body').addClass('body-nav-primary-open');
