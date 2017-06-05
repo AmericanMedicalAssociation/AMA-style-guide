@@ -196,30 +196,45 @@
   }
 }
 
-@keyframes collapse-in {
+@keyframes expand {
   0% {
-    display: none;
+    max-height: 0;
   }
   1% {
-    max-height: 0;
+    opacity: 1;
   }
   100% {
     max-height: 1000px;
-    display: flex;
+  }
+}
+
+@keyframes collapse {
+  0% {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  50% {
+    opacity: .99;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
   }
 }
 
 @include breakpoint($bp-med max-width) {
-  .nav-primary_section_subnav {
-    display: none;
-    max-height: 0;
-    animation: collapse-in .45s ease-in-out;
+  .nav-primary_section .nav-primary_section_subnav {
+    //max-height: 0;
+    animation: collapse 2s ease-in-out;
+    //opacity: 0;
   }
 
   .nav-primary_section-active .nav-primary_section_subnav {
     max-height: 1000px;
     flex-wrap: nowrap;
     overflow: hidden;
+    animation: expand 2s ease-in-out;
+    opacity: 1;
   }
 
   .nav-primary_section-active ~ .nav-primary_section_subnav_back {
