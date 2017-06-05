@@ -195,3 +195,25 @@
     top: auto;
   }
 }
+
+@keyframes shrink-in {
+  from {
+    display: none;
+    max-height: 1000px;
+  }
+
+  to {
+    display: flex;
+    max-height: 0;
+  }
+}
+
+.nav-primary_section .nav-primary_section_subnav {
+  transition: 0.5s ease-in-out;
+  animation-name: shrink-in;
+}
+
+.nav-primary_section.nav-primary_section-active .nav-primary_section_subnav {
+  transition: 0.5s ease-in-out;
+  animation-name: shrink-in;
+}
