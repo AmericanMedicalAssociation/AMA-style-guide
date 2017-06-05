@@ -196,7 +196,7 @@
   }
 }
 
-@keyframes anim {
+@keyframes collapse-in {
   0% {
     display: none;
   }
@@ -209,19 +209,20 @@
   }
 }
 
-.nav-primary_section_subnav {
-  display: none;
-  max-height: 0;
-  transition: anim .45s ease-in-out;
-}
+@include breakpoint($bp-med max-width) {
+  .nav-primary_section_subnav {
+    display: none;
+    max-height: 0;
+    animation: collapse-in .45s ease-in-out;
+  }
 
-.nav-primary_section-active .nav-primary_section_subnav {
-  max-height: 1000px;
-  animation: anim .45s ease-in-out;
-  flex-wrap: nowrap;
-  overflow: hidden;
-}
+  .nav-primary_section-active .nav-primary_section_subnav {
+    max-height: 1000px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
 
-.nav-primary_section-active + .nav-primary_section_subnav_back {
-  display: block;
+  .nav-primary_section-active ~ .nav-primary_section_subnav_back {
+    display: block;
+  }
 }
