@@ -220,5 +220,8 @@
   animation: anim .45s ease-in-out;
   flex-wrap: nowrap;
   overflow: hidden;
+}
 
+.nav-primary_section-active + .nav-primary_section_subnav_back {
+  display: block;
 }

@@ -348,10 +348,10 @@
 
 .nav-primary_section_subnav_back {
   background-color: $black-7;
-  border-top: 1px $gray-8 solid;
   position: relative;
   margin: 0;
   order: 4;
+  display: none;
 
   .link-nav-primary {
     @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
