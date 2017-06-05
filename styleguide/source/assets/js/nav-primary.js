@@ -59,9 +59,7 @@ jQuery.noConflict();
   }
 
   function removeActive() {
-    setTimeout(function () {
-      $('.nav-primary_section').removeClass('nav-primary_section-active').removeClass('is-hidden');
-    }, 500);
+    $('.nav-primary_section').removeClass('nav-primary_section-active').removeClass('is-hidden');
   }
 
   function closeOverlay() {
@@ -86,7 +84,7 @@ jQuery.noConflict();
   // Handling for click events. When someone clicks the nav, the mobile nav button, or anywhere
   // on the page if the menu is already open:
 
-  $(document).on('click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
+  $(document).on('click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button, .nav-primary_section_subnav_back', function(e) {
     e.stopPropagation();
 
     // is this the mobile button?
@@ -120,6 +118,10 @@ jQuery.noConflict();
         }
         changeActive($(this));
       }
+    }
+    // is this the 'back' button?
+    else if ($(this).hasClass('nav-primary_section_subnav_back')) {
+      removeActive();
     }
     // is this some other part of the document (clicking outside the nav)?
     else {
