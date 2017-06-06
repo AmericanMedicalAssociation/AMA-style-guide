@@ -258,6 +258,7 @@
 //@include breakpoint($bp-med max-width) {
   .nav-primary_section .nav-primary_section_subnav {
     //max-height: 0;
+    display: flex;
     @include breakpoint($bp-med max-width) {
       animation: collapse .45s ease-in-out;
       animation-fill-mode: forwards;
