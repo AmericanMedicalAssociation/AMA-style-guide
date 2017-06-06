@@ -59,7 +59,7 @@ jQuery.noConflict();
   }
 
   function removeActive() {
-    $('.nav-primary_section').removeClass('is-hidden').delay(5000).removeClass('nav-primary_section-active');
+    $('.nav-primary_section').removeClass('is-hidden').removeClass('nav-primary_section-active');
   }
 
   function closeOverlay() {

@@ -234,7 +234,7 @@
 @include breakpoint($bp-med max-width) {
   .nav-primary_section .nav-primary_section_subnav {
     //max-height: 0;
-    animation: collapse 1s ease-in-out;
+    animation: collapse .45s ease-in-out;
     //opacity: 0;
     animation-fill-mode: forwards;
   }
