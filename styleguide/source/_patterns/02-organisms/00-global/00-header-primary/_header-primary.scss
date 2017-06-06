@@ -274,12 +274,12 @@
     max-height: 1000px;
     flex-wrap: nowrap;
     overflow: hidden;
-    padding: 20px 30px;
 
     @include breakpoint($bp-med max-width) {
       animation: expand .45s ease-in-out;
     }
     @include breakpoint($bp-med min-width) {
+      padding: 20px 30px;
       animation: expand-desktop .45s ease-in-out;
     }
     height: auto;
