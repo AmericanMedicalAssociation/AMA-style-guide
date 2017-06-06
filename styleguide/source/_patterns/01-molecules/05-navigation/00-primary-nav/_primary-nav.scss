@@ -180,10 +180,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   //display: none;
-  height: 0;
+  //height: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
 
   @include breakpoint($bp-med-home min-width) {
     justify-content: flex-start;

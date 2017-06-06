@@ -211,13 +211,13 @@
 @keyframes collapse {
   0% {
     max-height: 1000px;
-    opacity: 1;
+    //opacity: 1;
   }
   50% {
-    opacity: .99;
+    //opacity: .99;
   }
   100% {
-    opacity: 0;
+    //opacity: 0;
     max-height: 0;
   }
 }
@@ -225,16 +225,17 @@
 @include breakpoint($bp-med max-width) {
   .nav-primary_section .nav-primary_section_subnav {
     //max-height: 0;
-    animation: collapse 2s ease-in-out;
+    animation: collapse 1s ease-in-out;
     //opacity: 0;
+    animation-fill-mode: forwards;
   }
 
   .nav-primary_section-active .nav-primary_section_subnav {
     max-height: 1000px;
     flex-wrap: nowrap;
     overflow: hidden;
-    animation: expand 2s ease-in-out;
-    opacity: 1;
+    animation: expand .45s ease-in-out;
+    //opacity: 1;
   }
 
   .nav-primary_section-active ~ .nav-primary_section_subnav_back {
