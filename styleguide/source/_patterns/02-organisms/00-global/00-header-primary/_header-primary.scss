@@ -222,32 +222,73 @@
   }
 }
 
-@keyframes stay-hidden {
+@keyframes expand-desktop {
   0% {
-    max-height: 0;
+    max-height: 0%;
+    padding: 0;
+  }
+  1% {
+    padding: 20px 30px;
   }
   100% {
+    max-height: 100%;
+    padding: 20px 30px;
+  }
+}
+
+@keyframes collapse-desktop {
+  0% {
+    max-height: 1000px;
+    display: block;
+    //opacity: 1;
+    padding: 20px 30px;
+
+  }
+  1% {
+    //opacity: .99;
+    display: none;
+  }
+  100% {
+    //opacity: 0;
+    padding: 20px 30px;
     max-height: 0;
   }
 }
 
-@include breakpoint($bp-med max-width) {
+//@include breakpoint($bp-med max-width) {
   .nav-primary_section .nav-primary_section_subnav {
     //max-height: 0;
-    animation: collapse .45s ease-in-out;
+    @include breakpoint($bp-med max-width) {
+      animation: collapse .45s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @include breakpoint($bp-med min-width) {
+      animation: collapse-desktop .45s ease-in-out;
+      animation-fill-mode: initial;
+
+    }
     //opacity: 0;
-    animation-fill-mode: forwards;
   }
 
   .nav-primary_section.nav-primary_section-active .nav-primary_section_subnav {
     max-height: 1000px;
     flex-wrap: nowrap;
     overflow: hidden;
-    animation: expand .45s ease-in-out;
+    padding: 20px 30px;
+
+    @include breakpoint($bp-med max-width) {
+      animation: expand .45s ease-in-out;
+    }
+    @include breakpoint($bp-med min-width) {
+      animation: expand-desktop .45s ease-in-out;
+    }
     height: auto;
+    animation-fill-mode: forwards;
+
     //opacity: 1;
   }
 
+@include breakpoint($bp-med max-width) {
   .nav-primary_section-active ~ .nav-primary_section_subnav_back {
     display: block;
   }

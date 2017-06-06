@@ -187,18 +187,18 @@
   overflow: hidden;
 
   @include breakpoint($bp-med-home min-width) {
-    display: none;
-    height: 0;
+    //display: none;
+    //height: 0;
     justify-content: flex-start;
     flex-direction: row;
     position: absolute;
     top: 221px;
     left: 0;
     right: 0;
-    padding: 20px 30px;
     background: $black-7;
     width: 100vw;
     z-index: 1;
+    max-height: 0;
   }
 
   @include breakpoint($bp-large-home) {
