@@ -187,6 +187,8 @@
   overflow: hidden;
 
   @include breakpoint($bp-med-home min-width) {
+    display: none;
+    height: 0;
     justify-content: flex-start;
     flex-direction: row;
     position: absolute;
