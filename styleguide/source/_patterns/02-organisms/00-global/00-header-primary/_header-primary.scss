@@ -245,13 +245,13 @@
 }
 
   .nav-primary_section .nav-primary_section_subnav {
-    display: flex;
     @include breakpoint($bp-med max-width) {
-      animation: collapse .45s ease-in-out;
+      animation: collapse 0.45s ease-in-out;
       animation-fill-mode: forwards;
     }
     @include breakpoint($bp-med min-width) {
-      animation: collapse-desktop .45s ease-in-out;
+      display: flex;
+      animation: collapse-desktop 0.45s ease-in-out;
       animation-fill-mode: initial;
 
     }
@@ -261,20 +261,27 @@
     max-height: 1000px;
     flex-wrap: nowrap;
     overflow: hidden;
-
-    @include breakpoint($bp-med max-width) {
-      animation: expand .45s ease-in-out;
-    }
-    @include breakpoint($bp-med min-width) {
-      padding: 20px 30px;
-      animation: expand-desktop .45s ease-in-out;
-    }
     height: auto;
     animation-fill-mode: forwards;
+
+    @include breakpoint($bp-med max-width) {
+      animation: expand 0.45s ease-in-out;
+    }
+
+    @include breakpoint($bp-med min-width) {
+      padding: 20px 30px;
+      animation: expand-desktop 0.3s ease-in-out;
+    }
   }
 
 @include breakpoint($bp-med max-width) {
   .nav-primary_section-active ~ .nav-primary_section_subnav_back {
+    display: block;
+  }
+}
+
+.nav-primary_section-active .nav-primary_section_subnav .icon {
+  @include breakpoint($bp-med max-width) {
     display: block;
   }
 }
