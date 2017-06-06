@@ -59,7 +59,7 @@ jQuery.noConflict();
   }
 
   function removeActive() {
-    $('.nav-primary_section').removeClass('nav-primary_section-active').delay('1000').removeClass('is-hidden');
+    $('.nav-primary_section').removeClass('is-hidden').delay(5000).removeClass('nav-primary_section-active');
   }
 
   function closeOverlay() {
@@ -74,9 +74,13 @@ jQuery.noConflict();
       showOverlay();
     } else {
       section.addClass('nav-primary_section-active');
+      section.find('.nav-primary_section_subnav').removeClass('is-hidden');
       section.siblings('.nav-primary_section').removeClass('nav-primary_section-active');
       if ( $(window).width() < 740 ) {
         section.siblings('.nav-primary_section').addClass('is-hidden');
+        section.siblings('.nav-primary_section').each(function() {
+          $(this).find('.nav-primary_section_subnav').addClass('is-hidden');
+        });
       }
     }
   }

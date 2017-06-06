@@ -201,7 +201,7 @@
     max-height: 0;
   }
   1% {
-    opacity: 1;
+    //opacity: 1;
   }
   100% {
     max-height: 1000px;
@@ -213,11 +213,20 @@
     max-height: 1000px;
     //opacity: 1;
   }
-  50% {
+  1% {
     //opacity: .99;
   }
   100% {
     //opacity: 0;
+    max-height: 0;
+  }
+}
+
+@keyframes stay-hidden {
+  0% {
+    max-height: 0;
+  }
+  100% {
     max-height: 0;
   }
 }
@@ -230,11 +239,12 @@
     animation-fill-mode: forwards;
   }
 
-  .nav-primary_section-active .nav-primary_section_subnav {
+  .nav-primary_section.nav-primary_section-active .nav-primary_section_subnav {
     max-height: 1000px;
     flex-wrap: nowrap;
     overflow: hidden;
     animation: expand .45s ease-in-out;
+    height: auto;
     //opacity: 1;
   }
 
