@@ -88,6 +88,7 @@ jQuery.noConflict();
 
   $(document).on('click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
     e.stopPropagation();
+    e.preventDefault();
 
     // is this the mobile button?
     if ($(this).hasClass('nav-primary_button')) {
