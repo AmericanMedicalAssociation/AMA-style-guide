@@ -86,7 +86,7 @@ jQuery.noConflict();
   // Handling for click events. When someone clicks the nav, the mobile nav button, or anywhere
   // on the page if the menu is already open:
 
-  $(document).on('click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
+  $(document).on('touchstart click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
     e.stopPropagation();
     e.preventDefault();
 
