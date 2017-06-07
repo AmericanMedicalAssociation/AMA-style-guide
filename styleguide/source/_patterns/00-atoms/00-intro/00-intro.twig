@@ -22,11 +22,14 @@
 
     <p>Any relevant javascript for a pattern should be stored in the pattern's own folder, along with its template and SCSS.</p>
   <p>We use jQuery in our applications, so you should make sure your pattern's .js file begins with an immediately invoked function expression that accepts the jQuery library as a parameter like so:
+  <blockquote>
     <code>(function($) {
       //your pattern javascript here
-    }(jQuery);</code></p>
+      }(jQuery);</code>
+  </blockquote>
+  </p>
 
-    <p>If your javascript expects certain elements to be present in the DOM, make sure you wrap the js in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.</p>
+    <p>If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.</p>
 
   <h4>Annotation and Documentation</h4>
     <p>Each pattern should have its own accompanying {% include '00-link.twig' with {'content' : 'Markdown' , 'url' : 'https://daringfireball.net/projects/markdown/', 'target': '_blank'} %} file that should always contain a useful description of the pattern you are creating. Whenever possible, links to the relevant JIRA ticket/Github issues relating to the pattern should be referenced here as well.</p>
