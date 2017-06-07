@@ -7,33 +7,6 @@
 jQuery.noConflict();
 (function($) {
 
-  // Find height of ribbon and header-primary to create proper spacing
-  function checkHeight() {
-    var headerHeight = $('.header-primary').height();
-    var ribbonHeight = $('.ribbon').height();
-
-    $('.header-primary-span').css({'height':(headerHeight)+'px'});
-    $('.header-primary').css({'top':(ribbonHeight)+'px'});
-  }
-
-  // Set height on page load
-  setTimeout(function(){ checkHeight(); }, 100);
-  // Check height on window resize
-  $(window).resize(checkHeight);
-
-  // Add class to header-primary on scroll
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var os = $('.header-primary-span').offset().top;
-    var ht = $('.header-primary-span').height();
-
-    if(scroll > os + ht){
-      $(".header-primary").addClass("header-primary--sticky");
-    } else {
-      $(".header-primary").removeClass("header-primary--sticky");
-    }
-  });
-
   function closeSearch() {
     search = $('.search_modal');
     if (search.hasClass('is-open')) {
