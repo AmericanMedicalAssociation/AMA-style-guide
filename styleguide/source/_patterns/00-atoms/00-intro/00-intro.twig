@@ -1,14 +1,38 @@
-<div class="layout layout-example layout_one_up">
+<div class="layout layout-example layout_one_up layout-intro-styling">
   <h2>{% include 'atoms-logo' %}</h2>
   <h1>Welcome to the AMA Style Guide</h1>
-  <p><br>This living style guide is built using {% include '00-link.twig' with {'content' : 'Pattern Lab' , 'url' : 'http://patternlab.io/'} %} and the principles of {% include '00-link.twig' with {'content' : 'Atomic Design' , 'url' : 'http://bradfrost.com/blog/post/atomic-web-design/'} %}.</p>
+  <p>This living style guide is built using {% include '00-link.twig' with {'content' : 'Pattern Lab' , 'url' : 'http://patternlab.io/'} %} and the principles of {% include '00-link.twig' with {'content' : 'Atomic Design' , 'url' : 'http://bradfrost.com/blog/post/atomic-web-design/'} %}.</p>
+  <p>Use the menu at the top of the window to browse patterns, or click "all" to view all patterns. You can search for patterns using "Find Pattern" in the gear menu on the top right.</p>
+
   <p>As this guide grows and evolves, more documentation will appear here.</p>
-  <p>Some of the other web technologies you'll need to work with this guide include:</p>
-  <ul>
-    <li>{% include '00-link.twig' with {'content' : 'Twig' , 'url' : 'http://twig.sensiolabs.org/'} %} - for PHP-based HTML templating.</li>
-    <li>{% include '00-link.twig' with {'content' : 'SCSS' , 'url' : 'http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html'} %} - for making awesome style sheets.</li>
-    <li>{% include '00-link.twig' with {'content' : 'BEM (Block Element Modifier)' , 'url' : 'http://getbem.com/'} %} - a CSS naming methodology that enables creation of reusable components and code sharing in the front-end. We use the abridged syntax recommended in the {% include '00-link.twig' with {'content': '18F Front End Guide', 'url': 'https://frontend.18f.gov/#bem'} %} under their suggested custom methodology section.</li>
-    <li>{% include '00-link.twig' with {'content' : 'Markdown' , 'url' : 'https://daringfireball.net/projects/markdown/'} %} - a lightweight markup language with plain text formatting syntax, for documenting patterns.</li>
-  </ul>
-  <p><br>Click the all link or navigation above to browse styles. You can search for patterns using "Find Pattern" in the gear on the right.</p>
+
+  <h3>Working with our style guide</h3>
+  <h4>Templating</h4>
+    <p>Markup for each pattern is created with {% include '00-link.twig' with {'content' : 'Twig' , 'url' : 'http://twig.sensiolabs.org/', 'target': '_blank'} %}, a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns.</p>
+  <p>You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."</p>
+  <h4>Styles</h4>
+    <p>We use {% include '00-link.twig' with {'content' : 'Sassy CSS (SCSS)' , 'url' : 'http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html', 'target': '_blank'} %} for styling. SCSS files are stored in the directory for each pattern and imported in <code>/source/assets/css/styles.scss</code>.</p>
+  <p>Class names and hierarchy follow the {% include '00-link.twig' with {'content' : 'BEM (Block Element Modifier)' , 'url' : 'http://getbem.com/', 'target': '_blank'} %} namespacing methodology to facilitate code sharing among designers and developers. For easier reading and more concise class names, we use the abridged syntax recommended in the {% include '00-link.twig' with {'content': '18F Front End Guide', 'url': 'https://frontend.18f.gov/#bem', 'target': '_blank'} %}.</p>
+
+    <p>All patterns in the AMA Style Guide are fully responsive. We use {% include '00-link.twig' with {'content' : 'Breakpoint' , 'url' : 'http://breakpoint-sass.com/', 'target': '_blank'} %} to manage our media queries. Breakpoint is fairly simple to use and has a very thorough {% include '00-link.twig' with {'content' : 'wiki' , 'url' : 'https://github.com/at-import/breakpoint/wiki', 'target': '_blank'} %} explaining its usage and capabilities.</p>
+
+    <p>All of our layout patterns utilize the {% include '00-link.twig' with {'content' : 'Sass-grid' , 'url' : 'https://github.com/digitaledgeit/sass-grid', 'target': '_blank'} %} grid system. Sass-grid is a very lightweight, flexbox-based grid system.</p>
+
+  <h4>Javascript</h4>
+
+    <p>Any relevant javascript for a pattern should be stored in the pattern's own folder, along with its template and SCSS.</p>
+  <p>We use jQuery in our applications, so you should make sure your pattern's .js file begins with an immediately invoked function expression that accepts the jQuery library as a parameter like so:
+  <blockquote>
+    <code>(function($) {
+      //your pattern javascript here
+      }(jQuery);</code>
+  </blockquote>
+  </p>
+
+    <p>If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.</p>
+
+  <h4>Annotation and Documentation</h4>
+    <p>Each pattern should have its own accompanying {% include '00-link.twig' with {'content' : 'Markdown' , 'url' : 'https://daringfireball.net/projects/markdown/', 'target': '_blank'} %} file that should always contain a useful description of the pattern you are creating. Whenever possible, links to the relevant JIRA ticket/Github issues relating to the pattern should be referenced here as well.</p>
+
+    <p>Pattern Lab also provides the ability to {% include '00-link.twig' with {'content' : 'add annotations' , 'url' : 'http://patternlab.io/docs/pattern-adding-annotations.html', 'target': '_blank'} %} to your patterns.</p>
 </div>
