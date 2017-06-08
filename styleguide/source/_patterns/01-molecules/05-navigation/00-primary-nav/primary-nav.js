@@ -7,33 +7,6 @@
 jQuery.noConflict();
 (function($) {
 
-  // Find height of ribbon and header-primary to create proper spacing
-  function checkHeight() {
-    var headerHeight = $('.header-primary').height();
-    var ribbonHeight = $('.ribbon').height();
-
-    $('.header-primary-span').css({'height':(headerHeight)+'px'});
-    $('.header-primary').css({'top':(ribbonHeight)+'px'});
-  }
-
-  // Set height on page load
-  setTimeout(function(){ checkHeight(); }, 100);
-  // Check height on window resize
-  $(window).resize(checkHeight);
-
-  // Add class to header-primary on scroll
-  $(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var os = $('.header-primary-span').offset().top;
-    var ht = $('.header-primary-span').height();
-
-    if(scroll > os + ht){
-      $(".header-primary").addClass("header-primary--sticky");
-    } else {
-      $(".header-primary").removeClass("header-primary--sticky");
-    }
-  });
-
   function closeSearch() {
     search = $('.search_modal');
     if (search.hasClass('is-open')) {
@@ -88,8 +61,9 @@ jQuery.noConflict();
   // Handling for click events. When someone clicks the nav, the mobile nav button, or anywhere
   // on the page if the menu is already open:
 
-  $(document).on('click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button, .nav-primary_section_subnav_back', function(e) {
+  $(document).on('touchstart click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
     e.stopPropagation();
+    e.preventDefault();
 
     // is this the mobile button?
     if ($(this).hasClass('nav-primary_button')) {
