@@ -7,6 +7,18 @@
 .hub-header {
   padding: 0 25px;
   background-color: $purple;
+
+    @include breakpoint($bp-med) {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+
+      &+ .layout,
+      &+ article {
+        margin-top: 87px;
+    }
+  }
 }
 
 .hub-header-inner {
@@ -49,7 +61,7 @@
   .button-secondary {
     @extend %type-small;
     order: 2;
-    padding: 10px 25px;
+    padding: 7px 20px;
     margin-left: auto;
 
     @include breakpoint($bp-small) {
@@ -93,6 +105,7 @@
   color: $white;
   order: 1;
 
+
   .hub-header_cta {
     display: none;
   }
@@ -106,6 +119,8 @@
   @include breakpoint(1000px) {
     margin-left: 20px;
     max-width: 250px;
+    text-align: right;
+    min-width: unset;
 
     .hub-header_cta {
       display: inline-block;

@@ -59,7 +59,7 @@
   }
 
   // Primary navigation.
-  .nav-primary-menu_button {
+  .nav-primary_button {
     display: inline-block;
     position: absolute;
     right: 74px;
@@ -145,14 +145,14 @@
     display: none;
   }
 
-  .nav-primary-menu {
+  .nav-primary {
     float: right;
     margin: 0;
     clear: none;
     width: auto;
   }
 
-  .nav-primary_list-item {
+  .nav-primary_section {
     margin-right: 15px;
 
     &:last-of-type {
@@ -164,8 +164,8 @@
     }
   }
 
-  .nav-primary_list-item_title {
-    > .link-primary-nav {
+  .nav-primary_section {
+    > .link-nav-primary {
       @include breakpoint($bp-med-home min-width) {
         font-size: 14px;
         padding: 15px 0 25px;
@@ -183,7 +183,7 @@
       }
     }
 
-    &.is-active > .link-primary-nav {
+    &.nav-primary_section-active > .link-nav-primary {
       @include breakpoint($bp-med-home min-width) {
         border-bottom: 10px $purple solid;
         padding-bottom: 15px;
@@ -191,7 +191,7 @@
     }
   }
 
-  .nav-primary_list_subnav {
+  .nav-primary_section_subnav {
     top: auto;
   }
 }

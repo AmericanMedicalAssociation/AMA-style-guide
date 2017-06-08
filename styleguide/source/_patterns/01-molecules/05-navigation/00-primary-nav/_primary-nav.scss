@@ -4,7 +4,7 @@
  * Copyright 2017 Palantir.net, Inc.
  */
 
-.nav-primary-menu {
+.nav-primary {
   float: left;
 
   @include breakpoint($bp-med-home) {
@@ -22,7 +22,7 @@
 }
 
 // Mobile overlay
-.nav-primary-menu_overlay-mobile {
+.nav-primary_overlay-mobile {
   transition: opacity 0.25s ease-in-out;
   background: #384047;
   height: 100%;
@@ -30,7 +30,7 @@
   position: fixed;
   top: 0;
   width: 0;
-  z-index: 10;
+  z-index: 0;
   @include breakpoint($bp-med-home min-width) {
     z-index: 1;
     //top: 271px;
@@ -42,7 +42,7 @@
   }
 }
 
-.nav-primary-menu_overlay-mobile-on {
+.nav-primary_overlay-mobile-on {
   opacity: 0.85;
   width: 100%;
 }
@@ -69,20 +69,56 @@
   }
 }
 
+// Add hover styling to the primary navigation.
+.body-nav-primary-open {
+  @include breakpoint($bp-med-home min-width) {
+    .nav-primary_section > .link-nav-primary {
+      color: $gray-8;
+    }
+
+    .nav-primary_section-active,
+    .nav-primary_section:hover {
+      > .link-nav-primary {
+        color: $black;
+        border-bottom: 20px $purple solid;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+.nav-primary_section-active {
+  > .link-nav-primary {
+
+    @include breakpoint($bp-large-home min-width) {
+      padding-bottom: 32px;
+    }
+  }
+
+  .nav-primary_section_subnav {
+    display: flex;
+    height: auto;
+  }
+}
+
 // Mobile menu interaction
-.nav-primary_list-closed {
+.nav-primary_list-mobile-closed {
   left: -200%;
 }
 
-.nav-primary_list-open {
+.nav-primary_list-mobile-open {
   left: 0;
 }
 
 // List item in the primary navigation.
-.nav-primary_list-item {
+.nav-primary_section {
   font-weight: $font-weight-bold;
   position: static;
   margin-bottom: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &.is-hidden {
     display: none;
@@ -92,7 +128,7 @@
     position: relative;
     border-bottom: 1px $gray-8 solid;
 
-    .link-primary-nav {
+    .link-nav-primary {
       padding: 15px 30px;
       width: 100%
     }
@@ -110,26 +146,12 @@
   }
 
   @include breakpoint($bp-med-home min-width) {
-    display: inline-block;;
-    margin-right: 28px;
+    display: inline-block;
+    padding-right: 28px;
     float: left;
 
-    // &:hover {
-    //   // Active hover state opens drawer at tablet and above (on click works still)
-    //   .nav-primary_list_subnav {
-    //     display: flex;
-    //     height: auto;
-    //   }
-
-    //   .nav-primary_list-item_title > .link-primary-nav {
-    //     color: $black;
-    //     border-bottom: 20px $purple solid;
-    //     padding-bottom: 32px;
-    //   }
-    // }
-
     &:last-of-type {
-      margin-right: 0;
+      padding-right: 0;
     }
 
     .icon-select {
@@ -138,12 +160,22 @@
   }
 
   @include breakpoint($bp-large-home min-width) {
-    margin-right: 25px;
+    padding-right: 25px;
+  }
+}
+
+.nav-primary_section:hover {
+  @include breakpoint($bp-med-home) {
+    > .link-nav-primary {
+      color: $black;
+      border-bottom: 20px $purple solid;
+      padding-bottom: 30px;
+    }
   }
 }
 
 // The Sub nav.
-.nav-primary_list_subnav {
+.nav-primary_section_subnav {
   @include grid__unit--cols(12);
   flex-direction: column;
   flex-wrap: wrap;
@@ -152,11 +184,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-
-  &.is-open {
-    display: flex;
-    height: auto;
-  }
 
   @include breakpoint($bp-med-home min-width) {
     justify-content: flex-start;
@@ -169,23 +196,18 @@
     background: $black-7;
     width: 100vw;
     z-index: 1;
-
-    &:hover {
-      display: flex;
-      height: auto;
-    }
   }
 
   @include breakpoint($bp-large-home) {
     @include grid__unit--cols(12.5);
     left: -30px;
     right: -30px;
-    top: 147px;
+    top: 146px;
   }
 }
 
 // contains primary items and tertiary container
-.nav-primary_list_subnav-primary-container {
+.nav-primary_section_subnav_container-primary {
   @include breakpoint($bp-med-home min-width) {
     @include grid__unit--cols(3);
     display: flex;
@@ -199,7 +221,7 @@
 }
 
 // contains 'secondary' items
-.nav-primary_list_subnav-secondary-container {
+.nav-primary_section_subnav_container-secondary {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -212,7 +234,7 @@
     align-content: flex-start;
     padding-left: 15px;
 
-    .nav-primary_list_subnav_list-item {
+    .nav-primary_section_subnav_item {
       @include grid__unit--cols(5.5);
       margin-right: 20px;
       padding: 30px 0;
@@ -222,7 +244,7 @@
         border-top: none;
       }
 
-      .link-primary-nav {
+      .link-nav-primary {
         font-size: 18px;
         font-weight: $font-weight-bold;
         line-height: 25px;
@@ -234,7 +256,7 @@
   @include breakpoint($bp-large-home min-width) {
     @include grid__unit--cols(8);
 
-    .nav-primary_list_subnav_list-item {
+    .nav-primary_section_subnav_item {
       @include grid__unit--cols(3.5);
 
       &:nth-of-type(-n+3) {
@@ -251,11 +273,11 @@
   padding: 0;
 
   // Style the tertiary items at Mobile
-  .nav-primary_list_subnav_list-item {
+  .nav-primary_section_subnav_item {
     font-weight: $font-weight-medium;
     padding-left: 10px;
 
-    .link-primary-nav  {
+    .link-nav-primary  {
       padding: 10px 30px;
 
       .icon-select {
@@ -267,12 +289,12 @@
   @include breakpoint($bp-med-home) {
     margin-top: 15px;
 
-    .nav-primary_list_subnav_list-item {
+    .nav-primary_section_subnav_item {
       font-weight: $font-weight-bold;
       padding: 5px 0;
       border-top: 1px solid $gray-8;
 
-      .link-primary-nav {
+      .link-nav-primary {
         padding: 0;
       }
 
@@ -284,7 +306,7 @@
 }
 
 // default list item style
-.nav-primary_list_subnav_list-item {
+.nav-primary_section_subnav_item {
   @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
   background-color: $black-15;
   border-top: 1px $gray-8 solid;
@@ -298,13 +320,13 @@
 }
 
 // primary sub item
-.nav-primary_list_subnav_list-item-primary {
+.nav-primary_section_subnav_item-primary {
 
   @include breakpoint($bp-med-home) {
     padding-right: 15px;
     border: 0;
 
-    .link-primary-nav {
+    .link-nav-primary {
       font-size: 24px;
       line-height: 28px;
       font-weight: $font-weight-bold;
@@ -324,14 +346,14 @@
   }
 }
 
-.nav-primary_list_subnav_list-item-back {
+.nav-primary_section_subnav_back {
   background-color: $black-7;
   border-top: 1px $gray-8 solid;
   position: relative;
   margin: 0;
   order: 4;
 
-  .link-primary-nav {
+  .link-nav-primary {
     @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
     padding: 15px 30px 15px 50px;
   }
@@ -353,7 +375,7 @@
 }
 
 // Mobile menu button to trigger drop down.
-.nav-primary-menu_button {
+.nav-primary_button {
   @extend %background-transition;
   border: 2px $purple solid;
   color: $purple;
@@ -370,7 +392,7 @@
   &:active,
   &:hover,
   &.open,
-  &.nav-primary-menu_button-clicked {
+  &.nav-primary_button-clicked {
     background-color: $purple-lighter;
   }
 
@@ -380,7 +402,7 @@
 }
 
 // Primary nav link
-.link-primary-nav {
+.link-nav-primary {
   display: inline-block;
 
   &:active,
@@ -388,6 +410,7 @@
   &:focus {
     color: $blue;
     text-decoration: none;
+    cursor: pointer;
   }
 
   @include breakpoint($bp-med-home min-width) {
@@ -397,55 +420,15 @@
   }
 
   @include breakpoint($bp-large-home min-width) {
-    padding: 51px 0;
+    padding: 50px 0;
   }
 }
 
-.nav-primary_list-item_title {
-
-  &.is-active {
-    .icon {
-      display: none;
-    }
-
-    .link-primary-nav {
-      @include breakpoint($bp-med-home min-width) {
-        color: $black;
-        border-bottom: 20px $purple solid;
-        padding-bottom: 30px;
-      }
-
-      @include breakpoint($bp-large-home min-width) {
-        padding-bottom: 32px;
-      }
-    }
-  }
-
-  .link-primary-nav {
-
-    @include breakpoint($bp-med-home min-width) {
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: $black;
-        border-bottom: 20px $purple solid;
-        padding-bottom: 30px;
-      }
-    }
-
-    @include breakpoint($bp-large-home min-width) {
-
-      &:active,
-      &:hover,
-      &:focus {
-        padding-bottom: 32px;
-      }
-    }
-  }
+.nav-primary_section-active .icon {
+  display: none;
 }
 
-.nav-primary_list_subnav_list-item_text {
+.nav-primary_section_subnav_item_text {
   color: $black-55;
   display: none;
   font-size: 18px;
