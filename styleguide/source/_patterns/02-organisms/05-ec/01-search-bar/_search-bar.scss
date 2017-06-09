@@ -14,9 +14,11 @@
   width: 80%;
 }
 
-.search-bar_library,
-.search-bar_form {
-  display: inline-block;
+.search-bar_library {
+  display: none;
+  @include breakpoint($bp-small) {
+    display: inline-block;
+  }
 }
 
 .search-bar_library .button {
@@ -28,9 +30,15 @@
 }
 
 .search-bar_form {
+  display: block;
   margin-left: 20px;
-  max-width: 80%;
-  width: calc(100% - 20px - 168px); //minus .search-bar_form margin minus .search-bar_library .button
+  width: 100%;
+
+  @include breakpoint($bp-small) {
+    display: inline-block;
+    max-width: 80%;
+    width: calc(100% - 20px - 168px); //minus .search-bar_form margin minus .search-bar_library .button
+  }
 
   form {
     padding-top: 16px;
