@@ -1,0 +1,12 @@
+{
+  "bio": {
+  	"name": "Steven J. Stack, MD",
+    "position": "Very Important Person",
+    "term_start": "May 1999 -",
+    "term_end": "September 2015",
+    "specialty": "Emergency Medicine",
+    "affiliation": "University of Smartopia",
+    "endorsement": "Rated #3 by Good Doctors of America",
+    "email": "sstack@ama-assn.org"
+  }
+}
