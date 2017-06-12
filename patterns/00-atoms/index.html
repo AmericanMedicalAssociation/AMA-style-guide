@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css?1495727295" media="all" />
-    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1495727295" media="all" />
-
-        <script src="../../assets/js/jquery-2.0.0b2.js" defer></script>
+    <link rel="stylesheet" href="../../assets/css/style.css?1497286089" media="all" />
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1497286089" media="all" />
 
     <!-- Grunticon loader -->
     <script src="../../assets/icons/grunticon.loader.js"></script>
@@ -27,12 +25,12 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1495727295" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1495727295" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1497286089" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1497286089" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
-  <body class="body"><div class="nav-primary-menu_overlay-mobile"></div>
+  <body class="body"><div class="nav-primary_overlay-mobile"></div>
 <!-- View All Patterns in a Pattern Sub-Type -->
 <div class="sg-main" role="main">
   <!-- Patterns -->
@@ -68,20 +66,43 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-intro"></div>
     
   <div class="sg-pattern-example">
-    <div class="layout layout-example layout_one_up">
-  <h2><a href="/patterns/03-templates-01-home-01-home/03-templates-01-home-01-home.html"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>
-</h2>
+    <div class="layout layout-example layout_one_up layout-intro-styling">
+  <h2><a href="0"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a></h2>
   <h1>Welcome to the AMA Style Guide</h1>
-  <p><br>This living style guide is built using <a href="http://patternlab.io/" class="link ">Pattern Lab</a> and the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" class="link ">Atomic Design</a>.</p>
+  <p>This living style guide is built using <a href="http://patternlab.io/" class="link " target="_self">Pattern Lab</a> and the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" class="link " target="_self">Atomic Design</a>.</p>
+  <p>Use the menu at the top of the window to browse patterns, or click "all" to view all patterns. You can search for patterns using "Find Pattern" in the gear menu on the top right.</p>
+
   <p>As this guide grows and evolves, more documentation will appear here.</p>
-  <p>Some of the other web technologies you'll need to work with this guide include:</p>
-  <ul>
-    <li><a href="http://twig.sensiolabs.org/" class="link ">Twig</a> - for PHP-based HTML templating.</li>
-    <li><a href="http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html" class="link ">SCSS</a> - for making awesome style sheets.</li>
-    <li><a href="http://getbem.com/" class="link ">BEM (Block Element Modifier)</a> - a methodology that enables creation of reusable components and code sharing in the front-end.</li>
-    <li><a href="https://daringfireball.net/projects/markdown/" class="link ">Markdown</a> - a lightweight markup language with plain text formatting syntax, for documenting patterns.</li>
-  </ul>
-  <p><br>Click the all link or navigation above to browse styles. You can search for patterns using "Find Pattern" in the gear on the right.</p>
+
+  <h3>Working with our style guide</h3>
+  <h4>Templating</h4>
+    <p>Markup for each pattern is created with <a href="http://twig.sensiolabs.org/" class="link " target="_blank">Twig</a>, a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns.</p>
+  <p>You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."</p>
+  <h4>Styles</h4>
+    <p>We use <a href="http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html" class="link " target="_blank">Sassy CSS (SCSS)</a> for styling. SCSS files are stored in the directory for each pattern and imported in <code>/source/assets/css/styles.scss</code>.</p>
+  <p>Class names and hierarchy follow the <a href="http://getbem.com/" class="link " target="_blank">BEM (Block Element Modifier)</a> namespacing methodology to facilitate code sharing among designers and developers. For easier reading and more concise class names, we use the abridged syntax recommended in the <a href="https://frontend.18f.gov/#bem" class="link " target="_blank">18F Front End Guide</a>.</p>
+
+    <p>All patterns in the AMA Style Guide are fully responsive. We use <a href="http://breakpoint-sass.com/" class="link " target="_blank">Breakpoint</a> to manage our media queries. Breakpoint is fairly simple to use and has a very thorough <a href="https://github.com/at-import/breakpoint/wiki" class="link " target="_blank">wiki</a> explaining its usage and capabilities.</p>
+
+    <p>All of our layout patterns utilize the <a href="https://github.com/digitaledgeit/sass-grid" class="link " target="_blank">Sass-grid</a> grid system. Sass-grid is a very lightweight, flexbox-based grid system.</p>
+
+  <h4>Javascript</h4>
+
+    <p>Any relevant javascript for a pattern should be stored in the pattern's own folder, along with its template and SCSS.</p>
+  <p>We use jQuery in our applications, so you should make sure your pattern's .js file begins with an immediately invoked function expression that accepts the jQuery library as a parameter like so:
+  <blockquote>
+    <code>(function($) {
+      //your pattern javascript here
+      }(jQuery);</code>
+  </blockquote>
+  </p>
+
+    <p>If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.</p>
+
+  <h4>Annotation and Documentation</h4>
+    <p>Each pattern should have its own accompanying <a href="https://daringfireball.net/projects/markdown/" class="link " target="_blank">Markdown</a> file that should always contain a useful description of the pattern you are creating. Whenever possible, links to the relevant JIRA ticket/Github issues relating to the pattern should be referenced here as well.</p>
+
+    <p>Pattern Lab also provides the ability to <a href="http://patternlab.io/docs/pattern-adding-annotations.html" class="link " target="_blank">add annotations</a> to your patterns.</p>
 </div>
 
   </div>
@@ -576,7 +597,7 @@
   </div>
   
   <script type="text/json" id="sg-pattern-data-atoms-h4" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-figure","lineagePath":"..\/..\/patterns\/01-molecules-06-components-00-figure-figure\/01-molecules-06-components-00-figure-figure.html"},{"lineagePattern":"molecules-inline-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-02-inline-bio-inline-bio\/01-molecules-06-components-02-inline-bio-inline-bio.html"},{"lineagePattern":"molecules-category-highlight-image","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-category-highlight-image-category-highlight-image\/01-molecules-06-components-12-category-highlight-image-category-highlight-image.html"},{"lineagePattern":"molecules-accordion","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-accordion-accordion\/01-molecules-06-components-13-accordion-accordion.html"},{"lineagePattern":"molecules-search-results-columns-external","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-columns-external\/01-molecules-10-search-results-00-search-result-search-results-columns-external.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"text"},"patternDesc":"<p>The h4 block element represents the fourth section heading.<\/p>","patternExtension":"twig","patternName":"h4","patternPartial":"atoms-h4","patternState":""}
+    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-figure","lineagePath":"..\/..\/patterns\/01-molecules-06-components-00-figure-figure\/01-molecules-06-components-00-figure-figure.html"},{"lineagePattern":"molecules-inline-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-02-inline-bio-inline-bio\/01-molecules-06-components-02-inline-bio-inline-bio.html"},{"lineagePattern":"molecules-category-highlight-image","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-category-highlight-image-category-highlight-image\/01-molecules-06-components-12-category-highlight-image-category-highlight-image.html"},{"lineagePattern":"molecules-accordion","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-accordion-accordion\/01-molecules-06-components-13-accordion-accordion.html"},{"lineagePattern":"molecules-event-detail","lineagePath":"..\/..\/patterns\/01-molecules-06-components-17-event-detail-event-detail\/01-molecules-06-components-17-event-detail-event-detail.html"},{"lineagePattern":"molecules-people-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-18-people-bio-people-bio\/01-molecules-06-components-18-people-bio-people-bio.html"},{"lineagePattern":"molecules-people-bio-short","lineagePath":"..\/..\/patterns\/01-molecules-06-components-19-people-bio-short-people-bio-short\/01-molecules-06-components-19-people-bio-short-people-bio-short.html"},{"lineagePattern":"molecules-search-results-columns-external","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-columns-external\/01-molecules-10-search-results-00-search-result-search-results-columns-external.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"text"},"patternDesc":"<p>The h4 block element represents the fourth section heading.<\/p>","patternExtension":"twig","patternName":"h4","patternPartial":"atoms-h4","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="atoms-h5" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -879,11 +900,11 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-paragraph"></div>
     
   <div class="sg-pattern-example">
-    <p class="">A paragraph (from the Greek paragraphos, &quot;to write beside&quot; or &quot;written beside&quot;) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+    <p class="">A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
   </div>
   
   <script type="text/json" id="sg-pattern-data-atoms-paragraph" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-section-header","lineagePath":"..\/..\/patterns\/01-molecules-00-text-00-section-header-section-header\/01-molecules-00-text-00-section-header-section-header.html"},{"lineagePattern":"molecules-block-hero","lineagePath":"..\/..\/patterns\/01-molecules-02-blocks-00-block-hero-block-hero\/01-molecules-02-blocks-00-block-hero-block-hero.html"},{"lineagePattern":"molecules-primary-nav","lineagePath":"..\/..\/patterns\/01-molecules-05-navigation-00-primary-nav-primary-nav\/01-molecules-05-navigation-00-primary-nav-primary-nav.html"},{"lineagePattern":"molecules-figure-video","lineagePath":"..\/..\/patterns\/01-molecules-06-components-00-figure-figure-video\/01-molecules-06-components-00-figure-figure-video.html"},{"lineagePattern":"molecules-figure","lineagePath":"..\/..\/patterns\/01-molecules-06-components-00-figure-figure\/01-molecules-06-components-00-figure-figure.html"},{"lineagePattern":"molecules-inline-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-02-inline-bio-inline-bio\/01-molecules-06-components-02-inline-bio-inline-bio.html"},{"lineagePattern":"molecules-news-item-standard-row","lineagePath":"..\/..\/patterns\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row.html"},{"lineagePattern":"molecules-news-item-featured-row","lineagePath":"..\/..\/patterns\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row.html"},{"lineagePattern":"molecules-card-cta-no-image","lineagePath":"..\/..\/patterns\/01-molecules-06-components-10-card-cta-card-cta-no-image\/01-molecules-06-components-10-card-cta-card-cta-no-image.html"},{"lineagePattern":"molecules-card-cta","lineagePath":"..\/..\/patterns\/01-molecules-06-components-10-card-cta-card-cta\/01-molecules-06-components-10-card-cta-card-cta.html"},{"lineagePattern":"molecules-category-highlight-image","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-category-highlight-image-category-highlight-image\/01-molecules-06-components-12-category-highlight-image-category-highlight-image.html"},{"lineagePattern":"molecules-hero-banner-cta-only-two","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two.html"},{"lineagePattern":"molecules-hero-banner-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only.html"},{"lineagePattern":"molecules-hero-banner-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-side","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-side\/01-molecules-06-components-12-hero-banner-hero-banner-side.html"},{"lineagePattern":"molecules-hero-banner-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-split","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split\/01-molecules-06-components-12-hero-banner-hero-banner-split.html"},{"lineagePattern":"molecules-hero-banner","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner\/01-molecules-06-components-12-hero-banner-hero-banner.html"},{"lineagePattern":"molecules-subcategory-topics-description","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description.html"},{"lineagePattern":"molecules-list-subcategory","lineagePath":"..\/..\/patterns\/01-molecules-08-lists-10-list-subcategory-list-subcategory\/01-molecules-08-lists-10-list-subcategory-list-subcategory.html"},{"lineagePattern":"molecules-hub-hero-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only.html"},{"lineagePattern":"molecules-hub-hero-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-side","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side.html"},{"lineagePattern":"molecules-hub-hero-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-split","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split.html"},{"lineagePattern":"molecules-hub-hero","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero\/01-molecules-09-hub-components-00-hub-hero-hub-hero.html"},{"lineagePattern":"molecules-hub-card-no-image","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-02-hub-card-hub-card-no-image\/01-molecules-09-hub-components-02-hub-card-hub-card-no-image.html"},{"lineagePattern":"molecules-hub-card","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-02-hub-card-hub-card\/01-molecules-09-hub-components-02-hub-card-hub-card.html"},{"lineagePattern":"molecules-search-results-best-match-event","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-best-match-event\/01-molecules-10-search-results-00-search-result-search-results-best-match-event.html"},{"lineagePattern":"molecules-search-results-best-match","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-best-match\/01-molecules-10-search-results-00-search-result-search-results-best-match.html"},{"lineagePattern":"molecules-search-results-columns-external","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-columns-external\/01-molecules-10-search-results-00-search-result-search-results-columns-external.html"},{"lineagePattern":"templates-article","lineagePath":"..\/..\/patterns\/03-templates-02-article-article\/03-templates-02-article-article.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"text"},"patternDesc":"","patternExtension":"twig","patternName":"paragraph","patternPartial":"atoms-paragraph","patternState":""}
+    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-section-header","lineagePath":"..\/..\/patterns\/01-molecules-00-text-00-section-header-section-header\/01-molecules-00-text-00-section-header-section-header.html"},{"lineagePattern":"molecules-block-hero","lineagePath":"..\/..\/patterns\/01-molecules-02-blocks-00-block-hero-block-hero\/01-molecules-02-blocks-00-block-hero-block-hero.html"},{"lineagePattern":"molecules-primary-nav","lineagePath":"..\/..\/patterns\/01-molecules-05-navigation-00-primary-nav-primary-nav\/01-molecules-05-navigation-00-primary-nav-primary-nav.html"},{"lineagePattern":"molecules-figure-video","lineagePath":"..\/..\/patterns\/01-molecules-06-components-00-figure-figure-video\/01-molecules-06-components-00-figure-figure-video.html"},{"lineagePattern":"molecules-figure","lineagePath":"..\/..\/patterns\/01-molecules-06-components-00-figure-figure\/01-molecules-06-components-00-figure-figure.html"},{"lineagePattern":"molecules-inline-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-02-inline-bio-inline-bio\/01-molecules-06-components-02-inline-bio-inline-bio.html"},{"lineagePattern":"molecules-news-item-standard-row","lineagePath":"..\/..\/patterns\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row\/01-molecules-06-components-03-news-item-standard-row-news-item-standard-row.html"},{"lineagePattern":"molecules-news-item-featured-row","lineagePath":"..\/..\/patterns\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row\/01-molecules-06-components-04-news-item-featured-row-news-item-featured-row.html"},{"lineagePattern":"molecules-card-cta-no-image","lineagePath":"..\/..\/patterns\/01-molecules-06-components-10-card-cta-card-cta-no-image\/01-molecules-06-components-10-card-cta-card-cta-no-image.html"},{"lineagePattern":"molecules-card-cta","lineagePath":"..\/..\/patterns\/01-molecules-06-components-10-card-cta-card-cta\/01-molecules-06-components-10-card-cta-card-cta.html"},{"lineagePattern":"molecules-category-highlight-image","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-category-highlight-image-category-highlight-image\/01-molecules-06-components-12-category-highlight-image-category-highlight-image.html"},{"lineagePattern":"molecules-hero-banner-cta-only-two","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two.html"},{"lineagePattern":"molecules-hero-banner-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only.html"},{"lineagePattern":"molecules-hero-banner-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-side","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-side\/01-molecules-06-components-12-hero-banner-hero-banner-side.html"},{"lineagePattern":"molecules-hero-banner-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-split","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split\/01-molecules-06-components-12-hero-banner-hero-banner-split.html"},{"lineagePattern":"molecules-hero-banner","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner\/01-molecules-06-components-12-hero-banner-hero-banner.html"},{"lineagePattern":"molecules-subcategory-topics-description","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description.html"},{"lineagePattern":"molecules-event-detail","lineagePath":"..\/..\/patterns\/01-molecules-06-components-17-event-detail-event-detail\/01-molecules-06-components-17-event-detail-event-detail.html"},{"lineagePattern":"molecules-people-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-18-people-bio-people-bio\/01-molecules-06-components-18-people-bio-people-bio.html"},{"lineagePattern":"molecules-people-bio-short","lineagePath":"..\/..\/patterns\/01-molecules-06-components-19-people-bio-short-people-bio-short\/01-molecules-06-components-19-people-bio-short-people-bio-short.html"},{"lineagePattern":"molecules-list-subcategory","lineagePath":"..\/..\/patterns\/01-molecules-08-lists-10-list-subcategory-list-subcategory\/01-molecules-08-lists-10-list-subcategory-list-subcategory.html"},{"lineagePattern":"molecules-hub-hero-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only.html"},{"lineagePattern":"molecules-hub-hero-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-side","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side.html"},{"lineagePattern":"molecules-hub-hero-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-split","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split.html"},{"lineagePattern":"molecules-hub-hero","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero\/01-molecules-09-hub-components-00-hub-hero-hub-hero.html"},{"lineagePattern":"molecules-hub-card-no-image","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-02-hub-card-hub-card-no-image\/01-molecules-09-hub-components-02-hub-card-hub-card-no-image.html"},{"lineagePattern":"molecules-hub-card","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-02-hub-card-hub-card\/01-molecules-09-hub-components-02-hub-card-hub-card.html"},{"lineagePattern":"molecules-search-results-best-match-event","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-best-match-event\/01-molecules-10-search-results-00-search-result-search-results-best-match-event.html"},{"lineagePattern":"molecules-search-results-best-match","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-best-match\/01-molecules-10-search-results-00-search-result-search-results-best-match.html"},{"lineagePattern":"molecules-search-results-columns-external","lineagePath":"..\/..\/patterns\/01-molecules-10-search-results-00-search-result-search-results-columns-external\/01-molecules-10-search-results-00-search-result-search-results-columns-external.html"},{"lineagePattern":"templates-article","lineagePath":"..\/..\/patterns\/03-templates-02-article-article\/03-templates-02-article-article.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"text"},"patternDesc":"","patternExtension":"twig","patternName":"paragraph","patternPartial":"atoms-paragraph","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="atoms-summary" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -1028,11 +1049,11 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-link"></div>
     
   <div class="sg-pattern-example">
-    <a href="#" class="link ">Generic Link</a>
+    <a href="#" class="link " target="_self">Generic Link</a>
   </div>
   
   <script type="text/json" id="sg-pattern-data-atoms-link" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-inline-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-02-inline-bio-inline-bio\/01-molecules-06-components-02-inline-bio-inline-bio.html"},{"lineagePattern":"molecules-accordion","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-accordion-accordion\/01-molecules-06-components-13-accordion-accordion.html"},{"lineagePattern":"molecules-subcategory-topics-description","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"links"},"patternDesc":"","patternExtension":"twig","patternName":"link","patternPartial":"atoms-link","patternState":""}
+    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-inline-bio","lineagePath":"..\/..\/patterns\/01-molecules-06-components-02-inline-bio-inline-bio\/01-molecules-06-components-02-inline-bio-inline-bio.html"},{"lineagePattern":"molecules-accordion","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-accordion-accordion\/01-molecules-06-components-13-accordion-accordion.html"},{"lineagePattern":"molecules-subcategory-topics-description","lineagePath":"..\/..\/patterns\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description\/01-molecules-06-components-13-subcategory-topics-description-subcategory-topics-description.html"},{"lineagePattern":"molecules-event-detail","lineagePath":"..\/..\/patterns\/01-molecules-06-components-17-event-detail-event-detail\/01-molecules-06-components-17-event-detail-event-detail.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"links"},"patternDesc":"","patternExtension":"twig","patternName":"link","patternPartial":"atoms-link","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="atoms-link-black" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -1110,8 +1131,7 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-link-primary-nav"></div>
     
   <div class="sg-pattern-example">
-    <a class="link-primary-nav " href="#" role="menuitem" aria-haspopup="true">Link <span class="icon icon-select" data-grunticon-embed></span></a>
-
+    <a class="link-nav-primary " href="#" role="menuitem" aria-haspopup="true">Link <span class="icon icon-select" data-grunticon-embed></span></a>
   </div>
   
   <script type="text/json" id="sg-pattern-data-atoms-link-primary-nav" class="sg-pattern-data">
@@ -1302,8 +1322,7 @@
   <div class="sg-pattern-extra" id="sg-pattern-extra-atoms-logo"></div>
     
   <div class="sg-pattern-example">
-    <a href="/patterns/03-templates-01-home-01-home/03-templates-01-home-01-home.html"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>
-
+    <a href="0"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>
   </div>
   
   <script type="text/json" id="sg-pattern-data-atoms-logo" class="sg-pattern-data">
@@ -1608,7 +1627,7 @@
   </div>
   
   <script type="text/json" id="sg-pattern-data-atoms-button-link" class="sg-pattern-data">
-    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-hero-banner-cta-only-two","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two.html"},{"lineagePattern":"molecules-hero-banner-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only.html"},{"lineagePattern":"molecules-hero-banner-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-side-right","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-side-right\/01-molecules-06-components-12-hero-banner-hero-banner-side-right.html"},{"lineagePattern":"molecules-hero-banner-side","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-side\/01-molecules-06-components-12-hero-banner-hero-banner-side.html"},{"lineagePattern":"molecules-hero-banner-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-split","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split\/01-molecules-06-components-12-hero-banner-hero-banner-split.html"},{"lineagePattern":"molecules-hero-banner","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner\/01-molecules-06-components-12-hero-banner-hero-banner.html"},{"lineagePattern":"molecules-hub-hero-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only.html"},{"lineagePattern":"molecules-hub-hero-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-side-right","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side-right\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side-right.html"},{"lineagePattern":"molecules-hub-hero-side","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side.html"},{"lineagePattern":"molecules-hub-hero-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-split","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split.html"},{"lineagePattern":"molecules-hub-hero","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero\/01-molecules-09-hub-components-00-hub-hero-hub-hero.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"buttons"},"patternDesc":"","patternExtension":"twig","patternName":"button link","patternPartial":"atoms-button-link","patternState":""}
+    {"lineage":[],"lineageR":[{"lineagePattern":"molecules-hero-banner-cta-only-two","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only-two.html"},{"lineagePattern":"molecules-hero-banner-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only\/01-molecules-06-components-12-hero-banner-hero-banner-cta-only.html"},{"lineagePattern":"molecules-hero-banner-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-side-right","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-side-right\/01-molecules-06-components-12-hero-banner-hero-banner-side-right.html"},{"lineagePattern":"molecules-hero-banner-side","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-side\/01-molecules-06-components-12-hero-banner-hero-banner-side.html"},{"lineagePattern":"molecules-hero-banner-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay\/01-molecules-06-components-12-hero-banner-hero-banner-split-no-overlay.html"},{"lineagePattern":"molecules-hero-banner-split","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner-split\/01-molecules-06-components-12-hero-banner-hero-banner-split.html"},{"lineagePattern":"molecules-hero-banner","lineagePath":"..\/..\/patterns\/01-molecules-06-components-12-hero-banner-hero-banner\/01-molecules-06-components-12-hero-banner-hero-banner.html"},{"lineagePattern":"molecules-event-detail","lineagePath":"..\/..\/patterns\/01-molecules-06-components-17-event-detail-event-detail\/01-molecules-06-components-17-event-detail-event-detail.html"},{"lineagePattern":"molecules-hub-hero-cta-only","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only\/01-molecules-09-hub-components-00-hub-hero-hub-hero-cta-only.html"},{"lineagePattern":"molecules-hub-hero-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-side-right","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side-right\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side-right.html"},{"lineagePattern":"molecules-hub-hero-side","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side\/01-molecules-09-hub-components-00-hub-hero-hub-hero-side.html"},{"lineagePattern":"molecules-hub-hero-split-no-overlay","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split-no-overlay.html"},{"lineagePattern":"molecules-hub-hero-split","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split\/01-molecules-09-hub-components-00-hub-hero-hub-hero-split.html"},{"lineagePattern":"molecules-hub-hero","lineagePath":"..\/..\/patterns\/01-molecules-09-hub-components-00-hub-hero-hub-hero\/01-molecules-09-hub-components-00-hub-hero-hub-hero.html"}],"patternBreadcrumb":{"patternType":"atoms","patternSubtype":"buttons"},"patternDesc":"","patternExtension":"twig","patternName":"button link","patternPartial":"atoms-button-link","patternState":""}
   </script>
 </div><!--end .sg-pattern-->                        <div id="atoms-button-submit" class="sg-pattern">
   <div class="sg-pattern-head">
@@ -2429,10 +2448,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1495727295">
+<script id="pl-js-polyfill-insert-1497286089">
   (function() {
     if (self != top) {
-      var cb = '1495727295';
+      var cb = '1497286089';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -2442,29 +2461,20 @@
   })();
 </script>
 
-<script id="pl-js-insert-1495727295">
+<script id="pl-js-insert-1497286089">
   (function() {
     if (self != top) {
-      var cb = '1495727295';
+      var cb = '1497286089';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
   })();
 </script>
 
-      <script src="../../assets/js/jquery.validate.js" async></script>
-  <script src="../../assets/js/init.js" async></script>
-  <script src="../../assets/js/nav.js" async></script>
-  <script src="../../assets/js/featured-content.js" async></script>
-  <script src="../../assets/js/search.js" async></script>
-  <script src="../../assets/js/tabs-audience-selector.js" async></script>
-  <script src="../../assets/js/nav-primary.js" async></script>
-  <script src="../../assets/js/search-modal.js" async></script>
-  <script src="../../assets/js/form-items.js" async></script>
-  <script src="../../assets/js/jump-nav.js" async></script>
-  <script src="../../assets/js/accordion.js" async></script>
-  <script src="../../assets/js/fitvids.js" async></script>
-  <script src="../../assets/js/hub-cta-half-video.js" async></script>
+    
+  <script src="../../assets/js/app.js"></script>
+  <!--<script src="../../assets/js/app.min.js"></script>-->
+
   </body>
 
 </html>

@@ -1,15 +1,38 @@
-<div class="layout layout-example layout_one_up">
-  <h2><a href="/patterns/03-templates-01-home-01-home/03-templates-01-home-01-home.html"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>
-</h2>
+<div class="layout layout-example layout_one_up layout-intro-styling">
+  <h2><a href="0"><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a></h2>
   <h1>Welcome to the AMA Style Guide</h1>
-  <p><br>This living style guide is built using <a href="http://patternlab.io/" class="link ">Pattern Lab</a> and the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" class="link ">Atomic Design</a>.</p>
+  <p>This living style guide is built using <a href="http://patternlab.io/" class="link " target="_self">Pattern Lab</a> and the principles of <a href="http://bradfrost.com/blog/post/atomic-web-design/" class="link " target="_self">Atomic Design</a>.</p>
+  <p>Use the menu at the top of the window to browse patterns, or click "all" to view all patterns. You can search for patterns using "Find Pattern" in the gear menu on the top right.</p>
+
   <p>As this guide grows and evolves, more documentation will appear here.</p>
-  <p>Some of the other web technologies you'll need to work with this guide include:</p>
-  <ul>
-    <li><a href="http://twig.sensiolabs.org/" class="link ">Twig</a> - for PHP-based HTML templating.</li>
-    <li><a href="http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html" class="link ">SCSS</a> - for making awesome style sheets.</li>
-    <li><a href="http://getbem.com/" class="link ">BEM (Block Element Modifier)</a> - a methodology that enables creation of reusable components and code sharing in the front-end.</li>
-    <li><a href="https://daringfireball.net/projects/markdown/" class="link ">Markdown</a> - a lightweight markup language with plain text formatting syntax, for documenting patterns.</li>
-  </ul>
-  <p><br>Click the all link or navigation above to browse styles. You can search for patterns using "Find Pattern" in the gear on the right.</p>
+
+  <h3>Working with our style guide</h3>
+  <h4>Templating</h4>
+    <p>Markup for each pattern is created with <a href="http://twig.sensiolabs.org/" class="link " target="_blank">Twig</a>, a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns.</p>
+  <p>You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."</p>
+  <h4>Styles</h4>
+    <p>We use <a href="http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html" class="link " target="_blank">Sassy CSS (SCSS)</a> for styling. SCSS files are stored in the directory for each pattern and imported in <code>/source/assets/css/styles.scss</code>.</p>
+  <p>Class names and hierarchy follow the <a href="http://getbem.com/" class="link " target="_blank">BEM (Block Element Modifier)</a> namespacing methodology to facilitate code sharing among designers and developers. For easier reading and more concise class names, we use the abridged syntax recommended in the <a href="https://frontend.18f.gov/#bem" class="link " target="_blank">18F Front End Guide</a>.</p>
+
+    <p>All patterns in the AMA Style Guide are fully responsive. We use <a href="http://breakpoint-sass.com/" class="link " target="_blank">Breakpoint</a> to manage our media queries. Breakpoint is fairly simple to use and has a very thorough <a href="https://github.com/at-import/breakpoint/wiki" class="link " target="_blank">wiki</a> explaining its usage and capabilities.</p>
+
+    <p>All of our layout patterns utilize the <a href="https://github.com/digitaledgeit/sass-grid" class="link " target="_blank">Sass-grid</a> grid system. Sass-grid is a very lightweight, flexbox-based grid system.</p>
+
+  <h4>Javascript</h4>
+
+    <p>Any relevant javascript for a pattern should be stored in the pattern's own folder, along with its template and SCSS.</p>
+  <p>We use jQuery in our applications, so you should make sure your pattern's .js file begins with an immediately invoked function expression that accepts the jQuery library as a parameter like so:
+  <blockquote>
+    <code>(function($) {
+      //your pattern javascript here
+      }(jQuery);</code>
+  </blockquote>
+  </p>
+
+    <p>If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.</p>
+
+  <h4>Annotation and Documentation</h4>
+    <p>Each pattern should have its own accompanying <a href="https://daringfireball.net/projects/markdown/" class="link " target="_blank">Markdown</a> file that should always contain a useful description of the pattern you are creating. Whenever possible, links to the relevant JIRA ticket/Github issues relating to the pattern should be referenced here as well.</p>
+
+    <p>Pattern Lab also provides the ability to <a href="http://patternlab.io/docs/pattern-adding-annotations.html" class="link " target="_blank">add annotations</a> to your patterns.</p>
 </div>
