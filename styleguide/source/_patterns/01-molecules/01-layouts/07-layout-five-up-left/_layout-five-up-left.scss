@@ -1,0 +1,63 @@
+/**
+ * @file layout-two-up.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Placeholder blocks in layout molecules.
+.layout_five-up-left {
+  &.layout-example .layout_container {
+    background-color: $black-7;
+  }
+  .layout_container {
+    display: block;
+    margin-bottom: 1em;
+    padding: 2em;
+    text-align: center;
+  }
+}
+// Layout default setup.
+
+.flexbox .layout.layout_five-up-left {
+  @include grid__unit--cols(12);
+  justify-content: flex-start;
+}
+
+.layout_five-up-left-primary,
+.layout_five-up-left-secondary {
+  @include grid__unit--cols(12);
+  @include breakpoint($bp-small $bp-med) {
+    @include grid__unit--cols(4);
+  }
+}
+
+.layout_five-up-left-primary {
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    padding-right: 15px;
+  }
+  .layout_container {
+    height: calc(100% - 1em);
+  }
+}
+
+.layout_five-up-left-secondary {
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(3);
+    padding-left: 15px;
+  }
+}
+
+.layout_five-up-left {
+  @include breakpoint(0 $bp-med) {
+    .layout_container:nth-child(n+2){
+      display: none;
+    }
+  }
+
+  @include breakpoint($bp-small $bp-med) {
+    .layout_container {
+      margin-right: 1em; 
+    }
+  }
+}
