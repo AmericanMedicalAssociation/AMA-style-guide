@@ -1,0 +1,39 @@
+// Placeholder blocks in layout molecules.
+.layout_four-row {
+  &.layout-example .layout_container {
+    background-color: $black-7;
+  }
+  .layout_container {
+    display: block;
+    margin-bottom: 1em;
+    padding: 2em;
+    text-align: center;
+  }
+}
+
+.flexbox .layout.layout_four-row {
+  @include grid__unit--cols(12);
+  justify-content: flex-start;
+}
+
+.layout_four-row {
+  .layout_four-item {
+    @include grid__unit--cols(12);
+
+    @include breakpoint($bp-small) {
+      @include grid__unit--cols(6);
+      &:nth-child(odd) {
+        background-clip: padding-box;
+        border-right: 1em solid transparent;
+      }
+    }
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(3);
+      &:nth-child(-n+3) {
+        background-clip: padding-box;
+        border-right: 1em solid transparent;
+      }
+    }
+  }
+}
