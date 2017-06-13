@@ -28,7 +28,7 @@
     </div>
 
     <div class="people-bio_data-full">
-      {% include 'molecules-field-group' with { 'label': 'Email', 'content': bio.email_private } %}
+      {% include 'molecules-field-group' with { 'label': 'Email', 'content': "<a href='mailto:#' class='link link-blue'>#{bio.email_private}</a>" } %}
       {% include 'molecules-field-group' with { 'label': 'Fax', 'content': bio.fax } %}
       {% include 'molecules-field-group' with { 'label': 'Phone', 'content': bio.phone } %}
       {% include 'atoms-link-blue' with { 'content': 'Conflict of Interest' } %}
