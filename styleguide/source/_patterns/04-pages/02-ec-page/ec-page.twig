@@ -1,0 +1,40 @@
+{% include 'organisms-ribbon' %}
+{% include '02-organisms/05-ec/01-search-bar/search-bar.twig' %}
+
+{# Some type of hero #}
+<div class="layout layout-one-up">
+  {% include 'molecules-hub-hero-no-overlay' %}
+</div>
+
+{# begin the next section #}
+<section class="-section">
+
+  {% include 'molecules-layout-five-up-left' %}
+
+  {% include 'molecules-card-cta-no-image' %}
+  {% include 'molecules-card-cta-no-image' %}
+  {% include 'molecules-card-cta-no-image' %}
+  {% include 'molecules-card-cta-no-image' %}
+
+  <div class="hub-card-row layout layout-five-up-left">
+    {% include 'molecules-hub-card-portrait' %}
+    {% include 'molecules-hub-card-no-image' %}
+    {% include 'molecules-hub-card' %}
+    {% include 'molecules-hub-card-no-image' %}
+    {% include 'molecules-hub-card' %}
+  </div>
+{#   {% include 'organisms-hub-card-row' %} #}
+  <div class="hub-card-row layout">
+    {% include 'molecules-hub-card' %}
+    {% include 'molecules-hub-card-portrait' %}
+    {% include 'molecules-hub-card-no-image' %}
+  </div>
+  {% include 'organisms-hub-card-row' %}
+  <div class="hub-card-row layout">
+    {% include 'molecules-hub-card-no-image' %}
+    {% include 'molecules-hub-card' %}
+    {% include 'molecules-hub-card-portrait' %}
+  </div>
+</section>
+
+{% include 'organisms-footer' %}
