@@ -3,5 +3,7 @@
  * @todo | EC if we want cards to be reusable in other sections.
  */
 .ec-section .layout_five-up-left-primary a.card-image-landscape {
-  height: 100%;
+  @include breakpoint($bp-large) {
+    height: 100%;
+  }
 }

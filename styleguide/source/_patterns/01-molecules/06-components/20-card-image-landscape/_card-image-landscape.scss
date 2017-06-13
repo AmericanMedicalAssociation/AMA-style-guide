@@ -5,24 +5,41 @@
   color: $black;
   margin-bottom: 20px;
   text-align: center;
-  padding-bottom: 12px;
 }
 
 .card-image-landscape {
   background-size: cover;
   background-position: center;
+  min-height: calc((100vw - 30px) / 3 * 2);
+
+  @include breakpoint($bp-small) {
+    min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 3 );
+  }
+
+  @include breakpoint($bp-med) {
+    min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 4 );
+  }
+}
+
+// @todo - this is repeating the "overlay" on other CTA elements.
+// @todo - it should be an atom if this is the case.
+// @todo - also probably shouldn't be specific to landscape cards.
+.card-image-landscape .card-image-landscape_overlay {
+  margin-top: auto;
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 24px 0 12px;
+
+  * {
+    margin: 0 24px;
+  }
 }
 
 .card-image-landscape .card-image-landscape_title {
   @extend %type-larger;
-  padding: 24px 0;
-  margin: 0 24px;
 }
 
 .card-image-landscape .card-image-landscape_description {
   @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
-  padding: 24px 0 12px;
-  margin: 0 24px;
 
   @include breakpoint($bp-med) {
     @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
