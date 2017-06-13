@@ -1,17 +1,18 @@
-<section class="people-bio-short">
+<a class="people-bio-short" href="#">
   <div class="people-bio-short_photo">
     <img src="{{ src|default('https://www.ama-assn.org/sites/default/files/styles/medium/public/media-browser/public/people/steven-stack.jpg?itok=r6UW84zq') }}" alt="{{ alt|default('Steven J Stack') }}"/>
   </div>
   <div class="people-bio-short_data_group people-bio-short_data_group-first">
-    {% include 'atoms-h4' with { 'content': bio.name, 'class': 'b4 inline-bio_title' } %}
+    {% include 'atoms-h4' with { 'content': bio.name, 'class': 'b4 people-bio-short_title' } %}
     {% include 'atoms-paragraph' with { 'content': bio.position } %}
     {% include 'atoms-paragraph' with { 'content': bio.term_start, 'class':'people-bio-short_data_field-term-start'} %}
     {% include 'atoms-paragraph' with { 'content': bio.term_end, 'class':'people-bio-short_data_field-term-end'} %}
     {% include 'atoms-paragraph' with { 'content': bio.specialty } %}
+    <div class="people-bio-short_full-bio"><span class='faux-link-blue'>Full Bio</span></div>
   </div>
   <div class="people-bio-short_data_group people-bio-short_data_group-second">
     {% include 'molecules-field-group' with { 'label': 'Affiliation', 'content': bio.affiliation } %}
     {% include 'molecules-field-group' with { 'label': 'Endorsement', 'content': bio.endorsement } %}
     {% include 'molecules-field-group' with { 'label': 'Email', 'content': bio.email } %}
   </div>
-</section>
+</a>

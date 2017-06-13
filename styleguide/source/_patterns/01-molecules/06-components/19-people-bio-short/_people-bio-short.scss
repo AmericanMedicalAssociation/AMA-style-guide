@@ -1,22 +1,31 @@
 /**
  * @file inline-bio.scss
  *
- * Copyright 2017 Palantir.net, Inc.
  */
 
 .people-bio-short {
   @extend %clearfix;
+  display: block;
   margin: 30px 0;
   padding: 20px 0;
-  // align-content: space-between;
-  // display: flex;
-  // align-items: flex-end;
-  // flex-wrap: wrap;
 
   @include breakpoint($bp-small) {
     margin: 40px 0;
     padding: 20px 0;
   }
+
+  &:hover .people-bio-short_title,
+  .faux-link-blue {
+    color: $blue;
+  }
+
+  &:hover .faux-link-blue {
+    border-bottom: 2px solid $blue;
+  }
+}
+
+.people-bio-short_title {
+  margin-bottom: 0;
 }
 
 .people-bio-short_photo,
