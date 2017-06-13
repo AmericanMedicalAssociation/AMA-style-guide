@@ -1,6 +1,8 @@
 <a class="people-bio-short" href="#">
   <div class="people-bio-short_photo">
-    <img src="{{ src|default('https://www.ama-assn.org/sites/default/files/styles/medium/public/media-browser/public/people/steven-stack.jpg?itok=r6UW84zq') }}" alt="{{ alt|default('Steven J Stack') }}"/>
+    {% if not disablePhoto %}
+      <img src="{{ src|default('https://www.ama-assn.org/sites/default/files/styles/medium/public/media-browser/public/people/steven-stack.jpg?itok=r6UW84zq') }}" alt="{{ alt|default('Steven J Stack') }}"/>
+    {% endif %}
   </div>
   <div class="people-bio-short_data_group people-bio-short_data_group-first">
     {% include 'atoms-h4' with { 'content': bio.name, 'class': 'b4 people-bio-short_title' } %}
