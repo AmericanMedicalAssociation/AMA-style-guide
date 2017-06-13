@@ -10,8 +10,8 @@
     {% include 'atoms-paragraph' with { 'content': bio.specialty } %}
   </div>
   <div class="people-bio-short_data_group people-bio-short_data_group-second">
-    {% include 'atoms-paragraph' with { 'content': bio.affiliation } %}
-    {% include 'atoms-paragraph' with { 'content': bio.endorsement } %}
-    {% include 'atoms-paragraph' with { 'content': bio.email } %}
+    {% include 'molecules-field-group' with { 'label': 'Affiliation', 'content': bio.affiliation } %}
+    {% include 'molecules-field-group' with { 'label': 'Endorsement', 'content': bio.endorsement } %}
+    {% include 'molecules-field-group' with { 'label': 'Email', 'content': bio.email } %}
   </div>
 </section>
