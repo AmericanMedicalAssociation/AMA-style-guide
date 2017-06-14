@@ -57,7 +57,7 @@
 }
 
 .list-events_item_summary_title-sold-out:after {
-  content: "Sold Out";
+  content: "Sold Out";  // For display purposes only--this would be generated dynamically.
   color: $red;
   margin-left: 10px;
   display: inline-block;
