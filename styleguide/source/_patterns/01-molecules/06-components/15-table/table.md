@@ -1,7 +1,7 @@
 ---
-el: '.table'
-title: 'Table'
+el: '.table-block'
+title: 'Table block'
 ---
-The table molecule appears in body content areas.
+The table block molecule appears in body content areas.
 
 [EWL-3276](https://issues.ama-assn.org/browse/EWL-3276)

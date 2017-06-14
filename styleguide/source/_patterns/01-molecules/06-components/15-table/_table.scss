@@ -1,25 +1,27 @@
 /**
- * @file accordion.scss
+ * @file table-block.scss
  *
- * Copyright 2017 Palantir.net, Inc.
  */
 
-.table {
+.table-block {
+  margin: 0 auto;
+
   @include grid__unit--cols(12);
 
   @include breakpoint($bp-small) {
     @include grid__unit--cols(10);
-    padding: 20px 0;
   }
   
   @include breakpoint($bp-med) {
     @include grid__unit--cols(6);
   }
 
-  border-top: 1px solid $rule;
-  border-bottom: 1px solid $rule;
-  padding: 15px;
-  margin: 0 auto;
+  .rule_horizontal:nth-child(odd) {
+    margin-bottom: 20px;
+  }
+  .rule_horizontal:nth-child(even) {
+    margin-top: 20px;
+  }
 
   table,
   .table-header_title {
@@ -42,10 +44,10 @@
   }
 
   thead tr {
-    background-color: #e6e6e6;
+    background-color: $gray-light-4;
   }
 
-  tr.even {
+  tr:nth-child(even) {
     background-color: $black-7;
   }
 

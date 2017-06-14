@@ -1,5 +1,5 @@
-<div class="table">
-
+<div class="table-block">
+  {% include 'atoms-rule-horizontal' %}
   {% include 'atoms-h5' with { 'content': 'Lorem Ipsum Dolor Amet Consectetur Adipiscing', 'class': 'table-header_title' } %}
 
   <table>
@@ -13,28 +13,28 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="odd">
+      <tr>
         <td>Row 1, Col 1</td>
         <td>Row 1, Col 2</td>
         <td>Row 1, Col 3</td>
         <td>Row 1, Col 4</td>
         <td>Row 1, Col 5</td>
       </tr>
-      <tr class="even">
+      <tr>
         <td>Row 2, Col 1</td>
         <td>Row 2, Col 2</td>
         <td>Row 2, Col 3</td>
         <td>Row 2, Col 4</td>
         <td>Row 2, Col 5</td>
       </tr>
-      <tr class="odd">
+      <tr>
         <td>Row 3, Col 1</td>
         <td>Row 3, Col 2</td>
         <td>Row 3, Col 3</td>
         <td>Row 3, Col 4</td>
         <td>Row 3, Col 5</td>
       </tr>
-      <tr class="even">
+      <tr>
         <td>Row 4, Col 1</td>
         <td>Row 4, Col 2</td>
         <td>Row 4, Col 3</td>
@@ -45,6 +45,7 @@
   </table>
   {% include 'atoms-link' with {'class': 'table-link-enlarge' } %}
   {% include 'atoms-caption' with {'class': 'table-caption' }  %}
+  {% include 'atoms-rule-horizontal' %}
 
 </div>
 
