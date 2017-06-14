@@ -1,0 +1,35 @@
+/**
+ * @file layout-two-up.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+// Placeholder blocks in layout molecules.
+.layout_container {
+  display: block;
+  margin-bottom: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+.layout-example .layout_container {
+  background-color: $black-7;
+}
+
+// Layout default setup.
+.layout.layout_two_up-wrap {
+  @include grid__unit--cols(12);
+  justify-content: space-between;
+
+  .layout_container {
+    @include grid__unit--cols(6);
+    background-clip: padding-box;
+
+    &:nth-child(odd) {
+      border-right: 15px solid transparent;
+    }
+    &:nth-child(even) {
+      border-left: 15px solid transparent;
+    }
+  }
+}
