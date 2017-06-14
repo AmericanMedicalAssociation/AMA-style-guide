@@ -1,0 +1,58 @@
+/**
+ * @file event-detail.scss
+ *
+ */
+
+.event-detail {
+  @include grid__unit--cols(10)
+  padding: 25px;
+  background-color: $black-7;
+  margin: 0 auto;
+
+  @include breakpoint($bp-small) {
+    padding: 30px;
+  };
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+  }
+
+}
+
+.event-detail-block {
+  border-bottom: 1px solid $gray-8;
+  padding-top: 25px;
+  @include breakpoint($bp-small) {
+    padding-top: 30px;
+  }
+}
+
+.event-detail-location,
+.event-detail-time {
+  padding-bottom: 25px;
+  @include breakpoint($bp-small) {
+    padding-bottom: 30px;
+  }
+}
+
+.event-detail-time,
+.event-detail-register {
+  padding-top: 25px;
+  @include breakpoint($bp-small) {
+    padding-top: 30px;
+  }
+}
+
+.event-detail-description {
+  margin-bottom: 0;
+}
+
+.event-detail-register_cta {
+  padding: 13px;
+  width: 100%;
+  margin-top: 35px;
+
+  @include breakpoint($bp-small) {
+    margin-top: 40px;
+  };
+}

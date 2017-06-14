@@ -50,13 +50,15 @@ gulp.task('clean:before', function () {
 // Task: Handle scripts
 gulp.task('scripts', function () {
   return gulp.src(config.scripts.files)
-    .pipe(gulpif(production, uglify()))
-    .pipe(gulpif(production, rename({
-      suffix: '.min'
-    })))
-    .pipe(gulp.dest(
-      config.scripts.dest
-    ))
+    // unminified for development
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.scripts.dest))
+    // also 'production-ready' js file even though we don't use it yet
+    .pipe(rename('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.scripts.dest))
     .pipe(browserSync.reload({stream:true}));
 });
 

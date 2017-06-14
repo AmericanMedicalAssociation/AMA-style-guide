@@ -1,0 +1,68 @@
+/**
+ * @file inline-bio.scss
+ *
+ * Copyright 2017 Palantir.net, Inc.
+ */
+
+.people-bio {
+  @extend %clearfix;
+  margin: 30px 0;
+  padding: 20px 0;
+
+  @include breakpoint($bp-small) {
+    margin: 40px 0;
+    padding: 20px 0;
+  }
+}
+
+.people-bio_photo,
+.people-bio_data {
+  display: inline-block;
+  vertical-align: top;
+  @include grid__unit--cols(12);
+}
+
+.people-bio_photo {
+  height: 100%;
+  
+  @include breakpoint($bp-small) { 
+    max-width: 154px;
+    margin-right: 30px;
+    @include grid__unit--cols(4);
+  }
+}
+
+.people-bio_data {
+
+   @include breakpoint($bp-small) {
+     @include grid__unit--cols(8);
+   }
+
+   p {
+      @extend %b4;
+      color: $black-55;
+      margin-bottom: 0;
+   }
+}
+
+.people-bio_data-min, 
+.people-bio_data-anon,
+.people-bio_data-full {
+  border: 1px solid $gray-8;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.people-bio_data-min {
+  margin-top: 0;
+}
+
+.people-bio_data_field-term-start,
+.people-bio_data_field-term-end {
+  display: inline-block;
+}
+
+.people-bio_data_group {}
+.people-bio_data_group-right {
+  //unclear if we need some right alignment for this component
+}
