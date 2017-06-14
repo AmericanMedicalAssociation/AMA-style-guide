@@ -1,7 +1,6 @@
 /**
  * @file block-hero.scss
  *
- * Copyright 2017 Palantir.net, Inc.
  */
 
 .block-hero {
@@ -22,7 +21,7 @@
   }
 
   &:hover {
-    background-color: #e6e6e6;
+    background-color: $gray-light-4;
     color: $black;
 
     .block-hero_cta-secondary {

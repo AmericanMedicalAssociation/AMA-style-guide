@@ -1,7 +1,6 @@
 /**
- * @file hub-card.scss
+ * @file card-cta.scss
  *
- * Copyright 2017 Palantir.net, Inc.
  */
 
 .hub-card,
@@ -16,7 +15,7 @@
   text-align: center;
 
   &:hover {
-    background-color: #e6e6e6;
+    background-color: $gray-light-4;
     color: $black;
   }
 
