@@ -1,9 +1,3 @@
-/**
- * @file news-featured-list.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
-
 .news-featured {
   @include rule-horizontal(1px, $gray-8, solid);
   padding: 0;
