@@ -27,9 +27,10 @@
       {% include 'molecules-field-group' with { 'label': 'Long Bio', 'content': bio.long_bio } %}
     </div>
 
-    {% include 'atoms-rule-horizontal' %}
-    {% include 'atoms-h5' with { 'content': 'Private'} %}
+    <!-- Entire section should not exist for anonymous users -->
     <div class="people-bio_data-full">
+      {% include 'atoms-rule-horizontal' %}
+      {% include 'atoms-h5' with { 'content': 'Private'} %}
       {% include 'molecules-field-group' with { 'label': 'Email', 'content': "<a href='mailto:#' class='link link-blue'>#{bio.email_private}</a>" } %}
       {% include 'molecules-field-group' with { 'label': 'Fax', 'content': bio.fax } %}
       {% include 'molecules-field-group' with { 'label': 'Phone', 'content': bio.phone } %}
