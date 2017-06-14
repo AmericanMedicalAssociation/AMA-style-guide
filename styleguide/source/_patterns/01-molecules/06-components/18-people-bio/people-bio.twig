@@ -27,6 +27,8 @@
       {% include 'molecules-field-group' with { 'label': 'Long Bio', 'content': bio.long_bio } %}
     </div>
 
+    {% include 'atoms-rule-horizontal' %}
+    {% include 'atoms-h5' with { 'content': 'Private'} %}
     <div class="people-bio_data-full">
       {% include 'molecules-field-group' with { 'label': 'Email', 'content': "<a href='mailto:#' class='link link-blue'>#{bio.email_private}</a>" } %}
       {% include 'molecules-field-group' with { 'label': 'Fax', 'content': bio.fax } %}
