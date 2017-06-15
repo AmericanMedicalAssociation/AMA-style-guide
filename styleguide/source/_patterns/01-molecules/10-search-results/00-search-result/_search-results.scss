@@ -137,7 +137,7 @@
 
 // Styling for external column search result.
 
-.search-result-column-external {
+.search-result-external {
   display: inline-block;
   margin-bottom: 0;
   position: relative;
@@ -199,22 +199,22 @@
     }
   }
 }
-.search-results-columns {
-  .layout_container {
-    height: 210px;
+// .search-results-columns {
+//   .layout_container {
+//     height: 210px;
 
-    @include breakpoint(0 $bp-small) {
-      height: 240px;
-    }
-  }
-  .search-result-column-external {
-    @include grid__unit--cols(6)
-  }
+//     @include breakpoint(0 $bp-small) {
+//       height: 240px;
+//     }
+//   }
+//   .search-results-external {
+//     @include grid__unit--cols(6)
+//   }
 
-}
+// }
 
 .search-results-list {
-  .layout_container {
+  .search-results-list-item {
     display: flex;
     height: 130px;
     margin-top: 40px;
@@ -254,9 +254,9 @@
     display: inline-block;
   }
 
-    //mobile
+  //mobile
   @include breakpoint(0 $bp-small) {
-    .layout_container {
+    .search-results-list-item {
       display: block;
       height: auto;
       margin-top: 30px;
