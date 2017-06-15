@@ -1,9 +1,3 @@
-/**
- * @file news-label.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
-
 .rule_horizontal {
   @include rule-horizontal(1px, $gray-8, solid);
 }
