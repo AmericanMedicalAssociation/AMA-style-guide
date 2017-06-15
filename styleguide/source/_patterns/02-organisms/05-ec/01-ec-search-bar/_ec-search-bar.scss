@@ -1,4 +1,4 @@
-.search-bar {
+.ec-search-bar {
   background-color: $black-3;
   height: 100px;
   position: relative;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.search-bar-inner {
+.ec-search-bar-inner {
   font-weight: 600;
   margin: 0 auto;
   max-width: 1200px;
@@ -14,14 +14,14 @@
   width: 80%;
 }
 
-.search-bar_library {
+.ec-search-bar_library {
   display: none;
   @include breakpoint($bp-small) {
     display: inline-block;
   }
 }
 
-.search-bar_library .button {
+.ec-search-bar_library .button {
   background-color: transparent;
   border-width: 2px;
   font-size: 18px;
@@ -29,7 +29,7 @@
   padding: 6px 56px;
 }
 
-.search-bar_form {
+.ec-search-bar_form {
   display: block;
   margin-left: 20px;
   width: 100%;
