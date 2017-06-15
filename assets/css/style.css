@@ -50,11 +50,6 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * NAVIGATION------------------------------
  * TOC To Be Continued
  */
-/**
- * @file variables.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 /*------------------------------------*    $MIXINS
 \*------------------------------------*/
 /* CSS Transition
@@ -71,6 +66,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 .people-bio:after,
 .people-bio-short:after,
 .header-primary .header-primary-inner:after,
+.header-single-task .header-single-task-inner:after,
 .hub-header-inner:after,
 .search_modal:after,
 .multi-step-form fieldset .field-group:after {
@@ -121,11 +117,6 @@ hgroup,
 figure {
   display: block; }
 
-/**
- * @file _typography.scss
- *
- * Copyright 2016, 2017 Palantir.net, Inc.
- */
 body {
   /* stylelint-disable property-no-vendor-prefix */
   -webkit-text-size-adjust: 100%;
@@ -306,12 +297,12 @@ body {
 .clearfix:after {
   clear: both; }
 
-.inline-bio, .people-bio, .people-bio-short, .header-primary .header-primary-inner, .hub-header-inner, .search_modal, .multi-step-form fieldset .field-group {
+.inline-bio, .people-bio, .people-bio-short, .header-primary .header-primary-inner, .header-single-task .header-single-task-inner, .hub-header-inner, .search_modal, .multi-step-form fieldset .field-group {
   *zoom: 1; }
-  .inline-bio:before, .people-bio:before, .people-bio-short:before, .header-primary .header-primary-inner:before, .hub-header-inner:before, .search_modal:before, .multi-step-form fieldset .field-group:before {
+  .inline-bio:before, .people-bio:before, .people-bio-short:before, .header-primary .header-primary-inner:before, .header-single-task .header-single-task-inner:before, .hub-header-inner:before, .search_modal:before, .multi-step-form fieldset .field-group:before {
     content: "";
     display: table; }
-  .inline-bio:after, .people-bio:after, .people-bio-short:after, .header-primary .header-primary-inner:after, .hub-header-inner:after, .search_modal:after, .multi-step-form fieldset .field-group:after {
+  .inline-bio:after, .people-bio:after, .people-bio-short:after, .header-primary .header-primary-inner:after, .header-single-task .header-single-task-inner:after, .hub-header-inner:after, .search_modal:after, .multi-step-form fieldset .field-group:after {
     content: "";
     display: table;
     clear: both; }
@@ -1193,11 +1184,6 @@ td {
   margin-bottom: -0.3em;
   background-color: #a1a1a4; }
 
-/**
- * @file h1.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 body h1,
 body .h1 {
   font-family: "kepler-std", Georgia, Times, "Times New Roman", serif;
@@ -1221,11 +1207,6 @@ body .h1 {
     font-weight: 400;
     line-height: 1.07407; } }
 
-/**
- * @file h2.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 body h2,
 body .h2 {
   font-family: "kepler-std", Georgia, Times, "Times New Roman", serif;
@@ -1243,11 +1224,6 @@ body .h2 {
     line-height: 1.11765;
     margin-bottom: 9px; } }
 
-/**
- * @file h3.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 body h3,
 body .h3 {
   font-family: "kepler-std", Georgia, Times, "Times New Roman", serif;
@@ -1265,11 +1241,6 @@ body .h3 {
     line-height: 1.13333;
     margin-bottom: 9px; } }
 
-/**
- * @file h4.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 h4,
 .h4 {
   font-family: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
@@ -1286,11 +1257,6 @@ h4,
       line-height: 1.16667;
       margin-bottom: 9px; } }
 
-/**
- * @file h5.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 h5,
 .h5,
 .list_title-small,
@@ -1311,11 +1277,6 @@ h5,
       line-height: 1.38889;
       margin-bottom: 9px; } }
 
-/**
- * @file h6.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 h6,
 .h6 {
   font-family: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
@@ -1376,11 +1337,17 @@ h6,
   text-transform: uppercase;
   color: #46166b; }
 
-/**
- * @file image-wrapper-video.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
+.field-label {
+  display: inline;
+  font-weight: 600; }
+
+.metadata {
+  color: #737373;
+  margin-left: 10px; }
+
+.caption {
+  color: #737373; }
+
 .image-wrapper-video {
   position: relative;
   display: block; }
@@ -1395,11 +1362,6 @@ h6,
       width: 60px;
       fill: #ffffff; }
 
-/**
- * @file button-search.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .button-search {
   border: 2px #02aaec solid;
   color: #02aaec;
@@ -1438,11 +1400,6 @@ h6,
     height: 20px;
     width: 20px; }
 
-/**
- * @file button.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .button-full,
 button,
 .button {
@@ -1491,17 +1448,13 @@ button,
 iframe.iframe-video {
   margin: 0; }
 
-/**
- * @file section-header.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .section-header {
   margin-top: 50px;
   margin-bottom: 40px;
   padding-bottom: 30px;
   text-align: center;
-  border-bottom: 1px solid #a1a1a4; }
+  border-bottom: 1px solid #a1a1a4;
+  width: 100%; }
   @media (min-width: 37.5em) {
     .section-header {
       margin-top: 60px;
@@ -1514,11 +1467,6 @@ iframe.iframe-video {
     .section-header_subtitle {
       margin-top: 18px; } }
 
-/**
- * @file date-block.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .date-block {
   position: relative;
   width: 100%;
@@ -1556,11 +1504,6 @@ iframe.iframe-video {
   line-height: 0.8;
   margin: 12px 0; }
 
-/**
- * @file block-hero.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .block-hero {
   background-color: #ededed;
   color: #000000;
@@ -1800,6 +1743,61 @@ iframe.iframe-video {
       font-size: 18px;
       font-weight: 400;
       line-height: 1.38889; } }
+
+/**
+ * @file table-block.scss
+ *
+ */
+.table-block {
+  margin: 0 auto; }
+  .flexbox .table-block {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
+  .no-flexbox .table-block {
+    width: 100%; }
+  @media (min-width: 37.5em) {
+    .flexbox .table-block {
+      -ms-flex-preferred-size: 83.33333%;
+          flex-basis: 83.33333%;
+      max-width: 83.33333%; }
+    .no-flexbox .table-block {
+      width: 83.33333%; } }
+  @media (min-width: 56.25em) {
+    .flexbox .table-block {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+      max-width: 50%; }
+    .no-flexbox .table-block {
+      width: 50%; } }
+  .table-block .rule_horizontal:nth-child(odd) {
+    margin-bottom: 20px; }
+  .table-block .rule_horizontal:nth-child(even) {
+    margin-top: 20px; }
+  .table-block table,
+  .table-block .table-header_title {
+    margin-bottom: 15px; }
+    @media (min-width: 37.5em) {
+      .table-block table,
+      .table-block .table-header_title {
+        margin-bottom: 20px; } }
+  .table-block .table-link-enlarge {
+    display: block;
+    margin-bottom: 8px; }
+    @media (min-width: 37.5em) {
+      .table-block .table-link-enlarge {
+        margin-bottom: 13px; } }
+  .table-block .table-caption {
+    margin-bottom: 0; }
+  .table-block thead tr {
+    background-color: #e6e6e6; }
+  .table-block tr:nth-child(even) {
+    background-color: #ededed; }
+  .table-block th,
+  .table-block td {
+    border: 1px solid #cccccc;
+    height: 40px;
+    text-align: center; }
 
 /*------------------------------------*    $SEARCH FIELD
 \*------------------------------------*/
@@ -2063,11 +2061,6 @@ iframe.iframe-video {
   height: 30px;
   z-index: 10; }
 
-/**
- * @file jump-nav.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .jump-nav {
   -ms-flex-align: center;
       align-items: center;
@@ -2184,11 +2177,6 @@ iframe.iframe-video {
   .breadcrumbs .breadcrumb_list-item .icon-next {
     margin: 0 0.2em; }
 
-/**
- * @file tabs-audience-selector.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .tabs-audience_selector_label {
   margin: 25px 0;
   text-align: center; }
@@ -2302,11 +2290,6 @@ iframe.iframe-video {
   .tabs-audience_selector .active .icon-select {
     display: block; } }
 
-/**
- * @file primary-nav.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .nav-primary {
   float: left; }
   @media (min-width: 740px) {
@@ -2974,11 +2957,6 @@ iframe.iframe-video {
       padding-left: 15px;
       padding-right: 15px; } }
 
-/**
- * @file figure.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .figure {
   margin: 30px 0;
   border-top: 1px solid #a1a1a4;
@@ -3013,11 +2991,6 @@ iframe.iframe-video {
     .figure_description {
       margin: 20px 0 0; } }
 
-/**
- * @file pull-quote.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .pull-quote {
   border-left: 12px solid #c8102e;
   padding-left: 10px;
@@ -3045,11 +3018,6 @@ iframe.iframe-video {
 .pull-quote_attribution span {
   display: block; }
 
-/**
- * @file inline-bio.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .inline-bio {
   margin: 30px 0;
   padding: 20px 0;
@@ -3091,11 +3059,6 @@ iframe.iframe-video {
   margin-top: 6px;
   font-weight: 600; }
 
-/**
- * @file news-item-standard.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .news_item-standard_row {
   padding: 0; }
   .news_item-standard_row:hover .news_item-standard_row_title {
@@ -3122,11 +3085,6 @@ iframe.iframe-video {
         .news_item-standard_row .news_item-standard_row_image img {
           width: initial; } }
 
-/**
- * @file news-item-featured-row.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .news_item-featured_row {
   padding: 30px 0; }
   @media (min-width: 740px) {
@@ -3152,11 +3110,6 @@ iframe.iframe-video {
     .news_item-featured_row_description {
       display: block; } }
 
-/**
- * @file news-label.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .rule_horizontal {
   border-top: 1px #a1a1a4 solid; }
 
@@ -3238,11 +3191,6 @@ iframe.iframe-video {
   .alert_close svg {
     fill: #ffffff; }
 
-/**
- * @file related-content-item.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout.layout_related-content_item {
   -ms-flex-pack: start;
       justify-content: flex-start; }
@@ -3544,11 +3492,6 @@ iframe.iframe-video {
     background-color: transparent;
     padding: 0 0 20px; }
 
-/**
- * @file hub-card.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .hub-card,
 .card-cta {
   display: -ms-flexbox;
@@ -3868,11 +3811,6 @@ iframe.iframe-video {
     .hub-cta_image {
       min-height: 400px; } }
 
-/**
- * @file accordion.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .accordion {
   border-top: 1px solid #737373;
   padding: 25px 0; }
@@ -3914,11 +3852,6 @@ iframe.iframe-video {
   margin: 18px 0 0;
   padding: 0; }
 
-/**
- * @file category-highlight-image.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .category-highlight_image-link {
   display: block; }
   @media (min-width: 37.5em) {
@@ -3954,11 +3887,6 @@ iframe.iframe-video {
   color: #737373;
   margin-bottom: 0; }
 
-/**
- * @file subcategory-topics-description.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .subcategory-topics-description {
   border-top: 1px #a1a1a4 solid;
   margin-bottom: 40px; }
@@ -4040,18 +3968,15 @@ iframe.iframe-video {
   .subcategory-topics-description_link:hover {
     color: #02aaec; }
 
-/**
- * @file inline-bio.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .people-bio {
-  margin: 30px 0;
-  padding: 20px 0; }
+  margin: 30px;
+  padding: 20px; }
   @media (min-width: 37.5em) {
     .people-bio {
-      margin: 40px 0;
-      padding: 20px 0; } }
+      margin: 40px;
+      padding: 20px; } }
+  .people-bio .rule_horizontal {
+    margin-top: 1rem; }
 
 .people-bio_photo,
 .people-bio_data {
@@ -4091,13 +4016,6 @@ iframe.iframe-video {
   color: #737373;
   margin-bottom: 0; }
 
-.people-bio_data-min,
-.people-bio_data-anon,
-.people-bio_data-full {
-  border: 1px solid #a1a1a4;
-  margin: 1rem;
-  padding: 1rem; }
-
 .people-bio_data-min {
   margin-top: 0; }
 
@@ -4105,30 +4023,42 @@ iframe.iframe-video {
 .people-bio_data_field-term-end {
   display: inline-block; }
 
-/**
- * @file inline-bio.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .people-bio-short {
+  display: block;
   margin: 30px 0;
   padding: 20px 0; }
   @media (min-width: 37.5em) {
     .people-bio-short {
       margin: 40px 0;
       padding: 20px 0; } }
+  .people-bio-short:hover .people-bio-short_title,
+  .people-bio-short .faux-link-blue {
+    color: #02aaec; }
+  .people-bio-short:hover .faux-link-blue {
+    border-bottom: 2px solid #02aaec; }
 
-.people-bio-short_photo,
+.people-bio-short_title {
+  margin-bottom: 0; }
+
+.flexbox .people-bio-short_photo, .flexbox
 .people-bio-short_data_group {
-  display: inline-block; }
-  .flexbox .people-bio-short_photo, .flexbox
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  max-width: 100%; }
+
+.no-flexbox .people-bio-short_photo, .no-flexbox
+.people-bio-short_data_group {
+  width: 100%; }
+
+@media (min-width: 56.25em) {
+  .people-bio-short_photo,
   .people-bio-short_data_group {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    max-width: 100%; }
-  .no-flexbox .people-bio-short_photo, .no-flexbox
-  .people-bio-short_data_group {
-    width: 100%; }
+    vertical-align: text-top; } }
+
+@media (min-width: 37.5em) {
+  .people-bio-short_photo,
+  .people-bio-short_data_group-first {
+    display: inline-block; } }
 
 .people-bio-short_photo {
   height: 100%; }
@@ -4141,24 +4071,35 @@ iframe.iframe-video {
         max-width: 33.33333%; }
       .no-flexbox .people-bio-short_photo {
         width: 33.33333%; } }
+  @media (min-width: 56.25em) {
+    .people-bio-short_photo {
+      background-color: #dddddd;
+      height: 220px;
+      width: 220px; } }
+  .people-bio-short_photo img {
+    max-width: 100%;
+    padding-right: 30px; }
+    @media (min-width: 56.25em) {
+      .people-bio-short_photo img {
+        padding: 0; } }
 
 @media (min-width: 37.5em) {
+  .flexbox .people-bio-short_data_group {
+    -ms-flex-preferred-size: 66.66667%;
+        flex-basis: 66.66667%;
+    max-width: 66.66667%; }
+  .no-flexbox .people-bio-short_data_group {
+    width: 66.66667%; } }
+
+@media (min-width: 56.25em) {
   .people-bio-short_data_group {
     margin-left: 30px; }
     .flexbox .people-bio-short_data_group {
-      -ms-flex-preferred-size: 66.66667%;
-          flex-basis: 66.66667%;
-      max-width: 66.66667%; }
+      -ms-flex-preferred-size: 33.33333%;
+          flex-basis: 33.33333%;
+      max-width: 33.33333%; }
     .no-flexbox .people-bio-short_data_group {
-      width: 66.66667%; } }
-
-@media (min-width: 56.25em) {
-  .flexbox .people-bio-short_data_group {
-    -ms-flex-preferred-size: 33.33333%;
-        flex-basis: 33.33333%;
-    max-width: 33.33333%; }
-  .no-flexbox .people-bio-short_data_group {
-    width: 33.33333%; } }
+      width: 33.33333%; } }
 
 .people-bio-short_data_group p {
   color: #737373;
@@ -4168,14 +4109,14 @@ iframe.iframe-video {
   .people-bio-short_data_group-second {
     margin-left: 0; } }
 
+@media (min-width: 56.25em) {
+  .people-bio-short_data_group-second {
+    display: inline-block; } }
+
 .people-bio-short_data_field-term-start,
 .people-bio-short_data_field-term-end {
   display: inline-block; }
 
-/**
- * @file event-detail.scss
- *
- */
 .event-detail {
   padding: 25px;
   background-color: #ededed;
@@ -4301,11 +4242,6 @@ iframe.iframe-video {
 .block-select_text {
   padding: 1.1em 0; }
 
-/**
- * @file header-primary.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .header-primary-span {
   display: block;
   width: 100%; }
@@ -4434,11 +4370,40 @@ iframe.iframe-video {
   .header-primary--sticky .nav-primary_section_subnav {
     top: auto; }
 
-/**
- * @file list-links-social.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
+.header-single-task {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  width: 100%;
+  z-index: 50; }
+  .header-single-task .header-single-task-inner {
+    margin: 0 auto;
+    padding: 20px 20px 10px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: baseline;
+        align-items: baseline;
+    -ms-flex-pack: justify;
+        justify-content: space-between; }
+  .header-single-task .header-single-task-inner-nav {
+    display: none;
+    position: relative;
+    top: -8px; }
+    @media (min-width: 740px) {
+      .header-single-task .header-single-task-inner-nav {
+        display: block; } }
+    .header-single-task .header-single-task-inner-nav a:first-child {
+      padding-right: 25px; }
+  .header-single-task .logo-outer {
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
+  .header-single-task .logo {
+    width: 110px;
+    height: 44px; }
+
 .list_links-social {
   list-style: none;
   margin: 0;
@@ -4465,11 +4430,6 @@ iframe.iframe-video {
     .list_link_item-social a:hover {
       fill: #02aaec; }
 
-/**
- * @file list-links-utility.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .list_links-utility {
   list-style: none;
   margin: 0;
@@ -4490,11 +4450,6 @@ iframe.iframe-video {
   .list_link_item-utility a:hover {
     color: #02aaec; }
 
-/**
- * @file list-links-secondary-user.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .list-secondary-user {
   margin: 0 0 9em 0;
   max-width: 578px;
@@ -4519,11 +4474,6 @@ iframe.iframe-video {
   font-weight: 600;
   margin-bottom: 0.666em; }
 
-/**
- * @file list-subcategory.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .list-subcategory {
   list-style: none;
   margin: 0;
@@ -4583,10 +4533,106 @@ iframe.iframe-video {
   color: #02aaec; }
 
 /**
- * @file hub-header.scss
+ * @file list-events.scss
  *
- * Copyright 2017 Palantir.net, Inc.
  */
+.list-events {
+  margin: 0;
+  padding: 0; }
+
+.list-events_item {
+  border-top: 1px solid #a1a1a4;
+  list-style-type: none;
+  margin-bottom: 0;
+  padding: 30px 0; }
+  @media (min-width: 37.5em) {
+    .list-events_item {
+      padding: 40px 0; } }
+
+.list-events_item_summary,
+.list-events_item_date {
+  padding-bottom: 9px; }
+
+.list-events_item_summary,
+.list-events_item_date,
+.list-events_item_location {
+  display: block;
+  vertical-align: text-top; }
+  .flexbox .list-events_item_summary, .flexbox
+  .list-events_item_date, .flexbox
+  .list-events_item_location {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%; }
+  .no-flexbox .list-events_item_summary, .no-flexbox
+  .list-events_item_date, .no-flexbox
+  .list-events_item_location {
+    width: 100%; }
+
+.list-events_item_date,
+.list-events_item_location {
+  font-size: 0.900em; }
+
+.list-events_item p {
+  margin-bottom: 0; }
+
+.list-events_item_summary a {
+  display: inline-block;
+  font-size: 24px;
+  padding-bottom: 9px; }
+  .list-events_item_summary a .icon-external {
+    height: 9px;
+    width: 9px;
+    margin-left: 7px; }
+  .list-events_item_summary a:hover .external {
+    fill: #02aaec; }
+
+.list-events_item_summary_title-sold-out:after {
+  content: "Sold Out";
+  color: #c8102e;
+  margin-left: 10px;
+  display: inline-block; }
+
+.list-events_item_date_day:after {
+  content: ' / '; }
+
+.list-events_item_date_day,
+.list-events_item_date_time {
+  display: inline-block; }
+
+@media (min-width: 37.5em) {
+  .list-events_item_summary {
+    display: inline-block; }
+    .flexbox .list-events_item_summary {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+      max-width: 50%; }
+    .no-flexbox .list-events_item_summary {
+      width: 50%; }
+    .list-events_item_summary a .icon-external {
+      height: 10px;
+      width: 10px; }
+  .list-events_item_summary,
+  .list-events_item_date {
+    padding-bottom: 0; }
+  .list-events_item_date,
+  .list-events_item_location {
+    display: inline-block;
+    margin-left: 8.3%; }
+    .flexbox .list-events_item_date, .flexbox
+    .list-events_item_location {
+      -ms-flex-preferred-size: 16.66667%;
+          flex-basis: 16.66667%;
+      max-width: 16.66667%; }
+    .no-flexbox .list-events_item_date, .no-flexbox
+    .list-events_item_location {
+      width: 16.66667%; }
+  .list-events_item_date_day,
+  .list-events_item_date_time {
+    display: block; }
+  .list-events_item_date_day:after {
+    content: none; } }
+
 .hub-header {
   padding: 0 25px;
   background-color: #46166b; }
@@ -4766,11 +4812,6 @@ iframe.iframe-video {
     .flexbox .ribbon .layout.layout_one_up {
       padding: 0; } }
 
-/**
- * @file footer.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .footer {
   background-color: #ededed;
   margin-top: 50px;
@@ -4816,11 +4857,6 @@ iframe.iframe-video {
 .footer_text-copyright {
   color: #737373; }
 
-/**
- * @file news-standard-list.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .news_list {
   list-style: none;
   margin: 0;
@@ -4860,11 +4896,6 @@ iframe.iframe-video {
       .news-standard .news_list-standard li .news_item-standard_row_image {
         display: inline; } }
 
-/**
- * @file news-featured-list.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .news-featured {
   border-top: 1px #a1a1a4 solid;
   padding: 0;
@@ -4978,11 +5009,6 @@ iframe.iframe-video {
   top: 0;
   right: 0; }
 
-/**
- * @file best-match-dropdown.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .best-match-wrapper {
   padding: 25px;
   background-color: #ededed;
@@ -5086,11 +5112,54 @@ iframe.iframe-video {
       font-weight: 600;
       line-height: 1.38889; } }
 
-/**
- * @file layout-one-up.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
+.ec-search-bar {
+  background-color: #f7f7f7;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.ec-search-bar-inner {
+  font-weight: 600;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 26px;
+  width: 80%; }
+
+.ec-search-bar_library {
+  display: none; }
+  @media (min-width: 37.5em) {
+    .ec-search-bar_library {
+      display: inline-block; } }
+
+.ec-search-bar_library .button {
+  background-color: transparent;
+  border-width: 2px;
+  font-size: 18px;
+  max-width: 162px;
+  padding: 6px 56px; }
+
+.ec-search-bar_form {
+  display: block;
+  margin-left: 20px;
+  width: 100%; }
+  @media (min-width: 37.5em) {
+    .ec-search-bar_form {
+      display: inline-block;
+      max-width: 80%;
+      width: calc(100% - 20px - 168px); } }
+  .ec-search-bar_form form {
+    padding-top: 16px; }
+    .ec-search-bar_form form .search-field_input {
+      font-size: 18px;
+      font-weight: 600;
+      height: 36px; }
+    .ec-search-bar_form form .icon-search {
+      height: 20px;
+      width: 20px; }
+    .ec-search-bar_form form .search-field_submit {
+      bottom: 8px; }
+
 .layout_container {
   display: block;
   margin-bottom: 1em;
@@ -5112,11 +5181,6 @@ iframe.iframe-video {
   .no-flexbox .flexbox .layout.layout_one_up {
     width: 100%; }
 
-/**
- * @file layout-two-up.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout_container {
   display: block;
   margin-bottom: 1em;
@@ -5152,11 +5216,6 @@ iframe.iframe-video {
 .layout_two_up-secondary {
   padding-left: 15px; }
 
-/**
- * @file layout-two-up-heavy-left.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout_container {
   display: block;
   margin-bottom: 1em;
@@ -5196,11 +5255,6 @@ iframe.iframe-video {
     .no-flexbox .layout_two_up-heavy-left-secondary {
       width: 37.5%; } }
 
-/**
- * @file layout-three-up.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout_container {
   display: block;
   background-color: #ededed;
@@ -5282,11 +5336,6 @@ iframe.iframe-video {
     .layout_three_up-tertiary {
       width: 33.33333%; } }
 
-/**
- * @file layout-one-up.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout_container {
   display: block;
   margin-bottom: 1em;
@@ -5324,11 +5373,6 @@ iframe.iframe-video {
     .no-flexbox .layout_one_up_center {
       width: 66.66667%; } }
 
-/**
- * @file layout-two-up.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout_container {
   display: block;
   margin-bottom: 1em;
@@ -5376,11 +5420,6 @@ iframe.iframe-video {
   .layout_two_up-large-secondary {
     padding-left: 15px; } }
 
-/**
- * @file layout-two-up-heavy-left.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .layout_container {
   display: block;
   margin-bottom: 1em;
@@ -5495,20 +5534,10 @@ iframe.iframe-video {
       right: 35px;
       top: 30px; } }
 
-/**
- * @file rule-vertical.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .rule-vertical {
   border-left: 16px #46166b solid;
   min-height: 3em; }
 
-/**
- * @file featured-content-hero-row.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .row_featured_content-hero {
   padding: 20px 0; }
   @media (min-width: 740px) {
@@ -5555,11 +5584,6 @@ iframe.iframe-video {
       max-width: 100%;
       width: initial; } }
 
-/**
- * @file link-more-less.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .link_load_more_less .link {
   font-family: "myriad-pro", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   font-size: 18px;
@@ -5569,11 +5593,6 @@ iframe.iframe-video {
 .link_load_more_less .icon {
   vertical-align: middle; }
 
-/**
- * @file list-featured-content-hero.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .list_featured_content-hero {
   padding: 0; }
   .list_featured_content-hero .row_featured_content-hero .row_featured_content-hero_image {
@@ -5588,11 +5607,6 @@ iframe.iframe-video {
         .list_featured_content-hero .row_featured_content-hero .row_featured_content-hero_image {
           display: inline; } }
 
-/**
- * @file audience-featured-hero.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .audience_featured-hero {
   width: 100%; }
   .audience_featured-hero .link_load_more_less {
@@ -5644,11 +5658,6 @@ iframe.iframe-video {
 .card-row {
   margin-bottom: 24px; }
 
-/**
- * @file related-content.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .related-content_list {
   list-style: none; }
   @media (min-width: 600px) and (max-width: 700px) {
@@ -5666,26 +5675,16 @@ iframe.iframe-video {
 .list-people-bios li {
   list-style: none; }
 
-.list-people-bios .people-bio-short_photo,
+.list-people-bios .people-bio-short_photo img,
 .list-people-bios .people-bio-short_data_group {
   margin-bottom: 10px; }
 
-/**
- * @file article.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .article-body {
   margin-bottom: 50px; }
   @media (min-width: 37.5em) {
     .article-body {
       margin-bottom: 60px; } }
 
-/**
- * @file search-results.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
 .search-result-best,
 .search-result-best-event {
   background-color: #ededed;

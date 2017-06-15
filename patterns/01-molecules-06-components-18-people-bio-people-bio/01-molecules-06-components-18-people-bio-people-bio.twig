@@ -7,31 +7,36 @@
       <div class="people-bio_data_group">
         {% include 'atoms-h4' with { 'content': bio.name, 'class': 'b4 inline-bio_title' } %}
         {% include 'atoms-paragraph' with { 'content': bio.position } %}
-        {% include 'atoms-paragraph' with { 'content': bio.term_start, 'class':'people-bio_data_field-term-start'} %}
-        {% include 'atoms-paragraph' with { 'content': bio.term_end, 'class':'people-bio_data_field-term-end'} %}
+        {% include 'molecules-field-group' with { 'label': 'Term', 'content': "#{bio.term_start} - #{bio.term_end}", 'class':'people-bio_data_field-term' } %}
+
         {% include 'atoms-paragraph' with { 'content': bio.specialty } %}
       </div>
       <div class="people-bio_data_group-right">
-        {% include 'atoms-paragraph' with { 'content': bio.affiliation } %}
-        {% include 'atoms-paragraph' with { 'content': bio.endorsement } %}
-        {% include 'atoms-paragraph' with { 'content': bio.email } %}
+        {% include 'molecules-field-group' with { 'label': 'Affiliation', 'content': bio.affiliation } %}
+        {% include 'molecules-field-group' with { 'label': 'Endorsement', 'content': bio.endorsement } %}
+        {% include 'molecules-field-group' with { 'label': 'Email', 'content': "<a href='mailto:#' class='link link-blue'>#{bio.email}</a>" } %}
       </div>
     </div>
     <div class="people-bio_data-anon">
+      {% include 'molecules-field-group' with { 'label': 'Address' } %}
       {% include 'atoms-paragraph' with { 'content': bio.address1 } %}
       {% include 'atoms-paragraph' with { 'content': bio.address2 } %}
       {% include 'atoms-paragraph' with { 'content': bio.city_state_zip } %}
-      {% include 'atoms-paragraph' with { 'content': bio.positions } %}
-      {% include 'atoms-paragraph' with { 'content': bio.short_bio } %}
-      {% include 'atoms-paragraph' with { 'content': bio.long_bio } %}
+      {% include 'molecules-field-group' with { 'label': 'Positions', 'content': bio.positions } %}
+      {% include 'molecules-field-group' with { 'label': 'Short Bio', 'content': bio.short_bio } %}
+      {% include 'molecules-field-group' with { 'label': 'Long Bio', 'content': bio.long_bio } %}
     </div>
 
+    <!-- Entire section should not exist for anonymous users -->
     <div class="people-bio_data-full">
-      {% include 'atoms-paragraph' with { 'content': bio.email_private } %}
-      {% include 'atoms-paragraph' with { 'content': bio.fax } %}
-      {% include 'atoms-paragraph' with { 'content': bio.phone } %}
-      {% include 'atoms-paragraph' with { 'content': bio.conflicts } %}
-      {% include 'atoms-paragraph' with { 'content': bio.spouse } %}
+      {% include 'atoms-rule-horizontal' %}
+      {% include 'atoms-h5' with { 'content': 'Private'} %}
+      {% include 'molecules-field-group' with { 'label': 'Email', 'content': "<a href='mailto:#' class='link link-blue'>#{bio.email_private}</a>" } %}
+      {% include 'molecules-field-group' with { 'label': 'Fax', 'content': bio.fax } %}
+      {% include 'molecules-field-group' with { 'label': 'Phone', 'content': bio.phone } %}
+      {% include 'atoms-link-blue' with { 'content': 'Conflict of Interest' } %}
+      {% include 'molecules-field-group' with { 'label': 'Spouse', 'content': bio.spouse } %}
+      {% include 'molecules-field-group' with { 'label': 'Address' } %}
       {% include 'atoms-paragraph' with { 'content': bio.address1_private } %}
       {% include 'atoms-paragraph' with { 'content': bio.address2_private } %}
       {% include 'atoms-paragraph' with { 'content': bio.city_state_zip_private } %}
