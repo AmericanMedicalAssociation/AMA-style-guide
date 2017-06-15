@@ -1,11 +1,15 @@
 .people-bio {
   @extend %clearfix;
-  margin: 30px 0;
-  padding: 20px 0;
+  margin: 30px;
+  padding: 20px;
 
   @include breakpoint($bp-small) {
-    margin: 40px 0;
-    padding: 20px 0;
+    margin: 40px;
+    padding: 20px;
+  }
+
+  .rule_horizontal {
+    margin-top: 1rem;
   }
 }
 
@@ -13,6 +17,7 @@
 .people-bio_data {
   display: inline-block;
   vertical-align: top;
+  
   @include grid__unit--cols(12);
 }
 
@@ -42,9 +47,7 @@
 .people-bio_data-min, 
 .people-bio_data-anon,
 .people-bio_data-full {
-  border: 1px solid $gray-8;
-  margin: 1rem;
-  padding: 1rem;
+  //
 }
 
 .people-bio_data-min {
@@ -54,9 +57,4 @@
 .people-bio_data_field-term-start,
 .people-bio_data_field-term-end {
   display: inline-block;
-}
-
-.people-bio_data_group {}
-.people-bio_data_group-right {
-  //unclear if we need some right alignment for this component
 }
