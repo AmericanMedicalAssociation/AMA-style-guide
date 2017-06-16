@@ -1,15 +1,10 @@
-/**
- * @file section-header.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
-
 .section-header {
   margin-top: 50px;
   margin-bottom: 40px;
   padding-bottom: 30px;
   text-align: center;
   border-bottom: 1px solid $gray-8;
+  width: 100%; //for IE11
 
   @include breakpoint($bp-small) {
     margin-top: 60px;

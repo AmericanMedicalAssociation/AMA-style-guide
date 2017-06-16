@@ -1,9 +1,3 @@
-/**
- * @file search-modal.js
- *
- * Copyright 2017 Palantir.net, Inc.
- */
-
 jQuery.noConflict();
 (function($) {
 

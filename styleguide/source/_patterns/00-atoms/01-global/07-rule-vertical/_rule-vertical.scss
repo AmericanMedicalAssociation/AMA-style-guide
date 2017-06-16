@@ -1,9 +1,3 @@
-/**
- * @file rule-vertical.scss
- *
- * Copyright 2017 Palantir.net, Inc.
- */
-
 .rule-vertical {
   @include rule-vertical(16px, $purple, solid);
   min-height: 3em;

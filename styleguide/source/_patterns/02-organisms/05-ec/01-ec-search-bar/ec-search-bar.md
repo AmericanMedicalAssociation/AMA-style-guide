@@ -1,6 +1,6 @@
 ---
-el: ".search-bar"
-title: "Search Bar"
+el: ".ec-search-bar"
+title: "EC Search Bar"
 ---
 
 A search bar created and themed for the Education Center marketing page. Includes a search form.
