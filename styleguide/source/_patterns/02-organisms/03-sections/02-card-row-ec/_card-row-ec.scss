@@ -13,7 +13,6 @@
 .layout_three_up-primary,
 .layout_three_up-secondary,
 .layout_three_up-tertiary {
-
   @include breakpoint($bp-small) {
     @include grid__unit--cols(4);
     padding: 0 12px;
