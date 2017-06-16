@@ -1,39 +1,133 @@
-// Placeholder blocks in layout molecules.
-.layout_four-row {
-  &.layout-example .layout_container {
-    background-color: $black-7;
-  }
-  .layout_container {
-    display: block;
-    margin-bottom: 1em;
-    padding: 2em;
-    text-align: center;
-  }
-}
 
-.flexbox .layout.layout_four-row {
-  @include grid__unit--cols(12);
+// Layout default setup.
+
+.layout.layout_four-row {
   justify-content: flex-start;
+  flex-direction: column;
+
+  @include breakpoint($bp-small $bp-large) {
+    @include grid__unit--cols(12);
+  }
+
+  @include breakpoint($bp-small) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint($bp-med) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint($bp-large) {
+    flex-direction: row;
+    max-width: 1260px;
+  }
 }
 
-.layout_four-row {
-  .layout_four-item {
-    @include grid__unit--cols(12);
+.layout.layout_four-row .layout_item:nth-child(4) {
+  display: none;
+}
 
-    @include breakpoint($bp-small) {
-      @include grid__unit--cols(6);
-      &:nth-child(odd) {
-        background-clip: padding-box;
-        border-right: 1em solid transparent;
-      }
-    }
+.layout.layout_four-row .layout_item {
+  margin-bottom: 24px;
+  position: relative; // @todo - all of these in all layouts should be position:relative (for landscape cards)
 
-    @include breakpoint($bp-med) {
-      @include grid__unit--cols(3);
-      &:nth-child(-n+3) {
-        background-clip: padding-box;
-        border-right: 1em solid transparent;
-      }
+  @include breakpoint($bp-small max-width) {
+    height: calc((100vw - 40px) * 2 / 3);
+  }
+
+  @include breakpoint($bp-small $bp-med) {
+    width: 100%;
+    margin: 0 12px;
+    max-width: 33%;
+    height: calc((100vw - 40px - 48px) * 2 / 3 / 3);
+
+    &:nth-child(3) {
+      margin-right: 0;
     }
   }
 }
+
+.layout.layout_four-row .layout_item.layout_item-container {
+  display: flex;
+  padding: 0;
+  background: transparent;
+  height: auto;
+
+  @include breakpoint($bp-small max-width) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(9);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 24px;
+    height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+  }
+}
+
+.layout_four-row .layout_item-container .layout_item {
+  @include breakpoint($bp-small) {
+    width: 50%;
+    max-width: 50%;
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &:nth-child(2) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint($bp-med) {
+    flex-basis: calc((100% - 24px) / 2);
+    margin-right: 24px;
+    margin-bottom: 0;
+
+    &:nth-last-child(2) {
+      margin-right: 0;
+      margin-left: 24px;
+    }
+  }
+}
+
+.layout.layout_four-row > .layout_item:first-child {
+
+  @include breakpoint($bp-small) {
+    margin-left: 0;
+    @include grid__unit--cols(4);
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(3);
+    margin-bottom: 0;
+    height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+  }
+}
+
+.layout.layout_four-row .layout_item-visible-desktop {
+  @include breakpoint($bp-med max-width) { // 900px
+    display: none;
+  }
+}
+

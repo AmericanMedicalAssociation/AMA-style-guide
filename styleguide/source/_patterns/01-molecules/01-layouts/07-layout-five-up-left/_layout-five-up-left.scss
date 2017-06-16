@@ -28,7 +28,7 @@
 
 .layout.layout_five-up-left .layout_item {
   margin-bottom: 24px;
-  position: relative;
+  position: relative; // @todo - all of these in all layouts should be position:relative (for landscape cards)
 
   @include breakpoint($bp-small max-width) {
     height: calc((100vw - 40px) * 2 / 3);
