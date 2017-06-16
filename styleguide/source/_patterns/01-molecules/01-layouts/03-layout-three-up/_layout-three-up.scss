@@ -16,7 +16,6 @@
 // Layout default setup.
 .layout {
   @include grid();
-
 }
 
 .flexbox .layout.layout_three_up {
@@ -43,4 +42,3 @@
     padding: 0 15px;
   }
 }
-
