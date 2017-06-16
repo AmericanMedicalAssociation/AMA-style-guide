@@ -77,7 +77,8 @@ a.card-image-landscape:hover:after {
 }
 
 .layout_three_up-row .card.card-image-landscape,
-.layout-four-up_row .card.card-image-landscape {
+.layout-four-up_row .card.card-image-landscape
+.layout-five-up-left .card.card-image-landscape{
   height: calc((100vw - 60px) * 2 / 3);
 }
 
