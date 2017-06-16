@@ -28,6 +28,7 @@
 
 .layout.layout_five-up-left .layout_item {
   margin-bottom: 24px;
+  position: relative;
 
   @include breakpoint($bp-small max-width) {
     height: calc((100vw - 40px) * 2 / 3);

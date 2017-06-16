@@ -22,6 +22,18 @@
   }
 }
 
+a.card-image-landscape:hover:after {
+  content: " ";
+  display: block;
+  background: black;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0,0,0,.2);
+}
+
 // @todo - this is repeating the "overlay" on other CTA elements.
 // @todo - it should be an atom if this is the case.
 // @todo - also probably shouldn't be specific to landscape cards.
