@@ -7,3 +7,15 @@
     height: 100%;
   }
 }
+
+// Styling for the three-up layout when it's being used in an EC card row.
+
+.layout_three_up-primary,
+.layout_three_up-secondary,
+.layout_three_up-tertiary {
+
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    padding: 0 12px;
+  }
+}
