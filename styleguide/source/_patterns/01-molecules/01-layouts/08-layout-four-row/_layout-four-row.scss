@@ -31,6 +31,7 @@
 }
 
 .layout.layout_four-row .layout_item {
+  height: calc((100vw - 40px - 48px) * 2 / 3 / 3);
   margin-bottom: 24px;
   position: relative; // @todo - all of these in all layouts should be position:relative (for landscape cards)
 
@@ -76,11 +77,6 @@
     justify-content: space-between;
     padding: 0;
     padding-left: 24px;
-    height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
-  }
-
-  @include breakpoint($bp-large) {
-    height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
   }
 }
 
