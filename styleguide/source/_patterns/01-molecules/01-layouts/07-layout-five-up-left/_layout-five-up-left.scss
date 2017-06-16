@@ -1,6 +1,16 @@
 
 // Layout default setup.
 
+.flexbox .layout.layout_five-up-left {
+  @include breakpoint($bp-small max-width) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($bp-small $bp-med) {
+    flex-wrap: nowrap;
+  }
+}
+
 .layout.layout_five-up-left {
   justify-content: flex-start;
   flex-direction: column;
