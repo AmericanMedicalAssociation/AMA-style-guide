@@ -2,9 +2,12 @@
 // Layout default setup.
 
 .layout.layout_five-up-left {
-  @include grid__unit--cols(12);
   justify-content: flex-start;
   flex-direction: column;
+
+  @include breakpoint($bp-small $bp-large) {
+    @include grid__unit--cols(12);
+  }
 
   @include breakpoint($bp-small) {
     flex-direction: row;
@@ -19,6 +22,7 @@
 
   @include breakpoint($bp-large) {
     flex-direction: row;
+    max-width: 1260px;
   }
 }
 
