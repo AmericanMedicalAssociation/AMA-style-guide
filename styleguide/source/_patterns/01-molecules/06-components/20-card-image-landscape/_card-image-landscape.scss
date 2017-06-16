@@ -30,12 +30,17 @@ a.card-image-landscape:hover:after {
   content: " ";
   display: block;
   background: black;
-  width: calc(100% - 24px);
+  width: 100%;
   position: absolute;
   top: 0;
-  left: 12px;
+  left: 0;
   height: 100%;
   background: rgba(0,0,0,.2);
+
+  @include breakpoint($bp-small) {
+    width: calc(100% - 24px);
+    left: 12px;
+  }
 }
 
 // @todo - this is repeating the "overlay" on other CTA elements.
@@ -60,5 +65,24 @@ a.card-image-landscape:hover:after {
 
   @include breakpoint($bp-med) {
     @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+  }
+}
+
+// Styling for an image landscape card when it's being included in a three-up row.
+
+.layout_three_up-row > * {
+  @include breakpoint($bp-small max-width);
+  margin-bottom: 24px;
+}
+
+.layout_three_up-row .card.card-image-landscape {
+  height: calc((100vw - 60px) * 2 / 3);
+
+  @include breakpoint($bp-small) {
+    height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc((1260px - 60px - 48px) * 2 / 3 / 3);
   }
 }
