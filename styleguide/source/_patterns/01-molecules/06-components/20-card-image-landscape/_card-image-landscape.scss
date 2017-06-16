@@ -68,21 +68,43 @@ a.card-image-landscape:hover:after {
   }
 }
 
-// Styling for an image landscape card when it's being included in a three-up row.
+// Styling for image landscape cards when they're included in rows.
 
-.layout_three_up-row > * {
+.layout_three_up-row > *,
+.layout-four-up_row > * {
   @include breakpoint($bp-small max-width);
   margin-bottom: 24px;
 }
 
-.layout_three_up-row .card.card-image-landscape {
+.layout_three_up-row .card.card-image-landscape,
+.layout-four-up_row .card.card-image-landscape {
   height: calc((100vw - 60px) * 2 / 3);
+}
 
+// Styling for an image landscape card when it's being included in a three-up row.
+
+.layout_three_up-row .card.card-image-landscape {
   @include breakpoint($bp-small) {
     height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
   }
 
   @include breakpoint($bp-large) {
     height: calc((1260px - 60px - 48px) * 2 / 3 / 3);
+  }
+}
+
+// Styling for an image landscape card when it's being included in a four-up row.
+
+.layout-four-up_row .card.card-image-landscape {
+  @include breakpoint($bp-small) {
+    height: calc((100vw - 60px - 24px) * 2 / 3 / 2);
+  }
+
+  @include breakpoint($bp-med) {
+    height: calc((100vw - 60px - 24px - 24px - 18px) * 2 / 3 / 4);
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc((1260px - 60px - 24px - 24px - 18px) * 2 / 3 / 4);
   }
 }
