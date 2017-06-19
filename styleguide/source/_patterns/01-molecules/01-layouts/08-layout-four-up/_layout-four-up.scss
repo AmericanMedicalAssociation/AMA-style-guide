@@ -21,20 +21,18 @@
 .layout-four-up .layout_item {
   margin-bottom: 24px;
 
-  @include breakpoint($bp-small max-width) {
-    height: calc((100vw - 60px) / 3 * 2);
-  }
-
   @include breakpoint($bp-small) {
-    //@include grid__unit--cols(6);
     max-width: calc(50% - 12px);
     flex-basis: calc(50% - 12px);
-    height: calc((100vw - 60px - 24px) / 3 * 2 / 2);
   }
 
   @include breakpoint($bp-med) {
     max-width: calc((100vw - 60px - 72px) / 4);
     flex-basis: calc((100vw - 60px - 72px) / 4);
-    height: calc((100vw - 60px - 72px) / 3 * 2 / 4);
+  }
+
+  @include breakpoint($bp-large) {
+    max-width: calc((1260px - 60px - 72px) / 4);
+    flex-basis: calc((1260px - 60px - 72px) / 4);
   }
 }
