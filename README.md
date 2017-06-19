@@ -17,6 +17,8 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 - `cd styleguide`
 - `composer install`
 - `npm install`
+- `sudo npm install -g gulp` 
+  - This will install gulp globally on your machine. If you don't have privileges, don't want to install globally, or need to manage multiple projects using `gulp`, you can invoke `gulp` via `./node_modules/.bin/gulp serve` instead of directly.
 
 **For ongoing development**
 - `gulp serve` to watch files and display the resulting page in your local browser.
