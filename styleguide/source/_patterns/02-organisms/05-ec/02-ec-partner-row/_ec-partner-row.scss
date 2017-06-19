@@ -1,0 +1,24 @@
+.ec-partner-row {
+	.ec-partner-card {
+		border-right: 0.5rem solid transparent;
+
+		@include grid__unit--cols(6);
+		&:nth-child(n+5) {
+			display: none;
+		}
+
+		@include breakpoint($bp-small){
+			@include grid__unit--cols(4);
+			&:nth-child(n+4) {
+				display: none;
+			}
+		}
+
+		@include breakpoint($bp-med){
+			@include grid__unit--cols(2);
+			&:nth-child(n+4) {
+				display: block;
+			}
+		}
+	}
+}
