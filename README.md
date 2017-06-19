@@ -14,7 +14,7 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 ## To begin working:
 **Environment setup (mac)**
 
- - Have `homebrew` installed
+ - Have [`homebrew`](https://brew.sh/) installed
  - `brew install nvm`
  - `nvm install v7.10.0` (or some relatively recent node version. Note 8.0.0 has a fatal bug with require-dir module)
  - `nvm use 7.10.0`
