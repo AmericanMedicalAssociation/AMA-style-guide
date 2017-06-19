@@ -1,23 +1,9 @@
 
 // Layout default setup.
 
-.flexbox .layout.layout_five-up-left {
-  @include breakpoint($bp-small max-width) {
-    flex-direction: column;
-  }
-
-  @include breakpoint($bp-small $bp-med) {
-    flex-wrap: nowrap;
-  }
-}
-
 .layout.layout_five-up-left {
   justify-content: flex-start;
   flex-direction: column;
-
-  @include breakpoint($bp-small $bp-large) {
-    @include grid__unit--cols(12);
-  }
 
   @include breakpoint($bp-small) {
     flex-direction: row;
@@ -27,7 +13,6 @@
 
   @include breakpoint($bp-med) {
     flex-direction: row;
-    flex-wrap: wrap;
   }
 
   @include breakpoint($bp-large) {
@@ -45,14 +30,7 @@
   }
 
   @include breakpoint($bp-small $bp-med) {
-    width: 100%;
-    margin: 0 12px;
-    max-width: 33%;
-    height: calc((100vw - 40px - 48px) * 2 / 3 / 3);
-
-    &:nth-child(3) {
-      margin-right: 0;
-    }
+    height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
   }
 }
 
@@ -67,23 +45,22 @@
   }
 
   @include breakpoint($bp-small) {
-    @include grid__unit--cols(8);
-    margin-right: 0;
-    margin-left: 0;
+    flex-basis: calc(66.6666666667vw - 24px);
+    justify-content: space-between;
   }
 
   @include breakpoint($bp-med) {
-    @include grid__unit--cols(6);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
-    padding-left: 24px;
     height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc(50vw - 30px);
   }
 
   @include breakpoint($bp-large) {
     height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc((1260px / 2) - 30px);
+
   }
 }
 
@@ -96,16 +73,7 @@
   }
 
   @include breakpoint($bp-small) {
-    width: 50%;
-    max-width: 50%;
-
-    &:nth-child(1) {
-     margin-left: 0;
-  }
-
-    &:nth-child(2) {
-      margin-right: 0;
-    }
+    flex-basis: calc((66.666667vw - 20px - 24px) / 2);
   }
 
   @include breakpoint($bp-med) {
@@ -119,26 +87,18 @@
 }
 
 .layout.layout_five-up-left > .layout_item:first-child {
-
   @include breakpoint($bp-small) {
-    margin-left: 0;
-    @include grid__unit--cols(4);
+    flex-basis: calc(((100vw / 3) - 36px));
   }
 
   @include breakpoint($bp-med) {
-    @include grid__unit--cols(6);
     margin-bottom: 0;
     height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc((100vw - 60px - 48px) / 2);
   }
 
   @include breakpoint($bp-large) {
     height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc((1260px - 60px - 48px) / 2);
   }
 }
-
-.layout.layout_five-up-left .layout_item-visible-desktop {
-  @include breakpoint($bp-med max-width) { // 900px
-    display: none;
-  }
-}
-
