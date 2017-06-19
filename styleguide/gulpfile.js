@@ -127,6 +127,17 @@ gulp.task('icons', function (callback) {
   runSequence('minifyIcons', 'makeIcons', 'waitForIcons', 'reloadIcons', callback);
 });
 
+// Task: BuildPaths
+// Description: Tell pattern lab to look for scss files
+// TODO: we probably should us a try-catch in here somewhen to suppress errors when no scss exists
+gulp.task('build-paths', function() {
+  gulp.src('vendor/pattern-lab/core/src/PatternLab/Builder.php')
+  .pipe(replace(/: \$patternStoreData\["pathName"];\s+\n/g,': $patternStoreData["pathName"];\n$pathParts = explode("/",$pathName);\narray_pop($pathParts);\n$scssPathName  = implode("/",$pathParts)."/_".$patternStoreData["name"];\n'))
+  .pipe(replace(/\.\$patternExtension\);\s+\n/g, '.$patternExtension);\n$scss = file_get_contents($patternSourceDir."/".$scssPathName.".scss");\n'))
+  .pipe(replace(/,\$markupEngine\);\s+\n*/g,',$markupEngine);\nfile_put_contents($patternPublicDir."/".$path."/".$path.$suffixRaw.".scss",$scss);\n'))
+  .pipe(gulp.dest('vendor/pattern-lab/core/src/PatternLab/'));
+});
+
 // Task: patternlab
 // Description: Build static Pattern Lab files via PHP script
 gulp.task('patternlab', function () {
@@ -224,6 +235,7 @@ gulp.task('default', ['clean:before'], function (callback) {
   runSequence(
     'icons',
     ['scripts', 'fonts', 'images', 'sass'],
+    'build-paths',
     'patternlab',
     'panel-inject',
     'styleguide',
