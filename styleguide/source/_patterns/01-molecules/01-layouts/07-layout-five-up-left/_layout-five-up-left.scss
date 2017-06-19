@@ -88,6 +88,13 @@
 }
 
 .layout_five-up-left .layout_item-container .layout_item {
+  &:nth-child(3),
+  &:nth-child(4) {
+    @include breakpoint($bp-med max-width) {
+      display: none;
+    }
+  }
+
   @include breakpoint($bp-small) {
     width: 50%;
     max-width: 50%;
