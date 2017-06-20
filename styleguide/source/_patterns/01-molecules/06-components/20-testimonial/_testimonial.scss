@@ -8,6 +8,10 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: stretch;
+
+    &.testimonial-left {
+      flex-direction: row;
+    }
   }
 }
 
