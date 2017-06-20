@@ -68,6 +68,9 @@
 		"patches": {
 	      "pattern-lab/core": {
 	        "Add scss files to builder": "patches/core-builder-scss-files.patch"
+	      },
+	      "pattern-lab/styleguidekit-assets-default": {
+	        "Add scss panel to viewer": "patches/styleguidekit-index-scss-panel.patch"
 	      }
 	    }
 	}
