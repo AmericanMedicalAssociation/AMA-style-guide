@@ -1,0 +1,28 @@
+--- vendor/pattern-lab/core/src/PatternLab/Builder.php	2017-06-19 13:16:11.000000000 -0500
++++ vendor/pattern-lab/core/src/PatternLab/Builder-patch.php	2017-06-20 11:31:20.000000000 -0500
+@@ -216,11 +216,15 @@
+ 				
+ 				$path          = $patternStoreData["pathDash"];
+ 				$pathName      = (isset($patternStoreData["pseudo"])) ? $patternStoreData["pathOrig"] : $patternStoreData["pathName"];
++				$pathParts = explode("/",$pathName);
++				array_pop($pathParts);
++				$scssPathName  = implode("/",$pathParts)."/_".$patternStoreData["name"];
+ 
+ 				// modify the pattern mark-up
+ 				$markup        = $patternStoreData["code"];
+ 				$markupFull    = $patternStoreData["header"].$markup.$patternStoreData["footer"];
+ 				$markupEngine  = file_get_contents($patternSourceDir."/".$pathName.".".$patternExtension);
++				$scss 		   = @file_get_contents($patternSourceDir."/".$scssPathName.".scss")
+ 				
+ 				// if the pattern directory doesn't exist create it
+ 				if (!is_dir($patternPublicDir."/".$path)) {
+@@ -232,6 +236,9 @@
+ 				if (!$exportFiles) {
+ 					file_put_contents($patternPublicDir."/".$path."/".$path.$suffixMarkupOnly.".html",$markup);
+ 					file_put_contents($patternPublicDir."/".$path."/".$path.$suffixRaw.".".$patternExtension,$markupEngine);
++					if ($scss) {
++						file_put_contents($patternPublicDir."/".$path."/".$path.$suffixRaw.".scss",$scss)
++					}
+ 				}
+ 				
+ 			}
