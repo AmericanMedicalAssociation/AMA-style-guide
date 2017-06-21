@@ -96,6 +96,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $AMA PATTERNS
 \*------------------------------------*/
 
+@import "../../_patterns/00-atoms/00-intro/layout-intro-styling";
 @import "../../_patterns/00-atoms/01-global/06-divider/divider";
 @import "../../_patterns/00-atoms/02-text/01-h1/h1";
 @import "../../_patterns/00-atoms/02-text/02-h2/h2";
@@ -109,13 +110,18 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/00-atoms/02-text/12-metadata/metadata";
 @import "../../_patterns/00-atoms/02-text/13-results-count/results-count";
 @import "../../_patterns/00-atoms/02-text/14-title-label/title-label";
+@import "../../_patterns/00-atoms/02-text/15-field-label/field-label";
+@import "../../_patterns/00-atoms/02-text/16-metadata/metadata";
+@import "../../_patterns/00-atoms/02-text/17-caption/caption";
 @import "../../_patterns/00-atoms/04-images/02-image-wrapper/image-wrapper";
 @import "../../_patterns/00-atoms/06-buttons/01-button-search/button-search";
 @import "../../_patterns/00-atoms/06-buttons/02-button/button";
+@import "../../_patterns/00-atoms/08-media/01-video-youtube/01-video-youtube.scss";
 @import "../../_patterns/01-molecules/00-text/00-section-header/section-header";
 @import "../../_patterns/01-molecules/00-text/01-date-block/date-block";
 @import "../../_patterns/01-molecules/02-blocks/00-block-hero/block-hero";
 @import "../../_patterns/01-molecules/02-blocks/01-block-promo/block-promo";
+@import "../../_patterns/01-molecules/02-blocks/02-table-block/table-block";
 @import "../../_patterns/01-molecules/04-forms/00-search-field/search-field";
 @import "../../_patterns/01-molecules/04-forms/01-form-item/form-item";
 @import "../../_patterns/01-molecules/04-forms/02-filter-toggle/filter-toggle";
@@ -139,14 +145,20 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/06-components/10-card-cta/card-cta";
 @import "../../_patterns/01-molecules/06-components/11-banner-cta/banner-cta";
 @import "../../_patterns/01-molecules/06-components/13-accordion/accordion";
-@import '../../_patterns/01-molecules/06-components/12-category-highlight-image/category-highlight-image';
-@import '../../_patterns/01-molecules/06-components/13-subcategory-topics-description/subcategory-topics-description';
+@import "../../_patterns/01-molecules/06-components/12-category-highlight-image/category-highlight-image";
+@import "../../_patterns/01-molecules/06-components/13-subcategory-topics-description/subcategory-topics-description";
+@import "../../_patterns/01-molecules/06-components/18-people-bio/people-bio";
+@import "../../_patterns/01-molecules/06-components/19-people-bio-short/people-bio-short";
+@import "../../_patterns/01-molecules/06-components/17-event-detail/event-detail";
 @import "../../_patterns/01-molecules/08-lists/00-list_links/list_links";
+@import "../../_patterns/01-molecules/11-account-mgmt-center/01-block-select/block-select";
 @import "../../_patterns/02-organisms/00-global/00-header-primary/header-primary";
+@import "../../_patterns/02-organisms/00-global/01-single-task-header/single-task-header";
 @import "../../_patterns/01-molecules/08-lists/07-list-links-social/list-links-social";
 @import "../../_patterns/01-molecules/08-lists/08-list-links-utility/list-links-utility";
 @import "../../_patterns/01-molecules/08-lists/09-list-links-secondary-user/list-links-secondary-user";
 @import "../../_patterns/01-molecules/08-lists/10-list-subcategory/list-subcategory";
+@import "../../_patterns/01-molecules/08-lists/11-list-events/list-events";
 @import "../../_patterns/02-organisms/04-hub/00-hub-header/hub-header";
 @import "../../_patterns/02-organisms/00-global/02-search_modal/search_modal";
 @import "../../_patterns/02-organisms/00-global/03-ribbon/ribbon";
@@ -157,6 +169,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/02-organisms/03-sections/07-simple-step-form/simple-step-form";
 @import "../../_patterns/02-organisms/03-sections/08-multi-step-form/multi-step-form";
 @import "../../_patterns/02-organisms/03-sections/09-best-match-dropdown/best-match-dropdown";
+@import "../../_patterns/02-organisms/05-ec/01-ec-search-bar/ec-search-bar";
 @import "../../_patterns/01-molecules/01-layouts/00-layout-one-up/layout-one-up";
 @import "../../_patterns/01-molecules/01-layouts/01-layout-two-up/layout-two-up";
 @import "../../_patterns/01-molecules/01-layouts/02-layout-two-up-heavy-left/layout-two-up-heavy-left";
@@ -175,7 +188,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/02-organisms/00-global/05-application-branding-header-ec/application-branding-header-ec";
 @import "../../_patterns/02-organisms/03-sections/01-card-row/card-row";
 @import "../../_patterns/02-organisms/01-lists/00-related-content/related-content";
+@import "../../_patterns/02-organisms/01-lists/01-list-people-bios/list-people-bios";
 @import "../../_patterns/03-templates/02-article/article";
 @import "../../_patterns/01-molecules/10-search-results/00-search-result/_search-results";
+@import "../../_patterns/01-molecules/09-hub-components/01-hub-cta/hub-cta-half-video";
 @import "../../_patterns/02-organisms/03-sections/10-category-highlights/category-highlights";
-
