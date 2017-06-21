@@ -1,0 +1,101 @@
+.ec-bundle-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $black-7;
+  color: $black;
+  padding: 24px;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
+
+  @include breakpoint($bp-med) {
+    @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+  }
+
+  &:hover {
+    background-color: $gray-light-4;
+    color: $black;
+  }
+
+  @include breakpoint($bp-small $bp-med) {
+    flex-direction: row;
+
+    .ec-bundle-card_image {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      @include grid__unit--cols(4);
+    }
+
+    .ec-bundle-card_text {
+      display: inline-block;
+      margin: 0 24px;
+      text-align: left;
+      @include grid__unit--cols(8);
+    }
+  }
+
+  @include breakpoint($bp-med) {
+    // 2-up layout
+    // when there are three items it's 50:50
+    &:nth-child(1):nth-last-child(2) {
+      margin-right: 12px;
+      width: calc(50% - 12px);
+    }
+
+    &:nth-child(2):nth-last-child(1) {
+      margin-left: 12px;
+      width: calc(50% - 12px);
+    }
+    
+    // 3-up layout
+    // when there are three items it's 33:33:33
+    &:nth-child(1):nth-last-child(3),
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):nth-last-child(1) {
+      width: calc(33% - 16px);
+      margin: 0 12px;
+    }
+    // first of three doesn't have left padding
+    &:nth-child(1):nth-last-child(3) {
+      margin-left: 0;
+    }
+    // last of three doesn't have right padding
+    &:nth-child(3):nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    // 4-up layout
+    // when there are three items it's 25:25:25:25
+    &:nth-child(1):nth-last-child(4),
+    &:nth-child(2):nth-last-child(3),
+    &:nth-child(3):nth-last-child(2),
+    &:nth-child(4):nth-last-child(1) {
+      width: calc(25% - 18px);
+      margin: 0 12px;
+    }
+    // first of three doesn't have left padding
+    &:nth-child(1):nth-last-child(4) {
+      margin-left: 0;
+    }
+    // last of three doesn't have right padding
+    &:nth-child(4):nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+}
+
+.ec-bundle-card_image {
+  width: 100%;
+  min-height: 100px;
+}
+
+.ec-bundle-card_title {
+  @extend %type-larger;
+
+  @include breakpoint($bp-med) {
+    padding: 12px 0;
+  }
+}
