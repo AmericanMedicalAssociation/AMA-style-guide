@@ -107,8 +107,9 @@ textarea {
 
 select {
   background-image: url("../../assets/icons/svg/opendropdown.svg");
-  background-position: 97.5% 52%;
+  background-position: calc(100% - 8px) 52%;
   background-repeat: no-repeat;
+  padding-right: 30px;
 }
 
 // Placeholder text styles
