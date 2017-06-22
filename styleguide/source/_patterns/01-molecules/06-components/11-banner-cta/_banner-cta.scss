@@ -7,15 +7,22 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+.banner-cta-half,
+.hub-cta-half {
+  background-color: $black-7;
 
   @include breakpoint(600px) {
     flex-direction: row-reverse;
   }
 }
 
-.banner-cta-half,
-.hub-cta-half {
-  background-color: $black-7;
+.banner-cta-no-stacking {
+  @include breakpoint($bp-med) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .banner-cta-half-left,
@@ -42,7 +49,8 @@
 }
 
 .banner-cta_title,
-.hub-cta_title {
+.hub-cta_title,
+.banner-cta-no-stacking_title {
   @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
   margin-bottom: 8px;
   
@@ -52,6 +60,11 @@
   @include breakpoint($bp-large-home min-width) {
     @include type($font-sans-serif, 46px, $font-weight-thin, 1.0869565217);
   }
+}
+
+.banner-cta-no-stacking_title {
+  width: 100%;
+  flex-basis: 100%;
 }
 
 .banner-cta_desc,
@@ -83,5 +96,13 @@
 
   @include breakpoint($bp-large) {
     min-height: 400px;
+  }
+}
+
+.banner-cta-no-stacking_image,
+.banner-cta-no-stacking_text {
+  @include breakpoint($bp-med) {
+    width: 50%;
+    flex-basis: 50%;
   }
 }
