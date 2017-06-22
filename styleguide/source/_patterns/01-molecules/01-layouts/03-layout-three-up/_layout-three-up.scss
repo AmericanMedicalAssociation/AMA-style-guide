@@ -1,15 +1,17 @@
 // Placeholder blocks in layout molecules.
-.layout_container {
-  display: block;
-  background-color: $black-7;
-  margin-bottom: 1em;
-  padding: 2em;
-  text-align: center;
-}
+.layout_three_up {
+  .layout_container {
+    display: block;
+    background-color: $black-7;
+    margin-bottom: 1em;
+    padding: 2em;
+    text-align: center;
+  }
 
-// Layout default setup.
-.layout {
-  @include grid();
+  // Layout default setup.
+  .layout {
+    @include grid();
+  }
 }
 
 .flexbox .layout.layout_three_up {

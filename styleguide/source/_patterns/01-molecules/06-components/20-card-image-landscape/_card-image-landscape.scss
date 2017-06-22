@@ -26,25 +26,8 @@
   }
 }
 
-//a.card-image-landscape:hover:after {
-//  content: " ";
-//  display: block;
-//  background: black;
-//  width: 100%;
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  height: 100%;
-//  background: rgba(0,0,0,.2);
-//
-//  @include breakpoint($bp-small) {
-//    width: calc(100% - 24px);
-//    left: 12px;
-//  }
-//}
-
 .card.card-image-landscape:hover {
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
 // @todo - this is repeating the "overlay" on other CTA elements.
