@@ -1,6 +1,6 @@
---- src/PatternLab/Builder.php	2017-06-20 16:50:36.000000000 -0500
-+++ src/PatternLab/Builder-new.php	2017-06-20 16:52:29.000000000 -0500
-@@ -216,11 +216,15 @@
+--- src/PatternLab/Builder.php	2017-06-22 12:02:11.000000000 -0500
++++ src/PatternLab/Builder-new.php	2017-06-22 12:03:09.000000000 -0500
+@@ -216,11 +216,18 @@
  				
  				$path          = $patternStoreData["pathDash"];
  				$pathName      = (isset($patternStoreData["pseudo"])) ? $patternStoreData["pathOrig"] : $patternStoreData["pathName"];
@@ -14,10 +14,13 @@
  				$markupFull    = $patternStoreData["header"].$markup.$patternStoreData["footer"];
  				$markupEngine  = file_get_contents($patternSourceDir."/".$pathName.".".$patternExtension);
 +				$scss 		   = @file_get_contents($patternSourceDir."/".$scssPathName.".scss");
++				if ($scss === false) {
++					$scss = "No scss available for this pattern.";
++				}
  				
  				// if the pattern directory doesn't exist create it
  				if (!is_dir($patternPublicDir."/".$path)) {
-@@ -232,6 +236,7 @@
+@@ -232,6 +239,7 @@
  				if (!$exportFiles) {
  					file_put_contents($patternPublicDir."/".$path."/".$path.$suffixMarkupOnly.".html",$markup);
  					file_put_contents($patternPublicDir."/".$path."/".$path.$suffixRaw.".".$patternExtension,$markupEngine);
