@@ -11,7 +11,7 @@ jQuery.noConflict();
   function showMenu() {
     // add a body class saying that the menu is open
     $('body').addClass('body-nav-primary-open');
-    $('.nav-primary_list').addClass('nav-primary_list-mobile-open');
+    $('.nav-primary_list').addClass('nav-primary_list-mobile-open').removeClass('nav-primary_list-mobile-closed');
   }
 
   function showOverlay() {
