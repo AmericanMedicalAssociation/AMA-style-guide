@@ -1,16 +1,21 @@
 .banner-cta-half,
-.hub-cta-half {
+.hub-cta-half,
+.banner-cta-no-stacking {
   width: 100%;
   max-width: 1200px;
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background-color: $black-7;
 
   @include breakpoint(600px) {
     flex-direction: row-reverse;
   }
+}
+
+.banner-cta-half,
+.hub-cta-half {
+  background-color: $black-7;
 }
 
 .banner-cta-half-left,
@@ -61,7 +66,8 @@
 }
 
 .banner-cta_image,
-.hub-cta_image {
+.hub-cta_image,
+.banner-cta-no-stacking_image {
   padding: 30px 20px;
   display: block;
   width: 100%;
