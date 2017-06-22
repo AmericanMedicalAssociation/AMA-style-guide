@@ -1,12 +1,12 @@
+{% if engaged %}<div class="nav-primary_overlay-mobile nav-primary_overlay-mobile-on"></div>{% endif %}
 <div class="nav-primary_button">Menu</div>
 
 <nav class="nav-primary" role="navigation" aria-label="Main Navigation">
+  <ul class="nav-primary_list nav-primary_list-mobile-closed {% if engaged %}nav-primary_list-mobile-open{% endif %}" role="menubar">
+    <li class="nav-primary_section {% if engaged %}nav-primary_section-active{% endif %}">
+      {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
 
-  <ul class="nav-primary_list nav-primary_list-mobile-closed" role="menubar">
-    <li class="nav-primary_section">
-        {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
-
-      <ul class="nav-primary_section_subnav">
+      <ul class="nav-primary_section_subnav {% if engaged %}is-open{% endif %}">
         <div class="nav-primary_section_subnav_container-primary">
           <li class="nav-primary_section_subnav_item nav-primary_section_subnav_item-primary">{% include '04-link-primary-nav.twig' with { 'content': subnavfirstchild.first } %}</li>
         </div>
@@ -119,8 +119,3 @@
     <div class="nav-primary_section_subnav_back"><a class="link-nav-primary" href="{{url}}">{% include "atoms-arrow-select" %} Back</a></div>
   </ul>
 </nav>
-
-{#
- # @file primary-nav.twig
- # Copyright 2017 Palantir.net, Inc.
- #}

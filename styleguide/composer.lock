@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "13c6bb01cca22ad46a2367a4f7b06b56",
+    "content-hash": "fb900c21e4d640b09640d249418027fe",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -67,6 +67,50 @@
                 "zip"
             ],
             "time": "2016-02-15T22:46:40+00:00"
+        },
+        {
+            "name": "cweagans/composer-patches",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweagans/composer-patches.git",
+                "reference": "b3036f23b73570ab5d869e345277786c8eb248a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweagans/composer-patches/zipball/b3036f23b73570ab5d869e345277786c8eb248a9",
+                "reference": "b3036f23b73570ab5d869e345277786c8eb248a9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "~1.0",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "cweagans\\Composer\\Patches"
+            },
+            "autoload": {
+                "psr-4": {
+                    "cweagans\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Cameron Eagans",
+                    "email": "me@cweagans.net"
+                }
+            ],
+            "description": "Provides a way to patch Composer packages.",
+            "time": "2017-03-19 18:18:52"
         },
         {
             "name": "doctrine/collections",
@@ -884,7 +928,8 @@
     "stability-flags": {
         "pattern-lab/core": 20,
         "pattern-lab/patternengine-twig": 20,
-        "pattern-lab/styleguidekit-twig-default": 20
+        "pattern-lab/styleguidekit-twig-default": 20,
+        "cweagans/composer-patches": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

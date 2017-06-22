@@ -1,7 +1,6 @@
 /**
  * @file form-items.js
  *
- * Copyright 2017 Palantir.net, Inc.
  * Reference http://codepen.io/anon/pen/GHKJj
  */
 

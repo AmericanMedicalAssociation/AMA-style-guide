@@ -1,9 +1,3 @@
-/**
- * @file nav-primary.js
- *
- * Copyright 2017 Palantir.net, Inc.
- */
-
 jQuery.noConflict();
 (function($) {
 
