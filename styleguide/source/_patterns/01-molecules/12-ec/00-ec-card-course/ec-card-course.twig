@@ -1,0 +1,14 @@
+<a class="card ec_card-course" href="#">
+  <div class="ec_card-course_inner-primary">
+    {% include 'atoms-landscape-3x2' with { 'class': 'ec_card-course_image' } %}
+    {% include 'atoms-paragraph' with { 'class': 'ec_card-course_duration', 'content' : '30 char. max, 1hr 15min' } %}
+  </div>
+  <div class="ec_card-course_inner-secondary">
+    {% include 'atoms-h2' with { 'class': 'ec_card-course_title', 'content' : 'Association Between Elevated Brain Amyloid and Subsequent Cognitive Decline Among Cognitively Normal Persons' } %}
+    <div class="ec_card-course_inner-secondary_credits_date">
+      {% include 'atoms-paragraph' with { 'class': 'ec_card-course_credits', 'content' : '30 char. max, 3.00 CME Credits'  } %}
+      {% include 'atoms-paragraph' with { 'class': 'ec_card-course_date', 'content' : '30 char. max, Due Jan. 10'  } %}
+    </div>
+    {% include 'atoms-paragraph' with { 'class': 'ec_card-course_description', 'content' : '70 char. max, Optional course description.' } %}
+  </div>
+</a>
