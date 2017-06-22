@@ -22,6 +22,7 @@ var gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps'),
     prefix      = require('gulp-autoprefixer'),
     postcss     = require('gulp-postcss'),
+    replace     = require('gulp-replace'),
     reporter    = require('postcss-reporter'),
     stylelint   = require('gulp-stylelint'),
     gutil       = require('gulp-util');
@@ -107,9 +108,9 @@ gulp.task('minifyIcons', function() {
 });
 
 // Based on https://github.com/filamentgroup/gulpicon#usage
-var iconFiles = glob.sync("source/assets/icons/svg/*.svg");
-var iconConfig = require("./source/assets/icons/config.js");
-iconConfig.dest = "public/assets/icons/";
+var iconFiles = glob.sync('source/assets/icons/svg/*.svg');
+var iconConfig = require('./source/assets/icons/config.js');
+iconConfig.dest = 'public/assets/icons/';
 gulp.task('makeIcons', gulpicon(iconFiles, iconConfig));
 gulp.task('waitForIcons', function(callback) {
   var trigger = iconConfig.dest + 'preview.html';
@@ -126,6 +127,17 @@ gulp.task('icons', function (callback) {
   runSequence('minifyIcons', 'makeIcons', 'waitForIcons', 'reloadIcons', callback);
 });
 
+// Task: BuildPaths
+// Description: Tell pattern lab to look for scss files
+// TODO: we probably should us a try-catch in here somewhen to suppress errors when no scss exists
+gulp.task('build-paths', function() {
+  gulp.src('vendor/pattern-lab/core/src/PatternLab/Builder.php')
+  .pipe(replace(/: \$patternStoreData\["pathName"];\s+\n/g,': $patternStoreData["pathName"];\n$pathParts = explode("/",$pathName);\narray_pop($pathParts);\n$scssPathName  = implode("/",$pathParts)."/_".$patternStoreData["name"];\n'))
+  .pipe(replace(/\.\$patternExtension\);\s+\n/g, '.$patternExtension);\n$scss = file_get_contents($patternSourceDir."/".$scssPathName.".scss");\n'))
+  .pipe(replace(/,\$markupEngine\);\s+\n*/g,',$markupEngine);\nfile_put_contents($patternPublicDir."/".$path."/".$path.$suffixRaw.".scss",$scss);\n'))
+  .pipe(gulp.dest('vendor/pattern-lab/core/src/PatternLab/'));
+});
+
 // Task: patternlab
 // Description: Build static Pattern Lab files via PHP script
 gulp.task('patternlab', function () {
@@ -134,6 +146,14 @@ gulp.task('patternlab', function () {
       'php core/console --generate'
     ]))
     .pipe(browserSync.reload({stream:true}));
+});
+
+// Task: PanelInject
+// Description: Let us inject a scss panel into patternlab assets js
+gulp.task('panel-inject', function() {
+  gulp.src('public/index.html')
+    .pipe(replace(/patternlab-viewer\.min\.js\"><\/script>\s+\n/g,'patternlab-viewer.min.js"></script>\n<script>var fileSuffixPattern = ((config.outputFileSuffixes !== undefined) && (config.outputFileSuffixes.rawTemplate !== undefined)) ? config.outputFileSuffixes.rawTemplate : ""; Panels.add({ "id": "sg-panel-scss", "name": "SCSS", "default": false, "templateID": "pl-panel-template-code", "httpRequest": true, "httpRequestReplace": fileSuffixPattern+".scss", "httpRequestCompleted": false, "prismHighlight": true, "language": "markup", "keyCombo": "ctrl+shift+t" });</script>\n'))
+    .pipe(gulp.dest('public'))
 });
 
 // Task: styleguide
@@ -151,7 +171,7 @@ gulp.task('browser-sync', function() {
         baseDir: config.root
     },
     ghostMode: true,
-    open: "local"
+    open: 'local'
   });
 });
 
@@ -215,7 +235,9 @@ gulp.task('default', ['clean:before'], function (callback) {
   runSequence(
     'icons',
     ['scripts', 'fonts', 'images', 'sass'],
+    'build-paths',
     'patternlab',
+    'panel-inject',
     'styleguide',
     'sass',
     callback
