@@ -1,41 +1,78 @@
 .people-bio-short {
   @extend %clearfix;
+  display: block;
   margin: 30px 0;
   padding: 20px 0;
-  // align-content: space-between;
-  // display: flex;
-  // align-items: flex-end;
-  // flex-wrap: wrap;
 
   @include breakpoint($bp-small) {
     margin: 40px 0;
     padding: 20px 0;
   }
+
+  &:hover .people-bio-short_title,
+  .faux-link-blue {
+    color: $blue;
+  }
+
+  &:hover .faux-link-blue {
+    border-bottom: 2px solid $blue;
+  }
+}
+
+.people-bio-short_title {
+  margin-bottom: 0;
 }
 
 .people-bio-short_photo,
 .people-bio-short_data_group {
-  display: inline-block;
   @include grid__unit--cols(12);
+
+  @include breakpoint($bp-med) {
+    vertical-align: text-top;
+  }
+}
+
+.people-bio-short_photo,
+.people-bio-short_data_group-first {
+  @include breakpoint($bp-small) {
+    display: inline-block;
+  }
 }
 
 .people-bio-short_photo {
   height: 100%;
-  
+
   @include breakpoint($bp-small) { 
     max-width: 154px;
+
     @include grid__unit--cols(4);
+  }
+
+  @include breakpoint($bp-med) {
+    // "placeholder" when there's no bio photo in desktop layout
+    background-color: $gray-light-3;
+    height: 220px;
+    width: 220px;
+  }
+
+  img {
+    max-width: 100%;
+    padding-right: 30px;
+
+    @include breakpoint($bp-med) {
+      padding: 0;
+    }
   }
 }
 
 .people-bio-short_data_group {
 
   @include breakpoint($bp-small) {
-    margin-left: 30px;
     @include grid__unit--cols(8);
   }
 
   @include breakpoint($bp-med) {
+    margin-left: 30px;
     @include grid__unit--cols(4);
   }
 
@@ -49,6 +86,9 @@
 .people-bio-short_data_group-second {
   @include breakpoint(0 $bp-med) {
     margin-left: 0;
+  }
+  @include breakpoint($bp-med) {
+    display: inline-block;
   }
 }
 
