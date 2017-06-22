@@ -29,7 +29,8 @@
 		"php": ">=5.4",
 		"pattern-lab/core": "dev-dev#c976fa4cbffac7a67c41df43f47899d09a965a49",
 		"pattern-lab/patternengine-twig": "dev-dev",
-		"pattern-lab/styleguidekit-twig-default": "dev-dev"
+		"pattern-lab/styleguidekit-twig-default": "dev-dev",
+		"cweagans/composer-patches": "dev-master"
 	},
 	"repository": {
 		"type": "vcs",
@@ -63,6 +64,14 @@
 				"pattern-lab/starterkit-twig-base",
 				"pattern-lab/starterkit-twig-demo"
 			]
-		}
+		},
+		"patches": {
+	      "pattern-lab/core": {
+	        "Add scss files to builder": "patches/core-builder-scss-files.patch"
+	      },
+	      "pattern-lab/styleguidekit-assets-default": {
+	        "Add scss panel to viewer": "patches/styleguidekit-index-scss-panel.patch"
+	      }
+	    }
 	}
 }
