@@ -28,6 +28,12 @@
   }
 }
 
+.banner-cta-no-stacking-left {
+  @include breakpoint($bp-med) {
+    flex-direction: row-reverse;
+  }
+}
+
 .banner-cta-no-stacking * {
   margin-top: .5em;
 }
