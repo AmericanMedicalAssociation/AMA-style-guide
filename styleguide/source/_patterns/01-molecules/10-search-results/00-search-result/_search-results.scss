@@ -183,8 +183,6 @@
     margin-bottom: 25px;
   }
 
-  .search-result_primary-wrapper {}
-
   .search-result_primary-wrapper,
   .search-result_members-only-label-wrapper {
     &:hover {
@@ -205,19 +203,6 @@
     }
   }
 }
-// .search-results-columns {
-//   .layout_container {
-//     height: 210px;
-
-//     @include breakpoint(0 $bp-small) {
-//       height: 240px;
-//     }
-//   }
-//   .search-results-external {
-//     @include grid__unit--cols(6)
-//   }
-
-// }
 
 .search-results-list {
   .search-results-list-item {
