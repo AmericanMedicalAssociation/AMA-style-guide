@@ -1,16 +1,17 @@
 // Placeholder blocks in layout molecules.
-.layout_container {
-  display: block;
-  background-color: $black-7;
-  margin-bottom: 1em;
-  padding: 2em;
-  text-align: center;
-}
+.layout_three_up {
+  .layout_container {
+    display: block;
+    background-color: $black-7;
+    margin-bottom: 1em;
+    padding: 2em;
+    text-align: center;
+  }
 
-// Layout default setup.
-.layout {
-  @include grid();
-
+  // Layout default setup.
+  .layout {
+    @include grid();
+  }
 }
 
 .flexbox .layout.layout_three_up {
@@ -23,7 +24,7 @@
     width: 100%;
 
   @include breakpoint($bp-large) {
-    margin: 0 -15px;
+    margin: 0 -12px;
   }
 }
 
@@ -34,7 +35,6 @@
 
   @include breakpoint($bp-large) {
     @include grid__unit--cols(4);
-    padding: 0 15px;
+    padding: 0 12px;
   }
 }
-

@@ -1,0 +1,104 @@
+
+// Layout default setup.
+
+.layout.layout_five-up-left {
+  justify-content: flex-start;
+  flex-direction: column;
+
+  @include breakpoint($bp-small) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  @include breakpoint($bp-med) {
+    flex-direction: row;
+  }
+
+  @include breakpoint($bp-large) {
+    flex-direction: row;
+    max-width: 1260px;
+  }
+}
+
+.layout.layout_five-up-left .layout_item {
+  margin-bottom: 24px;
+  position: relative; // @todo - all of these in all layouts should be position:relative (for landscape cards)
+
+  @include breakpoint($bp-small max-width) {
+    height: calc((100vw - 40px) * 2 / 3);
+  }
+
+  @include breakpoint($bp-small $bp-med) {
+    height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
+  }
+}
+
+.layout.layout_five-up-left .layout_item.layout_item-container {
+  display: flex;
+  padding: 0;
+  background: transparent;
+  height: auto;
+
+  @include breakpoint($bp-small max-width) {
+    flex-direction: column;
+  }
+
+  @include breakpoint($bp-small) {
+    flex-basis: calc(66.6666666667vw - 24px);
+    justify-content: space-between;
+  }
+
+  @include breakpoint($bp-med) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc(50vw - 30px);
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc((1260px / 2) - 30px);
+
+  }
+}
+
+.layout_five-up-left .layout_item-container .layout_item {
+  &:nth-child(3),
+  &:nth-child(4) {
+    @include breakpoint($bp-med max-width) {
+      display: none;
+    }
+  }
+
+  @include breakpoint($bp-small) {
+    flex-basis: calc((66.666667vw - 20px - 24px) / 2);
+  }
+
+  @include breakpoint($bp-med) {
+    flex-basis: calc((100% - 24px) / 2);
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.layout.layout_five-up-left > .layout_item:first-child {
+  @include breakpoint($bp-small) {
+    flex-basis: calc(((100vw / 3) - 36px));
+  }
+
+  @include breakpoint($bp-med) {
+    margin-bottom: 0;
+    height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc((100vw - 60px - 48px) / 2);
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
+    flex-basis: calc((1260px - 60px - 48px) / 2);
+  }
+}
