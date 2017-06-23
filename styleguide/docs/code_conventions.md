@@ -2,7 +2,7 @@
 
 ## Templating
 
-Markup for each pattern in our style guide is created with [Twig](http://twig.sensiolabs.org/), a PHP-based HTML templating engine. You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on th egear icon in the upper right of every page and selecting "Show Pattern Info."
+Markup for each pattern in our style guide is created with [Twig](http://twig.sensiolabs.org/), a PHP-based HTML templating engine. You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."
 
 ## HTML
 
@@ -52,6 +52,6 @@ If your javascript expects certain elements to be present in the DOM, make sure 
 
 ## Annotation and Documentation
 
-Each pattern should have it's own accompanying Markdown file that contain a useful description of the pattern and links to the relevant Jira ticket/Github issues. This is required to provide context in the event of uncertainty about why a pattern was created or how it ought to be used.
+Each pattern should have its own accompanying Markdown file that contain a useful description of the pattern and links to the relevant Jira ticket/Github issues. This is required to provide context in the event of uncertainty about why a pattern was created or how it ought to be used.
 
 Pattern Lab also provides the ability to [add annotations](http://patternlab.io/docs/pattern-adding-annotations.html) to your patterns. Use these annotations when you need to explanation about how a pattern is implemented.
