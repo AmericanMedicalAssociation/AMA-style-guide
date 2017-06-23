@@ -1,18 +1,21 @@
 <div class="tabs-course_browser">
   {% include 'atoms-h1' with { "class": "tabs-course_browser_label", "content": "Browse Our Top Courses" } %}
-  <ul class="tabs-course_browser_list" role="menu">
+  <ul class="tabs-course_browser_list-tabs" role="menu">
     <li class="tabs-course_browser_list_item"><a href="{{ url }}" data-tab="tab-1" role="menuitem">Clinical</a></li>
     <li class="tabs-course_browser_list_item"><a href="{{ url }}" data-tab="tab-2" role="menuitem">Workflow &amp; Process</a></li>
     <li class="tabs-course_browser_list_item"><a href="{{ url }}" data-tab="tab-3" role="menuitem">Patient Care</a></li>
     <li class="tabs-course_browser_list_item"><a href="{{ url }}" data-tab="tab-4" role="menuitem">Leading Change</a></li>
     <li class="tabs-course_browser_list_item"><a href="{{ url }}" data-tab="tab-5" role="menuitem">Personal Well-being</a></li>
   </ul>
-  <div class="tabs-course_browser_list">
-    {# Placeholder for course card row #}
-  </div>
+  <ul class="tabs-course_browser_list-cards layout layout-four-up">
+    <li class="tabs-course_browser_list-cards-item">{% include 'molecules-ec-card-course' %}</li>
+    <li class="tabs-course_browser_list-cards-item">{% include 'molecules-ec-card-course' %}</li>
+    <li class="tabs-course_browser_list-cards-item">{% include 'molecules-ec-card-course' %}</li>
+    <li class="tabs-course_browser_list-cards-item">{% include 'molecules-ec-card-course' %}</li>
+  </ul>
   <div class="tabs-course_browser_ctas">
-    {% include 'atoms-button-link' with { "url": "https://searchec.ama-assn.org", "class": "tabs-course_browser_cta-primary", "content": "Start a Course" } %}
-    {% include 'atoms-button-link-secondary' with { "class": "tabs-course_browser_cta-secondary", "content": "Browse Clinical Courses" } %}
+    {% include 'atoms-button-link' with { 'url': "https://searchec.ama-assn.org", 'class': "tabs-course_browser_cta-primary", "content": "Start a Course" } %}
+    {% include 'atoms-button-link-secondary' with { 'class': "tabs-course_browser_cta-secondary", "content": "Browse Clinical Courses" } %}
   </div>
 </div>
 

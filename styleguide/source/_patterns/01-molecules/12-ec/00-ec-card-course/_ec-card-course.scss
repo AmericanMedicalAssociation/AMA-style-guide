@@ -91,6 +91,7 @@
 
   @include breakpoint($bp-small $bp-med) {
     float: left;
+    text-align: left;
   }
 }
 

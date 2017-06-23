@@ -1,0 +1,102 @@
+// Course Browser heading.
+.tabs-course_browser_label {
+  margin: 25px 0;
+  text-align: center;
+}
+
+// Course Browser selector list.
+.tabs-course_browser_list-tabs {
+  list-style: none;
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+// Course Browser tab.
+.tabs-course_browser_list_item {
+  border-bottom: 3px transparent solid;
+  color: $black;
+  display: inline-block;
+  line-height: 1.3;
+  padding: 0;
+  margin-bottom: 0;
+  min-width: 190px;
+  text-align: center;
+
+  &:nth-of-type(4n),
+  &:nth-of-type(5n) {
+    display: none;
+  }
+
+  @include breakpoint($bp-med) {
+    &:nth-of-type(4n),
+    &:nth-of-type(5n) {
+      display: inline-block;
+    }
+  }
+
+  &:hover {
+    border-bottom: 3px $purple solid;
+  }
+
+  a {
+    padding: 1em 0.7em;
+
+    &:hover {
+      color: $black-55;
+    }
+  }
+}
+
+// Course browser CTAs.
+.tabs-course_browser_ctas {
+  text-align: center;
+}
+
+.tabs-course_browser_cta-secondary {
+  display: none;
+
+  @include breakpoint($bp-med) {
+    display: inline-block;
+  }
+}
+
+// Course cards layout.
+.layout.layout-four-up.tabs-course_browser_list-cards {
+  display: block;
+  flex-direction: initial;
+  list-style: none;
+
+  @include breakpoint($bp-med) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+// Individual course card layout.
+.tabs-course_browser_list-cards-item {
+  margin-bottom: 24px;
+  width: 100%;
+
+  &:nth-of-type(4n),
+  &:nth-of-type(5n) {
+    display: none;
+  }
+
+  @include breakpoint($bp-med) {
+    max-width: calc((100vw - 60px - 72px) / 4);
+    flex-basis: calc((100vw - 60px - 72px) / 4);
+
+    &:nth-of-type(4n),
+    &:nth-of-type(5n) {
+      display: inline-block;
+    }
+  }
+
+  @include breakpoint($bp-large) {
+    max-width: calc((1260px - 60px - 72px) / 4);
+    flex-basis: calc((1260px - 60px - 72px) / 4);
+  }
+}
