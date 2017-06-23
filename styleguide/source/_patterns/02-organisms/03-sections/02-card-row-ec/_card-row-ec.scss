@@ -1,0 +1,40 @@
+
+/* @todo | This should probably not be named after the
+ * @todo | EC if we want cards to be reusable in other sections.
+ */
+.ec-section .layout_five-up-left-primary a.card-image-landscape {
+  @include breakpoint($bp-large) {
+    height: 100%;
+  }
+}
+
+// Styling for the three-up layout when it's being used in an EC card row.
+
+.layout_three_up-primary,
+.layout_three_up-secondary,
+.layout_three_up-tertiary {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    padding: 0 12px;
+  }
+}
+
+// Styling for landscape card images when they're in a Four Up layout.
+
+.layout-four-up .layout_item {
+  @include breakpoint($bp-small max-width) {
+    height: calc((100vw - 60px) / 3 * 2);
+  }
+
+  @include breakpoint($bp-small) {
+    height: calc((100vw - 60px - 24px) / 3 * 2 / 2);
+  }
+
+  @include breakpoint($bp-med) {
+    height: calc((100vw - 60px - 72px) / 3 * 2 / 4);
+  }
+
+  @include breakpoint($bp-large) {
+    height: calc((1260px - 60px - 72px) / 3 * 2 / 4);
+  }
+}

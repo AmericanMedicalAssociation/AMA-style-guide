@@ -1,0 +1,13 @@
+<div class="search-result-external {{ class }}">
+   <a href="{{ url }}" class="search-result_primary-wrapper">
+     <div class="search-result_label">
+         {% include 'atoms-title-label' with { 'content' : 'AMA Wire', 'class': 'search-result' } %}
+         {% include 'atoms-arrow-external' %}
+     </div>
+     {% include 'atoms-h4' with { 'class' : 'search-result_title', 'content' : 'Visit AMA Wire to view news and more information related to this topic.' } %}
+   </a>
+     <div class="search-result_members-only-label-wrapper">
+       {% include 'atoms-paragraph' with { 'class' : 'search-result_members-only-label', 'content' : 'AMA Members Only' } %}
+       {% include 'atoms-information' %}
+     </div>
+ </div>

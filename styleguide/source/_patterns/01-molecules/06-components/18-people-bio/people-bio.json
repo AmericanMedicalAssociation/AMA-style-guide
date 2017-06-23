@@ -1,0 +1,25 @@
+{
+  "bio": {
+  	"name": "Steven J. Stack, MD",
+    "position": "Very Important Person",
+    "term_start": "May 1999",
+    "term_end": "September 2015",
+    "specialty": "Emergency Medicine",
+    "affiliation": "University of Smartopia",
+    "endorsement": "Rated #3 by Good Doctors of America",
+    "email": "sstack@ama-assn.org",
+    "address1": "Office of Good Doctors",
+    "address2": "1621 Elm Street",
+    "city_state_zip": "Chicago, IL, 60601",
+    "positions": "Emergency Medicine; Chairman Good Doctors, Inc",
+    "short_bio": "Nullam bibendum egestas vehicula. Phasellus sit amet rutrum lectus, sed suscipit tellus. Proin ullamcorper nisi nec tincidunt egestas. Integer interdum non sapien et scelerisque. Ut laoreet, sem et suscipit rhoncus, leo nisi viverra elit, in dictum sapien ligula congue lorem. Nunc vitae ex ac ligula tincidunt rhoncus.",
+    "long_bio": "Bacon shoulder short ribs spare ribs culpa laborum beef tenderloin flank fatback. Fugiat pork loin tongue exercitation. Eu short loin mollit id anim tempor et. Adipisicing sint do commodo tongue velit. Cillum tempor deserunt rump filet mignon alcatra incididunt. Non ut boudin id, exercitation cupim ut andouille laboris shoulder proident. <br />Laborum beef ribs dolore voluptate shank nisi spare ribs flank. Ipsum strip steak sunt lorem landjaeger, nulla id excepteur veniam chuck reprehenderit mollit ball tip jowl ex. Anim chuck salami, officia brisket nulla reprehenderit veniam. Shoulder eu quis jerky t-bone proident cillum pork. Strip steak incididunt jowl cillum. Mollit chuck ullamco duis officia flank do qui exercitation aute reprehenderit velit spare ribs ea fatback. Eu brisket consectetur rump burgdoggen elit alcatra in venison aute ut andouille laborum culpa aliquip.",
+    "email_private": "luvsfuzzybunnies@gmail.com",
+    "fax": "555-123-4567",
+    "phone": "555-765-4321",
+    "spouse": "Mary Q. Married",
+    "address1_private": "Chateau Stack",
+    "address2_private": "1234 W. Mulberry Lane",
+    "city_state_zip_private": "Chicago, IL, 60603"
+  }
+}

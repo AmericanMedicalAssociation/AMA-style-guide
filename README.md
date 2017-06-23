@@ -12,11 +12,19 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 - Link to the production files at `styleguide/public/assets/`
 
 ## To begin working:
+**Environment setup (mac)**
+
+ - Have [`homebrew`](https://brew.sh/) installed
+ - `brew install nvm`
+ - `nvm install v7.10.0` (or some relatively recent node version. Note 8.0.0 has a fatal bug with require-dir module)
+ - `nvm use 7.10.0`
 
 **Just the first time:**
 - `cd styleguide`
 - `composer install`
 - `npm install`
+- `sudo npm install -g gulp` 
+  - This will install gulp globally on your machine. If you don't have privileges, don't want to install globally, or need to manage multiple projects using `gulp`, you can invoke `gulp` via `./node_modules/.bin/gulp serve` instead of directly.
 
 **For ongoing development**
 - `gulp serve` to watch files and display the resulting page in your local browser.

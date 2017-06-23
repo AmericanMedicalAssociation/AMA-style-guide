@@ -1,0 +1,14 @@
+--- dist/index.html	2017-06-20 16:38:22.000000000 -0500
++++ dist/index-new.html	2017-06-20 16:41:01.000000000 -0500
+@@ -274,6 +274,11 @@
+     
+     <!-- load the pattern lab viewer js -->
+     <script src="styleguide/js/patternlab-viewer.min.js"></script>
++
++    <script>
++      var fileSuffixPattern = ((config.outputFileSuffixes !== undefined) && (config.outputFileSuffixes.rawTemplate !== undefined)) ? config.outputFileSuffixes.rawTemplate : "";
++      Panels.add({ "id": "sg-panel-scss", "name": "SCSS", "default": false, "templateID": "pl-panel-template-code", "httpRequest": true, "httpRequestReplace": fileSuffixPattern+".scss", "httpRequestCompleted": false, "prismHighlight": true, "language": "markup", "keyCombo": "ctrl+shift+t" });
++    </script>
+     
+   </body>
+ </html>
