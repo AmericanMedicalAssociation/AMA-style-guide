@@ -94,6 +94,7 @@
 
 .ec-bundle-card_title {
   @extend %type-larger;
+  min-height: 64px;   //hold space for 2 lines of text
 
   @include breakpoint($bp-med) {
     padding: 12px 0;
