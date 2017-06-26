@@ -1,4 +1,4 @@
-
+{% if cardType == 'landscape' %}
 <div class="layout layout-four-up">
     {#<div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.CARDTYPE.first} %}</div> #}
     <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardType.first} %}</div>
@@ -6,4 +6,7 @@
     <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.third} %}</div>
     <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.fourth} %}</div>
 </div>
-
+{% endif %}
+{% if cardType != 'landscape' %}
+   HIIIIII NOT LANSCAPE
+{% endif %}

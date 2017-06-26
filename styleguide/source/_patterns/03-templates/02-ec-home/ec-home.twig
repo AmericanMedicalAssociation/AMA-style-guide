@@ -8,9 +8,10 @@
 
 {# card section #}
 <section class="ec-section">
-  {% include 'organisms-card-row-ec-five-up' with {'cardRowContent': cardRowContent} %}
-  {% include 'organisms-card-row-ec-four-up' with {'cardRowContent': cardRowContent} %}
-  {% include 'organisms-card-row-ec-three-up' with {'cardRowContent': cardRowContent} %}
+  {#{% include 'organisms-card-row-ec-five-up' with {'cardRowContent': cardRowContent} %}#}
+  {#{% include 'organisms-card-row-ec-four-up' with {'cardRowContent': cardRowContent} %}#}
+  {% include 'organisms-card-row-ec-four-up' with {'cardType': 'landDscape'} %}
+  {#{% include 'organisms-card-row-ec-three-up' with {'cardRowContent': cardRowContent} %}#}
 </section>
 
 {% include 'organisms-footer' %}
