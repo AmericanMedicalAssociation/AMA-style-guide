@@ -1,16 +1,16 @@
 {% include 'organisms-ribbon' %}
 {% include '02-organisms/05-ec/01-ec-search-bar/ec-search-bar.twig' %}
 
-{# Some type of hero #}
+{# hero #}
 <div class="layout layout-one-up">
-  {% include 'molecules-hub-hero-no-overlay' %}
+  {% include 'molecules-hub-hero-no-overlay' with {'heroContent': heroContent} %}
 </div>
 
-{# begin the next section #}
+{# card section #}
 <section class="ec-section">
-  {% include 'organisms-card-row-ec-three-up'%}
-  {% include 'organisms-card-row-ec-four-up'%}
-  {% include 'organisms-card-row-ec-five-up'%}
+  {% include 'organisms-card-row-ec-five-up' with {'cardRowContent': cardRowContent} %}
+  {% include 'organisms-card-row-ec-four-up' with {'cardRowContent': cardRowContent} %}
+  {% include 'organisms-card-row-ec-three-up' with {'cardRowContent': cardRowContent} %}
 </section>
 
 {% include 'organisms-footer' %}

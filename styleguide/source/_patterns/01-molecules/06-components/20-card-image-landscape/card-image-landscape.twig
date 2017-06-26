@@ -1,6 +1,6 @@
 <a class="card card-image-landscape" style="background-image: url(../../assets/images/fpo_2x3.png)" href="#">
   <span class="card-image-landscape_overlay">
-      {% include 'atoms-h2' with { 'class': 'card-image-landscape_title', 'content' : 'Leading Change' } %}
-      {% include 'atoms-paragraph' with { 'class': 'card-image-landscape_description', 'content' : 'Over 300 Courses' } %}
+      {% include 'atoms-h2' with { 'class': 'card-image-landscape_title', 'content' : cardRowContent.title } %}
+      {% include 'atoms-paragraph' with { 'class': 'card-image-landscape_description', 'content' : cardRowContent.content } %}
   </span>
 </a>
