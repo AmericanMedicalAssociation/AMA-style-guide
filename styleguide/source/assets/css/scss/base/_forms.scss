@@ -110,6 +110,9 @@ select {
   background-position: calc(100% - 8px) 52%;
   background-repeat: no-repeat;
   padding-right: 30px;
+  -moz-appearance: none; /*removes default dropdown arrow in Firefox*/
+  text-indent: 0.01px; /*removes default dropdown arrow in Firefox*/
+  text-overflow: ''; /*removes default dropdown arrow in Firefox*/
 }
 
 // Placeholder text styles
