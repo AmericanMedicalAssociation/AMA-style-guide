@@ -2,9 +2,20 @@
 
 ## Templating
 
-Markup for each pattern in our style guide is created with [Twig](http://twig.sensiolabs.org/), a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns. 
+Markup for each pattern in our style guide is created with [Twig](http://twig.sensiolabs.org/), a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns.
 
 You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."
+
+### Placeholder Images
+Images should only be committed to the style guide when they are providing "real representative content" in [Pattern Lab "Page" components](http://atomicdesign.bradfrost.com/chapter-2/#pages). Otherwise, dynamic placeholder images should be used. Placeholders should be generated in the form `https://ipsumimage.appspot.com/600x400?l=3x2|600x400&s=36` using the reduced ratio of the image for the benefit of the content team and the rendered dimensions of the image for the benefit of development teams implementing the pattern in a CMS.
+
+Breaking this url down:
+- `http://ipsumimage.appspot.com/`: the image generator. More [documentation available there](http://ipsumimage.appspot.com/).
+- `600x400` the width x height with which the placeholder image will be generated
+- `?l=3x2|600x400` the label text, with a pipe (|) separating lines. Our images should use [ratio]|[dimensions].
+- `&s=36` the text size. This should only be tweaked if necessary.\
+
+![This is a placeholder image](https://ipsumimage.appspot.com/600x400?l=3x2|600x400&s=36)
 
 ## HTML
 
@@ -16,14 +27,14 @@ For a list of all valid HTML5 tags, please consult the [MDN element reference ch
 
 ### Aria Tags & Accessibility
 
-Get reading! 
+Get reading!
 
 [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA]()
 
 ## Styling
 
 ### SASS/SCSS
-We use [Sassy CSS (SCSS)](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) for styling. SCSS files are stored in the directory for each pattern and imported in `/source/assets/css/styles.scss`, 
+We use [Sassy CSS (SCSS)](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) for styling. SCSS files are stored in the directory for each pattern and imported in `/source/assets/css/styles.scss`,
 
 ### Name classes using BEM
 Class names and hierarchy follow the [BEM (Block Element Modifier)](http://getbem.com/) namespacing methodology to facilitate code sharing among designers and developers. For easier reading and more concise class names, we use the abridged syntax recommended in the [18F Front End Guide](https://frontend.18f.gov/#bem).
@@ -60,8 +71,8 @@ We use jQuery in our applications, so you should make sure your pattern's .js fi
 
 
 
-	(function($) { 
-		//your pattern javascript here 
+	(function($) {
+		//your pattern javascript here
 	}(jQuery);
 
 If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.
