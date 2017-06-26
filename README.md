@@ -92,3 +92,14 @@ For example, to use the side-by-side Two Up Layout, add the <code>layout_two_up<
 Note: you should not need to nest elements with class <code>.layout</code>.
 
 The <code>.layout</code> and <code>.layout_number_up</code> classes can be added to container elements both in individual patterns (i.e. organisms) and in the Twig templates that include them (e.g. templates). In general, if a specific pattern can be assumed to always use the same layout, it's fine to include the layout within that pattern.
+
+### Placeholder Images
+Images should only be committed to the style guide when they are providing "real representative content" in [Pattern Lab "Page" components](http://atomicdesign.bradfrost.com/chapter-2/#pages). Otherwise, dynamic placeholder images should be used. Placeholders should be generated in the form `https://ipsumimage.appspot.com/600x400?l=3x2|600x400&s=36` using the reduced ratio of the image for the benefit of the content team and the rendered dimensions of the image for the benefit of development teams implementing the pattern in a CMS.
+
+Breaking this url down:
+- `http://ipsumimage.appspot.com/`: the image generator. More [documentation available there](http://ipsumimage.appspot.com/).
+- `600x400` the width x height with which the placeholder image will be generated
+- `?l=3x2|600x400` the label text, with a pipe (|) separating lines. Our images should use [ratio]|[dimensions].
+- `&s=36` the text size. This should only be tweaked if necessary.\
+
+![This is a placeholder image](https://ipsumimage.appspot.com/600x400?l=3x2|600x400&s=36)
