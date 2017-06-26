@@ -1,8 +1,49 @@
 {
-  "cardText": {
-    "contentCardNoImage": {
-      "title": "test hi",
-      "content": "Zika, Opiods, Ethics, and more"
+  "heroContent": {
+    "heading": "Earn CME credits, on your own time",
+    "content": "Pede mi consectetuer, consectetuer laoreet dui cursus id, nulla adipiscing",
+    "buttonText": "Start a Course"
+  },
+  "cardRowContent": {
+    "cardsLandscape": {
+      "first": {
+        "title": "Clinical",
+        "content": "Over 400 Courses"
+      },
+      "second": {
+        "title": "Workflow & Process",
+        "content": "Over 300 Courses"
+      },
+      "third": {
+        "title": "Patient Care",
+        "content": "Over 100 Courses"
+      },
+      "fourth": {
+        "title": "Leading Change",
+        "content": "Over 200 Courses"
+      },
+      "fifth": {
+        "title": "Personal Well-being",
+        "content": "Over 300 Courses"
+      }
+    },
+    "cardsNoText": {
+      "first": {
+        "title": "Clinical",
+        "content": "Over 400 Courses"
+      },
+      "second": {
+        "title": "Workflow & Process",
+        "content": "Over 300 Courses"
+      },
+      "third": {
+        "title": "Patient Care",
+        "content": "Over 100 Courses"
+      },
+      "fourth": {
+        "title": "Leading Change",
+        "content": "Over 200 Courses"
+      }
     }
   }
 }
