@@ -1,4 +1,4 @@
-.ec-bundle-card {
+.ec-card-course-bundle {
   display: flex;
   flex-direction: column;
   background-color: $black-7;
@@ -6,12 +6,12 @@
   padding: 24px;
   width: 100%;
   margin-bottom: 20px;
-  text-align: center;
 
   @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
 
   @include breakpoint($bp-med) {
     @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+    padding: 0;
   }
 
   &:hover {
@@ -22,14 +22,14 @@
   @include breakpoint($bp-small $bp-med) {
     flex-direction: row;
 
-    .ec-bundle-card_image {
+    .ec-card-course-bundle_image {
       display: inline-block;
       max-width: 100%;
       height: auto;
       @include grid__unit--cols(4);
     }
 
-    .ec-bundle-card_text {
+    .ec-card-course-bundle_text {
       display: inline-block;
       margin: 0 24px;
       text-align: left;
@@ -38,6 +38,12 @@
   }
 
   @include breakpoint($bp-med) {
+    max-width: 400px;
+    
+    .ec-card-course-bundle_text{
+      padding: 14px;
+    }
+
     // 2-up layout
     // when there are three items it's 50:50
     &:nth-child(1):nth-last-child(2) {
@@ -87,12 +93,12 @@
   }
 }
 
-.ec-bundle-card_image {
+.ec-card-course-bundle_image {
   width: 100%;
   min-height: 100px;
 }
 
-.ec-bundle-card_title {
+.ec-card-course-bundle_title {
   @extend %type-larger;
   min-height: 64px;   //hold space for 2 lines of text
 
