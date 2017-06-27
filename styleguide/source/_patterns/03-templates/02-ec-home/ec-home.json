@@ -56,5 +56,11 @@
     "quote": "A Testimonial ipsum dolor sit amet, fringilla leo libero integer ut, elementum maecenas mi amet commodo pellentesque, quis odio. Dolor posuere tempor quam et, maecenas auctor hac urna ac eu, sed in.",
     "speakerName": "Dr. Elena Jonson",
     "speakerTitle": "Otolaryngology"
+  },
+  "ctaBanner": {
+    "heading": "Accessible anywhere, anytime",
+    "image": "../../assets/images/devices.jpg",
+    "content": "Pede mi consectetuer, consectetuer laoreet dui cursus id, nulla adipiscing",
+    "buttonText": "Start a Course"
   }
 }
