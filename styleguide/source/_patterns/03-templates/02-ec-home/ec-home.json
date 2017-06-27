@@ -47,6 +47,9 @@
       "button": {
         "content": "Browse Courses"
       }
+    },
+    "cardsCourses": {
+      "heading": "Browse Our Top Courses"
     }
   }
 }
