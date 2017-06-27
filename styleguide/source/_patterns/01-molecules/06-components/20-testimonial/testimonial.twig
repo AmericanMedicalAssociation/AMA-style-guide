@@ -5,8 +5,8 @@
   <div class="testimonial_text">
       {% include 'atoms-paragraph' with { 'class': 'testimonial_quote', 'content': testimonial.quote } %}
       <p class="testimonial_speaker">
-          <span class="testimonial_speaker_person">{{ testimonial.speakerName }}</span>,
-          <span class="testimonial_speaker_title">{{ testimonial.speakerTitle }}</span>
+          <span class="testimonial_speaker_person">{{ testimonial.speakerName ? testimonial.speakerName : 'Bob M. Doctor' }}</span>,
+          <span class="testimonial_speaker_title">{{ testimonial.speakerTitle ? testimonial.speakerTitle : 'Doctorology'}}</span>
       </p>
   </div>
 </article>
