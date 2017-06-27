@@ -47,6 +47,9 @@
       "button": {
         "content": "Browse Courses"
       }
+    },
+    "cardsCourseBundles": {
+      "heading": "Get ahead with Course Bundles"
     }
   }
 }
