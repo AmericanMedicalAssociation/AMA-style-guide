@@ -43,6 +43,9 @@
       "fourth": {
         "title": "From Sources You Trust",
         "content": "AMA, CDC, Mayo Clinic, and more"
+      },
+      "button": {
+        "content": "Browse Courses"
       }
     }
   }
