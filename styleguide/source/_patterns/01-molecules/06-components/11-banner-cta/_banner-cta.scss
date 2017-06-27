@@ -115,6 +115,8 @@
 }
 
 .banner-cta-no-stacking_image {
+  background-size: contain;
+  
   @include breakpoint($bp-med) {
     min-height: calc((((100vw -  42px) / 2) / 3) * 2);
     width: 50%;
