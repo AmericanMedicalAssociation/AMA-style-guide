@@ -38,6 +38,8 @@
   }
 
   @include breakpoint($bp-med) {
+    max-width: 400px;
+    
     .ec-card-course-bundle_text{
       padding: 14px;
     }
