@@ -1,4 +1,4 @@
-.ec-bundle-card {
+.ec-card-course-bundle {
   display: flex;
   flex-direction: column;
   background-color: $black-7;
@@ -22,14 +22,14 @@
   @include breakpoint($bp-small $bp-med) {
     flex-direction: row;
 
-    .ec-bundle-card_image {
+    .ec-card-course-bundle_image {
       display: inline-block;
       max-width: 100%;
       height: auto;
       @include grid__unit--cols(4);
     }
 
-    .ec-bundle-card_text {
+    .ec-card-course-bundle_text {
       display: inline-block;
       margin: 0 24px;
       text-align: left;
@@ -87,12 +87,12 @@
   }
 }
 
-.ec-bundle-card_image {
+.ec-card-course-bundle_image {
   width: 100%;
   min-height: 100px;
 }
 
-.ec-bundle-card_title {
+.ec-card-course-bundle_title {
   @extend %type-larger;
   min-height: 64px;   //hold space for 2 lines of text
 
