@@ -1,13 +1,26 @@
 <div class="layout layout_three_up">
-  <div class="layout_three_up-row">
-    <div class="layout_item layout_three_up-primary">
-      {% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.first} %}
+    <div class="layout_three_up-row">
+        {% if cardType == 'landscape' %}
+            <div class="layout_item layout_three_up-primary">
+                {% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.first} %}
+            </div>
+            <div class="layout_item layout_three_up-secondary">
+                {% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.second} %}
+            </div>
+            <div class="layout_item layout_three_up-tertiary">
+                {% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.third} %}
+            </div>
+        {% else %}
+            {# If this pattern is being accessed on its own, use the .json file in its pattern directory by default. #}
+            <div class="layout_item layout_three_up-primary">
+                {% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.first} %}
+            </div>
+            <div class="layout_item layout_three_up-secondary">
+                {% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.second} %}
+            </div>
+            <div class="layout_item layout_three_up-tertiary">
+                {% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.third} %}
+            </div>
+        {% endif %}
     </div>
-    <div class="layout_item layout_three_up-secondary">
-      {% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.second} %}
-    </div>
-    <div class="layout_item layout_three_up-tertiary">
-      {% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.third} %}
-    </div>
-  </div>
 </div>
