@@ -27,12 +27,13 @@
 
 .testimonial_image span {
   margin: auto 0;
-  min-height: calc((100vw - 60px) / 2 * 3);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 400px;
 
   @include breakpoint($bp-small) {
+    height: auto;
     min-height: calc((100vw -  60px) / 3 * 2);
   }
 
