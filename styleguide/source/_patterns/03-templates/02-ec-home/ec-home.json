@@ -27,22 +27,22 @@
         "content": "Over 300 Courses"
       }
     },
-    "cardsNoText": {
+    "cardsNoImage": {
       "first": {
-        "title": "Clinical",
-        "content": "Over 400 Courses"
+        "title": "Relevant and Timely Topics",
+        "content": "Zika, Opiods, Ethics, and more"
       },
       "second": {
-        "title": "Workflow & Process",
-        "content": "Over 300 Courses"
+        "title": "In the Format You Want",
+        "content": "Podcasts, Videos, Journals, Live"
       },
       "third": {
-        "title": "Patient Care",
-        "content": "Over 100 Courses"
+        "title": "Certifications You Need",
+        "content": "Category 1 & 2 CME, MOC, and more"
       },
       "fourth": {
-        "title": "Leading Change",
-        "content": "Over 200 Courses"
+        "title": "From Sources You Trust",
+        "content": "AMA, CDC, Mayo Clinic, and more"
       }
     }
   }

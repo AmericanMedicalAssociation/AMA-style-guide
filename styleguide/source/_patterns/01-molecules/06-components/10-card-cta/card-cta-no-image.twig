@@ -1,6 +1,6 @@
 <a class="card-cta" href="#">
   {#{% include 'atoms-h2' with { 'class': 'card-cta_title', 'content' : 'Leadership & Elections' } %}#}
-    {% include 'atoms-h2' with { 'class': 'card-cta_title', 'content' : cardRowContent.cardsNoImage.title } %}
+    {% include 'atoms-h2' with { 'class': 'card-cta_title card-cta_title-no-border', 'content': cardRowContent.title } %}
   {#{% include 'atoms-paragraph' with { 'class': 'card-cta_desc', 'content' : 'View the results of the election—the new governing council is ready to serve the Women Physician Section. View the results of the election—the new governing council is ready to serve the Women Physician Section.' } %}#}
-    {% include 'atoms-paragraph' with { 'class': 'card-cta_desc', 'content' : cardRowContent.cardsNoImage.content } %}
+    {% include 'atoms-paragraph' with { 'class': 'card-cta_desc', 'content': cardRowContent.content } %}
 </a>

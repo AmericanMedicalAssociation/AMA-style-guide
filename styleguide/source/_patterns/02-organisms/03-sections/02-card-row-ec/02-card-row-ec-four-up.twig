@@ -1,13 +1,13 @@
 {% if cardType == 'landscape' %}
-<div class="layout layout-four-up">
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.first} %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.second} %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.third} %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.fourth} %}</div>
-</div>
+    <div class="layout layout-four-up">
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.first} %}</div>
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.second} %}</div>
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.third} %}</div>
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.fourth} %}</div>
+    </div>
 {% endif %}
 {% if cardType == 'text' %}
-    <div class="layout layout-four-up">
+    <div class="layout layout-four-up test">
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.first} %}</div>
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.second} %}</div>
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.third} %}</div>
