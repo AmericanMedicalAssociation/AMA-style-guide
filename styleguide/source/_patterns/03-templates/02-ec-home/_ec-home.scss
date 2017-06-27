@@ -1,0 +1,42 @@
+.ec > *:not(:first-child) {
+  margin-top: 36px;
+}
+
+.ec .hub-hero {
+  margin-top: 0;
+}
+
+// Styling for no-image cards when they're included on an EC page.
+.ec .card-cta_title.card-cta_title-no-border {
+  border: 0;
+  padding-bottom: 0;
+}
+
+// Styling for the text cards section.
+.ec_cards-text {
+  text-align: center;
+}
+
+.ec_cards-course-bundle h2 {
+  text-align: center;
+}
+
+.ec .tabs-course_browser_label,
+.ec_cards-course-bundle > h2 {
+  max-width: 1200px;
+  border-top: solid 1px $black-20;
+  padding-top: 36px;
+  margin: 25px auto;
+  margin-top: 60px;
+}
+
+.ec .testimonial,
+.ec .banner-cta-no-stacking {
+  border-top: solid 1px $black-20;
+  padding-top: 60px;
+}
+
+.ec .banner-cta-no-stacking { // not ideal, but temporary until the partner logo row layout can be fixed.
+  border-bottom: solid 1px $black-20;
+  padding-bottom: 60px;
+}

@@ -38,18 +38,3 @@
     min-height: calc((1260px - 60px - 72px) / 3 * 2 / 4);
   }
 }
-
-// Styling for no-image cards when they're included on an EC page.
-.card-cta_title.card-cta_title-no-border {
-  border: 0;
-  padding-bottom: 0;
-}
-
-// Styling for the text cards section.
-.ec_cards-text {
-  text-align: center;
-}
-
-.ec_cards-course-bundle h2 {
-  text-align: center;
-}
