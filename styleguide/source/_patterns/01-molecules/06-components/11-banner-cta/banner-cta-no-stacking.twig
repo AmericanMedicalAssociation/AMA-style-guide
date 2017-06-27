@@ -1,11 +1,8 @@
 <article class="banner-cta-no-stacking">
-    {#{% include 'atoms-h1' with { 'content': 'Lorem ipsum dolor sit amet', 'class': 'banner-cta-no-stacking_title' } %}#}
-    {% include 'atoms-h2' with { 'content': ctaBanner.heading, 'class': 'banner-cta-no-stacking_title' } %}
-    {#<div class="banner-cta-no-stacking_image" style="background-image: url(../../assets/images/fpo_3x2.png)"></div>#}
-    <div class="banner-cta-no-stacking_image" style="background-image: url(' {{ ctaBanner.image }}');"></div>
+    {% include 'atoms-h2' with { 'content': ctaBanner.heading ? ctaBanner.heading : 'Lorem ipsum dolor sit amet', 'class': 'banner-cta-no-stacking_title' } %}
+    <div class="banner-cta-no-stacking_image" style="background-image: url(' {{ ctaBanner.image ? ctaBanner.image : '../../assets/images/fpo_3x2.png' }}');"></div>
     <div class="banner-cta-no-stacking_text">
-        {#{% include 'atoms-paragraph' with { content: 'Dolor posuere tempor quam et, maecenas auctor hac urna ac eu, sed in.' } %}#}
-        {% include 'atoms-paragraph' with { content: ctaBanner.content } %}
-        {% include 'atoms-button-link' with { content: ctaBanner.buttonText, class: 'button-small banner-cta-no-stacking_button' } %}
+        {% include 'atoms-paragraph' with { content: ctaBanner.content ? ctaBanner.content : 'Dolor posuere tempor quam et, maecenas auctor hac urna ac eu, sed in.' } %}
+        {% include 'atoms-button-link' with { content: ctaBanner.buttonText ? ctaBanner.buttonText : 'CTA button', class: 'button-small banner-cta-no-stacking_button' } %}
     </div>
 </article>
