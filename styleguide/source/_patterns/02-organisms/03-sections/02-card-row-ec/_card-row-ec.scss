@@ -19,23 +19,23 @@
   }
 }
 
-// Styling for landscape card images when they're in a Four Up layout.
+// Styling for cards when they're in a Four Up layout.
 
 .layout-four-up .layout_item {
   @include breakpoint($bp-small max-width) {
-    height: calc((100vw - 60px) / 3 * 2);
+    min-height: calc((100vw - 60px) / 3 * 2);
   }
 
   @include breakpoint($bp-small) {
-    height: calc((100vw - 60px - 24px) / 3 * 2 / 2);
+    min-height: calc((100vw - 60px - 24px) / 3 * 2 / 2);
   }
 
   @include breakpoint($bp-med) {
-    height: calc((100vw - 60px - 72px) / 3 * 2 / 4);
+    min-height: calc((100vw - 60px - 72px) / 3 * 2 / 4);
   }
 
   @include breakpoint($bp-large) {
-    height: calc((1260px - 60px - 72px) / 3 * 2 / 4);
+    min-height: calc((1260px - 60px - 72px) / 3 * 2 / 4);
   }
 }
 
