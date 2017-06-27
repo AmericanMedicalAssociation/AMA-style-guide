@@ -51,5 +51,10 @@
     "cardsCourseBundles": {
       "heading": "Get ahead with Course Bundles"
     }
+  },
+  "testimonial": {
+    "quote": "A Testimonial ipsum dolor sit amet, fringilla leo libero integer ut, elementum maecenas mi amet commodo pellentesque, quis odio. Dolor posuere tempor quam et, maecenas auctor hac urna ac eu, sed in.",
+    "speakerName": "Dr. Elena Jonson",
+    "speakerTitle": "Otolaryngology"
   }
 }
