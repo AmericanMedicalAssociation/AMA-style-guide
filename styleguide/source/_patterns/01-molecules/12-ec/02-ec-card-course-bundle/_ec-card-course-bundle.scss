@@ -6,12 +6,12 @@
   padding: 24px;
   width: 100%;
   margin-bottom: 20px;
-  text-align: center;
 
   @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
 
   @include breakpoint($bp-med) {
     @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+    padding: 0;
   }
 
   &:hover {
@@ -38,6 +38,10 @@
   }
 
   @include breakpoint($bp-med) {
+    .ec-card-course-bundle_text{
+      padding: 14px;
+    }
+
     // 2-up layout
     // when there are three items it's 50:50
     &:nth-child(1):nth-last-child(2) {
