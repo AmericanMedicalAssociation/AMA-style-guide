@@ -47,13 +47,17 @@
 }
 
 .testimonial_text {
-  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.45);
 
-  @include breakpoint($bp-med max-width) {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.45);
-    padding: 15px;
+  @include breakpoint($bp-small) {
+    padding: 30px;
+  }
+
+  @include breakpoint($bp-med) {
+    position: relative;
   }
 }
 
