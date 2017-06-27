@@ -16,9 +16,9 @@
 {% endif %}
 {% if cardType == 'courseBundle' %}
     <div class="layout layout-four-up test">
-        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.first} %}</div>
-        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.second} %}</div>
-        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.third} %}</div>
-        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.fourth} %}</div>
+        <div class="layout_item">{% include 'molecules-ec-bundle-card' %}</div>
+        <div class="layout_item">{% include 'molecules-ec-bundle-card' %}</div>
+        <div class="layout_item">{% include 'molecules-ec-bundle-card' %}</div>
+        <div class="layout_item">{% include 'molecules-ec-bundle-card' %}</div>
     </div>
 {% endif %}
