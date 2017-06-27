@@ -7,26 +7,36 @@
 </div>
 
 {# card section #}
-<section class="ec-section">
-    {% include 'organisms-card-row-ec-five-up-left' with {'cardType': 'landscape'} %}
-    {#{% include 'organisms-card-row-ec-four-up' with {'cardType': 'landscape'} %}#}
+<section class="ec_cards-landscape">
+    {#{% include 'organisms-card-row-ec-five-up-left' with {'cardType': 'landscape'} %}#}
+    {% include 'organisms-card-row-ec-four-up' with {'cardType': 'landscape'} %}
     {#{% include 'organisms-card-row-ec-three-up' with {'cardType': 'landscape'} %}#}
 </section>
 
-{% include 'organisms-card-row-ec-four-up' with {'cardType': 'text'} %}
+<section class="ec_cards-text">
+    {% include 'organisms-card-row-ec-four-up' with {'cardType': 'text'} %}
+    {% include 'atoms-button-link' with { 'content': cardRowContent.cardsNoImage.button.content, 'class': 'button-small ec_cards-text_button' } %}
+</section>
 
-{% include 'atoms-button-link' with { 'content': cardRowContent.cardsNoImage.button.content, 'class': 'button-small' } %}
+<section class="ec_course-browser">
+    {% include 'organisms-ec-tabs-course-browser' %}
+</section>
 
-{% include 'organisms-ec-tabs-course-browser' %}
+<section class="ec_cards-course-bundle">
+    {% include 'atoms-h2' with { 'content': cardRowContent.cardsCourseBundles.heading, 'class': 'ec-marketing-page_heading' } %}
+    {% include 'organisms-card-row-ec-four-up' with {'cardType': 'courseBundle'} %}
+</section>
 
-{% include 'atoms-h2' with { 'content': cardRowContent.cardsCourseBundles.heading, 'class': 'ec-marketing-page_heading' } %}
+<section class="ec_testimonial layout">
+    {% include 'molecules-testimonial' with { 'content': testimonial } %}
+</section>
 
-{% include 'organisms-card-row-ec-four-up' with {'cardType': 'courseBundle'} %}
+<section class="ec_banner-cta-no-stacking layout">
+    {% include 'molecules-banner-cta-no-stacking' with { 'content': ctaBanner } %}
+</section>
 
-{% include 'molecules-testimonial' with { 'content': testimonial } %}
-
-{% include 'molecules-banner-cta-no-stacking' with { 'content': ctaBanner } %}
-
-{% include 'organisms-ec-partner-row' %}
+<section class="ec_partner-row">
+    {% include 'organisms-ec-partner-row' %}
+</section>
 
 {% include 'organisms-footer' %}

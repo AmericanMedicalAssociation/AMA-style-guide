@@ -6,14 +6,14 @@
         <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.fourth} %}</div>
     </div>
 {% elseif cardType == 'text' %}
-    <div class="layout layout-four-up test">
+    <div class="layout layout-four-up">
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.first} %}</div>
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.second} %}</div>
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.third} %}</div>
         <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.fourth} %}</div>
     </div>
 {% elseif cardType == 'courseBundle' %}
-    <div class="layout layout-four-up test">
+    <div class="layout layout-four-up">
         <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
         <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
         <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
@@ -21,7 +21,7 @@
     </div>
 {% else %}
 {# If this pattern is being accessed on its own, use the .json file in its pattern directory by default. #}
-    <div class="layout layout-four-up test">
+    <div class="layout layout-four-up">
         <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.first} %}</div>
         <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.second} %}</div>
         <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.third} %}</div>

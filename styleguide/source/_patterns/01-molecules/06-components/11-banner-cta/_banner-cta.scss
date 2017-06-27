@@ -20,7 +20,6 @@
 
 .banner-cta-no-stacking {
   text-align: center;
-  padding: 30px;
 
   @include breakpoint($bp-med) {
     flex-direction: row;
