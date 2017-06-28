@@ -7,7 +7,6 @@
   flex-direction: column;
   background-color: $black-7;
   color: $black;
-  //margin-bottom: 20px;
   text-align: center;
   height: 100%;
 }
@@ -15,15 +14,6 @@
 .card-image-landscape {
   background-size: cover;
   background-position: center;
-  //min-height: calc((100vw - 30px) / 3 * 2);
-
-  @include breakpoint($bp-small) {
-    //min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 3 );
-  }
-
-  @include breakpoint($bp-med) {
-    //min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 4 );
-  }
 }
 
 .card.card-image-landscape:hover {
