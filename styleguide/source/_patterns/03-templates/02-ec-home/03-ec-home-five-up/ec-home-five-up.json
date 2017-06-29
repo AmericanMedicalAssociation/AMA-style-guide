@@ -59,7 +59,7 @@
   },
   "ctaBanner": {
     "heading": "Accessible anywhere, anytime",
-    "image": "../../assets/images/devices.jpg",
+    "image": "https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36",
     "content": "Pede mi consectetuer, consectetuer laoreet dui cursus id, nulla adipiscing",
     "buttonText": "Start a Course"
   }
