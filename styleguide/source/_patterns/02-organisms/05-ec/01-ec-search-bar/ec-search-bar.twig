@@ -1,8 +1,10 @@
-<div class="ec_search-bar_inner layout">
-  <div class="ec_search-bar_library">
-    {% include "atoms-button-link-secondary" with {'content': 'Library'} %}
+<section class="ec_search-bar">
+  <div class="ec_search-bar_inner layout">
+    <div class="ec_search-bar_library">
+      {% include "atoms-button-link-secondary" with {'content': 'Library'} %}
+    </div>
+    <div class="ec_search-bar_form">
+      {% include "molecules-search-field" with {'placeholder': 'Search Courses'} %}
+    </div>
   </div>
-  <div class="ec_search-bar_form">
-    {% include "molecules-search-field" with {'placeholder': 'Search Courses'} %}
-  </div>
-</div>
+</section>
