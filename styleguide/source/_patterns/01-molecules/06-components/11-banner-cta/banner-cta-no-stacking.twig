@@ -1,8 +1,8 @@
 <div class="banner-cta-no-stacking">
-    {% include 'atoms-h2' with { 'content': ctaBanner.heading ? ctaBanner.heading : 'Lorem ipsum dolor sit amet', 'class': 'banner-cta-no-stacking_title h1' } %}
-    <div class="banner-cta-no-stacking_image" style="background-image: url(' {{ ctaBanner.image ? ctaBanner.image : 'https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36' }}');"></div>
+    {% include 'atoms-h2' with { 'content': ctaBanner.heading, 'class': 'banner-cta-no-stacking_title h1' } %}
+    <div class="banner-cta-no-stacking_image" style="background-image: url(' {{ ctaBanner.image }}');"></div>
     <div class="banner-cta-no-stacking_text">
-        {% include 'atoms-paragraph' with { content: ctaBanner.content ? ctaBanner.content : 'Dolor posuere tempor quam et, maecenas auctor hac urna ac eu, sed in.' } %}
-        {% include 'atoms-button-link' with { content: ctaBanner.buttonText ? ctaBanner.buttonText : 'CTA button', class: 'button-small banner-cta-no-stacking_button' } %}
+        {% include 'atoms-paragraph' with { content: ctaBanner.content } %}
+        {% include 'atoms-button-link' with { content: ctaBanner.buttonText, class: 'button-small banner-cta-no-stacking_button' } %}
     </div>
 </div>

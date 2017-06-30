@@ -1,9 +1,9 @@
 <section class="hub-hero hub-hero-no-overlay" style="background-image: url('https://ipsumimage.appspot.com/1200x400?l=3:1|1200x400&s=36')">
   <div class="hub-hero-inner">
-    {% include 'atoms-h1' with { 'content': heroContent.heading ? heroContent.heading : 'Lorem ipsum dolor sit amet', 'class': 'hub-hero_title' } %}
-    {% include 'atoms-paragraph' with { 'content': heroContent.content ? heroContent.content : 'Gain an active voice on politics protecting patients and your profession', 'class': 'hub-hero_desc' } %}
+    {% include 'atoms-h1' with { 'content': heroContent.heading, 'class': 'hub-hero_title' } %}
+    {% include 'atoms-paragraph' with { 'content': heroContent.content, 'class': 'hub-hero_desc' } %}
     <div class="hub-hero_button-container">
-      {% include 'atoms-button-link' with { 'content': heroContent.buttonText ? heroContent.buttonText : 'Join the AMA', 'class': 'button-small' } %}
+      {% include 'atoms-button-link' with { 'content': heroContent.buttonText, 'class': 'button-small' } %}
     </div>
   </div>
 </section>
