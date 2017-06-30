@@ -13,9 +13,7 @@
 
         {# card section #}
         <section class="ec_cards-landscape">
-            {#{% include 'organisms-card-row-ec-three-up' with {'cardType': 'landscape'} %}#}
             {% include 'organisms-card-row-ec-four-up' with {'cardRowContent': cardRowContent.cardsLandscape} %}
-            {#{% include 'organisms-card-row-ec-five-up-left' with {'cardType': 'landscape'} %}#}
         </section>
 
         <section class="ec_cards-text">
@@ -34,12 +32,10 @@
 
         <section class="ec_testimonial layout">
             {% include 'molecules-testimonial' with { 'content': testimonial } %}
-            {#{% include 'molecules-testimonial-left' with { 'content': testimonial } %}#}
         </section>
 
         <section class="ec_banner-cta-no-stacking layout">
             {% include 'molecules-banner-cta-no-stacking' with { 'content': ctaBanner } %}
-            {#{% include 'molecules-banner-cta-no-stacking-left' with { 'content': ctaBanner } %}#}
         </section>
 
         <section class="ec_partner-row">
