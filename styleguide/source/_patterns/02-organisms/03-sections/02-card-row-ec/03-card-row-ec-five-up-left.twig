@@ -1,19 +1,9 @@
 <div class="layout layout_five-up-left">
-  {% if cardType == 'landscape' %}
-  <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.first} %}</div>
+  <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.first} %}</div>
   <div class="layout_item layout_item-container">
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.second} %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.third} %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.fourth} %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.cardsLandscape.fifth}  %}</div>
-    {% else %}
-    {# If this pattern is being accessed on its own, use the .json file in its pattern directory by default. #}
-    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.first} %}</div>
-    <div class="layout_item layout_item-container">
-      <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.second} %}</div>
-      <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.third} %}</div>
-      <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.fourth} %}</div>
-      <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.fifth}  %}</div>
-    {% endif %}
+    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.second} %}</div>
+    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.third} %}</div>
+    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.fourth} %}</div>
+    <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardsLandscape.fifth}  %}</div>
   </div>
 </div>
