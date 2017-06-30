@@ -1,4 +1,5 @@
 {% if not cardType %}
+    {# Landscape image card is the default if no card type is passed. #}
     <div class="layout layout-four-up">
         <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.first} %}</div>
         <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.second} %}</div>
