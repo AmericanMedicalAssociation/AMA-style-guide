@@ -20,7 +20,33 @@
   text-align: center;
 }
 
-.ec_cards-course-bundle h2 {
+// Styling for the course bundle cards section.
+@include breakpoint($bp-med max-width) {
+  .ec_cards-course-bundle {
+    margin-bottom: 24px;
+  }
+
+  .ec_cards-course-bundle .layout {
+    padding: 0;
+  }
+
+  .ec-card-course-bundle {
+    margin-bottom: 0;
+  }
+
+  .ec_cards-course-bundle .layout_item {
+    min-height: initial;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .ec_cards-course-bundle .layout_item:nth-child(even) .ec-card-course-bundle {
+    background: white;
+  }
+}
+
+.ec_cards-course-bundle > h2 {
   text-align: center;
 }
 
