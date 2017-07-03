@@ -62,7 +62,7 @@
 
 .ec .testimonial,
 .ec .banner-cta-no-stacking {
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     border-top: solid 1px $black-20;
     padding-top: 60px;
   }
