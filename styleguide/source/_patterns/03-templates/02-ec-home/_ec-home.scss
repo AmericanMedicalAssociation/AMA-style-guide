@@ -20,6 +20,13 @@
   text-align: center;
 }
 
+.ec_cards-text .layout_item {
+  @include breakpoint($bp-small max-width) {
+    min-height: initial;
+    margin-bottom: 0;
+  }
+}
+
 // Styling for the course bundle cards section.
 @include breakpoint($bp-med max-width) {
   .ec_cards-course-bundle {
