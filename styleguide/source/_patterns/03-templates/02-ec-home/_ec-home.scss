@@ -2,8 +2,11 @@
   margin-top: 36px;
 }
 
-.ec .hub-hero {
-  margin-top: 0;
+.ec_hero {
+  @include breakpoint($bp-small max-width) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 // Styling for no-image cards when they're included on an EC page.
