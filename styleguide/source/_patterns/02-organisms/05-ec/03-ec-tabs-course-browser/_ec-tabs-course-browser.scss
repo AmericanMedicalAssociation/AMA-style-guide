@@ -171,7 +171,7 @@
 // Striping on tablet
 .tabs-course_browser_list-cards {
 
-  @include breakpoint($bp-small $bp-med) {
+  @include breakpoint($bp-med max-width) {
 
     .tabs-course_browser_list-cards-item:nth-child(even) {
        a {
@@ -183,7 +183,6 @@
 
 // Individual course card layout.
 .tabs-course_browser_list-cards-item {
-  margin-bottom: 24px;
   width: 100%;
 
   &:nth-of-type(4n),
@@ -192,6 +191,7 @@
   }
 
   @include breakpoint($bp-med) {
+    margin-bottom: 24px;
     max-width: calc((100vw - 60px - 72px) / 4);
     flex-basis: calc((100vw - 60px - 72px) / 4);
 

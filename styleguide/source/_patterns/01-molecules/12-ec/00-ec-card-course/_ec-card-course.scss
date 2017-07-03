@@ -28,7 +28,7 @@
 }
 
 .ec_card-course_inner-secondary {
-  padding: 12px;
+  padding: 24px;
 
   @include breakpoint($bp-small $bp-med) {
     display: flex;
@@ -43,6 +43,11 @@
   display: block;
   margin: 0 auto;
   width: 100%;
+
+  @include breakpoint($bp-med max-width) {
+    padding: 24px;
+    padding-bottom: 12px;
+  }
 }
 
 .ec_card-course_duration {
