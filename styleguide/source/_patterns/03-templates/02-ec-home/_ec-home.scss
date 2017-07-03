@@ -35,8 +35,10 @@
 
 .ec .testimonial,
 .ec .banner-cta-no-stacking {
-  border-top: solid 1px $black-20;
-  padding-top: 60px;
+  @include breakpoint($bp-med) {
+    border-top: solid 1px $black-20;
+    padding-top: 60px;
+  }
 }
 
 .ec .banner-cta-no-stacking { // not ideal, but temporary until the partner logo row layout can be fixed.
