@@ -26,10 +26,10 @@
 // @todo - it should be an atom if this is the case.
 // @todo - also probably shouldn't be specific to landscape cards.
 .card-image-landscape_overlay {
+  position: absolute;
   background-color: rgba(255, 255, 255, 0.45);
   bottom: 0;
   padding: 24px 0;
-  position: absolute;
   width: 100%;
 
   * {

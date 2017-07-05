@@ -32,7 +32,9 @@
   }
 
   @include breakpoint($bp-small $bp-med) {
-    height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
+    //height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
+    height: auto;
+    overflow: visible;
   }
 }
 
@@ -117,7 +119,9 @@
   }
 
   .layout_five-up-left .card-image-landscape_overlay {
-    width: calc(100% - 48px);
+    //width: calc(100% - 48px);
+    background: $black-7;
+    padding: 12px 0;
   }
 }
 

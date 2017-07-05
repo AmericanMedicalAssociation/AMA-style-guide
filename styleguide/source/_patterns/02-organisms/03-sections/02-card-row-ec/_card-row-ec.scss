@@ -52,3 +52,21 @@
     min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 4 );
   }
 }
+
+.layout_five-up-left .card-image-landscape,
+.layout_three_up .card-image-landscape {
+  @include breakpoint($bp-small $bp-med) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.layout_five-up-left .card-image-landscape_overlay,
+.layout_three_up .card-image-landscape_overlay {
+  @include breakpoint($bp-small $bp-med) {
+    position: relative;
+    background: $black-7;
+    flex-grow: 1;
+    padding: 12px 0;
+  }
+}
