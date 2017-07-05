@@ -15,8 +15,31 @@
 .layout_three_up-tertiary {
   @include breakpoint($bp-small) {
     @include grid__unit--cols(4);
-    padding: 0 12px;
+    margin: 0 12px;
   }
+}
+
+.flexbox .layout_three_up-primary,
+.flexbox .layout_three_up-secondary,
+.flexbox .layout_three_up-tertiary {
+  @include breakpoint($bp-small) {
+    flex-basis: calc((100% - 48px) / 3);
+    max-width: calc((100% - 48px) / 3);
+    padding: 0;
+  }
+
+  @include breakpoint(1260px) {
+    flex-basis: calc((1260px - 60px - 48px) / 3);
+    max-width: calc((1260px - 60px - 48px) / 3);
+  }
+}
+
+.layout_item.layout_three_up-primary {
+  margin-left: 0;
+}
+
+.layout_three_up-tertiary {
+  margin-right: 0;
 }
 
 // Styling for cards when they're in a Four Up layout.
