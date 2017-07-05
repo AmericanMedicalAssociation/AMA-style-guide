@@ -203,6 +203,10 @@ li.tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
 .banner-cta-no-stacking_image {
   margin-top: 0;
 
+  @include breakpoint($bp-small $bp-med) {
+    min-height: calc(((80vw - 40px) / 3) * 2);
+  }
+
   @include breakpoint($bp-med) {
     margin-top: 12px;
   }
