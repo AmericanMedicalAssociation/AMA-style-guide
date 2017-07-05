@@ -170,6 +170,12 @@
   }
 }
 
+li.tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
+  @include breakpoint($bp-small $bp-med) {
+    padding-bottom: 12px;
+  }
+}
+
 .ec .testimonial {
   //@include breakpoint($bp-small) {
     border-top: solid 1px $black-20;
