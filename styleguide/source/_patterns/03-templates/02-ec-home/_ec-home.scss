@@ -1,11 +1,109 @@
-.ec > *:not(:first-child) {
+.ec > *,
+.ec .ec_main-content > * {
+  margin-bottom: 0;
   margin-top: 36px;
+
+  @include breakpoint($bp-med) {
+    margin-top: 48px;
+  }
 }
 
-.ec_hero {
+.ec_header {
+  margin-top: 0;
+}
+
+.layout.layout_five-up-left {
+  margin-bottom: 0;
+}
+
+.layout.layout_five-up-left .layout_item {
   @include breakpoint($bp-small max-width) {
-    margin: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.ec_hero,
+.ec_hero .hero-banner {
+  margin-top: 0;
+
+  @include breakpoint($bp-small max-width) {
     padding: 0;
+  }
+}
+
+.ec_hero .hero-banner {
+  margin-bottom: 0;
+}
+
+.ec .card-cta {
+  @include breakpoint($bp-small) {
+    height: 100%;
+  }
+}
+
+.ec_cards-text .layout-four-up .layout_item,
+.ec_course-browser .tabs-course_browser_list-cards-item {
+  @include breakpoint($bp-med) {
+    margin-bottom: 0;
+  }
+}
+
+.ec_cards-text_button {
+  @include breakpoint($bp-med) {
+    margin-top: 36px;
+  }
+}
+
+.ec_card-course_duration {
+  margin-bottom: 0;
+}
+
+.tabs-course_browser_list-cards-item:nth-child(3) {
+  @include breakpoint($bp-small max-width) {
+    margin-bottom: 0;
+  }
+}
+
+.tabs-course_browser_ctas,
+.tabs-course_browser_list-cards {
+  margin-top: 24px;
+}
+
+.tabs-course_browser_ctas {
+  @include breakpoint($bp-med) {
+    margin-top: 36px;
+  }
+}
+
+.ec .tabs-course_browser_list-tabs {
+  margin-bottom: 0;
+}
+
+.ec_cards-course-bundle .layout.layout-four-up {
+  @include breakpoint($bp-med) {
+    margin-top: 36px;
+  }
+}
+
+.ec_cards-course-bundle .layout_item, a.ec-card-course-bundle {
+  @include breakpoint($bp-med) {
+    margin-bottom: 0;
+  }
+}
+
+.ec .tabs-course_browser_list-tabs {
+  @include breakpoint($bp-med) {
+    margin-top: 12px;
+  }
+}
+
+.ec .layout_item.layout_item-container {
+  margin-bottom: 0;
+}
+
+.ec .layout_item-container .layout_item:nth-child(2) {
+  @include breakpoint($bp-small max-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -59,23 +157,47 @@
 }
 
 .ec .tabs-course_browser_label,
-.ec_cards-course-bundle > h2 {
+.ec_cards-course-bundle > h2,
+.banner-cta-no-stacking h2 {
   max-width: 1200px;
   border-top: solid 1px $black-20;
-  padding-top: 36px;
+  padding-top: 30px;
+  //padding-top: 36px;
   margin: 25px auto;
-  margin-top: 60px;
+  //margin-top: 60px;
+  @include breakpoint($bp-med) {
+    padding-top: 40px;
+  }
 }
 
-.ec .testimonial,
-.ec .banner-cta-no-stacking {
-  @include breakpoint($bp-small) {
+.ec .testimonial {
+  //@include breakpoint($bp-small) {
     border-top: solid 1px $black-20;
-    padding-top: 60px;
-  }
+  padding-top: 36px;
+  margin-bottom: 0;
+    //padding-top: 60px;
+  //}
+}
+
+.ec .ec_banner-cta-no-stacking {
+  margin-top: 10px;
 }
 
 .ec .banner-cta-no-stacking { // not ideal, but temporary until the partner logo row layout can be fixed.
   border-bottom: solid 1px $black-20;
-  padding-bottom: 60px;
+  padding-bottom: 36px;
+  margin-bottom: 0;
+  //padding-bottom: 60px;
+
+  @include breakpoint($bp-med) {
+    padding-bottom: 48px;
+  }
+}
+
+.banner-cta-no-stacking_image {
+  margin-top: 0;
+
+  @include breakpoint($bp-med) {
+    margin-top: 12px;
+  }
 }
