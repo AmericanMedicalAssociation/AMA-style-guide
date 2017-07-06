@@ -47,10 +47,11 @@
 }
 
 .testimonial_text {
-  position: absolute;
+  background-color: rgba(255, 255, 255, 0.45);
   bottom: 0;
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.45);
+  position: absolute;
+  width: 100%;
 
   @include breakpoint($bp-small) {
     padding: 30px;
