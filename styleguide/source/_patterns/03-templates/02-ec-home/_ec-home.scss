@@ -58,7 +58,6 @@ $ec_horizontal-rule: solid 1px $black-20;
 // @todo - many of the child patterns here have bottom margins included; if those are removed, we won't have to override them here.
 .layout.layout_five-up-left,
 .ec_hero .hero-banner,
-.ec_card-course_duration,
 .ec .tabs-course_browser_list-tabs,
 .ec .layout_item.layout_item-container {
   margin-bottom: 0;
@@ -147,6 +146,18 @@ li.tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
   }
 }
 
+// Set the bottom margin for mobile/tablet course cards to avoid whitespace between them.
+@include breakpoint($bp-med max-width) {
+  .tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
+    margin-bottom: 0;
+  }
+
+  // Even out the visual effect of the margins between the course card rows.
+  .tabs-course_browser_list-cards-item:nth-child(even) .ec_card-course_duration {
+    margin-bottom: 10px;
+  }
+}
+
 /* COURSE BUNDLE CARDS */
 
 // Styling for the course bundle cards section at the medium breakpoint.
@@ -173,6 +184,9 @@ li.tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
 
   .ec_cards-course-bundle .layout_item:nth-child(even) .ec-card-course-bundle {
     background: white;
+    &:hover {
+      background: #f7f7f7;
+    }
   }
 }
 
