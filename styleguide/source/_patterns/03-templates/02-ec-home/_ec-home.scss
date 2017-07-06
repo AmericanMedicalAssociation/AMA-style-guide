@@ -65,7 +65,7 @@ $ec_horizontal-rule: solid 1px $black-20;
 
 // Remove bottom margins from the last visible element in these sections when vertically stacked (at smaller breakpoints).
 .tabs-course_browser_list-cards-item:nth-child(3),
-.ec .layout_item-container .layout_item:nth-child(2) {
+.ec .layout_item-container .layout_item:last-child {
   @include breakpoint($bp-small max-width) {
     margin-bottom: 0;
   }
