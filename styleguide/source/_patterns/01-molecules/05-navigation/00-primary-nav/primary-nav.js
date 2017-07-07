@@ -55,7 +55,7 @@ jQuery.noConflict();
   // Handling for click events. When someone clicks the nav, the mobile nav button, or anywhere
   // on the page if the menu is already open:
 
-  $(document).on('touchstart click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button', function(e) {
+  $(document).on('touchstart click', '.body-nav-primary-open, .nav-primary_section, .nav-primary_button, .nav-primary_section_subnav_back', function(e) {
     e.stopPropagation();
     e.preventDefault();
 
@@ -75,15 +75,16 @@ jQuery.noConflict();
     else if ($(this).hasClass('nav-primary_section')) {
       // is this the active item?
       if ($(this).hasClass('nav-primary_section-active')) {
-        if ( $(window).width() < 740 ) {
-          removeActive();
-        } else {
           closeMenu();
           closeOverlay();
           removeActive();
+      // is this a "back" button?
+      } else if ($(this).hasClass('nav-primary_section_subnav_back')) {
+        if ( $(window).width() < 740 ) {
+          removeActive();
         }
       } else {
-        if (!$('body').hasClass('body-nav-primary-open')) {
+          if (!$('body').hasClass('body-nav-primary-open')) {
           showMenu();
           showOverlay();
           closeSearch();
