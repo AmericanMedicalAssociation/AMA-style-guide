@@ -46,7 +46,6 @@
 
   @include breakpoint($bp-small max-width) {
     flex-direction: column;
-    margin-bottom: 0;
   }
 
   @include breakpoint($bp-small) {
@@ -70,6 +69,17 @@
 }
 
 .layout_five-up-left .layout_item-container .layout_item {
+  &:nth-child(3),
+  &:nth-child(4) {
+    @include breakpoint($bp-med max-width) {
+      display: none;
+    }
+  }
+
+  @include breakpoint($bp-small) {
+    //flex-basis: calc((66.666667vw - 20px - 24px) / 2);
+  }
+
   @include breakpoint($bp-med) {
     flex-basis: calc((100% - 24px) / 2);
     margin-bottom: 24px;
