@@ -81,6 +81,13 @@
   }
 }
 
+// Prevent the search bar from overtaking the menu overlay at mobile breakpoints.
+.body-nav-primary-open .page-level-search {
+  @include breakpoint($bp-med-home max-width) {
+    z-index: -1;
+  }
+}
+
 .nav-primary_section-active {
   > .link-nav-primary {
 
