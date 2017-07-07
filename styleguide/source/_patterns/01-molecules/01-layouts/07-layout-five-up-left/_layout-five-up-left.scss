@@ -4,6 +4,7 @@
 .layout.layout_five-up-left {
   justify-content: flex-start;
   flex-direction: column;
+  margin-bottom: 24px;
 
   @include breakpoint($bp-small) {
     flex-direction: row;
@@ -22,15 +23,17 @@
 }
 
 .layout.layout_five-up-left .layout_item {
-  margin-bottom: 24px;
   position: relative; // @todo - all of these in all layouts should be position:relative (for landscape cards)
+  overflow: hidden;
 
   @include breakpoint($bp-small max-width) {
     height: calc((100vw - 40px) * 2 / 3);
+    margin-bottom: 24px;
   }
 
   @include breakpoint($bp-small $bp-med) {
-    height: calc((100vw - 60px - 48px) * 2 / 3 / 3);
+    height: auto;
+    overflow: visible;
   }
 }
 
@@ -45,7 +48,6 @@
   }
 
   @include breakpoint($bp-small) {
-    flex-basis: calc(66.6666666667vw - 24px);
     justify-content: space-between;
   }
 
@@ -54,12 +56,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
-    flex-basis: calc(50vw - 30px);
+    flex-basis: calc((100vw - 36px - 48px) / 2);
   }
 
   @include breakpoint($bp-large) {
     height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
-    flex-basis: calc((1260px / 2) - 30px);
+    flex-basis: calc((1260px - 36px - 48px) / 2);
 
   }
 }
@@ -72,12 +74,9 @@
     }
   }
 
-  @include breakpoint($bp-small) {
-    flex-basis: calc((66.666667vw - 20px - 24px) / 2);
-  }
-
   @include breakpoint($bp-med) {
     flex-basis: calc((100% - 24px) / 2);
+    margin-bottom: 24px;
 
     &:nth-last-child(1),
     &:nth-last-child(2) {
@@ -87,18 +86,62 @@
 }
 
 .layout.layout_five-up-left > .layout_item:first-child {
-  @include breakpoint($bp-small) {
-    flex-basis: calc(((100vw / 3) - 36px));
+  @include breakpoint($bp-small $bp-med) {
+    margin-right: 12px;
   }
 
   @include breakpoint($bp-med) {
     margin-bottom: 0;
     height: calc(((100vw / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
-    flex-basis: calc((100vw - 60px - 48px) / 2);
+    flex-basis: calc((100vw - 36px - 48px) / 2);
   }
 
   @include breakpoint($bp-large) {
     height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
-    flex-basis: calc((1260px - 60px - 48px) / 2);
+    flex-basis: calc((1260px - 36px - 48px) / 2);
+    margin-right: 12px;
+  }
+}
+
+.layout.layout_five-up-left > .layout_item.layout_item-container {
+  @include breakpoint($bp-small) {
+    margin-left: 12px;
+  }
+}
+
+.layout.layout_five-up-left > .layout_item.layout_item-container .layout_item:first-child {
+  @include breakpoint($bp-small $bp-med) {
+    margin-right: 12px;
+  }
+}
+
+.layout.layout_five-up-left > .layout_item.layout_item-container .layout_item:nth-child(2) {
+  @include breakpoint($bp-small $bp-med) {
+    margin-left: 12px;
+  }
+}
+
+// Layout adjustments to landscape cards when they're included in a five-up layout at the medium breakpoint.
+
+@include breakpoint($bp-small $bp-med) {
+  .layout_five-up-left .card-image-landscape {
+    width: auto;
+  }
+
+  .layout_five-up-left .card-image-landscape_overlay {
+    background: $black-7;
+    padding: 12px 0;
+  }
+}
+
+@include breakpoint($bp-med) {
+  .layout.layout_five-up-left > .layout_item:first-child .card-image-landscape_image {
+    min-height: 100%;
+    width: auto;
+  }
+
+  .layout_five-up-left .layout_item-container .card-image-landscape_image {
+    width: 100%;
+    height: 100%;
   }
 }

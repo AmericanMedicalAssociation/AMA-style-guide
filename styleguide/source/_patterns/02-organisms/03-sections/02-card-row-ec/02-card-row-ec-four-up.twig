@@ -1,6 +1,23 @@
-<div class="layout layout-four-up">
-    <div class="layout_item">{% include 'molecules-card-image-landscape' %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' %}</div>
-    <div class="layout_item">{% include 'molecules-card-image-landscape' %}</div>
-</div>
+{% if not cardType %}
+    {# Landscape image card is the default if no card type is passed. #}
+    <div class="layout layout-four-up">
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.first} %}</div>
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.second} %}</div>
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.third} %}</div>
+        <div class="layout_item">{% include 'molecules-card-image-landscape' with {'cardRowContent': cardRowContent.fourth} %}</div>
+    </div>
+{% elseif cardType == 'text' %}
+    <div class="layout layout-four-up">
+        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.first} %}</div>
+        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.second} %}</div>
+        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.third} %}</div>
+        <div class="layout_item">{% include 'molecules-card-cta-no-image' with {'cardRowContent': cardRowContent.cardsNoImage.fourth} %}</div>
+    </div>
+{% elseif cardType == 'courseBundle' %}
+    <div class="layout layout-four-up">
+        <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
+        <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
+        <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
+        <div class="layout_item">{% include 'molecules-ec-card-course-bundle' %}</div>
+    </div>
+{% endif %}

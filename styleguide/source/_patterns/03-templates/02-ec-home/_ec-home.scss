@@ -1,0 +1,251 @@
+/* VERTICAL RHYTHM */
+/* In order to give the EC Template a consistent vertical rhythm, this pattern uses the following standards
+ * For margins and padding:
+ *
+ * MOBILE / TABLET
+ * If preceding element ends in text    - 48px
+ * If preceding element ends in box     - 36px
+ * Between elements in a section        - 24px
+ * On either side of a heading          - 36px
+ *
+ * DESKTOP
+ * If preceding element ends in text    - 60px
+ * If preceding element ends in box     - 48px
+ * Between elements in a section        - 24px
+ * On either side of a heading          - 48px
+ *
+ * Some elements will need to deviate from these standards - these are intentional rather than oversights.
+ *
+ * Set up some variables here so that EC elements can use standardized increments for vertical spacing:
+ */
+
+$ec_margin-small: 24px;
+$ec_margin-medium: 36px;
+$ec_margin-large: 48px;
+
+$ec_horizontal-rule: solid 1px $black-20;
+
+// Give all EC elements a top margin and no bottom margin to encourage consistency in vertical spacing.
+.ec > *,
+.ec .ec_main-content > * {
+  margin-top: $ec_margin-medium; // 36px
+  margin-bottom: 0;
+
+  @include breakpoint($bp-med) {
+    margin-top: $ec_margin-large; // 48px
+  }
+}
+
+// Set smaller top margins for patterns contained within larger sections.
+.tabs-course_browser_ctas,
+.tabs-course_browser_list-cards {
+  margin-top: $ec_margin-small; // 24px
+}
+
+.ec .tabs-course_browser_list-tabs {
+  @include breakpoint($bp-med) {
+    margin-top: $ec_margin-small / 2;
+  }
+}
+
+// Remove some of the elements' top margin if they don't need it (e.g. the ribbon).
+.ec_header,
+.ec_hero,
+.ec_hero .hero-banner {
+  margin-top: 0;
+}
+
+// @todo - many of the child patterns here have bottom margins included; if those are removed, we won't have to override them here.
+.layout.layout_five-up-left,
+.ec_hero .hero-banner,
+.ec .tabs-course_browser_list-tabs,
+.ec .layout_item.layout_item-container {
+  margin-bottom: 0;
+}
+
+// Remove bottom margins from the last visible element in these sections when vertically stacked (at smaller breakpoints).
+.tabs-course_browser_list-cards-item:nth-child(3),
+.ec .layout_item-container .layout_item:nth-child(2) {
+  @include breakpoint($bp-small max-width) {
+    margin-bottom: 0;
+  }
+}
+
+// Items in layouts still need a bottom margin when vertically stacked at small breakpoints.
+// @todo this could just as well be a top margin.
+.layout.layout_five-up-left .layout_item {
+  @include breakpoint($bp-small max-width) {
+    margin-bottom: $ec_margin-small;
+  }
+}
+
+// At larger breakpoints, remove these bottom margins since they're not needed (and should be supplied by the next element).
+.ec_cards-text .layout-four-up .layout_item,
+.ec_course-browser .tabs-course_browser_list-cards-item,
+.ec_cards-course-bundle .layout_item,
+a.ec-card-course-bundle {
+  @include breakpoint($bp-med) {
+    margin-bottom: 0;
+  }
+}
+
+// At larger breakpoints, add a top margin back to some elements.
+// @todo - this may be reundant with the above things?
+.ec_cards-text_button,
+.tabs-course_browser_ctas,
+.ec_cards-course-bundle .layout.layout-four-up,
+.ec .ec_banner-cta-no-stacking {
+  @include breakpoint($bp-med) {
+    margin-top: $ec_margin-medium;
+  }
+}
+
+ /* HERO BANNER */
+
+ // Allow the hero to span the full width of the screen at small breakpoints.
+.ec_hero,
+.ec_hero .hero-banner {
+  @include breakpoint($bp-small max-width) {
+    padding: 0;
+  }
+}
+
+/* TEXT CTA CARDS */
+
+.ec_cards-text .layout_item {
+  @include breakpoint($bp-small max-width) {
+    min-height: initial;
+    margin-bottom: 0;
+  }
+}
+
+// Allow the text-only cards to fill up the vertical space of their parent .layout_item elements.
+.ec .card-cta {
+  @include breakpoint($bp-small) {
+    height: 100%;
+  }
+}
+
+// Override some styles from the base pattern.
+.ec .card-cta_title.card-cta_title-no-border {
+  border: 0;
+  padding-bottom: 0;
+}
+
+// Styling for the text cards section.
+.ec_cards-text {
+  text-align: center;
+}
+
+/* COURSE CARDS */
+
+// Add padding between the text columns to make reading their text easier.
+li.tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
+  @include breakpoint($bp-small $bp-med) {
+    padding-bottom: $ec_margin-small / 2;
+  }
+}
+
+// Set the bottom margin for mobile/tablet course cards to avoid whitespace between them.
+@include breakpoint($bp-med max-width) {
+  .tabs-course_browser_list-cards-item:nth-child(odd) .ec_card-course_duration {
+    margin-bottom: 0;
+  }
+
+  // Even out the visual effect of the margins between the course card rows.
+  .tabs-course_browser_list-cards-item:nth-child(even) .ec_card-course_duration {
+    margin-bottom: 10px;
+  }
+}
+
+/* COURSE BUNDLE CARDS */
+
+// Styling for the course bundle cards section at the medium breakpoint.
+@include breakpoint($bp-med max-width) {
+  .ec_cards-course-bundle {
+    margin-bottom: $ec_margin-small;
+  }
+
+  .ec_cards-course-bundle .layout,
+  .ec_course-browser .layout {
+    padding: 0;
+  }
+
+  .ec-card-course-bundle {
+    margin-bottom: 0;
+  }
+
+  .ec_cards-course-bundle .layout_item {
+    min-height: initial;
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .ec_cards-course-bundle .layout_item:nth-child(even) .ec-card-course-bundle {
+    background: white;
+    &:hover {
+      background: #f7f7f7;
+    }
+  }
+}
+
+.ec_cards-course-bundle > h2 {
+  text-align: center;
+}
+
+/* TESTIMONIAL */
+
+// Give the Testimonial section the standardized margins/padding.
+.ec .testimonial {
+  padding-top: $ec_margin-medium;
+  margin-bottom: 0;
+
+  @include breakpoint($bp-med) {
+    padding-top: $ec_margin-large;
+  }
+}
+
+
+/* "NO STACKING" CTA SECTION */
+
+.ec .banner-cta-no-stacking {
+  border-bottom: $ec_horizontal-rule; // @todo not ideal to add bottom border here, but temporary until the partner logo row layout can be fixed.
+  padding-bottom: $ec_margin-medium;
+  margin-bottom: 0;
+
+  @include breakpoint($bp-med) {
+    padding-bottom: $ec_margin-large;
+  }
+}
+
+.banner-cta-no-stacking_image {
+  margin-top: 0;
+
+  @include breakpoint($bp-med) {
+    margin-top: $ec_margin-small / 2;
+  }
+}
+
+/* HEADINGS, HORIZONTAL RULES */
+
+// Give headings special margins and padding.
+.ec .tabs-course_browser_label,
+.ec_cards-course-bundle > h2,
+.banner-cta-no-stacking h2 {
+  max-width: 1200px;
+  padding-top: 30px; // Set this smaller than the standard (36px) because the heading text already includes a few px of vertical space.
+  margin: 25px auto;
+
+  @include breakpoint($bp-med) {
+    padding-top: 40px; // Set this than the standard (48px) because the heading text already includes a few px of vertical space.
+  }
+}
+
+// Add a faux <hr> between certain sections.
+.ec .testimonial,
+.ec .tabs-course_browser_label,
+.ec_cards-course-bundle > h2,
+.banner-cta-no-stacking h2 {
+  border-top: $ec_horizontal-rule;
+}

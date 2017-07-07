@@ -42,6 +42,7 @@
     
     .ec-card-course-bundle_text{
       padding: 14px;
+      text-align: center;
     }
 
     // 2-up layout
@@ -100,9 +101,15 @@
 
 .ec-card-course-bundle_title {
   @extend %type-larger;
-  min-height: 64px;   //hold space for 2 lines of text
 
   @include breakpoint($bp-med) {
     padding: 12px 0;
+    text-align: center;
+  }
+}
+
+.ec-card-course-bundle_desc {
+  @include breakpoint($bp-med) {
+    text-align: center;
   }
 }

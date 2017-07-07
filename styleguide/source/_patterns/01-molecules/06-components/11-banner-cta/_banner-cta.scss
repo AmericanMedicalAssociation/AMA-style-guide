@@ -20,17 +20,10 @@
 
 .banner-cta-no-stacking {
   text-align: center;
-  padding: 30px;
 
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-
-.banner-cta-no-stacking-left {
-  @include breakpoint($bp-med) {
-    flex-direction: row-reverse;
   }
 }
 
@@ -116,7 +109,9 @@
 }
 
 .banner-cta-no-stacking_image {
-  @include breakpoint($bp-med) {
+  background-size: contain;
+  
+  @include breakpoint($bp-small) {
     min-height: calc((((100vw -  42px) / 2) / 3) * 2);
     width: 50%;
   }
@@ -128,14 +123,14 @@
 
 .banner-cta-no-stacking_image,
 .banner-cta-no-stacking_text {
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     width: 50%;
     flex-basis: 50%;
   }
 }
 
 .banner-cta-no-stacking_text {
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     padding: 30px;
     margin: auto 0;
   }

@@ -15,26 +15,62 @@
 .layout_three_up-tertiary {
   @include breakpoint($bp-small) {
     @include grid__unit--cols(4);
-    padding: 0 12px;
+    margin: 0 12px;
   }
 }
 
-// Styling for landscape card images when they're in a Four Up layout.
+.flexbox .layout_three_up-primary,
+.flexbox .layout_three_up-secondary,
+.flexbox .layout_three_up-tertiary {
+  @include breakpoint($bp-small) {
+    flex-basis: calc((100% - 48px) / 3);
+    max-width: calc((100% - 48px) / 3);
+    padding: 0;
+  }
+
+  @include breakpoint(1260px) {
+    flex-basis: calc((1260px - 60px - 48px) / 3);
+    max-width: calc((1260px - 60px - 48px) / 3);
+  }
+}
+
+.layout_item.layout_three_up-primary {
+  margin-left: 0;
+}
+
+.layout_three_up-tertiary {
+  margin-right: 0;
+}
+
+// Styling for cards when they're in a Four Up layout.
 
 .layout-four-up .layout_item {
-  @include breakpoint($bp-small max-width) {
-    height: calc((100vw - 60px) / 3 * 2);
-  }
-
-  @include breakpoint($bp-small) {
-    height: calc((100vw - 60px - 24px) / 3 * 2 / 2);
-  }
-
   @include breakpoint($bp-med) {
-    height: calc((100vw - 60px - 72px) / 3 * 2 / 4);
+    margin-bottom: 0;
   }
+}
 
-  @include breakpoint($bp-large) {
-    height: calc((1260px - 60px - 72px) / 3 * 2 / 4);
+.layout-four-up .card-image-landscape img {
+  @include breakpoint($bp-med) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.layout_five-up-left .card-image-landscape,
+.layout_three_up .card-image-landscape {
+  @include breakpoint($bp-small $bp-med) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.layout_five-up-left .card-image-landscape_overlay,
+.layout_three_up .card-image-landscape_overlay {
+  @include breakpoint($bp-small $bp-med) {
+    position: relative;
+    background: $black-7;
+    flex-grow: 1;
+    padding: 12px 0;
   }
 }

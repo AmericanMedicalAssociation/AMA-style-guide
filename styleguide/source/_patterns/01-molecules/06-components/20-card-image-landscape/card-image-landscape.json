@@ -1,0 +1,6 @@
+{
+	"cardRowContent": {
+		"title": "Card Title",
+		"content" : "Short text decription not exceeding 140 characters."
+	}
+}
