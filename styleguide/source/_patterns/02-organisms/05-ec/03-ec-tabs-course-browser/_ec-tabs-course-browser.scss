@@ -153,6 +153,7 @@
 
   @include breakpoint($bp-med) {
     display: inline-block;
+    margin-right: 12px;
   }
 }
 
