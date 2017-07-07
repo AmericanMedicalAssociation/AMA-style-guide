@@ -41,7 +41,6 @@
     @include breakpoint($bp-med-home min-width) {
       top: initial;
       float: left;
-      margin-bottom: 37px;
       position: relative;
       width: 217px;
     }
@@ -246,9 +245,15 @@
     @include breakpoint($bp-med min-width) {
       display: flex;
       animation: collapse-desktop 0.45s ease-in-out;
+      //animation: collapse-desktop 45s ease-in-out; // DEBUG
       animation-fill-mode: initial;
 
     }
+  }
+
+  // Hides the subnavs initially so they don't show on page load.
+  .nav-primary_list-subnavs-hidden .nav-primary_section_subnav {
+    visibility: hidden;
   }
 
   .nav-primary_section.nav-primary_section-active .nav-primary_section_subnav {

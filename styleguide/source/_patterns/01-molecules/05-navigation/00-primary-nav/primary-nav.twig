@@ -2,7 +2,7 @@
 <div class="nav-primary_button">Menu</div>
 
 <nav class="nav-primary" role="navigation" aria-label="Main Navigation">
-  <ul class="nav-primary_list nav-primary_list-mobile-closed {% if engaged %}nav-primary_list-mobile-open{% endif %}" role="menubar">
+  <ul class="nav-primary_list nav-primary_list-subnavs-hidden nav-primary_list-mobile-closed {% if engaged %}nav-primary_list-mobile-open{% endif %}" role="menubar">
     <li class="nav-primary_section {% if engaged %}nav-primary_section-active{% endif %}">
       {% include '04-link-primary-nav.twig' with { 'content': nav.first } %}
 

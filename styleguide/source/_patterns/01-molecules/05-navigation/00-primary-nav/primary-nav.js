@@ -52,6 +52,11 @@ jQuery.noConflict();
     }
   }
 
+  // Remove the 'hidden' class on subnavs when the page loads.
+  $(window).load(function(){
+    $('.nav-primary_list').removeClass('nav-primary_list-subnavs-hidden');
+  });
+
   // Handling for click events. When someone clicks the nav, the mobile nav button, or anywhere
   // on the page if the menu is already open:
 
