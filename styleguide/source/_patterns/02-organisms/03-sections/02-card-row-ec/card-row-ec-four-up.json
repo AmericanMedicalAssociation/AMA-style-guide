@@ -1,0 +1,20 @@
+{
+  "cardRowContent": {
+    "first": {
+      "title": "First Card",
+      "content": "Lorem ipsum dolor"
+    },
+    "second": {
+      "title": "Second Card",
+      "content": "Amet sit amet"
+    },
+    "third": {
+      "title": "Third Card",
+      "content": "Lorem ipsum dolor"
+    },
+    "fourth": {
+      "title": "Fourth Card",
+      "content": "Amet sit amet"
+    }
+  }
+}

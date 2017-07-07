@@ -84,12 +84,13 @@ gulp.task('images', function () {
 // Task: Handle Sass and CSS
 gulp.task('sass', function () {
   return gulp.src(config.scss.files)
-    .pipe(sass())
-    .pipe(prefix('last 2 version'))
-    .pipe(gulpif(production, cssmin()))
-    .pipe(gulpif(production, rename({
-      suffix: '.min'
-    })))
+    .pipe(sourcemaps.init())
+      .pipe(sass())
+      .pipe(prefix('last 2 version'))
+      .pipe(gulpif(production, cssmin()))
+      .pipe(gulpif(production, rename({
+        suffix: '.min'
+      })))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(
       config.scss.dest

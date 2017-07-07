@@ -11,7 +11,7 @@
   }
 
   @include breakpoint($bp-small $bp-med) {
-    padding: 40px;
+    padding: 30px 30px 0 30px;
   }
 
   @include breakpoint($bp-med) {
@@ -28,7 +28,7 @@
 }
 
 .ec_card-course_inner-secondary {
-  padding: 12px;
+  padding: 24px;
 
   @include breakpoint($bp-small $bp-med) {
     display: flex;
@@ -43,6 +43,11 @@
   display: block;
   margin: 0 auto;
   width: 100%;
+
+  @include breakpoint($bp-med max-width) {
+    padding-left: 0;
+    padding-top: 0;
+  }
 }
 
 .ec_card-course_duration {
@@ -60,10 +65,11 @@
 
 .ec_card-course_title {
   @extend %type-large;
-  margin-bottom: 12px;
+  margin-bottom: 1em;
 
   @include breakpoint($bp-small $bp-med) {
     order: -2;
+    text-align: left;
   }
 
   @include breakpoint($bp-med) {
@@ -88,13 +94,17 @@
 }
 
 .ec_card-course_credits {
+  margin-bottom: 0;
 
   @include breakpoint($bp-small $bp-med) {
     float: left;
+    text-align: left;
+    padding-right: 1em;
   }
 }
 
 .ec_card-course_date {
+  margin-bottom: 0.5em;
 
   @include breakpoint($bp-med) {
     font-weight: bold;
@@ -111,6 +121,7 @@
 
   @include breakpoint($bp-small $bp-med) {
     order: -1;
+    text-align: left;
   }
 
   @include breakpoint($bp-med) {

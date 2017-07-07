@@ -1,4 +1,4 @@
-.ec-search-bar {
+.ec_search-bar {
   background-color: $black-3;
   height: 100px;
   position: relative;
@@ -6,22 +6,25 @@
   width: 100%;
 }
 
-.ec-search-bar-inner {
+.ec_search-bar_inner {
   font-weight: 600;
   margin: 0 auto;
-  max-width: 1200px;
   padding-top: 26px;
-  width: 80%;
 }
 
-.ec-search-bar_library {
+.flexbox .layout.ec_search-bar_inner { // specify `.flexbox` here because we need to override the property provided by .layout.
+  justify-content: space-between;
+}
+
+.ec_search-bar_library {
   display: none;
-  @include breakpoint($bp-small) {
+  @include breakpoint($bp-med) {
     display: inline-block;
+    margin-top: auto;
   }
 }
 
-.ec-search-bar_library .button {
+.ec_search-bar_library .button {
   background-color: transparent;
   border-width: 2px;
   font-size: 18px;
@@ -29,14 +32,12 @@
   padding: 6px 56px;
 }
 
-.ec-search-bar_form {
+.ec_search-bar_form {
   display: block;
-  margin-left: 20px;
   width: 100%;
 
-  @include breakpoint($bp-small) {
+  @include breakpoint($bp-med) {
     display: inline-block;
-    max-width: 80%;
     width: calc(100% - 20px - 168px); //minus .search-bar_form margin minus .search-bar_library .button
   }
 

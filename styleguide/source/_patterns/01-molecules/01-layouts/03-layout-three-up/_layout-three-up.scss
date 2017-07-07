@@ -11,7 +11,6 @@
   // Layout default setup.
   .layout {
     @include grid();
-
   }
 }
 
@@ -23,10 +22,6 @@
 .layout_three_up-row {
   @include grid();
     width: 100%;
-
-  @include breakpoint($bp-large) {
-    margin: 0 -15px;
-  }
 }
 
 .layout_three_up-primary,
@@ -36,7 +31,6 @@
 
   @include breakpoint($bp-large) {
     @include grid__unit--cols(4);
-    padding: 0 15px;
+    padding: 0 12px;
   }
 }
-
