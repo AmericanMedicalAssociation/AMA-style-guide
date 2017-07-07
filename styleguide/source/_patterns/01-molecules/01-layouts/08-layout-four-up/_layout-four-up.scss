@@ -19,7 +19,7 @@
 }
 
 .layout-four-up .layout_item {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 
   @include breakpoint($bp-small) {
     max-width: calc(50% - 12px);
@@ -27,6 +27,7 @@
   }
 
   @include breakpoint($bp-med) {
+    margin-bottom: 24px;
     max-width: calc((100vw - 60px - 72px) / 4);
     flex-basis: calc((100vw - 60px - 72px) / 4);
   }

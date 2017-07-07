@@ -45,35 +45,8 @@
 // Styling for cards when they're in a Four Up layout.
 
 .layout-four-up .layout_item {
-  @include breakpoint($bp-small max-width) {
-    min-height: calc((100vw - 60px) / 3 * 2);
-  }
-
-  @include breakpoint($bp-small) {
-    min-height: calc((100vw - 60px - 24px) / 3 * 2 / 2);
-  }
-
   @include breakpoint($bp-med) {
-    min-height: calc((100vw - 60px - 72px) / 3 * 2 / 4);
     margin-bottom: 0;
-  }
-
-  @include breakpoint($bp-large) {
-    min-height: calc((1260px - 60px - 72px) / 3 * 2 / 4);
-  }
-}
-
-// Min-heights for landscape image cards when they're in a Four Up layout.
-
-.layout-four-up .card-image-landscape {
-  min-height: calc((100vw - 30px) / 3 * 2);
-
-  @include breakpoint($bp-small) {
-    min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 3 );
-  }
-
-  @include breakpoint($bp-med) {
-    min-height: calc( (100vw - 40px - 80px) / 3 * 2 / 4 );
   }
 }
 
