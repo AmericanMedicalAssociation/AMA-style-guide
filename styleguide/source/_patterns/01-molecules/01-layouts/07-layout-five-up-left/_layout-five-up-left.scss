@@ -48,7 +48,6 @@
   }
 
   @include breakpoint($bp-small) {
-    //flex-basis: calc(66.6666666667vw - 24px);
     justify-content: space-between;
   }
 
@@ -73,10 +72,6 @@
     @include breakpoint($bp-med max-width) {
       display: none;
     }
-  }
-
-  @include breakpoint($bp-small) {
-    //flex-basis: calc((66.666667vw - 20px - 24px) / 2);
   }
 
   @include breakpoint($bp-med) {
@@ -104,11 +99,12 @@
   @include breakpoint($bp-large) {
     height: calc(((1260px / 2) - 24px) * 2 / 3); // attempt to calc. the height needed for the first item to be 3:2.
     flex-basis: calc((1260px - 36px - 48px) / 2);
+    margin-right: 12px;
   }
 }
 
 .layout.layout_five-up-left > .layout_item.layout_item-container {
-  @include breakpoint($bp-small $bp-med) {
+  @include breakpoint($bp-small) {
     margin-left: 12px;
   }
 }
