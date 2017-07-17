@@ -1,0 +1,49 @@
+{
+  "id": "prod_test",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1200,
+      "height": 4800
+    },
+    {
+      "name": "phone",
+      "width": 599,
+      "height": 1000
+    },
+    {
+      "name": "tablet_v",
+      "width": 899,
+      "height": 700
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "BackstopJS Homepage",
+      "url": "http://localhost:3000/?p=all",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectorExpansion": true,
+      "selectors": [
+        "#atoms-colors"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions" : true,
+      "onBeforeScript": "onBefore.js",
+      "onReadyScript": "onReady.js"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "casper_scripts": "backstop_data/casper_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "casperFlags": [],
+  "engine": "phantomjs",
+  "report": ["browser"],
+  "debug": false
+}

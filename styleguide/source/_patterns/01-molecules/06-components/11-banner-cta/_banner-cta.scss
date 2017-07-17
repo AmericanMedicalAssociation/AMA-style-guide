@@ -31,6 +31,10 @@
   margin-top: .5em;
 }
 
+.banner-cta-no-stacking-left {
+  flex-direction: row-reverse;
+}
+
 .banner-cta-half-left,
 .hub-cta-half-left {
   @include breakpoint(600px) {
