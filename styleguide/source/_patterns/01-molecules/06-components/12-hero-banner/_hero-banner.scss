@@ -60,7 +60,8 @@
 .hero-banner_title {
   background-color: rgba($white, 0.45);
   padding: 20px 20px 8px;
-  font-size: 24px;
+  @include type($font-sans-serif, 24px, $font-weight-thin, 1.11765);
+
   @include breakpoint($bp-small) {
     @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
   }
