@@ -32,7 +32,9 @@
 }
 
 .banner-cta-no-stacking-left {
-  flex-direction: row-reverse;
+  @include breakpoint($bp-small) {
+    flex-direction: row-reverse;
+  }
 }
 
 .banner-cta-half-left,
