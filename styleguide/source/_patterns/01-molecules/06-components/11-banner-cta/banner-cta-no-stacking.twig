@@ -1,4 +1,4 @@
-<div class="banner-cta-no-stacking">
+<div class="banner-cta-no-stacking {{ctaBanner.direction}}">
     {% include 'atoms-h2' with { 'content': ctaBanner.heading, 'class': 'banner-cta-no-stacking_title h1' } %}
     <div class="banner-cta-no-stacking_image" style="background-image: url(' {{ ctaBanner.image|default('https://ipsumimage.appspot.com/279x186?l=3:2|279x186&s=36') }}');"></div>
     <div class="banner-cta-no-stacking_text">
