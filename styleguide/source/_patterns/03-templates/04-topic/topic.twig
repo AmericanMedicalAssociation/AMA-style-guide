@@ -2,10 +2,16 @@
   {% include 'organisms-ribbon' %}
 </header>
 
-<main class="topic">
-  <section class="topic_rail-left"></section>
-  <section class="topic_content"></section>
-  <section class="topic_rail-right"></section>
+<main class="topic" style="border: solid 5px darkred; display: flex; flex-direction: row;">
+  <section class="topic_rail-left" style="width: 30%;">
+      Left rail content
+  </section>
+  <section class="topic_content" style="width: 60%;">
+      {% include "organisms-topic-hero-section" %}
+  </section>
+  <section class="topic_rail-right" style="width: 30%;">
+      Right rail content
+  </section>
 </main>
 
 {% include 'organisms-footer' %}
