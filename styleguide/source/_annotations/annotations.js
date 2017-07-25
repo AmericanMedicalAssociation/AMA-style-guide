@@ -29,6 +29,11 @@
     "el": ".ec_cards-landscape",
     "title" : "Landscape Cards section",
     "comment": "<p>This section can contain one or more rows of Landscape Image cards, arranged in either a three, four, or five column layout. See: Templates > EC Home > Three Up, Four Up, and Five Up. </p>"
+  },
+  {
+    "el": ".pattern-organization-demo",
+    "title" : "DEMO FOR HOW TO ORGANIZE PATTERNS",
+    "comment": "<p>adfasdf</p>"
   }
 ]
 }
