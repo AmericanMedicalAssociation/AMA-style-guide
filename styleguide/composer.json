@@ -27,9 +27,10 @@
 	},
 	"require": {
 		"php": ">=5.4",
-		"pattern-lab/core": "dev-dev#c976fa4cbffac7a67c41df43f47899d09a965a49",
-		"pattern-lab/patternengine-twig": "dev-dev",
-		"pattern-lab/styleguidekit-twig-default": "dev-dev",
+		"pattern-lab/core": "^2.7.0",
+		"pattern-lab/patternengine-twig": "dev-master",
+		"pattern-lab/styleguidekit-twig-default": "dev-master",
+		"pattern-lab/plugin-data-inheritance": "dev-master",
 		"cweagans/composer-patches": "dev-master"
 	},
 	"repository": {
@@ -66,7 +67,8 @@
 			]
 		},
 		"patches": {
-	      "pattern-lab/core": {
+			"pattern-lab/core": {
+	        "Add commit c976fa4 from dev": "patches/core-c976fa4.patch",
 	        "Add scss files to builder": "patches/core-builder-scss-files.patch"
 	      },
 	      "pattern-lab/styleguidekit-assets-default": {
