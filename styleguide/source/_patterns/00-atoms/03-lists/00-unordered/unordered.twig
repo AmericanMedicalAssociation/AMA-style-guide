@@ -1,6 +1,6 @@
 <div class="text">
 	<ul>
-		{% for item in list|default(list) %}
+		{% for item in list %}
 			{% if item.children %}
 				<ul>
 					{% for child in item.children %}
