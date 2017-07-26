@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5789eb97162e2f6c58887282cd908a7d",
+    "content-hash": "4f1d43a6735fddb1f2914b142c7bf816",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1000,8 +1000,8 @@
     "stability-flags": {
         "pattern-lab/patternengine-twig": 20,
         "pattern-lab/styleguidekit-twig-default": 20,
-        "cweagans/composer-patches": 20,
-        "pattern-lab/plugin-data-inheritance": 20
+        "pattern-lab/plugin-data-inheritance": 20,
+        "cweagans/composer-patches": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
