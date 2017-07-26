@@ -1,0 +1,14 @@
+<div class="text">
+	<ul>
+		{% for item in list|default(list) %}
+			{% if item.children %}
+				<ul>
+					{% for child in item.children %}
+						<li>{{ child.content }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+        <li>{{ item.content }}</li>
+    {% endfor %}
+	</ul>
+</div>
