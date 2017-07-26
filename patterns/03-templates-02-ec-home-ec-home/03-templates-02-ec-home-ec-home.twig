@@ -1,5 +1,5 @@
 {% include 'organisms-ribbon' %}
-{% include '02-organisms/05-ec/01-search-bar/search-bar.twig' %}
+{% include '02-organisms/05-ec/01-ec-search-bar/ec-search-bar.twig' %}
 
 {# Some type of hero #}
 <div class="layout layout-one-up">
@@ -8,22 +8,9 @@
 
 {# begin the next section #}
 <section class="ec-section">
-
-<div class="layout layout_five-up-left">
-  <div class="layout_five-up-left-primary">
-    <div class='layout_five-up-left-item'>{% include 'molecules-card-image-landscape' %}</div>
-  </div>
-  <div class="layout_five-up-left-secondary">
-    <div class='layout_five-up-left-item'>{% include 'molecules-card-image-landscape' %}</div>
-    <div class='layout_five-up-left-item'>{% include 'molecules-card-image-landscape' %}</div>
-
-  </div>
-  <div class="layout_five-up-left-secondary">
-    <!-- @todo why is this called a 'left' item? -->
-    <div class='layout_five-up-left-item'>{% include 'molecules-card-image-landscape' %}</div>
-    <div class='layout_five-up-left-item'>{% include 'molecules-card-image-landscape' %}</div>
-  </div>
-
+  {% include 'organisms-card-row-ec-three-up'%}
+  {% include 'organisms-card-row-ec-four-up'%}
+  {% include 'organisms-card-row-ec-five-up-left'%}
 </section>
 
 {% include 'organisms-footer' %}

@@ -1,0 +1,24 @@
+<div class="layout layout_one_up">
+  {% include 'atoms-h6' with { 'class' : 'search-result_label', 'content' : 'Best Match' } %}
+  <div class="search-result">
+    <div class="search-result_left">
+      <div class="search-result_left-inner">
+        {% include 'atoms-h4' with { 'class' : 'search-result_title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra' } %}
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_description-event', 'content' : 'Sed massa augue, sollic itudiny vel metus a, posuere erat. In vulputate feugiat neque, sed aliquam juh tasga hugit.' } %}
+
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_left-event-details', 'content' : 'June 11–15, 2016'} %}
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_left-event-details', 'content' : 'Hyatt Regency Chicago'} %}
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_left-event-details', 'content' : 'Chicago, IL'} %}
+
+        {% include 'atoms-link' with { 'class' : 'link-blue search-result_link', 'content' : 'Learn More' } %}
+      </div>
+    </div>
+    <div class="search-result_right">
+      <div class="search-result_right-inner">
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_right-event-details', 'content' : 'June 11–15, 2016'} %}
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_right-event-details', 'content' : 'Hyatt Regency Chicago'} %}
+        {% include 'atoms-paragraph' with { 'class' : 'search-result_right-event-details', 'content' : 'Chicago, IL'} %}
+      </div>
+    </div>
+  </div>
+</div>
