@@ -67,6 +67,7 @@ gulp.task('scripts', function () {
     // also 'production-ready' js file even though we don't use it yet
     .pipe(rename('app.min.js'))
     .pipe(uglify())
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(gulp.dest(config.scripts.dest))
     .pipe(browserSync.reload({stream:true}));
 });
