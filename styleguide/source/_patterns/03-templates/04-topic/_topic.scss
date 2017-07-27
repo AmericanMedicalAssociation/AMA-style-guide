@@ -1,4 +1,5 @@
 main.topic {
-  overflow: auto;
+  display: flex;
+  flex-direction: row;
   width: 100%;
 }
