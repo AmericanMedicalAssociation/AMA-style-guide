@@ -49,6 +49,15 @@ gulp.task('clean:before', function () {
 
 // Task: Handle scripts
 gulp.task('scripts', function () {
+  // Package up all of the custom stuff for Drupal to consume
+  var ds = gulp.src(config.scripts.drupalfiles)
+    // unminified for development
+    .pipe(sourcemaps.init())
+    .pipe(concat('drupal.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.scripts.dest));
+
+  // Package up everything for use by Pattern Lab
   return gulp.src(config.scripts.files)
     // unminified for development
     .pipe(sourcemaps.init())
