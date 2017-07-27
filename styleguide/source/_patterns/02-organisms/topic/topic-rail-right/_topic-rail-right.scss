@@ -1,0 +1,5 @@
+.topic_rail-right {
+  @include grid__unit--cols(3);
+  float: right;
+  width: 100%;
+}
