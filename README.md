@@ -25,7 +25,7 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 - `cd styleguide`
 - `composer install`
 - `npm install`
-- `sudo npm install -g gulp` 
+- `sudo npm install -g gulp`
   - This will install gulp globally on your machine. If you don't have privileges, don't want to install globally, or need to manage multiple projects using `gulp`, you can invoke `gulp` via `./node_modules/.bin/gulp serve` instead of directly.
 
 **For ongoing development**
@@ -41,8 +41,6 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 
 - `gulp deploy` to build the production ready code and push to the `gh-pages` branch for display on https://americanmedicalassociation.github.io/AMA-style-guide/.
 - `gulp deploy --branch dev-assets` to deploy changes to the `dev-assets` branch for consumption by Drupal or another CMS.
-
-Occasionally, you might have to make a change to CSS and let the new stylesheet get pushed into the browser to see recent changes, but otherwise this should take care of everything: moving assets, compiling SASS, getting BrowserSync running, and more.
 
 **To mark a new release of the Style Guide**
 
