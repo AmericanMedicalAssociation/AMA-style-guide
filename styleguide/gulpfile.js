@@ -27,7 +27,8 @@ var gulp        = require('gulp'),
     gutil       = require('gulp-util');
     gutil       = require('gulp-util'),
     pWaitFor    = require('p-wait-for'),
-    pathExists  = require('path-exists');
+    pathExists  = require('path-exists'),
+    minimist    = require('minimist');
 
 // Config
 var config = require('./build.config.json');
@@ -35,6 +36,13 @@ var config = require('./build.config.json');
 
 // Trigger
 var production;
+
+var knownOptions = {
+  string: 'branch',
+  default: { env: 'gh-pages' }
+};
+
+var options = minimist(process.argv.slice(2), knownOptions);
 
 // Task: Clean:before
 // Description: Removing assets files before running other tasks
@@ -239,7 +247,7 @@ gulp.task('serve', function () {
 // Description: Publish static content using rsync shell command
 gulp.task('publish', function () {
   return gulp.src(config.deployment.local.path)
-    .pipe(ghPages());
+    .pipe(ghPages({ branch: options.branch}));
 });
 
 // Task: Deploy to GitHub pages
