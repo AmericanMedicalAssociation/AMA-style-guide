@@ -1,0 +1,27 @@
+// Placeholder blocks in layout molecules.
+.layout_container {
+  display: block;
+  margin-bottom: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+.layout-example .layout_container {
+  background-color: $black-7;
+}
+
+// Layout default setup.
+
+.flexbox .layout.layout_one_up_center_container {
+  @include grid__unit--cols(12);
+  justify-content: center;
+}
+
+.layout_one_up_center {
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-med min-width) {
+    @include grid__unit--cols(8);
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,27 @@
+.list_featured_content-hero {
+  padding: 0;
+
+  .row_featured_content-hero {
+    .row_featured_content-hero_image {
+      display: none;
+    }
+
+    &:first-of-type {
+      .row_featured_content-hero_image {
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint(740px min-width) {
+    width: 100%;
+
+    .row_featured_content-hero {
+      padding: 0 0 0 25px;
+
+      .row_featured_content-hero_image {
+        display: inline;
+      }
+    }
+  }
+}

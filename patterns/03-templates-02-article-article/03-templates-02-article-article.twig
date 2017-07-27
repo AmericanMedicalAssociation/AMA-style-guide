@@ -1,0 +1,57 @@
+{% include 'organisms-ribbon' %}
+{% include 'organisms-header-primary' %}
+<section class="search_modal">
+  {% include 'organisms-search_modal' %}
+</section>
+<div class="layout layout-one-up">
+  {% include 'molecules-breadcrumbs' %}
+  {% include 'molecules-section-header' %}
+</div>
+
+<div class="layout layout_two_up-heavy-right-offset article-body">
+  <div class="layout_two_up-heavy-right-offset-secondary">
+    {% include 'molecules-jump-nav' %}
+  </div>
+  <div class="layout_two_up-heavy-right-offset-primary">
+
+    <section id="section-1">
+      {% include 'atoms-h2' with { 'content': 'Maximus Justo Enim Augue' }  %}
+      {% include 'atoms-paragraph' with { 'content': 'Sed massa augue, sollicitudin vel metus a, posuere scelerisque erat. In vulputate feugiat neque, sed aliquam risus. Cras blandit enim nec mauris egestas accumsan. Donec sed maximus justout pellentesque sem. Suspendisse semper varius turpis, vel congue risus mollis sit amet. Praesent molestie molestie ligula, ut viverra.' } %}
+      {% include 'atoms-paragraph' with { 'content': 'Aliquam quis leo id orci maximus venenatis. Nam ut sem sed ultrices justo suscipit ac. Nam eifend enim eu turpis mi id nunc consequat, eu at, nulla non auctor grvida, turpis nisi vestib ulum quam, ac fermentum justo nunc id.' } %}
+    </section>
+    <section id="section-2">
+      {% include 'atoms-h3' with { 'content': 'Additional Programs' }  %}
+      {% include 'atoms-paragraph' with { 'content': 'In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.' } %}
+      {% include 'molecules-figure' %}
+    </section>
+    <section id="section-3">
+      {% include 'atoms-h3' with { 'content': 'Outreach Programs' }  %}
+      {% include 'atoms-paragraph' with { 'content': 'In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.' } %}
+      {% include 'atoms-unordered' %}
+      {% include 'atoms-ordered' %}
+      {% include 'atoms-paragraph' with { 'content': 'Aliquam quis leo id orci maximus venenatis. Nam ut sem sed ultrices justo suscipit ac. Nam eifend enim eu turpis mi id nunc consequat, eu at, nulla non auctor grvida, turpis nisi vestib ulum quam, ac fermentum justo nunc id.' } %}
+      {# Add in time feature to video title #}
+      {% include 'molecules-figure-video' %}
+      {% include 'atoms-paragraph' with { 'content': 'In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.' } %}
+      {% include 'molecules-pull-quote' %}
+    </section>
+    <section id="section-4">
+      {% include 'atoms-h3' with { 'content': 'Lorem Ipsum' }  %}
+      {% include 'atoms-paragraph' with { 'content': 'In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.' } %}
+      {% include 'molecules-inline-bio' %}
+      {% include 'atoms-paragraph' with { 'content': 'Sed massa augue, sollicitudin vel metus a, posuere scelerisque erat. In vulputate feugiat neque, sed aliquam risus. Cras blandit enim nec mauris egestas accumsan. Donec sed maximus justout pellentesque sem. Suspendisse semper varius turpis, vel congue risus mollis sit amet. Praesent molestie molestie ligula, ut viverra.' } %}
+    </section>
+  </div>
+  <div class="layout_two_up-heavy-right-offset-secondary">
+    {# Share this molecule goes here #}
+  </div>
+  <div class="layout_two_up-heavy-right-offset-primary">
+    {% include 'molecules-list-rule' %}
+    {% include 'molecules-list-rule-metadata' %}
+  </div>
+</div>
+<div class="layout layout-one-up">
+  {% include 'organisms-related-content' %}
+  {% include 'organisms-list-block-promo' %}
+</div>
+{% include 'organisms-footer' %}

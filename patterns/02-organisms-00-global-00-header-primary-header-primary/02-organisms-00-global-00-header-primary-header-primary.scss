@@ -1,0 +1,191 @@
+.header-primary-span {
+  display: block;
+  width: 100%;
+}
+
+// Primary header section.
+.header-primary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  //position: relative;
+  background: $white;
+  width: 100%;
+  z-index: 50;
+
+  @include breakpoint($bp-med-home min-width) {
+    border-bottom: 1px $black-20 solid;
+  }
+
+  .header-primary-inner {
+    @extend %clearfix;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px 20px 10px;
+    position: relative;
+
+    @include breakpoint($bp-med-home min-width) {
+      padding: 20px 20px 0;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      padding: 20px 175px 0 0;
+    }
+  }
+
+  // AMA logo.
+  .logo {
+    width: 110px;
+
+    @include breakpoint($bp-med-home min-width) {
+      top: initial;
+      float: left;
+      margin-bottom: 37px;
+      position: relative;
+      width: 217px;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      bottom: initial;
+      position: inherit;
+    }
+  }
+
+  // Primary navigation.
+  .nav-primary_button {
+    display: inline-block;
+    position: absolute;
+    right: 74px;
+    top: 20px;
+    vertical-align: top;
+
+    @include breakpoint($bp-med-home min-width) {
+      bottom: -57px;
+      clear: both;
+      display: none;
+      float: none;
+      position: initial;
+      right: initial;
+      text-align: center;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      position: relative;
+      bottom: initial;
+      left: initial;
+      right: 136px;
+      clear: none;
+      float: right;
+      margin-right: 35px;
+    }
+  }
+
+  // Search button.
+  .button-search {
+
+    @include breakpoint($bp-med-home min-width) {
+      top: 20px;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      top: 19px;
+      right: 0;
+    }
+  }
+}
+
+// Fixed header overrides
+.header-primary--sticky {
+  position: fixed;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  border-bottom: 1px $black-20 solid;
+
+  .header-primary-inner {
+    padding: 20px 20px 10px;
+
+    @include breakpoint($bp-med-home min-width) {
+      padding-right: 80px;
+      padding-bottom: 0;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      padding-right: 90px;
+    }
+  }
+
+  // Logo
+  .logo {
+    width: 110px;
+    margin-bottom: 0;
+  }
+
+  // Search button
+  .button-search {
+    height: 44px;
+    width: 44px;
+    right: 0;
+    margin-bottom: 0;
+
+    @include breakpoint($bp-med-home min-width) {
+      right: 20px;
+    }
+  }
+
+  // Search button title
+  .button-search_title {
+    display: none;
+  }
+
+  .nav-primary {
+    float: right;
+    margin: 0;
+    clear: none;
+    width: auto;
+  }
+
+  .nav-primary_section {
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      margin-right: 25px;
+    }
+  }
+
+  .nav-primary_section {
+    > .link-nav-primary {
+      @include breakpoint($bp-med-home min-width) {
+        font-size: 14px;
+        padding: 15px 0 25px;
+
+        &:active,
+        &:hover,
+        &:focus {
+          border-bottom: 10px $purple solid;
+          padding-bottom: 15px;
+        }
+      }
+
+      @include breakpoint($bp-large-home min-width) {
+        font-size: 18px;
+      }
+    }
+
+    &.nav-primary_section-active > .link-nav-primary {
+      @include breakpoint($bp-med-home min-width) {
+        border-bottom: 10px $purple solid;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+  .nav-primary_section_subnav {
+    top: auto;
+  }
+}

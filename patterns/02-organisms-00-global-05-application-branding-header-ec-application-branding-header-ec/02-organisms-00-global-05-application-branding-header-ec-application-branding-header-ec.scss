@@ -1,0 +1,42 @@
+.rule-vertical-thin {
+  border-left: 2px #46166b solid;
+  min-height: 3em;
+}
+
+.header-primary_ec {
+  padding: 0;
+}
+
+.header-primary_ec .logo {
+  display: none;
+
+  @include breakpoint($bp-med-home) {
+    display: block;
+    bottom: -19px;
+    position: relative;
+  }
+}
+
+.header-primary_ec .rule-vertical {
+  display: none;
+
+  @include breakpoint($bp-med-home) {
+    display: block;
+    margin: 20px 44px 18px;
+  }
+}
+
+.link-application-title {
+  @include type($font-sans-serif, 2rem, $font-weight-thin, 1.1176470588);
+  padding: 20px 0;
+  color: $purple;
+
+  @include breakpoint($bp-med-home) {
+    padding: 40px 0;
+    font-size: 2.5rem;
+  }
+
+  &:hover {
+    color: $purple;
+  }
+}

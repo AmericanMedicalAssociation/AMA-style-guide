@@ -1,0 +1,4 @@
+.rule-vertical {
+  @include rule-vertical(16px, $purple, solid);
+  min-height: 3em;
+}
