@@ -1,14 +1,17 @@
 {
-  "title": "What the AMA Has Done for Me",
-  "list": {
-    "first": {
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing" 
-    },
-    "second": {
-      "content": " Aenean euismod bibendum laoreet" 
-    },
-    "third": {
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+  "block": {
+    "title": "Lorem ipsum dolor ",
+    "button": true,
+    "list": {
+      "first": {
+        "content": "Lorem ipsum dolor sit amet"
+      },
+      "second": {
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+      },
+      "third": {
+        "content": "Lorem ipsum dolor sit amet"
+      }
     }
   }
 }

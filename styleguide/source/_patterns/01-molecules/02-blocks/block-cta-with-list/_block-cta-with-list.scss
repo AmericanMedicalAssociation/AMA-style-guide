@@ -1,14 +1,16 @@
 .block_cta-with-list {
-  background-color: $gray-light-4;
   text-align: center;
-}
-.block_cta-with-list ul {
-  max-width: 80%;
-  li {
-    text-align: left;
+  ul {
+    margin: 9px 0 0 0;
+    li {
+      text-align: left;
+    }
   }
 }
 
-.block_cta-with-list-button-link {
-
+.block_cta-with-list-container {
+  background-color: $gray-light-4;
+  display: block;
+  margin-bottom: 10px;
+  padding: 12px 24px;
 }
