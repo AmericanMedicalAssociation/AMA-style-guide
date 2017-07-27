@@ -1,0 +1,21 @@
+*** src/PatternLab/Builder.php	2016-07-21 22:00:05.000000000 -0500
+--- src/PatternLab/Builder-new.php	2017-07-26 14:06:55.000000000 -0500
+***************
+*** 391,398 ****
+  					$patternData["patternPartial"] = "viewall-".$patternStoreData["nameDash"]."-all";
+  					
+  					// add the pattern lab specific mark-up
+! 					$partials["patternLabHead"] = $stringLoader->render(array("string" => $htmlHead, "data" => array("cacheBuster" => $partials["cacheBuster"])));
+! 					$partials["patternLabFoot"] = $stringLoader->render(array("string" => $htmlFoot, "data" => array("cacheBuster" => $partials["cacheBuster"], "patternData" => json_encode($patternData))));
+  					
+  					// render the parts and join them
+  					$header      = $patternLoader->render(array("pattern" => $patternHead, "data" => $globalData));
+--- 391,398 ----
+  					$patternData["patternPartial"] = "viewall-".$patternStoreData["nameDash"]."-all";
+  					
+  					// add the pattern lab specific mark-up
+! 					$globalData["patternLabHead"] = $stringLoader->render(array("string" => $htmlHead, "data" => array("cacheBuster" => $partials["cacheBuster"])));
+! 					$globalData["patternLabFoot"] = $stringLoader->render(array("string" => $htmlFoot, "data" => array("cacheBuster" => $partials["cacheBuster"], "patternData" => json_encode($patternData))));
+  					
+  					// render the parts and join them
+  					$header      = $patternLoader->render(array("pattern" => $patternHead, "data" => $globalData));
