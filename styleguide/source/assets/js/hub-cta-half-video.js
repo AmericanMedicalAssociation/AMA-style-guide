@@ -1,5 +1,5 @@
 /**
- * @file hub-cta-half-video.js
+ * @file
  * Initialize fitVid for YouTube vieos.
  *
  * JavaScript should be made compatible with libraries other than jQuery by

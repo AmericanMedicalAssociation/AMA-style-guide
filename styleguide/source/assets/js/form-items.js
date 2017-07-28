@@ -1,6 +1,6 @@
 /**
- * @file form-items.js
- *
+ * @file
+ * Interactions for form validation.
  * Reference http://codepen.io/anon/pen/GHKJj
  *
  * JavaScript should be made compatible with libraries other than jQuery by

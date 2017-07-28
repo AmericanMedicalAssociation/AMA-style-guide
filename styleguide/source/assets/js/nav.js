@@ -1,6 +1,6 @@
 /**
- * @file nav.js
- * Ribbon nav user interactions
+ * @file
+ * Ribbon nav user interactions.
  *
  * JavaScript should be made compatible with libraries other than jQuery by
  * wrapping it with an "anonymous closure". See:
