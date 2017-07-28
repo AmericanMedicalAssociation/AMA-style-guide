@@ -9,8 +9,12 @@
 }
 
 .block_cta-with-list-container {
-  background-color: $gray-light-4;
+  background-color: $black-7;
   display: block;
   margin-bottom: 10px;
   padding: 12px 24px;
+}
+
+a.block_cta-with-list-container:hover {
+  background-color: $gray-light-4;
 }
