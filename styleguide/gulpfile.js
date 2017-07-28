@@ -47,6 +47,13 @@ gulp.task('clean:before', function () {
     }))
 });
 
+// Task: Clean:publish
+// Description: Removing temp dir from git deploy
+gulp.task('clean:publish', function () {
+  return gulp.src( '.publish' )
+    .pipe(clean({ force: true }))
+});
+
 // Task: Handle scripts
 gulp.task('scripts', function () {
   // Package up all of the custom stuff for Drupal to consume
@@ -247,7 +254,7 @@ gulp.task('serve', function () {
 
 // Task: Publish static content
 // Description: Publish static content using rsync shell command
-gulp.task('publish', function () {
+gulp.task('publish', ['clean:publish'], function () {
   return gulp.src(config.deployment.local.path)
     .pipe(ghPages({ branch: config.deployment.branch}));
 });
