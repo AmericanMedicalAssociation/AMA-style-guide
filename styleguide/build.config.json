@@ -26,7 +26,16 @@
     "files" : [
       "source/assets/js/jquery-2.0.0b2.js",
       "source/assets/js/jquery.validate.js",
+      "source/assets/js/drupal-attach-behaviors.js",
       "source/assets/js/**/*.js",
+      "source/_patterns/**/*.js"
+    ],
+    "drupalfiles" : [
+      "source/assets/js/jquery.validate.js",
+      "source/assets/js/fitvids.js",
+      "source/assets/js/form-items.js",
+      "source/assets/js/hub-cta-half-video.js",
+      "source/assets/js/nav.js",
       "source/_patterns/**/*.js"
     ],
     "dest"  : "public/assets/js/"
@@ -54,7 +63,7 @@
     "files": [
       "source/assets/icons/svg/*.svg"
     ],
-    "min"  : "public/assets/icons/svg/", 
+    "min"  : "public/assets/icons/svg/",
     "dest" : "public/assets/icons/"
   },
   "images": {

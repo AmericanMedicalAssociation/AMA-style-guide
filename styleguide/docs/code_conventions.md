@@ -67,17 +67,20 @@ Refer to Drupal's [Javascript Coding Standards](https://www.drupal.org/node/1721
 
 Any relevant javascript for a pattern should be stored in the pattern's own folder, along with its template and SCSS.
 
-We use jQuery in our applications, so you should make sure your pattern's .js file begins with an immediately invoked function expression that accepts the jQuery library as a parameter like so:
+Javascript in the style guide is directly consumed by Drupal, and as such, you need to follow the instructions below to properly set up your scripts . This will allow for Javascript to be shared between the style guide and Drupal. More context behind this method can be found on [this pull request](https://github.com/palantirnet/butler/pull/41) and [this doc](https://github.com/palantirnet/butler/blob/master/docs/JS.md).
 
+### Creating a new, custom Javascript file
+1. Create a new Javascript file in the corresponding pattern directory with the same name as the pattern (e.g. `test-pattern.twig` would get `test-pattern.js`).
+2. Copy and paste the [Javascript file template](./JS_TEMPLATE.js) into your new file. (The template is located at /styleguide/docs/JS_TEMPLATE.js)
+3. Update the potions in curly brackets: the file description comment, the name of the behavior and the contents of the script you're writing. You many name your behavior anything you like; it just needs to be unique.
+4. Your JS will be automatically sucked up by gulp and compiled into the project.
 
+This wrapper includes an immediately invoked function expression that accepts the jQuery library as a parameter. If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.
 
-	(function($) {
-		//your pattern javascript here
-	}(jQuery);
+### Using this JS
+The [drupal-attach-behaviors.js](../source/assets/js/drupal-attach-behaviors.js) script  mimics the functionality from the Drupal JS API. This allows us to write our scripts as Drupal behaviors and use them in the style guide. With `drupal-attach-behaviors.js` included in the `<head>` of your style guide, the scripts work properly—both in Drupal and in the style guide—with the scripts living in only one location. This inclusion is done automatically in the style guide.
 
-If your javascript expects certain elements to be present in the DOM, make sure you wrap the JS in an init function of some sort and check that the elements exist before initializing your script! Pattern Lab doesn't automagically encapsulate your javascript, so wrapping your js thusly prevents an abundance of errors if your selectors happen to be missing from a particular page of the style guide.
-
-
+If you choose to use individual JS files from this repo, you'll need to include `drupal-attach-behaviors.js` in the `<head>` of your application, before any of the individual files.
 
 ## Annotation and Documentation
 

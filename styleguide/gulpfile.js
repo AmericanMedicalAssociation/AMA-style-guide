@@ -47,8 +47,24 @@ gulp.task('clean:before', function () {
     }))
 });
 
+// Task: Clean:publish
+// Description: Removing temp dir from git deploy
+gulp.task('clean:publish', function () {
+  return gulp.src( '.publish' )
+    .pipe(clean({ force: true }))
+});
+
 // Task: Handle scripts
 gulp.task('scripts', function () {
+  // Package up all of the custom stuff for Drupal to consume
+  var ds = gulp.src(config.scripts.drupalfiles)
+    // unminified for development
+    .pipe(sourcemaps.init())
+    .pipe(concat('drupal.js'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(config.scripts.dest));
+
+  // Package up everything for use by Pattern Lab
   return gulp.src(config.scripts.files)
     // unminified for development
     .pipe(sourcemaps.init())
@@ -58,6 +74,7 @@ gulp.task('scripts', function () {
     // also 'production-ready' js file even though we don't use it yet
     .pipe(rename('app.min.js'))
     .pipe(uglify())
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
     .pipe(gulp.dest(config.scripts.dest))
     .pipe(browserSync.reload({stream:true}));
 });
@@ -237,7 +254,7 @@ gulp.task('serve', function () {
 
 // Task: Publish static content
 // Description: Publish static content using rsync shell command
-gulp.task('publish', function () {
+gulp.task('publish', ['clean:publish'], function () {
   return gulp.src(config.deployment.local.path)
     .pipe(ghPages({ branch: config.deployment.branch}));
 });
