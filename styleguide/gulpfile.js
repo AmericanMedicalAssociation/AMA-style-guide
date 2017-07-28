@@ -247,7 +247,7 @@ gulp.task('serve', function () {
 // Description: Publish static content using rsync shell command
 gulp.task('publish', function () {
   return gulp.src(config.deployment.local.path)
-    .pipe(ghPages({ branch: options.branch}));
+    .pipe(ghPages({ branch: config.deployment.branch}));
 });
 
 // Task: Deploy to GitHub pages
@@ -256,6 +256,17 @@ gulp.task('deploy', function () {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
   // run default to build the code and then publish it GitHub pages
+  runSequence('default', 'publish');
+});
+
+// Task: Deploy to dev-assets branch
+// Description: Build the public code and deploy it to be consumed by Drupal
+gulp.task('drupal-deploy', function () {
+  // make sure to use the gulp from node_modules and not a different version
+  runSequence = require('run-sequence').use(gulp);
+  // Change the deploy branch
+  config.deployment.branch = "dev-assets";
+  // run default to build the code and then publish it to our branch
   runSequence('default', 'publish');
 });
 

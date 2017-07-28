@@ -9,7 +9,8 @@
     },
     "rsync": {
       "options": "-avzh --delete -e ssh"
-    }
+    },
+    "branch": ""
   },
   "assets": {
     "base": "source/assets/",
