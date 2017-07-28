@@ -81,6 +81,13 @@
   }
 }
 
+// Prevent the search bar from overtaking the menu overlay at mobile breakpoints.
+.body-nav-primary-open .page-level-search {
+  @include breakpoint($bp-med-home max-width) {
+    z-index: -1;
+  }
+}
+
 .nav-primary_section-active {
   > .link-nav-primary {
 
@@ -173,30 +180,29 @@
   @include grid__unit--cols(12);
   flex-direction: column;
   flex-wrap: wrap;
-  display: none;
-  height: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
 
   @include breakpoint($bp-med-home min-width) {
     justify-content: flex-start;
     flex-direction: row;
     position: absolute;
-    top: 221px;
+    top: 186px;
     left: 0;
     right: 0;
-    padding: 20px 30px;
     background: $black-7;
     width: 100vw;
     z-index: 1;
+    max-height: 0;
   }
 
   @include breakpoint($bp-large-home) {
     @include grid__unit--cols(12.5);
     left: -30px;
     right: -30px;
-    top: 146px;
+    top: 144px;
   }
 }
 
@@ -342,10 +348,10 @@
 
 .nav-primary_section_subnav_back {
   background-color: $black-7;
-  border-top: 1px $gray-8 solid;
   position: relative;
   margin: 0;
   order: 4;
+  display: none;
 
   .link-nav-primary {
     @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);

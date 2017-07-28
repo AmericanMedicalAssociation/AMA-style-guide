@@ -41,7 +41,6 @@
     @include breakpoint($bp-med-home min-width) {
       top: initial;
       float: left;
-      margin-bottom: 37px;
       position: relative;
       width: 217px;
     }
@@ -187,5 +186,101 @@
 
   .nav-primary_section_subnav {
     top: auto;
+  }
+}
+
+@keyframes expand {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1000px;
+  }
+}
+
+@keyframes collapse {
+  0% {
+    max-height: 1000px;
+  }
+  100% {
+    max-height: 0;
+  }
+}
+
+@keyframes expand-desktop {
+  0% {
+    max-height: 0%;
+    padding: 0;
+  }
+  1% {
+    padding: 20px 30px;
+  }
+  100% {
+    max-height: 100%;
+    padding: 20px 30px;
+  }
+}
+
+@keyframes collapse-desktop {
+  0% {
+    max-height: 1000px;
+    display: block;
+    padding: 20px 30px;
+
+  }
+  1% {
+    display: none;
+  }
+  100% {
+    padding: 20px 30px;
+    max-height: 0;
+  }
+}
+
+  .nav-primary_section .nav-primary_section_subnav {
+    @include breakpoint($bp-med max-width) {
+      animation: collapse 0.45s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @include breakpoint($bp-med min-width) {
+      display: flex;
+      animation: collapse-desktop 0.45s ease-in-out;
+      //animation: collapse-desktop 45s ease-in-out; // DEBUG
+      animation-fill-mode: initial;
+
+    }
+  }
+
+  // Hides the subnavs initially so they don't show on page load.
+  .nav-primary_list-subnavs-hidden .nav-primary_section_subnav {
+    visibility: hidden;
+  }
+
+  .nav-primary_section.nav-primary_section-active .nav-primary_section_subnav {
+    max-height: 1000px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: auto;
+    animation-fill-mode: forwards;
+
+    @include breakpoint($bp-med max-width) {
+      animation: expand 0.45s ease-in-out;
+    }
+
+    @include breakpoint($bp-med min-width) {
+      padding: 20px 30px;
+      animation: expand-desktop 0.3s ease-in-out;
+    }
+  }
+
+@include breakpoint($bp-med max-width) {
+  .nav-primary_section-active ~ .nav-primary_section_subnav_back {
+    display: block;
+  }
+}
+
+.nav-primary_section-active .nav-primary_section_subnav .icon {
+  @include breakpoint($bp-med max-width) {
+    display: block;
   }
 }

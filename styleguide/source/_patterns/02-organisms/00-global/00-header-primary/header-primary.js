@@ -17,7 +17,7 @@ jQuery.noConflict();
 
   function initializePrimaryHeader(){
     // Set height on page load
-    setTimeout(function(){ checkHeight(); }, 100);
+    setTimeout(function(){ checkHeight(); }, 300);
     // Check height on window resize
     $(window).resize(checkHeight);
 
