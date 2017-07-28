@@ -6,6 +6,13 @@
   <div class="grid">
     <aside class="topic_rail-left col-width-3 grid-region">
       {% include 'organisms-topic-tools' %}
+        <div class="topic-articles layout">
+            {% include 'atoms-landscape-3x2' %}
+            {% include "atoms-title-label" with {'content': 'Topic Label'} %}
+            {% include "molecules-link-black-h2" with {'content' : 'Article Title', 'class': 'topic_article-preview_title' }%}
+            {% include "atoms-paragraph" %}
+            {% include "molecules-article-metadata" %}
+        </div>
     </aside>
 
     <section class="topic_content col-width-6 grid-region">
