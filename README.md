@@ -105,3 +105,6 @@ For example, to use the side-by-side Two Up Layout, add the <code>layout_two_up<
 Note: you should not need to nest elements with class <code>.layout</code>.
 
 The <code>.layout</code> and <code>.layout_number_up</code> classes can be added to container elements both in individual patterns (i.e. organisms) and in the Twig templates that include them (e.g. templates). In general, if a specific pattern can be assumed to always use the same layout, it's fine to include the layout within that pattern.
+
+### Writing Javascript
+If you need to write some Javascript, follow [these instructions](https://github.com/palantirnet/butler/blob/drupal-attach-behaviors/docs/JS.md) to properly set up your scripts. This will allow for Javascript to be shared between the style guide and Drupal. More context behind this method can be found on [this pull request](https://github.com/palantirnet/butler/pull/41).
