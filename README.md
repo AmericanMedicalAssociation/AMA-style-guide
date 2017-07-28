@@ -40,7 +40,7 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 **To deploy changes**
 
 - `gulp deploy` to build the production ready code and push to the `gh-pages` branch for display on https://americanmedicalassociation.github.io/AMA-style-guide/.
-- `gulp deploy --branch dev-assets` to deploy changes to the `dev-assets` branch for consumption by Drupal or another CMS.
+- `gulp drupal-deploy` to deploy changes to the `dev-assets` branch for consumption by Drupal or another CMS.
 
 **To mark a new release of the Style Guide**
 
