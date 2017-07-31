@@ -1,4 +1,8 @@
- .topic {
-  display: flex;
-  flex-direction: row;
+ .topic_rail-left,
+ .topic_rail-right {
+   @include grid-_unit--cols(3);
+ }
+
+ .topic_content {
+   @include grid-_unit--cols(6);
  }
