@@ -22,3 +22,16 @@
     order: 3;
   }
 }
+
+ .topic .layout.topic-articles {
+   flex-direction: column;
+ }
+
+ // Topic Articles section - @todo split into pattern SCSS.
+ .topic-articles .topic_article-preview_title {
+   font-size: 24px;
+ }
+
+ .topic-articles .topic_article-preview_description {
+   font-size: 16px;
+ }
