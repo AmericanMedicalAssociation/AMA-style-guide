@@ -26,6 +26,11 @@
   border-top: $width $color $style;
 }
 
+// Horizontal rule
+@mixin rule-horizontal-bottom($width, $color, $style) {
+  border-bottom: $width $color $style;
+}
+
 // Vertical rule
 @mixin rule-vertical($width, $color, $style) {
   border-left: $width $color $style;

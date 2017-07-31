@@ -3,9 +3,15 @@
 </header>
 
 <main class="topic">
-  <aside class="topic_rail-left"></aside>
-  <section class="topic_content"></section>
-  <aside class="topic_rail-right"></aside>
+  <aside class="topic_rail-left">
+    {% include 'organisms-tools' %}
+  </aside>
+  <section class="topic_content" style="width: 60%;">
+    {% include "organisms-topic-hero-section" %}
+  </section>
+  <section class="topic_rail-right" style="width: 30%;">
+    {% include 'molecules-block-cta-with-list' with {'block.list': topicList} %}
+  </section>
 </main>
 
 {% include 'organisms-footer' %}
