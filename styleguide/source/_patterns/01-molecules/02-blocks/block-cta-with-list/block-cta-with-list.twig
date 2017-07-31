@@ -1,0 +1,12 @@
+<section class="block_cta-with-list">
+  {% set tag = block.button ? 'div': 'a' %}
+  <{{tag}} class="block_cta-with-list-container" href="#">
+
+    {% include 'atoms-h2' with {'class': 'block_cta-with-list-title', 'content': block.title} %}
+    {% include 'atoms-rule-horizontal' %}
+    {% include 'atoms-unordered' with {'list': block.list} %}
+    {% if block.button %}
+      {% include 'atoms-button-link' with {'class': 'block_cta-with-list-button-link'} %}
+    {% endif %}
+  </{{tag}}>
+</section>
