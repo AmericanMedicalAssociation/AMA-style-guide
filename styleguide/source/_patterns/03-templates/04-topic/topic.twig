@@ -7,11 +7,21 @@
     <aside class="topic_rail-left col-width-3 grid-region">
       {% include 'organisms-topic-tools' %}
         <div class="topic-articles layout">
-            {% include 'atoms-landscape-3x2' %}
-            {% include "atoms-title-label" with {'content': 'Topic Label'} %}
-            {% include "molecules-link-black-h2" with {'content' : 'Article Title', 'class': 'topic_article-preview_title' }%}
-            {% include "atoms-paragraph" %}
-            {% include "molecules-article-metadata" %}
+            {# Use existing atoms for these? #}
+            <div class="topic-articles_article-preview">
+                {% include 'atoms-landscape-3x2' %}
+                {% include "atoms-title-label" with {'content': 'Topic Label'} %}
+                {% include "molecules-link-black-h2" with {'content' : 'Article Title', 'class': 'topic_article-preview_title' }%}
+                {% include "atoms-paragraph" with {'class' : 'topic_article-preview_description'} %}
+                {% include "molecules-article-metadata" %}
+            </div>
+            <div class="topic-articles_article-preview-video">
+                {% include 'atoms-landscape-3x2' %}
+                {% include "atoms-title-label" with {'content': 'Topic Label'} %}
+                {% include "molecules-link-black-h2" with {'content' : 'Article Title', 'class': 'topic_article-preview_title' }%}
+                {% include "atoms-paragraph" with {'class' : 'topic_article-preview_description'} %}
+                {% include "molecules-article-metadata" %}
+            </div>
         </div>
     </aside>
 
