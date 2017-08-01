@@ -4,16 +4,30 @@
 
 .topic_rail-left,
 .topic_rail-right {
-  margin-top: 26px;
+  margin-top: 28px;
   @include breakpoint($bp-med) {
     @include grid-_unit--cols(3);
   }
 }
 
+.topic_rail-left {
+  order: 2;
+  @include breakpoint($bp-med) {
+    order: 1;
+  }
+}
+
 .topic_content {
+  order: 1;
+
   @include breakpoint($bp-med) {
     @include grid-_unit--cols(6);
+    order: 2;
   }
+}
+
+.topic_rail-right {
+  order: 3;
 }
 
 .row-nested {

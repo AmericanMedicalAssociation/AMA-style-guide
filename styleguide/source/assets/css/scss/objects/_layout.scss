@@ -18,10 +18,10 @@
 // Use on the container that should have gutters and use flexbox.
 .grid-container {
 	@include grid();
-	margin: -1em 0 0 -1em;
+	margin: -14px 0 0 -14px;
 	// Apply the gutters to invidual cells.
 	> .grid-cell {
-		padding: 1em 0 0 1em;
+		padding: 14px 0 0 14px;
 	}
 }
 
