@@ -41,12 +41,6 @@
 	}
 }
 
-//// No left padding on grid region.
-//.grid-region-no-padding-left {
-//	margin-top: $gutter;
-//	padding: $gutter 0 0 0;
-//}
-
 // Use on top level container without instantiating flexbox.
 .container {
 	max-width: $max-width;
@@ -59,7 +53,7 @@
 }
 
 // Column-width... columns.
-// @todo - add 9 and 12
+// @todo - add 12, maybe also 4 (?)
 .col-width-3 {
 	padding: $gutter $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
