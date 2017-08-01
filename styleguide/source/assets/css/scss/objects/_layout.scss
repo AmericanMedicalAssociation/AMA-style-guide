@@ -74,3 +74,10 @@
 		@include grid-_unit--cols(9);
 	}
 }
+
+.col-width-12 {
+	padding: $gutter $gutter-half 0 $gutter-half;
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(12);
+	}
+}
