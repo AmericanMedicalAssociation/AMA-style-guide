@@ -1,7 +1,3 @@
-.topic_hero-section .topic_article-preview > * {
-  margin-top: 14px;
-}
-
 .topic_hero-section .topic_article-preview {
   @include rule-horizontal-bottom(1px, $gray-8, solid);
   padding-bottom: 28px;
