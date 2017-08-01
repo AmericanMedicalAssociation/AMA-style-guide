@@ -1,8 +1,24 @@
- .topic_rail-left,
- .topic_rail-right {
-   @include grid-_unit--cols(3);
- }
+.topic {
+  @include grid();
+}
 
- .topic_content {
-   @include grid-_unit--cols(6);
- }
+.topic_rail-left,
+.topic_rail-right {
+  margin-top: 26px;
+  @include breakpoint($bp-med) {
+    @include grid-_unit--cols(3);
+  }
+}
+
+.topic_content {
+  @include breakpoint($bp-med) {
+    @include grid-_unit--cols(6);
+  }
+}
+
+.row-nested {
+  @include grid();
+  > div {
+    @include grid-_unit--cols(6);
+  }
+}
