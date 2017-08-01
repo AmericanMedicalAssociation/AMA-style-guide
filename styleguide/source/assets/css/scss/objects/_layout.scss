@@ -4,7 +4,8 @@
 
 
 // Layout default setup.
-.layout {
+.layout,
+.container-with-grid {
 	@include grid();
 	max-width: $max-width;
 	margin: 0 auto; /*fallback*/
@@ -16,17 +17,25 @@
 }
 
 // Use on the container that should have gutters and use flexbox.
-.grid-container {
+.grid {
 	@include grid();
-	margin: -14px 0 0 -14px;
-	// Apply the gutters to invidual cells.
-	> .grid-cell {
-		padding: 14px 0 0 14px;
-	}
+	margin: -$gutter 0 0 -$gutter;
 }
 
-// Use on top level without instantiating flexbox.
-.container-centered {
+// Apply the gutters to individual cells.
+.grid-region {
+	margin-top: $gutter;
+	padding: $gutter 0 0 $gutter;
+}
+
+// No left padding on grid region.
+.grid-region-no-padding-left {
+	margin-top: $gutter;
+	padding: $gutter 0 0 0;
+}
+
+// Use on top level container without instantiating flexbox.
+.container {
 	max-width: $max-width;
 	margin: 0 auto; /*fallback*/
 	padding: 0 20px;

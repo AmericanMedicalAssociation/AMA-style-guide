@@ -4,7 +4,6 @@
 
 .topic_rail-left,
 .topic_rail-right {
-  margin-top: 28px;
   @include breakpoint($bp-med) {
     @include grid-_unit--cols(3);
   }
@@ -19,7 +18,6 @@
 
 .topic_content {
   order: 1;
-
   @include breakpoint($bp-med) {
     @include grid-_unit--cols(6);
     order: 2;
@@ -30,8 +28,8 @@
   order: 3;
 }
 
+// Note: need if we are using rows, remove if we are not.
 .row-nested {
-  @include grid();
   > div {
     @include grid-_unit--cols(6);
   }

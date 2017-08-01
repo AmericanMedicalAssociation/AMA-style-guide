@@ -2,26 +2,26 @@
   {% include 'organisms-ribbon' %}
 </header>
 
-<main class="topic container-centered">
-  <div class="grid-container">
-    <aside class="topic_rail-left grid-cell">
+<main class="topic container">
+  <div class="grid">
+    <aside class="topic_rail-left grid-region-no-padding-left">
       {% include 'organisms-tools' %}
     </aside>
 
-    <section class="topic_content grid-cell">
+    <section class="topic_content grid-region">
       {% include "organisms-topic-hero-section" %}
       {% include 'molecules-block-cta-with-list' with {'block.list': topicList} %}
-      <aside class="row-nested grid-container grid-cell">
-        <div  class="row-nested-item grid-cell">
+      <section class="row-nested grid">
+        <div class="grid-region-no-padding-left">
           {% include 'organisms-tools' %}
         </div>
-        <div  class="row-nested-item grid-cell">
+        <div class="grid-region">
           {% include 'organisms-tools' %}
         </div>
-      </aside>
+      </section>
     </section>
 
-    <aside class="topic_rail-right grid-cell">
+    <aside class="topic_rail-right grid-region">
       {% include 'molecules-block-cta-with-list' with {'block.list': topicList} %}
     </aside>
   </div>
