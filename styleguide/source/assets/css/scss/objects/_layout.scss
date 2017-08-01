@@ -25,14 +25,27 @@
 // Apply the gutters to individual cells.
 .grid-region {
 	margin-top: $gutter;
-	padding: $gutter 0 0 $gutter;
 }
 
-// No left padding on grid region.
-.grid-region-no-padding-left {
+// Don't add padding to the first/last children of nested grids, since the parent
+// already has padding. This is a row.
+.grid-region-nested {
 	margin-top: $gutter;
-	padding: $gutter 0 0 0;
+	> *:first-child {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	> *:last-child {
+		padding-top: 0;
+		padding-right: 0;
+	}
 }
+
+//// No left padding on grid region.
+//.grid-region-no-padding-left {
+//	margin-top: $gutter;
+//	padding: $gutter 0 0 0;
+//}
 
 // Use on top level container without instantiating flexbox.
 .container {
@@ -48,13 +61,22 @@
 // Column-width... columns.
 // @todo - add 9 and 12
 .col-width-3 {
+	padding: $gutter $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(3);
 	}
 }
 
 .col-width-6 {
+	padding: $gutter $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(6);
+	}
+}
+
+.col-width-9 {
+	padding: $gutter $gutter-half 0 $gutter-half;
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(9);
 	}
 }
