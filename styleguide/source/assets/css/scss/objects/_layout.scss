@@ -44,3 +44,17 @@
 		padding: 0 30px;
 	}
 }
+
+// Column-width... columns.
+// @todo - add 9 and 12
+.col-width-3 {
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(3);
+	}
+}
+
+.col-width-6 {
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(6);
+	}
+}

@@ -2,12 +2,12 @@
   @include grid();
 }
 
-.topic_rail-left,
-.topic_rail-right {
-  @include breakpoint($bp-med) {
-    @include grid-_unit--cols(3);
-  }
-}
+//.topic_rail-left,
+//.topic_rail-right {
+//  @include breakpoint($bp-med) {
+//    @include grid-_unit--cols(3);
+//  }
+//}
 
 .topic_rail-left {
   order: 2;
@@ -28,9 +28,9 @@
   order: 3;
 }
 
-// Note: need if we are using rows, remove if we are not.
-.row-nested {
-  > div {
-    @include grid-_unit--cols(6);
-  }
-}
+//// Note: need if we are using rows, remove if we are not.
+//.row-nested {
+//  > div {
+//    @include grid-_unit--cols(6);
+//  }
+//}
