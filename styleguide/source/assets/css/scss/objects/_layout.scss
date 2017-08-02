@@ -58,6 +58,13 @@
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(3);
 	}
+
+	// Since these patterns are flex-direction: column, ensure
+	// the appropriate top margins between them.
+	> *:nth-child(n + 2),
+	> *:nth-child(n + 2) > *:nth-child(n + 2) {
+		margin-top: $gutter;
+	}
 }
 
 .col-width-6 {
