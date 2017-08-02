@@ -8,12 +8,23 @@
 .container-with-grid {
 	@include grid();
 	max-width: $max-width;
-	margin: 0 auto; /*fallback*/
+  margin: 0 auto;
 	padding: 0 20px;
 
 	@include breakpoint($bp-med) {
 		padding: 0 30px;
 	}
+}
+
+// Use on top level container without instantiating flexbox.
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint($bp-med) {
+    padding: 0 30px;
+  }
 }
 
 // Use on the container that should have gutters and use flexbox.
@@ -41,19 +52,7 @@
 	}
 }
 
-// Use on top level container without instantiating flexbox.
-.container {
-	max-width: $max-width;
-	margin: 0 auto; /*fallback*/
-	padding: 0 20px;
-
-	@include breakpoint($bp-med) {
-		padding: 0 30px;
-	}
-}
-
-// Column-width... columns.
-// @todo - add 12, maybe also 4 (?)
+// Column-width classes..
 .col-width-3 {
 	padding: $gutter $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
