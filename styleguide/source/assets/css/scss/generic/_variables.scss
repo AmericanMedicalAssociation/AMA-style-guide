@@ -75,3 +75,7 @@ $bp-xl: 87.5em; // 1400px
 // Breakpoints used by home page.
 $bp-med-home: 740px;
 $bp-large-home: 1251px;
+
+// Grid variables.
+$gutter: 28px;
+$gutter-half: $gutter / 2;

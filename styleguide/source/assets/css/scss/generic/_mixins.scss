@@ -52,3 +52,19 @@
     clear: both;
   }
 }
+
+// Additional layout mixins.
+
+// Switches direction from row to column.
+@mixin grid--direction-col() {
+  .flexbox & {
+    flex-direction: column;
+  }
+}
+
+// Adds equal space between items.
+@mixin grid--justify-between() {
+  .flexbox & {
+    justify-content: space-between;
+  }
+}

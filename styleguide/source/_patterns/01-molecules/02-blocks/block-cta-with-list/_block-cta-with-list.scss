@@ -11,8 +11,7 @@
 .block_cta-with-list-container {
   background-color: $black-7;
   display: block;
-  margin-bottom: 10px;
-  padding: 12px 24px;
+  padding: $gutter-half $gutter;
 }
 
 a.block_cta-with-list-container:hover {

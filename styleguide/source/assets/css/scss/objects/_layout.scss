@@ -4,10 +4,11 @@
 
 
 // Layout default setup.
-.layout {
+.layout,
+.container-with-grid {
 	@include grid();
 	max-width: $max-width;
-	margin: 0 auto; /*fallback*/
+  margin: 0 auto;
 	padding: 0 20px;
 
 	@include breakpoint($bp-med) {
@@ -15,6 +16,67 @@
 	}
 }
 
-.layout-nested {
+// Use on top level container without instantiating flexbox.
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include breakpoint($bp-med) {
+    padding: 0 30px;
+  }
+}
+
+// Use on the container that should have gutters and use flexbox.
+.grid {
 	@include grid();
+	margin: -$gutter 0 0 -$gutter;
+}
+
+// Apply the gutters to individual cells.
+.grid-region {
+	margin-top: $gutter;
+}
+
+// Don't add padding to the first/last children of nested grids, since the parent
+// already has padding. This is a row.
+.grid-region-nested {
+	margin-top: $gutter;
+	> *:first-child {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	> *:last-child {
+		padding-top: 0;
+		padding-right: 0;
+	}
+}
+
+// Column-width classes..
+.col-width-3 {
+	padding: $gutter $gutter-half 0 $gutter-half;
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(3);
+	}
+}
+
+.col-width-6 {
+	padding: $gutter $gutter-half 0 $gutter-half;
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(6);
+	}
+}
+
+.col-width-9 {
+	padding: $gutter $gutter-half 0 $gutter-half;
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(9);
+	}
+}
+
+.col-width-12 {
+	padding: $gutter $gutter-half 0 $gutter-half;
+	@include breakpoint($bp-med) {
+		@include grid-_unit--cols(12);
+	}
 }
