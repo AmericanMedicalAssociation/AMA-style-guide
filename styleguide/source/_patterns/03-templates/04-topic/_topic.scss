@@ -1,23 +1,24 @@
-.topic {
-  @include grid();
-}
-
 // Set mobile order.
-.topic_rail-left {
-  order: 2;
-  @include breakpoint($bp-med) {
-    order: 1;
-  }
-}
-
-.topic_content {
-  order: 1;
-  @include breakpoint($bp-med) {
-    @include grid-_unit--cols(6);
+.topic .grid-region {
+  // First column.
+  &:nth-child(1n) {
     order: 2;
+    @include breakpoint($bp-med) {
+      order: 1;
+    }
   }
-}
 
-.topic_rail-right {
-  order: 3;
+  // Center column
+  &:nth-child(2n) {
+    order: 1;
+    @include breakpoint($bp-med) {
+      @include grid-_unit--cols(6);
+      order: 2;
+    }
+  }
+
+  // Last column.
+  &:nth-child(3n) {
+    order: 3;
+  }
 }
