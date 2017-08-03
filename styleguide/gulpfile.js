@@ -60,7 +60,7 @@ gulp.task('scripts', function () {
   var ds = gulp.src(config.scripts.drupalfiles)
     // unminified for development
     .pipe(sourcemaps.init())
-    .pipe(concat('drupal.js'))
+    .pipe(concat('styleguide-custom.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(config.scripts.dest));
 
