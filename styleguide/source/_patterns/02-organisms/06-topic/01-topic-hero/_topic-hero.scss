@@ -1,6 +1,6 @@
 .topic_hero .topic_article-preview {
   @include rule-horizontal-bottom(1px, $gray-8, solid);
-  padding-bottom: 28px;
+  padding-bottom: $gutter;
 }
 
 .topic_hero .topic_article-preview_title {
@@ -11,4 +11,9 @@
 // Display the video field at the bottom of the field order.
 .topic_hero .topic_article-preview .fluid-width-video-wrapper {
   order: 1;
+}
+
+// Ensure top gutters for child elements.
+.topic_hero .topic_article-preview {
+  @include child-top-gutters($gutter-half);
 }

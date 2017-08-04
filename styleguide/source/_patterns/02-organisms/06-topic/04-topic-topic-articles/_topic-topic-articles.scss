@@ -11,3 +11,13 @@
 .topic_topic-articles .topic_article-preview .fluid-width-video-wrapper {
   order: -1;
 }
+
+// Move the topic label first in the field order.
+.topic_topic-articles .topic_article-preview-video .topic_article-preview_label {
+  order: -2;
+}
+
+// Ensure consistent top margins for articles in this section.
+.topic_topic-articles .topic_article-preview > * {
+  margin-top: $gutter-half;
+}

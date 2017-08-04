@@ -68,3 +68,14 @@
     justify-content: space-between;
   }
 }
+
+// For patterns that are flex-direction: column, ensure
+// the appropriate top margins between them. The other half
+// of the gutter should be provided by the top margin of
+// the first child element.
+@mixin child-top-gutters($height) {
+  > * {
+  //> *:nth-child(n + 2) > *:nth-child(n + 2) {
+    margin-top: $gutter-half;
+  }
+}
