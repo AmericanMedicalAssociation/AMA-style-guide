@@ -1,0 +1,11 @@
+<div class="topic_promotion grid-region_content">
+    {% set tag = promo.cta ? 'div': 'a' %}
+    <{{tag}} class="topic_promotion_container" href="#">
+    {% include 'atoms-h2' with {'content': promo.title} %}
+    {% include 'atoms-rule-horizontal' %}
+    {% include "atoms-paragraph" with {'content': promo.content} %}
+    {% if block.button %}
+        {% include 'atoms-button-link' with {'class': 'block_cta-with-list-button-link'} %}
+    {% endif %}
+</{{tag}}>
+</div>
