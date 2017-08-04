@@ -38,10 +38,15 @@
 	margin-top: $gutter;
 }
 
+// Add top margins between content within grid regions.
+.grid-region_content {
+	padding-top: $gutter;
+}
+
 // Don't add padding to the first/last children of nested grids, since the parent
 // already has padding. This is a row.
 .grid-region-nested {
-	margin-top: $gutter;
+	margin-top: 0;
 	> *:first-child {
 		padding-top: 0;
 		padding-left: 0;
@@ -54,28 +59,28 @@
 
 // Column-width classes..
 .col-width-3 {
-	padding: $gutter $gutter-half 0 $gutter-half;
+	padding: 0 $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(3);
 	}
 }
 
 .col-width-6 {
-	padding: $gutter $gutter-half 0 $gutter-half;
+	padding: 0 $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(6);
 	}
 }
 
 .col-width-9 {
-	padding: $gutter $gutter-half 0 $gutter-half;
+	padding: 0 $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(9);
 	}
 }
 
 .col-width-12 {
-	padding: $gutter $gutter-half 0 $gutter-half;
+	padding: 0 $gutter-half 0 $gutter-half;
 	@include breakpoint($bp-med) {
 		@include grid-_unit--cols(12);
 	}
