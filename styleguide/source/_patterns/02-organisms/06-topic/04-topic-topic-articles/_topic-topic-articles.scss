@@ -6,3 +6,8 @@
 .topic_topic-articles .topic_article-preview_description {
   font-size: 16px;
 }
+
+// Move the video up in the field order.
+.topic_topic-articles .topic_article-preview .fluid-width-video-wrapper {
+  order: -1;
+}

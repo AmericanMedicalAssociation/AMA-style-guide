@@ -1,9 +1,14 @@
-.topic_hero_article-preview {
+.topic_hero .topic_article-preview {
   @include rule-horizontal-bottom(1px, $gray-8, solid);
   padding-bottom: 28px;
 }
 
-.topic_hero_article-preview_title {
+.topic_hero .topic_article-preview_title {
   display: inline-block;
   font-size: 36px;
+}
+
+// Display the video field at the bottom of the field order.
+.topic_hero .topic_article-preview .fluid-width-video-wrapper {
+  order: 1;
 }

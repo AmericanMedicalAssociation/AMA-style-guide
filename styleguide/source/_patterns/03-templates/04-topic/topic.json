@@ -12,5 +12,10 @@
         "content": "Aenean euismod bibendum laoreet"
       }
     }
+  },
+  "hero": {
+    "image": {
+      "src": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&s=36"
+    }
   }
 }

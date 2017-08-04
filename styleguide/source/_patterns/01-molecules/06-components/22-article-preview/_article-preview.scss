@@ -1,0 +1,4 @@
+.topic_article-preview {
+  display: flex;
+  @include grid--direction-col();
+}
