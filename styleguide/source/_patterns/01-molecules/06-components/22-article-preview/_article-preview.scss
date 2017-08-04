@@ -1,6 +1,7 @@
 .topic_article-preview {
   display: flex;
   @include grid--direction-col();
+  margin-top: -1 * $gutter-half;
 }
 
 // Remove inherited margins from article preview fields so that we can set consistent top margins.

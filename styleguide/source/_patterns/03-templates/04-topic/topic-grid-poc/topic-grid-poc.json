@@ -1,0 +1,21 @@
+{
+  "block": {
+    "title": "What the AMA Has Done for Me",
+    "list": {
+      "first": {
+        "content": "Aenean euismod bibendum laoreet"
+      },
+      "second": {
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+      },
+      "third": {
+        "content": "Aenean euismod bibendum laoreet"
+      }
+    }
+  },
+  "hero": {
+    "image": {
+      "src": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&s=36"
+    }
+  }
+}
