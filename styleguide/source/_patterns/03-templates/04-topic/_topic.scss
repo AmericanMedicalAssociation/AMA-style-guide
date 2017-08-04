@@ -1,3 +1,10 @@
+// Topic template.
+.topic {
+  .page-title {
+    padding-left: $gutter-half;
+  }
+}
+
 // Set mobile order.
 .topic .grid-region {
   // First column.
