@@ -1,0 +1,13 @@
+.list_topic-related-content {
+  list-style: none;
+  margin: 0;
+  max-width: $max-width;
+  padding: 0;
+}
+
+.list_item-topic-related-content {
+  margin-bottom: 18px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
