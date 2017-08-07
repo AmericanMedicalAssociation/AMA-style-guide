@@ -7,7 +7,11 @@
 
 .list_item-topic-related-content {
   margin-bottom: 0;
-  margin-top: $gutter-half;
+  margin-top: $gutter-mobile-half;
+
+  @include breakpoint($bp-med) {
+    margin-top: $gutter-half;
+  }
 }
 
 .list_topic-related-content_title {

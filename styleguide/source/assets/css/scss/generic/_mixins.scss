@@ -76,6 +76,10 @@
 @mixin child-top-gutters($height) {
   > * {
   //> *:nth-child(n + 2) > *:nth-child(n + 2) {
-    margin-top: $gutter-half;
+    margin-top: $gutter-mobile-half;
+
+    @include breakpoint($bp-med) {
+      margin-top: $gutter-half;
+    }
   }
 }

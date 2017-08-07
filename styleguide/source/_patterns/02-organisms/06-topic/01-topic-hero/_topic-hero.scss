@@ -1,11 +1,19 @@
 .topic_hero .topic_article-preview {
   @include rule-horizontal-bottom(1px, $gray-8, solid);
-  padding: $gutter 0;
+  padding: $gutter-mobile 0;
+
+  @include breakpoint($bp-med) {
+    padding: $gutter 0;
+  }
 }
 
 .topic_hero .topic_article-preview_title {
   display: inline-block;
-  font-size: 36px;
+  font-size: 24px;
+
+  @include breakpoint($bp-small) {
+    font-size: 36px;
+  }
 }
 
 // Display the video field at the bottom of the field order.
@@ -15,7 +23,10 @@
 
 // Ensure top gutters for child elements.
 .topic_hero .topic_article-preview {
-  @include child-top-gutters($gutter-half);
+  @include child-top-gutters($gutter-mobile-half);
+  @include breakpoint($bp-med) {
+    @include child-top-gutters($gutter-half);
+  }
 }
 
 .topic_hero > *:first-child {

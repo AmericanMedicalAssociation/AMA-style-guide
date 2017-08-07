@@ -1,7 +1,11 @@
 // Topic template.
 .topic {
   .page-title {
-    padding-left: $gutter-half;
+    padding-left: $gutter-mobile-half;
+
+    @include breakpoint($bp-med) {
+      padding-left: $gutter-half;
+    }
   }
 }
 
