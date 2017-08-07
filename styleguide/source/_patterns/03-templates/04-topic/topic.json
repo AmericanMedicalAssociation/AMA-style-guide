@@ -22,5 +22,11 @@
     "title": "Patients Before Politics",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing, euismod bibendum laoreet.",
     "cta": "Call to Action"
+  },
+  "email": {
+    "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",
+    "button": "Register Now",
+    "description": "Tortor vestibulum aenean vitae nec turpis tincidunt, sed nunc vitae in maurisTortor vestibulum aenean vitae nec turpis",
+    "label": "Tortor vestibulum aenean vitae nec turpis tincidunt, sed nunc vitae in maurisTortor vestibulum aenean vitae nec turpis"
   }
 }
