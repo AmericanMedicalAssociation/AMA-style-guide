@@ -18,6 +18,11 @@
       "src": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&s=36"
     }
   },
+  "promo": {
+    "title": "Patients Before Politics",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing, euismod bibendum laoreet.",
+    "cta": "Call to Action"
+  },
   "email": {
     "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",
     "button": "Register Now",
