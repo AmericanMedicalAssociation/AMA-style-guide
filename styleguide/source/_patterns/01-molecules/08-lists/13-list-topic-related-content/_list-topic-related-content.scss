@@ -6,12 +6,11 @@
 }
 
 .list_item-topic-related-content {
-  margin-bottom: 18px;
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+  margin-bottom: 0;
+  margin-top: $gutter-half;
 }
 
 .list_topic-related-content_title {
   font-size: 24px;
+  margin-bottom: 0;
 }
