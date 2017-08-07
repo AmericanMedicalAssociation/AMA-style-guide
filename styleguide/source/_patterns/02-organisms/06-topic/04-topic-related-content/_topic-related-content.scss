@@ -1,3 +1,4 @@
 .topic_related-content_title {
+  @include rule-horizontal-bottom(1px, $gray-8, solid);
   text-transform: uppercase;
 }
