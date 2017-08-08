@@ -9,10 +9,9 @@
 
 .topic_hero .topic_article-preview_title {
   display: inline-block;
-  font-size: 24px;
-
-  @include breakpoint($bp-small) {
-    font-size: 36px;
+  @include type($font-serif, 24px, $font-weight-medium, 1.3043478261);
+  @include breakpoint($bp-med min-width) {
+    @include type($font-serif, 36px, $font-weight-medium, 1.25);
   }
 }
 

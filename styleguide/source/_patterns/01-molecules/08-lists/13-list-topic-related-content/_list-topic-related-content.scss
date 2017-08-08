@@ -15,6 +15,9 @@
 }
 
 .list_topic-related-content_title {
-  font-size: 24px;
   margin-bottom: 0;
+  @include type($font-serif, 21px, $font-weight-medium, 1.3333333333);
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-serif, 24px, $font-weight-medium, 1.2916666667);
+  }
 }
