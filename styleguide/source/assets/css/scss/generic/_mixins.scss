@@ -74,7 +74,7 @@
 // The "..." allows SCSS to pass arguments as a list.
 // Will output one direction, e.g. "padding-left: 20px;".
 // See _variables.scss for a list of style vars that can be passed.
-@mixin gutter($type, $direction, $width, $width-mobile) {
+@mixin gutter($type, $direction, $width: $gutter, $width-mobile: $gutter-mobile) {
   #{$type}-#{$direction}: #{$width-mobile};
   @include breakpoint($bp-med) {
     #{$type}-#{$direction}: #{$width};
