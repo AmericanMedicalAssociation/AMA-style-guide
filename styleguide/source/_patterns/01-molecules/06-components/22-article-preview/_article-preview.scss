@@ -1,9 +1,16 @@
-.topic_article-preview {
-  display: flex;
-  @include grid--direction-col();
-  @include gutter($margin-top-half-negative...);
+// Display articles in hero and topic articles using columns.
+.topic_hero,
+.topic_topic-articles {
+  .topic_article-preview {
+    display: flex;
+    @include grid--direction-col();
+    @include gutter($margin-top-half-negative...);
+  }
 }
 
-.topic_hero .topic_article-preview .topic_article-preview_label {
+// Remove inherited margins from article preview fields so that we can set consistent top margins.
+.topic_article-preview_label,
+.topic_article-preview_title h2,
+.topic_article-preview_description {
   margin-top: 0;
 }
