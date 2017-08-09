@@ -7,19 +7,19 @@
   <div class="grid grid-margin">
     <aside class="topic_rail-left col-width-3 grid-region">
       {% include 'organisms-topic-tools' %}
-      {% include 'organisms-topic-promotion' %}
-      {% include 'organisms-topic-topic-articles' %}
+      {% include 'organisms-topic-promotion' with { 'class': 'grid-region_content' } %}
+      {% include 'organisms-topic-topic-articles' with { 'class': 'grid-region_content' } %}
     </aside>
 
     <section class="topic_content col-width-6 grid-region">
       {% include 'organisms-topic-hero' %}
-      {% include 'organisms-topic-related-articles' %}
-      {% include 'organisms-topic-email-subscription' %}
+      {% include 'organisms-topic-related-articles' with { 'class': 'grid-region_content' } %}
+      {% include 'organisms-topic-email-subscription' with { 'class': 'grid-region_content' } %}
     </section>
 
     <aside class="topic_rail-right col-width-3 grid-region">
       {% include 'organisms-topic-membership' %}
-      {% include 'organisms-topic-related-content' %}
+      {% include 'organisms-topic-related-content' with { 'class': 'grid-region_content' } %}
     </aside>
   </div>
 </main>

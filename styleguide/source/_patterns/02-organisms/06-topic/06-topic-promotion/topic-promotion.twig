@@ -1,4 +1,4 @@
-<div class="topic_promotion grid-region_content">
+<div class="topic_promotion {{ class }}">
     {% set tag = promo.cta ? 'div': 'a' %}
     <{{tag}} class="topic_promotion_container" href="#">
     {% include 'atoms-h2' with {'content': promo.title} %}
