@@ -55,6 +55,13 @@
 
 // Additional layout mixins.
 
+// Switches direction from column to row.
+@mixin grid--direction-row() {
+  .flexbox & {
+    flex-direction: row;
+  }
+}
+
 // Switches direction from row to column.
 @mixin grid--direction-col() {
   .flexbox & {

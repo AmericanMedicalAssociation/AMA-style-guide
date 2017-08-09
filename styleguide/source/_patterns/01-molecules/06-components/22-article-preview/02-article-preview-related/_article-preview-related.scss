@@ -1,0 +1,21 @@
+.topic_article-preview-related-article {
+  .layout_two_up-heavy-right-offset-primary {
+    @include grid__unit--cols(6);
+    order: 1;
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(6);
+      order: 2;
+    }
+  }
+
+  .layout_two_up-heavy-right-offset-secondary {
+    @include grid__unit--cols(6);
+    order: 2;
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(3);
+      order: 1;
+    }
+  }
+}
