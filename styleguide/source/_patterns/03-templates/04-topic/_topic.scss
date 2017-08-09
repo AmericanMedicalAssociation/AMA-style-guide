@@ -29,3 +29,13 @@
     order: 3;
   }
 }
+
+.topic_hero {
+
+  .fluid-width-video-wrapper {
+    min-height: 100px;
+    @include breakpoint($bp-med) {
+      min-height: 315px;
+    }
+  }
+}
