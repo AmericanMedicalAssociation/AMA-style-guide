@@ -11,7 +11,10 @@
 .block_cta-with-list-container {
   background-color: $black-7;
   display: block;
-  padding: $gutter-half $gutter;
+  @include gutter($padding-top-half...);
+  @include gutter($padding-bottom-half...);
+  @include gutter($padding-left-full...);
+  @include gutter($padding-right-full...);
 }
 
 a.block_cta-with-list-container:hover {

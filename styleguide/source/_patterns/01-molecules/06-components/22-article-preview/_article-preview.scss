@@ -1,11 +1,7 @@
 .topic_article-preview {
   display: flex;
   @include grid--direction-col();
-  margin-top: -1 * $gutter-mobile-half;
-
-  @include breakpoint($bp-med) {
-    margin-top: -1 * $gutter-half;
-  }
+  @include gutter($margin-top-half-negative...);
 }
 
 // Remove inherited margins from article preview fields so that we can set consistent top margins.

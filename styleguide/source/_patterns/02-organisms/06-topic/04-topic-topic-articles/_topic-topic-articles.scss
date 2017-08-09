@@ -19,17 +19,9 @@
 
 // Ensure consistent top margins for elements in this section.
 .topic_topic-articles .topic_article-preview > * {
-  margin-top: $gutter-mobile-half;
-
-  @include breakpoint($bp-med) {
-    margin-top: $gutter-half;
-  }
+  @include gutter($margin-top-half...);
 }
 
 .topic_topic-articles .topic_article-preview {
-  padding-bottom: $gutter-mobile;
-
-  @include breakpoint($bp-med) {
-    padding-bottom: $gutter;
-  }
+  @include gutter($padding-bottom-full...);
 }

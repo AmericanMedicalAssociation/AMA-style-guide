@@ -1,10 +1,7 @@
 .topic_hero .topic_article-preview {
   @include rule-horizontal-bottom(1px, $gray-8, solid);
-  padding: $gutter-mobile 0;
-
-  @include breakpoint($bp-med) {
-    padding: $gutter 0;
-  }
+  @include gutter($padding-top-full...);
+  @include gutter($padding-bottom-full...);
 }
 
 .topic_hero .topic_article-preview_title {
@@ -22,9 +19,9 @@
 
 // Ensure top gutters for child elements.
 .topic_hero .topic_article-preview {
-  @include child-top-gutters($gutter-mobile-half);
+  @include child-top-gutters($gutter-mobile / 2);
   @include breakpoint($bp-med) {
-    @include child-top-gutters($gutter-half);
+    @include child-top-gutters($gutter / 2);
   }
 }
 
