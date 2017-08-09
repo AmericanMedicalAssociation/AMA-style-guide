@@ -80,8 +80,7 @@ $bp-large-home: 1251px;
 $gutter-mobile: 20px;
 $gutter: 28px;
 
-// Provide a gutter mixin to make responsive gutter variables available:
-// Some pre-made styles. Pass to gutter() mixin.
+// Some pre-made styles. Pass to gutter() mixin - see _mixins.scss.
 // Feel free to add a new style following the naming conventions.
 $margin-top-half: margin, top, $gutter / 2, $gutter-mobile / 2;
 $margin-top-half-negative: margin, top, -$gutter / 2, -$gutter-mobile / 2;
@@ -96,13 +95,3 @@ $padding-bottom-full: padding, bottom, $gutter, $gutter-mobile;
 $padding-bottom-half: padding, bottom, $gutter / 2, $gutter-mobile / 2;
 $padding-left-full: padding, left, $gutter, $gutter-mobile;
 $padding-left-half: padding, left, $gutter / 2,  $gutter-mobile / 2;
-
-// Usage: @include gutter($padding-left-full...);
-// The "..." allows SCSS to pass arguments as a list.
-// Will output one direction, e.g. "padding-left: 20px;".
-@mixin gutter($type, $direction, $width, $width-mobile) {
-  #{$type}-#{$direction}: #{$width-mobile};
-  @include breakpoint($bp-med) {
-    #{$type}-#{$direction}: #{$width};
-  }
-}

@@ -69,6 +69,18 @@
   }
 }
 
+// Provide a gutter mixin to make responsive gutter variables available.
+// Usage: @include gutter($padding-left-full...);
+// The "..." allows SCSS to pass arguments as a list.
+// Will output one direction, e.g. "padding-left: 20px;".
+// See _variables.scss for a list of style vars that can be passed.
+@mixin gutter($type, $direction, $width, $width-mobile) {
+  #{$type}-#{$direction}: #{$width-mobile};
+  @include breakpoint($bp-med) {
+    #{$type}-#{$direction}: #{$width};
+  }
+}
+
 // For patterns that are flex-direction: column, ensure
 // the appropriate top margins between them. The other half
 // of the gutter should be provided by the top margin of
