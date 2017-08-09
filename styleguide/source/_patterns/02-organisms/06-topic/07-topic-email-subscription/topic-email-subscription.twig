@@ -1,9 +1,9 @@
 <div class="topic_email-subscription {{ class }}">
     <form action="#">
-        {% include 'atoms-h3' with {'content': email.title} %}
-        {% include 'atoms-paragraph' with {'content': email.description} %}
-        {% include 'molecules-input-email' %}
-        {% include 'atoms-button-link-secondary' with {'content': email.button} %}
-        {% include 'atoms-checkbox' with {'label': email.label} %}
+        {% include 'atoms-h3' with { 'content': email.title, 'class': default } %}
+        {% include 'atoms-paragraph' with { 'content': email.description, 'class': default } %}
+        {% include 'molecules-input-email' with { 'class': default } %}
+        {% include 'atoms-button-link-secondary' with { 'content': email.button, 'class': default } %}
+        {% include 'atoms-checkbox' with { 'label': email.label, 'class': default } %}
     </form>
 </div>

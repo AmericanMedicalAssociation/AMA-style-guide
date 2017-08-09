@@ -1,10 +1,10 @@
 <div class="topic_promotion {{ class }}">
     {% set tag = promo.cta ? 'div': 'a' %}
     <{{tag}} class="topic_promotion_container" href="#">
-    {% include 'atoms-h2' with {'content': promo.title, 'class': 'topic_promotion_title'} %}
-    {% include 'atoms-paragraph' with {'content': promo.content, 'class': 'topic_promotion_description'} %}
-    {% if block.button %}
-        {% include 'atoms-button-link' with {'class': 'block_cta-with-list-button-link topic_promotion_cta'} %}
-    {% endif %}
-</{{tag}}>
+        {% include 'atoms-h2' with {'content': promo.title, 'class': default } %}
+        {% include 'atoms-paragraph' with {'content': promo.content, 'class': default } %}
+        {% if block.button %}
+            {% include 'atoms-button-link' with {'class': 'block_cta-with-list-button-link' } %}
+        {% endif %}
+    </{{tag}}>
 </div>
