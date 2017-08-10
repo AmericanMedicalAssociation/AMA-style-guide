@@ -1,10 +1,18 @@
-<div class="topic_promotion grid-region_content">
+<div class="topic_promotion grid-region_content {% if promo.border %}topic_promotion-border{% endif %}">
     {% set tag = promo.cta ? 'div': 'a' %}
+    {% if promo.logo %}
+        {% include 'atoms-logo' with {'link': '#', 'image': 'https://ipsumimage.appspot.com/350x150?l=350x150&s=36', 'alt': 'logo'} %}
+    {% endif %}
+    <div class="topic_promotion_image">
+        {% if promo.image %}
+            {% include 'atoms-landscape-3x2' with {'link': '#', 'image': 'https://ipsumimage.appspot.com/350x150?l=350x150&s=36', 'alt': 'image'} %}
+        {% endif %}
+    </div>
     <{{tag}} class="topic_promotion_container" href="#">
     {% include 'atoms-h2' with {'content': promo.title} %}
     {% include "atoms-paragraph" with {'content': promo.content} %}
-    {% if block.button %}
-        {% include 'atoms-button-link' with {'class': 'block_cta-with-list-button-link'} %}
+    {% if promo.button %}
+        {% include 'atoms-button-link-secondary' with {'class': 'button-small'} %}
     {% endif %}
 </{{tag}}>
 </div>

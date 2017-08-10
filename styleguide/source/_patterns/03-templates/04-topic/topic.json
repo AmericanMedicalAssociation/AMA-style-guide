@@ -21,7 +21,7 @@
   "promo": {
     "title": "Patients Before Politics",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing, euismod bibendum laoreet.",
-    "cta": "Call to Action"
+    "border": "true"
   },
   "email": {
     "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",

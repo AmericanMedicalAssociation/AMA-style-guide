@@ -1,0 +1,38 @@
+.topic_promotion {
+  @include rule-horizontal-bottom(1px, $gray-8, solid);
+  @include gutter($padding-bottom-full...);
+}
+
+.topic_promotion_container {
+  @include gutter($padding-top-half...);
+  @include gutter($padding-right-half...);
+  @include gutter($padding-bottom-half...);
+  @include gutter($padding-left-half...);
+  background: $black-7;
+
+  &:hover {
+    background-color: $gray-light-4;
+  }
+}
+
+.topic_promotion-border .topic_promotion_container {
+  background: $white;
+  border: solid 1px $gray-8;
+}
+
+.topic_promotion_image img {
+  width: 100%;
+}
+
+.topic_promotion h2 {
+  @include type-larger();
+}
+
+.topic_promotion .button-secondary {
+  width: 100%;
+}
+
+// If the container is rendered as an <a> element (if there's no CTA button).
+a.topic_promotion_container {
+  display: block;
+}
