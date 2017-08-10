@@ -105,3 +105,5 @@ For example, to use the side-by-side Two Up Layout, add the <code>layout_two_up<
 Note: you should not need to nest elements with class <code>.layout</code>.
 
 The <code>.layout</code> and <code>.layout_number_up</code> classes can be added to container elements both in individual patterns (i.e. organisms) and in the Twig templates that include them (e.g. templates). In general, if a specific pattern can be assumed to always use the same layout, it's fine to include the layout within that pattern.
+
+As of 8/8/17 and PR https://issues.ama-assn.org/browse/EWL-3829, use <code>.grid-region_content</code> to add consistent top margins.

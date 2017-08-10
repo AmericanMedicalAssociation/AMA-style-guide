@@ -77,5 +77,21 @@ $bp-med-home: 740px;
 $bp-large-home: 1251px;
 
 // Grid variables.
+$gutter-mobile: 20px;
 $gutter: 28px;
-$gutter-half: $gutter / 2;
+
+// Some pre-made styles. Pass to gutter() mixin - see _mixins.scss.
+// Feel free to add a new style following the naming conventions.
+$margin-top-half: margin, top, $gutter / 2, $gutter-mobile / 2;
+$margin-top-half-negative: margin, top, -$gutter / 2, -$gutter-mobile / 2;
+$margin-top-full-negative: margin, top, -$gutter, -$gutter-mobile;
+$margin-left-full-negative: margin, left, -$gutter, -$gutter-mobile;
+
+$padding-top-full: padding, top, $gutter, $gutter-mobile;
+$padding-top-half: padding, top, $gutter / 2, $gutter-mobile / 2;
+$padding-right-full: padding, right, $gutter,  $gutter-mobile;
+$padding-right-half: padding, right, $gutter / 2,  $gutter-mobile / 2;
+$padding-bottom-full: padding, bottom, $gutter, $gutter-mobile;
+$padding-bottom-half: padding, bottom, $gutter / 2, $gutter-mobile / 2;
+$padding-left-full: padding, left, $gutter, $gutter-mobile;
+$padding-left-half: padding, left, $gutter / 2,  $gutter-mobile / 2;
