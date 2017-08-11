@@ -22,7 +22,7 @@
 
   @include breakpoint($bp-med min-width) {
     @include grid__unit--cols(6);
-    padding-left: $gutter-half;
+    @include gutter($padding-left-half...);
   }
 }
 
