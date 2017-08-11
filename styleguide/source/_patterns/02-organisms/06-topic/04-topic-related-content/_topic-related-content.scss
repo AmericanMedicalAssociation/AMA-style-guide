@@ -1,3 +1,13 @@
+.topic_related-content {
+  @include gutter($padding-right-half...);
+  @include gutter($padding-left-half...);
+
+  @include breakpoint($bp-med) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
 .topic_related-content_title {
   text-transform: uppercase;
   @include gutter($padding-bottom-half...);

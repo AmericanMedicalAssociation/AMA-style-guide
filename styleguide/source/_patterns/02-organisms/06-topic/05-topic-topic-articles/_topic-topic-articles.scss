@@ -1,4 +1,13 @@
 // Topic Articles section.
+.topic_topic-articles {
+  @include gutter($padding-right-half...);
+  @include gutter($padding-left-half...);
+
+  @include breakpoint($bp-med) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
 
 .topic_topic-articles .topic_article-preview_title {
   font-size: 24px;

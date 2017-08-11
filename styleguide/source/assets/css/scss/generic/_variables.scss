@@ -83,6 +83,8 @@ $gutter: 28px;
 // Some pre-made styles. Pass to gutter() mixin - see _mixins.scss.
 // Feel free to add a new style following the naming conventions.
 $margin-top-half: margin, top, $gutter / 2, $gutter-mobile / 2;
+$margin-right-half: margin, right, $gutter / 2, $gutter-mobile / 2;
+$margin-left-half: margin, left, $gutter / 2, $gutter-mobile / 2;
 $margin-top-half-negative: margin, top, -$gutter / 2, -$gutter-mobile / 2;
 $margin-top-full-negative: margin, top, -$gutter, -$gutter-mobile;
 $margin-left-full-negative: margin, left, -$gutter, -$gutter-mobile;
