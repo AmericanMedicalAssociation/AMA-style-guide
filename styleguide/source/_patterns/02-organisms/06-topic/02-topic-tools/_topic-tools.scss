@@ -1,10 +1,16 @@
 .layout.topic_tools {
-  flex-direction: column;
+  @include grid--direction-col();
 }
 
 // The tools block.
 .topic_tools {
+  @include rule-horizontal-bottom(1px, $gray-8, solid);
+  @include gutter($padding-bottom-half...);
   max-width: 800px;
+
+  @include breakpoint($bp-med) {
+    @include gutter($margin-bottom-half...);
+  }
 
   // Tools links.
   .tools_list-learn-more {
@@ -14,5 +20,14 @@
     .list_links_item {
       @extend %type-smaller;
     }
+  }
+}
+
+.tools_title,
+.tools_title-learn-more {
+  @include gutter($margin-left-half...);
+
+  @include breakpoint($bp-med) {
+    margin-left: 0;
   }
 }

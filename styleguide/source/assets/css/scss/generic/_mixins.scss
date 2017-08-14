@@ -88,6 +88,14 @@
   }
 }
 
+// Useful mixin for all margin or padding values to be the same.
+@mixin gutter-all($type, $width: $gutter, $width-mobile: $gutter-mobile) {
+  #{$type}: #{$width-mobile};
+  @include breakpoint($bp-med) {
+    #{$type}: #{$width};
+  }
+}
+
 // For patterns that are flex-direction: column, ensure
 // the appropriate top margins between them. The other half
 // of the gutter should be provided by the top margin of
