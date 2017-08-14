@@ -39,3 +39,15 @@
     }
   }
 }
+
+/* Ribbon for Topic pages / d8 - since we aren't allowed to refactor the ribbon right now,
+but since it also still needs to be flush with the Topic page grid. */
+.ribbon.ribbon-uses-new-grid .layout_one_up {
+  padding: 0 45px;
+}
+
+/* Footer for Topic pages / d8 - since we aren't allowed to refactor the ribbon right now,
+but since it also still needs to be flush with the Topic page grid. */
+.footer.footer-uses-new-grid .layout {
+  padding: 0 45px;
+}

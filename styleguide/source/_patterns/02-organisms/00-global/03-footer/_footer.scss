@@ -21,7 +21,8 @@
 
   @include breakpoint($bp-large-home min-width) {
     @include grid__unit--cols(7);
-    margin-right: 100px;
+    //margin-right: 100px;
+    margin-right: 97px;
   }
 }
 
