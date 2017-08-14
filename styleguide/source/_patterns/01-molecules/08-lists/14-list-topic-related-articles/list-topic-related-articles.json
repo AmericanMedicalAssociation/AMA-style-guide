@@ -1,0 +1,14 @@
+{
+  "listTopicRelatedArticles": {
+    "first": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "src": ""
+    },
+    "second": {
+      "title": "Consectetur adipiscing elit"
+    },
+    "third": {
+      "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis"
+    }
+  }
+}
