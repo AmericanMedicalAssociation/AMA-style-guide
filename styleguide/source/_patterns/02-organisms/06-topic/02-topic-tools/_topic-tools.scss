@@ -9,7 +9,7 @@
   max-width: 800px;
 
   @include breakpoint($bp-med) {
-    @include gutter($padding-bottom-full...);
+    @include gutter($margin-bottom-half...);
   }
 
   // Tools links.
