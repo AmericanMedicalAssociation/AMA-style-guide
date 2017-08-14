@@ -3,7 +3,12 @@
 </header>
 
 <main class="topic container">
-  {% include 'atoms-page-title' %}
+  <div class="grid grid-margin">
+    <div class="topic_top col-width-12 grid-region">
+      {% include 'atoms-page-title' %}
+    </div>
+  </div>
+
   <div class="grid grid-margin">
     <aside class="topic_rail-left col-width-3 grid-region">
       {% include 'organisms-topic-tools' %}
@@ -21,6 +26,10 @@
       {% include 'organisms-topic-membership' %}
       {% include 'organisms-topic-related-content' with { 'class': 'grid-region_content' } %}
     </aside>
+  </div>
+  <div class="grid grid-margin">
+    <div class="topic_bottom col-width-12 grid-region">
+    </div>
   </div>
 </main>
 
