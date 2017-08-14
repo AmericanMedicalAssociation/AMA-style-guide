@@ -212,10 +212,13 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/06-components/22-article-preview/article-preview";
 @import "../../_patterns/03-templates/04-topic/topic";
 @import "../../_patterns/01-molecules/06-components/23-article-metadata/_article-metadata";
-@import "../../_patterns/02-organisms/06-topic/04-topic-topic-articles/_topic-topic-articles";
+@import "../../_patterns/02-organisms/06-topic/05-topic-topic-articles/_topic-topic-articles";
 @import "../../_patterns/00-atoms/02-text/19-page-title/page-title";
 @import "../../_patterns/01-molecules/08-lists/13-list-topic-related-content/list-topic-related-content";
 @import "../../_patterns/01-molecules/08-lists/13-list-topic-related-content/00-list-topic-related-content-image/list-topic-related-content-image";
 @import "../../_patterns/02-organisms/06-topic/04-topic-related-content/topic-related-content";
 @import "../../_patterns/02-organisms/06-topic/04-topic-related-content/00-topic-related-content-image/topic-related-content-image";
 @import "../../_patterns/02-organisms/06-topic/06-topic-promotion/_topic-promotion";
+@import "../../_patterns/01-molecules/08-lists/14-list-topic-related-articles/list-topic-related-articles";
+@import "../../_patterns/02-organisms/06-topic/08-topic-related-articles/topic-related-articles";
+@import "../../_patterns/01-molecules/06-components/22-article-preview/02-article-preview-related/article-preview-related";

@@ -1,0 +1,32 @@
+.topic_article-preview-related-article {
+  @include grid__unit--cols(12);
+
+  .layout_two_up-heavier-left-primary {
+    @include grid__unit--cols(6);
+    order: 1;
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(8);
+      order: 2;
+      padding-right: 0;
+    }
+  }
+
+  .layout_two_up-heavier-left-secondary {
+    @include grid__unit--cols(6);
+    order: 2;
+    text-align: right;
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(4);
+      order: 1;
+      text-align: left;
+    }
+  }
+
+  .layout_two_up-heavy-right-offset-full {
+    .topic_article-preview_title {
+      margin-bottom: 0;
+    }
+  }
+}
