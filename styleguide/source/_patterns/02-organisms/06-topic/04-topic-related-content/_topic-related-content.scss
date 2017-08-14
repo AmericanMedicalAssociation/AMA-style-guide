@@ -1,5 +1,4 @@
 .topic_related-content_title {
   text-transform: uppercase;
-  @include rule-horizontal-bottom(1px, $gray-8, solid);
   @include gutter($padding-bottom-half...);
 }

@@ -55,6 +55,13 @@
 
 // Additional layout mixins.
 
+// Switches direction from column to row.
+@mixin grid--direction-row() {
+  .flexbox & {
+    flex-direction: row;
+  }
+}
+
 // Switches direction from row to column.
 @mixin grid--direction-col() {
   .flexbox & {
@@ -87,8 +94,11 @@
 // the first child element.
 @mixin child-top-gutters($height) {
   > * {
-  //> *:nth-child(n + 2) > *:nth-child(n + 2) {
     margin-top: $gutter-mobile / 2;
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     @include breakpoint($bp-med) {
       margin-top: $gutter / 2;
