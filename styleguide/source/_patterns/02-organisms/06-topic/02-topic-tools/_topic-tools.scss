@@ -5,7 +5,12 @@
 // The tools block.
 .topic_tools {
   @include rule-horizontal-bottom(1px, $gray-8, solid);
+  @include gutter($padding-bottom-half...);
   max-width: 800px;
+
+  @include breakpoint($bp-med) {
+    @include gutter($padding-bottom-full...);
+  }
 
   // Tools links.
   .tools_list-learn-more {

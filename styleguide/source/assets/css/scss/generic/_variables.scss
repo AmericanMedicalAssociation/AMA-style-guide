@@ -97,3 +97,8 @@ $padding-bottom-full: padding, bottom, $gutter, $gutter-mobile;
 $padding-bottom-half: padding, bottom, $gutter / 2, $gutter-mobile / 2;
 $padding-left-full: padding, left, $gutter, $gutter-mobile;
 $padding-left-half: padding, left, $gutter / 2,  $gutter-mobile / 2;
+
+$margin-all-half: margin, $gutter / 2, $gutter-mobile / 2;
+$margin-all-full: margin, $gutter, $gutter-mobile;
+$padding-all-half: padding, $gutter / 2, $gutter-mobile / 2;
+$padding-all-full: padding, $gutter, $gutter-mobile;

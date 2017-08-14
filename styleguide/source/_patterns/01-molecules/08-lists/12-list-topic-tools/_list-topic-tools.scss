@@ -11,7 +11,6 @@
     @include gutter($padding-top-half...);
     @include gutter($padding-right-half...);
     @include gutter($padding-bottom-half...);
-    @include gutter($padding-left-half...);
     @include gutter($margin-right-half...);
     @include gutter($margin-left-half...);
     clear: both;
@@ -59,7 +58,7 @@
     width: 40px;
 
     @include breakpoint($bp-med) {
-      display: inline-block;
+      display: block;
     }
   }
 
@@ -79,6 +78,7 @@
   .list_topic-tools_file-type,
   .list_topic-tools_file-size {
     @extend %type-smaller;
+    color: $gray-med;
     display: none;
     margin-right: 0.3em;
     vertical-align: super;
