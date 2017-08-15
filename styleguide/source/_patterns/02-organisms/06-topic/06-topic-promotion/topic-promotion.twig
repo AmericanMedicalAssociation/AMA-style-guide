@@ -1,10 +1,20 @@
-<div class="topic_promotion {{ class }}">
+<div class="topic_promotion {{ class }} {% if promo.border %}topic_promotion-border{% endif %}">
     {% set tag = promo.cta ? 'div': 'a' %}
     <{{tag}} class="topic_promotion_container" href="#">
-        {% include 'atoms-h2' with {'content': promo.title, 'class': default } %}
-        {% include 'atoms-paragraph' with {'content': promo.content, 'class': default } %}
-        {% if block.button %}
-            {% include 'atoms-button-link' with {'class': 'block_cta-with-list-button-link' } %}
+    {% if promo.logo %}
+        {% include 'atoms-logo' with { 'link': '#', 'image': promo.logo, 'alt': 'logo', 'class': default } %}
+    {% endif %}
+    {% if promo.image %}
+    <div class="topic_promotion_image">
+        {% include 'atoms-landscape-3x2' with {'link': '#', 'image': promo.image, 'alt': 'image', 'class': default } %}
+    </div>
+    {% endif %}
+    <div class="topic_promotion_text">
+        {% include 'atoms-h2' with { 'content': promo.title, 'class': default } %}
+        {% include "atoms-paragraph" with { 'content': promo.content, 'class': default } %}
+        {% if promo.cta %}
+            {% include 'atoms-button-link-secondary' with { 'class': 'button-small', 'content': promo.cta } %}
         {% endif %}
+    </div>
     </{{tag}}>
 </div>
