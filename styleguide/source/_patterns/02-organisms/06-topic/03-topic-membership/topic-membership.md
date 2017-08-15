@@ -1,7 +1,8 @@
 ---
-title: "Membership Pitch CTA"
+el: ".topic_membership"
+title: "Topic Membership"
 ---
 
-The Membership Pitch CTA contains some patterns (desc TBD) 
+The topic membership pattern includes a heading, a description, a logo (optional), an image (optional), and a CTA button (optional).
 
-[EWL-3741](https://issues.ama-assn.org/browse/EWL-3766)
+[EWL-3818](https://issues.ama-assn.org/browse/EWL-3817)
