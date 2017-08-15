@@ -189,6 +189,10 @@
 .tabs-course_browser_list-cards-item {
   width: 100%;
   margin-bottom: 0;
+  background: $black-7;
+  :hover {
+    background: $gray-light-3;
+  }
 
   &:nth-of-type(4n),
   &:nth-of-type(5n) {
