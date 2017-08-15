@@ -12,8 +12,14 @@
     {% endif %}
 
     <div class="topic_membership_text">
-      {% include 'atoms-h2' with { 'content': membership.title, 'class': default } %}
-      {% include 'atoms-unordered' with { 'list': membership.list, 'class': default } %}
+      {% if membership.description.first %}
+        {% include 'atoms-unordered' with { 'list': membership.list, 'class': default } %}
+        {% include 'atoms-h2' with { 'content': membership.title, 'class': default } %}
+      {% else %}
+        {% include 'atoms-h2' with { 'content': membership.title, 'class': default } %}
+        {% include 'atoms-unordered' with { 'list': membership.list, 'class': default } %}
+      {% endif %}
+
       {% if membership.cta %}
         {% include 'atoms-button-link-secondary' with { 'class': 'button-small', 'content': membership.cta } %}
       {% endif %}
