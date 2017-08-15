@@ -1,0 +1,17 @@
+{
+  "membership": {
+    "title": "Lorem ipsum dolor",
+    "cta": "Call to Action",
+    "list": {
+      "first": {
+        "content": "Lorem ipsum dolor sit amet"
+      },
+      "second": {
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+      },
+      "third": {
+        "content": "Lorem ipsum dolor sit amet"
+      }
+    }
+  }
+}
