@@ -8,6 +8,15 @@
 
 
 
+.icon-audio {
+	background-image: url('png/audio.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+
+
 .icon-checkbox {
 	background-image: url('png/checkbox.png');
 	background-repeat: no-repeat;
@@ -62,11 +71,29 @@
 
 
 
+.icon-cme {
+	background-image: url('png/cme.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+
+
 .icon-download {
 	background-image: url('png/download.png');
 	background-repeat: no-repeat;
   width: 9px;
   height: 14px;
+}
+
+
+
+.icon-external-site {
+	background-image: url('png/external-site.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
 }
 
 
@@ -125,6 +152,15 @@
 
 
 
+.icon-internal-site {
+	background-image: url('png/internal-site.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+
+
 .icon-linkedin {
 	background-image: url('png/linkedin.png');
 	background-repeat: no-repeat;
@@ -170,8 +206,26 @@
 
 
 
+.icon-pdf {
+	background-image: url('png/pdf.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+
+
 .icon-play {
 	background-image: url('png/play.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+
+
+.icon-podcast {
+	background-image: url('png/podcast.png');
 	background-repeat: no-repeat;
   width: 300px;
   height: 200px;
@@ -244,6 +298,15 @@
 
 .icon-valid {
 	background-image: url('png/valid.png');
+	background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+}
+
+
+
+.icon-video {
+	background-image: url('png/video.png');
 	background-repeat: no-repeat;
   width: 300px;
   height: 200px;

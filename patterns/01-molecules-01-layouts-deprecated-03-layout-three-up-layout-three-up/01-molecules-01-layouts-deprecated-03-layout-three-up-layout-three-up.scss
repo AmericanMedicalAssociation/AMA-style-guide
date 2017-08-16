@@ -7,6 +7,11 @@
     padding: 2em;
     text-align: center;
   }
+
+  // Layout default setup.
+  .layout {
+    @include grid();
+  }
 }
 
 .flexbox .layout.layout_three_up {
@@ -15,6 +20,7 @@
 }
 
 .layout_three_up-row {
+  @include grid();
     width: 100%;
 }
 
@@ -23,8 +29,8 @@
 .layout_three_up-tertiary {
   @include grid__unit--cols(12);
 
-  @include breakpoint($bp-small) {
+  @include breakpoint($bp-large) {
     @include grid__unit--cols(4);
-    margin: 0 12px;
+    padding: 0 12px;
   }
 }
