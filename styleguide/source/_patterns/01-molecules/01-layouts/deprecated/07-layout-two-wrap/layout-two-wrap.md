@@ -6,6 +6,6 @@ DEPRECATED | The Two Wrap Layout displays items in two equal side-by-side column
 
 Uses flexbox and some transparent border trickery to create the visual effect of having a gutter between the two columns.
 
-[EWL-3283](https://issues.ama-assn.org/browse/EWL-3283)
+Note: The layout-example_placeholder class is for demonstrating the layout in the style guide and should not be used in production.
 
-This layout needs to be refactored per https://issues.ama-assn.org/browse/EWL-3875
+This layout will be refactored in [https://issues.ama-assn.org/browse/EWL-3879](https://issues.ama-assn.org/browse/EWL-3879)

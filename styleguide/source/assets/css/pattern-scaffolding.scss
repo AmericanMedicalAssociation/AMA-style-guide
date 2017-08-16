@@ -97,3 +97,13 @@
 .sg-pattern-example .header-primary--sticky {
   position: relative;
 }
+
+// Placeholder blocks in layout molecules.
+.layout-example_placeholder {
+  background-color: #ededed;
+  display: block;
+  margin-bottom: 1em;
+  padding: 2em;
+  text-align: center;
+  width: 100%;
+}
