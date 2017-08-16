@@ -1,0 +1,143 @@
+.list-block-promo {
+  @include grid__unit--cols(12);
+  @include breakpoint($bp-med) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.block-promo {
+  @extend %background-transition;
+  display: block;
+  margin-bottom: 2em;
+  padding: 25px;
+  color: $white;
+  background: $gray;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  &:hover {
+    color: white;
+  }
+  @include breakpoint($bp-med) {
+    padding: 30px;
+    margin-bottom: 0;
+  }
+}
+
+.block-promo_item {
+  padding: 0 15px;
+  display: block;
+  width: 100%;
+  // color logic for the blocks
+  // second is red
+  &:nth-of-type(2) .block-promo {
+    background: $red;
+    &:hover {
+      background: $red-darker;
+    }
+  }
+  // third is yellow
+  &:nth-of-type(3) .block-promo {
+    background: $orange;
+    &:hover {
+      background: $orange-darker;
+    }
+  }
+  // first and only is purple
+  &:first-of-type .block-promo,
+  &:only-of-type .block-promo {
+    background: $purple;
+    &:hover {
+      background: $purple-darker;
+    }
+  }
+
+  @include breakpoint($bp-med) {
+  display: flex;
+  flex: 1;
+    // 1-up layout
+    // when there is one item it's full width
+    &:nth-child(1):nth-last-child(1) {
+      @include grid__unit--cols(12);
+      flex: 100%;
+      flex-direction: column;
+      padding: 0;
+    }
+    // 2-up layout
+    // when there are two items it's 50:50
+    &:nth-child(1):nth-last-child(2),
+    &:nth-child(2):nth-last-child(1) {
+      @include grid__unit--cols(6);
+    }
+    // first doesn't have left padding
+    &:nth-child(1):nth-last-child(2) {
+      padding-left: 0;
+    }
+    // second doesn't have right padding
+    &:nth-child(2):nth-last-child(1) {
+      padding-right: 0;
+    }
+    // 3-up layout
+    // when there are three items it's 33:33:33
+    &:nth-child(1):nth-last-child(3),
+    &:nth-child(2):nth-last-child(2),
+    &:nth-child(3):nth-last-child(1) {
+      @include grid__unit--cols(4);
+    }
+    // first of three doesn't have left padding
+    &:nth-child(1):nth-last-child(3) {
+      padding-left: 0;
+    }
+    // last of three doesn't have right padding
+    &:nth-child(3):nth-last-child(1) {
+      padding-right: 0;
+    }
+  }
+}
+
+.block-promo:hover {
+  color: $white;
+  .block-promo_cta {
+    text-decoration: underline;
+  }
+}
+
+.block-promo a {
+  color: inherit;
+  pointer-events: none;
+}
+
+.block-promo_title {
+  @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
+  @include breakpoint(46.25em min-width) {
+    @include type($font-sans-serif, 18px, $font-weight-bold, 1.38888888889);
+  }
+  text-transform: uppercase;
+  margin-bottom: 1.56em; // 25px
+}
+
+.block-promo_summary {
+  // Couldn't use the %type-large include here because the breakpoint is different.
+  @include type($font-sans-serif, 21px, $font-weight-medium, 1.333333333);
+  @include breakpoint(46.25em min-width) {
+    @include type($font-sans-serif, 24px, $font-weight-medium, 1.2916666667); // 31
+  }
+  margin-bottom: 1.42em; // 30px
+}
+
+.block-promo_cta-primary {
+  // Couldn't use the %h1 include here because the breakpoint is different.
+  @include type($font-serif, 34px, $font-weight-bold, 1.11764705882);
+  margin-bottom: 25px;
+  @include breakpoint(46.25em min-width) {
+    @include type($font-serif, 48px, $font-weight-bold, 1.08333333333);
+    margin-bottom: 30px;
+  }
+}
+
+.block-promo_cta-secondary {
+  @include type($font-sans-serif, 16px, $font-weight-medium, 1.4375); // 23
+  @include breakpoint(46.25em min-width) {
+    @include type($font-sans-serif, 18px, $font-weight-medium, 1.38888889); // 25
+  }
+}

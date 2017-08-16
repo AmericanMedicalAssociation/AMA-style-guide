@@ -1,0 +1,84 @@
+.testimonial {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 24px;
+
+  @include breakpoint($bp-med) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+
+    &.testimonial-left {
+      flex-direction: row;
+    }
+  }
+}
+
+.testimonial_image {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint($bp-med) {
+    min-width: 50%;
+    flex-basis: 50%;
+  }
+}
+
+.testimonial_image span {
+  margin: auto 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+
+  @include breakpoint($bp-small) {
+    height: auto;
+    min-height: calc((100vw -  60px) / 3 * 2);
+  }
+
+  @include breakpoint($bp-med) {
+    min-height: calc(((100vw -  60px) / 2) / 3 * 2);
+  }
+
+  @include breakpoint($bp-large) {
+    min-height: calc(((1260px -  60px) / 2) / 3 * 2);
+  }
+}
+
+.testimonial_text {
+  background-color: rgba(255, 255, 255, 0.45);
+  bottom: 0;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+
+  @include breakpoint($bp-small) {
+    padding: 30px;
+  }
+
+  @include breakpoint($bp-med) {
+    position: relative;
+  }
+}
+
+.testimonial_quote,
+.testimonial_speaker {
+  @include type($font-sans-serif, 18px, $font-weight-medium, 1.3888888889);
+
+  @include breakpoint($bp-med) {
+    @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+    padding: 24px 0 12px;
+    margin: 0 24px;
+  }
+}
+
+.testimonial_quote {
+  @include breakpoint($bp-med) {
+    @include type($font-sans-serif, 28px, $font-weight-medium, 1.25);
+  }
+}
+
+.testimonial_text p:last-child {
+  margin-bottom: 0;
+}

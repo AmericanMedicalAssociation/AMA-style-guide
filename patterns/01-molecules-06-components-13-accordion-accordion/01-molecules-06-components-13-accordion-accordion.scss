@@ -1,0 +1,65 @@
+.accordion {
+  border-top: 1px solid $black-55;
+  padding: 25px 0;
+
+  @include breakpoint($bp-small) {
+    padding: 30px 0;
+  }
+}
+
+
+.accordion-trigger {
+  display: block;
+  position: relative;
+  padding-right: 43px;
+  cursor: pointer;
+
+  @include breakpoint($bp-small) {
+    padding-right: 48px;
+  }
+
+  .icon {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    height: 11px;
+    width: 18px;
+    fill: $blue;
+
+    svg {
+      // transform: rotate(-90deg);
+    }
+  }
+
+  &.is-active {
+   .icon svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    .accordion-counter {
+      color: $blue;
+    }
+  }
+}
+
+.accordion_title {
+  display: inline;
+}
+
+.accordion-counter {
+  @extend %type-larger;
+  color: $black-55;
+}
+
+.accordion-content {
+  display: none;
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}

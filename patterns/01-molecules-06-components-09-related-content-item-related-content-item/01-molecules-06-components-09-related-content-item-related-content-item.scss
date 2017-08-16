@@ -1,0 +1,77 @@
+// special layout for this
+.layout.layout_related-content_item {
+  @include grid__unit--cols(12);
+  justify-content: flex-start;
+}
+
+.layout_related-content_item_left {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(7.5);
+    padding-right: 15px;
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    padding-right: 15px;
+  }
+}
+
+.layout_related-content_item_right {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4.5);
+    padding-right: 15px;
+  }
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+    padding-right: 15px;
+  }
+}
+
+// non-layout styles
+.related-content_item {
+  display: block;
+  border-top: 1px solid $gray-8;
+  padding: 30px 0;
+
+
+  @include breakpoint($bp-small) {
+    padding: 25px 0;
+  }
+
+  &:hover {
+    .related-content_item_title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.related-content_item_title {
+  font-family: $font-serif;
+
+  @include breakpoint($bp-small min-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.related-content_item_label {
+  color: $purple;
+  text-transform: uppercase;
+}
+
+.related-content_item_image {
+  margin-top: 20px;
+  width: 100%;
+
+  img {
+    display: block;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @include breakpoint($bp-small min-width) {
+    margin-top: 0;
+    text-align: right;
+  }
+}
