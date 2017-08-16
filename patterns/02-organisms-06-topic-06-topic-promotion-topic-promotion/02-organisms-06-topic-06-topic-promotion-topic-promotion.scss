@@ -1,1 +1,63 @@
-No scss available for this pattern.
+.topic_promotion {
+  @include rule-horizontal-bottom(1px, $gray-8, solid);
+  @include gutter($padding-bottom-full...);
+}
+
+.topic_promotion .topic_promotion_container {
+  background: $black-7;
+}
+
+// If the container is rendered as an <a> element (if there's no CTA button).
+a.topic_promotion_container {
+  display: block;
+  &:hover {
+    background-color: $gray-light-4;
+  }
+}
+
+.topic_promotion-border .topic_promotion_container {
+  background: $white;
+  border: solid 1px $gray-8;
+}
+
+.topic_promotion_text {
+  @include gutter($padding-top-half...);
+  @include gutter($padding-right-half...);
+  @include gutter($padding-bottom-half...);
+  @include gutter($padding-left-half...);
+  @include child-top-gutters($gutter-mobile / 2);
+
+  @include breakpoint($bp-med) {
+    @include child-top-gutters($gutter / 2);
+  }
+}
+
+.topic_promotion_image img {
+  width: 100%;
+}
+
+.topic_promotion_container img.logo {
+  @include gutter($padding-top-half...);
+  @include gutter($padding-right-half...);
+  @include gutter($padding-bottom-half...);
+  @include gutter($padding-left-half...);
+}
+
+.topic_promotion h2 {
+  @include type-larger();
+}
+
+.topic_promotion .button-secondary {
+  width: 100%;
+}
+
+// Remove margins on child elements so that we can set consistent spacing elsewhere.
+.topic_promotion_text p,
+.topic_promotion_text h2 {
+  margin-bottom: 0;
+}
+
+// Don't include a top margin for the first element in the text container.
+.topic_promotion_text > *:nth-child(1) {
+  margin-top: 0;
+}
