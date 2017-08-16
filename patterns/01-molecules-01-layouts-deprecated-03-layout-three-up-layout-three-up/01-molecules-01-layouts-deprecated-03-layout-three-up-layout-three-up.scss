@@ -1,0 +1,30 @@
+// Placeholder blocks in layout molecules.
+.layout_three_up {
+  .layout_container {
+    display: block;
+    background-color: $black-7;
+    margin-bottom: 1em;
+    padding: 2em;
+    text-align: center;
+  }
+}
+
+.flexbox .layout.layout_three_up {
+  @include grid__unit--cols(12);
+  justify-content: flex-start;
+}
+
+.layout_three_up-row {
+    width: 100%;
+}
+
+.layout_three_up-primary,
+.layout_three_up-secondary,
+.layout_three_up-tertiary {
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    margin: 0 12px;
+  }
+}

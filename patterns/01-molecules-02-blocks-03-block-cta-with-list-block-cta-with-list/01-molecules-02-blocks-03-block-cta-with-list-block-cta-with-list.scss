@@ -1,0 +1,19 @@
+.block_cta-with-list {
+  text-align: center;
+  ul {
+    margin: 9px 0 0 0;
+    li {
+      text-align: left;
+    }
+  }
+}
+
+.block_cta-with-list-container {
+  background-color: $black-7;
+  display: block;
+  padding: $gutter-half $gutter;
+}
+
+a.block_cta-with-list-container:hover {
+  background-color: $gray-light-4;
+}

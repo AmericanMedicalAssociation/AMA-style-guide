@@ -1,0 +1,18 @@
+.layout.topic_tools {
+  flex-direction: column;
+}
+
+// The tools block.
+.topic_tools {
+  max-width: 800px;
+
+  // Tools links.
+  .tools_list-learn-more {
+    list-style-type: disc;
+    margin-left: 2em;
+
+    .list_links_item {
+      @extend %type-smaller;
+    }
+  }
+}

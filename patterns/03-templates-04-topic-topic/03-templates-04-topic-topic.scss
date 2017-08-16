@@ -1,1 +1,41 @@
-No scss available for this pattern.
+// Topic template.
+.topic {
+  .page-title {
+    @include gutter($padding-left-half...);
+  }
+}
+
+// Set mobile order.
+.topic .grid-region {
+  // First column.
+  &:nth-child(1n) {
+    order: 2;
+    @include breakpoint($bp-med) {
+      order: 1;
+    }
+  }
+
+  // Center column
+  &:nth-child(2n) {
+    order: 1;
+    @include breakpoint($bp-med) {
+      @include grid-_unit--cols(6);
+      order: 2;
+    }
+  }
+
+  // Last column.
+  &:nth-child(3n) {
+    order: 3;
+  }
+}
+
+.topic_hero {
+
+  .fluid-width-video-wrapper {
+    min-height: 100px;
+    @include breakpoint($bp-med) {
+      min-height: 315px;
+    }
+  }
+}
