@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
-* {
+:not('panels-ipe-tray') * {
 	box-sizing: border-box;
 }
 :not('panels-ipe-tray') {
