@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $INPUT WRAP
 \*------------------------------------*/
-.form-item {
+:not('panels-ipe-tray') .form-item {
   position: relative;
   width: 100%;
   float: left;
