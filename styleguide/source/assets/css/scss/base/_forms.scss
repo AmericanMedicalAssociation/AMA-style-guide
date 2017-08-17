@@ -3,14 +3,14 @@
 \*------------------------------------*/
 form ol,
 form ul {
-	list-style: none;
-	margin-left: 0;
+  list-style: none;
+  margin-left: 0;
 }
 
 fieldset {
-	border: 0;
-	padding: 0;
-	margin: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 legend {
@@ -18,7 +18,7 @@ legend {
 }
 
 label {
-	display: block;
+  display: block;
 }
 
 button,
@@ -47,9 +47,9 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
-	/* stylelint-disable property-no-vendor-prefix */
+  /* stylelint-disable property-no-vendor-prefix */
   -webkit-appearance: none;
-	/* stylelint-enable */
+  /* stylelint-enable */
   position: relative;
   height: 60px;
   width: 100%;
@@ -194,55 +194,55 @@ input[type="checkbox"] {
 }
 
 input[type="search"] {
-	/* stylelint-disable property-no-vendor-prefix */
+  /* stylelint-disable property-no-vendor-prefix */
   -webkit-appearance: none;
-	/* stylelint-enable */
-	border-radius: 0;
+  /* stylelint-enable */
+  border-radius: 0;
 }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-	/* stylelint-disable property-no-vendor-prefix */
-	-webkit-appearance: none;
-	/* stylelint-enable */
+  /* stylelint-disable property-no-vendor-prefix */
+  -webkit-appearance: none;
+  /* stylelint-enable */
 }
 
 //Form Field Container
 .field-container {
-	margin-bottom: $space;
+  margin-bottom: $space;
 }
 
 .inline-form {
-	fieldset,
+  fieldset,
   .inline-container {
-		position: relative;
-	}
+    position: relative;
+  }
 
-	input[type=submit],
-	button,
-	.btn {
-		padding: 0.65rem 1.3rem;
-		background: $gray-dark;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 1;
-		width: auto;
+  input[type=submit],
+  button,
+  .btn {
+    padding: 0.65rem 1.3rem;
+    background: $gray-dark;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: auto;
 
-		&:hover,
-		&:focus {
-			background: $gray;
-			color: $white;
-		}
-	}
+    &:hover,
+    &:focus {
+      background: $gray;
+      color: $white;
+    }
+  }
 }
 
 /* Validation */
 .has-error {
-	border-color: $error;
+  border-color: $error;
 }
 .is-valid {
-	border-color: $valid;
+  border-color: $valid;
 }
 
 
