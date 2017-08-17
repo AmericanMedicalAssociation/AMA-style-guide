@@ -1,5 +1,5 @@
 /* Links */
-a {
+:not('panels-ipe-tray') a {
   @extend %text-transition;
   color: $black;
   text-decoration: none;
