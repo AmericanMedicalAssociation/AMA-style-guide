@@ -1,4 +1,5 @@
 ---
+el: ".topic_promotion"
 title: "Topic Promotion"
 ---
 

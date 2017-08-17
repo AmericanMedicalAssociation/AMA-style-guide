@@ -1,7 +1,7 @@
 {
-  "block": {
-    "title": "Lorem ipsum dolor ",
-    "button": true,
+  "membership": {
+    "title": "Lorem ipsum dolor",
+    "cta": "Call to Action",
     "list": {
       "first": {
         "content": "Lorem ipsum dolor sit amet"

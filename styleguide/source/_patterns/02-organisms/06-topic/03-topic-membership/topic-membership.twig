@@ -1,3 +1,28 @@
 <div class="topic_membership {{ class }}">
-    {% include 'molecules-block-cta-with-list' with {'block.list': topicList} %}
+  {% set tag = membership.cta ? 'div': 'a' %}
+  <{{tag}} class="topic_membership_container" href="#">
+    {% if membership.logo %}
+      {% include 'atoms-logo' with { 'link': '#', 'image': membership.logo, 'alt': 'logo', 'class': default } %}
+    {% endif %}
+
+    {% if membership.image %}
+      <div class="topic_membership_image">
+        {% include 'atoms-landscape-3x2' with { 'link': '#', 'image': membership.image, 'alt': 'image', 'class': default } %}
+      </div>
+    {% endif %}
+
+    <div class="topic_membership_text">
+      {% if membership.description.first %}
+        {% include 'atoms-unordered' with { 'list': membership.list, 'class': default } %}
+        {% include 'atoms-h2' with { 'content': membership.title, 'class': default } %}
+      {% else %}
+        {% include 'atoms-h2' with { 'content': membership.title, 'class': default } %}
+        {% include 'atoms-unordered' with { 'list': membership.list, 'class': default } %}
+      {% endif %}
+
+      {% if membership.cta %}
+        {% include 'atoms-button-link-secondary' with { 'class': 'button-small', 'content': membership.cta } %}
+      {% endif %}
+    </div>
+  </{{tag}}>
 </div>
