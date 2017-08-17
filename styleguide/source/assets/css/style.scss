@@ -96,7 +96,6 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $AMA PATTERNS
 \*------------------------------------*/
 
-@import "../../_patterns/00-atoms/00-intro/layout-intro-styling";
 @import "../../_patterns/00-atoms/01-global/06-divider/divider";
 @import "../../_patterns/00-atoms/02-text/01-h1/h1";
 @import "../../_patterns/00-atoms/02-text/02-h2/h2";
@@ -172,16 +171,16 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/02-organisms/03-sections/09-best-match-dropdown/best-match-dropdown";
 @import "../../_patterns/02-organisms/05-ec/01-ec-search-bar/ec-search-bar";
 @import "../../_patterns/02-organisms/05-ec/02-ec-partner-row/ec-partner-row";
-@import "../../_patterns/01-molecules/01-layouts/00-layout-one-up/layout-one-up";
-@import "../../_patterns/01-molecules/01-layouts/01-layout-two-up/layout-two-up";
-@import "../../_patterns/01-molecules/01-layouts/02-layout-two-up-heavy-left/layout-two-up-heavy-left";
-@import "../../_patterns/01-molecules/01-layouts/03-layout-three-up/layout-three-up";
-@import "../../_patterns/01-molecules/01-layouts/04-layout-one-up-center/layout-one-up-center";
-@import "../../_patterns/01-molecules/01-layouts/05-layout-two-up-large/layout-two-up-large";
-@import "../../_patterns/01-molecules/01-layouts/06-layout-two-up-heavy-right-offset/layout-two-up-heavy-right-offset";
-@import "../../_patterns/01-molecules/01-layouts/07-layout-two-wrap/layout-two-wrap";
-@import "../../_patterns/01-molecules/01-layouts/07-layout-two-up-heavier-left/layout-two-up-heavier-left";
-@import "../../_patterns/01-molecules/01-layouts/08-layout-four-up/layout-four-up";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/00-layout-one-up/layout-one-up";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/01-layout-two-up/layout-two-up";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/02-layout-two-up-heavy-left/layout-two-up-heavy-left";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/03-layout-three-up/layout-three-up";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/04-layout-one-up-center/layout-one-up-center";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/05-layout-two-up-large/layout-two-up-large";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/06-layout-two-up-heavy-right-offset/layout-two-up-heavy-right-offset";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/07-layout-two-wrap/layout-two-wrap";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/07-layout-two-up-heavier-left/layout-two-up-heavier-left";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/08-layout-four-up/layout-four-up";
 @import "../../_patterns/03-templates/01-home/01-home";
 @import "../../_patterns/01-molecules/06-components/05-page-level-search/page-level-search";
 @import "../../_patterns/00-atoms/01-global/07-rule-vertical/rule-vertical";
@@ -203,7 +202,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/06-components/14-audience-hero-subcategory-links/audience-hero-subcategory-links";
 @import "../../_patterns/01-molecules/12-ec/00-ec-card-course/ec-card-course";
 @import "../../_patterns/02-organisms/03-sections/02-card-row-ec/card-row-ec";
-@import "../../_patterns/01-molecules/01-layouts/07-layout-five-up-left/layout-five-up-left";
+@import "../../_patterns/01-molecules/01-layouts/deprecated/07-layout-five-up-left/layout-five-up-left";
 @import "../../_patterns/02-organisms/05-ec/03-ec-tabs-course-browser/ec-tabs-course-browser";
 @import "../../_patterns/03-templates/02-ec-home/ec-home";
 @import "../../_patterns/01-molecules/08-lists/12-list-topic-tools/list-topic-tools";
@@ -218,6 +217,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/08-lists/13-list-topic-related-content/00-list-topic-related-content-image/list-topic-related-content-image";
 @import "../../_patterns/02-organisms/06-topic/04-topic-related-content/topic-related-content";
 @import "../../_patterns/02-organisms/06-topic/04-topic-related-content/00-topic-related-content-image/topic-related-content-image";
+@import "../../_patterns/02-organisms/06-topic/06-topic-promotion/_topic-promotion";
 @import "../../_patterns/01-molecules/08-lists/14-list-topic-related-articles/list-topic-related-articles";
 @import "../../_patterns/02-organisms/06-topic/08-topic-related-articles/topic-related-articles";
 @import "../../_patterns/01-molecules/06-components/22-article-preview/02-article-preview-related/article-preview-related";
