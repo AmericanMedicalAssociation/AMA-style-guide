@@ -1,250 +1,251 @@
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
-form ol,
-form ul {
-  list-style: none;
-  margin-left: 0;
-}
-
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-legend {
-  margin-bottom: 0.5em;
-}
-
-label {
-  display: block;
-}
-
-button,
-input,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    margin: 0 1px 0;
-}
-
-// Global input styles
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="week"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-select,
-textarea {
-  /* stylelint-disable property-no-vendor-prefix */
-  -webkit-appearance: none;
-  /* stylelint-enable */
-  position: relative;
-  height: 60px;
-  width: 100%;
-  background-color: $white;
-  border: 1px solid $gray-8;
-  border-radius: 0;
-  outline: none;
-  padding: 0 15px;
-
-  &:focus,
-  &:active {
-    border: 2px solid $purple;
-    outline: none;
-    padding: 0 14px;
+:not('panels-ipe-tray'){
+  form ol,
+  form ul {
+    list-style: none;
+    margin-left: 0;
   }
 
-  &:after {
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  legend {
+    margin-bottom: 0.5em;
+  }
+
+  label {
     display: block;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -30px;
-    width: 30px;
-    height: 30px;
-    background-color: red;
-
   }
 
-  &.error {
-    border: 2px solid $red-darker;
-    padding: 0 14px;
+  button,
+  input,
+  select,
+  textarea {
+      font-family: inherit;
+      font-size: 100%;
+      margin: 0 1px 0;
   }
 
-  &.valid {
-    color: $black;
-  }
-}
-
-// Overriding textarea styles
-textarea {
-  height: 250px;
-  padding: 15px;
-
-  &:focus,
-  &:active {
-    border: 2px solid $purple;
+  // Global input styles
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="week"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  select,
+  textarea {
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-appearance: none;
+    /* stylelint-enable */
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $gray-8;
+    border-radius: 0;
     outline: none;
-    padding: 14px;
-  }
+    padding: 0 15px;
 
-  &.error {
-    padding: 14px;
-  }
-}
+    &:focus,
+    &:active {
+      border: 2px solid $purple;
+      outline: none;
+      padding: 0 14px;
+    }
 
-select {
-  background-image: url("../../assets/icons/svg/opendropdown.svg");
-  background-position: calc(100% - 8px) 52%;
-  background-repeat: no-repeat;
-  padding-right: 30px;
-  -moz-appearance: none; /*removes default dropdown arrow in Firefox*/
-  text-indent: 0.01px; /*removes default dropdown arrow in Firefox*/
-  text-overflow: ''; /*removes default dropdown arrow in Firefox*/
-}
-
-// Placeholder text styles
-::-webkit-input-placeholder { /* Chrome */
-  color: $gray-8;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: $gray-8;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: $gray-8;
-  opacity: 1;
-}
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: $gray-8;
-  opacity: 1;
-}
-
-// Requried label error styles
-label {
-  &.error {
-    @extend %b4;
-    display: block;
-    color: $red-darker;
-    margin-top: 4px;
-    clear: both;
-  }
-}
-
-// Checkbox and radio button styles
-input[type="checkbox"],
-input[type="radio"] {
-  @extend %element-invisible;
-
-  // Label styles
-  + label {
-    margin: 0 0 0.3em;
-
-    // Custom checkboxes and radio buttons
-    &:before {
-      position: relative;
-      top: 0.15em;
-      display: inline-block;
+    &:after {
+      display: block;
       content: "";
-      width: 20px;
-      height: 20px;
-      background-image: url("../../assets/icons/svg/radio.svg");
-      background-position: 0px 0px;
-      background-size: 20px;
-      background-repeat: no-repeat;
-      margin-right: 10px;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      width: 30px;
+      height: 30px;
+      background-color: red;
+
+    }
+
+    &.error {
+      border: 2px solid $red-darker;
+      padding: 0 14px;
+    }
+
+    &.valid {
+      color: $black;
     }
   }
 
-  // Active styles
-  &:checked + label {
-    font-weight: 700;
+  // Overriding textarea styles
+  textarea {
+    height: 250px;
+    padding: 15px;
 
-    &:before {
+    &:focus,
+    &:active {
+      border: 2px solid $purple;
+      outline: none;
+      padding: 14px;
+    }
+
+    &.error {
+      padding: 14px;
+    }
+  }
+
+  select {
+    background-image: url("../../assets/icons/svg/opendropdown.svg");
+    background-position: calc(100% - 8px) 52%;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+    -moz-appearance: none; /*removes default dropdown arrow in Firefox*/
+    text-indent: 0.01px; /*removes default dropdown arrow in Firefox*/
+    text-overflow: ''; /*removes default dropdown arrow in Firefox*/
+  }
+
+  // Placeholder text styles
+  ::-webkit-input-placeholder { /* Chrome */
+    color: $gray-8;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: $gray-8;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: $gray-8;
+    opacity: 1;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: $gray-8;
+    opacity: 1;
+  }
+
+  // Requried label error styles
+  label {
+    &.error {
+      @extend %b4;
+      display: block;
+      color: $red-darker;
+      margin-top: 4px;
+      clear: both;
+    }
+  }
+
+  // Checkbox and radio button styles
+  input[type="checkbox"],
+  input[type="radio"] {
+    @extend %element-invisible;
+
+    // Label styles
+    + label {
+      margin: 0 0 0.3em;
+
+      // Custom checkboxes and radio buttons
+      &:before {
+        position: relative;
+        top: 0.15em;
+        display: inline-block;
+        content: "";
+        width: 20px;
+        height: 20px;
+        background-image: url("../../assets/icons/svg/radio.svg");
+        background-position: 0px 0px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+      }
+    }
+
+    // Active styles
+    &:checked + label {
+      font-weight: 700;
+
+      &:before {
+        background-position: 0px -25px;
+      }
+    }
+
+    // Tab focus styles
+    &:focus + label {
+      font-weight: 700;
+    }
+  }
+
+  // Add radius curves to radio buttons
+  input[type="checkbox"] {
+    + label:before {
+      background-image: url("../../assets/icons/svg/checkbox.svg");
+    }
+
+    &:checked + label:before {
       background-position: 0px -25px;
     }
   }
 
-  // Tab focus styles
-  &:focus + label {
-    font-weight: 700;
-  }
-}
-
-// Add radius curves to radio buttons
-input[type="checkbox"] {
-  + label:before {
-    background-image: url("../../assets/icons/svg/checkbox.svg");
+  input[type="search"] {
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-appearance: none;
+    /* stylelint-enable */
+    border-radius: 0;
   }
 
-  &:checked + label:before {
-    background-position: 0px -25px;
-  }
-}
-
-input[type="search"] {
-  /* stylelint-disable property-no-vendor-prefix */
-  -webkit-appearance: none;
-  /* stylelint-enable */
-  border-radius: 0;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  /* stylelint-disable property-no-vendor-prefix */
-  -webkit-appearance: none;
-  /* stylelint-enable */
-}
-
-//Form Field Container
-.field-container {
-  margin-bottom: $space;
-}
-
-.inline-form {
-  fieldset,
-  .inline-container {
-    position: relative;
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-decoration {
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-appearance: none;
+    /* stylelint-enable */
   }
 
-  input[type=submit],
-  button,
-  .btn {
-    padding: 0.65rem 1.3rem;
-    background: $gray-dark;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    width: auto;
+  //Form Field Container
+  .field-container {
+    margin-bottom: $space;
+  }
 
-    &:hover,
-    &:focus {
-      background: $gray;
-      color: $white;
+  .inline-form {
+    fieldset,
+    .inline-container {
+      position: relative;
+    }
+
+    input[type=submit],
+    button,
+    .btn {
+      padding: 0.65rem 1.3rem;
+      background: $gray-dark;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: auto;
+
+      &:hover,
+      &:focus {
+        background: $gray;
+        color: $white;
+      }
     }
   }
-}
 
-/* Validation */
-.has-error {
-  border-color: $error;
+  /* Validation */
+  .has-error {
+    border-color: $error;
+  }
+  .is-valid {
+    border-color: $valid;
+  }
 }
-.is-valid {
-  border-color: $valid;
-}
-
 
 
 
