@@ -1,7 +1,5 @@
 .topic_hero .topic_article-preview {
-  @include rule-horizontal-bottom(1px, $gray-8, solid);
   @include gutter($padding-top-full...);
-  @include gutter($padding-bottom-full...);
 }
 
 .topic_hero .topic_article-preview_title {
@@ -23,6 +21,11 @@
   @include breakpoint($bp-med) {
     @include child-top-gutters($gutter / 2);
   }
+}
+
+.topic_hero .topic_article-preview:not(:first-child) {
+  @include gutter($margin-top-full...);
+  @include rule-horizontal(solid, $gray-8, 1px);
 }
 
 .topic_hero > *:first-child {

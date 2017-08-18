@@ -5,17 +5,12 @@
   padding: 0;
 
   .list_item-topic-related-article {
-    @include rule-horizontal(1px, $black-20, solid);
     @include gutter($padding-top-half...);
     @include gutter($padding-bottom-half...);
     margin-bottom: 0;
 
-    &:first-of-type{
-      @include rule-horizontal(1px, $gray-8, solid);
-    }
-
-    &:last-of-type {
-      @include rule-horizontal-bottom(1px, $gray-8, solid);
+    &:not(:first-child) {
+      @include rule-horizontal(1px, $black-20, solid);
     }
   }
 
