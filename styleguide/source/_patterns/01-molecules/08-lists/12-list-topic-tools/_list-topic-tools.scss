@@ -11,8 +11,6 @@
     @include gutter($padding-top-half...);
     @include gutter($padding-right-half...);
     @include gutter($padding-bottom-half...);
-    @include gutter($margin-right-half...);
-    @include gutter($margin-left-half...);
     clear: both;
 
     &:first-of-type{

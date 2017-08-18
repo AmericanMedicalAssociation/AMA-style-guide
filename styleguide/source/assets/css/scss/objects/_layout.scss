@@ -63,14 +63,16 @@
 
 // Column-width classes..
 .col-width-3 {
+	@include grid-_unit--cols(12);
+	@include gutter($padding-right-half...);
+	@include gutter($padding-left-half...);
   @include breakpoint($bp-med) {
     @include grid-_unit--cols(3);
-    @include gutter($padding-right-half...);
-    @include gutter($padding-left-half...);
   }
 }
 
 .col-width-6 {
+	@include grid-_unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
@@ -79,6 +81,7 @@
 }
 
 .col-width-9 {
+	@include grid-_unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {

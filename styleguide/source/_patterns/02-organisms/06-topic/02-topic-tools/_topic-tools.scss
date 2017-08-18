@@ -20,7 +20,6 @@
 
 .tools_title,
 .tools_title-learn-more {
-  @include gutter($margin-left-half...);
   margin-bottom: 0;
 
   @include breakpoint($bp-med) {
