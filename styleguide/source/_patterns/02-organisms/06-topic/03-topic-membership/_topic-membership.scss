@@ -22,9 +22,12 @@ a.topic_membership_container {
   }
 }
 
-.topic_membership_text {
+.topic_membership_logo img {
   @include gutter-all($padding-all-half...);
-  @include gutter($padding-bottom-full...);
+}
+
+.topic_membership_text {
+  @include gutter-all($padding-all-full...);
   @include child-top-gutters($gutter-mobile / 2);
 
   @include breakpoint($bp-med) {
@@ -36,15 +39,12 @@ a.topic_membership_container {
   width: 100%;
 }
 
-.topic_membership_container img.logo {
-  @include gutter($padding-bottom-full...);
-}
-
 .topic_membership h2 {
   @include type-larger();
+  text-align: left;
 }
 
-.topic_membership .button-secondary {
+.topic_membership .button-primary {
   width: 100%;
 }
 
