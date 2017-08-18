@@ -32,6 +32,7 @@ a.topic_membership_container {
 
   @include breakpoint($bp-med) {
     @include child-top-gutters($gutter / 2);
+    @include gutter-all($padding-all-half...);
   }
 }
 
