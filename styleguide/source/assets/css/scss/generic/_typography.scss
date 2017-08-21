@@ -47,7 +47,7 @@ $bp-large: 75em; // 1200px
   font-size: $decimal-size * 1rem;
 }
 
-:not('panels-ipe-tray') body {
+body {
   /* stylelint-disable property-no-vendor-prefix */
   -webkit-text-size-adjust: 100%;
   /* stylelint-enable */
