@@ -1,6 +1,6 @@
-%button,
-button,
-.button {
+:not('panels-ipe-tray') button,
+:not('panels-ipe-tray') %button,
+:not('panels-ipe-tray') .button {
   @extend %background-transition;
   /* stylelint-disable property-no-vendor-prefix */
   -moz-appearance: none;
