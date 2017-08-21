@@ -9,6 +9,5 @@
 }
 
 .topic_related-content_title {
-  text-transform: uppercase;
-  @include gutter($padding-bottom-half...);
+  margin-bottom: 0;
 }

@@ -1,8 +1,3 @@
-.topic_promotion {
-  @include rule-horizontal-bottom(1px, $gray-8, solid);
-  @include gutter($padding-bottom-full...);
-}
-
 .topic_promotion .topic_promotion_container {
   background: $black-7;
 }
