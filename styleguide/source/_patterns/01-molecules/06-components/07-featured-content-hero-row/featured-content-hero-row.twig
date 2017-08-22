@@ -1,8 +1,17 @@
-<a href="{{ url }}" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+{#<a href="{{ url }}" class="layout layout_two_up-heavy-left row_featured_content-hero">#}
+  {#<div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">#}
+    {#{% include 'atoms-summary' with { 'content': title.read } %}#}
+  {#</div>#}
+  {#<div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">#}
+    {#{% include 'atoms-landscape-3x2' %}#}
+  {#</div>#}
+{#</a>#}
+
+<a href="{{ url }}" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     {% include 'atoms-summary' with { 'content': title.read } %}
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     {% include 'atoms-landscape-3x2' %}
   </div>
 </a>

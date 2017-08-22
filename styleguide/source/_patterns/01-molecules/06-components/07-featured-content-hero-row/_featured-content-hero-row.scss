@@ -49,4 +49,8 @@
       width: initial;
     }
   }
+
+  @include breakpoint($bp-med) {
+    padding-right: 0;
+  }
 }
