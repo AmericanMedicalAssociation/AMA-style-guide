@@ -4,14 +4,17 @@
   z-index: 51;
 }
 
-.flexbox .ribbon .layout.layout_one_up {
-  @include breakpoint($bp-large max-width) {
+.ribbon .container-with-grid {
+  @include breakpoint($bp-med max-width) {
     padding: 0;
   }
   flex-direction: row;
 }
 
 .ribbon_container {
-  padding-left: 0;
-  padding-right: 0;
+  display: flex;
+  @include breakpoint($bp-med max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
