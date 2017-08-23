@@ -108,6 +108,7 @@
 }
 
 .col-width-12 {
+	@include grid-_unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
