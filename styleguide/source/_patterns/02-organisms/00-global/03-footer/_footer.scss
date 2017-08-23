@@ -18,17 +18,20 @@
 
 .footer-primary {
   margin-bottom: 40px;
+  @include breakpoint($bp-med max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   @include breakpoint($bp-large-home min-width) {
-    @include grid__unit--cols(7);
-    margin-right: 100px;
+    padding-right: 100px;
   }
 }
 
 .footer-secondary {
-
-  @include breakpoint($bp-large-home min-width) {
-    @include grid__unit--cols(4);
+  @include breakpoint($bp-med max-width) {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .rule_horizontal {
