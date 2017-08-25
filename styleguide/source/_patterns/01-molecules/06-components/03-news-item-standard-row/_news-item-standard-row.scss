@@ -38,6 +38,7 @@
     @include breakpoint($bp-med-home min-width) {
       margin-top: 0;
       text-align: right;
+      @include grid__unit--cols(5);
 
       img {
         width: initial;
@@ -49,5 +50,9 @@
 .news_item-standard_row_text {
   @include breakpoint($bp-med) {
     padding-left: 0;
+  }
+
+  @include breakpoint($bp-med-home) {
+    @include grid__unit--cols(7);
   }
 }
