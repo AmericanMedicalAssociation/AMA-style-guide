@@ -47,8 +47,6 @@
 }
 
 // Enforce aspect ratios.
-.topic_article-preview img,
-.topic_article-preview video,
-.topic_article-preview object {
+.topic_article-preview img {
   width: 100%;
 }

@@ -65,6 +65,7 @@
         var height = ( this.tagName.toLowerCase() == 'object' || $this.attr('height') ) ? $this.attr('height') : $this.height(),
             width = $this.attr('width') ? $this.attr('width') : $this.width(),
             aspectRatio = height / width;
+            console.log(aspectRatio); // debug
         if(!$this.attr('id')){
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
           $this.attr('id', videoID);
