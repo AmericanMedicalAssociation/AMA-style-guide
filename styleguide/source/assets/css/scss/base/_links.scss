@@ -1,12 +1,14 @@
 /* Links */
-a {
-  @extend %text-transition;
-  color: $black;
-  text-decoration: none;
-  outline: 0;
-  &:hover,
-  &:focus {
+.ama-theme {
+  a {
+    @extend %text-transition;
     color: $black;
+    text-decoration: none;
+    outline: 0;
+    &:hover,
+    &:focus {
+      color: $black;
+    }
   }
 }
 

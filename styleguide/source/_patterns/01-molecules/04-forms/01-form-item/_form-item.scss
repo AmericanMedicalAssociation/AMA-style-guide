@@ -1,241 +1,243 @@
 /*------------------------------------*\
     $INPUT WRAP
 \*------------------------------------*/
-.form-item {
-  position: relative;
-  width: 100%;
-  float: left;
-  padding-right: 40px;
-  margin-top: 40px;
-  clear: both;
-
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="url"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="week"],
-  input[type="number"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="color"],
-  input[type="radio"],
-  input[type="checkbox"],
-  select,
-  textarea {
+.ama-theme {
+  .form-item {
     position: relative;
-    z-index: 10;
+    width: 100%;
+    float: left;
+    padding-right: 40px;
+    margin-top: 40px;
+    clear: both;
 
-    // Display error icon
-    &.error ~ .form-item_icon {
-      display: block;
-      background-image: url("../../assets/icons/svg/alert.svg");
-    }
-
-    // Display valid icon
-    &.valid ~ .form-item_icon {
-      display: block;
-      background-image: url("../../assets/icons/svg/valid.svg");
-    }
-  }
-
-  // Specific styles for year field
-  &-year {
-
-    input[type="number"] {
-      padding-right: 70px;
-    }
-
-    // Year field help text
-    .description-inline {
-      @extend %b4;
-      position: absolute;
-      top: 1em;
-      right: 55px;
-      color: $gray-8;
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="url"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="week"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    input[type="radio"],
+    input[type="checkbox"],
+    select,
+    textarea {
+      position: relative;
       z-index: 10;
 
-      @include breakpoint($bp-med) {
-        top: 0.8em;
-      }
-    }
-  }
-
-  &-radio,
-  &-radio-label,
-  &-checkbox {
-
-    label.error {
-      display: none;
-    }
-  }
-
-  // Label only radio list
-  &-radio-label {
-
-    .form-item-radio-label_group {
-
-      @include breakpoint($bp-small) {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-content: stretch;
-        align-items: flex-start;
-      }
-    }
-
-    // Hide the radio button
-    input[type="radio"] {
-      @extend %element-invisible;
-
-      // Style the label
-      + label {
-        position: relative;
+      // Display error icon
+      &.error ~ .form-item_icon {
         display: block;
-        float: left;
-        width: 48%;
-        background-color: $white;
-        border: 1px solid $gray-8;
-        vertical-align: middle;
-        text-align: center;
-        cursor: pointer;
-        padding: 0.64em 0.94em;
-        margin-bottom: 1em;
+        background-image: url("../../assets/icons/svg/alert.svg");
+      }
 
-        &:nth-of-type(2n) {
-          float: right;
-        }
+      // Display valid icon
+      &.valid ~ .form-item_icon {
+        display: block;
+        background-image: url("../../assets/icons/svg/valid.svg");
+      }
+    }
 
-        &:nth-of-type(2n+1) {
-          clear: left;
+    // Specific styles for year field
+    &-year {
+
+      input[type="number"] {
+        padding-right: 70px;
+      }
+
+      // Year field help text
+      .description-inline {
+        @extend %b4;
+        position: absolute;
+        top: 1em;
+        right: 55px;
+        color: $gray-8;
+        z-index: 10;
+
+        @include breakpoint($bp-med) {
+          top: 0.8em;
         }
+      }
+    }
+
+    &-radio,
+    &-radio-label,
+    &-checkbox {
+
+      label.error {
+        display: none;
+      }
+    }
+
+    // Label only radio list
+    &-radio-label {
+
+      .form-item-radio-label_group {
 
         @include breakpoint($bp-small) {
-          float: none;
-          width: auto;
-          margin-bottom: 0;
-        }
-
-        &:before {
-          content: none;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-content: stretch;
+          align-items: flex-start;
         }
       }
 
-      // Active styles
-      &:checked + label,
-      &:focus + label {
-        border-color: $purple;
-        color: $purple;
-        font-weight: inherit;
+      // Hide the radio button
+      input[type="radio"] {
+        @extend %element-invisible;
+
+        // Style the label
+        + label {
+          position: relative;
+          display: block;
+          float: left;
+          width: 48%;
+          background-color: $white;
+          border: 1px solid $gray-8;
+          vertical-align: middle;
+          text-align: center;
+          cursor: pointer;
+          padding: 0.64em 0.94em;
+          margin-bottom: 1em;
+
+          &:nth-of-type(2n) {
+            float: right;
+          }
+
+          &:nth-of-type(2n+1) {
+            clear: left;
+          }
+
+          @include breakpoint($bp-small) {
+            float: none;
+            width: auto;
+            margin-bottom: 0;
+          }
+
+          &:before {
+            content: none;
+          }
+        }
+
+        // Active styles
+        &:checked + label,
+        &:focus + label {
+          border-color: $purple;
+          color: $purple;
+          font-weight: inherit;
+        }
+      }
+    }
+
+    // Float two fields
+    @include breakpoint($bp-small) {
+      &.layout_two_up-1,
+      &.layout_two_up-2 {
+        width: calc(50% - 10px);
+      }
+
+      &.layout_two_up-2 {
+        float: right;
+        clear: none;
       }
     }
   }
 
-  // Float two fields
-  @include breakpoint($bp-small) {
-    &.layout_two_up-1,
-    &.layout_two_up-2 {
-      width: calc(50% - 10px);
-    }
-
-    &.layout_two_up-2 {
-      float: right;
-      clear: none;
-    }
-  }
-}
-
-.form-item_label {
-  @extend %b5;
-  transition: all 0.3s ease;
-  position: absolute;
-  top: 0;
-  left: 3px;
-  font-weight: 700;
-  color: $gray-8;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  z-index: 1;
-
-  &.show {
-    top: -24px;
-    opacity: 1;
-  }
-
-  .form-item-show-label & {
-    top: -24px;
-    opacity: 1;
-  }
-}
-
-// General styles for validating icon
-.form-item_icon {
-  display: none;
-  position: absolute;
-  top: 15px;
-  right: 0;
-  background-size: 30px;
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 30px;
-
-  .form-item-radio &,
-  .form-item-checkbox & {
+  .form-item_label {
+    @extend %b5;
+    transition: all 0.3s ease;
+    position: absolute;
     top: 0;
+    left: 3px;
+    font-weight: 700;
+    color: $gray-8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    z-index: 1;
+
+    &.show {
+      top: -24px;
+      opacity: 1;
+    }
+
+    .form-item-show-label & {
+      top: -24px;
+      opacity: 1;
+    }
   }
 
-  .form-item-radio-label & {
-    top: 50px;
+  // General styles for validating icon
+  .form-item_icon {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    .form-item-radio &,
+    .form-item-checkbox & {
+      top: 0;
+    }
+
+    .form-item-radio-label & {
+      top: 50px;
+    }
   }
-}
 
-// Select watermark
-.watermark {
-  color: $gray-8;
-}
-
-// Form submit wrapper
-.form-submit {
-  float: left;
-  width: 100%;
-  margin-top: 40px;
-  clear: both;
-}
-
-.form-item_password {
-  cursor: pointer;
-  position: absolute;
-  top: 1em;
-  right: 55px;
-  display: block;
-  background-image: url("../../assets/icons/svg/show.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 30px;
-  height: 20px;
-  z-index: 10;
-
-  &.show {
-    background-image: url("../../assets/icons/svg/hide.svg");
+  // Select watermark
+  .watermark {
+    color: $gray-8;
   }
-}
 
-.form-item_info {
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 0;
-  display: block;
-  background-image: url("../../assets/icons/svg/information.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 30px;
-  height: 30px;
-  z-index: 10;
+  // Form submit wrapper
+  .form-submit {
+    float: left;
+    width: 100%;
+    margin-top: 40px;
+    clear: both;
+  }
+
+  .form-item_password {
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 55px;
+    display: block;
+    background-image: url("../../assets/icons/svg/show.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30px;
+    height: 20px;
+    z-index: 10;
+
+    &.show {
+      background-image: url("../../assets/icons/svg/hide.svg");
+    }
+  }
+
+  .form-item_info {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    display: block;
+    background-image: url("../../assets/icons/svg/information.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+  }
 }

@@ -1,8 +1,31 @@
-/* Text-Related Elements */
-p {
-  margin-bottom: $space;
-}
+.ama-theme {
+  /* Blockquote */
+  blockquote {
+    font-style: italic;
+    border-left: 1px solid $gray;
+    color: $gray;
+    padding-left: $pad;
+    margin-bottom: $space;
+  }
 
+  /* Horizontal Rule */
+  hr {
+    border: 0;
+    height: 2px;
+    background: $gray-light-2;
+    margin: $space-double 0;
+  }
+
+  abbr {
+    border-bottom: 1px dotted $gray;
+    cursor: help;
+  }
+
+  /* Text-Related Elements */
+  p {
+    margin-bottom: $space;
+  }
+}
 // @todo update with semantic class
 .b1,
 %b1 {
@@ -29,26 +52,4 @@ p {
 %b5 {
   font-size: 0.875em;
   line-height: 1.3888;
-}
-
-/* Blockquote */
-blockquote {
-  font-style: italic;
-  border-left: 1px solid $gray;
-  color: $gray;
-  padding-left: $pad;
-  margin-bottom: $space;
-}
-
-/* Horizontal Rule */
-hr {
-  border: 0;
-  height: 2px;
-  background: $gray-light-2;
-  margin: $space-double 0;
-}
-
-abbr {
-  border-bottom: 1px dotted $gray;
-  cursor: help;
 }
