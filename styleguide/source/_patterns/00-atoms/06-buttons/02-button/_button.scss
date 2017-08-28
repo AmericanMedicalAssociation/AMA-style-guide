@@ -28,27 +28,27 @@
       text-decoration: none;
     }
   }
-}
 
-.button-full {
-  @extend %button;
-  width: 100%;
-}
-
-.button-small {
-  padding: 7px 20px;
-}
-
-.button-secondary {
-  background-color: $white;
-  color: $purple;
-  border: 1px solid $purple;
-
-  &:active,
-  &:hover,
-  &:focus {
-    border-color: $purple-darker;
-    background-color: #e3dce9;
-    color: $purple-darker;
+  .button-full {
+    @extend %button;
+    width: 100%;
   }
-}
+
+  .button-small {
+    padding: 7px 20px;
+  }
+
+  .button-secondary {
+    background-color: $white;
+    color: $purple;
+    border: 1px solid $purple;
+
+    &:active,
+    &:hover,
+    &:focus {
+      border-color: $purple-darker;
+      background-color: #e3dce9;
+      color: $purple-darker;
+    }
+  }
+} //closes .ama-theme
