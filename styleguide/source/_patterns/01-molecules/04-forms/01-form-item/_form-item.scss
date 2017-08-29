@@ -170,7 +170,7 @@
     }
   }
 
-  .form-item_label {
+  .form-item-show-label .form-item_label {
       top: -24px;
       opacity: 1;
   }
@@ -185,15 +185,15 @@
     background-repeat: no-repeat;
     width: 30px;
     height: 30px;
+  }
 
-    .form-item-radio &,
-    .form-item-checkbox & {
-      top: 0;
-    }
+  .form-item-radio .form-item_icon,
+  .form-item-checkbox .form-item_icon {
+    top: 0;
+  }
 
-    .form-item-radio-label & {
-      top: 50px;
-    }
+  .form-item-radio-label .form-item_icon {
+    top: 50px;
   }
 
   // Select watermark
