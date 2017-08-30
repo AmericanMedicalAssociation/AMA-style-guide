@@ -7,13 +7,11 @@
 }
 
 .ec_search-bar_inner {
+  display: flex;
+  justify-content: space-between;
   font-weight: 600;
   margin: 0 auto;
   padding-top: 26px;
-}
-
-.flexbox .layout.ec_search-bar_inner { // specify `.flexbox` here because we need to override the property provided by .layout.
-  justify-content: space-between;
 }
 
 .ec_search-bar_library {
