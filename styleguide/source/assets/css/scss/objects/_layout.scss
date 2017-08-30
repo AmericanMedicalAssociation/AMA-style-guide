@@ -32,9 +32,10 @@
   @include gutter($margin-top-full-negative...);
 }
 
-// Use on the container that should have gutters and use flexbox.
+// Use on the container whose children should have gutters and use flexbox.
 .grid {
 	@include grid();
+	width: 100%;
 }
 
 // Apply the gutters to individual cells.

@@ -1,17 +1,19 @@
-<a href="{{ url }}" class="container-with-grid">
-  {% include 'atoms-title-label' with { 'content' : 'Best Match' } %}
-  <div class="search-result-best-event">
-    <div class="search-result-best_left">
-      {% include 'atoms-h3' with { 'class' : 'search-result-best_title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra' } %}
-      {% include 'atoms-paragraph' with { 'class' : 'search-result-best_description-event', 'content' : 'Sed massa augue, sollic itudiny vel metus a, posuere erat. In vulputate feugiat neque, sed aliquam juh tasga hugit.' } %}
-      {% include 'atoms-paragraph' with { 'class' : 'search-result-best_link', 'content' : 'Learn More' } %}
-    </div>
-    <div class="search-result-best_right">
-      <div class="search-result-best_event-details">
-        <div>June 11–15, 2016</div>
-        <div>Hyatt Regency Chicago</div>
-        <div>Chicago, IL</div>
+<a href="{{ url }}" class="search-result-best-event container">
+  <div class="grid">
+    {% include 'atoms-title-label' with { 'content' : 'Best Match' } %}
+    <div class="search-result-best-event_container">
+      <div class="search-result-best_left">
+        {% include 'atoms-h3' with { 'class' : 'search-result-best_title', 'content' : 'Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra' } %}
+        {% include 'atoms-paragraph' with { 'class' : 'search-result-best_description-event', 'content' : 'Sed massa augue, sollic itudiny vel metus a, posuere erat. In vulputate feugiat neque, sed aliquam juh tasga hugit.' } %}
         {% include 'atoms-paragraph' with { 'class' : 'search-result-best_link', 'content' : 'Learn More' } %}
+      </div>
+      <div class="search-result-best_right">
+        <div class="search-result-best_event-details">
+          <div>June 11–15, 2016</div>
+          <div>Hyatt Regency Chicago</div>
+          <div>Chicago, IL</div>
+          {% include 'atoms-paragraph' with { 'class' : 'search-result-best_link', 'content' : 'Learn More' } %}
+        </div>
       </div>
     </div>
   </div>

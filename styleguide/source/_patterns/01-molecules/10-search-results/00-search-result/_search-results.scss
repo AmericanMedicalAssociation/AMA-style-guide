@@ -1,5 +1,10 @@
-.search-result-best,
-.search-result-best-event {
+a.search-result-best-event,
+a.search-result-best {
+  display: flex;
+}
+
+.search-result-best_container,
+.search-result-best-event_container {
   @extend %background-transition;
   background-color: $black-7;
   cursor: pointer;
