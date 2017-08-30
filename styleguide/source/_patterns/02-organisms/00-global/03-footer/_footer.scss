@@ -10,6 +10,7 @@
 
 .footer-inner {
   position: relative;
+  @include grid();
 
   @include breakpoint($bp-large-home min-width) {
     flex-direction: row !important;
@@ -17,21 +18,21 @@
 }
 
 .footer-primary {
+  @include grid-_unit--cols(12);
   margin-bottom: 40px;
-  @include breakpoint($bp-med max-width) {
-    padding-left: 0;
-    padding-right: 0;
+  @include breakpoint($bp-large) {
+    @include grid-_unit--cols(8);
   }
 
-  @include breakpoint($bp-large-home min-width) {
+  @include breakpoint($bp-med min-width) {
     padding-right: 100px;
   }
 }
 
 .footer-secondary {
-  @include breakpoint($bp-med max-width) {
-    padding-left: 0;
-    padding-right: 0;
+  @include grid-_unit--cols(12);
+  @include breakpoint($bp-large) {
+    @include grid-_unit--cols(4);
   }
 
   .rule_horizontal {
