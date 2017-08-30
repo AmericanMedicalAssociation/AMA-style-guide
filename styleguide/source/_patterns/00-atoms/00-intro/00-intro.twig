@@ -1,29 +1,19 @@
-<div class="sg-introduction container-with-grid">
-  <div class="col-width-12">
-    <h2>{% include 'atoms-logo' %}</h2>
-    <h1>Welcome to the AMA Style Guide</h1>
-
-    <p>Click the "all" link or navigation above to browse styles. You can search for patterns using "Find Pattern" in the gear on the right.</p>
-
-    <h2>Working with our style guide</h2>
-
-    <h3>Structure</h3>
-
-    <p>This living style guide is built with {% include '00-link.twig' with {'content' : 'Pattern Lab' , 'url' : 'http://patternlab.io/', 'target': '_blank'} %} and adheres to the principles of {% include '00-link.twig' with {'content' : 'Atomic Design' , 'url' : 'http://bradfrost.com/blog/post/atomic-web-design/', 'target': '_blank'} %}.</p>
-
-    <h3>Issues</h3>
-
-    <p>If you have questions or encounter an issue working with the style guide, report it as a Github issue.</p>
-
-    <h3>Contributions</h3>
-
-    <p>For any code that you would like to contribute to the style guide, first create an issue in Github explaining clearly what problem you are trying to solve.</p>
-
-    <p>Make sure you have adhered to the guidelines outlined in the Code Contributions documentation that lives in the <code>/docs</code> folder of this project before submitting a pull request. Reference the Github issue you created when you submit your pull request.</p>
-
-    <h3>Annotation and Documentation</h3>
-
-    <p>Each pattern should have its own accompanying {% include '00-link.twig' with {'content' : 'Markdown' , 'url' : 'https://daringfireball.net/projects/markdown/', 'target': '_blank'} %} file that contains 1) a useful description of the pattern and 2) links to the relevant Jira tickets/Github issues relating to that pattern's creation. This information is needed to provide context as to how and when  a particular pattern should be used.</p>
-
+<div class="sg-introduction container">
+  <div class="grid">
+    <div class="col-width-12">
+      <h2>{% include 'atoms-logo' %}</h2>
+      <h1>Welcome to the AMA Style Guide</h1>
+      <p>Click the "all" link or navigation above to browse styles. You can search for patterns using "Find Pattern" in the gear on the right.</p>
+      <h2>Working with our style guide</h2>
+      <h3>Structure</h3>
+      <p>This living style guide is built with {% include '00-link.twig' with {'content' : 'Pattern Lab' , 'url' : 'http://patternlab.io/', 'target': '_blank'} %} and adheres to the principles of {% include '00-link.twig' with {'content' : 'Atomic Design' , 'url' : 'http://bradfrost.com/blog/post/atomic-web-design/', 'target': '_blank'} %}.</p>
+      <h3>Issues</h3>
+      <p>If you have questions or encounter an issue working with the style guide, report it as a Github issue.</p>
+      <h3>Contributions</h3>
+      <p>For any code that you would like to contribute to the style guide, first create an issue in Github explaining clearly what problem you are trying to solve.</p>
+      <p>Make sure you have adhered to the guidelines outlined in the Code Contributions documentation that lives in the <code>/docs</code> folder of this project before submitting a pull request. Reference the Github issue you created when you submit your pull request.</p>
+      <h3>Annotation and Documentation</h3>
+      <p>Each pattern should have its own accompanying {% include '00-link.twig' with {'content' : 'Markdown' , 'url' : 'https://daringfireball.net/projects/markdown/', 'target': '_blank'} %} file that contains 1) a useful description of the pattern and 2) links to the relevant Jira tickets/Github issues relating to that pattern's creation. This information is needed to provide context as to how and when  a particular pattern should be used.</p>
+    </div>
   </div>
 </div>
