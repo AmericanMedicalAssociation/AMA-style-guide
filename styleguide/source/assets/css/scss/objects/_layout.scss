@@ -9,7 +9,7 @@
 	@include grid();
 	max-width: $max-width;
   margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 10px;
 
 	@include breakpoint($bp-med) {
 		padding: 0 30px;
@@ -20,7 +20,7 @@
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 
   @include breakpoint($bp-med) {
     padding: 0 30px;
