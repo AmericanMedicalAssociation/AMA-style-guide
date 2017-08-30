@@ -42,8 +42,43 @@ Class names and hierarchy follow the [BEM (Block Element Modifier)](http://getbe
 ### Responsive implementation using Breakpoint-Sass
 All patterns in the AMA Style Guide are fully responsive. We use [Breakpoint-Sass](http://breakpoint-sass.com/) to manage our media queries. Breakpoint is fairly simple to use and has a very thorough [wiki](https://github.com/at-import/breakpoint/wiki) explaining its useage and capabilities.
 
-### Sass-Grid
-Some of our layouts currently utilize the [Sass-grid](https://github.com/digitaledgeit/sass-grid) grid system. Sass-grid is a very lightweight, flexbox-based grid system.
+### Layouts
+
+The layouts molecules are now deprecated. To give structure to organisms and templates, please follow the grid and columns method outlined below.
+
+
+### Grids and columns
+
+#### Basics
+
+To use columns to control a template or organism's structure, start by adding an element with a `.grid` or `.container-with-grid` class (we'll get to the difference a little later). This grid instantiates a flexbox wrapper for descendant elements.
+
+Then add elements with `.col-width-x` classes, where 'x' should be replace by the number of columns you want the element to span. We use a 12 column grid, so for any given `grid` container, make sure that the `col-width-x` numbers add up to a total of 12.
+
+**Example:**
+
+```
+<a href="#" class="grid">
+  <div class="col-width-8">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="col-width-4">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+```
+
+The `col-width-x` classes default to `width:100%` at our mobile breakpoint (in other words, multiple columns collapse into a single-column layout). If you need to different behavior for your pattern, apply the `@grid` mixin to your named classes instead of using the `col-width-x` classes.
+
+Both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid). Sass-grid is a very lightweight, flexbox-based grid system.
+
+#### `.container` vs `.container-with-grid` vs `.grid`
+
+`.container`: has our default max-width, margins, and gutters applied. Useful for ensuring that patterns included in a template all have uniform spacing.
+
+`.grid`: has no set max-width or default gutters or margins. This just applies the flexbox class to an element.
+
+`.container-with-grid`: applies the default margins and gutters and instantiates flexbox.
 
 ### Using Placeholders
 When appropriate, please extend placeholders rather than classes:
