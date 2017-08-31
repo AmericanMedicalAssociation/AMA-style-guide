@@ -23,16 +23,6 @@
   }
 }
 
-.topic_hero {
-
-  .fluid-width-video-wrapper {
-    min-height: 100px;
-    @include breakpoint($bp-med) {
-      min-height: 315px;
-    }
-  }
-}
-
 // Style the topic labels for each section consistently.
 .title-label {
   margin-bottom: 0; // @todo remove this from elsewhere where it's now redundant
