@@ -11,12 +11,19 @@
   background-color: $black-3;
   margin-bottom: 30px;
 
-  .container-with-grid {
-    align-items: center;
+  @include breakpoint($bp-small) {
+    @include grid();
+    padding: 0 20px;
+  }
+}
 
-    @include breakpoint($bp-small) {
-      padding: 0 20px;
-    }
+.filter-control_container-results-count {
+  padding: 20px;
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    display: inline-block;
+    padding-left: 0px;
+    width: 100%;
   }
 
   .filter-toggle {
@@ -38,11 +45,34 @@
   }
 }
 
+.filter-control_container-toggle {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    display: inline-block;
+  }
+}
+
 .filter-control_secondary {
   display: none;
 
   @include breakpoint($bp-small) {
+    @include grid();
     display: block;
+    padding: 0 20px;
+  }
+}
+
+.filter-control_container-sort {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    display: inline-block;
+  }
+}
+
+.filter-control_container-filters {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    display: inline-block;
   }
 }
 
@@ -95,21 +125,5 @@
     .icon svg {
       fill: $purple;
     }
-  }
-}
-
-.filter-control_container-results-count,
-.filter-control_container-toggle {
-  @include breakpoint($bp-med max-width) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-.filter-control_container-filters,
-.filter-control_container-sort {
-  @include breakpoint($bp-med min-width) {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
