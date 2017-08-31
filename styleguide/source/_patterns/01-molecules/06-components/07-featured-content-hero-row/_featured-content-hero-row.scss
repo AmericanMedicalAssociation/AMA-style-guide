@@ -52,7 +52,7 @@
     }
   }
 
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     padding-right: 0;
   }
 }

@@ -31,7 +31,7 @@
       width: 100%;
     }
 
-    @include breakpoint($bp-med) {
+    @include breakpoint($bp-small) {
       padding-right: 0;
     }
 
@@ -48,7 +48,7 @@
 }
 
 .news_item-standard_row_text {
-  @include breakpoint($bp-med) {
+  @include breakpoint($bp-small) {
     padding-left: 0;
   }
 
