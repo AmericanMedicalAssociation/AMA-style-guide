@@ -7,7 +7,7 @@
 }
 
 .ec_search-bar_inner {
-  display: flex;
+  display: flex; //This cannot invoke the grid() mixin b/c of justify-content settings
   justify-content: space-between;
   font-weight: 600;
   margin: 0 auto;
