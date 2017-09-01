@@ -18,10 +18,9 @@ footer {
 }
 
 .footer-primary {
-  @include grid-_unit--cols(12);
   margin-bottom: 40px;
   @include breakpoint($bp-large) {
-    @include grid-_unit--cols(8);
+    @include grid__unit--cols(8);
   }
 
   @include breakpoint($bp-med min-width) {
@@ -30,9 +29,10 @@ footer {
 }
 
 .footer-secondary {
-  @include grid-_unit--cols(12);
+  @include grid__unit--cols(12);
+  
   @include breakpoint($bp-large) {
-    @include grid-_unit--cols(4);
+    @include grid__unit--cols(4);
   }
 
   .rule_horizontal {
