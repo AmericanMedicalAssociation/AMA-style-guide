@@ -12,7 +12,7 @@
   &:nth-child(2n) {
     order: 1;
     @include breakpoint($bp-med) {
-      @include grid-_unit--cols(6);
+      @include grid__unit--cols(6);
       order: 2;
     }
   }
