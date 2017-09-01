@@ -44,15 +44,13 @@
 
   @include breakpoint(740px min-width) {
     @include grid__unit--cols(5);
+    padding-right: 0;
+    
     img {
       float: right;
       max-height: 100%;
       max-width: 100%;
       width: initial;
     }
-  }
-
-  @include breakpoint($bp-small) {
-    padding-right: 0;
   }
 }
