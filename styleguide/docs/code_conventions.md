@@ -53,7 +53,7 @@ The layouts molecules are now deprecated. To give structure to organisms and tem
 
 To use columns to control a template or organism's structure, start by adding an element with a `.grid` or `.container-with-grid` class (we'll get to the difference a little later). This grid instantiates a flexbox wrapper for descendant elements.
 
-Then add elements with `.col-width-x` classes, where 'x' should be replace by the number of columns you want the element to span. We use a 12 column grid, so for any given `grid` container, make sure that the `col-width-x` numbers add up to a total of 12.
+Then add elements with `.col-width-x` classes, where 'x' should be replaced by the number of columns you want the element to span. We use a 12 column grid, so for any given `grid` container, make sure that the `col-width-x` numbers add up to a total of 12.
 
 **Example:**
 
@@ -68,7 +68,13 @@ Then add elements with `.col-width-x` classes, where 'x' should be replace by th
 </a>
 ```
 
-The `col-width-x` classes default to `width:100%` at our mobile breakpoint (in other words, multiple columns collapse into a single-column layout). If you need to different behavior for your pattern, apply the `@grid` mixin to your named classes instead of using the `col-width-x` classes.
+The `col-width-x` classes default to `width:100%` at our mobile breakpoint (in other words, multiple columns collapse into a single-column layout). If you need to specify a different mobile behavior for your pattern (e.g. in order to use different column widths or breakpoints), apply the `@include grid()` and `@include grid-_unit--cols(x)` mixins to your named classes* instead of using the `.grid` and `.col-width-x` classes:
+
+[ block quote example here yee ]
+
+\* note: for the sake of clarity, avoid using a `.grid` class with a `@include grid-_unit-cols(x)` mixin in a named class, or vice versa a `.column-width-x` class with an `@include grid()` parent. 
+
+[ example quote here of bad example ] 
 
 Both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid). Sass-grid is a very lightweight, flexbox-based grid system.
 
@@ -79,6 +85,10 @@ Both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github
 `.grid`: has no set max-width or default gutters or margins. This just applies the flexbox class to an element.
 
 `.container-with-grid`: applies the default margins and gutters and instantiates flexbox.
+
+#### Gutters
+
+If you need to specify gutters on a certain element, use the `@include gutters()` mixin or the `$gutter` and `$gutter-mobile` responsive variables.
 
 ### Using Placeholders
 When appropriate, please extend placeholders rather than classes:
