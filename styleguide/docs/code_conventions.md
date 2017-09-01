@@ -68,14 +68,66 @@ Then add elements with `.col-width-x` classes, where 'x' should be replaced by t
 </a>
 ```
 
-The `col-width-x` classes default to `width:100%` at our mobile breakpoint (in other words, multiple columns collapse into a single-column layout). If you need to specify a different mobile behavior for your pattern (e.g. in order to use different column widths or breakpoints), apply the `@include grid()` and `@include grid-_unit--cols(x)` mixins to your named classes* instead of using the `.grid` and `.col-width-x` classes:
+The `col-width-x` classes include default left and right padding. They default to `width:100%` at our mobile breakpoint (in other words, multiple columns collapse into a single-column layout). If you need to specify different gutters, or use a different mobile behavior for your pattern (e.g. in order to use different column widths or breakpoints), apply the `@include grid()` and `@include grid-_unit--cols(x)` mixins to your named classes* instead of using the `.grid` and `.col-width-x` classes:
 
-[ block quote example here yee ]
 
-\* note: for the sake of clarity, avoid using a `.grid` class with a `@include grid-_unit-cols(x)` mixin in a named class, or vice versa a `.column-width-x` class with an `@include grid()` parent. 
+```
+// GOOD:
+<a href="#" class="news-section">
+  <div class="news-section_text">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="news-section_text-other">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+.news-section { 
+  @include grid(); 
+}
+.news-section_text { 
+  @include grid-_unit-cols(8); 
+}
+.news-section_text-other { 
+  @include grid-_unit-cols(4); 
+}
 
-[ example quote here of bad example ] 
+.
+```
 
+
+\* note: for the sake of clarity, avoid using a `.grid` class with a `@include grid-_unit-cols(x)` mixin in a named class, or vice versa a `.column-width-x` class with an `@include grid()` parent:
+
+```
+// BAD:
+<a href="#" class="news-section">
+  <div class="col-width-8">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="col-width-4">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+.news-section { 
+  @include grid(); 
+}
+```
+```
+// ALSO BAD:
+<a href="#" class="news-section grid">
+  <div class="news-section_text">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="news-section_text-other">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+.news-section_text { 
+  @include grid-_unit-cols(8); 
+}
+.news-section_text-other { 
+  @include grid-_unit-cols(4); 
+}
+```
 Both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid). Sass-grid is a very lightweight, flexbox-based grid system.
 
 #### `.container` vs `.container-with-grid` vs `.grid`
