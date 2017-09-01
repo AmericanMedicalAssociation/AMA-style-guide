@@ -1,6 +1,6 @@
 a.search-result-best-event,
 a.search-result-best {
-  display: flex;
+  @include grid();
 }
 
 .search-result-best_container,
@@ -26,7 +26,7 @@ a.search-result-best {
   }
 
   @include breakpoint($bp-small min-width) {
-    display: flex;
+    @include grid();
     padding: 0;
   }
 }
@@ -88,7 +88,7 @@ a.search-result-best {
   }
 }
 
-// Best match primary.
+// Best match event.
 .search-result-best-event .search-result-best_left {
   .search-result-best_link {
     display: none;
@@ -101,13 +101,18 @@ a.search-result-best {
   }
 }
 
+.search-result-best-event .search-result-best_right {
+  @include breakpoint($bp-small) {
+    display: flex; //This cannot invoke the grid() mixin b/c of flex-grow settings
+  }
+}
+
 // Best match secondary.
 .search-result-best_right {
 
   @include breakpoint($bp-small) {
     align-items: center;
     background-color: $purple;
-    display: flex;
     height: auto;
     justify-content: center;
 
