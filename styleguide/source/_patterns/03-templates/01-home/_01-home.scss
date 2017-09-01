@@ -1,7 +1,17 @@
 .layout-home {
+  padding: 0 20px;
 
   @include breakpoint($bp-med-home min-width) {
     padding: 0 30px;
+  }
+
+  .col-width-3,
+  .col-width-4,
+  .col-width-6,
+  .col-width-8,
+  .col-width-9,
+  .col-width-12 {
+    padding: 0; // Overide the default "gutters"
   }
 }
 
