@@ -56,7 +56,6 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "scss/generic/init";
 @import "scss/generic/variables";
 @import "scss/generic/mixins";
-@import "scss/generic/reset";
 @import "scss/generic/typography";
 
 /*------------------------------------*\
@@ -175,9 +174,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/01-molecules/01-layouts/deprecated/03-layout-three-up/layout-three-up";
 @import "../../_patterns/01-molecules/01-layouts/deprecated/04-layout-one-up-center/layout-one-up-center";
 @import "../../_patterns/01-molecules/01-layouts/deprecated/05-layout-two-up-large/layout-two-up-large";
-@import "../../_patterns/01-molecules/01-layouts/deprecated/06-layout-two-up-heavy-right-offset/layout-two-up-heavy-right-offset";
 @import "../../_patterns/01-molecules/01-layouts/deprecated/07-layout-two-wrap/layout-two-wrap";
-@import "../../_patterns/01-molecules/01-layouts/deprecated/07-layout-two-up-heavier-left/layout-two-up-heavier-left";
 @import "../../_patterns/01-molecules/01-layouts/deprecated/08-layout-four-up/layout-four-up";
 @import "../../_patterns/03-templates/01-home/01-home";
 @import "../../_patterns/01-molecules/06-components/05-page-level-search/page-level-search";
@@ -212,9 +209,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 @import "../../_patterns/02-organisms/06-topic/05-topic-topic-articles/_topic-topic-articles";
 @import "../../_patterns/00-atoms/02-text/19-page-title/page-title";
 @import "../../_patterns/01-molecules/08-lists/13-list-topic-related-content/list-topic-related-content";
-@import "../../_patterns/01-molecules/08-lists/13-list-topic-related-content/00-list-topic-related-content-image/list-topic-related-content-image";
 @import "../../_patterns/02-organisms/06-topic/04-topic-related-content/topic-related-content";
-@import "../../_patterns/02-organisms/06-topic/04-topic-related-content/00-topic-related-content-image/topic-related-content-image";
 @import "../../_patterns/02-organisms/06-topic/06-topic-promotion/_topic-promotion";
 @import "../../_patterns/01-molecules/08-lists/14-list-topic-related-articles/list-topic-related-articles";
 @import "../../_patterns/02-organisms/06-topic/08-topic-related-articles/topic-related-articles";
