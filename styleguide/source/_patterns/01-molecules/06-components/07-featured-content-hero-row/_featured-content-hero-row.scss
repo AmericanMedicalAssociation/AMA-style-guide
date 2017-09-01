@@ -24,7 +24,7 @@
   }
 
   @include breakpoint(740px min-width) {
-    @include grid-_unit--cols(7);
+    @include grid__unit--cols(7);
     padding: 0;
 
     p {
@@ -43,7 +43,7 @@
   }
 
   @include breakpoint(740px min-width) {
-    @include grid-_unit--cols(5);
+    @include grid__unit--cols(5);
     img {
       float: right;
       max-height: 100%;
