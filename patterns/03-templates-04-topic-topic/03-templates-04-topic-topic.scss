@@ -1,34 +1,49 @@
 // Set mobile order.
-.topic .grid-region {
-  // First column.
-  &:nth-child(1n) {
-    order: 2;
-    @include breakpoint($bp-med) {
-      order: 1;
-    }
-  }
-
-  // Center column
-  &:nth-child(2n) {
-    order: 1;
-    @include breakpoint($bp-med) {
-      @include grid-_unit--cols(6);
+.topic {
+  .grid-region {
+    // First column.
+    &:nth-child(1n) {
       order: 2;
+      @include breakpoint($bp-med) {
+        order: 1;
+      }
+    }
+
+    // Center column
+    &:nth-child(2n) {
+      order: 1;
+      @include breakpoint($bp-med) {
+        @include grid-_unit--cols(6);
+        order: 2;
+      }
+    }
+
+    // Last column.
+    &:nth-child(3n) {
+      order: 3;
     }
   }
 
-  // Last column.
-  &:nth-child(3n) {
-    order: 3;
-  }
-}
+  .topic_hero {
 
-.topic_hero {
-
-  .fluid-width-video-wrapper {
-    min-height: 100px;
-    @include breakpoint($bp-med) {
-      min-height: 315px;
+    .fluid-width-video-wrapper {
+      min-height: 100px;
+      @include breakpoint($bp-med) {
+        min-height: 315px;
+      }
     }
+  }
+
+  // Style the topic labels for each section consistently.
+  .title-label {
+    margin-bottom: 0; // @todo remove this from elsewhere where it's now redundant
+    line-height: 1.38889;
+    @include gutter($padding-bottom-half...); // @todo remove quarter var from vars if not used
+    @include rule-horizontal-bottom(1px, $black-20, solid);
+  }
+
+  .topic_hero .title-label {
+    border: 0;
+    padding-bottom: 0;
   }
 }

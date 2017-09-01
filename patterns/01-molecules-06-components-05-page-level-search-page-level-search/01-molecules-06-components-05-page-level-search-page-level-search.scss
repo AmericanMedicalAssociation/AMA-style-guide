@@ -15,6 +15,7 @@
   padding: 10px;
   box-sizing: content-box;
   -webkit-font-smoothing: antialiased;
+  width: 100%;
   @include type($font-sans-serif, 28px, $font-weight-medium, 1.25);
   @include breakpoint($bp-med) {
     height: 43px;
