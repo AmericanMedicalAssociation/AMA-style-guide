@@ -62,57 +62,66 @@
 	}
 }
 
-// Column-width classes..
+// Column-width classes.
 .col-width-3 {
-	@include grid-_unit--cols(12);
+	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
   @include breakpoint($bp-med) {
-    @include grid-_unit--cols(3);
+    @include grid__unit--cols(3);
   }
 }
 
 .col-width-4 {
-	@include grid-_unit--cols(12);
+	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
-		@include grid-_unit--cols(4);
+		@include grid__unit--cols(4);
 	}
 }
 
 .col-width-6 {
-	@include grid-_unit--cols(12);
+	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
-		@include grid-_unit--cols(6);
+		@include grid__unit--cols(6);
 	}
 }
 
 .col-width-8 {
-	@include grid-_unit--cols(12);
+	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
-		@include grid-_unit--cols(8);
+		@include grid__unit--cols(8);
+	}
+}
+
+.col-width-8 {
+	@include grid__unit--cols(12);
+	@include gutter($padding-right-half...);
+	@include gutter($padding-left-half...);
+	@include breakpoint($bp-med) {
+		@include grid__unit--cols(8);
 	}
 }
 
 .col-width-9 {
-	@include grid-_unit--cols(12);
+	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
-		@include grid-_unit--cols(9);
+		@include grid__unit--cols(9);
 	}
 }
 
 .col-width-12 {
-	@include grid-_unit--cols(12);
+	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
-		@include grid-_unit--cols(12);
+		@include grid__unit--cols(12);
 	}
 }
