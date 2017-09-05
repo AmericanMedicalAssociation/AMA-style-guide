@@ -53,7 +53,7 @@ The layouts molecules are now deprecated. To give structure to organisms and tem
 
 To use columns to control a template or organism's structure, start by adding an element with a `.grid` or `.container-with-grid` class (we'll get to the difference a little later). This grid instantiates a flexbox wrapper for descendant elements.
 
-Then add elements with `.col-width-x` classes, where 'x' should be replaced by the number of columns you want the element to span. We use a 12 column grid, so for any given `grid` container, make sure that the `col-width-x` numbers add up to a total of 12.
+Then add elements with `.col-width-x` classes, where 'x' should be replaced by the number of columns you want the element to span. We use a 12 column grid, so for any given `.grid` container, make sure that the `.col-width-x` numbers add up to a total of 12.
 
 **Example:**
 
@@ -68,67 +68,69 @@ Then add elements with `.col-width-x` classes, where 'x' should be replaced by t
 </a>
 ```
 
-The `col-width-x` classes include default left and right padding. They default to `width:100%` at our mobile breakpoint (in other words, multiple columns collapse into a single-column layout). If you need to specify different gutters, or use a different mobile behavior for your pattern (e.g. in order to use different column widths or breakpoints), apply the `@include grid()` and `@include grid-_unit--cols(x)` mixins to your named classes* instead of using the `.grid` and `.col-width-x` classes:
+The `col-width-x` classes include default left and right padding. At our mobile breakpoint, they default to `width:100%` (in other words, multiple columns collapse into a single-column layout).
 
+If you need to specify different gutters, or use a different mobile behavior for your pattern , apply the `grid()` and the `grid__unit--cols(x)` _mixins_ to your named classes rather than using the `.grid` and `.col-width-x` _classes_.
+
+**Example:**
+
+Markup
 
 ```
-// GOOD:
 <a href="#" class="news-section">
-  <div class="news-section_text">
+  <div class="news-section_left">
     {% include '09-text.twig' %}
   </div>
-  <div class="news-section_text-other">
+  <div class="news-section_right">
     {% include '09-text.twig' %}
   </div>
 </a>
-.news-section { 
+```
+
+SCSS
+
+```
+.news-section {
   @include grid(); 
 }
-.news-section_text { 
-  @include grid-_unit-cols(8); 
+.news-section_left {
+  @include grid__unit--cols(8);
 }
-.news-section_text-other { 
-  @include grid-_unit-cols(4); 
-}
-
-.
-```
-
-
-\* note: for the sake of clarity, avoid using a `.grid` class with a `@include grid-_unit-cols(x)` mixin in a named class, or vice versa a `.column-width-x` class with an `@include grid()` parent:
-
-```
-// BAD:
-<a href="#" class="news-section">
-  <div class="col-width-8">
-    {% include '09-text.twig' %}
-  </div>
-  <div class="col-width-4">
-    {% include '09-text.twig' %}
-  </div>
-</a>
-.news-section { 
-  @include grid(); 
+.news-section_right {
+  @include grid__unit--cols(4);
 }
 ```
+
+
+**Avoid** mixing usage of the `.grid` _class_ and the `grid__unit--cols(x)` _mixin_. Similarly, do not combine the `grid()` _mixin_ with the `.col-width-x` _classes_. Parent and child elements should be consistent--use either classes **or** mixins but **not both**.
+
+**Do not do this:**
+
+Markup
+
 ```
-// ALSO BAD:
 <a href="#" class="news-section grid">
-  <div class="news-section_text">
+  <div class="news-section_right">
     {% include '09-text.twig' %}
   </div>
-  <div class="news-section_text-other">
+  <div class="news-section_left">
     {% include '09-text.twig' %}
   </div>
 </a>
-.news-section_text { 
-  @include grid-_unit-cols(8); 
+```
+
+SCSS
+
+```
+.news-section_right {
+  @include grid__unit--cols(8);
 }
-.news-section_text-other { 
-  @include grid-_unit-cols(4); 
+.news-section_left {
+  @include grid__unit--cols(4);
 }
 ```
-Both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid). Sass-grid is a very lightweight, flexbox-based grid system.
+
+**Note:** Under the hood, both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid), which is a very lightweight, flexbox-based grid system. You might want to look at how this grid works, but you should never need to work with it directly.
 
 #### `.container` vs `.container-with-grid` vs `.grid`
 
