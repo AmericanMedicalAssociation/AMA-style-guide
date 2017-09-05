@@ -102,7 +102,7 @@ SCSS
 ```
 
 
-**Avoid** mixing usage of the `.grid` _class_ and the `grid__unit--cols(x)` _mixin_. Similarly, do not combine the `grid()` _mixin_ with the `.col-width-x` _classes_. Parent and child elements should be consistent--use either classes **or** mixins but **not both**.
+**Avoid** mixing usage of the `.grid` _class_ and the `grid__unit--cols(x)` _mixin_. Similarly, do not combine the `grid()` _mixin_ with the `.col-width-x` _classes_. Parent and child elements should be consistent--use either classes **or** mixins but **not both**. This is to maintain clarity and make it more intuitive for a developer to see how the grid's being implemented in a given pattern.
 
 **Do not do this:**
 
