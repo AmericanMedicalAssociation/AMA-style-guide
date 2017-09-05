@@ -9,18 +9,18 @@
 	@include grid();
 	max-width: $max-width;
   margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 10px;
 
 	@include breakpoint($bp-med) {
 		padding: 0 30px;
 	}
 }
 
-// Use on top level container without instantiating flexbox.
+// Use on top level containers without instantiating flexbox.
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 20px;
 
   @include breakpoint($bp-med) {
     padding: 0 30px;
@@ -87,6 +87,15 @@
 	@include gutter($padding-left-half...);
 	@include breakpoint($bp-med) {
 		@include grid__unit--cols(6);
+	}
+}
+
+.col-width-8 {
+	@include grid__unit--cols(12);
+	@include gutter($padding-right-half...);
+	@include gutter($padding-left-half...);
+	@include breakpoint($bp-med) {
+		@include grid__unit--cols(8);
 	}
 }
 

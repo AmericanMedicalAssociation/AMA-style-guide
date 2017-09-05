@@ -1,4 +1,4 @@
-.footer {
+footer {
   background-color: $black-7;
   margin-top: 50px;
   padding: 40px 0 10px;
@@ -10,6 +10,7 @@
 
 .footer-inner {
   position: relative;
+  @include grid();
 
   @include breakpoint($bp-large-home min-width) {
     flex-direction: row !important;
@@ -18,16 +19,19 @@
 
 .footer-primary {
   margin-bottom: 40px;
+  @include breakpoint($bp-large) {
+    @include grid__unit--cols(8);
+  }
 
-  @include breakpoint($bp-large-home min-width) {
-    @include grid__unit--cols(7);
-    margin-right: 100px;
+  @include breakpoint($bp-med min-width) {
+    padding-right: 100px;
   }
 }
 
 .footer-secondary {
-
-  @include breakpoint($bp-large-home min-width) {
+  @include grid__unit--cols(12);
+  
+  @include breakpoint($bp-large) {
     @include grid__unit--cols(4);
   }
 

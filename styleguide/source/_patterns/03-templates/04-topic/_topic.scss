@@ -12,7 +12,7 @@
   &:nth-child(2n) {
     order: 1;
     @include breakpoint($bp-med) {
-      @include grid-_unit--cols(6);
+      @include grid__unit--cols(6);
       order: 2;
     }
   }
@@ -23,25 +23,20 @@
   }
 }
 
-.topic_hero {
-
-  .fluid-width-video-wrapper {
-    min-height: 100px;
-    @include breakpoint($bp-med) {
-      min-height: 315px;
-    }
-  }
-}
-
 // Style the topic labels for each section consistently.
-.title-label {
+.topic .title-label {
   margin-bottom: 0; // @todo remove this from elsewhere where it's now redundant
   line-height: 1.38889;
   @include gutter($padding-bottom-half...); // @todo remove quarter var from vars if not used
   @include rule-horizontal-bottom(1px, $black-20, solid);
 }
 
-.topic_hero .title-label {
+.topic .topic_hero .title-label {
   border: 0;
   padding-bottom: 0;
+}
+
+// Enforce aspect ratios.
+.topic_article-preview img {
+  width: 100%;
 }

@@ -11,18 +11,19 @@
   background-color: $black-3;
   margin-bottom: 30px;
 
-  .layout {
-    align-items: center;
-    padding: 0;
-
-    @include breakpoint($bp-small) {
-      padding: 0 20px;
-    }
+  @include breakpoint($bp-small) {
+    @include grid();
+    padding: 0 20px;
   }
+}
 
-  .layout_two_up-heavier-left-secondary {
-    display: flex;
-    align-items: stretch;
+.filter-control_container-results-count {
+  padding: 20px;
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    display: inline-block;
+    padding-left: 0px;
+    width: 100%;
   }
 
   .filter-toggle {
@@ -42,11 +43,12 @@
       display: inline-block;
     }
   }
+}
 
-  @include breakpoint($bp-small max-width) {
-    .layout_two_up-heavier-left-primary {
-      padding: 20px;
-    }
+.filter-control_container-toggle {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    display: inline-block;
   }
 }
 
@@ -54,7 +56,23 @@
   display: none;
 
   @include breakpoint($bp-small) {
+    @include grid();
     display: block;
+    padding: 0 20px;
+  }
+}
+
+.filter-control_container-sort {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(4);
+    display: inline-block;
+  }
+}
+
+.filter-control_container-filters {
+  @include breakpoint($bp-small) {
+    @include grid__unit--cols(8);
+    display: inline-block;
   }
 }
 
