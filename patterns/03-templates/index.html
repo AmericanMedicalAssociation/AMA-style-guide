@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
 
-    <link rel="stylesheet" href="../../assets/css/style.css?1504290907" media="all" />
-    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1504290907" media="all" />
+    <link rel="stylesheet" href="../../assets/css/reset.css?1504710890" />
+    <link rel="stylesheet" href="../../assets/css/style.css?1504710890" media="all" />
+    <link rel="stylesheet" href="../../assets/css/pattern-scaffolding.css?1504710890" media="all" />
 
     <!-- Grunticon loader -->
     <script src="../../assets/icons/grunticon.loader.js"></script>
@@ -25,14 +26,12 @@
 <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
 <meta http-equiv="pragma" content="no-cache" />
 
-<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1504290907" media="all">
-<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1504290907" media="all" />
+<link rel="stylesheet" href="../../styleguide/css/styleguide.min.css?1504710890" media="all">
+<link rel="stylesheet" href="../../styleguide/css/prism-typeahead.min.css?1504710890" media="all" />
     <!-- End Pattern Lab -->
 
   </head>
-  <body class="body">
-    <div class="ama-theme">
-        <div class="nav-primary_overlay-mobile"></div>
+  <body class="body"><div class="nav-primary_overlay-mobile"></div>
 <!-- View All Patterns in a Pattern Sub-Type -->
 <div class="sg-main" role="main">
   <!-- Patterns -->
@@ -69,8 +68,9 @@
     
   <div class="sg-pattern-example">
     <section class="ribbon">
-  <div class="layout layout_one_up">
-      <nav class="ribbon_dropdown">
+  <div class="container grid">
+      <div class="ribbon_container col-width-12">
+        <nav class="ribbon_dropdown">
   <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
   <ul class="ribbon_dropdown_nav">
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">AMA Wire</a>
@@ -82,7 +82,7 @@
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">Journal of Ethics</a>
 </li>
   </ul>
-</nav>      <nav class="ribbon_user-menu">
+</nav>        <nav class="ribbon_user-menu">
   <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Become a Member</a>
@@ -93,13 +93,12 @@
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Create Account</a>
 </li>
   </ul>
-</nav>  </div>
+</nav>      </div>
+  </div>
 </section><div class="header-primary-span"></div>
 <header class="header-primary" role="banner">
   <div class="header-primary-inner">
-    <a href="
-Notice: Array to string conversion in /Users/aschwab/Sites/AMA-style-guide/styleguide/vendor/twig/twig/lib/Twig/Environment.php(463) : eval()'d code on line 20
-Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>    <div class="nav-primary_button">Menu</div>
+    <a href="Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>    <div class="nav-primary_button">Menu</div>
 
 <nav class="nav-primary" role="navigation" aria-label="Main Navigation">
   <ul class="nav-primary_list nav-primary_list-mobile-closed " role="menubar">
@@ -206,23 +205,26 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </header>
 <section class="search_modal">
   <div class="search_modal_inner">
-  <span class="search_modal_close">
-    <span class="icon icon-close" data-grunticon-embed></span>    Close
-  </span>
-  <div class="layout layout_one_up">
-    <form action="#" method="post" class="search-field">
+  <div class="container">
+    <div class="grid">
+      <span class="search_modal_close">
+        <span class="icon icon-close" data-grunticon-embed></span> Close
+      </span>
+      <div class="search_modal_search-field col-width-12">
+        <form action="#" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
 	<input type="search" placeholder="Search AMA" id="search-field" class="search-field_input" />
     <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
-</form>  </div>
-  <div class="layout layout_two_up-heavy-left">
-    <div class="layout_two_up-heavy-left-primary">
-      <h3 class="list_title-small">Best Match</h3><ul class="list_links">
+</form>      </div>
+    </div>
+    <div class="grid">
+      <div class="col-width-8">
+        <h3 class="list_title-small">Best Match</h3><ul class="list_links">
   <li>
     <h4 class="list-item_title-small"><a class="link-black" href="#">FREIDA ONLINE, the AMA residency and fellowship database.</a></h4>    <p class="b1">Search the nearly 10,000 accredited graduate medical education training programs. Learn about programs and institutions nationwide to simplify the selection process.</p>  </li>
 </ul>
-      <h3 class="list_title-small">Popular Searches</h3>
+        <h3 class="list_title-small">Popular Searches</h3>
 <ul class="list_links ">
   <li class="list_links_item">
     <a href="#" class="link link-black" target="_self">Lorem ipsum dolor</a>  </li>
@@ -232,12 +234,12 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <a href="#" class="link link-black" target="_self">Lorem ipsum dolor</a>  </li>
   <li class="list_links_item">
     <a href="#" class="link link-black" target="_self"> Donec non lectus leo</a>  </li>
-</ul>    </div>
+</ul>      </div>
+    </div>
   </div>
-</div>
-</section>
-<div class="layout layout-home">
-  <div class="layout_one_up audience_featured-hero">
+</div></section>
+<div class="template-home">
+  <div class="container"><div class="audience_featured-hero">
   <div class="tabs tabs-audience_selector">
   <label class="tabs-audience_selector_label">Find trusted info for:</label>
   <ul class="tabs-audience_selector_list" role="menu">
@@ -250,61 +252,61 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   <div id="tab-1" class="audience_featured-hero_item active">
     <div class="list_featured_content-hero">
   <div class="list_featured_content-item">
-    <div class="rule_horizontal"></div>    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <div class="rule_horizontal"></div>    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
@@ -318,61 +320,61 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   <div id="tab-2" class="audience_featured-hero_item">
     <div class="list_featured_content-hero">
   <div class="list_featured_content-item">
-    <div class="rule_horizontal"></div>    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <div class="rule_horizontal"></div>    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
@@ -386,61 +388,61 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   <div id="tab-3" class="audience_featured-hero_item">
     <div class="list_featured_content-hero">
   <div class="list_featured_content-item">
-    <div class="rule_horizontal"></div>    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <div class="rule_horizontal"></div>    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
@@ -454,61 +456,61 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   <div id="tab-4" class="audience_featured-hero_item">
     <div class="list_featured_content-hero">
   <div class="list_featured_content-item">
-    <div class="rule_horizontal"></div>    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <div class="rule_horizontal"></div>    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
     <div class="rule_horizontal"></div>  </div>
   <div class="list_featured_content-item">
-    <a href="#" class="layout layout_two_up-heavy-left row_featured_content-hero">
-  <div class="row_featured_content-hero_title layout_two_up-heavy-left-primary">
+    <a href="#" class="row_featured_content-hero grid">
+  <div class="row_featured_content-hero_title col-width-8">
     <p class="">Read about AMAs Vision on Health Reform</p>
   </div>
-  <div class="row_featured_content-hero_image layout_two_up-heavy-left-secondary">
+  <div class="row_featured_content-hero_image col-width-4">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
@@ -520,9 +522,11 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </div>
   </div>
 </div>
-  <div class="page-level-search layout layout_one_up">
-    <a href="#" class="link page-level-search_link" target="_self">Search the AMA</a>    <span class="icon icon-search page-level-search_icon"></span>
-</div>  <a href="#" class="layout layout_two_up block-hero">
+</div>
+  <div class="container"><div class="page-level-search">
+  <a href="#" class="link page-level-search_link" target="_self">Search the AMA</a>  <span class="icon icon-search page-level-search_icon"></span>
+</div></div>
+  <div class="container"><a href="#" class="layout layout_two_up block-hero">
   <div class="block-hero-primary layout_two_up-primary">
     <img class="block-hero_image" src="../../assets/images/fpo_600x380.jpg" alt="fpo_600x380" />  </div>
   <div class="block-hero-secondary layout_two_up-secondary">
@@ -533,40 +537,42 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     </div>
     <p class="block-hero_cta block-hero_cta-secondary">Read More</p>  </div>
 </a>
-  <div class= "layout news-standard">
+</div>
+  <div class="container"><div class= "layout news-standard">
   <div class="news_label">
   <div class="news_label-inner">
     <div class="eyebrow"></div>    <a href="#" target="_blank" class="news_label_link">Latest <br />News from <br />AMA Wire<span class="icon icon-external" data-grunticon-embed></span></a>
   </div>
 </div>
   <ul class="news_list news_list-standard">
-    <li><a href="#" class="layout layout_two_up-heavy-left news_item-standard_row">
-  <div class="layout_two_up-heavy-left-primary news_item-standard_row_text">
+    <li><a href="#" class="news_item-standard_row grid">
+  <div class="col-width-8 news_item-standard_row_text">
     <h2 class="news_item-standard_row_title" id="">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>
     <p class="news_item-standard_row_description">190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p>  </div>
-  <div class="layout_two_up-heavy-left-secondary news_item-standard_row_image">
+  <div class="col-width-4 news_item-standard_row_image">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a></li>
-    <li><a href="#" class="layout layout_two_up-heavy-left news_item-standard_row">
-  <div class="layout_two_up-heavy-left-primary news_item-standard_row_text">
+    <li><a href="#" class="news_item-standard_row grid">
+  <div class="col-width-8 news_item-standard_row_text">
     <h2 class="news_item-standard_row_title" id="">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>
     <p class="news_item-standard_row_description">190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p>  </div>
-  <div class="layout_two_up-heavy-left-secondary news_item-standard_row_image">
+  <div class="col-width-4 news_item-standard_row_image">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a></li>
-    <li><a href="#" class="layout layout_two_up-heavy-left news_item-standard_row">
-  <div class="layout_two_up-heavy-left-primary news_item-standard_row_text">
+    <li><a href="#" class="news_item-standard_row grid">
+  <div class="col-width-8 news_item-standard_row_text">
     <h2 class="news_item-standard_row_title" id="">70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h2>
     <p class="news_item-standard_row_description">190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.</p>  </div>
-  <div class="layout_two_up-heavy-left-secondary news_item-standard_row_image">
+  <div class="col-width-4 news_item-standard_row_image">
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a></li>
   </ul>
 </div>
-  <div class= "layout news-featured">
+</div>
+  <div class="container"><div class= "layout news-featured">
   <div class="news_label news_label-featured">
   <div class="news_label-inner">
     <div class="eyebrow"></div>    <a href="#" target="_blank" class="news_label_link">Latest <br />Insights from <br />JAMA<span class="icon icon-external" data-grunticon-embed></span></a>
@@ -580,7 +586,8 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </div>
   </div>
 </div>
-  <section class="list-block-promo">
+</div>
+  <div class="container"><section class="list-block-promo">
     <div class="block-promo_item">
   <a href='#' class='block-promo'>
     <h1 class="block-promo_title">Featured Event</h1>
@@ -606,23 +613,25 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     September 18–20, 2016</p>
     <p class="block-promo_cta block-promo_cta-secondary">Learn More</p>  </a>
 </div></section></div>
-<section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+</div>
+<footer class="">
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -633,7 +642,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -646,9 +655,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>
+</footer>
   </div>
   
   <script type="text/json" id="sg-pattern-data-templates-home" class="sg-pattern-data">
@@ -686,8 +696,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     
   <div class="sg-pattern-example">
     <section class="ribbon">
-  <div class="layout layout_one_up">
-      <nav class="ribbon_dropdown">
+  <div class="container grid">
+      <div class="ribbon_container col-width-12">
+        <nav class="ribbon_dropdown">
   <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
   <ul class="ribbon_dropdown_nav">
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">AMA Wire</a>
@@ -699,7 +710,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">Journal of Ethics</a>
 </li>
   </ul>
-</nav>      <nav class="ribbon_user-menu">
+</nav>        <nav class="ribbon_user-menu">
   <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Become a Member</a>
@@ -710,13 +721,12 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Create Account</a>
 </li>
   </ul>
-</nav>  </div>
+</nav>      </div>
+  </div>
 </section><div class="header-primary-span"></div>
 <header class="header-primary" role="banner">
   <div class="header-primary-inner">
-    <a href="
-Notice: Array to string conversion in /Users/aschwab/Sites/AMA-style-guide/styleguide/vendor/twig/twig/lib/Twig/Environment.php(463) : eval()'d code on line 20
-Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>    <div class="nav-primary_button">Menu</div>
+    <a href="Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="logo" alt="American Medical Association" /></a>    <div class="nav-primary_button">Menu</div>
 
 <nav class="nav-primary" role="navigation" aria-label="Main Navigation">
   <ul class="nav-primary_list nav-primary_list-mobile-closed " role="menubar">
@@ -823,23 +833,26 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </header>
 <section class="search_modal">
   <div class="search_modal_inner">
-  <span class="search_modal_close">
-    <span class="icon icon-close" data-grunticon-embed></span>    Close
-  </span>
-  <div class="layout layout_one_up">
-    <form action="#" method="post" class="search-field">
+  <div class="container">
+    <div class="grid">
+      <span class="search_modal_close">
+        <span class="icon icon-close" data-grunticon-embed></span> Close
+      </span>
+      <div class="search_modal_search-field col-width-12">
+        <form action="#" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
 	<input type="search" placeholder="Search AMA" id="search-field" class="search-field_input" />
     <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
-</form>  </div>
-  <div class="layout layout_two_up-heavy-left">
-    <div class="layout_two_up-heavy-left-primary">
-      <h3 class="list_title-small">Best Match</h3><ul class="list_links">
+</form>      </div>
+    </div>
+    <div class="grid">
+      <div class="col-width-8">
+        <h3 class="list_title-small">Best Match</h3><ul class="list_links">
   <li>
     <h4 class="list-item_title-small"><a class="link-black" href="#">FREIDA ONLINE, the AMA residency and fellowship database.</a></h4>    <p class="b1">Search the nearly 10,000 accredited graduate medical education training programs. Learn about programs and institutions nationwide to simplify the selection process.</p>  </li>
 </ul>
-      <h3 class="list_title-small">Popular Searches</h3>
+        <h3 class="list_title-small">Popular Searches</h3>
 <ul class="list_links ">
   <li class="list_links_item">
     <a href="#" class="link link-black" target="_self">Lorem ipsum dolor</a>  </li>
@@ -849,11 +862,11 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <a href="#" class="link link-black" target="_self">Lorem ipsum dolor</a>  </li>
   <li class="list_links_item">
     <a href="#" class="link link-black" target="_self"> Donec non lectus leo</a>  </li>
-</ul>    </div>
+</ul>      </div>
+    </div>
   </div>
-</div>
-</section>
-<div class="layout layout-one-up">
+</div></section>
+<div class="container">
   <ul class="breadcrumbs">
   <li class="breadcrumb_list-item"><a href="#">Grandparent</a><span class="icon icon-next"></span></li>
   <li class="breadcrumb_list-item"><a href="#">Parent</a><span class="icon icon-next"></span></li>
@@ -867,9 +880,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </header>
 </div>
 
-<div class="layout layout_two_up-heavy-right-offset article-body">
-  <div class="layout_two_up-heavy-right-offset-secondary">
-    <div id="sticky-jumpnav" class="sticky-element">
+<div class="article-body container">
+  <div class="grid">
+    <div class="article-body_jump-nav col-width-3">
+      <div id="sticky-jumpnav" class="sticky-element">
   <span class="jumpnav-anchor"></span>
   <nav id="jump-nav" class="jump-nav is-closed jumpnav-content">
     <h5 class="jump-nav_title">Jump to <span class="icon icon-select" data-grunticon-embed></span></h5>
@@ -882,24 +896,23 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     </ul>
   </nav>
 </div>
-  </div>
-  <div class="layout_two_up-heavy-right-offset-primary">
-
-    <section id="section-1">
-      <h2 class="" id="">Maximus Justo Enim Augue</h2>
-      <p class="">Sed massa augue, sollicitudin vel metus a, posuere scelerisque erat. In vulputate feugiat neque, sed aliquam risus. Cras blandit enim nec mauris egestas accumsan. Donec sed maximus justout pellentesque sem. Suspendisse semper varius turpis, vel congue risus mollis sit amet. Praesent molestie molestie ligula, ut viverra.</p>      <p class="">Aliquam quis leo id orci maximus venenatis. Nam ut sem sed ultrices justo suscipit ac. Nam eifend enim eu turpis mi id nunc consequat, eu at, nulla non auctor grvida, turpis nisi vestib ulum quam, ac fermentum justo nunc id.</p>    </section>
-    <section id="section-2">
-      <h3 class="" id="">Additional Programs</h3>
-      <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>      <figure class="figure">
+    </div>
+    <div class="article-body_sections col-width-6">
+      <section id="section-1">
+        <h2 class="" id="">Maximus Justo Enim Augue</h2>
+        <p class="">Sed massa augue, sollicitudin vel metus a, posuere scelerisque erat. In vulputate feugiat neque, sed aliquam risus. Cras blandit enim nec mauris egestas accumsan. Donec sed maximus justout pellentesque sem. Suspendisse semper varius turpis, vel congue risus mollis sit amet. Praesent molestie molestie ligula, ut viverra.</p>        <p class="">Aliquam quis leo id orci maximus venenatis. Nam ut sem sed ultrices justo suscipit ac. Nam eifend enim eu turpis mi id nunc consequat, eu at, nulla non auctor grvida, turpis nisi vestib ulum quam, ac fermentum justo nunc id.</p>      </section>
+      <section id="section-2">
+        <h3 class="" id="">Additional Programs</h3>
+        <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>        <figure class="figure">
   <h4 class="b4 figure_title">Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra</h4>
 
   <img  src="http://placehold.it/540x390" alt="This is an image.">
 
   <p class="b4 figure_description">Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor tortor a auctor quamla. Bibendum non donec tincidunt ultrices dapibus. Suspendisse vitae enim efficitur.</p></figure>
-    </section>
-    <section id="section-3">
-      <h3 class="" id="">Outreach Programs</h3>
-      <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>      <ul>
+      </section>
+      <section id="section-3">
+        <h3 class="" id="">Outreach Programs</h3>
+        <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>        <ul>
 			      <li>This is a list item in an unordered list</li>
   		      <li>An unordered list is a list in which the sequence of items is not important. Sometimes, an unordered list is a bulleted list. And this is a long list item in an unordered list that can wrap onto a new line.</li>
   					<ul>
@@ -908,7 +921,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 							</ul>
 		      <li>Lists can be nested inside of each other</li>
   		      <li>Lists can be nested inside of each other</li>
-  </ul>      <div class="text">
+  </ul>        <div class="text">
 	<ol>
 		<li>This is a list item in an ordered list</li>
 		<li>An ordered list is a list in which the sequence of items is important. An ordered list does not necessarily contain sequence characters.</li>
@@ -921,7 +934,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 		</li>
 		<li>This is the last list item</li>
 	</ol>
-</div>      <p class="">Aliquam quis leo id orci maximus venenatis. Nam ut sem sed ultrices justo suscipit ac. Nam eifend enim eu turpis mi id nunc consequat, eu at, nulla non auctor grvida, turpis nisi vestib ulum quam, ac fermentum justo nunc id.</p>            <figure class="figure figure-video">
+</div>        <p class="">Aliquam quis leo id orci maximus venenatis. Nam ut sem sed ultrices justo suscipit ac. Nam eifend enim eu turpis mi id nunc consequat, eu at, nulla non auctor grvida, turpis nisi vestib ulum quam, ac fermentum justo nunc id.</p>                <figure class="figure figure-video">
     <h4 class="b4 figure_title">Lorem Ipsum Dolor Amet Consectetur Adipiscing Elit of Laoreet Pharetra <span class="metadata ">/ 3:20</span>
 </h4>
 
@@ -932,7 +945,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 	<img src="" width="640" height="360" alt="Big Buck Bunny" title="No video playback capabilities, please download">
 </video>
   <p class="b4 figure_description">Proin quis ante quam. Duis sit amet risus sit amet elit dapibus dictum. Integer imperdiet dolor tortor a auctor quamla. Bibendum non donec tincidunt ultrices dapibus. Suspendisse vitae enim efficitur.</p></figure>
-      <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>      <blockquote class="pull-quote">
+        <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>        <blockquote class="pull-quote">
   
   <div class="pull-quote_quote">
   “Lorem ipsum dolor sit at, consectetur adipisicing tempor elit, sed do eiusmod tempor incididunt ut labor magna aliqua.”
@@ -945,19 +958,21 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <span>Otolaryngology </span>
   </footer>
 </blockquote>
-    </section>
-    <section id="section-4">
-      <h3 class="" id="">Lorem Ipsum</h3>
-      <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>      <aside class="inline-bio">
+      </section>
+      <section id="section-4">
+        <h3 class="" id="">Lorem Ipsum</h3>
+        <p class="">In luctus at ligula vitae venenatis. Sed ac nisi erat. Cras eleifend dolor sit amet risus laoreet lobortis. Nunc lectus nisl, consequat in risus quis, interdum tincidunt odio. Morbi pulvinar egestas ipsum, vel placerat dignissim leo, vitae maximus nisi turpis nec odio. Nam ullamcorper leo nec lobortis commodo. Donec elementum purus lorem, imperdiet sollicitudin dolor dictum eu.</p>        <aside class="inline-bio">
   <img class="inline-bio_image" src="https://www.ama-assn.org/sites/default/files/styles/medium/public/media-browser/public/people/steven-stack.jpg?itok=r6UW84zq" alt="Steven J Stack"/>
   <h4 class="b4 inline-bio_title">Steven J. Stack, MD</h4>
   <p class=" inline-bio_meta">President</p>  <p class="inline-bio_meta">Emergency Medicine</p>  <a href="#" class="link link-blue inline-bio_cta" target="_self">Full Bio</a></aside>
-      <p class="">Sed massa augue, sollicitudin vel metus a, posuere scelerisque erat. In vulputate feugiat neque, sed aliquam risus. Cras blandit enim nec mauris egestas accumsan. Donec sed maximus justout pellentesque sem. Suspendisse semper varius turpis, vel congue risus mollis sit amet. Praesent molestie molestie ligula, ut viverra.</p>    </section>
+        <p class="">Sed massa augue, sollicitudin vel metus a, posuere scelerisque erat. In vulputate feugiat neque, sed aliquam risus. Cras blandit enim nec mauris egestas accumsan. Donec sed maximus justout pellentesque sem. Suspendisse semper varius turpis, vel congue risus mollis sit amet. Praesent molestie molestie ligula, ut viverra.</p>      </section>
+    </div>
   </div>
-  <div class="layout_two_up-heavy-right-offset-secondary">
-      </div>
-  <div class="layout_two_up-heavy-right-offset-primary">
-    <h3 class="list_title-small">Links</h3>
+  <div class="grid">
+    <div class="col-width-3">
+          </div>
+    <div class="col-width-6">
+      <h3 class="list_title-small">Links</h3>
 
 <ul class="list_links list_links-rule">
   <li class="list_links_item">
@@ -969,7 +984,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_links_item">
     <a href="#" class="link link-black" target="_self"> Donec non lectus leo</a>  </li>
 </ul>
-    <h3 class="list_title-small">Downloads</h3>
+      <h3 class="list_title-small">Downloads</h3>
 
 <ul class="list_links list_links-rule">
   <li class="list_links_item">
@@ -993,17 +1008,19 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </a>
   </li>
 </ul>
+    </div>
   </div>
 </div>
-<div class="layout layout-one-up">
-  <section class="related-content">
-  <div class="layout layout_one_up">
-    <h2 class="related-list-title">Related Content</h2>
-  </div>
+<div class="container">
+  <section class="related-content container">
+  <div class="grid">
+    <div class="col-width-12">
+      <h2 class="related-list-title">Related Content</h2>
+    </div>
 
-  <ul class="layout layout_two_up-large related-content_list">
-    <li class="layout_two_up-large-primary">
-      <a href="#" class="layout layout_related-content_item related-content_item">
+    <ul class="layout layout_two_up-large related-content_list">
+      <li class="layout_two_up-large-primary">
+        <a href="#" class="layout layout_related-content_item related-content_item">
   <div class="layout_related-content_item_left related-content_item_block">
     <h5 class="related-content_item_label">Lorem Ipsum</h5>
     <h3 class="related-content_item_title" id="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
@@ -1012,9 +1029,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
-    </li>
-    <li class="layout_two_up-large-secondary">
-      <a href="#" class="layout layout_related-content_item related-content_item">
+      </li>
+      <li class="layout_two_up-large-secondary">
+        <a href="#" class="layout layout_related-content_item related-content_item">
   <div class="layout_related-content_item_left related-content_item_block">
     <h5 class="related-content_item_label">Lorem Ipsum</h5>
     <h3 class="related-content_item_title" id="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
@@ -1029,9 +1046,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </div>
   </div>
 </a>
-    </li>
-    <li class="layout_two_up-large-primary">
-      <a href="#" class="layout layout_related-content_item related-content_item">
+      </li>
+      <li class="layout_two_up-large-primary">
+        <a href="#" class="layout layout_related-content_item related-content_item">
   <div class="layout_related-content_item_left related-content_item_block">
     <h5 class="related-content_item_label">Lorem Ipsum</h5>
     <h3 class="related-content_item_title" id="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
@@ -1043,9 +1060,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </div>
   </div>
 </a>
-    </li>
-    <li class="layout_two_up-large-secondary">
-      <a href="#" class="layout layout_related-content_item related-content_item">
+      </li>
+      <li class="layout_two_up-large-secondary">
+        <a href="#" class="layout layout_related-content_item related-content_item">
   <div class="layout_related-content_item_left related-content_item_block">
     <h5 class="related-content_item_label">Lorem Ipsum</h5>
     <h3 class="related-content_item_title" id="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h3>
@@ -1054,18 +1071,20 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <img  src="https://ipsumimage.appspot.com/279x186?l=3:2|279x186&amp;s=36" alt="This is an image.">
   </div>
 </a>
-    </li>
-  </ul>
+      </li>
+    </ul>
 
-  <div class="layout layout_one_up">
-    <div class="related-content_cta">
-      <div class="link_load_more_less">
+    <div class="col-width-12">
+      <div class="related-content_cta">
+        <div class="link_load_more_less">
   <a href="#" class="link link-black">Load more <span class="icon icon-viewmore"></span>
 </a>
 </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 
   <section class="list-block-promo">
@@ -1094,23 +1113,24 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     September 18–20, 2016</p>
     <p class="block-promo_cta block-promo_cta-secondary">Learn More</p>  </a>
 </div></section></div>
-<section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+<footer class="">
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -1121,7 +1141,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -1134,9 +1154,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>
+</footer>
   </div>
   
   <script type="text/json" id="sg-pattern-data-templates-article" class="sg-pattern-data">
@@ -1176,8 +1197,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <div class="ec">
     <header class="ec_header">
         <section class="ribbon">
-  <div class="layout layout_one_up">
-      <nav class="ribbon_dropdown">
+  <div class="container grid">
+      <div class="ribbon_container col-width-12">
+        <nav class="ribbon_dropdown">
   <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
   <ul class="ribbon_dropdown_nav">
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">AMA Wire</a>
@@ -1189,7 +1211,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">Journal of Ethics</a>
 </li>
   </ul>
-</nav>      <nav class="ribbon_user-menu">
+</nav>        <nav class="ribbon_user-menu">
   <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Become a Member</a>
@@ -1200,26 +1222,29 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Create Account</a>
 </li>
   </ul>
-</nav>  </div>
+</nav>      </div>
+  </div>
 </section>        <div class="alert alert-information">
-	<div class="layout layout_one_up">
+	<div class="container">
 		<div class="alert_container">
 			<span class="icon icon-information" data-grunticon-embed></span>			<p class="alert_message">info Lorem ipsum dolor set amet.</p>
 			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
 		</div>
 	</div>
 </div>        <section class="ec_search-bar">
-  <div class="ec_search-bar_inner layout">
-    <div class="ec_search-bar_library">
-      <a  href="#" class="button button-secondary ">Library</a>
-    </div>
-    <div class="ec_search-bar_form">
-      <form action="#" method="post" class="search-field">
+  <div class="container">
+    <div class="ec_search-bar_inner">
+      <div class="ec_search-bar_library">
+        <a  href="#" class="button button-secondary ">Library</a>
+      </div>
+      <div class="ec_search-bar_form">
+        <form action="#" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
 	<input type="search" placeholder="Search Courses" id="search-field" class="search-field_input" />
     <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
-</form>    </div>
+</form>      </div>
+    </div>
   </div>
 </section>    </header>
 
@@ -1423,23 +1448,23 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     </main>
 
     <footer class="ec_footer">
-        <section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -1450,7 +1475,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -1463,10 +1488,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>    </footer>
-
+</footer>
 </div>
   </div>
   
@@ -1497,8 +1522,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <div class="ec">
     <header class="ec_header">
         <section class="ribbon">
-  <div class="layout layout_one_up">
-      <nav class="ribbon_dropdown">
+  <div class="container grid">
+      <div class="ribbon_container col-width-12">
+        <nav class="ribbon_dropdown">
   <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
   <ul class="ribbon_dropdown_nav">
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">AMA Wire</a>
@@ -1510,7 +1536,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">Journal of Ethics</a>
 </li>
   </ul>
-</nav>      <nav class="ribbon_user-menu">
+</nav>        <nav class="ribbon_user-menu">
   <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Become a Member</a>
@@ -1521,26 +1547,29 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Create Account</a>
 </li>
   </ul>
-</nav>  </div>
+</nav>      </div>
+  </div>
 </section>        <div class="alert alert-information">
-	<div class="layout layout_one_up">
+	<div class="container">
 		<div class="alert_container">
 			<span class="icon icon-information" data-grunticon-embed></span>			<p class="alert_message">info Lorem ipsum dolor set amet.</p>
 			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
 		</div>
 	</div>
 </div>        <section class="ec_search-bar">
-  <div class="ec_search-bar_inner layout">
-    <div class="ec_search-bar_library">
-      <a  href="#" class="button button-secondary ">Library</a>
-    </div>
-    <div class="ec_search-bar_form">
-      <form action="#" method="post" class="search-field">
+  <div class="container">
+    <div class="ec_search-bar_inner">
+      <div class="ec_search-bar_library">
+        <a  href="#" class="button button-secondary ">Library</a>
+      </div>
+      <div class="ec_search-bar_form">
+        <form action="#" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
 	<input type="search" placeholder="Search Courses" id="search-field" class="search-field_input" />
     <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
-</form>    </div>
+</form>      </div>
+    </div>
   </div>
 </section>    </header>
 
@@ -1748,23 +1777,23 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     </main>
 
     <footer class="ec_footer">
-        <section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -1775,7 +1804,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -1788,10 +1817,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>    </footer>
-
+</footer>
 </div>
   </div>
   
@@ -1822,8 +1851,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <div class="ec">
     <header class="ec_header">
         <section class="ribbon">
-  <div class="layout layout_one_up">
-      <nav class="ribbon_dropdown">
+  <div class="container grid">
+      <div class="ribbon_container col-width-12">
+        <nav class="ribbon_dropdown">
   <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
   <ul class="ribbon_dropdown_nav">
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">AMA Wire</a>
@@ -1835,7 +1865,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">Journal of Ethics</a>
 </li>
   </ul>
-</nav>      <nav class="ribbon_user-menu">
+</nav>        <nav class="ribbon_user-menu">
   <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Become a Member</a>
@@ -1846,26 +1876,29 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Create Account</a>
 </li>
   </ul>
-</nav>  </div>
+</nav>      </div>
+  </div>
 </section>        <div class="alert alert-information">
-	<div class="layout layout_one_up">
+	<div class="container">
 		<div class="alert_container">
 			<span class="icon icon-information" data-grunticon-embed></span>			<p class="alert_message">info Lorem ipsum dolor set amet.</p>
 			<a class="alert_close" href="#"><span class="icon icon-close" data-grunticon-embed></span></a>
 		</div>
 	</div>
 </div>        <section class="ec_search-bar">
-  <div class="ec_search-bar_inner layout">
-    <div class="ec_search-bar_library">
-      <a  href="#" class="button button-secondary ">Library</a>
-    </div>
-    <div class="ec_search-bar_form">
-      <form action="#" method="post" class="search-field">
+  <div class="container">
+    <div class="ec_search-bar_inner">
+      <div class="ec_search-bar_library">
+        <a  href="#" class="button button-secondary ">Library</a>
+      </div>
+      <div class="ec_search-bar_form">
+        <form action="#" method="post" class="search-field">
 	<label for="search-field" class="search-field_label">Search</label>
 	<input type="search" placeholder="Search Courses" id="search-field" class="search-field_input" />
     <input class="search-field_reset icon icon-clear" type="reset" name="reset" value="Reset" />
   <input class="search-field_submit icon icon-search" type="submit" name="submit" value="Submit Search" />
-</form>    </div>
+</form>      </div>
+    </div>
   </div>
 </section>    </header>
 
@@ -2081,23 +2114,23 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     </main>
 
     <footer class="ec_footer">
-        <section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -2108,7 +2141,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -2121,10 +2154,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>    </footer>
-
+</footer>
 </div>
   </div>
   
@@ -2313,7 +2346,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   <div class="layout">
     <article class="hub-cta-half hub-cta-half-video">
     <div class="hub-cta_video">
-       <iframe src="https://www.youtube.com/embed/saRh3WnNChM?rel=0&autohide=1&showinfo=0&controls=2&feature=oembed&enablejsapi=1" frameborder="0" class="iframe-video"></iframe>    </div>
+      <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/saRh3WnNChM?rel=0&autohide=1&showinfo=0&controls=2&feature=oembed&enablejsapi=1" frameborder="0" class="iframe-video"></iframe>
+</div>    </div>
     <div class="hub-cta-half-text">
         <h1 class="hub-cta_title">Lorem ipsum dolor sit amet</h1>
         <ul class="hub-cta_desc">
@@ -2330,23 +2365,24 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
 </section>
 
-<section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+<footer class="">
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -2357,7 +2393,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -2370,9 +2406,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>
+</footer>
   </div>
   
   <script type="text/json" id="sg-pattern-data-templates-hub" class="sg-pattern-data">
@@ -2411,8 +2448,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   <div class="sg-pattern-example">
     <header>
   <section class="ribbon">
-  <div class="layout layout_one_up">
-      <nav class="ribbon_dropdown">
+  <div class="container grid">
+      <div class="ribbon_container col-width-12">
+        <nav class="ribbon_dropdown">
   <span class="ribbon_dropdown_trigger" tabindex="0" href="#">American Medical Association <span class="icon icon-opendropdownsmall" data-grunticon-embed></span></span>
   <ul class="ribbon_dropdown_nav">
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">AMA Wire</a>
@@ -2424,7 +2462,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_dropdown_nav_item"><a href="#" class="link link-white ">Journal of Ethics</a>
 </li>
   </ul>
-</nav>      <nav class="ribbon_user-menu">
+</nav>        <nav class="ribbon_user-menu">
   <span class="ribbon_user-menu_trigger" tabindex="0" href="#"><span class="is-vishidden">User Menu</span><span class="icon icon-usermenu" data-grunticon-embed></span></span>
   <ul class="ribbon_user-menu_nav">
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Become a Member</a>
@@ -2435,7 +2473,8 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="ribbon_user-menu_nav_item"><a href="#" class="link link-white ">Create Account</a>
 </li>
   </ul>
-</nav>  </div>
+</nav>      </div>
+  </div>
 </section></header>
 
 <main class="topic container">
@@ -2507,7 +2546,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <h3 class="title-label topic_article-preview_label">Topic Label</h3>
     <a href="#" class="link link-black topic_article-preview_title"><h2 class="topic_article-preview_title" id="">Article Two Title</h2></a>
 
-     <iframe src="https://www.youtube.com/embed/saRh3WnNChM?rel=0&autohide=1&showinfo=0&controls=2&feature=oembed&enablejsapi=1" frameborder="0" class="iframe-video"></iframe>    <p class="topic_article-preview_description">A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>    <span class="metadata topic_article-preview_metadata">
+    <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/saRh3WnNChM?rel=0&autohide=1&showinfo=0&controls=2&feature=oembed&enablejsapi=1" frameborder="0" class="iframe-video"></iframe>
+</div>    <p class="topic_article-preview_description">A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>    <span class="metadata topic_article-preview_metadata">
    <span>Jul 28, 2017</span> | <span class="topic_article-preview_metadata_read-time">6 min play time</span>
 </span></div>
 </div>    </aside>
@@ -2526,16 +2567,18 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <h3 class="title-label topic_article-preview_label">Topic Label</h3>
     <a href="#" class="link link-black topic_article-preview_title"><h2 class="topic_article-preview_title" id="">Article Two Title</h2></a>
 
-     <iframe src="https://www.youtube.com/embed/saRh3WnNChM?rel=0&autohide=1&showinfo=0&controls=2&feature=oembed&enablejsapi=1" frameborder="0" class="iframe-video"></iframe>    <p class="topic_article-preview_description">A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>    <span class="metadata topic_article-preview_metadata">
+    <div class="video-container">
+  <iframe src="https://www.youtube.com/embed/saRh3WnNChM?rel=0&autohide=1&showinfo=0&controls=2&feature=oembed&enablejsapi=1" frameborder="0" class="iframe-video"></iframe>
+</div>    <p class="topic_article-preview_description">A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>    <span class="metadata topic_article-preview_metadata">
    <span>Jul 28, 2017</span> | <span class="topic_article-preview_metadata_read-time">6 min play time</span>
 </span></div>
 </div>      <div class="topic_related-articles grid-region_content">
   <h3 class="title-label topic_related-articles_title">Lorem ipsum</h3>
   <ul class="list_topic-related-articles">
   <li class="list_item-topic-related-article"><a class="topic_article-preview topic_article-preview-related-article grid" href="#">
-  <div class="primary"><img class='topic_article-preview_image' src="https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18" alt="This is an image.">
+  <div class="topic_article-preview_container-image"><img class='topic_article-preview_image' src="https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18" alt="This is an image.">
 </div>
-  <div class="secondary"><h2 class="topic_article-preview_title" id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+  <div class="topic_article-preview-container-title"><h2 class="topic_article-preview_title" id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 </div>
 </a>
 </li>
@@ -2544,9 +2587,9 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 </a>
 </li>
   <li class="list_item-topic-related-article"><a class="topic_article-preview topic_article-preview-related-article grid" href="#">
-  <div class="primary"><img class='topic_article-preview_image' src="https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18" alt="This is an image.">
+  <div class="topic_article-preview_container-image"><img class='topic_article-preview_image' src="https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18" alt="This is an image.">
 </div>
-  <div class="secondary"><h2 class="topic_article-preview_title" id="">Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis</h2>
+  <div class="topic_article-preview-container-title"><h2 class="topic_article-preview_title" id="">Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis</h2>
 </div>
 </a>
 </li>
@@ -2592,23 +2635,24 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   </div>
 </main>
 
-<section class="footer">
-  <div class="layout layout_one_up footer-inner">
-    <div class="footer-primary">
-      <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
-      <div class="footer-primary-bottom">
-        
+<footer class="">
+  <div class="container grid">
+    <div class="footer-inner col-width-12">
+      <div class="footer-primary">
+        <h2 class="">The AMA promotes the art and science of medicine and the betterment of public health.</h2>
+        <div class="footer-primary-bottom">
+          
     
-<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>        <ul class="list_links-utility">
+<div class="footer_text-copyright">Copyright 1995 - 2017 American Medical Association. All rights reserved.</div>          <ul class="list_links-utility">
   <li class="list_link_item-utility"><a href="#">Terms of Use</a></li>
   <li class="list_link_item-utility"><a href="#">Privacy Policy</a></li>
   <li class="list_link_item-utility"><a href="#">Code of Conduct</a></li>
   <li class="list_link_item-utility"><a href="#">Website Accessibility</a></li>
 </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-secondary">
-       <ul class="list_links-social">
+      <div class="footer-secondary">
+        <ul class="list_links-social">
   <li class="list_link_item-social"><a class="icon-facebook" href="https://www.facebook.com/AmericanMedicalAssociation" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Facebook</span></a></li>
 
   <li class="list_link_item-social"><a class="icon-twitter" href="https://twitter.com/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">Twitter</span></a></li>
@@ -2619,7 +2663,7 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
 
   <li class="list_link_item-social"><a class="icon-youtube" href="https://www.youtube.com/user/AmerMedicalAssn" target="_blank" data-grunticon-embed><span class="list_link_item-social_title">YouTube</span></a></li>
 </ul>
-       <div class="rule_horizontal"></div>       <div class="layout layout_two_up list-secondary-user">
+        <div class="rule_horizontal"></div>        <div class="layout layout_two_up list-secondary-user">
   <ul class="list_links-secondary-user list_links-secondary-user-primary layout_two_up-primary">
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Careers</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">Contact Us</a></li>
@@ -2632,9 +2676,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Foundation</a></li>
     <li class="list_link_item-secondary-user"><a href="#" class="link link-black ">AMA Insurance</a></li>
   </ul>
-</div>    </div>
+</div>      </div>
+    </div>
   </div>
-</section>
+</footer>
   </div>
   
   <script type="text/json" id="sg-pattern-data-templates-topic" class="sg-pattern-data">
@@ -2642,8 +2687,8 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   </script>
 </div><!--end .sg-pattern-->            </div> <!--end #sg-patterns-->
 </div><!--end .sg-main-->
-      <!--DO NOT REMOVE-->
-      <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
+  <!--DO NOT REMOVE-->
+  <script type="text/json" id="sg-pattern-data-footer" class="sg-pattern-data">
   {"patternPartial":"viewall-templates-all"}
 </script>
 
@@ -2678,10 +2723,10 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1504290907">
+<script id="pl-js-polyfill-insert-1504710890">
   (function() {
     if (self != top) {
-      var cb = '1504290907';
+      var cb = '1504710890';
       var js = [];
       if (typeof document !== 'undefined' && !('classList' in document.documentElement)) {
         js.push('styleguide/bower_components/classList.min.js');
@@ -2691,20 +2736,20 @@ Array" class="logo logo-outer "><img src="../../assets/images/logo.svg" class="l
   })();
 </script>
 
-<script id="pl-js-insert-1504290907">
+<script id="pl-js-insert-1504710890">
   (function() {
     if (self != top) {
-      var cb = '1504290907';
+      var cb = '1504710890';
       var js = [ { 'src': 'styleguide/bower_components/jwerty.min.js', 'dep': [ 'styleguide/js/patternlab-pattern.min.js' ] } ];
       scriptLoader.run(js,cb,'pl-js-insert');
     }
   })();
 </script>
 
-            
-      <script src="../../assets/js/app.js"></script>
-      <!--<script src="../../assets/js/app.min.js"></script>-->
-    </div>
+    
+  <script src="../../assets/js/app.js"></script>
+  <!--<script src="../../assets/js/app.min.js"></script>-->
+
   </body>
 
 </html>

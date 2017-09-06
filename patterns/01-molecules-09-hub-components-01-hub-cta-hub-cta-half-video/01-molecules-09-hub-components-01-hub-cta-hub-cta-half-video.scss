@@ -1,28 +1,26 @@
-.ama-theme {
-  .hub-cta-half-text {
-    width: 100%;
-    background: $black-7;
+.hub-cta-half-text {
+  width: 100%;
+  background: $black-7;
 
-    @include breakpoint(800px) {
-      width: 50%;
-    }
+  @include breakpoint(800px) {
+    width: 50%;
   }
+}
 
-  .hub-cta-half-video {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
+.hub-cta-half-video {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 
-    @include breakpoint(800px) {
-      flex-direction: row-reverse;
-    }
+  @include breakpoint(800px) {
+    flex-direction: row-reverse;
   }
+}
 
-  .hub-cta_video {
-    width: 100%;
+.hub-cta_video {
+  width: 100%;
 
-    @include breakpoint(800px) {
-      width: 50%;
-    }
+  @include breakpoint(800px) {
+    width: 50%;
   }
 }

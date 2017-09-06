@@ -1,40 +1,38 @@
-.ama-theme {
-  .pull-quote {
-    border-left: 12px solid $red;
-    padding-left: 10px;
-    margin: 30px 0;
-    font-style: normal;
+.pull-quote {
+  border-left: 12px solid $red;
+  padding-left: 10px;
+  margin: 30px 0;
+  font-style: normal;
 
-    @include breakpoint($bp-small) {
-      margin: 40px 0;
-      padding-left: 15px;
-      border-left: 16px solid $red;
-    }
+  @include breakpoint($bp-small) {
+    margin: 40px 0;
+    padding-left: 15px;
+    border-left: 16px solid $red;
   }
+}
 
-  .pull-quote_quote {
-    @extend %b2;
-    margin-bottom: 6px;
+.pull-quote_quote {
+  @extend %b2;
+  margin-bottom: 6px;
 
-    @include breakpoint($bp-small) {
-      margin-bottom: 9px;
-    }
+  @include breakpoint($bp-small) {
+    margin-bottom: 9px;
   }
+}
 
-  .link-pull-quote {
+.link-pull-quote {
+  display: block;
+  margin-bottom: 6px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 9px;
+  }
+}
+
+.pull-quote_attribution {
+  @extend %b4;
+
+  span {
     display: block;
-    margin-bottom: 6px;
-
-    @include breakpoint($bp-small) {
-      margin-bottom: 9px;
-    }
   }
-
-  .pull-quote_attribution {
-    @extend %b4;
-
-    span {
-      display: block;
-    }
-  }
-} //closes .ama-theme
+}

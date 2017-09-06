@@ -1,0 +1,9 @@
+.topic-hero .topic_article-preview {
+  @include rule-horizontal-bottom(1px, $gray-8, solid);
+  padding-bottom: 28px;
+}
+
+.topic-hero .topic_article-preview_title {
+  display: inline-block;
+  font-size: 36px;
+}

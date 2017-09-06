@@ -4,7 +4,7 @@
     margin-bottom: 0;
   }
 
-  .primary {
+  .topic_article-preview_container-image {
     @include grid__unit--cols(6);
     @include gutter($padding-left-half...);
     order: 2;
@@ -19,7 +19,7 @@
     }
   }
 
-  .secondary {
+  .topic_article-preview-container-title {
     @include grid__unit--cols(6);
     order: 1;
 

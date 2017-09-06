@@ -1,26 +1,28 @@
-jQuery.noConflict();
-(function($,w){
-	var sw = document.body.clientWidth,
-		sh = document.body.clientHeight;
+/**
+ * @file
+ * Initialization script for global processes
+ */
 
-	$(w).resize(function(){ //Update dimensions on resize
-		sw = document.body.clientWidth;
-		sh = document.body.clientHeight;
+(function ($, Drupal) {
 
-		//updateAds();
-	});
+/**
+ *
+ * Initialize fitVid for YouTube vieos.
+ *
+ * JavaScript should be made compatible with libraries other than jQuery by
+ * wrapping it with an "anonymous closure". See:
+ * - https://drupal.org/node/1446420
+ * - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+ */
 
-	//Navigation toggle
-	$('.nav-toggle-menu').click(function(e) {
-		e.preventDefault();
-		$(this).toggleClass('active');
-		$('.nav').toggleClass('active');
-	});
+	Drupal.behaviors.fitvidinit = {
+	 attach: function (context, settings) {
+			(function ($) {
+				$(document).ready(function(){
+					$('.video-container').fitVids();
+				});
+			})(jQuery);
+		}
+	};
 
-	//Navigation toggle
-	$('.nav-toggle-search').click(function(e) {
-		e.preventDefault();
-		$(this).toggleClass('active');
-		$('.header .search-form').toggleClass('active');
-	});
-})(jQuery,this);
+})(jQuery, Drupal);
