@@ -55,7 +55,6 @@
 // Course Browser tab.
 .tabs-course_browser_list_item {
   border-bottom: 3px transparent solid;
-  color: $black;
   display: inline-block;
   line-height: 2;
   padding: 0;
@@ -73,9 +72,20 @@
     }
   }
 
+  &.active a {
+    color: $black;
+  }
+
+  a {
+    color: $black;
+
+    @include breakpoint($bp-med min-width) {
+      color: $black-20;
+    }
+  }
+
   a {
     @extend %text-transition;
-    color: $black;
     display: block;
     font-weight: bold;
     padding: 0;
@@ -135,10 +145,10 @@
     }
   }
 
-  // Show icon for active selector
-  .active .icon-select {
-    @include breakpoint($bp-med min-width) {
-      display: block;
+  @include breakpoint($bp-med min-width) {
+    // Show icon for active selector
+    .active {
+      border-bottom: 3px $purple solid;
     }
   }
 }
