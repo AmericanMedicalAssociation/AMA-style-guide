@@ -20,7 +20,7 @@
   .filter-control_container-results-count {
     padding: 20px;
     @include breakpoint($bp-small) {
-      @include grid__unit--cols(8);
+      @include grid__unit--cols(7);
       display: inline-block;
       padding-left: 0px;
       width: 100%;
@@ -47,7 +47,7 @@
 
   .filter-control_container-toggle {
     @include breakpoint($bp-small) {
-      @include grid__unit--cols(4);
+      @include grid__unit--cols(5);
       display: inline-block;
     }
   }
@@ -64,14 +64,14 @@
 
   .filter-control_container-sort {
     @include breakpoint($bp-small) {
-      @include grid__unit--cols(4);
+      @include grid__unit--cols(5);
       display: inline-block;
     }
   }
 
   .filter-control_container-filters {
     @include breakpoint($bp-small) {
-      @include grid__unit--cols(8);
+      @include grid__unit--cols(7);
       display: inline-block;
     }
   }
