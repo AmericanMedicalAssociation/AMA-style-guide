@@ -51,7 +51,15 @@ The layouts molecules are now deprecated. To give structure to organisms and tem
 
 #### Basics
 
-To use columns to control a template or organism's structure, start by adding an element with a `.grid` or `.container-with-grid` class (we'll get to the difference a little later). This grid instantiates a flexbox wrapper for descendant elements.
+The style guide uses two primary methods for applying a [CSS Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout): 1) using our custom `.grid` and `.col-width-x` classes or 2) using the sass mixins `grid()` and `grid__unit--cols(x)`.
+
+Under the hood, both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid), which is a very lightweight, flexbox-based grid system. Flexbox enables us to created nested, responsive grids and gives us a great deal of control over our grid elements. the `sass-grid` library makes using flexbox simple, while also allowing for graceful degradation where flexbox is not supported. When we use the classes versus using the mixins depends on the specific needs of the pattern you are creating.
+
+#### Choosing the right method
+
+##### Class Method
+
+The class method is the preferred method for adding columns to control a template or organism's structure. Start by adding an element with a `.grid` or `.container-with-grid` class (we'll get to the difference a little later). This grid instantiates a flexbox wrapper for descendant elements.
 
 Then add elements with `.col-width-x` classes, where 'x' should be replaced by the number of columns you want the element to span. We use a 12 column grid, so for any given `.grid` container, make sure that the `.col-width-x` numbers add up to a total of 12.
 
@@ -70,6 +78,7 @@ Then add elements with `.col-width-x` classes, where 'x' should be replaced by t
 
 The `col-width-x` classes include default left and right padding. At our mobile breakpoint, they default to `width:100%` (in other words, multiple columns collapse into a single-column layout).
 
+##### Mixin Method
 If you need to specify different gutters, or use a different mobile behavior for your pattern , apply the `grid()` and the `grid__unit--cols(x)` _mixins_ to your named classes rather than using the `.grid` and `.col-width-x` _classes_.
 
 **Example:**
@@ -101,7 +110,7 @@ SCSS
 }
 ```
 
-
+##### Warning!
 **Avoid** mixing usage of the `.grid` _class_ and the `grid__unit--cols(x)` _mixin_. Similarly, do not combine the `grid()` _mixin_ with the `.col-width-x` _classes_. Parent and child elements should be consistent--use either classes **or** mixins but **not both**.
 
 **Do not do this:**
@@ -129,8 +138,6 @@ SCSS
   @include grid__unit--cols(4);
 }
 ```
-
-**Note:** Under the hood, both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid), which is a very lightweight, flexbox-based grid system. You might want to look at how this grid works, but you should never need to work with it directly.
 
 #### `.container` vs `.container-with-grid` vs `.grid`
 
