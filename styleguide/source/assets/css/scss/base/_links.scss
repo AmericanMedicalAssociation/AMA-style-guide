@@ -1,55 +1,57 @@
 /* Links */
-a {
-  @extend %text-transition;
-  color: $black;
-  text-decoration: none;
-  outline: 0;
-  &:hover,
-  &:focus {
+.ama-theme {
+  a {
+    @extend %text-transition;
     color: $black;
-  }
-}
-
-.link-black {
-  &:link,
-  &:visited {
-    color: $black;
-  }
-  // if the default link style changes this will need to include color: black; text-decoration: none;
-  &:active,
-  &:hover,
-  &:focus {
-    color: $blue;
     text-decoration: none;
+    outline: 0;
+    &:hover,
+    &:focus {
+      color: $black;
+    }
   }
-}
 
-.link-white {
-  &:link,
-  &:visited {
-    color: $white;
+  .link-black {
+    &:link,
+    &:visited {
+      color: $black;
+    }
+    // if the default link style changes this will need to include color: black; text-decoration: none;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $blue;
+      text-decoration: none;
+    }
   }
-  // if the default link style changes this will need to include color: black; text-decoration: none;
-  &:active,
-  &:hover,
-  &:focus {
-    color: $white;
-    text-decoration: underline;
-  }
-}
 
-.link-blue {
-  font-weight: $font-weight-bold;
+  .link-white {
+    &:link,
+    &:visited {
+      color: $white;
+    }
+    // if the default link style changes this will need to include color: black; text-decoration: none;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
 
-  &:link,
-  &:visited {
-    color: $blue;
+  .link-blue {
+    font-weight: $font-weight-bold;
+
+    &:link,
+    &:visited {
+      color: $blue;
+    }
+    // if the default link style changes this will need to include color: black; text-decoration: none;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $blue;
+      text-decoration: underline;
+    }
   }
-  // if the default link style changes this will need to include color: black; text-decoration: none;
-  &:active,
-  &:hover,
-  &:focus {
-    color: $blue;
-    text-decoration: underline;
-  }
-}
+} //closes .ama-theme

@@ -1,302 +1,304 @@
-a.search-result-best-event,
-a.search-result-best {
-  @include grid();
-}
+.ama-theme {
+  a.search-result-best-event,
+  a.search-result-best {
+    @include grid();
+  }
 
-.search-result-best_container,
-.search-result-best-event_container {
-  @extend %background-transition;
-  background-color: $black-7;
-  cursor: pointer;
-  margin-bottom: $space;
-  padding: 25px;
-  width: 100%;
+  .search-result-best_container,
+  .search-result-best-event_container {
+    @extend %background-transition;
+    background-color: $black-7;
+    cursor: pointer;
+    margin-bottom: $space;
+    padding: 25px;
+    width: 100%;
 
-  &:active,
-  &:hover {
-    background-color: $black-15;
-    .search-result-best_link {
-      text-decoration: underline;
-    }
-    @include breakpoint($bp-small min-width) {
-      .search-result-best_right {
-        background-color: $purple-darker;
+    &:active,
+    &:hover {
+      background-color: $black-15;
+      .search-result-best_link {
+        text-decoration: underline;
+      }
+      @include breakpoint($bp-small min-width) {
+        .search-result-best_right {
+          background-color: $purple-darker;
+        }
       }
     }
-  }
 
-  @include breakpoint($bp-small min-width) {
-    @include grid();
-    padding: 0;
-  }
-}
-
-// Best match title.
-.search-result-best_title {
-  margin-bottom: 9px;
-
-  @include breakpoint($bp-med min-width) {
-    margin-bottom: 12px;
-  }
-}
-
-// Best match description.
-.search-result-best_description,
-.search-result-best_description-event {
-  @extend %type-medium;
-}
-
-// Best match event description.
-.search-result-best_description-event {
-  display: none;
-
-  @include breakpoint($bp-med) {
-    display: block;
-  }
-}
-
-// Best match link.
-.search-result-best_link {
-  @extend %type-small;
-  color: $blue;
-  display: inline-block;
-  font-weight: $font-weight-bold;
-  margin-bottom: 0;
-  margin-top: 30px;
-
-  @include breakpoint($bp-med) {
-    margin-top: 40px;
-  }
-}
-
-// Best match layout.
-.search-result-best_left,
-.search-result-best_right {
-
-  @include breakpoint($bp-small) {
-    @include grid__unit--cols(6);
-    align-items: center;
-    min-height: 200px;
-    padding: 30px;
-  }
-}
-
-// Best match primary.
-.search-result-best_left {
-  @include breakpoint($bp-med) {
-    @include grid__unit--cols(8);
-  }
-}
-
-// Best match event.
-.search-result-best-event .search-result-best_left {
-  .search-result-best_link {
-    display: none;
-  }
-
-  @include breakpoint($bp-small) {
-    .search-result-best_link {
-      display: inline-block;
+    @include breakpoint($bp-small min-width) {
+      @include grid();
+      padding: 0;
     }
   }
-}
 
-.search-result-best-event .search-result-best_right {
-  @include breakpoint($bp-small) {
-    display: flex; //This cannot invoke the grid() mixin b/c of flex-grow settings
+  // Best match title.
+  .search-result-best_title {
+    margin-bottom: 9px;
+
+    @include breakpoint($bp-med min-width) {
+      margin-bottom: 12px;
+    }
   }
-}
 
-// Best match secondary.
-.search-result-best_right {
+  // Best match description.
+  .search-result-best_description,
+  .search-result-best_description-event {
+    @extend %type-medium;
+  }
 
-  @include breakpoint($bp-small) {
-    align-items: center;
-    background-color: $purple;
-    height: auto;
-    justify-content: center;
+  // Best match event description.
+  .search-result-best_description-event {
+    display: none;
 
+    @include breakpoint($bp-med) {
+      display: block;
+    }
+  }
+
+  // Best match link.
+  .search-result-best_link {
+    @extend %type-small;
+    color: $blue;
+    display: inline-block;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+    margin-top: 30px;
+
+    @include breakpoint($bp-med) {
+      margin-top: 40px;
+    }
+  }
+
+  // Best match layout.
+  .search-result-best_left,
+  .search-result-best_right {
+
+    @include breakpoint($bp-small) {
+      @include grid__unit--cols(6);
+      align-items: center;
+      min-height: 200px;
+      padding: 30px;
+    }
+  }
+
+  // Best match primary.
+  .search-result-best_left {
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(8);
+    }
+  }
+
+  // Best match event.
+  .search-result-best-event .search-result-best_left {
     .search-result-best_link {
       display: none;
     }
-  }
 
-  @include breakpoint($bp-med) {
-    @include grid__unit--cols(4);
-  }
-}
-
-// Best match image.
-.search-result-best_right-image {
-  background-image: url("../../assets/images/placeholder.jpg");
-  background-size: cover;
-}
-
-// Best match event details.
-.search-result-best_event-details {
-  @extend %type-medium;
-  margin-bottom: 0;
-
-  @include breakpoint($bp-small) {
-    @include type-large;
-    color: $white;
-    text-align: center;
-    margin-bottom: 0;
-  }
-}
-
-// Styling for external column search result.
-
-.search-result-external {
-  display: inline-block;
-  margin-bottom: 0;
-  position: relative;
-
-  &:before {
-    border-top: 1px solid $gray-8;
-    content: "";
-    display: block;
-    padding-bottom: 28px;
-  }
-
-  @include breakpoint($bp-small) {
-    &:before {
-      padding-bottom: 38px;
-    }
-  }
-
-  .search-result_label {
-    .title-label,
-    .icon-external {
-      display: inline-block;
-    }
-    .title-label {
-      margin-bottom: 23px;
-    }
-  }
-
-  .search-result_members-only-label-wrapper {
-    margin-bottom: 30px;
-  }
-
-  .icon-information {
-    vertical-align: middle;
-  }
-
-  .external {
-    fill: $purple;
-    margin-left: 7px;
-  }
-
-  .search-result_title {
-    @extend %type-large;
-    margin-bottom: 25px;
-  }
-
-  .search-result_primary-wrapper,
-  .search-result_members-only-label-wrapper {
-    &:hover {
-      *,
-      .external {
-        @extend %text-transition;
-        color: $blue;
-        fill: $blue;
+    @include breakpoint($bp-small) {
+      .search-result-best_link {
+        display: inline-block;
       }
     }
   }
 
-  .rule_horizontal {
-    margin-bottom: 30px;
-
+  .search-result-best-event .search-result-best_right {
     @include breakpoint($bp-small) {
-      margin-bottom: 40px;
+      display: flex; //This cannot invoke the grid() mixin b/c of flex-grow settings
     }
   }
-}
 
-.search-results-list {
-  .search-results-list-item {
-    display: flex;
-    height: 130px;
-    margin-top: 40px;
-    width: 100%;
+  // Best match secondary.
+  .search-result-best_right {
+
+    @include breakpoint($bp-small) {
+      align-items: center;
+      background-color: $purple;
+      height: auto;
+      justify-content: center;
+
+      .search-result-best_link {
+        display: none;
+      }
+    }
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(4);
+    }
+  }
+
+  // Best match image.
+  .search-result-best_right-image {
+    background-image: url("../../assets/images/placeholder.jpg");
+    background-size: cover;
+  }
+
+  // Best match event details.
+  .search-result-best_event-details {
+    @extend %type-medium;
+    margin-bottom: 0;
+
+    @include breakpoint($bp-small) {
+      @include type-large;
+      color: $white;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  // Styling for external column search result.
+
+  .search-result-external {
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
 
     &:before {
-      position: absolute;
-      width: 100%;
-      top: -40px;
+      border-top: 1px solid $gray-8;
+      content: "";
+      display: block;
+      padding-bottom: 28px;
     }
 
-    .search-result_primary-wrapper {
-      @include grid__unit--cols(10);
-    }
-
-    .search-result_title {
-      width: 61.66667%;
-      padding-right: 5%;
+    @include breakpoint($bp-small) {
+      &:before {
+        padding-bottom: 38px;
+      }
     }
 
     .search-result_label {
-      width: 28.3333%;
-      padding-right: 5%;
-      vertical-align: top;
+      .title-label,
+      .icon-external {
+        display: inline-block;
+      }
+      .title-label {
+        margin-bottom: 23px;
+      }
     }
 
-    .search-result_members-only-label-wrapper{
-      @include grid__unit--cols(2)
-      text-align: right;
+    .search-result_members-only-label-wrapper {
+      margin-bottom: 30px;
+    }
+
+    .icon-information {
+      vertical-align: middle;
+    }
+
+    .external {
+      fill: $purple;
+      margin-left: 7px;
+    }
+
+    .search-result_title {
+      @extend %type-large;
+      margin-bottom: 25px;
+    }
+
+    .search-result_primary-wrapper,
+    .search-result_members-only-label-wrapper {
+      &:hover {
+        *,
+        .external {
+          @extend %text-transition;
+          color: $blue;
+          fill: $blue;
+        }
+      }
+    }
+
+    .rule_horizontal {
+      margin-bottom: 30px;
+
+      @include breakpoint($bp-small) {
+        margin-bottom: 40px;
+      }
     }
   }
 
-  .search-result_label,
-  .search-result_title,
-  .search-result_primary-wrapper,
-  .search-result_members-only-label-wrapper {
-    display: inline-block;
-  }
-
-  //mobile
-  @include breakpoint(0 $bp-small) {
+  .search-results-list {
     .search-results-list-item {
-      display: block;
-      height: auto;
-      margin-top: 30px;
+      display: flex;
+      height: 130px;
+      margin-top: 40px;
       width: 100%;
 
       &:before {
-        top: -30px;
+        position: absolute;
+        width: 100%;
+        top: -40px;
       }
 
-      //none of this cascades like expected, so we have to !important stuff. Ugh.
-      .search-result_primary-wrapper,
-      .search-result_members-only-label-wrapper,
-      .search-result_title,
+      .search-result_primary-wrapper {
+        @include grid__unit--cols(10);
+      }
+
+      .search-result_title {
+        width: 61.66667%;
+        padding-right: 5%;
+      }
+
       .search-result_label {
-        display: block !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        padding-right: 0 !important;
+        width: 28.3333%;
+        padding-right: 5%;
+        vertical-align: top;
       }
 
-      .search-result_label {
-        padding-bottom: 20px;
+      .search-result_members-only-label-wrapper{
+        @include grid__unit--cols(2)
+        text-align: right;
       }
+    }
 
-      .search-result_members-only-label-wrapper {
-        text-align: left;
-        padding-bottom: 30px;
+    .search-result_label,
+    .search-result_title,
+    .search-result_primary-wrapper,
+    .search-result_members-only-label-wrapper {
+      display: inline-block;
+    }
+
+    //mobile
+    @include breakpoint(0 $bp-small) {
+      .search-results-list-item {
+        display: block;
+        height: auto;
+        margin-top: 30px;
+        width: 100%;
+
+        &:before {
+          top: -30px;
+        }
+
+        //none of this cascades like expected, so we have to !important stuff. Ugh.
+        .search-result_primary-wrapper,
+        .search-result_members-only-label-wrapper,
+        .search-result_title,
+        .search-result_label {
+          display: block !important;
+          max-width: 100% !important;
+          width: 100% !important;
+          padding-right: 0 !important;
+        }
+
+        .search-result_label {
+          padding-bottom: 20px;
+        }
+
+        .search-result_members-only-label-wrapper {
+          text-align: left;
+          padding-bottom: 30px;
+        }
       }
     }
   }
-}
 
-.search-result_members-only-label {
-  display: inline-block;
-  vertical-align: middle;
-}
+  .search-result_members-only-label {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-.search-result_members-only-label {
-  @extend %type-smaller;
-  font-weight: $font-weight-bold;
-  margin-bottom: 0;
-}
+  .search-result_members-only-label {
+    @extend %type-smaller;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+  }
+} // closes .ama-theme

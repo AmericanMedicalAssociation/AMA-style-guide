@@ -1,189 +1,191 @@
 /*------------------------------------*\
     $GLOBAL CLASSES
 \*------------------------------------*/
+.ama-theme {
 
-/* Clearfix */
-.clearfix {
+  /* Clearfix */
+  .clearfix {
+      *zoom: 1;
+  }
+  .clearfix:before,
+  .clearfix:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  .clearfix:after {
+      clear: both;
+  }
+
+  %clearfix {
     *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
 
-.clearfix:after {
-    clear: both;
-}
+    &:before {
+      content: "";
+      display: table;
+    }
 
-%clearfix {
-  *zoom: 1;
-
-  &:before {
-    content: "";
-    display: table;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+  /**
+   * Element-invisible as defined by snook.ca
+   * @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   */
 
-/**
- * Element-invisible as defined by snook.ca
- * @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-%element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  @if support-legacy-browser(ie, "7") {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  }
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-/* Completely remove from the flow and screen readers. */
-.is-hidden {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Completely remove from the flow but leave available to screen readers. */
-.is-vishidden {
+  %element-invisible {
     position: absolute !important;
-    overflow: hidden;
-    width: 1px;
     height: 1px;
-    padding: 0;
-    border: 0;
+    width: 1px;
+    overflow: hidden;
+    @if support-legacy-browser(ie, "7") {
+      clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+    }
     clip: rect(1px, 1px, 1px, 1px);
-}
+  }
 
-/* Floats */
-.right {
-  float: right;
-  padding: 0 0 $pad $pad;
-}
+  /* Completely remove from the flow and screen readers. */
+  .is-hidden {
+      display: none !important;
+      visibility: hidden !important;
+  }
 
-.right-search {
-  float: right;
-  padding: 0 0 $pad 0;
-}
+  /* Completely remove from the flow but leave available to screen readers. */
+  .is-vishidden {
+      position: absolute !important;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      border: 0;
+      clip: rect(1px, 1px, 1px, 1px);
+  }
 
-.left {
-  float: left;
-  padding: 0 $pad $pad 0;
-}
+  /* Floats */
+  .right {
+    float: right;
+    padding: 0 0 $pad $pad;
+  }
 
-/* Display Classes */
-.hide-small {
-    @media all and (max-width: $bp-med) {
-        display: none;
-    }
-}
+  .right-search {
+    float: right;
+    padding: 0 0 $pad 0;
+  }
 
-.hide-med {
-    @media all and (min-width: $bp-med) and (max-width: $bp-large) {
-        display: none;
-    }
-}
+  .left {
+    float: left;
+    padding: 0 $pad $pad 0;
+  }
 
-.hide-large {
-    @media all and (min-width: $bp-large) {
-        display: none;
-    }
-}
+  /* Display Classes */
+  .hide-small {
+      @media all and (max-width: $bp-med) {
+          display: none;
+      }
+  }
 
-//States
-.valid {
-  color: $valid;
-}
+  .hide-med {
+      @media all and (min-width: $bp-med) and (max-width: $bp-large) {
+          display: none;
+      }
+  }
 
-.error {
-  color: $error;
-}
+  .hide-large {
+      @media all and (min-width: $bp-large) {
+          display: none;
+      }
+  }
 
-.warning {
-    color: $warning;
-}
+  //States
+  .valid {
+    color: $valid;
+  }
 
-.information {
-    color: $information;
-}
+  .error {
+    color: $error;
+  }
 
-.font-secondary {
-    font-family: $font-secondary;
-}
+  .warning {
+      color: $warning;
+  }
 
-// Sets all caps and font spacing.
-.caps {
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-}
+  .information {
+      color: $information;
+  }
 
-.link,
-%link {
-  color: $blue;
+  .font-secondary {
+      font-family: $font-secondary;
+  }
 
-  &:hover,
-  &:focus {
+  // Sets all caps and font spacing.
+  .caps {
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+  }
+
+  .link,
+  %link {
     color: $blue;
-    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $blue;
+      text-decoration: underline;
+    }
   }
-}
 
-// Global text color transition on hover
-%text-transition {
-  transition: color 0.3s ease;
-}
-
-// Global icon color transition on hover
-%icon-transition {
-  transition: fill 0.3s ease;
-}
-
-// Global background color transition on hover
-%background-transition {
-  transition: background-color 0.28s ease;
-}
-
-.eyebrow {
-    background-color: $purple;
-    height: 16px;
-    margin-bottom: 24px;
-    width: 100%
-}
-// Generic block class for common block elements
-.block {
-  .primary-cta {
-    margin-bottom: 50px;
-    text-align: center;
-    text-transform: uppercase;
+  // Global text color transition on hover
+  %text-transition {
+    transition: color 0.3s ease;
   }
-  .title {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .summary {
-    font-size: 1.33em;
-    line-height: 1.2;
-    margin-bottom: 65px;
-    text-align: center;
-  }
-}
 
-.byline {
-  font-family: $font;
-  font-size: 0.833em;
-  font-weight: 600;
-  line-height: 1.22;
-}
+  // Global icon color transition on hover
+  %icon-transition {
+    transition: fill 0.3s ease;
+  }
 
-.rule_horizontal {
-  border-top: 1px $gray-8 solid;
-}
+  // Global background color transition on hover
+  %background-transition {
+    transition: background-color 0.28s ease;
+  }
+
+  .eyebrow {
+      background-color: $purple;
+      height: 16px;
+      margin-bottom: 24px;
+      width: 100%
+  }
+  // Generic block class for common block elements
+  .block {
+    .primary-cta {
+      margin-bottom: 50px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .title {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .summary {
+      font-size: 1.33em;
+      line-height: 1.2;
+      margin-bottom: 65px;
+      text-align: center;
+    }
+  }
+
+  .byline {
+    font-family: $font;
+    font-size: 0.833em;
+    font-weight: 600;
+    line-height: 1.22;
+  }
+
+  .rule_horizontal {
+    border-top: 1px $gray-8 solid;
+  }
+} //closes .ama-theme

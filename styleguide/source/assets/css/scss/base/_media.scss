@@ -3,23 +3,25 @@
 \*------------------------------------*/
 
 /* Flexible Media */
-img,
-video,
-object {
-	max-width: 100%;
-	height: auto;
-}
+.ama-theme {
+  img,
+  video,
+  object {
+  	max-width: 100%;
+  	height: auto;
+  }
 
-iframe {
-	margin-bottom: $space;
-}
+  iframe {
+  	margin-bottom: $space;
+  }
 
-figure {
-	margin-bottom: $space;
-	img {
-		margin-bottom: $space-half;
-	}
-}
-figcaption {
-	font-style: italic;
+  figure {
+  	margin-bottom: $space;
+  	img {
+  		margin-bottom: $space-half;
+  	}
+  }
+  figcaption {
+  	font-style: italic;
+  }
 }

@@ -1,34 +1,36 @@
-.list_links-utility {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.list_link_item-utility {
-  @extend %type-smaller;
-  display: inline-block;
-
-
-  &:after {
-    color: $black-55;
-    content: "|";
-    padding-left: 0.5em;
+.ama-theme {
+  .list_links-utility {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  &:last-of-type {
+  .list_link_item-utility {
+    @extend %type-smaller;
+    display: inline-block;
+
 
     &:after {
-      content: "";
+      color: $black-55;
+      content: "|";
+      padding-left: 0.5em;
+    }
+
+    &:last-of-type {
+
+      &:after {
+        content: "";
+      }
+    }
+
+    a {
+      color: $black-55;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    a:hover {
+      color: $blue;
     }
   }
-
-  a {
-    color: $black-55;
-    display: inline-block;
-    font-weight: 600;
-  }
-
-  a:hover {
-    color: $blue;
-  }
-}
+} // closes .ama-theme
