@@ -160,6 +160,8 @@
 
   // Course cards layout.
   .layout.layout-four-up.tabs-course_browser_list-cards {
+    margin: initial;  /* override lists styles */
+    padding: initial;   /* override lists styles */
     display: block;
     flex-direction: initial;
     list-style: none;
