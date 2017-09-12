@@ -9,7 +9,7 @@
         top: 0;
         z-index: 100;
 
-        &+ .layout,
+        &+ .container,
         &+ article {
           margin-top: 87px;
       }
