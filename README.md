@@ -3,15 +3,12 @@ This is the living style guide for the American Medical Association. It is a pla
 
 This style guide is a compilation of [atomic components](http://bradfrost.com/blog/post/atomic-web-design/) that have been specifically tailored to the needs of AMA. By documenting and assembling this collection of patterns, we are able to build consistently, reuse code, and [see all of our patterns in one place](https://americanmedicalassociation.github.io/AMA-style-guide/).
 
-## To use the Style Guide on a project:
+## Style Guide Consumers - To use the Style Guide on a project:
 - Grab the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases)
 - Open the `.zip` into your project
-- Compile the production files:
-  - `cd /styleguide`
-  - `gulp serve`
-- Link to the production files at `styleguide/public/assets/`
+- Link to the production files at `assets/`
 
-## To begin working:
+## Style Guide Developers - To begin working:
 
 **Environment setup (mac)**
 
@@ -50,21 +47,15 @@ _this should only be run on the `develop` branch`*`_
 
 - Make sure you are running the most up-to-date code
   - Updates will be rejected if they are non-fast-forward
-- `gulp release` to build the files correctly, update version information, cut a tag, and deploy the files to `gh-pages`
+- Update `package.json` with the new version number.
+- `gulp release` to build the files correctly, update version information, cut a tag, and deploy the files to `gh-pages` and `master`.
 - Navigate to the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases) to see the new release and add notes.
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
 
 `*` Note: To base a release on a specific commit, for example when the `develop` branch has had other PRs committed that should not be included in the release, do the following:
-1. On the develop branch type `git tag -a v#.#.# [full commit hash you would like to use]` for example `git tag -a v1.0.0 8ecfbc8587eb8602d49bfc3f258d825718ae9378`. `v#.#.#` is the release version.
-2. Write a message for the tag, for example `Tagging release v1.0.0`.
-3. Save.
-4. To see the new tag `git show v#.#.#`.
-5. If everything looks good, push the tag with `git push origin v#.#.#`.
-6. In the Github UI, type the tag number in, and select the tag.
-7. Write release notes and publish the release.
-8. To deploy, check out a new branch locally based on the new release, for example `git co -b release-1.0.0 v1.0.0` where `release-1.0.0` is the name of a new branch and `v1.0.0` is the release.
-9. From that branch, `gulp deploy` to deploy the release to the public style guide site.
+1. Check out the commit from which you'd like to deploy.
+2. Run `gulp release` to deploy the release from that commit.
 
 ## Troubleshooting:
 ### Make sure your npm dependencies are up to date
