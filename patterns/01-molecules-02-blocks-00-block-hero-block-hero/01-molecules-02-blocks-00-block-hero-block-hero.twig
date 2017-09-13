@@ -1,0 +1,13 @@
+<a href="{{ url }}" class="layout layout_two_up block-hero">
+  <div class="block-hero-primary layout_two_up-primary">
+    {% include 'atoms-landscape-4x2_5' with { 'class': 'block-hero_image' } %}
+  </div>
+  <div class="block-hero-secondary layout_two_up-secondary">
+    {% include 'atoms-h5' with { 'content': 'Highlight', 'class': 'block-hero_cta block-hero_cta-primary' } %}
+    <div class="block-hero-inner">
+      {% include 'atoms-h2' with { 'content': 'New AMA Digital Experience', 'class': 'block-hero_title' } %}
+      {% include 'atoms-summary' with { 'content': 'Modern, streamlined, timely and relevant', 'class': 'block-hero_summary' } %}
+    </div>
+    {% include 'atoms-paragraph' with { 'content': 'Read More', 'class': 'block-hero_cta block-hero_cta-secondary' } %}
+  </div>
+</a>

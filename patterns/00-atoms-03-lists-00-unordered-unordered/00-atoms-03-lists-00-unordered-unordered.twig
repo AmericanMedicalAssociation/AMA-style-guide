@@ -1,0 +1,12 @@
+<ul>
+	{% for item in list %}
+		{% if item.children %}
+			<ul>
+				{% for child in item.children %}
+					<li>{{ child.content }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+      <li>{{ item.content }}</li>
+  {% endfor %}
+</ul>

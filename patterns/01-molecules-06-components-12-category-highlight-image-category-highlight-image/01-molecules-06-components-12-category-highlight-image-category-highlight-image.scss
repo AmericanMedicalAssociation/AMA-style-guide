@@ -1,0 +1,51 @@
+.ama-theme {
+  .category-highlight_image-link {
+    display: block;
+
+    @include breakpoint($bp-small) {
+      float: left;
+      margin-right: 30px;
+    }
+
+    @include breakpoint($bp-large) {
+      float: none;
+      margin-right: 0;
+    }
+  }
+
+  .category-highlight_image {
+    display: block;
+    width: 100%;
+    height: inherit;
+
+    img {
+      width: 100%;
+      height: inherit;
+
+    }
+  }
+
+  .category-highlight_title-link {
+
+    &:hover {
+      color: $blue;
+    }
+  }
+
+  .category-highlight_title {
+    margin-top: 20px;
+
+    @include breakpoint($bp-small) {
+      margin-top: 0;
+    }
+
+    @include breakpoint($bp-large) {
+      margin-top: 25px;
+    }
+  }
+
+  .category-highlight_teaser {
+    color: $black-55;
+    margin-bottom: 0;
+  }
+} // closes .ama-theme

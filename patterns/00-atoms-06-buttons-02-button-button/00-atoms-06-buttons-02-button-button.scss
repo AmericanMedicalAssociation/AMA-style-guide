@@ -1,0 +1,54 @@
+.ama-theme {
+  %button,
+  button,
+  .button {
+    @extend %background-transition;
+    /* stylelint-disable property-no-vendor-prefix */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /* stylelint-enable */
+    background-color: $purple;
+    border-radius: 0;
+    border: 1px solid $purple;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 20px 40px;
+
+    &:active,
+    &:hover,
+    &:focus {
+      background-color: $purple-darker;
+      border-color: $purple-darker;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .button-full {
+    @extend %button;
+    width: 100%;
+  }
+
+  .button-small {
+    padding: 7px 20px;
+  }
+
+  .button-secondary {
+    background-color: $white;
+    color: $purple;
+    border: 1px solid $purple;
+
+    &:active,
+    &:hover,
+    &:focus {
+      border-color: $purple-darker;
+      background-color: #e3dce9;
+      color: $purple-darker;
+    }
+  }
+} //closes .ama-theme

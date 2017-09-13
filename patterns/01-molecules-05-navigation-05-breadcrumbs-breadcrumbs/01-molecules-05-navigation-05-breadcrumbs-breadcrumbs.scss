@@ -1,0 +1,20 @@
+.breadcrumbs {
+  margin: 50px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs .breadcrumb_list-item {
+  display: inline-block;
+  a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    &:hover {
+      color: $blue; 
+    }
+  }
+  .icon-next {
+    margin: 0 0.2em;
+  }
+}

@@ -1,0 +1,19 @@
+.news-featured {
+  @include rule-horizontal(1px, $gray-8, solid);
+  padding: 0;
+  width: 100%;
+}
+
+.news_label-featured {
+
+  @include breakpoint(1250px min-width) {
+    @include grid__unit--cols(3);
+  }
+}
+
+.news_list-featured {
+
+  @include breakpoint(1250px min-width) {
+    @include grid__unit--cols(9);
+  }
+}

@@ -1,0 +1,48 @@
+<div class="ec">
+    <header class="ec_header">
+        {% include 'organisms-ribbon' %}
+        {% include 'molecules-alert-info' %}
+        {% include '02-organisms/05-ec/01-ec-search-bar/ec-search-bar.twig' %}
+    </header>
+
+    <main class="ec_main-content">
+        {# hero #}
+        <section class="ec_hero container">
+            {% include 'molecules-hero-banner' with {'heroContent': heroContent} %}
+        </section>
+
+        {# card section #}
+        <section class="ec_cards-landscape">
+            {% include 'organisms-card-row-ec-five-up-left' with {'cardsLandscape': cardRowContent.cardsLandscape } %}
+        </section>
+
+        <section class="ec_cards-text">
+            {% include 'organisms-card-row-ec-four-up' with {'cardType': 'text'} %}
+            {% include 'atoms-button-link' with { 'content': cardRowContent.cardsNoImage.button.content, 'class': 'button-small ec_cards-text_button' } %}
+        </section>
+
+        <section class="ec_course-browser">
+            {% include 'organisms-ec-tabs-course-browser' %}
+        </section>
+
+        <section class="ec_cards-course-bundle">
+            {% include 'atoms-h2' with { 'content': cardRowContent.cardsCourseBundles.heading, 'class': 'ec-marketing-page_heading h1' } %}
+            {% include 'organisms-card-row-ec-four-up' with {'cardType': 'courseBundle'} %}
+        </section>
+
+        <section class="ec_testimonial layout">
+            {% include 'molecules-testimonial' with { 'content': testimonial } %}
+        </section>
+
+        <section class="ec_banner-cta-no-stacking layout">
+            {% include 'molecules-banner-cta-no-stacking' with { 'content': ctaBanner } %}
+        </section>
+
+        <section class="ec_partner-row container">
+            {% include 'organisms-ec-partner-row' %}
+        </section>
+    </main>
+
+    {% include 'organisms-footer' with { footer_class: "ec_footer" } %}
+
+</div>

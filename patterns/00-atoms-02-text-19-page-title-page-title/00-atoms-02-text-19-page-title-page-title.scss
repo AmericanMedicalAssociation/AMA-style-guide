@@ -1,0 +1,13 @@
+.page-title {
+  @include type($font-serif, 28px, $font-weight-medium, 1.1428571429);
+  @include gutter($margin-top-full...);
+  @include gutter($margin-bottom-full...);
+
+  @include breakpoint($bp-med-home min-width) {
+    @include type($font-serif, 38px, $font-weight-medium, 1.1052631579);
+  }
+
+  @include breakpoint($bp-large-home min-width) {
+    @include type($font-serif, 48px, $font-weight-medium, 1.0869565217);
+  }
+}

@@ -1,0 +1,17 @@
+.ama-theme {
+  .list_title-small {
+    // Likely need to chance this extend 
+    // once we have semantic classes on headings
+    @extend %h5;
+    margin-top: 40px;
+    //adjust margin bottom so it is visually closer to the comps (20px in comps)
+    margin-bottom: 15px;
+    text-transform: uppercase;
+
+    @include breakpoint($bp-small) {
+      margin-top: 50px;
+      //adjust margin bottom so it is visually closer to the comps (25px in comps)
+      margin-bottom: 20px;
+    }
+  }
+}

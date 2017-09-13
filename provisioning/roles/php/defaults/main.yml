@@ -1,4 +1,0 @@
----
-php_ini_memory_limit: 256M
-php_ini_error_reporting: "E_ALL"
-php_ini_display_errors: "true"

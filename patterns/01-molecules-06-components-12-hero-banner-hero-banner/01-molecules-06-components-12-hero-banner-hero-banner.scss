@@ -1,0 +1,204 @@
+.ama-theme {
+  .hub-hero,
+  .hero-banner {
+    width: 100%;
+    min-height: 200px;
+    max-width: 1200px;
+    display: flex;
+    margin: 24px 0;
+    align-items: flex-start;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include breakpoint($bp-small) {
+      min-height: 400px;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .hub-hero-inner,
+  .hero-banner-inner {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Split variant
+  .hub-hero-split,
+  .hero-banner-split {
+    align-items: stretch;
+
+    .hub-hero-inner,
+    .hero-banner-inner {
+      align-items: stretch;
+      padding: 0 20px;
+    }
+
+    .hub-hero_title,
+    .hero-banner_title {
+      order: 1;
+      padding: 20px;
+    }
+
+    .hub-hero_desc,
+    .hero-banner_desc {
+      order: 3;
+      margin-top: auto;
+      padding: 20px;
+      margin-bottom: 0;
+    }
+
+    .hub-hero_button-container,
+    .hero-banner_button-container {
+      order: 2;
+    }
+  }
+
+  .hub-hero_title,
+  .hero-banner_title {
+    background-color: rgba($white, 0.45);
+    padding: 20px 20px 8px;
+    @include type($font-sans-serif, 24px, $font-weight-thin, 1.11765);
+
+    @include breakpoint($bp-small) {
+      @include type($font-sans-serif, 28px, $font-weight-thin, 1.1428571429);
+    }
+    @include breakpoint($bp-med-home min-width) {
+      @include type($font-sans-serif, 38px, $font-weight-thin, 1.1052631579);
+    }
+    @include breakpoint($bp-large-home min-width) {
+      @include type($font-sans-serif, 46px, $font-weight-thin, 1.0869565217);
+    }
+  }
+
+  .hub-hero_desc,
+  .hero-banner_desc {
+    @extend %type-large;
+    padding: 0 20px 20px;
+    margin-bottom: 0;
+    background-color: rgba($white, 0.45);
+  }
+
+  .hub-hero_button-container,
+  .hero-banner_button-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    a {
+      margin: 10px 12px 0;
+    }
+  }
+
+  // no overlay variant
+  .hub-hero-no-overlay,
+  .hero-banner-no-overlay {
+    .hub-hero-inner,
+    .hero-banner-inner {
+      background-color: transparent;
+    }
+
+    .hub-hero_title,
+    .hero-banner_title {
+      background-color: transparent;
+    }
+
+    .hub-hero_desc,
+    .hero-banner_desc {
+      background-color: transparent;
+    }
+
+    .hub-hero_button-container,
+    .hero-banner_button-container {
+      margin-top: 24px;
+      margin-bottom: 10px;
+
+      @include breakpoint($bp-small) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  // side variant
+  %hero-banner-side,
+  .hub-hero-side,
+  .hero-banner-side {
+    align-items: stretch;
+
+    .hub-hero-inner,
+    .hero-banner-inner {
+      background-color: rgba($white, 0.45);
+      width: 100%;
+      margin: 0;
+      margin-right: auto;
+      text-align: left;
+      padding: 30px;
+
+      @include breakpoint($bp-small) {
+        width: 70%;
+      }
+
+      @include breakpoint($bp-med) {
+        width: 50%;
+      }
+    }
+
+    .hub-hero_title,
+    .hero-banner_title {
+      background-color: transparent;
+      padding: 0 0 8px;
+    }
+
+    .hub-hero_desc,
+    .hero-banner_desc {
+      background-color: transparent;
+      padding: 0 0 20px;
+    }
+
+    .hub-hero_button-container,
+    .hero-banner_button-container {
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: auto;
+
+      .button-small {
+        width: 100%;
+      }
+    }
+  }
+
+  .hub-hero-side-right,
+  .hero-banner-side-right {
+    @extend %hero-banner-side;
+
+    .hub-hero-inner,
+    .hero-banner-inner {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  // cta only variant
+
+  .hub-hero-cta-only,
+  .hero-banner-cta-only {
+    min-height: 0;
+    text-align: center;
+    padding: 1em;
+    background-color: $black-7;
+
+    .hub-hero_title,
+    .hero-banner_title {
+      background-color: transparent;
+      padding: 0 0 8px;
+    }
+
+    .hub-hero_desc,
+    .hero-banner_desc {
+      background-color: transparent;
+      padding: 0 0 20px;
+    }
+  }
+} // closes .ama-theme

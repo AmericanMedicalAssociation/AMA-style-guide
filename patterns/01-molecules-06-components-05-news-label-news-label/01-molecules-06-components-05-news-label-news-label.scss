@@ -1,0 +1,34 @@
+.ama-theme {
+  .rule_horizontal {
+    @include rule-horizontal(1px, $gray-8, solid);
+  }
+
+  .news_label-inner {
+    max-width: 174px;
+  }
+
+  .news_label_link {
+    @include type($font-sans-serif, 18px, $font-weight-bold, 22px);
+    color: $purple;
+
+    @include breakpoint($bp-med-home min-width) {
+      @include type($font-sans-serif, 24px, $font-weight-bold, 28px);
+    }
+
+    &:hover {
+      color: $blue;
+
+      .external {
+        fill: $blue;
+     }
+    }
+
+    .icon-external {
+      margin-left: 0.4em;
+    }
+
+    .external {
+      fill: $purple;
+    }
+  }
+} //closes .ama-theme

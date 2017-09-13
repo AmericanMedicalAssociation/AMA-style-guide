@@ -1,0 +1,23 @@
+<div class="topic_membership {{ class }}">
+  {% set tag = membership.cta ? 'div': 'a' %}
+  <{{tag}} class="topic_membership_container" href="#">
+    {% if membership.logo %}
+      {% include 'atoms-logo' with { 'link': '#', 'image': membership.logo, 'alt': 'logo', 'class': 'topic_membership_logo' } %}
+    {% endif %}
+
+    {% if membership.image %}
+      <div class="topic_membership_image">
+        {% include 'atoms-landscape-3x2' with { 'link': '#', 'image': membership.image, 'alt': 'image', 'class': default } %}
+      </div>
+    {% endif %}
+
+    <div class="topic_membership_text">
+      {% include 'atoms-h2' with { 'content': membership.title, 'class': 'topic_membership_title' } %}
+      {% include 'atoms-unordered' with { 'list': membership.list, 'class': default } %}
+
+      {% if membership.cta %}
+        {% include 'atoms-button-link' with { 'class': 'button-small', 'content': membership.cta } %}
+      {% endif %}
+    </div>
+  </{{tag}}>
+</div>

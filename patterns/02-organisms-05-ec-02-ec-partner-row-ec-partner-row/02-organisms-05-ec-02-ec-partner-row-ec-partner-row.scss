@@ -1,0 +1,55 @@
+.ama-theme {
+	.ec-partner-row {
+		margin: initial; 	/* override lists styles */
+		padding: initial; 	/* override lists styles */
+
+		@include breakpoint($bp-med){
+			margin-left: -15px;
+			width: calc(100% + 15px);
+		}
+
+		.ec-partner-card {
+			list-style-type: none;
+
+			@include breakpoint(0 $bp-small){
+				@include grid__unit--cols(6);
+				&:nth-child(n+5) {
+					display: none;
+				}
+				&:nth-child(odd) {
+					border-right: 5px solid transparent;
+				}
+				&:nth-child(even) {
+					border-left: 5px solid transparent;
+				}
+			}
+
+			@include breakpoint($bp-small $bp-med){
+				@include grid__unit--cols(4);
+				&:first-child {
+					border-right: 8px solid transparent;
+				}
+				&:nth-child(even) {
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+				}
+				&:nth-child(3) {
+					border-left: 8px solid transparent;
+				}
+				&:nth-child(n+4) {
+					display: none;
+				}
+			}
+
+			@include breakpoint($bp-med){
+				@include grid__unit--cols(2);
+				&:nth-child(n+1) {
+					border-left: 15px solid transparent;
+				}
+				&:nth-child(n+7) {
+					display: none;
+				}
+			}
+		}
+	}
+}

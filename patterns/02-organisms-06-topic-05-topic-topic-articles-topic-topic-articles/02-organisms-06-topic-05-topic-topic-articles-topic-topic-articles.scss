@@ -1,0 +1,27 @@
+// Topic Articles section.
+.topic_topic-articles .topic_article-preview_title {
+  font-size: 24px;
+}
+
+.topic_topic-articles .topic_article-preview_description {
+  font-size: 16px;
+}
+
+// Move the video up in the field order.
+.topic_topic-articles .topic_article-preview .fluid-width-video-wrapper {
+  order: -1;
+}
+
+// Move the topic label first in the field order.
+.topic_topic-articles .topic_article-preview-video .topic_article-preview_label {
+  order: -2;
+}
+
+// Ensure consistent top margins for elements in this section.
+.topic_topic-articles .topic_article-preview > * {
+  @include gutter($margin-top-half...);
+}
+
+.topic_topic-articles .topic_article-preview {
+  @include gutter($padding-bottom-full...);
+}

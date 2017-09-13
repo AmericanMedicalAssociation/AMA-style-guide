@@ -1,0 +1,5 @@
+<ul class="list_topic-related-articles">
+  <li class="list_item-topic-related-article">{% include 'molecules-article-preview-related' with { 'content': listTopicRelatedArticles.first.title } %}</li>
+  <li class="list_item-topic-related-article">{% include 'molecules-article-preview-related-no-image' with { 'content': listTopicRelatedArticles.second.title } %}</li>
+  <li class="list_item-topic-related-article">{% include 'molecules-article-preview-related' with { 'content': listTopicRelatedArticles.third.title } %}</li>
+</ul>

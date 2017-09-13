@@ -1,0 +1,14 @@
+.topic_related-articles {
+
+  .topic_article-preview_title {
+    @include type($font-serif, 21px, $font-weight-medium, 1.3333333333);
+    @include breakpoint($bp-med-home min-width) {
+      @include type($font-serif, 24px, $font-weight-medium, 1.2916666667);
+    }
+  }
+}
+
+.topic_related-articles_title {
+  @include gutter($padding-bottom-half...);
+  margin-bottom: 0;
+}

@@ -1,0 +1,52 @@
+.ama-theme {
+  .card-image-landscape {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    @include breakpoint($bp-med) {
+      max-width: 600px; //don't grow larger than the image width
+    }
+
+    &.card {
+      color: $black;
+      text-align: center;
+      height: 100%;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .card-image-landscape_image {
+    width: 100%;
+  }
+
+  .card-image-landscape_overlay {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.45);
+    bottom: 0;
+    padding: 24px 0;
+    width: 100%;
+
+    * {
+      margin: 0 24px;
+    }
+  }
+
+  .card-image-landscape_title {
+    @extend %type-larger;
+  }
+
+  .card-image-landscape_description {
+
+    @include breakpoint($bp-small) {
+      @include type($font-sans-serif, 18px, $font-weight-medium, 1.3333333333);
+    }
+
+    @include breakpoint($bp-large) {
+      @include type($font-sans-serif, 20px, $font-weight-medium, 1.3333333333);
+    }
+  }
+} // closes .ama-theme

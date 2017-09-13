@@ -1,0 +1,217 @@
+.ama-theme {
+  // Course Browser heading.
+  .tabs-course_browser_label {
+    margin: 25px 0;
+    text-align: center;
+  }
+
+  // Course Browser selector list.
+  .tabs-course_browser_list-tabs {
+    border: 1px $gray-8 solid;
+    list-style: none;
+    margin: 0 auto 2em;
+    max-width: 90%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+
+    &.open {
+      border: 2px $purple solid;
+
+      .icon-select svg {
+        fill: $purple;
+        transform: scaleY(-1);
+        filter: FlipV;
+        /* stylelint-disable property-no-vendor-prefix */
+        -ms-filter: "FlipV";
+        /* stylelint-enable */
+      }
+    }
+
+    @include breakpoint($bp-small $bp-med) {
+      max-width: 60%;
+    }
+
+    @include breakpoint($bp-med min-width) {
+      border: 0;
+      height: auto;
+      max-width: 100%;
+      padding: 0;
+
+      &.open {
+        border: 0;
+
+        .icon-select svg {
+          transform: initial;
+          filter: initial;
+          /* stylelint-disable property-no-vendor-prefix */
+          -ms-filter: "initial";
+          /* stylelint-enable */
+        }
+      }
+    }
+  }
+
+  // Course Browser tab.
+  .tabs-course_browser_list_item {
+    border-bottom: 3px transparent solid;
+    color: $black;
+    display: inline-block;
+    line-height: 2;
+    padding: 0;
+    margin-bottom: 0;
+    min-width: 190px;
+    text-align: center;
+
+    @include breakpoint($bp-med min-width) {
+      display: inline-block;
+      line-height: 1.3;
+      vertical-align: top;
+
+      &:hover {
+        border-bottom: 3px $purple solid;
+      }
+    }
+
+    a {
+      @extend %text-transition;
+      color: $black;
+      display: block;
+      font-weight: bold;
+      padding: 0;
+
+      svg {
+        fill: $blue;
+      }
+
+      &:hover {
+        color: $blue;
+      }
+
+      @include breakpoint($bp-med min-width) {
+        font-weight: normal;
+        padding: 15px;
+
+        &.active {
+          color: $black;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+
+        &:hover {
+          color: $black-55;
+        }
+      }
+    }
+  }
+
+  // Arrow icon.
+  .tabs-course_browser_list-tabs {
+    .icon-select {
+      position: absolute;
+      right: 11px;
+
+      svg {
+        @extend %icon-transition;
+        height: 9px;
+        width: 14px;
+      }
+
+      @include breakpoint($bp-med min-width) {
+        fill: $blue;
+        display: none;
+        margin: 0 auto;
+        position: relative;
+        right: initial;
+
+        svg {
+          height: 11px;
+          width: 18px;
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+
+    // Show icon for active selector
+    .active .icon-select {
+      @include breakpoint($bp-med min-width) {
+        display: block;
+      }
+    }
+  }
+
+  // Course browser CTAs.
+  .tabs-course_browser_ctas {
+    text-align: center;
+  }
+
+  .tabs-course_browser_cta-primary {
+    display: none;
+
+    @include breakpoint($bp-med) {
+      display: inline-block;
+      margin-right: 12px;
+    }
+  }
+
+  // Course cards layout.
+  .layout.layout-four-up.tabs-course_browser_list-cards {
+    margin: initial;  /* override lists styles */
+    padding: initial;   /* override lists styles */
+    display: block;
+    flex-direction: initial;
+    list-style: none;
+
+    @include breakpoint($bp-med) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  // Striping on tablet
+  .tabs-course_browser_list-cards {
+
+    @include breakpoint($bp-med max-width) {
+
+      .tabs-course_browser_list-cards-item:nth-child(even) {
+         a {
+          background: none;
+           &:hover {
+             background: #f7f7f7;
+           }
+        }
+      }
+    }
+  }
+
+  // Individual course card layout.
+  .tabs-course_browser_list-cards-item {
+    width: 100%;
+    margin-bottom: 0;
+
+    &:nth-of-type(4n),
+    &:nth-of-type(5n) {
+      display: none;
+    }
+
+    @include breakpoint($bp-med) {
+      margin-bottom: 24px;
+      max-width: calc((100vw - 60px - 72px) / 4);
+      flex-basis: calc((100vw - 60px - 72px) / 4);
+
+      &:nth-of-type(4n),
+      &:nth-of-type(5n) {
+        display: inline-block;
+      }
+    }
+
+    @include breakpoint($bp-large) {
+      max-width: calc((1260px - 60px - 72px) / 4);
+      flex-basis: calc((1260px - 60px - 72px) / 4);
+    }
+  }
+} // closes .ama-theme

@@ -1,0 +1,27 @@
+// Layout default setup.
+
+.flexbox .layout.layout_two_up-large {
+  @include grid__unit--cols(12);
+  justify-content: flex-start;
+}
+
+.layout_two_up-large-primary,
+.layout_two_up-large-secondary {
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(6);
+  }
+}
+
+.layout_two_up-large-primary {
+  @include breakpoint($bp-med) {
+    padding-right: 15px;
+  }
+}
+
+.layout_two_up-large-secondary {
+  @include breakpoint($bp-med) {
+    padding-left: 15px;
+  }
+}

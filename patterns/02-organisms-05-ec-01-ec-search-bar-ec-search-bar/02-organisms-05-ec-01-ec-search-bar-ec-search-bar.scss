@@ -1,0 +1,63 @@
+.ama-theme {
+  .ec_search-bar {
+    background-color: $black-3;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .ec_search-bar_inner {
+    display: flex; //This cannot invoke the grid() mixin b/c of justify-content settings
+    justify-content: space-between;
+    font-weight: 600;
+    margin: 0 auto;
+    padding-top: 26px;
+  }
+
+  .ec_search-bar_library {
+    display: none;
+    @include breakpoint($bp-med) {
+      display: inline-block;
+      margin-top: auto;
+    }
+  }
+
+  .ec_search-bar_library .button {
+    background-color: transparent;
+    border-width: 2px;
+    font-size: 18px;
+    max-width: 162px;
+    padding: 6px 56px;
+  }
+
+  .ec_search-bar_form {
+    display: block;
+    width: 100%;
+
+    @include breakpoint($bp-med) {
+      display: inline-block;
+      width: calc(100% - 20px - 168px); //minus .search-bar_form margin minus .search-bar_library .button
+    }
+
+    form {
+      padding-top: 16px;
+
+      .search-field_input {
+        font-size: 18px;
+        font-weight: 600;
+        height: 36px;
+      }
+
+      .icon-search {
+        height: 20px;
+        width: 20px;
+      }
+
+      .search-field_submit {
+        bottom: 8px;
+      }
+
+    }
+  }
+} // closes .ama-theme

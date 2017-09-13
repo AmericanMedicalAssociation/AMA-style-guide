@@ -1,0 +1,27 @@
+<form class="simple-step-form" method="get" action="" novalidate="novalidate">
+  <fieldset>
+    <p class="h2">To reach us by email, please fill out the following:</p>
+    {% include 'molecules-input-text' %}
+    {% include 'molecules-input-telephone' %}
+    {% include 'molecules-input-select' %}
+    {% include 'molecules-input-email' %}
+    {% include 'molecules-input-radio' %}
+    {% include 'molecules-input-month' %}
+    {% include 'molecules-input-number' %}
+    {% include 'molecules-input-textarea' %}
+    <div class="form-item">
+      <p>The AMA does not provide individual medical advice and cannot respond to emails regarding personal medical conditions. For medical concerns, contact your physician or health care provider.</p>
+      <p>* required fields</p>
+    </div>
+    <div class="form-item">
+      <p><strong>To reach us by mail:</strong></p>
+      <p>American Medical Association<br>
+      AMA Plaza<br>
+      330 N. Wabash Ave., Suite 39300<br>
+      Chicago, IL 60611-5885</p>
+    </div>
+    <div class="form-submit">
+      <input class="button-full" type="submit" name="op" value="Submit">
+    </div>
+  </fieldset>
+</form>

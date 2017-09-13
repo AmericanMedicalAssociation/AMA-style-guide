@@ -1,0 +1,40 @@
+.ama-theme {
+  .news_item-featured_row {
+    padding: 30px 0;
+
+    @include breakpoint($bp-med-home min-width) {
+      padding: 40px 0;
+    }
+
+    &:hover {
+      .news_item-featured_row_title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .news_item-featured_row_title {
+    @extend %type-hero;
+    margin-bottom: 18px;
+  }
+
+  .news_item-featured_row_byline {
+    @extend %type-smaller;
+    display: none;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+
+    @include breakpoint($bp-med-home min-width) {
+      display: block;
+    }
+  }
+
+  .news_item-featured_row_description {
+    @extend %type-large;
+    display: none;
+
+    @include breakpoint($bp-med-home min-width) {
+      display: block;
+    }
+  }
+} //closes .ama-theme

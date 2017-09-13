@@ -1,0 +1,20 @@
+.ribbon {
+  background-color: $purple;
+  position: relative;
+  z-index: 51;
+}
+
+.ribbon .container {
+  @include breakpoint($bp-med max-width) {
+    padding: 0;
+  }
+  flex-direction: row;
+}
+
+.ribbon_container {
+  display: flex;
+  @include breakpoint($bp-med max-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
