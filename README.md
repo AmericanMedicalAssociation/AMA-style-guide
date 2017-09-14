@@ -39,11 +39,14 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 **To deploy changes to github pages**
 
 - `gulp deploy` to build the production ready code and push to the `gh-pages` branch for display on https://americanmedicalassociation.github.io/AMA-style-guide/.
+
+**To deploy changes for consumption by our D8 site**
+
 - `gulp drupal-deploy` to deploy changes to the `dev-assets` branch for consumption by Drupal or another CMS.
 
-**To mark a new release of the Style Guide**
+**To mark a new release of the Style Guide for public consumers**
 
-_this should only be run on the `develop` branch`*`_
+_This should only be run on the `develop` branch`*`._
 
 - Make sure you are running the most up-to-date code
   - Updates will be rejected if they are non-fast-forward
