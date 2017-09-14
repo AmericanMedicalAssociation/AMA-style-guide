@@ -44,7 +44,7 @@ The style guide project maintains a number of branches:
 - `dev-assets` - the compiled, Drupal-consumed artifact for testing
 - `master` - the compiled production release that gets tagged.
 
-For more detail on how to deploy to these branches, see [Creating a Release](docs/creating_a_release.md)
+For more detail on how to deploy to these branches, see [Creating a Release](styleguide/docs/creating_a_release.md)
 
 ## Troubleshooting:
 ### Make sure your npm dependencies are up to date
