@@ -56,12 +56,13 @@ _WARNING: This should only be run on the `develop` branch!**\***_
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
 
 **\*Note:** To base a release on a specific commit, for example when the `develop` branch has had other PRs committed that should not be included in the release, do the following:
+
 1. Check out the commit from which you'd like to deploy.
 2. Run `gulp release` to deploy the release from that commit.
 
 #### To deploy changes to github pages _only_
 
-- `gulp deploy` to build the production ready code and push to the `gh-pages` branch for display on https://americanmedicalassociation.github.io/AMA-style-guide/.
+- `gulp deploy` to build the production ready code and push to the `gh-pages` branch for display on [https://americanmedicalassociation.github.io/AMA-style-guide/](https://americanmedicalassociation.github.io/AMA-style-guide/).
 
 #### To deploy changes _only_ for consumption by our D8 site
 
