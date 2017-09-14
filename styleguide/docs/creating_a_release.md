@@ -13,7 +13,7 @@ _WARNING: This should only be run on the `develop` branch!**\***_
 - Make sure you are running the most up-to-date code
   - Updates will be rejected if they are non-fast-forward
 - Update `package.json` with the new version number.
-- `gulp release` to build the files correctly, update version information, cut a tag, and deploy the files to _both_ `gh-pages` and `master`.
+- `gulp release` to build the files correctly, cut a tag, and deploy the files to _both_ `gh-pages` and `master`.
 - Navigate to the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases) to see the new release and add notes.
 
 Initial config via [TutsPlus](https://webdesign.tutsplus.com/tutorials/combining-pattern-lab-with-gulp-for-improved-workflow--cms-22187).
