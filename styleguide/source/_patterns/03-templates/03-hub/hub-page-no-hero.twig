@@ -1,0 +1,40 @@
+{% include 'organisms-hub-header' %}
+
+<main class="hub container">
+  {# begin the next section #}
+  <section class="hub-section">
+    {# Each section should start with a section header #}
+    {% include 'molecules-section-header' %}
+    <div class="hub-card-row grid">
+      {% include 'molecules-hub-card' %}
+      {% include 'molecules-hub-card-portrait' %}
+      {% include 'molecules-hub-card-no-image' %}
+    </div>
+    <div class="hub-card-row grid">
+      {% include 'molecules-hub-card-no-image' %}
+      {% include 'molecules-hub-card' %}
+      {% include 'molecules-hub-card-portrait' %}
+    </div>
+  </section>
+
+  {# begin the next section #}
+  <section class="hub-section">
+    {# Each section should start with a section header #}
+      {% include 'molecules-section-header' %}
+      {% include 'molecules-hub-cta-half-left' %}
+      {% include 'molecules-hub-cta-half' %}
+      {% include 'molecules-hub-cta-half-left' %}
+      {% include 'molecules-hub-cta-half' %}
+      {% include 'molecules-hub-cta-half-left' %}
+  </section>
+
+  {# begin the next section #}
+  <section class="hub-section">
+    {# Each section should start with a section header #}
+    {% include 'molecules-section-header' %}
+    {% include 'organisms-hub-card-row' %}
+    {% include 'organisms-hub-card-row' %}
+  </section>
+</main>
+
+{% include 'organisms-footer' %}

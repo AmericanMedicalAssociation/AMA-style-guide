@@ -1,9 +1,9 @@
-<a href="{{ url }}" class="layout layout_two_up-heavy-left news_item-standard_row">
-  <div class="layout_two_up-heavy-left-primary news_item-standard_row_text">
+<a href="{{ url }}" class="news_item-standard_row grid">
+  <div class="col-width-8 news_item-standard_row_text">
     {% include 'atoms-h2' with { 'content': '70 char max, lorem ipsum dolor sit amet, consectetuer adipiscing elit.', 'class': 'news_item-standard_row_title' } %}
     {% include 'atoms-paragraph' with { 'content': '190 char max, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem. Aenean porttitor justo vel nisl efficitur, praesent fringilla sit amet nulla eu consequat. Nam ac diam sem.', 'class': 'news_item-standard_row_description' } %}
   </div>
-  <div class="layout_two_up-heavy-left-secondary news_item-standard_row_image">
+  <div class="col-width-4 news_item-standard_row_image">
     {% include 'atoms-landscape-3x2' %}
   </div>
 </a>

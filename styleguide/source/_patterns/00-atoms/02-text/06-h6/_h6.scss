@@ -1,11 +1,13 @@
-h6,
-.h6,
-%h6 {
-  @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
-  margin-bottom: 6px;
+.ama-theme {
+  h6,
+  .h6,
+  %h6 {
+    @include type($font-sans-serif, 14px, $font-weight-bold, 1.5);
+    margin-bottom: 6px;
 
-  @include breakpoint($bp-med min-width) {
-    @include type($font-sans-serif, 15px, $font-weight-bold, 1.4666666667);
-    margin-bottom: 9px;
+    @include breakpoint($bp-med min-width) {
+      @include type($font-sans-serif, 15px, $font-weight-bold, 1.4666666667);
+      margin-bottom: 9px;
+    }
   }
 }

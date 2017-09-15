@@ -42,8 +42,115 @@ Class names and hierarchy follow the [BEM (Block Element Modifier)](http://getbe
 ### Responsive implementation using Breakpoint-Sass
 All patterns in the AMA Style Guide are fully responsive. We use [Breakpoint-Sass](http://breakpoint-sass.com/) to manage our media queries. Breakpoint is fairly simple to use and has a very thorough [wiki](https://github.com/at-import/breakpoint/wiki) explaining its useage and capabilities.
 
-### Sass-Grid
-Some of our layouts currently utilize the [Sass-grid](https://github.com/digitaledgeit/sass-grid) grid system. Sass-grid is a very lightweight, flexbox-based grid system.
+### Layouts
+
+The layouts molecules are now deprecated. To give structure to organisms and templates, please follow the grid and columns method outlined below.
+
+
+### Grids and columns
+
+#### Basics
+
+The style guide uses two primary methods for applying a [CSS Grid layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout): 1) using our custom `.grid` and `.col-width-x` classes or 2) using the sass mixins `grid()` and `grid__unit--cols(x)`.
+
+Under the hood, both the `.grid` class and the `@grid` mixin leverage [sass-grid](https://github.com/digitaledgeit/sass-grid), which is a very lightweight, flexbox-based grid system. Flexbox enables us to created nested, responsive grids and gives us a great deal of control over our grid elements. the `sass-grid` library makes using flexbox simple, while also allowing for graceful degradation where flexbox is not supported. When we use the classes versus using the mixins depends on the specific needs of the pattern you are creating.
+
+#### Choosing the right method
+
+##### Class Method
+
+The class method is the preferred method for adding columns to control a template or organism's structure. Start by adding an element with a `.grid` or `.container-with-grid` class (we'll get to the difference a little later). This grid instantiates a flexbox wrapper for descendant elements.
+
+Then add elements with `.col-width-x` classes, where 'x' should be replaced by the number of columns you want the element to span. We use a 12 column grid, so for any given `.grid` container, make sure that the `.col-width-x` numbers add up to a total of 12.
+
+**Example:**
+
+```
+<a href="#" class="grid">
+  <div class="col-width-8">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="col-width-4">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+```
+
+The `col-width-x` classes include default left and right padding. At our mobile breakpoint, they default to `width:100%` (in other words, multiple columns collapse into a single-column layout).
+
+##### Mixin Method
+If you need to specify different gutters, or use a different mobile behavior for your pattern , apply the `grid()` and the `grid__unit--cols(x)` _mixins_ to your named classes rather than using the `.grid` and `.col-width-x` _classes_.
+
+**Example:**
+
+Markup
+
+```
+<a href="#" class="news-section">
+  <div class="news-section_left">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="news-section_right">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+```
+
+SCSS
+
+```
+.news-section {
+  @include grid(); 
+}
+.news-section_left {
+  @include grid__unit--cols(8);
+}
+.news-section_right {
+  @include grid__unit--cols(4);
+}
+```
+
+##### Warning!
+
+**Avoid** mixing usage of the `.grid` _class_ and the `grid__unit--cols(x)` _mixin_. Similarly, do not combine the `grid()` _mixin_ with the `.col-width-x` _classes_. Parent and child elements should be consistent--use either classes **or** mixins but **not both**. This is to maintain clarity and make it more intuitive for a developer to see how the grid's being implemented in a given pattern.
+
+**Do not do this:**
+
+Markup
+
+```
+<a href="#" class="news-section grid">
+  <div class="news-section_right">
+    {% include '09-text.twig' %}
+  </div>
+  <div class="news-section_left">
+    {% include '09-text.twig' %}
+  </div>
+</a>
+```
+
+SCSS
+
+```
+.news-section_right {
+  @include grid__unit--cols(8);
+}
+.news-section_left {
+  @include grid__unit--cols(4);
+}
+```
+
+#### `.container` vs `.container-with-grid` vs `.grid`
+
+`.container`: has our default max-width, margins, and gutters applied. Useful for ensuring that patterns included in a template all have uniform spacing.
+
+`.grid`: has no set max-width or default gutters or margins. This just applies the flexbox class to an element.
+
+`.container-with-grid`: applies the default margins and gutters and instantiates flexbox.
+
+#### Gutters
+
+If you need to specify gutters on a certain element, use the `@include gutters()` mixin or the `$gutter` and `$gutter-mobile` responsive variables.
 
 ### Using Placeholders
 When appropriate, please extend placeholders rather than classes:

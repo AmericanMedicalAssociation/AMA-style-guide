@@ -7,7 +7,7 @@
 
     <main class="ec_main-content">
         {# hero #}
-        <section class="ec_hero layout layout-one-up">
+        <section class="ec_hero container">
             {% include 'molecules-hero-banner' with {'heroContent': heroContent} %}
         </section>
 
@@ -38,13 +38,11 @@
             {% include 'molecules-banner-cta-no-stacking' with { 'content': ctaBanner } %}
         </section>
 
-        <section class="ec_partner-row">
+        <section class="ec_partner-row container">
             {% include 'organisms-ec-partner-row' %}
         </section>
     </main>
 
-    <footer class="ec_footer">
-        {% include 'organisms-footer' %}
-    </footer>
+    {% include 'organisms-footer' with { footer_class: "ec_footer" } %}
 
 </div>
