@@ -1,74 +1,76 @@
 /*------------------------------------*\
     $SEARCH FIELD
 \*------------------------------------*/
-.search-field {
-  display: block;
-  position: relative;
-  width: 100%;
-  border-bottom: 2px solid $blue;
-  padding-top: 100px;
-}
-.search-field_label {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  @if support-legacy-browser(ie, "7") {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  }
-  clip: rect(1px, 1px, 1px, 1px);
-}
-.search-field_input {
-  position: absolute;
-  bottom: 0;
-  padding: 0 100px 20px 0;
-  color: $blue;
-
-  &[type="search"] {
-    border: 0;
-    font-size: 42px;
-    line-height: 1.16;
-    background-color: transparent;
-  }
-  &[type="search"]:focus {
-    border: 0;
-    outline: 0;
-  }
-}
-.search-field_submit {
-  position: absolute;
-  right: 0;
-  bottom: 20px;
-  top: auto;
-  color: transparent;
-
-  &[type="submit"] {
-    border: 0;
-    background-color: transparent;
-  }
-  &[type="submit"]:focus {
-    outline: 0;
-    border: 0;
-    background-color: rgba($blue, 0.1);
-  }
-}
-.search-field_reset {
-  display: none;
-  position: absolute;
-  right: 40px;
-  bottom: 20px;
-  color: transparent;
-
-  &[type="reset"] {
-    border: 0;
-    background-color: transparent;
-  }
-  &[type="reset"]:focus {
-    outline: 0;
-    border: 0;
-    background-color: rgba($blue, 0.1);
-  }
-  &.is-active {
+.ama-theme {
+  .search-field {
     display: block;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid $blue;
+    padding-top: 100px;
   }
-}
+  .search-field_label {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    @if support-legacy-browser(ie, "7") {
+      clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+    }
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  .search-field_input {
+    position: absolute;
+    bottom: 0;
+    padding: 0 100px 20px 0;
+    color: $blue;
+
+    &[type="search"] {
+      border: 0;
+      font-size: 42px;
+      line-height: 1.16;
+      background-color: transparent;
+    }
+    &[type="search"]:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+  .search-field_submit {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    top: auto;
+    color: transparent;
+
+    &[type="submit"] {
+      border: 0;
+      background-color: transparent;
+    }
+    &[type="submit"]:focus {
+      outline: 0;
+      border: 0;
+      background-color: rgba($blue, 0.1);
+    }
+  }
+  .search-field_reset {
+    display: none;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+    color: transparent;
+
+    &[type="reset"] {
+      border: 0;
+      background-color: transparent;
+    }
+    &[type="reset"]:focus {
+      outline: 0;
+      border: 0;
+      background-color: rgba($blue, 0.1);
+    }
+    &.is-active {
+      display: block;
+    }
+  }
+} //closes .ama-theme

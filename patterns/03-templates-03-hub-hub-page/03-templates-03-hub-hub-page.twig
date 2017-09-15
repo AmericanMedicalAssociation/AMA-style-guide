@@ -1,0 +1,28 @@
+{% include 'organisms-hub-header' %}
+
+<main class="hub container">
+  {# Some type of hero #}
+  <section class="hub-section hub-section_hero">
+    {% include 'molecules-hub-hero-side' %}
+  </section>
+
+  {# begin the next section #}
+  <section class="hub-section">
+    {# Each section should start with a section header #}
+    {% include 'molecules-section-header' %}
+    {% include 'organisms-hub-card-row' %}
+    <div class="hub-card-row grid">
+      {% include 'molecules-hub-card' %}
+      {% include 'molecules-hub-card-portrait' %}
+      {% include 'molecules-hub-card-no-image' %}
+    </div>
+    {% include 'organisms-hub-card-row' %}
+    <div class="hub-card-row grid">
+      {% include 'molecules-hub-card-no-image' %}
+      {% include 'molecules-hub-card' %}
+      {% include 'molecules-hub-card-portrait' %}
+    </div>
+  </section>
+</main>
+
+{% include 'organisms-footer' %}

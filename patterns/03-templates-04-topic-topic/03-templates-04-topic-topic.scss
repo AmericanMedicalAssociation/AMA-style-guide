@@ -25,9 +25,9 @@
 
 // Style the topic labels for each section consistently.
 .topic .title-label {
-  margin-bottom: 0; // @todo remove this from elsewhere where it's now redundant
+  margin-bottom: 0;
   line-height: 1.38889;
-  @include gutter($padding-bottom-half...); // @todo remove quarter var from vars if not used
+  @include gutter($padding-bottom-half...);
   @include rule-horizontal-bottom(1px, $black-20, solid);
 }
 

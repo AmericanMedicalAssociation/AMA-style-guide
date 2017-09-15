@@ -1,1 +1,7 @@
-No scss available for this pattern.
+// Layout default setup.
+
+.flexbox .layout.layout_one_up {
+  @include grid--direction-col();
+  @include grid__unit--cols(12);
+  flex: 100%;
+}

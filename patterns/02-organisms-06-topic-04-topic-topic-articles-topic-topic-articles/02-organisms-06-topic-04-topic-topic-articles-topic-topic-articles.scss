@@ -19,9 +19,9 @@
 
 // Ensure consistent top margins for elements in this section.
 .topic_topic-articles .topic_article-preview > * {
-  @include gutter($margin-top-half...);
+  margin-top: $gutter-half;
 }
 
 .topic_topic-articles .topic_article-preview {
-  @include gutter($padding-bottom-full...);
+  padding-bottom: $gutter;
 }
