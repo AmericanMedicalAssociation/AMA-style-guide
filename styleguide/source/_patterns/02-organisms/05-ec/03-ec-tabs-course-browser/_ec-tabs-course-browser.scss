@@ -78,15 +78,8 @@
     }
 
     a {
-      color: $black;
-
-      @include breakpoint($bp-med min-width) {
-        color: $black-20;
-      }
-    }
-
-    a {
       @extend %text-transition;
+      color: $black;
       display: block;
       font-weight: bold;
       padding: 0;
@@ -100,6 +93,7 @@
       }
 
       @include breakpoint($bp-med min-width) {
+        color: $black-20;
         font-weight: normal;
         padding: 15px;
 
