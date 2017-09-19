@@ -1,5 +1,10 @@
 // Set mobile order.
 .topic .grid-region {
+
+  .grid-region_content:not(:first-child){
+    @include gutter($padding-top-full...);
+  }
+
   // First column.
   &:nth-child(1n) {
     order: 2;
