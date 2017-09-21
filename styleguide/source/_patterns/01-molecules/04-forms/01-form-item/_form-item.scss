@@ -139,12 +139,12 @@
 
     // Float two fields
     @include breakpoint($bp-small) {
-      &.layout_two_up-1,
-      &.layout_two_up-2 {
+      &.form-item-primary,
+      &.form-item-secondary {
         width: calc(50% - 10px);
       }
 
-      &.layout_two_up-2 {
+      &.form-item-secondary {
         float: right;
         clear: none;
       }
