@@ -1,10 +1,11 @@
 .topic_promotion {
-  @include rule-horizontal-bottom(1px, $gray-8, solid);
-  @include gutter($padding-bottom-full...);
-}
-
-.topic_promotion .topic_promotion_container {
-  background: $black-7;
+  ul, ol {
+    margin: 9px 0 0 0;
+    padding: 0 0 0 20px;
+  }
+  .topic_promotion_container {
+    background: $black-7;
+  }
 }
 
 // If the container is rendered as an <a> element (if there's no CTA button).

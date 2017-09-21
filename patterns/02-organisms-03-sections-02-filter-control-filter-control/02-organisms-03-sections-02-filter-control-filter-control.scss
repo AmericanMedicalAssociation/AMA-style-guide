@@ -1,111 +1,130 @@
-
-.filter-control {
-
-  @include breakpoint($bp-small) {
-    border-bottom: 1px solid $gray-8;
-    padding-bottom: 15px;
-  }
-}
-
-.filter-control_primary {
-  background-color: $black-3;
-  margin-bottom: 30px;
-
-  .layout {
-    align-items: center;
-    padding: 0;
+.ama-theme {
+  .filter-control {
 
     @include breakpoint($bp-small) {
+      border-bottom: 1px solid $gray-8;
+      padding-bottom: 15px;
+    }
+  }
+
+  .filter-control_primary {
+    background-color: $black-3;
+    margin-bottom: 30px;
+
+    @include breakpoint($bp-small) {
+      @include grid();
       padding: 0 20px;
     }
   }
 
-  .layout_two_up-heavier-left-secondary {
-    display: flex;
-    align-items: stretch;
-  }
-
-  .filter-toggle {
-    justify-content: flex-start;
-
+  .filter-control_container-results-count {
+    padding: 20px;
     @include breakpoint($bp-small) {
-      min-height: 80px;
-      justify-content: center;
+      @include grid__unit--cols(7);
+      display: inline-block;
+      padding-left: 0px;
+      width: 100%;
+    }
+
+    .filter-toggle {
+      justify-content: flex-start;
+
+      @include breakpoint($bp-small) {
+        min-height: 80px;
+        justify-content: center;
+      }
+    }
+
+    .link-blue {
+      float: right;
+      display: none;
+
+      @include breakpoint($bp-small) {
+        display: inline-block;
+      }
     }
   }
 
-  .link-blue {
-    float: right;
-    display: none;
-
+  .filter-control_container-toggle {
     @include breakpoint($bp-small) {
+      @include grid__unit--cols(5);
       display: inline-block;
     }
   }
 
-  @include breakpoint($bp-small max-width) {
-    .layout_two_up-heavier-left-primary {
-      padding: 20px;
+  .filter-control_secondary {
+    display: none;
+
+    @include breakpoint($bp-small) {
+      @include grid();
+      display: block;
+      padding: 0 20px;
     }
   }
-}
 
-.filter-control_secondary {
-  display: none;
-
-  @include breakpoint($bp-small) {
-    display: block;
+  .filter-control_container-sort {
+    @include breakpoint($bp-small) {
+      @include grid__unit--cols(5);
+      display: inline-block;
+    }
   }
-}
 
-.applied-filters-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: none;
-
-  @include breakpoint($bp-med) {
-    display: block;
+  .filter-control_container-filters {
+    @include breakpoint($bp-small) {
+      @include grid__unit--cols(7);
+      display: inline-block;
+    }
   }
-}
 
-.applied-filters-list_item {
-  display: inline-block;
-  margin-right: 10px;
-}
+  .applied-filters-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
 
-.filter-control_sort {
-  display: flex;
-
-  select {
-    height: 50px;
+    @include breakpoint($bp-med) {
+      display: block;
+    }
   }
-}
 
-.filter-control_sort-icons {
-  border: 1px solid $gray-8;
-  padding: 9px 9px 2px;
-  margin: 0 0 0 10px;
+  .applied-filters-list_item {
+    display: inline-block;
+    margin-right: 10px;
+  }
 
-  .icon {
-    height: 30px;
-    width: 30px;
+  .filter-control_sort {
+    display: flex;
 
-    svg {
+    select {
+      height: 50px;
+    }
+  }
+
+  .filter-control_sort-icons {
+    border: 1px solid $gray-8;
+    padding: 9px 9px 2px;
+    margin: 0 0 0 10px;
+
+    .icon {
       height: 30px;
       width: 30px;
-      fill: $gray-8;
+
+      svg {
+        height: 30px;
+        width: 30px;
+        fill: $gray-8;
+      }
+    }
+
+    &:active,
+    &:hover,
+    &:focus,
+    &.is-active {
+      border: 1px solid $purple;
+
+      .icon svg {
+        fill: $purple;
+      }
     }
   }
-
-  &:active,
-  &:hover,
-  &:focus,
-  &.is-active {
-    border: 1px solid $purple;
-
-    .icon svg {
-      fill: $purple;
-    }
-  }
-}
+} // closes .ama-theme

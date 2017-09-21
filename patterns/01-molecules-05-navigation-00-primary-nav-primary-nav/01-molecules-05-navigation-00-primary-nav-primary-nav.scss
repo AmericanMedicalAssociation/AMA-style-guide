@@ -1,77 +1,166 @@
-.nav-primary {
-  float: left;
+.ama-theme {
+  .nav-primary {
+    float: left;
 
-  @include breakpoint($bp-med-home) {
-    float: none;
-    clear: both;
-    margin: 0 auto;
-    width: 700px;
-  }
-  @include breakpoint($bp-large-home) {
-    float: right;
-    margin: 0;
-    clear: none;
-    width: 640px;
-  }
-}
-
-// Mobile overlay
-.nav-primary_overlay-mobile {
-  transition: opacity 0.25s ease-in-out;
-  background: #384047;
-  height: 100%;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  width: 0;
-  z-index: 0;
-  @include breakpoint($bp-med-home min-width) {
-    z-index: 1;
-    //top: 271px;
+    @include breakpoint($bp-med-home) {
+      float: none;
+      clear: both;
+      margin: 0 auto;
+      width: 700px;
+    }
+    @include breakpoint($bp-large-home) {
+      float: right;
+      margin: 0;
+      clear: none;
+      width: 640px;
+    }
   }
 
-  @include breakpoint($bp-large-home) {
-    z-index: 1;
-    //top: 198px;
+  // Mobile overlay
+  .nav-primary_overlay-mobile {
+    transition: opacity 0.25s ease-in-out;
+    background: #384047;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 0;
+    z-index: 0;
+    @include breakpoint($bp-med-home min-width) {
+      z-index: 1;
+      //top: 271px;
+    }
+
+    @include breakpoint($bp-large-home) {
+      z-index: 1;
+      //top: 198px;
+    }
   }
-}
 
-.nav-primary_overlay-mobile-on {
-  opacity: 0.85;
-  width: 100%;
-}
-
-// The primary navigation list.
-.nav-primary_list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  @include breakpoint($bp-med-home max-width) {
-    @include transition(all, 0.2s, ease-in-out);
-    background-color: $black-7;
-    left: 0;
-    top: 81px;
-    position: absolute;
+  .nav-primary_overlay-mobile-on {
+    opacity: 0.85;
     width: 100%;
   }
 
-  @include breakpoint($bp-med-home min-width) {
-    background-color: $white;
-    top: 0;
-    justify-content: space-between;
-  }
-}
+  // The primary navigation list.
+  .nav-primary_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-// Add hover styling to the primary navigation.
-.body-nav-primary-open {
-  @include breakpoint($bp-med-home min-width) {
-    .nav-primary_section > .link-nav-primary {
-      color: $gray-8;
+    @include breakpoint($bp-med-home max-width) {
+      @include transition(all, 0.2s, ease-in-out);
+      background-color: $black-7;
+      left: 0;
+      top: 81px;
+      position: absolute;
+      width: 100%;
     }
 
-    .nav-primary_section-active,
-    .nav-primary_section:hover {
+    @include breakpoint($bp-med-home min-width) {
+      background-color: $white;
+      top: 0;
+      justify-content: space-between;
+    }
+  }
+
+  // Add hover styling to the primary navigation.
+  .body-nav-primary-open {
+    @include breakpoint($bp-med-home min-width) {
+      .nav-primary_section > .link-nav-primary {
+        color: $gray-8;
+      }
+
+      .nav-primary_section-active,
+      .nav-primary_section:hover {
+        > .link-nav-primary {
+          color: $black;
+          border-bottom: 20px $purple solid;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  .nav-primary_section-active {
+    > .link-nav-primary {
+
+      @include breakpoint($bp-large-home min-width) {
+        padding-bottom: 32px;
+      }
+    }
+
+    .nav-primary_section_subnav {
+      display: flex;
+      height: auto;
+    }
+  }
+
+  // Mobile menu interaction
+  .nav-primary_list-mobile-closed {
+    left: -200%;
+  }
+
+  .nav-primary_list-mobile-open {
+    left: 0;
+  }
+
+  // List item in the primary navigation.
+  .nav-primary_section {
+    font-weight: $font-weight-bold;
+    position: static;
+    margin-bottom: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+
+    @include breakpoint($bp-med-home max-width) {
+      position: relative;
+      border-bottom: 1px $gray-8 solid;
+
+      .link-nav-primary {
+        padding: 15px 30px;
+        width: 100%
+      }
+
+      .icon-select {
+        position: absolute;
+        right: 25px;
+        top: 15px;
+
+        svg {
+          @include rotate(-90);
+          fill: $blue;
+        }
+      }
+    }
+
+    @include breakpoint($bp-med-home min-width) {
+      display: inline-block;
+      padding-right: 28px;
+      float: left;
+
+      &:last-of-type {
+        padding-right: 0;
+      }
+
+      .icon-select {
+        display: none
+      }
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      padding-right: 25px;
+    }
+  }
+
+  .nav-primary_section:hover {
+    @include breakpoint($bp-med-home) {
       > .link-nav-primary {
         color: $black;
         border-bottom: 20px $purple solid;
@@ -79,361 +168,274 @@
       }
     }
   }
-}
 
-.nav-primary_section-active {
-  > .link-nav-primary {
+  // The Sub nav.
+  ul.nav-primary_section_subnav {
+    @include grid__unit--cols(12);
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: none;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include breakpoint($bp-med-home min-width) {
+      justify-content: flex-start;
+      flex-direction: row;
+      position: absolute;
+      top: 221px;
+      left: 0;
+      right: 0;
+      padding: 20px 30px;
+      background: $black-7;
+      width: 100vw;
+      z-index: 1;
+    }
+
+    @include breakpoint($bp-large-home) {
+      @include grid__unit--cols(12.5);
+      left: -30px;
+      right: -30px;
+      top: 146px;
+    }
+  }
+
+  // contains primary items and tertiary container
+  .nav-primary_section_subnav_container-primary {
+    @include breakpoint($bp-med-home min-width) {
+      @include grid__unit--cols(3);
+      display: flex;
+      flex-direction: column;
+      padding-right: 15px;
+    }
+    @include breakpoint($bp-large-home min-width) {
+      @include grid__unit--cols(4);
+      padding-left: 15px;
+    }
+  }
+
+  // contains 'secondary' items
+  .nav-primary_section_subnav_container-secondary {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint($bp-med-home min-width) {
+      @include grid__unit--cols(9);
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      align-content: flex-start;
+      padding-left: 15px;
+
+      .nav-primary_section_subnav_item {
+        @include grid__unit--cols(5.5);
+        margin-right: 20px;
+        padding: 30px 0;
+        border-top: 1px solid $gray-8;
+
+        &:nth-of-type(-n+2) {
+          border-top: none;
+        }
+
+        .link-nav-primary {
+          font-size: 18px;
+          font-weight: $font-weight-bold;
+          line-height: 25px;
+          padding: 0;
+        }
+      }
+    }
 
     @include breakpoint($bp-large-home min-width) {
-      padding-bottom: 32px;
-    }
-  }
+      @include grid__unit--cols(8);
 
-  .nav-primary_section_subnav {
-    display: flex;
-    height: auto;
-  }
-}
+      .nav-primary_section_subnav_item {
+        @include grid__unit--cols(3.5);
 
-// Mobile menu interaction
-.nav-primary_list-mobile-closed {
-  left: -200%;
-}
-
-.nav-primary_list-mobile-open {
-  left: 0;
-}
-
-// List item in the primary navigation.
-.nav-primary_section {
-  font-weight: $font-weight-bold;
-  position: static;
-  margin-bottom: 0;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  &.is-hidden {
-    display: none;
-  }
-
-  @include breakpoint($bp-med-home max-width) {
-    position: relative;
-    border-bottom: 1px $gray-8 solid;
-
-    .link-nav-primary {
-      padding: 15px 30px;
-      width: 100%
-    }
-
-    .icon-select {
-      position: absolute;
-      right: 25px;
-      top: 15px;
-
-      svg {
-        @include rotate(-90);
-        fill: $blue;
-      }
-    }
-  }
-
-  @include breakpoint($bp-med-home min-width) {
-    display: inline-block;
-    padding-right: 28px;
-    float: left;
-
-    &:last-of-type {
-      padding-right: 0;
-    }
-
-    .icon-select {
-      display: none
-    }
-  }
-
-  @include breakpoint($bp-large-home min-width) {
-    padding-right: 25px;
-  }
-}
-
-.nav-primary_section:hover {
-  @include breakpoint($bp-med-home) {
-    > .link-nav-primary {
-      color: $black;
-      border-bottom: 20px $purple solid;
-      padding-bottom: 30px;
-    }
-  }
-}
-
-// The Sub nav.
-.nav-primary_section_subnav {
-  @include grid__unit--cols(12);
-  flex-direction: column;
-  flex-wrap: wrap;
-  display: none;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @include breakpoint($bp-med-home min-width) {
-    justify-content: flex-start;
-    flex-direction: row;
-    position: absolute;
-    top: 221px;
-    left: 0;
-    right: 0;
-    padding: 20px 30px;
-    background: $black-7;
-    width: 100vw;
-    z-index: 1;
-  }
-
-  @include breakpoint($bp-large-home) {
-    @include grid__unit--cols(12.5);
-    left: -30px;
-    right: -30px;
-    top: 146px;
-  }
-}
-
-// contains primary items and tertiary container
-.nav-primary_section_subnav_container-primary {
-  @include breakpoint($bp-med-home min-width) {
-    @include grid__unit--cols(3);
-    display: flex;
-    flex-direction: column;
-    padding-right: 15px;
-  }
-  @include breakpoint($bp-large-home min-width) {
-    @include grid__unit--cols(4);
-    padding-left: 15px;
-  }
-}
-
-// contains 'secondary' items
-.nav-primary_section_subnav_container-secondary {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  @include breakpoint($bp-med-home min-width) {
-    @include grid__unit--cols(9);
-    display: flex;
-    flex-direction: row;
-    flex-flow: row wrap;
-    align-content: flex-start;
-    padding-left: 15px;
-
-    .nav-primary_section_subnav_item {
-      @include grid__unit--cols(5.5);
-      margin-right: 20px;
-      padding: 30px 0;
-      border-top: 1px solid $gray-8;
-
-      &:nth-of-type(-n+2) {
-        border-top: none;
-      }
-
-      .link-nav-primary {
-        font-size: 18px;
-        font-weight: $font-weight-bold;
-        line-height: 25px;
-        padding: 0;
-      }
-    }
-  }
-
-  @include breakpoint($bp-large-home min-width) {
-    @include grid__unit--cols(8);
-
-    .nav-primary_section_subnav_item {
-      @include grid__unit--cols(3.5);
-
-      &:nth-of-type(-n+3) {
-        border-top: none;
-      }
-    }
-  }
-}
-
-// contains 'tertiary' items
-.nav-primary_list_sub-subnav-container {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  // Style the tertiary items at Mobile
-  .nav-primary_section_subnav_item {
-    font-weight: $font-weight-medium;
-    padding-left: 10px;
-
-    .link-nav-primary  {
-      padding: 10px 30px;
-
-      .icon-select {
-        top: 10px;
-      }
-    }
-  }
-
-  @include breakpoint($bp-med-home) {
-    margin-top: 15px;
-
-    .nav-primary_section_subnav_item {
-      font-weight: $font-weight-bold;
-      padding: 5px 0;
-      border-top: 1px solid $gray-8;
-
-      .link-nav-primary {
-        padding: 0;
-      }
-
-      &:last-child {
-        border-bottom: 1px solid $gray-8;
-      }
-    }
-  }
-}
-
-// default list item style
-.nav-primary_section_subnav_item {
-  @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
-  background-color: $black-15;
-  border-top: 1px $gray-8 solid;
-  position: relative;
-  margin: 0;
-
-  @include breakpoint($bp-med-home) {
-    background-color: transparent;
-    border-top: 0;
-  }
-}
-
-// primary sub item
-.nav-primary_section_subnav_item-primary {
-
-  @include breakpoint($bp-med-home) {
-    padding-right: 15px;
-    border: 0;
-
-    .link-nav-primary {
-      font-size: 24px;
-      line-height: 28px;
-      font-weight: $font-weight-bold;
-      padding: 25px 0 0;
-
-      .icon-select {
-        display: inline-block;
-
-        svg {
-          @include rotate(-90);
-          fill: $blue;
-          height: 14px;
-          margin-left: 10px;
+        &:nth-of-type(-n+3) {
+          border-top: none;
         }
       }
     }
   }
-}
 
-.nav-primary_section_subnav_back {
-  background-color: $black-7;
-  border-top: 1px $gray-8 solid;
-  position: relative;
-  margin: 0;
-  order: 4;
+  // contains 'tertiary' items
+  .nav-primary_list_sub-subnav-container {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-  .link-nav-primary {
-    @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
-    padding: 15px 30px 15px 50px;
-  }
+    // Style the tertiary items at Mobile
+    .nav-primary_section_subnav_item {
+      font-weight: $font-weight-medium;
+      padding-left: 10px;
 
-  .icon-select {
-    position: absolute;
-    left: 25px;
-    top: 15px;
+      .link-nav-primary  {
+        padding: 10px 30px;
 
-    svg {
-      @include rotate(90);
-      fill: $blue;
+        .icon-select {
+          top: 10px;
+        }
+      }
+    }
+
+    @include breakpoint($bp-med-home) {
+      margin-top: 15px;
+
+      .nav-primary_section_subnav_item {
+        font-weight: $font-weight-bold;
+        padding: 5px 0;
+        border-top: 1px solid $gray-8;
+
+        .link-nav-primary {
+          padding: 0;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid $gray-8;
+        }
+      }
     }
   }
 
-  @include breakpoint($bp-med-home) {
+  // default list item style
+  .nav-primary_section_subnav_item {
+    @include type($font-sans-serif, 16px, $font-weight-bold, 1.4375);
+    background-color: $black-15;
+    border-top: 1px $gray-8 solid;
+    position: relative;
+    margin: 0;
+
+    @include breakpoint($bp-med-home) {
+      background-color: transparent;
+      border-top: 0;
+    }
+  }
+
+  // primary sub item
+  .nav-primary_section_subnav_item-primary {
+
+    @include breakpoint($bp-med-home) {
+      padding-right: 15px;
+      border: 0;
+
+      .link-nav-primary {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: $font-weight-bold;
+        padding: 25px 0 0;
+
+        .icon-select {
+          display: inline-block;
+
+          svg {
+            @include rotate(-90);
+            fill: $blue;
+            height: 14px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-primary_section_subnav_back {
+    background-color: $black-7;
+    border-top: 1px $gray-8 solid;
+    position: relative;
+    margin: 0;
+    order: 4;
+
+    .link-nav-primary {
+      @include type($font-sans-serif, 18px, $font-weight-bold, 1.2222222222);
+      padding: 15px 30px 15px 50px;
+    }
+
+    .icon-select {
+      position: absolute;
+      left: 25px;
+      top: 15px;
+
+      svg {
+        @include rotate(90);
+        fill: $blue;
+      }
+    }
+
+    @include breakpoint($bp-med-home) {
+      display: none;
+    }
+  }
+
+  // Mobile menu button to trigger drop down.
+  .nav-primary_button {
+    @extend %background-transition;
+    border: 2px $purple solid;
+    color: $purple;
+    font-weight: $font-weight-medium;
+    height: 44px;
+    padding: 8px;
+    text-align: center;
+    width: 63px;
+
+    @include breakpoint($bp-med-home min-width) {
+      display: none;
+    }
+
+    &:active,
+    &:hover,
+    &.open,
+    &.nav-primary_button-clicked {
+      background-color: $purple-lighter;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // Primary nav link
+  .link-nav-primary {
+    display: inline-block;
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $blue;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    @include breakpoint($bp-med-home min-width) {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+      padding-bottom: 50px;
+    }
+
+    @include breakpoint($bp-large-home min-width) {
+      padding: 50px 0;
+    }
+  }
+
+  .nav-primary_section-active .icon {
     display: none;
   }
-}
 
-// Mobile menu button to trigger drop down.
-.nav-primary_button {
-  @extend %background-transition;
-  border: 2px $purple solid;
-  color: $purple;
-  font-weight: $font-weight-medium;
-  height: 44px;
-  padding: 8px;
-  text-align: center;
-  width: 63px;
-
-  @include breakpoint($bp-med-home min-width) {
+  .nav-primary_section_subnav_item_text {
+    color: $black-55;
     display: none;
-  }
-
-  &:active,
-  &:hover,
-  &.open,
-  &.nav-primary_button-clicked {
-    background-color: $purple-lighter;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-// Primary nav link
-.link-nav-primary {
-  display: inline-block;
-
-  &:active,
-  &:hover,
-  &:focus {
-    color: $blue;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  @include breakpoint($bp-med-home min-width) {
-    font-size: 18px;
-    font-weight: $font-weight-bold;
-    padding-bottom: 50px;
-  }
-
-  @include breakpoint($bp-large-home min-width) {
-    padding: 50px 0;
-  }
-}
-
-.nav-primary_section-active .icon {
-  display: none;
-}
-
-.nav-primary_section_subnav_item_text {
-  color: $black-55;
-  display: none;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: $font-weight-medium;
-  margin-bottom: 0;
-
-  @include breakpoint($bp-large-home) {
-    display: block;
     font-size: 18px;
     line-height: 25px;
     font-weight: $font-weight-medium;
+    margin-bottom: 0;
+
+    @include breakpoint($bp-large-home) {
+      display: block;
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: $font-weight-medium;
+    }
   }
-}
+} //closes .ama-theme

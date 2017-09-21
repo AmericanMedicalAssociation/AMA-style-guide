@@ -1,1 +1,57 @@
-No scss available for this pattern.
+.topic_membership {
+  ul, ol {
+    margin: 9px 0 0 0;
+    padding: 0 0 0 20px;
+    li {
+      text-align: left;
+    }
+  }
+}
+
+.topic_membership_container {
+  background: $black-7;
+}
+
+// If the container is rendered as an <a> element (if there's no CTA button).
+a.topic_membership_container {
+  display: block;
+  &:hover {
+    background-color: $gray-light-4;
+  }
+}
+
+.topic_membership_logo img {
+  @include gutter-all($padding-all-half...);
+}
+
+.topic_membership_text {
+  @include gutter-all($padding-all-full...);
+  @include child-top-gutters($gutter-mobile / 2);
+
+  @include breakpoint($bp-med) {
+    @include child-top-gutters($gutter / 2);
+    @include gutter-all($padding-all-half...);
+  }
+}
+
+.topic_membership_image img {
+  width: 100%;
+}
+
+.topic_membership h2 {
+  @include type-larger();
+  text-align: left;
+}
+
+.topic_membership .button-primary {
+  width: 100%;
+}
+
+// Remove margins on child elements so that we can set consistent spacing elsewhere.
+.topic_membership_text h2 {
+  margin-bottom: 0;
+}
+
+.topic_membership a.button {
+  width: 100%;
+}

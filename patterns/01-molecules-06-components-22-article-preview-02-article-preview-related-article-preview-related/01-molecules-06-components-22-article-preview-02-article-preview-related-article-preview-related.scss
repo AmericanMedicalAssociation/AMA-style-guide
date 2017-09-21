@@ -1,32 +1,32 @@
 .topic_article-preview-related-article {
-  @include grid__unit--cols(12);
 
-  .layout_two_up-heavier-left-primary {
-    @include grid__unit--cols(6);
-    order: 1;
-
-    @include breakpoint($bp-med) {
-      @include grid__unit--cols(8);
-      order: 2;
-      padding-right: 0;
-    }
+  .topic_article-preview_title {
+    margin-bottom: 0;
   }
 
-  .layout_two_up-heavier-left-secondary {
+  .topic_article-preview_container-image {
     @include grid__unit--cols(6);
+    @include gutter($padding-left-half...);
     order: 2;
     text-align: right;
 
     @include breakpoint($bp-med) {
-      @include grid__unit--cols(4);
+      @include grid__unit--cols(3);
+      @include gutter($padding-right-half...);
       order: 1;
+      padding-left: 0;
       text-align: left;
     }
   }
 
-  .layout_two_up-heavy-right-offset-full {
-    .topic_article-preview_title {
-      margin-bottom: 0;
+  .topic_article-preview-container-title {
+    @include grid__unit--cols(6);
+    order: 1;
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(9);
+      order: 2;
+      padding-right: 0;
     }
   }
 }

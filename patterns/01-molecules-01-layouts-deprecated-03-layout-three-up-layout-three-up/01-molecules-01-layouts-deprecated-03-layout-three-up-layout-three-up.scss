@@ -1,27 +1,6 @@
-// Placeholder blocks in layout molecules.
-.layout_three_up {
-  .layout_container {
-    display: block;
-    background-color: $black-7;
-    margin-bottom: 1em;
-    padding: 2em;
-    text-align: center;
-  }
-
-  // Layout default setup.
-  .layout {
-    @include grid();
-  }
-}
-
-.flexbox .layout.layout_three_up {
+.flexbox .layout_three_up {
   @include grid__unit--cols(12);
   justify-content: flex-start;
-}
-
-.layout_three_up-row {
-  @include grid();
-    width: 100%;
 }
 
 .layout_three_up-primary,
@@ -29,8 +8,19 @@
 .layout_three_up-tertiary {
   @include grid__unit--cols(12);
 
-  @include breakpoint($bp-large) {
+  @include breakpoint($bp-med) {
     @include grid__unit--cols(4);
-    padding: 0 12px;
+  }
+}
+
+.layout_three_up-primary {
+  @include breakpoint($bp-med) {
+    @include gutter($padding-right-half...);
+  }
+}
+
+.layout_three_up-tertiary {
+  @include breakpoint($bp-med) {
+    @include gutter($padding-left-half...);
   }
 }

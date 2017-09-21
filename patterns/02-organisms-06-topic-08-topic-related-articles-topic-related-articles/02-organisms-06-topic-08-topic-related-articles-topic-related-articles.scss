@@ -7,3 +7,8 @@
     }
   }
 }
+
+.topic_related-articles_title {
+  @include gutter($padding-bottom-half...);
+  margin-bottom: 0;
+}

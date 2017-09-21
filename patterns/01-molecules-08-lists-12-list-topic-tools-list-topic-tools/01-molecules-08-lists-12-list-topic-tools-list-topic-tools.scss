@@ -1,94 +1,96 @@
-// Topic tools list.
-.list_topic-tools {
-  list-style: none;
-  margin: 10px 0;
-  padding: 0;
+.ama-theme {
+  // Topic tools list.
+  .list_topic-tools {
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    @include gutter($margin-top-half...);
 
+    // Each list item.
+    .list_item-topic-tools {
+      @include rule-horizontal(1px, $black-20, solid);
+      @include gutter($padding-top-half...);
+      @include gutter($padding-right-half...);
+      @include gutter($padding-bottom-half...);
+      clear: both;
 
-  // Each list item.
-  .list_item-topic-tools {
-    @include rule-horizontal(1px, $black-20, solid);
-    @include gutter($padding-top-half...);
-    @include gutter($padding-right-half...);
-    @include gutter($padding-bottom-half...);
-    @include gutter($margin-right-half...);
-    @include gutter($margin-left-half...);
-    clear: both;
-
-    &:first-of-type{
-      @include rule-horizontal(1px, $gray-8, solid);
-    }
-
-    &:last-of-type {
-      @include rule-horizontal-bottom(1px, $gray-8, solid);
-    }
-
-    @include breakpoint($bp-med) {
-      margin: 0;
-      min-height: 70px;
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-
-  // Topic tools list link.
-  a {
-    &:hover {
-      .list_topic-tools_title,
-      .list_topic-tools_file-type,
-      .list_topic-tools_file-size {
-        @extend %text-transition;
-        color: $blue;
+      &:first-of-type{
+        @include rule-horizontal(1px, $gray-8, solid);
       }
 
-      .list_topic-tools_icon {
-        @extend %icon-transition;
-        fill: $blue;
+      &:last-of-type {
+        @include rule-horizontal-bottom(1px, $gray-8, solid);
+      }
+
+      @include breakpoint($bp-med) {
+        margin: 0;
+        min-height: 70px;
+        padding-right: 0;
+        padding-left: 0;
       }
     }
-  }
 
-  // Topic tools list file icon.
-  .list_topic-tools_icon {
-    display: none;
-    float: left;
-    height: 40px;
-    margin-right: 14px;
-    vertical-align: -webkit-baseline-middle;
-    width: 40px;
-
-    @include breakpoint($bp-med) {
+    // Topic tools list link.
+    a {
       display: block;
+
+      &:hover {
+        .list_topic-tools_title,
+        .list_topic-tools_file-type,
+        .list_topic-tools_file-size {
+          @extend %text-transition;
+          color: $blue;
+        }
+
+        .list_topic-tools_icon {
+          @extend %icon-transition;
+          fill: $blue;
+        }
+      }
     }
-  }
 
-  // Topic tools list title.
-  .list_topic-tools_title {
-    @extend %type-smaller;
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 0.3em;
+    // Topic tools list file icon.
+    .list_topic-tools_icon {
+      display: none;
+      float: left;
+      height: 40px;
+      margin-right: 14px;
+      vertical-align: -webkit-baseline-middle;
+      width: 40px;
 
-    @include breakpoint($bp-med) {
+      @include breakpoint($bp-med) {
+        display: block;
+      }
+    }
+
+    // Topic tools list title.
+    .list_topic-tools_title {
+      @extend %type-smaller;
+      display: block;
+      margin-bottom: 0;
+      margin-right: 0.3em;
+
+      @include breakpoint($bp-med) {
+        vertical-align: super;
+      }
+    }
+
+    // Topic tools list file type and size.
+    .list_topic-tools_file-type,
+    .list_topic-tools_file-size {
+      @extend %type-smaller;
+      color: $gray-med;
+      display: none;
+      margin-right: 0.3em;
       vertical-align: super;
+
+      @include breakpoint($bp-med) {
+        display: inline-block;
+      }
     }
   }
 
-  // Topic tools list file type and size.
-  .list_topic-tools_file-type,
-  .list_topic-tools_file-size {
-    @extend %type-smaller;
-    color: $gray-med;
-    display: none;
-    margin-right: 0.3em;
-    vertical-align: super;
-
-    @include breakpoint($bp-med) {
-      display: inline-block;
-    }
+  .tools_title {
+    @extend %h5;
   }
-}
-
-.tools_title {
-  @extend %h5;
 }

@@ -1,42 +1,33 @@
 {% include 'organisms-hub-header' %}
 
-{# Some type of hero #}
-<div class="layout layout-one-up">
-  {% include 'molecules-hub-hero' %}
-  {% include 'molecules-hub-hero-no-overlay' %}
-  {% include 'molecules-hub-hero-split' %}
-  {% include 'molecules-hub-hero-split-no-overlay' %}
-  {% include 'molecules-hub-hero-side' %}
-  {% include 'molecules-hub-hero-side-right' %}
-  {% include 'molecules-hub-hero-cta-only' %}
-</div>
+<main class="hub container">
+  {# Some type of hero #}
+  <section class="hub-section hub-section_hero">
+    {% include 'molecules-hub-hero' %}
+    {% include 'molecules-hub-hero-no-overlay' %}
+    {% include 'molecules-hub-hero-split' %}
+    {% include 'molecules-hub-hero-split-no-overlay' %}
+    {% include 'molecules-hub-hero-side' %}
+    {% include 'molecules-hub-hero-side-right' %}
+    {% include 'molecules-hub-hero-cta-only' %}
+  </section>
 
-{# begin the next section #}
-<section class="hub-section">
-  {# Each section should start with a section header #}
-  <div class="layout">
+  {# begin the next section #}
+  <section class="hub-section">
+    {# Each section should start with a section header #}
     {% include 'molecules-section-header' %}
-  </div>
-  {# And then can have any number of the following components #}
-  {% include 'organisms-hub-card-row' %}
-
-  <div class="hub-card-row layout">
-    {% include 'molecules-hub-card' %}
-    {% include 'molecules-hub-card-portrait' %}
-    {% include 'molecules-hub-card-no-image' %}
-  </div>
-
-  <div class="layout">
+    {# And then can have any number of the following components #}
+    {% include 'organisms-hub-card-row' %}
+    <div class="hub-card-row grid">
+      {% include 'molecules-hub-card' %}
+      {% include 'molecules-hub-card-portrait' %}
+      {% include 'molecules-hub-card-no-image' %}
+    </div>
     {% include 'molecules-hub-cta-half-left' %}
-  </div>
-  <div class="layout">
     {% include 'molecules-hub-cta-half' %}
-  </div>
-  <div class="layout">
     {% include 'molecules-hub-cta-half-video' %}
-  </div>
-  
+  </section>
 
-</section>
+</main>
 
 {% include 'organisms-footer' %}

@@ -1,33 +1,40 @@
-.layout.topic_tools {
-  @include grid--direction-col();
-}
-
-// The tools block.
-.topic_tools {
-  @include rule-horizontal-bottom(1px, $gray-8, solid);
-  @include gutter($padding-bottom-half...);
-  max-width: 800px;
-
-  @include breakpoint($bp-med) {
-    @include gutter($margin-bottom-half...);
+.ama-theme {
+  .layout.topic_tools {
+    @include grid--direction-col();
   }
 
-  // Tools links.
-  .tools_list-learn-more {
-    list-style-type: disc;
-    margin-left: 2em;
+  // The tools block.
+  .topic_tools {
+    max-width: 800px;
 
-    .list_links_item {
-      @extend %type-smaller;
+    // Tools links.
+    .tools_list-learn-more {
+      list-style-type: disc;
+      margin-left: 2em;
+      @include gutter($margin-top-half...);
+
+      .list_links_item {
+        @extend %type-smaller;
+      }
     }
   }
-}
 
-.tools_title,
-.tools_title-learn-more {
-  @include gutter($margin-left-half...);
+  .tools_title,
+  .tools_title-learn-more {
+    margin-bottom: 0;
 
-  @include breakpoint($bp-med) {
-    margin-left: 0;
+    @include breakpoint($bp-med) {
+      margin-left: 0;
+    }
   }
-}
+
+  .tools_title-learn-more {
+    @include gutter($margin-top-half...);
+  }
+
+  .topic_article-preview_label,
+  h2.topic_article-preview_title,
+  .topic_topic-articles .topic_article-preview p {
+    margin-bottom: 0;
+  }
+} // closes .ama-theme

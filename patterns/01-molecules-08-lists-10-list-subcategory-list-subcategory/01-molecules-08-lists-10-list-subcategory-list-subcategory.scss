@@ -1,66 +1,68 @@
-.list-subcategory {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.list-subcategory_item {
-  border-top: 1px solid $gray-8;
-  padding-top: 30px;
-  margin-bottom: 30px;
-
-  @include breakpoint($bp-med) {
-    padding-top: 40px;
-    margin-bottom: 40px;
+.ama-theme {
+  .list-subcategory {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-}
 
-.list-subcategory_item-link {
-  display: block;
+  .list-subcategory_item {
+    border-top: 1px solid $gray-8;
+    padding-top: 30px;
+    margin-bottom: 30px;
 
-  &:active,
-  &:hover,
-  &:focus {
-    .list-subcategory_item-title {
-      color: $blue;
-    }
-
-    .list-subcategory_item-cta {
-      text-decoration: underline;
+    @include breakpoint($bp-med) {
+      padding-top: 40px;
+      margin-bottom: 40px;
     }
   }
-  
-  @include breakpoint($bp-small) {
-    display: flex;
+
+  .list-subcategory_item-link {
+    display: block;
+
+    &:active,
+    &:hover,
+    &:focus {
+      .list-subcategory_item-title {
+        color: $blue;
+      }
+
+      .list-subcategory_item-cta {
+        text-decoration: underline;
+      }
+    }
+    
+    @include breakpoint($bp-small) {
+      display: flex;
+    }
   }
-}
 
-.list-subcategory_item-title {
-  @extend %type-medium;
-  font-weight: $font-weight-bold;
+  .list-subcategory_item-title {
+    @extend %type-medium;
+    font-weight: $font-weight-bold;
 
-  @include breakpoint($bp-small) {
-    @include grid__unit--cols(3);
-  }
-}
-
-.list-subcategory_item-block {
-  @extend %type-medium;
-
-  @include breakpoint($bp-small) {
-    @include grid__unit--cols(9);
+    @include breakpoint($bp-small) {
+      @include grid__unit--cols(3);
+    }
   }
 
-  @include breakpoint($bp-med) {
-    @include grid__unit--cols(6);
+  .list-subcategory_item-block {
+    @extend %type-medium;
+
+    @include breakpoint($bp-small) {
+      @include grid__unit--cols(9);
+    }
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(6);
+    }
   }
-}
 
-.list-subcategory_item-desc {
-  margin-bottom: 12px;
-}
+  .list-subcategory_item-desc {
+    margin-bottom: 12px;
+  }
 
-.list-subcategory_item-cta {
-  font-weight: $font-weight-bold;
-  color: $blue;
-}
+  .list-subcategory_item-cta {
+    font-weight: $font-weight-bold;
+    color: $blue;
+  }
+} // closes .ama-theme

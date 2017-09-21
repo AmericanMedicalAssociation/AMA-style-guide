@@ -4,8 +4,17 @@
   .topic_article-preview {
     display: flex;
     @include grid--direction-col();
+  }
+}
+
+.topic_topic-articles {
+  .topic_article-preview {
     @include gutter($margin-top-half-negative...);
   }
+}
+
+.topic_hero .topic_article-preview {
+  //@include gutter($margin-top-full-negative...);
 }
 
 // Remove inherited margins from article preview fields so that we can set consistent top margins.
