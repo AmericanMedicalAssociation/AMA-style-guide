@@ -304,14 +304,20 @@ gulp.task('tag', function () {
     .pipe(shell(['git push origin --tags']));
 });
 
+gulp.task('set-master', function (callback) {
+  // Change the deploy branch
+  gutil.log('Setting branch to master.');
+  config.deployment.branch = "master";
+  callback();
+})
+
 // Task: Release the code
 // Description: Release runs deploy to build to gh-pages,
 // pushes the same code to master, then tags master.
-gulp.task('release', function () {
+gulp.task('release', function (callback) {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
-  // Change the deploy branch
-  config.deployment.branch = "master";
-  // publish to gh-pages and master then tag master.
-  runSequence('default', 'publish', 'tag');
+  // Build the style guide, publish to gh-pages, set the branch to master,
+  // publish to master, then tag master.
+  runSequence('default', 'publish', 'set-master', 'publish', 'tag', callback);
 });
