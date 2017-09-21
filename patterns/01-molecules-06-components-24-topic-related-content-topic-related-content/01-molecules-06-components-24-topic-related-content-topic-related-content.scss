@@ -1,0 +1,19 @@
+.ama-theme {
+  .topic-related-content .col-width-6 {
+    padding-left: 0;  //override default gutters
+    padding-right: 0;  //override default gutters
+  }
+
+  .topic-related-content img {
+    max-height: 186px;
+    margin: 0 auto;
+  }
+
+  .topic-related-content_title {
+    margin-bottom: 0;
+    @include type($font-serif, 21px, $font-weight-medium, 1.3333333333);
+    @include breakpoint($bp-med-home min-width) {
+      @include type($font-serif, 24px, $font-weight-medium, 1.2916666667);
+    }
+  }
+}
