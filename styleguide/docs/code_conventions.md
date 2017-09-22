@@ -4,6 +4,7 @@
 - [Templating](#templating)
   - [Intro to Twig](#intro-to-twig)
   - [Placeholder Images](#placeholder-images)
+  - [Pseudo-Patterns](#pseudo-patterns)
 - [HTML](#html)
   - [Semantic Markup](#semantic-markup)
   - [Aria Tags and Accessibility](#aria-tags-and-accessibility)
@@ -35,6 +36,57 @@ Breaking this url down:
 - `&s=36` the text size. This should only be tweaked if necessary.
 
 ![This is a placeholder image](https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36)
+
+### Pseudo-Patterns
+
+[Pseudo-patterns](http://patternlab.io/docs/pattern-pseudo-patterns.html) are Pattern Lab's way of easily managing closely related patterns that have multiple variants. In the case of our style guide, we typically use pseudo-patterns for patterns where the data structures are consistent, but content might be displayed in differently if certain conditions are met. For example, if you imagine that the CMS serving data to a pattern would use just one data model/content type but have several different possible display modes for that content type depending on whether all fields were populated or whether a certain kind of user was logged in or not, then the different view modes would be a good case for using pseudo-patterns. There are other possible use cases for pseudo-patterns, this is just the most common example.
+
+When creating pseudo patterns, first make a base pattern template that includes logic for when to and when to not display various elements depending on the data in the content model. Below is an example of the base Twig template for a pattern named **topic-related-content.twig** with pseudo-variants:
+
+```
+{% set applyGrid = related_content.image ? "grid" : "" %}
+ <div class="topic-related-content {{applyGrid}}">
+   {% if related_content.image %}
+     <div class="col-width-6">
+       {% include 'atoms-landscape-3x2' with { 'src': related_content.image } %}
+     </div>
+     <div class="col-width-3">
+       {% include 'atoms-h2' with { 'content': related_content.title, 'class': 'topic-related-content_title' } %}
+       {% include 'atoms-link-blue' with { 'content': 'Sed nuc', 'class': 'topic-related-content_link' } %}
+     </div>
+   {% else %}
+     {% include 'atoms-h2' with { 'content': related_content.title, 'class': 'topic-related-content_title' } %}{% include 'atoms-link-blue' with { 'content': 'Link text', 'class': 'topic-related-content_link' } %}
+   {% endif %}
+ </div>
+```
+
+The default json, stored in a file named **topic-related-content.json**, looks like this:
+
+```
+{
+  "related_content": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+}
+```
+
+A variant named **topic-related-content~with-image.json** might look like this:
+
+```
+{
+  "related_content": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "https://ipsumimage.appspot.com/279x186?l=3:2|279x186&s=36"
+    }
+}
+```
+
+With conditional statements and data with the same structure, but varying content, pseudo patterns let us re-use markup and reduce the number of templates we need for closely related patterns.
+
+Our version of pattern lab includes the [data-inheritance plugin](https://github.com/pattern-lab/plugin-php-data-inheritance) which allows patterns to inherit data from patterns within its lineage, making the use of pseudo-patterns even more powerful.
+
+In addition to [the official docs](http://patternlab.io/docs/pattern-pseudo-patterns.html) on pseudo-patterns, there is [a good Smashing article](https://www.smashingmagazine.com/2016/07/building-maintaining-atomic-design-systems-pattern-lab/#pseudo-patterns) describing pseudo-patterns in more detail.
+
 
 ## HTML
 
