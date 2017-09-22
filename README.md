@@ -1,3 +1,5 @@
+[![Latest Release](https://img.shields.io/github/release/AmericanMedicalAssociation/AMA-style-guide.svg)](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases/latest)
+
 # Living Style Guide for AMA
 This is the living style guide for the American Medical Association. It is a platform-agnostic tool to empower employees and vendors to maintain consistent design and hierarchy throughout the AMA digital ecosystem.
 
