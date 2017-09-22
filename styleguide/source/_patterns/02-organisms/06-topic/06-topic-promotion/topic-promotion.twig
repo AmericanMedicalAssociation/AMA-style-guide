@@ -2,11 +2,11 @@
     {% set tag = promo.cta ? 'div': 'a' %}
     <{{tag}} class="topic_promotion_container" href="#">
     {% if promo.logo %}
-        {% include 'atoms-logo' with { 'link': '#', 'image': promo.logo, 'alt': 'logo', 'class': default } %}
+        {% include 'atoms-logo' with { 'href': '#', 'image': promo.logo, 'alt': 'logo', 'class': default } %}
     {% endif %}
     {% if promo.image %}
     <div class="topic_promotion_image">
-        {% include 'atoms-landscape-3x2' with {'link': '#', 'image': promo.image, 'alt': 'image', 'class': default } %}
+        {% include 'atoms-landscape-3x2' with {'href': '#', 'image': promo.image, 'alt': 'image', 'class': default } %}
     </div>
     {% endif %}
     <div class="topic_promotion_text">
