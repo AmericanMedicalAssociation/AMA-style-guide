@@ -1,7 +1,25 @@
 # Code Conventions
 
+## Contents
+- [Templating](#templating)
+  - [Intro to Twig](#intro-to-twig)
+  - [Placeholder Images](#placeholder-images)
+- [HTML](#html)
+  - [Semantic Markup](#semantic-markup)
+  - [Aria Tags and Accessibility](#aria-tags-and-accessibility)
+- [Styling](#styling)
+  - [SASS/SCSS](#SASS/SCSS)
+  - [Name classes using BEM](#name-classes-using-bem)
+  - [Responsive implementation using Breakpoint-Sass](#responsive-implementation-using-breakpoint-sass)
+  - [Grids and columns](#grids-and-columns)
+- [Javascript](#javascript)
+  - [Creating a new, custom Javascript file](#creating-a-new-custom-javascript-file)
+  - [Using this js](#using-this-js)
+- [Annotation and Documentation](#annotation-and-documentation)
+
 ## Templating
 
+### Intro to Twig
 Markup for each pattern in our style guide is created with [Twig](http://twig.sensiolabs.org/), a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns.
 
 You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."
@@ -25,7 +43,7 @@ The introduction of HTML5 brought us developers a slew of new semantic tags. Rat
 
 For a list of all valid HTML5 tags, please consult the [MDN element reference chart](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-### Aria Tags & Accessibility
+### Aria Tags and Accessibility
 
 Get reading!
 
