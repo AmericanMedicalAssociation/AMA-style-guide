@@ -15,7 +15,8 @@
 
 // Remove inherited margins from article preview fields so that we can set consistent top margins.
 .topic_article-preview_label,
-.topic_article-preview_title h2 {
+.topic_article-preview_title h2,
+.topic_article-preview_description p {
   margin-top: 0;
   margin-bottom: 0;
 }
