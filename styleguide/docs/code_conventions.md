@@ -41,13 +41,12 @@ Breaking this url down:
 
 [Pseudo-patterns](http://patternlab.io/docs/pattern-pseudo-patterns.html) are Pattern Lab's way of easily managing closely related patterns that have multiple variants. In the case of our style guide, we typically use pseudo-patterns for patterns where the data structures are consistent, but content might be displayed in differently if certain conditions are met. 
 
-
 Imagine that a CMS serving data to a pattern uses just one data model/content type, but has several different possible ways that content should be displayed. For example:
 * The content must be displayed in different places across the page/site
 * The content must be displayed differently if certain fields are or are not populated
 * The content must be displayed differently depending on whether or not a certain kind of user is logged in
 
-In Drupal, we often use *view modes* to display data in cases like these, so building different view modes in Drupal can often be a good case for using pseudo-patterns in the Style Guide. There are other possible use cases for pseudo-patterns, such as showing pattern states, but this is just the most common example.
+In Drupal, we often use [*display/view modes*](https://www.drupal.org/docs/8/api/entity-api/display-modes-view-modes-and-form-modes) to display data in cases like these, so building different view modes in Drupal can often be a good case for using pseudo-patterns in the Style Guide. There are other possible use cases for pseudo-patterns, such as showing pattern states, but this is just the most common example.
 
 When creating pseudo patterns, first make a base pattern template that includes logic for when to and when to not display various elements depending on the data in the content model. Below is an example of the base Twig template for a pattern named **topic-related-content.twig** with pseudo-variants:
 
