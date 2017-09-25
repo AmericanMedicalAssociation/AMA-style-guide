@@ -17,6 +17,29 @@ Breaking this url down:
 
 ![This is a placeholder image](https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36)
 
+### Pattern Lab reserved words
+
+In general, you can create any number of variables within your templates to use for passing and storing data. However, there are some Pattern Lab reserved words. Below are the most important:
+
+#### Link
+
+`link` is a special word in Pattern Lab used for linking patterns to one another rather than hardcoding paths. You should not use it as a variable name when passing data to a pattern.
+
+DO NOT
+
+```
+<li>{% include 'atoms-logo' with {'link': 'http://example.com' } %}</li>
+                                   ----
+```
+
+DO
+
+```
+<li>{% include 'atoms-logo' with {'href': 'http://example.com' } %}</li>
+                                   ----
+```
+
+
 ## HTML
 
 ### Semantic Markup
