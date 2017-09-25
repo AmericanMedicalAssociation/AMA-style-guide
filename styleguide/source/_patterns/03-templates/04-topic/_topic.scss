@@ -30,20 +30,15 @@
 
 // Style the topic labels for each section consistently.
 .topic .title-label {
-  margin-bottom: 0;
   line-height: 1.38889;
-  @include gutter($padding-bottom-half...);
+  @include gutter($margin-bottom-half...);
+  @include gutter($padding-bottom-quarter...); //use quarter to offset line height of lable text
   @include rule-horizontal-bottom(1px, $black-20, solid);
 }
 
 .topic .topic_hero .title-label {
   border: 0;
   padding-bottom: 0;
-}
-
-// Enforce aspect ratios.
-.topic_article-preview img {
-  width: 100%;
 }
 
 //force sidebars to use mobile styling for col defaults

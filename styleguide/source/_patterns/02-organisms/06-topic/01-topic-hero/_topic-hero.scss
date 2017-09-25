@@ -15,13 +15,12 @@
   order: 1;
 }
 
-// Ensure top gutters for child elements.
-.topic_hero .topic_article-preview {
-  @include child-top-gutters($gutter-mobile / 2);
-  @include breakpoint($bp-med) {
-    @include child-top-gutters($gutter / 2);
-  }
-}
+// // Ensure top gutters for child elements.
+// .topic_hero .topic_article-preview {
+//   @include breakpoint($bp-med) {
+//     @include child-top-gutters($gutter / 2);
+//   }
+// }
 
 .topic_hero .topic_article-preview:not(:first-child) {
   @include gutter($margin-top-full...);
