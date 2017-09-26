@@ -5,6 +5,7 @@
   - [Intro to Twig](#intro-to-twig)
   - [Placeholder Images](#placeholder-images)
   - [Pseudo-Patterns](#pseudo-patterns)
+  - [Pattern Lab reserved words](#pattern-lab-reserved-words)
 - [HTML](#html)
   - [Semantic Markup](#semantic-markup)
   - [Aria Tags and Accessibility](#aria-tags-and-accessibility)
@@ -94,6 +95,27 @@ Our version of pattern lab includes the [data-inheritance plugin](https://github
 
 In addition to [the official docs](http://patternlab.io/docs/pattern-pseudo-patterns.html) on pseudo-patterns, there is [a good Smashing article](https://www.smashingmagazine.com/2016/07/building-maintaining-atomic-design-systems-pattern-lab/#pseudo-patterns) describing pseudo-patterns in more detail.
 
+### Pattern Lab reserved words
+
+In general, you can create any number of variables within your templates to use for passing and storing data. However, there are some Pattern Lab reserved words. Below are the most important:
+
+#### Link
+
+`link` is a special word in Pattern Lab used for linking patterns to one another rather than hardcoding paths. You should not use it as a variable name when passing data to a pattern.
+
+DO NOT
+
+```
+<li>{% include 'atoms-logo' with {'link': 'http://example.com' } %}</li>
+                                   ----
+```
+
+DO
+
+```
+<li>{% include 'atoms-logo' with {'href': 'http://example.com' } %}</li>
+                                   ----
+```
 
 ## HTML
 

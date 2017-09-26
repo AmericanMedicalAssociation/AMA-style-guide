@@ -1,5 +1,6 @@
 .ama-theme {
   .list-secondary-user {
+    @include grid();
     margin: 0 0 9em 0;
     max-width: 578px;
     padding: 0;
@@ -14,6 +15,7 @@
     }
   }
   .list_links-secondary-user {
+    @include grid__unit--cols(6);
     display: block;
     list-style: none;
     margin: 0;
