@@ -57,10 +57,10 @@
       "max-empty-lines": 5,
       "number-leading-zero": "always",
       "number-no-trailing-zeros": true,
-      "property-no-vendor-prefix": true,
+      "property-no-vendor-prefix": [true, { "severity": "warning" } ],
       "selector-list-comma-space-before": "never",
       "selector-list-comma-newline-after": "always",
-      "selector-no-id": true,
+      "selector-max-id": 1,
       "string-quotes": "double"
     }
   }
