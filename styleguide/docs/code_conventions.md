@@ -11,6 +11,7 @@
   - [Aria Tags and Accessibility](#aria-tags-and-accessibility)
 - [Styling](#styling)
   - [SASS/SCSS](#SASS/SCSS)
+  - [Linting](#linting)
   - [Name classes using BEM](#name-classes-using-bem)
   - [Responsive implementation using Breakpoint-Sass](#responsive-implementation-using-breakpoint-sass)
   - [Grids and columns](#grids-and-columns)
@@ -134,13 +135,21 @@ Get reading!
 ## Styling
 
 ### SASS/SCSS
-We use [Sassy CSS (SCSS)](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) for styling. SCSS files are stored in the directory for each pattern and imported in `/source/assets/css/styles.scss`,
+We use [Sassy CSS (SCSS)](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) for styling. SCSS files are stored in the directory for each pattern and imported in `/source/assets/css/styles.scss`.
+
+### Linting
+
+We use the [stylelint](https://stylelint.io/) to lint the Style Guide scss files and enforce consistency in formatting our scss as well as catch errors. 
+
+Our `gulp serve` and `watch` processes run the linter automatically so that we can easily catch problems while we are developing. However, gulp isn't great at error handling and a scss formatting error can kill the `serve` process. If you try to run `gulp serve` and the task fails with a message like `Error in plugin 'run-sequence(scss-lint)'`, it means the linter found issues. The errors should be displayed as part of the console output, but you can also debug these issues by running the linter separately with `gulp scss-lint`.
+
+By default, all issues the linter encounters are set to a severity level of "error" which as mentioned above can cause the `gulp serve` task to fail, but you can change the severity level to "warning" which still displays the errors in the console but won't kill the gulp task. More details about configuration options can be found in the [stylelint github repo](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md).
 
 ### Name classes using BEM
 Class names and hierarchy follow the [BEM (Block Element Modifier)](http://getbem.com/) namespacing methodology to facilitate code sharing among designers and developers. For easier reading and more concise class names, we use the abridged syntax recommended in the [18F Front End Guide](https://frontend.18f.gov/#bem).
 
 ### Responsive implementation using Breakpoint-Sass
-All patterns in the AMA Style Guide are fully responsive. We use [Breakpoint-Sass](http://breakpoint-sass.com/) to manage our media queries. Breakpoint is fairly simple to use and has a very thorough [wiki](https://github.com/at-import/breakpoint/wiki) explaining its useage and capabilities.
+All patterns in the AMA Style Guide are fully responsive. We use [Breakpoint-Sass](http://breakpoint-sass.com/) to manage our media queries. Breakpoint is fairly simple to use and has a very thorough [wiki](https://github.com/at-import/breakpoint/wiki) explaining its usage and capabilities.
 
 ### Layouts
 
