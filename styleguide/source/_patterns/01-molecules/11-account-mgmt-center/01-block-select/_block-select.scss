@@ -6,7 +6,7 @@
   cursor: hand;
   display: flex;
   flex-direction: column;
-  font-size: .7em;
+  font-size: 0.7em;
   justify-content: center;
   margin-bottom: 1em;
   min-height: 65px;
@@ -26,7 +26,7 @@
 .block-select_message {
   background-color: $green;
   color: $white;
-  font-size: .8em;
+  font-size: 0.8em;
   transition: background-color 0.28s ease;
   width: 100%;
 }

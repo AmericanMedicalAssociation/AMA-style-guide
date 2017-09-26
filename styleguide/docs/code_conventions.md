@@ -1,7 +1,28 @@
 # Code Conventions
 
+## Contents
+- [Templating](#templating)
+  - [Intro to Twig](#intro-to-twig)
+  - [Placeholder Images](#placeholder-images)
+  - [Pseudo-Patterns](#pseudo-patterns)
+  - [Pattern Lab reserved words](#pattern-lab-reserved-words)
+- [HTML](#html)
+  - [Semantic Markup](#semantic-markup)
+  - [Aria Tags and Accessibility](#aria-tags-and-accessibility)
+- [Styling](#styling)
+  - [SASS/SCSS](#SASS/SCSS)
+  - [Linting](#linting)
+  - [Name classes using BEM](#name-classes-using-bem)
+  - [Responsive implementation using Breakpoint-Sass](#responsive-implementation-using-breakpoint-sass)
+  - [Grids and columns](#grids-and-columns)
+- [Javascript](#javascript)
+  - [Creating a new, custom Javascript file](#creating-a-new-custom-javascript-file)
+  - [Using this js](#using-this-js)
+- [Annotation and Documentation](#annotation-and-documentation)
+
 ## Templating
 
+### Intro to Twig
 Markup for each pattern in our style guide is created with [Twig](http://twig.sensiolabs.org/), a PHP-based HTML templating engine. Twig allows us to easily include patterns inside of other patterns.
 
 You can view both the Twig syntax and the rendered HTML markup for a pattern by clicking on the gear icon in the upper right of every page and selecting "Show Pattern Info."
@@ -10,12 +31,70 @@ You can view both the Twig syntax and the rendered HTML markup for a pattern by 
 Images should only be committed to the style guide when they are providing "real representative content" in [Pattern Lab "Page" components](http://atomicdesign.bradfrost.com/chapter-2/#pages). Otherwise, dynamic placeholder images should be used. Placeholders should be generated in the form `https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36` using the reduced ratio of the image for the benefit of the content team and the rendered dimensions of the image for the benefit of development teams implementing the pattern in a CMS.
 
 Breaking this url down:
+
 - `http://ipsumimage.appspot.com/`: the image generator. More [documentation available there](http://ipsumimage.appspot.com/).
 - `600x400` the width x height with which the placeholder image will be generated
 - `?l=3:2|600x400` the label text, with a pipe (|) separating lines. Our images should use [ratio]|[dimensions].
-- `&s=36` the text size. This should only be tweaked if necessary.\
+- `&s=36` the text size. This should only be tweaked if necessary.
 
 ![This is a placeholder image](https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36)
+
+### Pseudo-Patterns
+
+[Pseudo-patterns](http://patternlab.io/docs/pattern-pseudo-patterns.html) are Pattern Lab's way of easily managing closely related patterns that have multiple variants. In the case of our style guide, we typically use pseudo-patterns for patterns where the data structures are consistent, but content might be displayed in differently if certain conditions are met. 
+
+Imagine that a CMS serving data to a pattern uses just one data model/content type, but has several different possible ways that content should be displayed. For example:
+* The content must be displayed in different places across the page/site
+* The content must be displayed differently if certain fields are or are not populated
+* The content must be displayed differently depending on whether or not a certain kind of user is logged in
+
+In Drupal, we often use [*display/view modes*](https://www.drupal.org/docs/8/api/entity-api/display-modes-view-modes-and-form-modes) to display data in cases like these, so building different view modes in Drupal can often be a good case for using pseudo-patterns in the Style Guide. There are other possible use cases for pseudo-patterns, such as showing pattern states, but this is just the most common example.
+
+When creating pseudo patterns, first make a base pattern template that includes logic for when to and when to not display various elements depending on the data in the content model. Below is an example of the base Twig template for a pattern named **topic-related-content.twig** with pseudo-variants:
+
+```
+{% set applyGrid = related_content.image ? "grid" : "" %}
+ <div class="topic-related-content {{applyGrid}}">
+   {% if related_content.image %}
+     <div class="col-width-6">
+       {% include 'atoms-landscape-3x2' with { 'src': related_content.image } %}
+     </div>
+     <div class="col-width-3">
+       {% include 'atoms-h2' with { 'content': related_content.title, 'class': 'topic-related-content_title' } %}
+       {% include 'atoms-link-blue' with { 'content': 'Sed nuc', 'class': 'topic-related-content_link' } %}
+     </div>
+   {% else %}
+     {% include 'atoms-h2' with { 'content': related_content.title, 'class': 'topic-related-content_title' } %}{% include 'atoms-link-blue' with { 'content': 'Link text', 'class': 'topic-related-content_link' } %}
+   {% endif %}
+ </div>
+```
+
+The default json, stored in a file named **topic-related-content.json**, looks like this:
+
+```
+{
+  "related_content": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    }
+}
+```
+
+A variant named **topic-related-content~with-image.json** might look like this:
+
+```
+{
+  "related_content": {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image": "https://ipsumimage.appspot.com/279x186?l=3:2|279x186&s=36"
+    }
+}
+```
+
+With conditional statements and data with the same structure, but varying content, pseudo patterns let us re-use markup and reduce the number of templates we need for closely related patterns.
+
+Our version of pattern lab includes the [data-inheritance plugin](https://github.com/pattern-lab/plugin-php-data-inheritance) which allows patterns to inherit data from patterns within its lineage, making the use of pseudo-patterns even more powerful.
+
+In addition to [the official docs](http://patternlab.io/docs/pattern-pseudo-patterns.html) on pseudo-patterns, there is [a good Smashing article](https://www.smashingmagazine.com/2016/07/building-maintaining-atomic-design-systems-pattern-lab/#pseudo-patterns) describing pseudo-patterns in more detail.
 
 ### Pattern Lab reserved words
 
@@ -39,7 +118,6 @@ DO
                                    ----
 ```
 
-
 ## HTML
 
 ### Semantic Markup
@@ -48,7 +126,7 @@ The introduction of HTML5 brought us developers a slew of new semantic tags. Rat
 
 For a list of all valid HTML5 tags, please consult the [MDN element reference chart](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-### Aria Tags & Accessibility
+### Aria Tags and Accessibility
 
 Get reading!
 
@@ -57,13 +135,21 @@ Get reading!
 ## Styling
 
 ### SASS/SCSS
-We use [Sassy CSS (SCSS)](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) for styling. SCSS files are stored in the directory for each pattern and imported in `/source/assets/css/styles.scss`,
+We use [Sassy CSS (SCSS)](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html) for styling. SCSS files are stored in the directory for each pattern and imported in `/source/assets/css/styles.scss`.
+
+### Linting
+
+We use the [stylelint](https://stylelint.io/) to lint the Style Guide scss files and enforce consistency in formatting our scss as well as catch errors. 
+
+Our `gulp serve` and `watch` processes run the linter automatically so that we can easily catch problems while we are developing. However, gulp isn't great at error handling and a scss formatting error can kill the `serve` process. If you try to run `gulp serve` and the task fails with a message like `Error in plugin 'run-sequence(scss-lint)'`, it means the linter found issues. The errors should be displayed as part of the console output, but you can also debug these issues by running the linter separately with `gulp scss-lint`.
+
+By default, all issues the linter encounters are set to a severity level of "error" which as mentioned above can cause the `gulp serve` task to fail, but you can change the severity level to "warning" which still displays the errors in the console but won't kill the gulp task. More details about configuration options can be found in the [stylelint github repo](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md).
 
 ### Name classes using BEM
 Class names and hierarchy follow the [BEM (Block Element Modifier)](http://getbem.com/) namespacing methodology to facilitate code sharing among designers and developers. For easier reading and more concise class names, we use the abridged syntax recommended in the [18F Front End Guide](https://frontend.18f.gov/#bem).
 
 ### Responsive implementation using Breakpoint-Sass
-All patterns in the AMA Style Guide are fully responsive. We use [Breakpoint-Sass](http://breakpoint-sass.com/) to manage our media queries. Breakpoint is fairly simple to use and has a very thorough [wiki](https://github.com/at-import/breakpoint/wiki) explaining its useage and capabilities.
+All patterns in the AMA Style Guide are fully responsive. We use [Breakpoint-Sass](http://breakpoint-sass.com/) to manage our media queries. Breakpoint is fairly simple to use and has a very thorough [wiki](https://github.com/at-import/breakpoint/wiki) explaining its usage and capabilities.
 
 ### Layouts
 
