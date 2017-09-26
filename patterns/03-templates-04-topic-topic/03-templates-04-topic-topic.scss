@@ -45,3 +45,18 @@
 .topic_article-preview img {
   width: 100%;
 }
+
+//force sidebars to use mobile styling for col defaults
+.topic_rail-left,
+.topic_rail-right {
+  .col-width-3,
+  .col-width-4,
+  .col-width-6,
+  .col-width-8,
+  .col-width-9,
+  .col-width-12 {
+    padding-right: 0;
+    padding-left: 0;
+    @include grid__unit--cols(12);
+  }
+}
