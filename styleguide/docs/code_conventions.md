@@ -246,7 +246,7 @@ Markup
 
 SCSS
 
-```twig
+```css
 .news-section {
   @include grid(); 
 }
