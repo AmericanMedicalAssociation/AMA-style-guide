@@ -106,7 +106,7 @@ gulp.task('css', function () {
 });
 
 // Task: Handle Sass and CSS
-gulp.task('sass', function () {
+gulp.task('sass', ['scss-lint'], function () {
   return gulp.src(config.scss.files)
     .pipe(sourcemaps.init())
       .pipe(sass())

@@ -29,7 +29,7 @@
 
   .list-events_item_date,
   .list-events_item_location {
-    font-size: 0.900em;
+    font-size: 0.9em;
   }
 
   .list-events_item p {
@@ -61,7 +61,7 @@
 
   .list-events_item_date_day {
     &:after {
-      content: ' / ';
+      content: " / ";
     }
   }
 
