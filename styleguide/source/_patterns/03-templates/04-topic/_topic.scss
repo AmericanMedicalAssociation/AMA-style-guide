@@ -46,7 +46,9 @@
   width: 100%;
 }
 
-// overrides for 2-col tablet layout
+// Overrides for 2-col tablet layout
+// This is a wanton violation of our usual grid practices, but required
+// in this special case. Please don't make a habit of this!
 .topic_main {
   @include breakpoint($bp-small $bp-med) {
     &.grid {
