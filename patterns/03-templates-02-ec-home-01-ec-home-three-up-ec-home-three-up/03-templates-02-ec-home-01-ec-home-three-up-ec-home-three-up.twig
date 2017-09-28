@@ -12,7 +12,7 @@
         </section>
 
         {# card section #}
-        <section class="ec_cards-landscape">
+        <section class="ec_cards-landscape container">
             {% include 'organisms-card-row-ec-three-up' with {'cardsLandscape': cardRowContent.cardsLandscape} %}
         </section>
 
@@ -21,7 +21,7 @@
             {% include 'atoms-button-link' with { 'content': cardRowContent.cardsNoImage.button.content, 'class': 'button-small ec_cards-text_button' } %}
         </section>
 
-        <section class="ec_course-browser">
+        <section class="ec_course-browser container">
             {% include 'organisms-ec-tabs-course-browser' %}
         </section>
 

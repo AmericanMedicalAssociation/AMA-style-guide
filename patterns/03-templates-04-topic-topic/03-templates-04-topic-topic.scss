@@ -30,9 +30,9 @@
 
 // Style the topic labels for each section consistently.
 .topic .title-label {
-  margin-bottom: 0;
   line-height: 1.38889;
-  @include gutter($padding-bottom-half...);
+  @include gutter($margin-bottom-half...);
+  @include gutter($padding-bottom-quarter...); //use quarter to offset line height of lable text
   @include rule-horizontal-bottom(1px, $black-20, solid);
 }
 
@@ -44,6 +44,36 @@
 // Enforce aspect ratios.
 .topic_article-preview img {
   width: 100%;
+}
+
+// Overrides for 2-col tablet layout
+// This is a wanton violation of our usual grid practices, but required
+// in this special case. Please don't make a habit of this!
+.topic_main {
+  @include breakpoint(600px 899px) {
+    &.grid {
+      display: block;
+      overflow: auto;
+
+      .topic_content {
+        float: left;
+        padding-right: 14px;
+        width: 66.6666%;
+      }
+
+      .topic_rail-right {
+        clear: right;
+        padding-top: 8px;
+      }
+
+      .topic_rail-left,
+      .topic_rail-right {
+        float: right;
+        padding-left: 14px;
+        width: 33.3333%;
+      }
+    }
+  }
 }
 
 //force sidebars to use mobile styling for col defaults
