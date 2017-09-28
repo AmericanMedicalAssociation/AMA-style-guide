@@ -55,6 +55,10 @@
     @include grid__unit--cols(6);
     order: 1;
 
+    @include breakpoint(0 $bp-med) {
+      margin-top: 0;
+    }
+
     @include breakpoint($bp-med) {
       @include grid__unit--cols(9);
       order: 2;
