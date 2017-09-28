@@ -1,12 +1,8 @@
 .ama-theme {
-  .topic-related-content .col-width-6 {
+  .topic-related-content .col-width-6,
+  .topic-related-content .col-width-3 {
     padding-left: 0;  //override default gutters
     padding-right: 0;  //override default gutters
-  }
-
-  .topic-related-content img {
-    max-height: 186px;
-    margin: 0 auto;
   }
 
   .topic-related-content_title {

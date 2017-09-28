@@ -2,12 +2,12 @@
   {% set tag = membership.cta ? 'div': 'a' %}
   <{{tag}} class="topic_membership_container" href="#">
     {% if membership.logo %}
-      {% include 'atoms-logo' with { 'link': '#', 'image': membership.logo, 'alt': 'logo', 'class': 'topic_membership_logo' } %}
+      {% include 'atoms-logo' with { 'href': '#', 'image': membership.logo, 'alt': 'logo', 'class': 'topic_membership_logo' } %}
     {% endif %}
 
     {% if membership.image %}
       <div class="topic_membership_image">
-        {% include 'atoms-landscape-3x2' with { 'link': '#', 'image': membership.image, 'alt': 'image', 'class': default } %}
+        {% include 'atoms-landscape-3x2' with { 'href': '#', 'image': membership.image, 'alt': 'image', 'class': default } %}
       </div>
     {% endif %}
 
