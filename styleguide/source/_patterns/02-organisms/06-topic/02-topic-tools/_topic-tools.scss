@@ -32,9 +32,4 @@
     @include gutter($margin-top-half...);
   }
 
-  .topic_article-preview_label,
-  h2.topic_article-preview_title,
-  .topic_topic-articles .topic_article-preview p {
-    margin-bottom: 0;
-  }
 } // closes .ama-theme
