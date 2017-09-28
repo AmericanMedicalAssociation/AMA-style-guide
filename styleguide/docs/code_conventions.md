@@ -4,6 +4,7 @@
 - [Templating](#templating)
   - [Intro to Twig](#intro-to-twig)
   - [Placeholder Images](#placeholder-images)
+  - [Use You Some JSON](#use-you-some-json)
   - [Pseudo-Patterns](#pseudo-patterns)
   - [Pattern Lab reserved words](#pattern-lab-reserved-words)
 - [HTML](#html)
@@ -39,6 +40,53 @@ Breaking this url down:
 
 ![This is a placeholder image](https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36)
 
+### Use You Some JSON
+
+Patterns revolve around content. The Twig templating engine, combined with Pattern Lab's [data-inheritance plugin](https://github.com/pattern-lab/plugin-php-data-inheritance) which allows us to load data based on included patterns or pseudo-patterns, give us a number of ways to deal with creating and utilizing placeholder content.
+
+Our preferred method is to use JSON files for placeholder content when existing defaults are not suitable. Not only does this make it easier to organize data rather than packing a bunch of placeholder text into the template itself, but it's also critical for leveraging pseudo-patterns which utilize _one_ twig template but _several_ different json files to trigger variations in layout (pseudo-patterns are covered below).
+
+**Example:**
+
+.twig
+
+```twig
+<div class="banner-cta-no-stacking banner-cta-no-stacking-left">
+    {% include 'atoms-h2' with { 'content': ctaBanner.heading, 'class': 'banner-cta-no-stacking_title h1' } %}
+    <div class="banner-cta-no-stacking_image" style="background-image: url('{{ ctaBanner.image }}');"></div>
+    <div class="banner-cta-no-stacking_text">
+        {% include 'atoms-paragraph' with { content: ctaBanner.content } %}
+        {% include 'atoms-button-link' with { content: ctaBanner.buttonText, class: 'button-small banner-cta-no-stacking_button' } %}
+    </div>
+</div>
+```
+
+.json
+
+```json
+  "ctaBanner": {
+    "heading": "Accessible anywhere, anytime",
+    "image": "https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36",
+    "content": "Pede mi consectetuer, consectetuer laoreet dui cursus id, nulla adipiscing",
+    "buttonText": "Start a Course"
+  }
+```
+
+**Avoid:**
+
+.twig
+
+```twig
+<div class="banner-cta-no-stacking banner-cta-no-stacking-left">
+    {% include 'atoms-h2' with { 'content': 'Lorem ipsum dolor sit amet', 'class': 'banner-cta-no-stacking_title h1' } %}
+    <div class="banner-cta-no-stacking_image" style="background-image: url('https://ipsumimage.appspot.com/600x400?l=3:2|600x400&s=36');"></div>
+    <div class="banner-cta-no-stacking_text">
+        {% include 'atoms-paragraph' with { content: 'Dolor posuere tempor quam et, maecenas auctor hac urna ac eu, sed in.' } %}
+        {% include 'atoms-button-link' with { content: 'CTA button', class: 'button-small banner-cta-no-stacking_button' } %}
+    </div>
+</div>
+```
+
 ### Pseudo-Patterns
 
 [Pseudo-patterns](http://patternlab.io/docs/pattern-pseudo-patterns.html) are Pattern Lab's way of easily managing closely related patterns that have multiple variants. In the case of our style guide, we typically use pseudo-patterns for patterns where the data structures are consistent, but content might be displayed in differently if certain conditions are met. 
@@ -52,7 +100,7 @@ In Drupal, we often use [*display/view modes*](https://www.drupal.org/docs/8/api
 
 When creating pseudo patterns, first make a base pattern template that includes logic for when to and when to not display various elements depending on the data in the content model. Below is an example of the base Twig template for a pattern named **topic-related-content.twig** with pseudo-variants:
 
-```
+```twig
 {% set applyGrid = related_content.image ? "grid" : "" %}
  <div class="topic-related-content {{applyGrid}}">
    {% if related_content.image %}
@@ -71,7 +119,7 @@ When creating pseudo patterns, first make a base pattern template that includes 
 
 The default json, stored in a file named **topic-related-content.json**, looks like this:
 
-```
+```json
 {
   "related_content": {
       "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
@@ -81,7 +129,7 @@ The default json, stored in a file named **topic-related-content.json**, looks l
 
 A variant named **topic-related-content~with-image.json** might look like this:
 
-```
+```json
 {
   "related_content": {
       "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -104,17 +152,17 @@ In general, you can create any number of variables within your templates to use 
 
 `link` is a special word in Pattern Lab used for linking patterns to one another rather than hardcoding paths. You should not use it as a variable name when passing data to a pattern.
 
-DO NOT
+**Example:**
 
-```
-<li>{% include 'atoms-logo' with {'link': 'http://example.com' } %}</li>
+```twig
+<li>{% include 'atoms-logo' with {'href': 'http://example.com' } %}</li>
                                    ----
 ```
 
-DO
+**Avoid:**
 
-```
-<li>{% include 'atoms-logo' with {'href': 'http://example.com' } %}</li>
+```twig
+<li>{% include 'atoms-logo' with {'link': 'http://example.com' } %}</li>
                                    ----
 ```
 
@@ -174,7 +222,7 @@ Then add elements with `.col-width-x` classes, where 'x' should be replaced by t
 
 **Example:**
 
-```
+```twig
 <a href="#" class="grid">
   <div class="col-width-8">
     {% include '09-text.twig' %}
@@ -194,7 +242,7 @@ If you need to specify different gutters, or use a different mobile behavior for
 
 Markup
 
-```
+```twig
 <a href="#" class="news-section">
   <div class="news-section_left">
     {% include '09-text.twig' %}
@@ -207,7 +255,7 @@ Markup
 
 SCSS
 
-```
+```css
 .news-section {
   @include grid(); 
 }
@@ -223,11 +271,11 @@ SCSS
 
 **Avoid** mixing usage of the `.grid` _class_ and the `grid__unit--cols(x)` _mixin_. Similarly, do not combine the `grid()` _mixin_ with the `.col-width-x` _classes_. Parent and child elements should be consistent--use either classes **or** mixins but **not both**. This is to maintain clarity and make it more intuitive for a developer to see how the grid's being implemented in a given pattern.
 
-**Do not do this:**
+**Avoid:**
 
 Markup
 
-```
+```twig
 <a href="#" class="news-section grid">
   <div class="news-section_right">
     {% include '09-text.twig' %}
@@ -240,7 +288,7 @@ Markup
 
 SCSS
 
-```
+```css
 .news-section_right {
   @include grid__unit--cols(8);
 }
@@ -266,16 +314,18 @@ When appropriate, please extend placeholders rather than classes:
 
 Placeholder selectors will not show up in the generated CSS. Only the selectors that extend them will be included in the output. This means that if a placeholder exists only to be extended by other classes, our compiled CSS won't get bloated by unused classes.  Example:
 
-    %button {
-      background: $orange;
-      text: #fff;
-      width: 100%;
-    }
-    .button--tight {
-      @extend %button
-      display: inline;
-      width: auto;
-    }
+```css
+%button {
+  background: $orange;
+  text: #fff;
+  width: 100%;
+}
+.button--tight {
+  @extend %button
+  display: inline;
+  width: auto;
+}
+```
 
 ## Javascript
 
