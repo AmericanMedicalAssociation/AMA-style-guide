@@ -1,11 +1,11 @@
 .ama-theme {
-  .layout.topic_tools {
-    @include grid--direction-col();
-  }
-
   // The tools block.
   .topic_tools {
     max-width: 800px;
+
+    ul li {
+      margin-bottom: 0; // override default list styles
+    }
 
     // Tools links.
     .tools_list-learn-more {
