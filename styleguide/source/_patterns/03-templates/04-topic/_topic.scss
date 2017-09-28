@@ -50,7 +50,7 @@
 // This is a wanton violation of our usual grid practices, but required
 // in this special case. Please don't make a habit of this!
 .topic_main {
-  @include breakpoint($bp-small $bp-med - 1) {
+  @include breakpoint(600px 899px) {
     &.grid {
       display: block;
       overflow: auto;
