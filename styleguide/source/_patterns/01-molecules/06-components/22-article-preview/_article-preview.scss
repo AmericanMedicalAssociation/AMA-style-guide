@@ -1,20 +1,68 @@
-// Display articles in hero and topic articles using columns.
-.topic_hero,
-.topic_topic-articles {
-  .topic_article-preview {
-    display: flex;
-    @include grid--direction-col();
-    @include gutter($margin-top-half-negative...);
-  }
+.topic_article-preview {
+  align-items: flex-start;
 }
 
-.topic_hero .topic_article-preview {
-  @include gutter($margin-top-full-negative...);
+// Ensure top gutters for child elements.
+.topic_article-preview {
+  @include child-top-gutters($gutter / 2);
+  position: relative;
+}
+
+// Enforce aspect ratios.
+.topic_article-preview img {
+  width: 100%; // necessary?
 }
 
 // Remove inherited margins from article preview fields so that we can set consistent top margins.
 .topic_article-preview_label,
 .topic_article-preview_title h2,
-.topic_article-preview_description {
+.topic_article-preview_description p {
   margin-top: 0;
+  margin-bottom: 0;
+}
+
+.topic_article-preview_description,
+.topic_article-preview_metadata {
+  position: relative;
+  top: -3px;  //hackity hack the illusion of even spacing
+  @include breakpoint($bp-med) {
+    top: -6px;
+  }
+}
+
+.topic_article-preview_container-image {
+  width: 100%;
+}
+
+.topic_article-preview-related-article {
+
+  .topic_article-preview_container-image {
+    @include grid__unit--cols(6);
+    @include gutter($padding-left-half...);
+    order: 2;
+    text-align: right;
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(3);
+      @include gutter($padding-right-half...);
+      order: 1;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+
+  .topic_article-preview_container-title {
+    @include grid__unit--cols(6);
+    order: 1;
+
+    @include breakpoint(0 $bp-med) {
+      margin-top: 0;
+    }
+
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(9);
+      order: 2;
+      padding-right: 0;
+    }
+  }
 }

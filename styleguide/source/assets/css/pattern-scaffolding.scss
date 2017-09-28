@@ -6,8 +6,7 @@
 
 /*Add spacing around elements */
 #sg-patterns {
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
+  box-sizing: border-box !important;
   max-width: 100%;
 }
 
@@ -24,16 +23,13 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
 }
 .sg-colors li {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  flex: auto;
   padding: 0.3em;
   margin: 0 0.5em 0.5em 0;
   min-width: 5em;
@@ -54,24 +50,24 @@
   line-height: 1;
 }
 
-.sg-pattern[id*='atoms'],
-.sg-pattern[id*='molecules'],
-.sg-pattern[id*='organisms'] {
+.sg-pattern[id*="atoms"],
+.sg-pattern[id*="molecules"],
+.sg-pattern[id*="organisms"] {
   padding: 0 2em;
   margin: 1em 0 0;
   position: relative;
 }
 
-.sg-pattern[id*='templates'] .sg-pattern-head,
-.sg-pattern[id*='pages'] .sg-pattern-head,
-.sg-pattern[id*='templates'] .sg-pattern-extra,
-.sg-pattern[id*='pages'] .sg-pattern-extra {
+.sg-pattern[id*="templates"] .sg-pattern-head,
+.sg-pattern[id*="pages"] .sg-pattern-head,
+.sg-pattern[id*="templates"] .sg-pattern-extra,
+.sg-pattern[id*="pages"] .sg-pattern-extra {
   margin: 0 2.5rem;
 }
 
-.sg-pattern[id*='templates'] .sg-pattern-head,
-.sg-pattern[id*='pages'] .sg-pattern-head {
-  padding: .5rem 0 0;
+.sg-pattern[id*="templates"] .sg-pattern-head,
+.sg-pattern[id*="pages"] .sg-pattern-head {
+  padding: 0.5rem 0 0;
 }
 
 .sg-subtype {

@@ -17,11 +17,6 @@
   order: -2;
 }
 
-// Ensure consistent top margins for elements in this section.
-.topic_topic-articles .topic_article-preview > * {
-  @include gutter($margin-top-half...);
-}
-
-.topic_topic-articles .topic_article-preview {
-  @include gutter($padding-bottom-full...);
+.topic_topic-articles .topic_article-preview:not(:first-child) {
+  @include gutter($padding-top-half...);
 }

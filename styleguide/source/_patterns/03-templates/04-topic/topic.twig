@@ -9,9 +9,9 @@
     </div>
   </div>
 
-  <div class="grid grid-margin">
+  <div class="topic_main grid grid-margin">
     <aside class="topic_rail-left col-width-3 grid-region">
-      {% include 'organisms-topic-tools' %}
+      {% include 'organisms-topic-tools' with { 'class': 'grid-region_content' } %}
       {% include 'organisms-topic-promotion' with { 'class': 'grid-region_content' } %}
       {% include 'organisms-topic-topic-articles' with { 'class': 'grid-region_content' } %}
     </aside>
@@ -22,8 +22,8 @@
     </section>
 
     <aside class="topic_rail-right col-width-3 grid-region">
-      {% include 'organisms-topic-membership' %}
-      {% include 'organisms-topic-related-content' with { 'class': 'grid-region_content' } %}
+      {% include 'organisms-topic-membership' with { 'class': 'grid-region_content' } %}
+      {% include 'organisms-topic-related-content-list' with { 'class': 'grid-region_content' } %}
     </aside>
   </div>
   <div class="grid grid-margin">

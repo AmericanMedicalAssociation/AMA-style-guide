@@ -1,1 +1,1 @@
-<a href="{{ link|default ('link.pages-homepage') }}" class="logo logo-outer {{ class }}"><img src="{{ image|default('../../assets/images/logo.svg') }}" class="logo" alt="{{ alt|default('American Medical Association') }}" /></a>
+<a href="{{ href|default(link|first) }}" class="logo logo-outer {{ class }}"><img src="{{ image|default('../../assets/images/logo.svg') }}" class="logo" alt="{{ alt|default('American Medical Association') }}" /></a>

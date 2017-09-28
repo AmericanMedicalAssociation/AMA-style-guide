@@ -8,6 +8,21 @@
   }
 }
 
+.card-row-ec-three-up {
+  @include breakpoint($bp-med){
+    margin-left: -5px;
+    width: calc(100% + 10px);
+  }
+  .layout_item {
+    @include grid__unit--cols(12);
+    @include breakpoint($bp-med) {
+      @include grid__unit--cols(4);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+    }
+  }
+}
+
 // Styling for cards when they're in a Four Up layout.
 
 .layout-four-up .layout_item {
@@ -32,7 +47,7 @@
 }
 
 .layout_five-up-left .card-image-landscape_overlay,
-.layout_three_up .card-image-landscape_overlay {
+.card-row-ec-three-up .card-image-landscape_overlay {
   @include breakpoint($bp-small $bp-med) {
     position: relative;
     background: $black-7;

@@ -1,5 +1,12 @@
-.topic_promotion .topic_promotion_container {
-  background: $black-7;
+.topic_promotion {
+  ul,
+  ol {
+    margin: 9px 0 0 0;
+    padding: 0 0 0 20px;
+  }
+  .topic_promotion_container {
+    background: $black-7;
+  }
 }
 
 // If the container is rendered as an <a> element (if there's no CTA button).

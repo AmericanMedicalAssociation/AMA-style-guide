@@ -6,9 +6,9 @@
       @include type($font-serif, 24px, $font-weight-medium, 1.2916666667);
     }
   }
-}
 
-.topic_related-articles_title {
-  @include gutter($padding-bottom-half...);
-  margin-bottom: 0;
+  h3.topic_related-articles_title {
+    @include gutter($padding-bottom-half...);
+    margin-bottom: 0;
+  }
 }

@@ -43,11 +43,6 @@
 	@include gutter($padding-top-full...);
 }
 
-// Add top margins between content within grid regions.
-.grid-region_content {
-	@include gutter($padding-top-full...);
-}
-
 // Don't add padding to the first/last children of nested grids, since the parent
 // already has padding. This is a row.
 .grid-region-nested {

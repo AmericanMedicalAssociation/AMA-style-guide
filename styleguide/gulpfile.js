@@ -106,7 +106,7 @@ gulp.task('css', function () {
 });
 
 // Task: Handle Sass and CSS
-gulp.task('sass', function () {
+gulp.task('sass', ['scss-lint'], function () {
   return gulp.src(config.scss.files)
     .pipe(sourcemaps.init())
       .pipe(sass())
@@ -292,38 +292,32 @@ gulp.task('drupal-deploy', function () {
   runSequence('default', 'publish');
 });
 
-// Function: Releasing (Bump, Tagging & Deploying)
-// Description: Bump npm versions, create Git tag and push to origin
+// Function: Tagging deployed code
+// Description: After code is pushed to master using master-deploy, tag it.
 gulp.task('tag', function () {
-  production = true;
-
   return gulp.src(config.versioning.files)
-    .pipe(bump({
-      type: gutil.env.env || 'development'
-    }))
-    .pipe(gulp.dest('./'))
-    .pipe(git.commit('Release a ' + gutil.env.env + '-update'))
-
-    // read only one file to get version number
-    .pipe(filter('package.json'))
-
-    // Tag it
-    .pipe(tagversion())
-
-    // Publish files and tags to endpoint
-    .pipe(shell([
-      'git push origin develop',
-      'git push origin --tags'
-    ]));
+    // Fetch master so that we can tag it.
+    .pipe(shell(['git fetch origin master:master']))
+    // Tag it.
+    .pipe(tagversion({args: 'master'}))
+    // Push tag.
+    .pipe(shell(['git push origin --tags']));
 });
 
+gulp.task('set-master', function (callback) {
+  // Change the deploy branch
+  gutil.log('Setting branch to master.');
+  config.deployment.branch = "master";
+  callback();
+})
+
 // Task: Release the code
-// Description: Release runs default to build the files,
-// runs tag to tag the release and pushes that to GitHub
-// runs publish to also make sure GitHub pages site is updated
-gulp.task('release', function () {
+// Description: Release runs deploy to build to gh-pages,
+// pushes the same code to master, then tags master.
+gulp.task('release', function (callback) {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
-  // run default to build the code, next tag to cut a tag, then publish to deploy to GitHub pages
-  runSequence('default', 'tag', 'publish');
+  // Build the style guide, publish to gh-pages, set the branch to master,
+  // publish to master, then tag master.
+  runSequence('default', 'publish', 'set-master', 'publish', 'tag', callback);
 });
