@@ -14,16 +14,14 @@
     {% if topic_article.video %}
       <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}</div>
       {% include "atoms-video-youtube" with {'class': 'topic_article-preview_video'} %}
+    {% endif %}
+    {% if not topic_article.video %}
+      <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}</div>
+    {% endif %}
+    {% if not topic_article.related %}
       <div class="topic_article-preview_description">
         {% include "atoms-paragraph" only %}
       </div>
-    {% else %}
-      <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}</div>
-      {% if not topic_article.related %}
-        <div class="topic_article-preview_description">
-          {% include "atoms-paragraph" only %}
-        </div>
-        {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
-      {% endif %}
+      {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
     {% endif %}
 </div>
