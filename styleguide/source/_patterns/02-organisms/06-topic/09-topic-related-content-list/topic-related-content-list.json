@@ -4,14 +4,9 @@
       "title": "Lorem ipsum dolor inside a topics page"
     },
     "second":{
-      "title": "Lorem ipsum",
-      "image": "https://ipsumimage.appspot.com/279x186?l=3:2|279x186&s=36"
+      "title": "Lorem ipsum"
     },
     "third":{
-      "title": "Lorem ipsum dolor sit amet. Consectetur adipiscing elit",
-      "image": "https://ipsumimage.appspot.com/279x186?l=3:2|279x186&s=36"
-    },
-    "fourth":{
       "title": "Lorem ipsum dolor sit amet. Consectetur adipiscing elit"
     }
   }
