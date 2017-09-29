@@ -6,11 +6,13 @@ An Article Preview molecule contains a topic label (optional), an article title,
 
 Variants are managed by use of pseudo-patterns.
 
+- "Article Preview Small Image" is the variant of this pattern that includes a smaller image.
 - "Article Preview Video" is the variant of this pattern that includes a video rather than an image.
 - "Article Preview Related" is the variant of this pattern that includes an image and title.
 - "Article Preview Related No Image" is the variant of this pattern that includes a linked title.
 
 Hero: [EWL-3808](https://issues.ama-assn.org/browse/EWL-3808)
 Related: [EWL-3819](https://issues.ama-assn.org/browse/EWL-3819)
+Small Image: [EWL-3967](https://issues.ama-assn.org/browse/EWL-3867)
 
 Refactor to use pseudo-patterns: [EWL-3987](https://issues.ama-assn.org/browse/EWL-3987)
