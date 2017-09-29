@@ -1,7 +1,8 @@
 {% set classes = [
-  topic_article.related ? "grid",
+  topic_article.related or topic_article.small ? "grid",
   topic_article.related and topic_article.image ? "topic_article-preview-related-article",
-  topic_article.video ? "topic_article-preview-video"
+  topic_article.video ? "topic_article-preview-video",
+  topic_article.small ? "topic_article-preview-small"
 ] %}
 
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
@@ -20,7 +21,7 @@
     {% endif %}
     {% if not topic_article.related %}
       <div class="topic_article-preview_description">
-        {% include "atoms-paragraph" only %}
+        {% include "atoms-paragraph" with {'content' : topic_article.description} only %}
       </div>
       {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
     {% endif %}
