@@ -29,10 +29,15 @@
 }
 
 // Style the topic labels for each section consistently.
-.topic .title-label {
+*[class^="topic_"] .title-label {
   line-height: 1.38889;
   @include gutter($margin-bottom-half...);
-  @include gutter($padding-bottom-quarter...); //use quarter to offset line height of lable text
+  @include gutter($padding-bottom-quarter...); // use quarter to offset line height of label text.
+}
+
+.topic_related-articles .title-label,
+.topic_topic-articles .title-label,
+.topic_related-content_list .title-label {
   @include rule-horizontal-bottom(1px, $black-20, solid);
 }
 
