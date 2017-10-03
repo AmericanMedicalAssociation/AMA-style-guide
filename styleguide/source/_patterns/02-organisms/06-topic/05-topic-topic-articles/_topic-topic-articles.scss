@@ -20,3 +20,7 @@
 .topic_topic-articles .topic_article-preview:not(:first-child) {
   @include gutter($padding-top-half...);
 }
+
+.topic_article-preview-small .topic_article-preview_container-title {
+  margin-top: 3px; // make the spacing consistent with labels in other sections.
+}
