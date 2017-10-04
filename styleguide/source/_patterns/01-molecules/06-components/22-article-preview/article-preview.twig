@@ -10,7 +10,11 @@
       {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
     {% endif %}
     {% if topic_article.image %}
-      <div class="topic_article-preview_container-image"> {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
+      {% if topic_article.related or topic_article.small %}
+        <div class="topic_article-preview_container-image"> {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
+      {% else %}
+        <div class="topic_article-preview_container-image"> {% include "atoms-landscape-7x5" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
+      {% endif %}
     {% endif %}
     {% if topic_article.video %}
       <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}</div>
