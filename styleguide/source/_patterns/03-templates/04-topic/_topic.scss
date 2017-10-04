@@ -35,9 +35,9 @@
   @include gutter($padding-bottom-quarter...); // use quarter to offset line height of label text.
 }
 
-.topic_related-articles .title-label,
-.topic_topic-articles .title-label,
-.topic_related-content_list .title-label {
+.topic_article-preview_label,
+.topic_related-articles_title,
+.topic_related-content_title {
   @include rule-horizontal-bottom(1px, $black-20, solid);
 }
 
