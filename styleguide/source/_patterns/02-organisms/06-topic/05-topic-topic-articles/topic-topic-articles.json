@@ -13,6 +13,14 @@
       "related": false,
       "title": "Topic Article Video Title",
       "video": true
+    },
+    "small": {
+      "image": "https://ipsumimage.appspot.com/450x321?l=7:5|450x321&s=36",
+      "label": "true",
+      "metadata": "",
+      "title": "Topic Article Small Image Title",
+      "small": "true",
+      "description": "A paragraph is a self-contained unit of a discourse in writing dealing with a particular point or idea."
     }
   }
 }
