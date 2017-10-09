@@ -337,7 +337,7 @@ Javascript in the style guide is directly consumed by Drupal, and as such, you n
 
 ### Creating a new, custom Javascript file
 1. Create a new Javascript file in the corresponding pattern directory with the same name as the pattern (e.g. `test-pattern.twig` would get `test-pattern.js`).
-2. Copy and paste the [Javascript file template](./JS_TEMPLATE.js) into your new file. (The template is located at /styleguide/docs/JS_TEMPLATE.js)
+2. Copy and paste the [Javascript file template](./JS_TEMPLATE.js) into your new file. (The template is located at /docs/JS_TEMPLATE.js)
 3. Update the potions in curly brackets: the file description comment, the name of the behavior and the contents of the script you're writing. You many name your behavior anything you like; it just needs to be unique.
 4. Your JS will be automatically sucked up by gulp and compiled into the project.
 
