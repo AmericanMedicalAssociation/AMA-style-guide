@@ -50,6 +50,11 @@ The style guide project maintains a number of branches:
 
 For more detail on how to deploy to these branches, see [Creating a Release](styleguide/docs/creating_a_release.md)
 
+## Contribute
+
+Please follow the steps in [Contributing docs](styleguide/CONTRIBUTING.md) to set up your repo for *development* and *contribution* purposes.
+
+
 ## Troubleshooting:
 ### Make sure your npm dependencies are up to date
 If you run unto an unexpected error, you might just be missing a dependency
