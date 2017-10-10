@@ -22,7 +22,7 @@
 
   @include breakpoint($bp-med min-width) {
     @include grid__unit--cols(6);
-    @include gutter($padding-left-half...);
+    padding-left: 15px;
   }
 }
 
@@ -31,5 +31,6 @@
   
   @include breakpoint($bp-med min-width) {
     @include grid__unit--cols(3);
+    padding-right: 15px;
   }
 }
