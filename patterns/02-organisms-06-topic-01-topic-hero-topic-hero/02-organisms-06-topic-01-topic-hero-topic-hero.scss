@@ -2,6 +2,18 @@
   @include gutter($padding-top-full...);
 }
 
+.topic_hero .topic_article-preview_label {
+  @include breakpoint(0 $bp-small) {
+    display: none;
+  }
+}
+
+.topic_hero .topic_article-preview_container-title {
+  @include breakpoint(0 $bp-small) {
+    margin-top: 0;
+  }
+}
+
 .topic_hero .topic_article-preview_title {
   display: inline-block;
   @include type($font-serif, 24px, $font-weight-medium, 1.3043478261);
