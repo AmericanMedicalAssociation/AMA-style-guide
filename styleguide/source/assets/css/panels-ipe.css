@@ -892,3 +892,5 @@ div.ipe-actions-block {
     background: #f7fcff;
 }
 
+/* Unfix the IPE tray so we can see all the elements */
+#panels-ipe-tray { position: relative; }
