@@ -7,6 +7,7 @@
   - [Use You Some JSON](#use-you-some-json)
   - [Pseudo-Patterns](#pseudo-patterns)
   - [Pattern Lab reserved words](#pattern-lab-reserved-words)
+  - [Twig Coding standards](#twig-coding-standards)
 - [HTML](#html)
   - [Semantic Markup](#semantic-markup)
   - [Aria Tags and Accessibility](#aria-tags-and-accessibility)
@@ -165,6 +166,10 @@ In general, you can create any number of variables within your templates to use 
 <li>{% include 'atoms-logo' with {'link': 'http://example.com' } %}</li>
                                    ----
 ```
+
+### Twig Coding Standards
+
+All twig files should follow the standards and procedures set out in [Drupal Twig Coding Standards](https://www.drupal.org/docs/develop/coding-standards/twig-coding-standards) and [Git coding standards](https://github.com/git/git/blob/master/Documentation/CodingGuidelines). Including but not limited to newline at the end of files.
 
 ## HTML
 
