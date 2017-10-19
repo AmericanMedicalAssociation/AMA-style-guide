@@ -97,9 +97,17 @@ div.ipe-actions {
 
 #panels-ipe-tray label {
   text-transform: none;
+
+  &.form-required:after {
+    content: "*";
+    color: red;
+  }
 }
 
-#panels-ipe-tray label.form-required:after {
-  content: "*";
-  color: red;
+#panels-ipe-tray a {
+  color: $black;
+}
+
+#panels-ipe-tray h5 {
+  font-size: 12px;
 }
