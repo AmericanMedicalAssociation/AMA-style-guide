@@ -1,11 +1,6 @@
-{% if editing %}<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">{% endif %}
-
 <div class="topic_tools {{ class }}">
-  {% if editing %}{% include 'molecules-in-place-editor' %}{% endif %}
   {% include 'atoms-h4' with { 'class': 'tools_title', 'content': 'Topics, Tools, and Resources' } %}
   {% include 'molecules-list-topic-tools' %}
   {% include 'atoms-h5' with { 'class': 'tools_title-learn-more', 'content': 'Learn More About:' } %}
   {% include 'molecules-list-links' with { 'class': 'tools_list-learn-more' } %}
 </div>
-
-{% if editing %}</div>{% endif %}
