@@ -1,7 +1,9 @@
-{% if editing %}<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">{% endif %}
-    {% if editing %}{% include 'molecules-in-place-editor' %}{% endif %}
-    <div class="topic_hero {{ class }}">
-      {% include "molecules-article-preview" with {'topic_article' : hero.first } %}
-      {% include "molecules-article-preview" with {'topic_article' : hero.second } %}
-    </div>
-  {% if editing %}</div>{% endif %}
+{% if editing %}
+<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">
+ {% include 'molecules-in-place-editor' %}
+{% endif %}
+<div class="topic_hero {{ class }}">
+  {% include "molecules-article-preview" with {'topic_article' : hero.first } %}
+  {% include "molecules-article-preview" with {'topic_article' : hero.second } %}
+</div>
+{% if editing %}</div>{% endif %}
