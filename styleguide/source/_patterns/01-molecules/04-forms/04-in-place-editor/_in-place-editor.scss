@@ -95,6 +95,10 @@ div.ipe-actions {
 
 // Custom styling for the IPE tray.
 
+#panels-ipe-tray input {
+  margin: 0.25em 0;
+}
+
 #panels-ipe-tray label {
   text-transform: none;
 
@@ -108,10 +112,32 @@ div.ipe-actions {
   color: $black;
 }
 
+#panels-ipe-tray h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
 #panels-ipe-tray h5 {
   font-size: 12px;
 }
 
 #panels-ipe-tray a.tabledrag-handle .handle {
   margin: 0 0 0 1em;
+}
+
+#panels-ipe-tray .form-item .description,
+#panels-ipe-tray div.description,
+#panels-ipe-tray ul.tips {
+  font-size: 14px;
+}
+
+#panels-ipe-tray button.tabledrag-toggle-weight {
+  font-size: 11px;
+}
+
+#panels-ipe-tray button,
+#panels-ipe-tray html input[type=button],
+#panels-ipe-tray input[type=reset],
+#panels-ipe-tray input[type=submit] {
+  margin-top: 0.5em;
 }
