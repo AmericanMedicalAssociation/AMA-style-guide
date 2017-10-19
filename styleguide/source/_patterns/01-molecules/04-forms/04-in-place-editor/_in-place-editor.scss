@@ -99,3 +99,8 @@
 #panels-ipe-tray label {
   text-transform: none;
 }
+
+#panels-ipe-tray label.form-required:after {
+  content: "*";
+  color: red;
+}
