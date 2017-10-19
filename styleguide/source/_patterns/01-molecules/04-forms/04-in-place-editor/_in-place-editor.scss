@@ -112,6 +112,10 @@ div.ipe-actions {
   color: $black;
 }
 
+#panels-ipe-tray .ipe-block-content-type-info p {
+  margin-top: 0;
+}
+
 #panels-ipe-tray h4 {
   font-size: 16px;
   margin: 0;
@@ -140,4 +144,8 @@ div.ipe-actions {
 #panels-ipe-tray input[type=reset],
 #panels-ipe-tray input[type=submit] {
   margin-top: 0.5em;
+}
+
+#panels-ipe-tray select {
+  -webkit-appearance: menulist;
 }
