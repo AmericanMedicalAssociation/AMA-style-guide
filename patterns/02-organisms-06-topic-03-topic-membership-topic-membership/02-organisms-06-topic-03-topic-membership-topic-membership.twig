@@ -1,5 +1,8 @@
-<div class="topic_membership {{ class }}">
-  {% set tag = membership.cta ? 'div': 'a' %}
+{% if editing %}<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">{% endif %}
+  <div class="topic_membership {{ class }}">
+    {% if editing %}{% include 'molecules-in-place-editor' %}{% endif %}
+
+    {% set tag = membership.cta ? 'div': 'a' %}
   <{{tag}} class="topic_membership_container" href="#">
     {% if membership.logo %}
       {% include 'atoms-logo' with { 'href': '#', 'image': membership.logo, 'alt': 'logo', 'class': 'topic_membership_logo' } %}
@@ -21,3 +24,4 @@
     </div>
   </{{tag}}>
 </div>
+{% if editing %}</div>{% endif %}
