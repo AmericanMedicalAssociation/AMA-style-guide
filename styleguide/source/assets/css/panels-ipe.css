@@ -1,3 +1,10 @@
+/* This stylesheet is backported from the Panels IPE Drupal module.
+ * We're including it here to assist in styling the IPE forms.
+ * It should not be included with the rest of the assets that get symlinked to Drupal.
+ */
+
+/* stylelint disable */
+
 /**
  * @file
  * Contains all CSS for the Panels In-Place Editor.
@@ -892,5 +899,7 @@ div.ipe-actions-block {
     background: #f7fcff;
 }
 
-/* Unfix the IPE tray so we can see all the elements */
+/* stylelint enable */
+
+/* Unfix the IPE tray so we can see all the elements. */
 #panels-ipe-tray { position: relative; }
