@@ -1,49 +1,42 @@
-// Styling for the IPE when viewed in the AMA theme.
+/* Styling for the IPE Actions blocks when viewed in the AMA theme. */
 
-  .contextual-region {
-    &:hover div.ipe-actions {
-      background: #f9f9f9;
-    }
+.contextual-region {
+  &:hover div.ipe-actions {
+    background: #f9f9f9;
   }
+}
 
-  div.ipe-actions {
-    flex-flow: row wrap;
-    margin-bottom: $gutter/2;
-    padding: 0 $gutter/2;
-    border-bottom: dotted 1px #cecece;
-  }
+// Specify the div selector to override default styling from panels-ipe.css.
+div.ipe-actions {
+  flex-flow: row wrap;
+  margin-bottom: $gutter/2;
+  padding: 0 $gutter/2;
+  border-bottom: dotted 1px #cecece;
 
-  div.ipe-actions h5 {
+  h5 {
     flex-basis: 100%;
     margin-bottom: 0;
     padding: 8px 5px 0;
     text-transform: none;
   }
 
-  .ipe-actions ul.ipe-action-list {
-    display: flex;
-  }
-
-  .ama-theme .ipe-action-list li {
-    margin-bottom: 0;
-    padding: 5px 2px;
-  }
-
-  div.ipe-actions a {
+  a {
     color: $black-55;
   }
+}
 
-  .ipe-action-list .ipe-icon {
+.ipe-action-list {
+  .ipe-icon {
     height: auto;
     margin: 0;
     font-size: 20px;
   }
+}
 
-  .ipe-action-list [data-action-id="move"] {
-    order: 1;
-  }
+.ipe-action-list [data-action-id="move"] {
+  order: 1;
 
-  .ipe-action-list [data-action-id="move"] select {
+  select {
     margin: 0;
     padding: 0 0.5em;
     height: 1.5em;
@@ -60,6 +53,12 @@
       transition: all 0.2s ease;
     }
   }
+}
+
+.ama-theme .ipe-action-list li { // Specify the .ama-theme selector to override specificity from the theme's list styling.
+  margin-bottom: 0;
+  padding: 5px 2px;
+}
 
 /* stylelint-disable  */
 /* disable the linter so we don't lint CSS we didn't write */
@@ -93,3 +92,60 @@
 }
 
 /* stylelint-enable */
+
+// Custom styling for the IPE tray.
+
+#panels-ipe-tray input {
+  margin: 0.25em 0;
+}
+
+#panels-ipe-tray label {
+  text-transform: none;
+
+  &.form-required:after {
+    content: "*";
+    color: red;
+  }
+}
+
+#panels-ipe-tray a {
+  color: $black;
+}
+
+#panels-ipe-tray .ipe-block-content-type-info p {
+  margin-top: 0;
+}
+
+#panels-ipe-tray h4 {
+  font-size: 16px;
+  margin: 0;
+}
+
+#panels-ipe-tray h5 {
+  font-size: 12px;
+}
+
+#panels-ipe-tray a.tabledrag-handle .handle {
+  margin: 0 0 0 1em;
+}
+
+#panels-ipe-tray .form-item .description,
+#panels-ipe-tray div.description,
+#panels-ipe-tray ul.tips {
+  font-size: 14px;
+}
+
+#panels-ipe-tray button.tabledrag-toggle-weight {
+  font-size: 11px;
+}
+
+#panels-ipe-tray button,
+#panels-ipe-tray html input[type=button],
+#panels-ipe-tray input[type=reset],
+#panels-ipe-tray input[type=submit] {
+  margin-top: 0.5em;
+}
+
+#panels-ipe-tray select {
+  -webkit-appearance: menulist;
+}
