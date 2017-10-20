@@ -1,0 +1,36 @@
+{
+  "block": {
+    "title": "What the AMA Has Done for Me",
+    "list": {
+      "first": {
+        "content": "Aenean euismod bibendum laoreet"
+      },
+      "second": {
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing"
+      },
+      "third": {
+        "content": "Aenean euismod bibendum laoreet"
+      }
+    }
+  },
+  "hero": {
+    "image": {
+      "src": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&s=36"
+    }
+  },
+  "promo": {
+    "title": "Patients Before Politics",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing, euismod bibendum laoreet.",
+    "cta": "Call to Action"
+  },
+  "email": {
+    "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",
+    "button": "Register Now",
+    "description": "Tortor vestibulum aenean vitae nec turpis tincidunt, sed nunc vitae in maurisTortor vestibulum aenean vitae nec turpis",
+    "label": "Tortor vestibulum aenean vitae nec turpis tincidunt, sed nunc vitae in maurisTortor vestibulum aenean vitae nec turpis"
+  },
+  "membership": {
+    "title": "What the AMA Has Done For Me"
+  },
+  "editing": "true"
+}
