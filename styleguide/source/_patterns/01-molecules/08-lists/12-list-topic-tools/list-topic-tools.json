@@ -6,7 +6,7 @@
       "size": "2MB"
     },
     "second": {
-      "title": "Consectetur adipiscing elit",
+      "title": "Consectetur adipiscing elit, this title is two lines long",
       "type": "mpeg",
       "size": "1MB"
     },
