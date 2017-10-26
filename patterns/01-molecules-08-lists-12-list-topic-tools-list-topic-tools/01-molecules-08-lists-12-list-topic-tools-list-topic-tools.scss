@@ -53,13 +53,17 @@
     .list_topic-tools_icon {
       display: none;
       float: left;
-      height: 40px;
       margin-right: 14px;
       vertical-align: -webkit-baseline-middle;
       width: 40px;
 
       @include breakpoint($bp-med) {
         display: block;
+        height: 64px; // increase the icon height so the file type doesn't wrap under it when the text content is longer.
+      }
+
+      @include breakpoint($bp-large) {
+        height: 50px;
       }
     }
 

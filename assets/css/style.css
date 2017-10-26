@@ -7241,13 +7241,16 @@ footer {
   .ama-theme .list_topic-tools .list_topic-tools_icon {
     display: none;
     float: left;
-    height: 40px;
     margin-right: 14px;
     vertical-align: -webkit-baseline-middle;
     width: 40px; }
     @media (min-width: 56.25em) {
       .ama-theme .list_topic-tools .list_topic-tools_icon {
-        display: block; } }
+        display: block;
+        height: 64px; } }
+    @media (min-width: 75em) {
+      .ama-theme .list_topic-tools .list_topic-tools_icon {
+        height: 50px; } }
   .ama-theme .list_topic-tools .list_topic-tools_title {
     display: block;
     margin-bottom: 0;
