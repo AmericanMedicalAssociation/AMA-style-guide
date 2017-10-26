@@ -113,6 +113,7 @@
 }
 
 .col-width-12 {
+	width: 100%;
 	@include grid__unit--cols(12);
 	@include gutter($padding-right-half...);
 	@include gutter($padding-left-half...);
