@@ -1,3 +1,8 @@
+// Bugfix - IE11 doesn't rendering this <div> as block-level, so set it here to preserve the layout.
+.topic {
+  display: block;
+}
+
 // Set mobile order.
 .topic .grid-region {
 
