@@ -51,7 +51,7 @@
     }
   }
 
-  .topic_article-preview_container-title {
+  .topic_article-preview_container-image + .topic_article-preview_container-title {
     @include grid__unit--cols(6);
     order: 1;
 
