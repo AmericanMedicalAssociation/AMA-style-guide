@@ -1,0 +1,12 @@
+<div class="topic_article-preview topic_article-preview-small grid" href="#">
+  {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
+
+  <div class="topic_article-preview-container-title">{% include 'atoms-h2' with { 'class': 'topic_article-preview_title' } %}</div>
+
+  <div class="topic_article-preview_description">
+    {% include "atoms-paragraph" only %}
+  </div>
+  <div class="topic_article-preview_container-image">{% include 'atoms-landscape-3x2' with { 'src': 'https://ipsumimage.appspot.com/140x100?l=7:5|140x100&s=18', 'class': 'topic_article-preview_image' } %}</div>
+
+  {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
+</div>
