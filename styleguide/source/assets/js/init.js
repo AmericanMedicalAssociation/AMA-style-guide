@@ -25,4 +25,12 @@
 		}
 	};
 
+	Drupal.behaviors.viewsJumpMenu = {
+		attach: function (context, settings) {
+			$('.js-dropdown-select').on('change', function () {
+				window.location.href = $(this).find(':selected').data('url');
+			});
+		}
+	};
+
 })(jQuery, Drupal);

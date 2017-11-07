@@ -1,0 +1,17 @@
+{
+  "selectBox":{
+    "label":"label text:",
+    "required": false,
+    "id":"text-select",
+    "options":[{
+      "value":"http://www.google.com",
+      "text":"Option one"
+    },{
+      "value":"http://www.google.com",
+      "text":"Option two"
+    },{
+      "value":"http://www.google.com",
+      "text":"Option three"
+    }]
+  }
+}

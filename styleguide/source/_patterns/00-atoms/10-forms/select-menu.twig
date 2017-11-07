@@ -1,0 +1,8 @@
+<select
+  name="{{selectBox.id}}"
+  id="{{selectBox.id}}"
+  class="ama__select-box__select js-dropdown-select {{ selectBox.required ? 'js-required' : '' }}">
+  {% for option in selectBox.options %}
+    <option data-url="{{option.value}}" value="{{option.value}}">{{ option.text }}</option>
+  {% endfor %}
+</select>
