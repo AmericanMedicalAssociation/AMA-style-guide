@@ -1,5 +1,5 @@
 {
-  "selectBox":{
+  "selectMenu":{
     "label":"label text:",
     "required": false,
     "id":"text-select",
