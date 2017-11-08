@@ -3,5 +3,28 @@
     "heading": "Lorem ipsum dolor sit amet",
     "content": "Gain an active voice on politics protecting patients and your profession.",
     "buttonText": "Join the AMA"
+  },
+  "hubCardRow": {
+    "hubCardSelect": {
+      "selectMenu": {
+        "label": "label text:",
+        "required": false,
+        "id": "text-select",
+        "options": [
+          {
+            "value": "https://www.apple.com/itunes/download/",
+            "text": "iTunes"
+          },
+          {
+            "value": "https://play.google.com/store?hl=en",
+            "text": "Google Play"
+          },
+          {
+            "value": "https://soundcloud.com/",
+            "text": "Soundcloud"
+          }
+        ]
+      }
+    }
   }
 }
