@@ -2,7 +2,7 @@
   name="{{selectMenu.id}}"
   id="{{selectMenu.id}}"
   class="ama__select-menu__select js-dropdown-select {{ selectMenu.required ? 'js-required' : '' }}">
-  <option selected="selected">Select an Option</option>
+  <option value="" selected disabled hidden>Select an option</option>
   {% for option in selectMenu.options %}
     <option data-url="{{option.value}}" value="{{option.value}}">{{ option.text }}</option>
   {% endfor %}
