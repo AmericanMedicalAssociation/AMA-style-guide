@@ -11,6 +11,7 @@ var gulp        = require('gulp'),
     imagemin    = require('gulp-imagemin'),
     rename      = require('gulp-rename'),
     sass        = require('gulp-sass'),
+    sassGlob    = require('gulp-sass-glob'),
     shell       = require('gulp-shell'),
     tagversion  = require('gulp-tag-version'),
     uglify      = require('gulp-uglify'),
@@ -98,28 +99,19 @@ gulp.task('images', function () {
     .pipe(browserSync.reload({stream:true}));
 });
 
-//Task: Copy CSS to Public
-gulp.task('css', function () {
- return gulp.src(config.css.files)
-    .pipe(gulp.dest(config.css.dest))
-    .pipe(browserSync.reload({stream:true}));
-});
-
-// Task: Handle Sass and CSS
 gulp.task('sass', ['scss-lint'], function () {
-  return gulp.src(config.scss.files)
-    .pipe(sourcemaps.init())
+    return gulp.src(config.scss.files)
+      .pipe(sourcemaps.init())
+      .pipe(sassGlob())
       .pipe(sass())
       .pipe(prefix('last 2 version'))
       .pipe(gulpif(production, cssmin()))
       .pipe(gulpif(production, rename({
-        suffix: '.min'
+          suffix: '.min'
       })))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(
-      config.scss.dest
-    ))
-    .pipe(browserSync.reload({stream:true}));
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(config.css.dest))
+      .pipe(browserSync.reload({stream:true}));
 });
 
 // Task: Handle icons
@@ -245,7 +237,7 @@ gulp.task('default', ['clean:before'], function (callback) {
   // We need to re-run sass last to make sure the latest styles.css gets loaded
   runSequence(
     'icons',
-    ['scripts', 'fonts', 'images', 'css', 'sass'],
+    ['scripts', 'fonts', 'images', 'sass'],
     'patternlab',
     'styleguide',
     'sass',
