@@ -1,6 +1,7 @@
 <div class="hub-card-row grid">
   {% include 'molecules-hub-card-no-image' %}
+  {% set hubCardSelect = hubCardRow.hubCardSelect %}
+  {% include 'molecules-hub-card-with-select' %}
   {% include 'molecules-hub-card' %}
   {% include 'molecules-hub-card-portrait' %}
-  {% include 'molecules-hub-card-no-image' %}
 </div>

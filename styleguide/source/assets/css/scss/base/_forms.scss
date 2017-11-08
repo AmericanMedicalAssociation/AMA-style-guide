@@ -115,6 +115,16 @@
     -moz-appearance: none; /*removes default dropdown arrow in Firefox*/
     text-indent: 0.01px; /*removes default dropdown arrow in Firefox*/
     text-overflow: ""; /*removes default dropdown arrow in Firefox*/
+    color: $gray-8;
+
+    option {
+      color: $black;
+    }
+
+    &:invalid,
+    option[value=""] {
+      color: $gray-8;
+    }
   }
 
   // Placeholder text styles
