@@ -1,0 +1,24 @@
+{% set hubCardRow = hubPage.hubCardRow %}
+
+{% include 'organisms-ribbon' %}
+{% include 'organisms-header-primary' %}
+<section class="search_modal">
+  {% include 'organisms-search_modal' %}
+</section>
+<div class="container">
+  {% set content = stateDataPage.h1 %}
+  {% include 'molecules-breadcrumbs' %}
+  {% include 'molecules-section-header' %}
+</div>
+
+<div class="article-body container">
+  <div class="grid">
+    <div class="col-width-12">
+      {% set content = stateDataPage.h2 %}
+      {% include 'atoms-h2' %}
+      {% include 'molecules-input-select' %}
+      {% include 'organisms-state-data-select' %}
+    </div>
+  </div>
+</div>
+{% include 'organisms-footer' %}

@@ -1,0 +1,7 @@
+.article-body {
+  margin-bottom: 50px;
+
+  @include breakpoint($bp-small) {
+    margin-bottom: 60px;
+  }
+}
