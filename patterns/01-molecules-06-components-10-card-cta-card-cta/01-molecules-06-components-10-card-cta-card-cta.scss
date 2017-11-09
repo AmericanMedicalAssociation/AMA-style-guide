@@ -255,4 +255,16 @@
       }
     }
   }
+
+  /* Hub card with select - EWL-4133 */
+  .hub-card-with-select:hover {
+    background: $black-7;
+  }
+
+  .hub-card select {
+    width: auto;
+    order: 3;
+    margin: 1em 1em 0 1em;
+  }
+
 } // closes .ama-theme
