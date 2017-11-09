@@ -100,22 +100,6 @@
         })
         .trigger('checkval');
 
-        $('select')
-        .on('change', function()
-        {
-          var $this = $(this);
-
-          if ($this.val() == '')
-          $this.addClass('watermark');
-
-          else
-          $this.removeClass('watermark');
-
-          $this.trigger('checkval');
-        })
-        .change();
-
-
         //////////////////////////////////
         // Show / Hide password text
         //////////////////////////////////

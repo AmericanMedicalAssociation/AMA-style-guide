@@ -41,12 +41,15 @@
     <div class="filter-control_container-sort">
       <div class="filter-control_sort">
         <label class="is-vishidden" for="sortType">Sort By</label>
-        <select name="sortType">
-  <option value="" selected="selected">Select an option</option>
-  <option>Best Match</option>
-  <option>Best Match</option>
-  <option>Best Match</option>
-</select>
+        <select
+  name="text-select"
+  id="text-select"
+  class="ama__select-menu__select js-dropdown-select ">
+  <option value="" selected disabled hidden>Select an option</option>
+      <option data-url="http://www.google.com" value="http://www.google.com">Option one</option>
+      <option data-url="http://www.google.com" value="http://www.google.com">Option two</option>
+      <option data-url="http://www.google.com" value="http://www.google.com">Option three</option>
+  </select>
         <a class="filter-control_sort-icons" href="#"><span class="icon icon-list " data-grunticon-embed></span>
 </a>
         <a class="filter-control_sort-icons" href="#"><span class="icon icon-grid" data-grunticon-embed></span>
