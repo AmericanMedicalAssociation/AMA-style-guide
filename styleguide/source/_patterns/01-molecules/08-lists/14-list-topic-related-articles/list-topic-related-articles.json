@@ -1,19 +1,16 @@
 {
-  "listTopicRelatedArticles": {
-    "first": {
+  "listTopicRelatedArticles":
+    [{
       "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "related": true,
       "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18"
-    },
-    "second": {
+    },{
       "title": "Consectetur adipiscing elit",
       "related": true,
       "image": ""
-    },
-    "third": {
+    },{
       "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",
       "related": true,
       "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18"
-    }
-  }
+    }]
 }

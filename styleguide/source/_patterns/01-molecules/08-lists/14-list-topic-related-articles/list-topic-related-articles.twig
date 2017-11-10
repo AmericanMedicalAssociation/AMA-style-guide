@@ -1,5 +1,4 @@
-<ul class="list_topic-related-articles">
-  <li class="list_item-topic-related-article">{% include 'molecules-article-preview' with { 'topic_article': listTopicRelatedArticles.first } %}</li>
-  <li class="list_item-topic-related-article">{% include 'molecules-article-preview' with { 'topic_article': listTopicRelatedArticles.second } %}</li>
-  <li class="list_item-topic-related-article">{% include 'molecules-article-preview' with { 'topic_article': listTopicRelatedArticles.third } %}</li>
-</ul>
+{% for article in listTopicRelatedArticles %}
+  {% set topic_article = article %}
+  <article role="article" class="ama__list-topic-related-article">{% include '@molecules/06-components/22-article-preview/article-preview.twig' %}</article>
+{% endfor %}
