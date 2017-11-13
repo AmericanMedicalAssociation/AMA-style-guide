@@ -3,7 +3,7 @@
 }
 
 .wayfinder_logo {
-  @include grid__unit--cols(6);
+  @include grid__unit--cols(4);
   display: flex;
 }
 
@@ -13,7 +13,15 @@
 }
 
 .wayfinder_referrer {
-  @include grid__unit--cols(3);
-  padding: $gutter 0 $gutter ($gutter/2);
+  @include grid__unit--cols(4);
   align-self: center;
+  padding: $gutter-mobile 0;
+
+  @include breakpoint($bp-small) {
+    padding: $gutter-mobile 0 $gutter-mobile ($gutter-mobile / 2);
+  }
+
+  @include breakpoint($bp-med) {
+    padding: $gutter 0 $gutter ($gutter / 2);
+  }
 }

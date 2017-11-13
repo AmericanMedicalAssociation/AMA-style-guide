@@ -5,7 +5,7 @@
     },
     "referred": {
       "referrerHref": "http://some-page-on-d7.com",
-      "referrerTitle": "Referring page title text is long long long. Referring page title text is long long long. Referring page title text is long long long. "
+      "referrerTitle": "Title of d7 page"
     }
   }
 }

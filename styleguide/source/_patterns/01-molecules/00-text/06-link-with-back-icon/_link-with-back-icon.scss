@@ -12,6 +12,6 @@
 }
 
 .link-back .icon-select {
-  transform: rotate(90deg) translateY(-4px); // adjust the positioning of the icon so it lines up with the container edge.
+  transform: rotate(90deg) translateY(-4px) translateX(7px); // adjust the positioning of the icon so it lines up with the text and the container edge.
 }
 
