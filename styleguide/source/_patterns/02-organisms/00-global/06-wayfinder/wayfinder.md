@@ -1,5 +1,5 @@
 ---
-title: "Topic Wayfinder"
+title: "Wayfinder"
 ---
 
 (drupal-specific): Provides a way to navigate back to the referring D7 page.
