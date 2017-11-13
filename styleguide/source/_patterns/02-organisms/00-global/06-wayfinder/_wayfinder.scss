@@ -15,4 +15,5 @@
 .wayfinder_referrer {
   @include grid__unit--cols(3);
   padding: $gutter 0 $gutter ($gutter/2);
+  align-self: center;
 }
