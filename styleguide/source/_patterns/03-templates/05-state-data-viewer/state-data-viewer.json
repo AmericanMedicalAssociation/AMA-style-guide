@@ -1,0 +1,15 @@
+{
+  "stateDataPage": {
+    "h1": "Physicians' Impact on the Economy",
+    "h2": "Select a State",
+    "stateDataSelect": {
+      "states": {
+        "alabama": {
+          "h3": "Alabama",
+          "paragraph": "From the American Civil War until World War II, Alabama, like many states in the southern U.S., suffered economic hardship, in part because of its continued dependence on agriculture. ",
+          "image": "https://ipsumimage.appspot.com/572x255"
+        }
+      }
+    }
+  }
+}

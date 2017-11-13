@@ -1,0 +1,17 @@
+.state-data-info {
+  margin: 0 auto;
+}
+
+.ama-theme .state-data-info .form-item {
+  margin-top: 0;
+  float: none;
+}
+
+.state-data-info h3 {
+  @extend %h4;
+  margin-top: 1.2em;
+}
+
+.state-data-info img {
+  margin-top: 1.2em;
+}
