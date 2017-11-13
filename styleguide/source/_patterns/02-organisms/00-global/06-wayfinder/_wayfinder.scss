@@ -2,7 +2,17 @@
   border-bottom: solid 1px $gray-8;
 }
 
-.wayfinder .logo {
-  display: block;
-  margin: $gutter auto;
+.wayfinder_logo {
+  @include grid__unit--cols(6);
+  display: flex;
+}
+
+.wayfinder .logo-outer {
+  margin: 28px auto;
+  align-self: center;
+}
+
+.wayfinder_referrer {
+  @include grid__unit--cols(3);
+  padding: $gutter 0 $gutter ($gutter/2);
 }
