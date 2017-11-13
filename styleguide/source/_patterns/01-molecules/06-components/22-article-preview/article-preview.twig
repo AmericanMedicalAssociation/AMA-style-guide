@@ -5,7 +5,7 @@
   topic_article.small ? "topic_article-preview-small"
 ] %}
 
-<div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
+<article class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
     {% if topic_article.label %}
       {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
     {% endif %}
@@ -26,4 +26,4 @@
       </div>
       {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
     {% endif %}
-</div>
+</article>
