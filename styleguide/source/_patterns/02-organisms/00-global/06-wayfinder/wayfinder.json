@@ -2,10 +2,6 @@
   "wayfinder": {
     "logo": {
       "href": "https://www.ama-assn.org"
-    },
-    "referred": {
-      "referrerHref": "http://some-page-on-d7.com",
-      "referrerTitle": "Title of d7 page"
     }
   }
 }
