@@ -4,12 +4,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
         "label": "molecules-section-header",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -17,21 +17,21 @@ report({
             "height": 0
           },
           "misMatchPercentage": "1.15",
-          "analysisTime": 101
+          "analysisTime": 112
         },
-        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png"
+        "diffImage": "../bitmaps_test/20171115-115913/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
         "label": "molecules-section-header",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -39,21 +39,21 @@ report({
             "height": 0
           },
           "misMatchPercentage": "4.76",
-          "analysisTime": 51
+          "analysisTime": 55
         },
-        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png"
+        "diffImage": "../bitmaps_test/20171115-115913/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
         "label": "molecules-section-header",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -61,21 +61,21 @@ report({
             "height": 0
           },
           "misMatchPercentage": "14.81",
-          "analysisTime": 36
+          "analysisTime": 28
         },
-        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png"
+        "diffImage": "../bitmaps_test/20171115-115913/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
         "label": "molecules-primary-nav",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -90,12 +90,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
         "label": "molecules-primary-nav",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -110,12 +110,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
         "label": "molecules-primary-nav",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -130,12 +130,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
         "label": "organisms-hub-header",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -150,12 +150,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
         "label": "organisms-hub-header",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -170,12 +170,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
         "label": "organisms-hub-header",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -199,7 +199,7 @@ report({
           "url": "http://localhost:3000/?p=organisms-ribbon",
           "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
           "delay": 1000,
-          "misMatchThreshold": 0.8,
+          "misMatchThreshold": 1,
           "requireSameDimensions": false,
           "clickSelector": ".ribbon_dropdown_trigger",
           "hideSelectors": [],
@@ -235,7 +235,7 @@ report({
           "url": "http://localhost:3000/?p=organisms-ribbon",
           "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
           "delay": 1000,
-          "misMatchThreshold": 0.8,
+          "misMatchThreshold": 1,
           "requireSameDimensions": false,
           "clickSelector": ".ribbon_dropdown_trigger",
           "hideSelectors": [],
@@ -271,7 +271,7 @@ report({
           "url": "http://localhost:3000/?p=organisms-ribbon",
           "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
           "delay": 1000,
-          "misMatchThreshold": 0.8,
+          "misMatchThreshold": 1,
           "requireSameDimensions": false,
           "clickSelector": ".ribbon_dropdown_trigger",
           "hideSelectors": [],
@@ -298,12 +298,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_templates-home_0_sg-viewport_0_desktop.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_templates-home_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_templates-home_0_sg-viewport_0_desktop.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_templates-home_0_sg-viewport_0_desktop.png",
         "label": "templates-home",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -311,7 +311,7 @@ report({
             "height": 0
           },
           "misMatchPercentage": "0.02",
-          "analysisTime": 78
+          "analysisTime": 115
         }
       },
       "status": "pass"
@@ -319,12 +319,12 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_templates-home_0_sg-viewport_1_tablet.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_templates-home_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_templates-home_0_sg-viewport_1_tablet.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_templates-home_0_sg-viewport_1_tablet.png",
         "label": "templates-home",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -332,21 +332,21 @@ report({
             "height": 0
           },
           "misMatchPercentage": "11.27",
-          "analysisTime": 55
+          "analysisTime": 58
         },
-        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_templates-home_0_sg-viewport_1_tablet.png"
+        "diffImage": "../bitmaps_test/20171115-115913/failed_diff_backstop_default_templates-home_0_sg-viewport_1_tablet.png"
       },
       "status": "fail"
     },
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_templates-home_0_sg-viewport_2_mobile.png",
-        "test": "../bitmaps_test/20171115-115140/backstop_default_templates-home_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115913/backstop_default_templates-home_0_sg-viewport_2_mobile.png",
         "selector": "#sg-viewport",
         "fileName": "backstop_default_templates-home_0_sg-viewport_2_mobile.png",
         "label": "templates-home",
         "requireSameDimensions": false,
-        "misMatchThreshold": 0.8,
+        "misMatchThreshold": 1,
         "diff": {
           "isSameDimensions": true,
           "dimensionDifference": {
@@ -356,7 +356,7 @@ report({
           "misMatchPercentage": "3.89",
           "analysisTime": 25
         },
-        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_templates-home_0_sg-viewport_2_mobile.png"
+        "diffImage": "../bitmaps_test/20171115-115913/failed_diff_backstop_default_templates-home_0_sg-viewport_2_mobile.png"
       },
       "status": "fail"
     }
