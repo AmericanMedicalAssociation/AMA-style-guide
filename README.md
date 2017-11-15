@@ -89,3 +89,11 @@ New icons can be places in `source/assets/icons/svg`. When `gulp icons` is run, 
 We are using [Breakpoint](http://breakpoint-sass.com/) to handle media queries for responsive implementation.
 
 The first time you run `npm install` the dependency will be installed, but if you run into an error, running `npm install` again should fix the issue.
+
+
+### How do I get rid of bloat and inline css in my SVG files?
+Inline CSS is bad because can affect other SVG files. Example: .st0  class is included by Adobe Illustrator for some SVG icons. This can affect all the SVG files on the page that have a class called st0.
+
+The tool of choice for this is SVGO. It's lightweight and fast. 
+- To install it cd into your working project directory `npm install -g svgo`
+- After you install SVGO run `svgo [point to your SVG assets directory path]`
