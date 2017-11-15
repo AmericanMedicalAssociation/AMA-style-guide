@@ -19,3 +19,4 @@ styleguide/source/styleguide/*
 styleguide/vendor/*
 styleguide/node_modules/*
 styleguide/.publish
+styleguide/tests/backstop/backstop_data/*
