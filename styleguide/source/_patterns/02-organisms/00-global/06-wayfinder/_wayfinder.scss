@@ -1,5 +1,10 @@
 .wayfinder {
+  display: none;
   border-bottom: solid 1px $gray-8;
+
+  @include breakpoint($bp-small) {
+    display: block;
+  }
 }
 
 .wayfinder_logo {
