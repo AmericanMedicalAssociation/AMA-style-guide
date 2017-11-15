@@ -54,8 +54,6 @@
   }
 
   &:nth-child(3) {
-    //grid-row-start: 2;
-
     grid-area: 2 / 1 / 2 / 1;
 
     @include breakpoint($bp-small) {
@@ -110,26 +108,12 @@
 .topic_main {
   @include breakpoint(600px 899px) {
     &.grid {
-      //display: block;
       overflow: auto;
-
-      //.topic_content {
-      //  float: left;
-      //  padding-right: 14px;
-      //  width: 66.6666%;
-      //}
 
       .topic_rail-right {
         clear: right;
         padding-top: 8px;
       }
-
-      //.topic_rail-left,
-      //.topic_rail-right {
-      //  float: right;
-      //  padding-left: 14px;
-      //  width: 33.3333%;
-      //}
     }
   }
 }
