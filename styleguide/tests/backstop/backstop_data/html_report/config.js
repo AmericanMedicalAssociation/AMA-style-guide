@@ -3,25 +3,360 @@ report({
   "tests": [
     {
       "pair": {
-        "reference": "../bitmaps_reference/backstop_default_homepage_0_sg-vp-wrap_0_phone.png",
-        "test": "../bitmaps_test/20171114-153907/backstop_default_homepage_0_sg-vp-wrap_0_phone.png",
-        "selector": "#sg-vp-wrap",
-        "fileName": "backstop_default_homepage_0_sg-vp-wrap_0_phone.png",
-        "label": "homepage",
-        "misMatchThreshold": 0.1,
-        "error": "Reference file not found /Users/ngallagh/projects/AMA-style-guide/styleguide/tests/backstop/backstop_data/bitmaps_reference/backstop_default_homepage_0_sg-vp-wrap_0_phone.png"
+        "reference": "../bitmaps_reference/backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png",
+        "label": "molecules-section-header",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "1.15",
+          "analysisTime": 101
+        },
+        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_0_desktop.png"
       },
       "status": "fail"
     },
     {
       "pair": {
-        "reference": "../bitmaps_reference/backstop_default_homepage_0_sg-vp-wrap_1_tablet.png",
-        "test": "../bitmaps_test/20171114-153907/backstop_default_homepage_0_sg-vp-wrap_1_tablet.png",
-        "selector": "#sg-vp-wrap",
-        "fileName": "backstop_default_homepage_0_sg-vp-wrap_1_tablet.png",
-        "label": "homepage",
-        "misMatchThreshold": 0.1,
-        "error": "Reference file not found /Users/ngallagh/projects/AMA-style-guide/styleguide/tests/backstop/backstop_data/bitmaps_reference/backstop_default_homepage_0_sg-vp-wrap_1_tablet.png"
+        "reference": "../bitmaps_reference/backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png",
+        "label": "molecules-section-header",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "4.76",
+          "analysisTime": 51
+        },
+        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png",
+        "label": "molecules-section-header",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "14.81",
+          "analysisTime": 36
+        },
+        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_molecules-section-header_0_sg-viewport_2_mobile.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_molecules-primary-nav_0_sg-viewport_0_desktop.png",
+        "label": "molecules-primary-nav",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_molecules-primary-nav_0_sg-viewport_1_tablet.png",
+        "label": "molecules-primary-nav",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_molecules-primary-nav_0_sg-viewport_2_mobile.png",
+        "label": "molecules-primary-nav",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_organisms-hub-header_0_sg-viewport_0_desktop.png",
+        "label": "organisms-hub-header",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_organisms-hub-header_0_sg-viewport_1_tablet.png",
+        "label": "organisms-hub-header",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_organisms-hub-header_0_sg-viewport_2_mobile.png",
+        "label": "organisms-hub-header",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../..",
+        "test": "../..",
+        "selector": "",
+        "fileName": "",
+        "label": "",
+        "scenario": {
+          "label": "organisms-ribbon",
+          "url": "http://localhost:3000/?p=organisms-ribbon",
+          "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
+          "delay": 1000,
+          "misMatchThreshold": 0.8,
+          "requireSameDimensions": false,
+          "clickSelector": ".ribbon_dropdown_trigger",
+          "hideSelectors": [],
+          "removeSelectors": [],
+          "selectors": [
+            "#sg-viewport"
+          ],
+          "sIndex": 3
+        },
+        "viewport": {
+          "name": "desktop",
+          "viewport": {
+            "width": 1300,
+            "height": 1024
+          },
+          "label": "desktop",
+          "vIndex": 0
+        },
+        "msg": "Chromy error",
+        "error": "Chromy error: WaitTimeoutError. See scenario – organisms-ribbon (desktop)"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../..",
+        "test": "../..",
+        "selector": "",
+        "fileName": "",
+        "label": "",
+        "scenario": {
+          "label": "organisms-ribbon",
+          "url": "http://localhost:3000/?p=organisms-ribbon",
+          "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
+          "delay": 1000,
+          "misMatchThreshold": 0.8,
+          "requireSameDimensions": false,
+          "clickSelector": ".ribbon_dropdown_trigger",
+          "hideSelectors": [],
+          "removeSelectors": [],
+          "selectors": [
+            "#sg-viewport"
+          ],
+          "sIndex": 3
+        },
+        "viewport": {
+          "name": "tablet",
+          "viewport": {
+            "width": 568,
+            "height": 1024
+          },
+          "label": "tablet",
+          "vIndex": 1
+        },
+        "msg": "Chromy error",
+        "error": "Chromy error: WaitTimeoutError. See scenario – organisms-ribbon (tablet)"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../..",
+        "test": "../..",
+        "selector": "",
+        "fileName": "",
+        "label": "",
+        "scenario": {
+          "label": "organisms-ribbon",
+          "url": "http://localhost:3000/?p=organisms-ribbon",
+          "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
+          "delay": 1000,
+          "misMatchThreshold": 0.8,
+          "requireSameDimensions": false,
+          "clickSelector": ".ribbon_dropdown_trigger",
+          "hideSelectors": [],
+          "removeSelectors": [],
+          "selectors": [
+            "#sg-viewport"
+          ],
+          "sIndex": 3
+        },
+        "viewport": {
+          "name": "mobile",
+          "viewport": {
+            "width": 400,
+            "height": 480
+          },
+          "label": "mobile",
+          "vIndex": 2
+        },
+        "msg": "Chromy error",
+        "error": "Chromy error: WaitTimeoutError. See scenario – organisms-ribbon (mobile)"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_templates-home_0_sg-viewport_0_desktop.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_templates-home_0_sg-viewport_0_desktop.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_templates-home_0_sg-viewport_0_desktop.png",
+        "label": "templates-home",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.02",
+          "analysisTime": 78
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_templates-home_0_sg-viewport_1_tablet.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_templates-home_0_sg-viewport_1_tablet.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_templates-home_0_sg-viewport_1_tablet.png",
+        "label": "templates-home",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "11.27",
+          "analysisTime": 55
+        },
+        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_templates-home_0_sg-viewport_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/backstop_default_templates-home_0_sg-viewport_2_mobile.png",
+        "test": "../bitmaps_test/20171115-115140/backstop_default_templates-home_0_sg-viewport_2_mobile.png",
+        "selector": "#sg-viewport",
+        "fileName": "backstop_default_templates-home_0_sg-viewport_2_mobile.png",
+        "label": "templates-home",
+        "requireSameDimensions": false,
+        "misMatchThreshold": 0.8,
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "3.89",
+          "analysisTime": 25
+        },
+        "diffImage": "../bitmaps_test/20171115-115140/failed_diff_backstop_default_templates-home_0_sg-viewport_2_mobile.png"
       },
       "status": "fail"
     }
