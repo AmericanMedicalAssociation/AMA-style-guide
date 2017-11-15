@@ -91,3 +91,9 @@ To install a near-empty StarterKit as a starting point for your project type:
 To install a specific StarterKit from GitHub type:
 
     php core/console --starterkit --install <starterkit-vendor/starterkit-name>
+
+
+### Slim and remove bloat from SVG files: install and run SVGO
+    npm install -g svgo
+    svgo [point to your SVG assets directory path]
+    
