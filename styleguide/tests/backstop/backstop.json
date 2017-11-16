@@ -1,0 +1,110 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1300,
+        "height": 1024
+      }
+    },
+    {
+      "name": "tablet",
+      "viewport": {
+        "width": 568,
+        "height": 1024
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 400,
+        "height": 480
+      }
+    }
+  ],
+  "onBeforeScript": "chromy/onBefore.js",
+  "onReadyScript": "chromy/onReady.js",
+  "scenarios": [
+    {
+      "label": "molecules-section-header",
+      "url": "http://localhost:3000/?p=molecules-section-header",
+      "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=molecules-section-header",
+      "delay": 1000,
+      "misMatchThreshold": 1,
+      "requireSameDimensions": false,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "#sg-viewport"
+      ]
+    },
+    {
+      "label": "molecules-primary-nav",
+      "url": "http://localhost:3000/?p=molecules-primary-nav",
+      "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=molecules-primary-nav",
+      "delay": 1000,
+      "misMatchThreshold": 1,
+      "requireSameDimensions": false,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "#sg-viewport"
+      ]
+    },
+    {
+      "label": "organisms-hub-header",
+      "url": "http://localhost:3000/?p=organisms-hub-header",
+      "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-hub-header",
+      "delay": 1000,
+      "misMatchThreshold": 1,
+      "requireSameDimensions": false,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "#sg-viewport"
+      ]
+    },
+    {
+      "label": "organisms-ribbon",
+      "url": "http://localhost:3000/?p=organisms-ribbon",
+      "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=organisms-ribbon",
+      "delay": 1000,
+      "misMatchThreshold": 1,
+      "requireSameDimensions": false,
+      "clickSelector": ".ribbon_dropdown_trigger",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "#sg-viewport"
+      ]
+    },
+    {
+      "label": "templates-home",
+      "url": "http://localhost:3000/?p=templates-home",
+      "referenceUrl": "https://americanmedicalassociation.github.io/AMA-style-guide/?p=templates-home",
+      "delay": 1000,
+      "misMatchThreshold": 1,
+      "requireSameDimensions": false,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "#sg-viewport"
+      ]
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "chrome",
+  "engineFlags": [],
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
