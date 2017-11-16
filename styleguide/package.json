@@ -41,6 +41,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
+    "prepare": "npx patch-package",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Avi Schwab",
