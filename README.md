@@ -29,8 +29,8 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 
 **Version Requirements**
 
-**Node.js** - v7.10.1 ( always < v8.x as this has breaking conflicts)
-**npm** - >= v5.2
+- **Node.js** - v7.10.1 ( always < v8.x as this has breaking conflicts)
+- **npm** - >= v5.2
 
 **For ongoing development**
 
