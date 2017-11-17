@@ -23,9 +23,14 @@ This style guide is a compilation of [atomic components](http://bradfrost.com/bl
 
 - `cd styleguide`
 - `composer install`
-- `npm install`
+- `sudo npm install -g npm`
 - `sudo npm install -g gulp`
   - This will install gulp globally on your machine. If you don't have privileges, don't want to install globally, or need to manage multiple projects using `gulp`, you can invoke `gulp` via `./node_modules/.bin/gulp serve` instead of directly.
+
+**Version Requirements**
+
+**Node.js** - v7.10.1 ( always < v8.x as this has breaking conflicts)
+**npm** - >= v5.2
 
 **For ongoing development**
 
@@ -59,12 +64,13 @@ If you run unto an unexpected error, you might just be missing a dependency
 ### Make sure node and npm are up to date(-ish)
 You might have to do any or all of these
 
-- Update node
+- Update node using `n` instead of `nvm`
+If you have problems working with `nvm`, `n` is another package manager that will do the same thing.
 
 ```
 sudo npm cache clean -f
 sudo npm install -g n
-sudo n stable
+sudo n 7.10.0
 ```
 
 - Update npm
@@ -94,6 +100,6 @@ The first time you run `npm install` the dependency will be installed, but if yo
 ### How do I get rid of bloat and inline css in my SVG files?
 Inline CSS is bad because can affect other SVG files. Example: .st0  class is included by Adobe Illustrator for some SVG icons. This can affect all the SVG files on the page that have a class called st0.
 
-The tool of choice for this is SVGO. It's lightweight and fast. 
+The tool of choice for this is SVGO. It's lightweight and fast.
 - To install it cd into your working project directory `npm install -g svgo`
 - After you install SVGO run `svgo [point to your SVG assets directory path]`
