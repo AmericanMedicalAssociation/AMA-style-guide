@@ -1,0 +1,18 @@
+.flexbox .topic_topic-articles .topic_article-preview.topic_article-preview-small {
+  flex-direction: row;
+}
+
+.topic_article-preview-small .topic_article-preview_label,
+.topic_article-preview-small .topic_article-preview-container-title,
+.topic_article-preview-small .topic_article-preview_metadata {
+  @include grid__unit--cols(12);
+}
+
+.topic_article-preview-small .topic_article-preview_container-image {
+  @include grid__unit--cols(5);
+}
+
+.topic_article-preview-small .topic_article-preview_description {
+  @include grid__unit--cols(7);
+  @include gutter($padding-right-half...);
+}

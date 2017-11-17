@@ -1,0 +1,23 @@
+// Layout default setup.
+
+.flexbox .layout.layout_two_up-heavy-right-offset {
+  @include grid__unit--cols(12);
+  justify-content: center;
+}
+
+.layout_two_up-heavy-right-offset-primary {
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-med min-width) {
+    @include grid__unit--cols(6);
+    @include gutter($padding-left-half...);
+  }
+}
+
+.layout_two_up-heavy-right-offset-secondary {
+  @include grid__unit--cols(12);
+  
+  @include breakpoint($bp-med min-width) {
+    @include grid__unit--cols(3);
+  }
+}
