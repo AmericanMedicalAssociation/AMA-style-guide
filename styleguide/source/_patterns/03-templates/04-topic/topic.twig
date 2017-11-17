@@ -4,27 +4,30 @@
 
 <main class="topic container">
   <div class="grid grid-margin">
-    <div class="topic_top col-width-12 grid-region">
+    <div class="topic_top grid-region">
       {% include 'atoms-page-title' %}
     </div>
   </div>
 
-  <div class="topic_main grid grid-margin">
-    <aside class="topic_rail-left col-width-3 grid-region">
+  <div class="topic_main grid-margin">
+    <aside class="topic_rail-left grid-region">
       {% include 'organisms-topic-tools' with { 'class': 'grid-region_content', 'editor': editing } %}
       {% include 'organisms-topic-promotion' with { 'class': 'grid-region_content' } %}
       {% include 'organisms-topic-topic-articles' with { 'class': 'grid-region_content' } %}
     </aside>
 
-    <section class="topic_content col-width-6 grid-region">
+    <section class="topic_content grid-region">
       {% include 'organisms-topic-hero' with { 'class': 'grid-region_content', 'editor': editing } %}
       {% include 'organisms-topic-related-articles' with { 'class': 'grid-region_content' } %}
     </section>
 
-    <aside class="topic_rail-right col-width-3 grid-region">
-      {% include 'organisms-topic-membership' with { 'class': 'grid-region_content', 'editor': editing } %}
+    <section class="topic_rail-topic-membership-right grid-region">
+    {% include 'organisms-topic-membership' with { 'class': 'grid-region_content', 'editor': editing } %}
+    </section>
+
+    <section class="topic_related-content-right grid-region">
       {% include 'organisms-topic-related-content-list' with { 'class': 'grid-region_content' } %}
-    </aside>
+    </section>
   </div>
 </main>
 
