@@ -1,0 +1,8 @@
+{
+  "wayfinder": {
+    "referred": {
+      "referrerHref": "http://some-page-on-d7.com",
+      "referrerTitle": "Title of d7 page"
+    }
+  }
+}
