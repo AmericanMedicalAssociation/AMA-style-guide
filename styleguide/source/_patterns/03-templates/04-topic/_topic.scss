@@ -22,11 +22,11 @@
 // Set mobile order.
 .topic .grid-region {
 
-  .grid-region_content:not(:first-child){
+  .grid-region_content:not(:last-child){
     @include gutter($padding-bottom-full...);
   }
 
-  .grid-region_content.titleOnly:not(:first-child){
+  .grid-region_content.titleOnly:not(:last-child){
     @include gutter($padding-bottom-half...);
   }
 
