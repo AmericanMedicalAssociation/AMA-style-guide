@@ -2,25 +2,32 @@
   topic_article.related or topic_article.small ? "grid",
   topic_article.related and topic_article.image ? "topic_article-preview-related-article",
   topic_article.video ? "topic_article-preview-video",
-  topic_article.small ? "topic_article-preview-small"
+  topic_article.small ? "topic_article-preview-small",
+  topic.titleOnly ? "titleOnly"
 ] %}
 
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
-    {% if topic_article.label %}
-      {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
-    {% endif %}
-    {% if topic_article.image %}
+    {% if topic_article.image  and not topic.titleOnly %}
       {% if topic_article.related or topic_article.small %}
-        <div class="topic_article-preview_container-image"> {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
+        <div class="topic_article-preview_container-image">
+          {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
+        </div>
       {% else %}
-        <div class="topic_article-preview_container-image"> {% include "atoms-landscape-7x5" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
+        <div class="topic_article-preview_container-image">
+          {% include "atoms-landscape-7x5" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
+        </div>
       {% endif %}
     {% endif %}
-    {% if topic_article.video %}
+
+    {% if topic_article.video and not topic.titleOnly %}
       {% include "atoms-video-youtube" with {'class': 'topic_article-preview_video'} %}
     {% endif %}
-    <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}</div>
-    {% if not topic_article.related %}
+
+    <div class="topic_article-preview_container-title" {{ class }}>
+      {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}
+    </div>
+
+  {% if not topic_article.related and not topic.titleOnly %}
       <div class="topic_article-preview_description">
         {% include "atoms-paragraph" with {'content' : topic_article.description} only %}
       </div>
