@@ -8,7 +8,7 @@
 
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
     {% if topic_article.image  and not topic.titleOnly %}
-      {% if topic_article.related or topic_article.small %}
+      {% if topic_article.related or topic.small %}
         <div class="topic_article-preview_container-image">
           {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
         </div>
