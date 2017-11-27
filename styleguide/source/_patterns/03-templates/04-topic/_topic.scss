@@ -31,7 +31,7 @@
     grid-area: 3 / 1 / 3 / 1;
 
     @include breakpoint($bp-small) {
-      grid-area: 1 / 2 / 1 / 2;
+      grid-area: 2 / 2 / 2 / 2;
     }
 
     @include breakpoint($bp-med) {
@@ -57,7 +57,7 @@
     grid-area: 2 / 1 / 2 / 1;
 
     @include breakpoint($bp-small) {
-      grid-area: 2 / 2 / 2 / 2;
+      grid-area: 1 / 2 / 1 / 2;
     }
 
     @include breakpoint($bp-med) {
