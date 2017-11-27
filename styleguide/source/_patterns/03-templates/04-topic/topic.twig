@@ -19,6 +19,7 @@
     </aside>
 
     <section class="topic_content grid-region">
+      {% if leadNews %}{% include 'organisms-topic-lead-news' %}{% endif %}
       {% include 'organisms-topic-hero' with { 'class': 'grid-region_content', 'editor': editing } %}
       {% include 'organisms-topic-related-articles' with { 'class': 'grid-region_content' } %}
     </section>
