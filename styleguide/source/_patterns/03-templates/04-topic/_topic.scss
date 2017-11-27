@@ -41,7 +41,9 @@
 
     .grid-region_content.topic_topic-articles > div {
       padding-top: 0;
-      @include gutter($padding-bottom-full...);
+      &:not(:last-child) {
+        @include gutter($padding-bottom-full...);
+      }
     }
   }
 
