@@ -1,0 +1,23 @@
+{
+  "leadNewsBlock": {
+    "label": "Lead News Topic Label",
+    "articles": {
+      "first": {
+        "viewMode": "hero",
+        "image": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&amp;s=36",
+        "label": "true",
+        "metadata": "",
+        "title": "Article using the hero view mode"
+      },
+      "second": {
+        "viewMode": "hero-no-media",
+        "image": "",
+        "label": "true",
+        "metadata": "",
+        "related": false,
+        "title": "Article using the hero no media view mode",
+        "video": true
+      }
+    }
+  }
+}

@@ -19,9 +19,13 @@
     </aside>
 
     <section class="topic_content grid-region">
-      {% if leadNews %}{% include 'organisms-topic-lead-news' %}{% endif %}
-      {% include 'organisms-topic-hero' with { 'class': 'grid-region_content', 'editor': editing } %}
-      {% include 'organisms-topic-related-articles' with { 'class': 'grid-region_content' } %}
+      {% if leadNews == "true" %}
+        {% include 'organisms-topic-lead-news' %}
+      {% else %}
+        {# if this is not the "lead news" variant, show the deprecated patterns instead. #}
+        {% include 'organisms-topic-hero' with { 'class': 'grid-region_content', 'editor': editing } %}
+        {% include 'organisms-topic-related-articles' with { 'class': 'grid-region_content' } %}
+      {% endif %}
     </section>
 
     <section class="topic_rail-topic-membership-right grid-region">

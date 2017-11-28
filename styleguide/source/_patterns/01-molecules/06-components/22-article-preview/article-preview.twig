@@ -4,7 +4,7 @@
   topic_article.video ? "topic_article-preview-video",
   topic_article.small ? "topic_article-preview-small"
 ] %}
-
+{{ topic_article }}
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
     {% if topic_article.label %}
       {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
@@ -19,7 +19,8 @@
     {% if topic_article.video %}
       {% include "atoms-video-youtube" with {'class': 'topic_article-preview_video'} %}
     {% endif %}
-    <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}</div>
+  {% set content = topic_article.title %}
+    <div class="topic_article-preview_container-title"> {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title' } %}</div>
     {% if not topic_article.related %}
       <div class="topic_article-preview_description">
         {% include "atoms-paragraph" with {'content' : topic_article.description} only %}

@@ -1,5 +1,8 @@
-<div class="topic_hero {{ class }}">
-  HI I'M LEAD NEWS.
-  {% include "molecules-article-preview" with {'topic_article' : hero.first } %}
-  {% include "molecules-article-preview" with {'topic_article' : hero.second } %}
+<div class="{{ class }}">
+ {% for article in leadNewsBlock.articles %}
+   <div class="topic_hero {{ class }}">
+     {% set article_preview = article %}
+     {% include "molecules-article-preview" %}
+   </div>
+ {% endfor %}
 </div>
