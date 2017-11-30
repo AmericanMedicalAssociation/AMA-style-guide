@@ -1,0 +1,16 @@
+.link-back {
+  display: flex;
+  font-size: 0.9em;
+}
+
+.link-back_icon {
+  align-self: center;
+}
+
+.link-back_icon .icon-select {
+  transform: rotate(90deg) translateY(-4px) translateX(7px); // adjust the positioning of the icon so it lines up with the text and the container edge.
+}
+
+.link-back_text {
+  padding-left: 4px; // add some visual breathing room between the icon and the text.
+}
