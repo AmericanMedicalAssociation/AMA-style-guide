@@ -1,0 +1,17 @@
+<section class="wayfinder">
+  <div class="container grid">
+    <div class="wayfinder_referrer">
+      {% if wayfinder.referred %}
+        {% set url = wayfinder.referred.referrerHref %}
+        {% set content = wayfinder.referred.referrerTitle %}
+        {% include 'molecules-link-with-back-icon' %}
+      {% endif %}
+    </div>
+    <div class="wayfinder_logo">
+      {% set href = wayfinder.logo.href %}
+      {% include 'atoms-logo' %}
+    </div>
+    {# Use an empty div here to take up space so the logo can be centered. #}
+    <div class="col-width-4"></div>
+  </div>
+</section>
