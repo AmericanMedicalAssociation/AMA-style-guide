@@ -5,7 +5,8 @@
  */
 /*Add spacing around elements */
 #sg-patterns {
-  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
   max-width: 100%; }
 
 .demo-animate {
@@ -17,6 +18,7 @@
   cursor: pointer; }
 
 .sg-colors {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -26,8 +28,9 @@
   margin: 0 !important; }
 
 .sg-colors li {
-  -ms-flex: auto;
-      flex: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
   padding: 0.3em;
   margin: 0 0.5em 0.5em 0;
   min-width: 5em;
