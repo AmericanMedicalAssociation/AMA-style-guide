@@ -1,13 +1,11 @@
-.topic_lead-news > *:not(:first-child) {
-  @include rule-horizontal(solid, $gray-8, 1px);
-}
-
 .topic_lead-news .topic_hero:not(:first-child) {
+  @include rule-horizontal(solid, $gray-8, 1px);
   @include gutter($margin-top-full...);
   @include gutter($padding-top-full...);
 }
 
-.topic_lead-news .topic_related-articles:not(:first-child) {
+.topic_related-articles:not(:first-child) {
+  @include rule-horizontal(solid, $gray-8, 1px);
   @include gutter($margin-top-half...);
   @include gutter($padding-top-half...);
 }
@@ -24,5 +22,10 @@
 }
 
 .topic_lead-news h3.title-label {
+  padding-bottom: 0;
+}
+
+h3.title-label.topic_related-articles_title {
+  border: 0;
   padding-bottom: 0;
 }
