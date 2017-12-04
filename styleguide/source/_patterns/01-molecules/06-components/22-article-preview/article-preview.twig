@@ -5,6 +5,16 @@
   topic_article.small ? "topic_article-preview-small"
 ] %}
 
+{# Check whether or not to render the article's media based on the view mode. #}
+{# The data model assumes that media data is present. #}
+{% set image = true %}
+{% set video = true %}
+
+{% if topic_article.viewMode == "hero-no-media" or topic_article.viewMode == "related-no-image" %}
+  {% set image = false %}
+  {% set video = false %}
+{% endif %}
+
 {# Unset inherited class here to avoid duplicating it down the chain. #}
 {% if class == 'topic_hero' or class == 'topic_related-articles' %}
 {% set class = '' %}
@@ -14,14 +24,14 @@
     {% if topic_article.label %}
       {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
     {% endif %}
-    {% if topic_article.image %}
+    {% if topic_article.image and image %}
       {% if topic_article.related or topic_article.small %}
         <div class="topic_article-preview_container-image"> {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
       {% else %}
         <div class="topic_article-preview_container-image"> {% include "atoms-landscape-7x5" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}</div>
       {% endif %}
     {% endif %}
-    {% if topic_article.video %}
+    {% if topic_article.video and video %}
       {% include "atoms-video-youtube" with {'class': 'topic_article-preview_video'} %}
     {% endif %}
   {% set content = topic_article.title %}

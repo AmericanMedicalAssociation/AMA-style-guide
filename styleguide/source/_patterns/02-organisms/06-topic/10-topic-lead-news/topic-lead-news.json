@@ -27,7 +27,7 @@
         "viewMode": "related-no-image",
         "title": "Article using the related no image view mode",
         "related": true,
-        "image": ""
+        "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18"
       }
     }
   }
