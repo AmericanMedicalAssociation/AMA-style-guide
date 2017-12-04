@@ -1,3 +1,7 @@
+{% if editing %}
+<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">
+  {% include 'molecules-in-place-editor' %}
+  {% endif %}
 <div class="topic_lead-news">
   {% for article in leadNewsBlock.articles %}
     {% if article.viewMode == "hero" or article.viewMode == "hero-no-media" %}

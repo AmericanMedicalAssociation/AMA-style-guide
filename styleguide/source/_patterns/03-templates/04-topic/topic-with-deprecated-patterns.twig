@@ -19,7 +19,8 @@
     </aside>
 
     <section class="topic_content grid-region">
-      {% include 'organisms-topic-lead-news' %}
+        {% include 'organisms-topic-hero' with { 'class': 'grid-region_content', 'editor': editing } %}
+        {% include 'organisms-topic-related-articles' with { 'class': 'grid-region_content' } %}
     </section>
 
     <section class="topic_rail-topic-membership-right grid-region">
