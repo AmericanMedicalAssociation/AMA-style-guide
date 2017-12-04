@@ -124,3 +124,24 @@
   border: 0;
   padding: 0.5em;
 }
+
+// Add a "deprecated" class for SG-use only to mark patterns that have been refactored but not yet removed (because they're still in use in d8)
+.pattern-deprecated {
+  position: relative;
+  background: repeating-linear-gradient(45deg, #e6e6e6, #e6e6e6 10px, rgba(70, 22, 106, 0.27) 10px, rgba(70, 22, 106, 0.27) 20px);
+  filter: grayscale(50%);
+
+  &:before {
+    content: "PATTERN DEPRECATED — please see Pattern Info";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    padding: 0.25em 0.75em;
+    background: #3e3e3e;
+    color: white;
+    font-size: 0.75em;
+    border-radius: 1px;
+  }
+}
