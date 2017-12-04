@@ -12,11 +12,22 @@
       "second": {
         "viewMode": "hero-no-media",
         "image": "",
-        "label": "true",
         "metadata": "",
         "related": false,
         "title": "Article using the hero no media view mode",
         "video": true
+      },
+      "third": {
+        "viewMode": "related-small-image",
+        "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",
+        "related": true,
+        "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18"
+      },
+      "fourth": {
+        "viewMode": "related-no-image",
+        "title": "Lorem ipsum dolor sit amet, dictum dui, massa erat morbi facilisis",
+        "related": true,
+        "image": ""
       }
     }
   }

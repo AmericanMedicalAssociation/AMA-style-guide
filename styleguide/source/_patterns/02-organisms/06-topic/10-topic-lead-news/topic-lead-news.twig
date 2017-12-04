@@ -1,8 +1,13 @@
-<div class="{{ class }}">
- {% for article in leadNewsBlock.articles %}
-   <div class="topic_hero {{ class }}">
-     {% set article_preview = article %}
-     {% include "molecules-article-preview" %}
-   </div>
- {% endfor %}
+<div class="topic_lead-news">
+  {% for article in leadNewsBlock.articles %}
+    {% if article.viewMode == "hero" or article.viewMode == "hero-no-media" %}
+      {% set class = 'topic_hero' %}
+    {% elseif article.viewMode == "related-small-image" or article.viewMode == "related-no-image" %}
+      {% set class = 'topic_related-articles' %}
+    {% endif %}
+    <div class="{{ class }}">
+      {% set topic_article = article %}
+      {% include "molecules-article-preview" %}
+    </div>
+  {% endfor %}
 </div>

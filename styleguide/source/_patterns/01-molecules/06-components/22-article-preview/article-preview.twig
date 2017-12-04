@@ -4,7 +4,7 @@
   topic_article.video ? "topic_article-preview-video",
   topic_article.small ? "topic_article-preview-small"
 ] %}
-{{ topic_article }}
+
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
     {% if topic_article.label %}
       {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
