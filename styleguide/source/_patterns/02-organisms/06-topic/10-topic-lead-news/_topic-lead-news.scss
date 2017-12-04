@@ -15,3 +15,14 @@
 .topic_lead-news .topic_hero + .topic_related-articles {
   @include gutter($margin-top-full...);
 }
+
+.topic_lead-news .title-label + .topic_hero,
+.topic_lead-news .contextual + .topic_hero {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.topic_lead-news .title-label {
+  padding-bottom: 0;
+}
