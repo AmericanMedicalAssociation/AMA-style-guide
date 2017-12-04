@@ -5,6 +5,11 @@
   topic_article.small ? "topic_article-preview-small"
 ] %}
 
+{# Unset inherited class here to avoid duplicating it down the chain. #}
+{% if class == 'topic_hero' or class == 'topic_related-articles' %}
+{% set class = '' %}
+{% endif %}
+
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
     {% if topic_article.label %}
       {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
