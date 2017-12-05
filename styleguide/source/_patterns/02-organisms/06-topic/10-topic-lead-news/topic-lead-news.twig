@@ -11,7 +11,7 @@
     {% endif %}
     <div class="{{ class }}">
       {% set topic_article = article %}
-      {% include "molecules-article-preview" %}
+      {% include "molecules-article-preview" with { 'topic' : hero.first.titleOnly } %}
     </div>
   {% endfor %}
 </div>

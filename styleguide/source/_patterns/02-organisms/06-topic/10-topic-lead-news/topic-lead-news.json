@@ -7,7 +7,8 @@
         "image": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&amp;s=36",
         "label": "true",
         "metadata": "",
-        "title": "Article using the \"Hero\" view mode"
+        "title": "Article using the \"Hero\" view mode",
+        "titleOnly": false
       },
       "second": {
         "viewMode": "hero-no-media",
@@ -15,19 +16,22 @@
         "metadata": "",
         "related": false,
         "title": "Article using the \"Hero - No Media\" view mode",
-        "video": true
+        "video": true,
+        "titleOnly": false
       },
       "third": {
         "viewMode": "related-small-image",
         "title": "Article using the \"Related Article - Small Image\" view mode",
         "related": true,
-        "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18"
+        "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18",
+        "titleOnly": false
       },
       "fourth": {
         "viewMode": "related-no-image",
         "title": "Article using the \"Related Article - No Image\" view mode",
         "related": true,
-        "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18"
+        "image": "https://ipsumimage.appspot.com/140x100?l=7:5|140x100&amp;s=18",
+        "titleOnly": false
       }
     }
   }

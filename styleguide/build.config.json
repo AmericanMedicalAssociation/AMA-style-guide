@@ -26,6 +26,7 @@
     "files" : [
       "source/assets/js/jquery-3.2.1.js",
       "source/assets/js/jquery.validate.js",
+      "source/assets/js/jquery.cookie.js",
       "source/assets/js/drupal-attach-behaviors.js",
       "source/assets/js/**/*.js",
       "source/_patterns/**/*.js"

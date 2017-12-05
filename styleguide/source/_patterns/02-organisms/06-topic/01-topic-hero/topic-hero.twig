@@ -5,7 +5,8 @@
 
 {# This pattern is deprecated - please use organisms-topic-lead-news instead. #}
 <div class="pattern-deprecated topic_hero {{ class }}">
-  {% include "molecules-article-preview" with {'topic_article' : hero.first } %}
-  {% include "molecules-article-preview" with {'topic_article' : hero.second } %}
+  {% include "molecules-article-preview" with { 'topic_article' : hero.first, 'topic' : hero.first.titleOnly } %}
+  {% include "molecules-article-preview" with { 'topic_article' : hero.second, 'topic' : hero.second.titleOnly } %}
 </div>
+
 {% if editing %}</div>{% endif %}

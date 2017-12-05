@@ -4,7 +4,8 @@
       "image": "https://ipsumimage.appspot.com/1000x666?l=3:2|1000x666&amp;s=36",
       "label": "true",
       "metadata": "",
-      "title": "Article One Title"
+      "title": "Article One Title",
+      "titleOnly": false
     }, 
     "second": {
       "image": "",
@@ -12,7 +13,8 @@
       "metadata": "",
       "related": false,
       "title": "Article Video Title",
-      "video": true
+      "video": true,
+      "titleOnly": false
     }
   }
 }

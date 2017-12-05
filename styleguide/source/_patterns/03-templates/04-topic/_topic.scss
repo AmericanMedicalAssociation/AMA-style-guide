@@ -23,7 +23,7 @@
 .topic .grid-region {
 
   .grid-region_content:not(:first-child){
-    @include gutter($padding-top-full...);
+    @include gutter($padding-top-half...);
   }
 
   // First column.
@@ -31,12 +31,19 @@
     grid-area: 3 / 1 / 3 / 1;
 
     @include breakpoint($bp-small) {
-      grid-area: 1 / 2 / 1 / 2;
+      grid-area: 2 / 2 / 2 / 2;
     }
 
     @include breakpoint($bp-med) {
       grid-area: 1 / 1 / 4 / 1;
       padding-left: 14px;
+    }
+
+    .grid-region_content.topic_topic-articles > .topic_article-preview {
+      padding-top: 0;
+      &:not(:last-child) {
+        @include gutter($padding-bottom-full...);
+      }
     }
   }
 
@@ -57,7 +64,7 @@
     grid-area: 2 / 1 / 2 / 1;
 
     @include breakpoint($bp-small) {
-      grid-area: 2 / 2 / 2 / 2;
+      grid-area: 1 / 2 / 1 / 2;
     }
 
     @include breakpoint($bp-med) {

@@ -29,4 +29,8 @@
   @include breakpoint($bp-med) {
     padding: $gutter 0 $gutter ($gutter / 2);
   }
+
+  .link-back {
+    display: none;
+  }
 }
