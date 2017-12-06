@@ -1,5 +1,9 @@
-<div class="topic_topic-articles {{ class }}">
-    {% include "molecules-article-preview" with {'topic_article' : topicTopicArticle.image } %}
-    {% include "molecules-article-preview" with {'topic_article' : topicTopicArticle.small } %}
-    {% include "molecules-article-preview" with {'topic_article' : topicTopicArticle.video } %}
+<div class="topic_topic-articles {{ class }}" >
+  {% if topic_article.label %}
+    {% include 'atoms-title-label' with { 'content': 'Topic Label', 'class': 'topic_article-preview_label' } %}
+  {% endif %}
+
+  {% include "molecules-article-preview" with {'topic_article' : topicTopicArticle.image } %}
+  {% include "molecules-article-preview" with {'topic_article' : topicTopicArticle.small } %}
+  {% include "molecules-article-preview" with {'topic_article' : topicTopicArticle.video } %}
 </div>

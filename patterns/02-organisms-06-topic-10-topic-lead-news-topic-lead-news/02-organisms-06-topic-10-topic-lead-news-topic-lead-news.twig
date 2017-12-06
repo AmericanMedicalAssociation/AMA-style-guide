@@ -1,0 +1,17 @@
+{% if editing %}
+<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">
+  {% include 'molecules-in-place-editor' %}
+  {% endif %}
+<div class="topic_lead-news">
+  {% for article in leadNewsBlock.articles %}
+    {% if article.viewMode == "hero" or article.viewMode == "hero-no-media" %}
+      {% set class = 'topic_hero' %}
+    {% elseif article.viewMode == "related-small-image" or article.viewMode == "related-no-image" %}
+      {% set class = 'topic_related-articles' %}
+    {% endif %}
+    <div class="{{ class }}">
+      {% set topic_article = article %}
+      {% include "molecules-article-preview" %}
+    </div>
+  {% endfor %}
+</div>
