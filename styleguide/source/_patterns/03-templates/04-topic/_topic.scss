@@ -29,27 +29,27 @@
   // First column.
   &:nth-child(1) {
     grid-row: 3;
-    -ms-grid-row: 3;
     grid-column: 1;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
 
     @include breakpoint($bp-small) {
-      grid-row: 2;
-      -ms-grid-row: 2;
-      grid-column: 2;
-      -ms-grid-column: 2;
       margin-left: 28px;
+      grid-row: 2;
+      grid-column: 2;
+      -ms-grid-row: 2;
+      -ms-grid-column: 2;
     }
 
     @include breakpoint($bp-med) {
+      margin-left: 0;
       grid-row-start: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 4;
       grid-row-end: 4;
       grid-column: 1;
-      -ms-grid-column: 1;
-      margin-left: 0;
       margin-right: 28px;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 4;
     }
 
     .grid-region_content.topic_topic-articles > .topic_article-preview {
@@ -63,69 +63,69 @@
   // Center column
   &:nth-child(2) {
     grid-row: 1;
-    -ms-grid-row: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
 
     @include breakpoint($bp-small) {
       grid-row-start: 1;
-      -ms-grid-row: 1;
       grid-row-end: 4;
-      -ms-grid-row-span: 4;
       grid-column: 1;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 4;
       -ms-grid-column: 1;
     }
 
     @include breakpoint($bp-med) {
       grid-row: 1;
-      -ms-grid-row: 1;
-      -ms-grid-row-span: 4;
       grid-row-end: 4;
       grid-column: 2;
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 4;
       -ms-grid-column: 2;
     }
   }
 
   &:nth-child(3) {
-    grid-row: 1;
-    -ms-grid-row: 1;
+    grid-row: 2;
     grid-column: 1;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
 
     @include breakpoint($bp-small) {
-      grid-row: 1;
-      -ms-grid-row: 1;
-      grid-column: 2;
-      -ms-grid-column: 2;
       margin-left: 28px;
+      grid-row: 1;
+      grid-column: 2;
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
     }
 
     @include breakpoint($bp-med) {
       grid-row: 1;
-      -ms-grid-row: 1;
       grid-column: 3;
+      -ms-grid-row: 1;
       -ms-grid-column: 3;
     }
   }
 
   &:nth-child(4) {
-    grid-row: 3;
-    -ms-grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
 
     @include breakpoint($bp-small) {
-      grid-row: 3;
-      -ms-grid-row: 3;
-      grid-column: 2;
-      -ms-grid-column: 2;
       margin-left: 28px;
+      grid-row: 3;
+      grid-column: 2;
+      -ms-grid-row: 3;
+      -ms-grid-column: 2;
     }
 
     @include breakpoint($bp-med) {
       grid-row: 2;
-      -ms-grid-row: 2;
       grid-column: 3;
+      -ms-grid-row: 2;
       -ms-grid-column: 3;
     }
   }
