@@ -7,7 +7,6 @@
   display: grid;
   display: -ms-grid;
   grid-template-columns: 100%;
-  @include gutter($padding-top-half...);
 
   @include breakpoint($bp-small) {
     grid-template-columns: 2fr 1fr;
