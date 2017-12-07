@@ -6,31 +6,41 @@
   topic.titleOnly ? "titleOnly"
 ] %}
 
+{# Check whether or not to render the article's media based on the view mode. #}
+{# The data model assumes that media data is present. #}
+{% set image = true %}
+{% set video = true %}
+
+{% if topic_article.viewMode == "hero-no-media" or topic_article.viewMode == "related-no-image" %}
+  {% set image = false %}
+  {% set video = false %}
+{% endif %}
+
+{# Unset inherited class here to avoid duplicating it down the chain. #}
+{% if class == 'topic_hero' or class == 'topic_related-articles' %}
+  {% set class = '' %}
+{% endif %}
+
 <div class="topic_article-preview {{ classes|join(' ') }} {{ class }}">
-    {% if topic_article.image  and not topic.titleOnly %}
-      {% if topic_article.related or topic.small %}
-        <div class="topic_article-preview_container-image">
-          {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
-        </div>
-      {% else %}
-        <div class="topic_article-preview_container-image">
-          {% include "atoms-landscape-7x5" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
-        </div>
-      {% endif %}
+  {% if topic_article.image and image and not topic.titleOnly %}
+    <div class="topic_article-preview_container-image">
+    {% if topic_article.related or topic_article.small %}
+      {% include "atoms-landscape-3x2" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
+    {% else %}
+      {% include "atoms-landscape-7x5" with { 'class': 'topic_article-preview_image', "src": topic_article.image} %}
     {% endif %}
-
-    {% if topic_article.video and not topic.titleOnly %}
-      {% include "atoms-video-youtube" with {'class': 'topic_article-preview_video'} %}
-    {% endif %}
-
-    <div class="topic_article-preview_container-title" {{ class }}>
-      {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}
     </div>
-
-  {% if not topic_article.related and not topic.titleOnly %}
-      <div class="topic_article-preview_description">
-        {% include "atoms-paragraph" with {'content' : topic_article.description} only %}
-      </div>
-      {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
-    {% endif %}
+  {% endif %}
+  {% if topic_article.video and video and not topic.titleOnly %}
+    {% include "atoms-video-youtube" with {'class': 'topic_article-preview_video'} %}
+  {% endif %}
+  <div class="topic_article-preview_container-title">
+    {% include "molecules-link-black-h2" with { 'class': 'topic_article-preview_title', 'content': topic_article.title }%}
+  </div>
+  {% if not topic_article.related and not topic.titleOnly  %}
+    <div class="topic_article-preview_description">
+      {% include "atoms-paragraph" with {'content' : topic_article.description} only %}
+    </div>
+    {% include "molecules-article-metadata" with { 'class': 'topic_article-preview_metadata' } %}
+  {% endif %}
 </div>

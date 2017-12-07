@@ -1,4 +1,6 @@
-{% if editing %}<div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">{% endif %}
+{% if editing %}
+  <div data-block-id="" class="contextual-region ui-draggable ui-draggable-handle active">
+{% endif %}
 
 <div class="topic_tools {{ class }}">
   {% if editing %}{% include 'molecules-in-place-editor' %}{% endif %}
