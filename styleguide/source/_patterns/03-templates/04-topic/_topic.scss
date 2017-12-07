@@ -7,14 +7,16 @@
   display: grid;
   display: -ms-grid;
   grid-template-columns: 100%;
-  padding: 28px 0;
+  @include gutter($padding-top-half...);
 
   @include breakpoint($bp-small) {
     grid-template-columns: 2fr 1fr;
+    -ms-grid-columns: 2fr 1fr;
   }
 
   @include breakpoint($bp-med) {
     grid-template-columns: 1fr 2fr 1fr;
+    -ms-grid-columns: 1fr 2fr 1fr;
     -ms-grid-rows: auto auto auto;
   }
 }
