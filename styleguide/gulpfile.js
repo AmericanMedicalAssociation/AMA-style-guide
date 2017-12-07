@@ -303,13 +303,20 @@ gulp.task('set-master', function (callback) {
   callback();
 })
 
+gulp.task('set-dev-assets', function (callback) {
+  // Change the deploy branch
+  gutil.log('Setting branch to dev-assets.');
+  config.deployment.branch = "dev-assets";
+  callback();
+})
+
 // Task: Release the code
-// Description: Release runs deploy to build to gh-pages,
+// Description: Release runs deploy to build to gh-pages and dev-assets,
 // pushes the same code to master, then tags master.
 gulp.task('release', function (callback) {
   // make sure to use the gulp from node_modules and not a different version
   runSequence = require('run-sequence').use(gulp);
   // Build the style guide, publish to gh-pages, set the branch to master,
   // publish to master, then tag master.
-  runSequence('default', 'publish', 'set-master', 'publish', 'tag', callback);
+  runSequence('default', 'publish', 'set-dev-assets', 'publish', 'set-master', 'publish', 'tag', callback);
 });
