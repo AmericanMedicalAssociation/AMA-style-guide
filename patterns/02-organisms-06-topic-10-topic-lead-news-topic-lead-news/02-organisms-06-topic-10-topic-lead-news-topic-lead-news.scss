@@ -1,0 +1,31 @@
+.topic_lead-news .topic_hero:not(:first-child) {
+  @include rule-horizontal(solid, $gray-8, 1px);
+  @include gutter($margin-top-full...);
+  @include gutter($padding-top-full...);
+}
+
+.topic_related-articles:not(:first-child) {
+  @include rule-horizontal(solid, $gray-8, 1px);
+  @include gutter($margin-top-half...);
+  @include gutter($padding-top-half...);
+}
+
+.topic_lead-news .topic_hero + .topic_related-articles {
+  @include gutter($margin-top-full...);
+}
+
+.topic_lead-news .title-label + .topic_hero,
+.topic_lead-news .contextual + .topic_hero {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.topic_lead-news h3.title-label {
+  padding-bottom: 0;
+}
+
+h3.title-label.topic_related-articles_title {
+  border: 0;
+  padding-bottom: 0;
+}
