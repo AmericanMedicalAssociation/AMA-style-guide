@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * This stylesheet is for styles you want to include only when displaying demo
  * styles for grids, animations, color swatches, etc.
@@ -106,5 +107,23 @@
   display: block;
   border: 0;
   padding: 0.5em; }
+
+.pattern-deprecated {
+  position: relative;
+  background: repeating-linear-gradient(45deg, #e6e6e6, #e6e6e6 10px, rgba(70, 22, 106, 0.27) 10px, rgba(70, 22, 106, 0.27) 20px);
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%); }
+  .pattern-deprecated:before {
+    content: "PATTERN DEPRECATED — please see Pattern Info";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    padding: 0.25em 0.75em;
+    background: #3e3e3e;
+    color: white;
+    font-size: 0.75em;
+    border-radius: 1px; }
 
 /*# sourceMappingURL=pattern-scaffolding.css.map */
