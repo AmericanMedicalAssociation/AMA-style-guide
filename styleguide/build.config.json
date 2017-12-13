@@ -34,6 +34,7 @@
     "drupalfiles" : [
       "source/assets/js/jquery.validate.js",
       "source/assets/js/fitvids.js",
+      "source/assets/js/jquery.cookie.js",
       "source/assets/js/init.js",
       "source/assets/js/form-items.js",
       "source/assets/js/nav.js",
