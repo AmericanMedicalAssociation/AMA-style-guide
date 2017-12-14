@@ -12,10 +12,9 @@
     attach: function (context, settings) {
       (function ($) {
         // Read wayfinder cookies set from ama-assn domains
-        if($.cookie.json !== undefined) {
-          $.cookie.json = true;
-          var ama_wayfinder_cookie = $.cookie('ama_wayfinder_cookie');
-        }
+        $.cookie.json = true;
+        var ama_wayfinder_cookie = $.cookie('ama_wayfinder_cookie');
+        
         if (typeof ama_wayfinder_cookie !== 'undefined') {
           $('.wayfinder_referrer .link-back').show();
           $('.link-back').attr("href", ama_wayfinder_cookie[1]);
