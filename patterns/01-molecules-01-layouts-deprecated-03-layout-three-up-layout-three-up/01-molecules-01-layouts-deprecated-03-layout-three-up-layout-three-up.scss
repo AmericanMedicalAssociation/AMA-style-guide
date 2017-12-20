@@ -1,0 +1,26 @@
+.flexbox .layout_three_up {
+  @include grid__unit--cols(12);
+  justify-content: flex-start;
+}
+
+.layout_three_up-primary,
+.layout_three_up-secondary,
+.layout_three_up-tertiary {
+  @include grid__unit--cols(12);
+
+  @include breakpoint($bp-med) {
+    @include grid__unit--cols(4);
+  }
+}
+
+.layout_three_up-primary {
+  @include breakpoint($bp-med) {
+    @include gutter($padding-right-half...);
+  }
+}
+
+.layout_three_up-tertiary {
+  @include breakpoint($bp-med) {
+    @include gutter($padding-left-half...);
+  }
+}
