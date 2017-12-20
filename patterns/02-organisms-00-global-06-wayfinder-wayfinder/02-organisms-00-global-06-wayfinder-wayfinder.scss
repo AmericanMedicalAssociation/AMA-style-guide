@@ -13,8 +13,9 @@
 }
 
 .wayfinder_logo .logo-outer {
-  margin: $gutter auto;
-  align-self: center;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
 }
 
 .wayfinder_referrer {
@@ -27,7 +28,7 @@
   }
 
   @include breakpoint($bp-med) {
-    padding: $gutter 0 $gutter ($gutter / 2);
+    padding: ($gutter / 2) 0;
   }
 
   .link-back {

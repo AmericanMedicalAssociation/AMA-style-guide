@@ -3,6 +3,10 @@
   {% include 'molecules-in-place-editor' %}
   {% endif %}
 <div class="topic_lead-news">
+  {% if leadNewsBlock.label %}
+    {% set content = leadNewsBlock.label %}
+    {% include 'atoms-title-label' %}
+  {% endif %}
   {% for article in leadNewsBlock.articles %}
     {% if article.viewMode == "hero" or article.viewMode == "hero-no-media" %}
       {% set class = 'topic_hero' %}
