@@ -1,6 +1,6 @@
 {
   "leadNewsBlock": {
-    "label": "Lead News Topic Label",
+    "label": "Label text for Lead News block",
     "articles": {
       "first": {
         "viewMode": "hero",
