@@ -12,13 +12,6 @@
     attach: function (context, settings) {
       (function ($) {
 
-        var pageTitle  = document.title.replace(' | AMA', '');
-        var pageUrl = window.location.href;
-        $.cookie.json = true;
-        $.cookie('ama_wayfinder_cookie', [pageTitle, pageUrl], { expires: 1, path: '/'});
-
-        console.log($.cookie('ama_wayfinder_cookie'))
-
         // Read wayfinder cookies set from ama-assn domains
         $.cookie.json = true;
         var ama_wayfinder_cookie = $.cookie('ama_wayfinder_cookie');
