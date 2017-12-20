@@ -11,12 +11,13 @@
   Drupal.behaviors.wayfinder = {
     attach: function (context, settings) {
       (function ($) {
+
         // Read wayfinder cookies set from ama-assn domains
         $.cookie.json = true;
         var ama_wayfinder_cookie = $.cookie('ama_wayfinder_cookie');
         
         if (typeof ama_wayfinder_cookie !== 'undefined') {
-          $('.wayfinder_referrer .link-back').show();
+          $('.wayfinder_referrer .link-back').show().css('display', 'flex');
           $('.link-back').attr("href", ama_wayfinder_cookie[1]);
           $('.link-back .link-back_text').text(ama_wayfinder_cookie[0]);
         } else {
