@@ -13,6 +13,7 @@ _WARNING: This should only be run on the `develop` branch!**\***_
 - Make sure you are running the most up-to-date code
   - Updates will be rejected if they are non-fast-forward
 - Update `package.json` with the new version number.
+- `npm install` to update the package-lock.json file
 - `gulp release` to build the files correctly, cut a tag, and deploy the files to `gh-pages`, `dev-assets`, and `master`.
 - Navigate to the [latest release](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases) to see the new release and add notes.
 
