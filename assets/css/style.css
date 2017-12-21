@@ -7487,7 +7487,11 @@ footer {
 
 .wayfinder {
   display: none;
-  border-bottom: solid 1px #a1a1a4; }
+  border-bottom: solid 1px #a1a1a4;
+  padding: 20px 0 20px 5px; }
+  @media (min-width: 56.25em) {
+    .wayfinder {
+      padding: 5px 0; } }
   @media (min-width: 37.5em) {
     .wayfinder {
       display: block; } }
@@ -7514,20 +7518,13 @@ footer {
 
 .wayfinder_referrer {
   -ms-flex-item-align: center;
-      align-self: center;
-  padding: 20px 0; }
+      align-self: center; }
   .flexbox .wayfinder_referrer {
     -ms-flex-preferred-size: 33.33333%;
         flex-basis: 33.33333%;
     max-width: 33.33333%; }
   .no-flexbox .wayfinder_referrer {
     width: 33.33333%; }
-  @media (min-width: 37.5em) {
-    .wayfinder_referrer {
-      padding: 20px 0 20px 10px; } }
-  @media (min-width: 56.25em) {
-    .wayfinder_referrer {
-      padding: 14px 0; } }
   .wayfinder_referrer .link-back {
     display: none; }
 
