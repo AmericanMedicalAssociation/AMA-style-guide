@@ -1637,8 +1637,9 @@ iframe.iframe-video {
       align-self: center; }
 
 .link-back_icon .icon-select {
-  -webkit-transform: rotate(90deg) translateY(-4px) translateX(7px);
-          transform: rotate(90deg) translateY(-4px) translateX(7px); }
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  line-height: 12px; }
 
 .link-back_text {
   padding-left: 4px; }
