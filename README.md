@@ -1,7 +1,9 @@
 [![Latest Release](https://img.shields.io/github/release/AmericanMedicalAssociation/AMA-style-guide.svg)](https://github.com/AmericanMedicalAssociation/AMA-style-guide/releases/latest)
 
-# Living Style Guide for AMA
-This is the living style guide for the American Medical Association. It is a platform-agnostic tool to empower employees and vendors to maintain consistent design and hierarchy throughout the AMA digital ecosystem.
+# DEPRECATED Living Style Guide for AMA
+
+## This style guide has been DEPRECATED. The AMA is now maintaining consistent design and hierarchy through the [AMA Style Guide 2](https://github.com/AmericanMedicalAssociation/AMA-style-guide-2) which can be previewed on [GitHub Pages](https://americanmedicalassociation.github.io/ama-style-guide-2/)
+This is a **deprecated** living style guide for the American Medical Association. It is a platform-agnostic tool to empower employees and vendors to maintain consistent design and hierarchy throughout the AMA digital ecosystem.
 
 This style guide is a compilation of [atomic components](http://bradfrost.com/blog/post/atomic-web-design/) that have been specifically tailored to the needs of AMA. By documenting and assembling this collection of patterns, we are able to build consistently, reuse code, and [see all of our patterns in one place](https://americanmedicalassociation.github.io/AMA-style-guide/).
 
