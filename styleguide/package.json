@@ -7,7 +7,7 @@
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
     "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-bump": "^2.8.0",
     "gulp-clean": "^0.3.2",
